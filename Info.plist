@@ -52,23 +52,22 @@
       <string>metal</string>
     </array>
     <key>UIRequiresFullScreen</key>
-    <true />
+    <false />
     <key>UIRequiresPersistentWiFi</key>
     <false />
     <key>UIStatusBarHidden</key>
-    <true />
+    <false />
     <key>UIStatusBarStyle</key>
     <string>UIStatusBarStyleDefault</string>
     <key>UISupportedInterfaceOrientations</key>
     <array>
       <string>UIInterfaceOrientationLandscapeRight</string>
-      <string>UIInterfaceOrientationLandscapeLeft</string>
     </array>
     <key>Unity_LoadingActivityIndicatorStyle</key>
     <integer>-1</integer>
     <key>UnityCloudProjectID</key>
     <string></string>
     <key>UnityCrashSubmissionURL</key>
-    <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
+    <string>https://perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>
 </plist>

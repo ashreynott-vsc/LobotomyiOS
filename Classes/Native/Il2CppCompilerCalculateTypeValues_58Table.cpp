@@ -7935,6 +7935,8 @@ public:
 	int32_t ____lastWidth_3;
 	// System.Int32 MobileScreenManager::_lastHeight
 	int32_t ____lastHeight_4;
+	// System.String MobileScreenManager::_logFilePath
+	String_t* ____logFilePath_5;
 
 public:
 	inline static int32_t get_offset_of__lastWidth_3() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____lastWidth_3)); }
@@ -7951,6 +7953,15 @@ public:
 	inline void set__lastHeight_4(int32_t value)
 	{
 		____lastHeight_4 = value;
+	}
+
+	inline static int32_t get_offset_of__logFilePath_5() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____logFilePath_5)); }
+	inline String_t* get__logFilePath_5() const { return ____logFilePath_5; }
+	inline String_t** get_address_of__logFilePath_5() { return &____logFilePath_5; }
+	inline void set__logFilePath_5(String_t* value)
+	{
+		____logFilePath_5 = value;
+		Il2CppCodeGenWriteBarrier((&____logFilePath_5), value);
 	}
 };
 
@@ -9891,11 +9902,12 @@ extern const int32_t g_FieldOffsetTable5894[9] =
 	MissionUI_t1961037245::get_offset_of_missions_10(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5895 = { sizeof (MobileScreenManager_t831028031), -1, sizeof(MobileScreenManager_t831028031_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable5895[3] = 
+extern const int32_t g_FieldOffsetTable5895[4] = 
 {
 	MobileScreenManager_t831028031_StaticFields::get_offset_of__instance_2(),
 	MobileScreenManager_t831028031::get_offset_of__lastWidth_3(),
 	MobileScreenManager_t831028031::get_offset_of__lastHeight_4(),
+	MobileScreenManager_t831028031::get_offset_of__logFilePath_5(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5896 = { sizeof (MoneyModel_t730300829), -1, sizeof(MoneyModel_t730300829_StaticFields), 0 };
 extern const int32_t g_FieldOffsetTable5896[2] = 

@@ -2549,6 +2549,7 @@ extern "C" void DirectoryNotFoundException__ctor_m3235664382 ();
 extern "C" void DirectoryNotFoundException__ctor_m1689636868 ();
 extern "C" void EndOfStreamException__ctor_m2202021005 ();
 extern "C" void EndOfStreamException__ctor_m1590165188 ();
+extern "C" void File_AppendAllText_m3145076643 ();
 extern "C" void File_Copy_m3433232803 ();
 extern "C" void File_Create_m2207667142 ();
 extern "C" void File_Create_m604182744 ();
@@ -2811,6 +2812,7 @@ extern "C" void StreamWriter__ctor_m1288454107 ();
 extern "C" void StreamWriter__ctor_m2310301218 ();
 extern "C" void StreamWriter__ctor_m1245831116 ();
 extern "C" void StreamWriter__ctor_m3185939007 ();
+extern "C" void StreamWriter__ctor_m587286950 ();
 extern "C" void StreamWriter__ctor_m3688233896 ();
 extern "C" void StreamWriter__ctor_m3973049521 ();
 extern "C" void StreamWriter__cctor_m1229272693 ();
@@ -31629,6 +31631,7 @@ extern "C" void ArrowManager__ctor_m1642609120 ();
 extern "C" void ArrowManager_Init_m2584045212 ();
 extern "C" void ArrowManager_OnEnable_m1980806920 ();
 extern "C" void AssetLoader__ctor_m2585571378 ();
+extern "C" void AssetLoader_ResolveCaseInsensitivePath_m1008826236 ();
 extern "C" void AssetLoader_LoadExternalXML_m1534863644 ();
 extern "C" void AssetLoader_LoadExternalXmlSafe_m1875652639 ();
 extern "C" void AutoSizeSetter__ctor_m3114366102 ();
@@ -43719,6 +43722,7 @@ extern "C" void MissionUI_OncePerSecond_m2919673498 ();
 extern "C" void MobileScreenManager__ctor_m3366620523 ();
 extern "C" void MobileScreenManager_Bootstrap_m3525258668 ();
 extern "C" void MobileScreenManager_Awake_m728696395 ();
+extern "C" void MobileScreenManager_HandleLog_m649794438 ();
 extern "C" void MobileScreenManager_OnDestroy_m2653332534 ();
 extern "C" void MobileScreenManager_OnSceneLoaded_m3492888858 ();
 extern "C" void MobileScreenManager_Update_m4254841170 ();
@@ -54116,7 +54120,7 @@ extern "C" void ZoomTutorial__ctor_m3253980221 ();
 extern "C" void ZoomTutorial_StartTutorial_m4043354523 ();
 extern "C" void ZoomTutorial_CompleteTutorial_m736784446 ();
 extern "C" void ZoomTutorial_CheckIfHappening_m4251022969 ();
-extern const Il2CppMethodPointer g_MethodPointers[54098] = 
+extern const Il2CppMethodPointer g_MethodPointers[54102] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -56649,6 +56653,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54098] =
 	DirectoryNotFoundException__ctor_m1689636868,
 	EndOfStreamException__ctor_m2202021005,
 	EndOfStreamException__ctor_m1590165188,
+	File_AppendAllText_m3145076643,
 	File_Copy_m3433232803,
 	File_Create_m2207667142,
 	File_Create_m604182744,
@@ -56911,6 +56916,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54098] =
 	StreamWriter__ctor_m2310301218,
 	StreamWriter__ctor_m1245831116,
 	StreamWriter__ctor_m3185939007,
+	StreamWriter__ctor_m587286950,
 	StreamWriter__ctor_m3688233896,
 	StreamWriter__ctor_m3973049521,
 	StreamWriter__cctor_m1229272693,
@@ -85729,6 +85735,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54098] =
 	ArrowManager_Init_m2584045212,
 	ArrowManager_OnEnable_m1980806920,
 	AssetLoader__ctor_m2585571378,
+	AssetLoader_ResolveCaseInsensitivePath_m1008826236,
 	AssetLoader_LoadExternalXML_m1534863644,
 	AssetLoader_LoadExternalXmlSafe_m1875652639,
 	AutoSizeSetter__ctor_m3114366102,
@@ -97819,6 +97826,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54098] =
 	MobileScreenManager__ctor_m3366620523,
 	MobileScreenManager_Bootstrap_m3525258668,
 	MobileScreenManager_Awake_m728696395,
+	MobileScreenManager_HandleLog_m649794438,
 	MobileScreenManager_OnDestroy_m2653332534,
 	MobileScreenManager_OnSceneLoaded_m3492888858,
 	MobileScreenManager_Update_m4254841170,
