@@ -322,6 +322,8 @@ struct PlayerModel_t788183610;
 struct StorySpeakLogUI_t2144268667;
 // StoryDialogueUI
 struct StoryDialogueUI_t2295556106;
+// SettingWindow
+struct SettingWindow_t3121764313;
 // UnityEngine.Video.VideoPlayer
 struct VideoPlayer_t1683042537;
 // System.Collections.Generic.Dictionary`2<System.Type,StoryUI/CommandFunc>
@@ -1564,8 +1566,6 @@ struct ExpandSefiraPanel_t3418950455;
 struct UIController_t2237998930;
 // PostEndingCanvas
 struct PostEndingCanvas_t1497498067;
-// SettingWindow
-struct SettingWindow_t3121764313;
 // SefiraObject[]
 struct SefiraObjectU5BU5D_t443393166;
 // System.Collections.Generic.Dictionary`2<System.String,SefiraObject>
@@ -1789,6 +1789,7 @@ extern const RuntimeMethod* Dictionary_2_Clear_m1512661887_RuntimeMethod_var;
 extern const uint32_t StoryUI_ClearCharacter_m3854941089_MetadataUsageId;
 extern RuntimeClass* Input_t1431474628_il2cpp_TypeInfo_var;
 extern const uint32_t StoryUI_IsSkipping_m3530811958_MetadataUsageId;
+extern const uint32_t StoryUI_Update_m2724746148_MetadataUsageId;
 extern const RuntimeType* StoryScriptCommandList_t158062755_0_0_0_var;
 extern const RuntimeType* StoryScriptCommand_call_t358897196_0_0_0_var;
 extern const RuntimeType* StoryScriptCommand_wait_t1978165156_0_0_0_var;
@@ -51056,6 +51057,16 @@ extern "C" IL2CPP_METHOD_ATTR void StoryDialogueUI_ShowSkipUI_m2460185245 (Story
 extern "C" IL2CPP_METHOD_ATTR void StoryDialogueUI_HideSkipUI_m802995939 (StoryDialogueUI_t2295556106 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Input::GetKey(UnityEngine.KeyCode)
 extern "C" IL2CPP_METHOD_ATTR bool Input_GetKey_m3736388334 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Input::GetMouseButtonDown(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR bool Input_GetMouseButtonDown_m2081676745 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method);
+// System.Boolean StoryOptionUI::get_PanelOpened()
+extern "C" IL2CPP_METHOD_ATTR bool StoryOptionUI_get_PanelOpened_m1674409822 (StoryOptionUI_t4010240131 * __this, const RuntimeMethod* method);
+// System.Boolean StorySefiraInfoUI::get_IsActive()
+extern "C" IL2CPP_METHOD_ATTR bool StorySefiraInfoUI_get_IsActive_m2605389483 (StorySefiraInfoUI_t3341441458 * __this, const RuntimeMethod* method);
+// System.Boolean SettingWindow::get_IsEnabled()
+extern "C" IL2CPP_METHOD_ATTR bool SettingWindow_get_IsEnabled_m4097847295 (SettingWindow_t3121764313 * __this, const RuntimeMethod* method);
+// System.Void StoryUI::OnClickDialogue()
+extern "C" IL2CPP_METHOD_ATTR void StoryUI_OnClickDialogue_m1988263286 (StoryUI_t865320912 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Video.VideoPlayer::get_isPlaying()
 extern "C" IL2CPP_METHOD_ATTR bool VideoPlayer_get_isPlaying_m2729754655 (VideoPlayer_t1683042537 * __this, const RuntimeMethod* method);
 // System.Void StoryUI::ProcessCommandEvent(StoryUI/StoryScriptCommandEventEnum)
@@ -55608,6 +55619,15 @@ IL_0025:
 // System.Void StoryUI::Update()
 extern "C" IL2CPP_METHOD_ATTR void StoryUI_Update_m2724746148 (StoryUI_t865320912 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StoryUI_Update_m2724746148_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	int32_t G_B12_0 = 0;
+	int32_t G_B14_0 = 0;
 	{
 		bool L_0 = __this->get__bInit_18();
 		if (L_0)
@@ -55621,50 +55641,167 @@ extern "C" IL2CPP_METHOD_ATTR void StoryUI_Update_m2724746148 (StoryUI_t86532091
 
 IL_000c:
 	{
-		bool L_1 = __this->get__isPlayingVideo_21();
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_1 = Input_GetMouseButtonDown_m2081676745(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
 		if (!L_1)
 		{
-			goto IL_0033;
+			goto IL_00ae;
 		}
 	}
 	{
-		PostEndingCanvas_t1497498067 * L_2 = __this->get_endingCanvas_9();
-		NullCheck(L_2);
-		VideoPlayer_t1683042537 * L_3 = L_2->get_vp_2();
-		NullCheck(L_3);
-		bool L_4 = VideoPlayer_get_isPlaying_m2729754655(L_3, /*hidden argument*/NULL);
-		if (L_4)
+		StoryOptionUI_t4010240131 * L_2 = __this->get_optionUI_14();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_3 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_2, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_3)
 		{
-			goto IL_0033;
+			goto IL_0038;
+		}
+	}
+	{
+		StoryOptionUI_t4010240131 * L_4 = __this->get_optionUI_14();
+		NullCheck(L_4);
+		bool L_5 = StoryOptionUI_get_PanelOpened_m1674409822(L_4, /*hidden argument*/NULL);
+		if (L_5)
+		{
+			goto IL_00a0;
+		}
+	}
+
+IL_0038:
+	{
+		StorySpeakLogUI_t2144268667 * L_6 = __this->get_speakLogUI_13();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_7 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_6, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_7)
+		{
+			goto IL_005e;
+		}
+	}
+	{
+		StorySpeakLogUI_t2144268667 * L_8 = __this->get_speakLogUI_13();
+		NullCheck(L_8);
+		GameObject_t1113636619 * L_9 = Component_get_gameObject_m442555142(L_8, /*hidden argument*/NULL);
+		NullCheck(L_9);
+		bool L_10 = GameObject_get_activeSelf_m1767405923(L_9, /*hidden argument*/NULL);
+		if (L_10)
+		{
+			goto IL_00a0;
+		}
+	}
+
+IL_005e:
+	{
+		StorySefiraInfoUI_t3341441458 * L_11 = __this->get_sefiraInfoUI_12();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_12 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_11, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_12)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		StorySefiraInfoUI_t3341441458 * L_13 = __this->get_sefiraInfoUI_12();
+		NullCheck(L_13);
+		bool L_14 = StorySefiraInfoUI_get_IsActive_m2605389483(L_13, /*hidden argument*/NULL);
+		if (L_14)
+		{
+			goto IL_00a0;
+		}
+	}
+
+IL_007f:
+	{
+		SettingWindow_t3121764313 * L_15 = __this->get_settingWindow_15();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_16 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_15, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_16)
+		{
+			goto IL_009d;
+		}
+	}
+	{
+		SettingWindow_t3121764313 * L_17 = __this->get_settingWindow_15();
+		NullCheck(L_17);
+		bool L_18 = SettingWindow_get_IsEnabled_m4097847295(L_17, /*hidden argument*/NULL);
+		G_B12_0 = ((int32_t)(L_18));
+		goto IL_009e;
+	}
+
+IL_009d:
+	{
+		G_B12_0 = 0;
+	}
+
+IL_009e:
+	{
+		G_B14_0 = G_B12_0;
+		goto IL_00a1;
+	}
+
+IL_00a0:
+	{
+		G_B14_0 = 1;
+	}
+
+IL_00a1:
+	{
+		V_0 = (bool)G_B14_0;
+		bool L_19 = V_0;
+		if (L_19)
+		{
+			goto IL_00ae;
+		}
+	}
+	{
+		StoryUI_OnClickDialogue_m1988263286(__this, /*hidden argument*/NULL);
+	}
+
+IL_00ae:
+	{
+		bool L_20 = __this->get__isPlayingVideo_21();
+		if (!L_20)
+		{
+			goto IL_00d5;
+		}
+	}
+	{
+		PostEndingCanvas_t1497498067 * L_21 = __this->get_endingCanvas_9();
+		NullCheck(L_21);
+		VideoPlayer_t1683042537 * L_22 = L_21->get_vp_2();
+		NullCheck(L_22);
+		bool L_23 = VideoPlayer_get_isPlaying_m2729754655(L_22, /*hidden argument*/NULL);
+		if (L_23)
+		{
+			goto IL_00d5;
 		}
 	}
 	{
 		StoryUI_ProcessCommandEvent_m3626611044(__this, 6, /*hidden argument*/NULL);
 	}
 
-IL_0033:
+IL_00d5:
 	{
-		float L_5 = __this->get__waitTimer_34();
-		if ((!(((float)L_5) > ((float)(0.0f)))))
+		float L_24 = __this->get__waitTimer_34();
+		if ((!(((float)L_24) > ((float)(0.0f)))))
 		{
-			goto IL_006c;
+			goto IL_010e;
 		}
 	}
 	{
-		float L_6 = __this->get__waitTimer_34();
-		float L_7 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set__waitTimer_34(((float)il2cpp_codegen_subtract((float)L_6, (float)L_7)));
-		float L_8 = __this->get__waitTimer_34();
-		if ((!(((float)L_8) <= ((float)(0.0f)))))
+		float L_25 = __this->get__waitTimer_34();
+		float L_26 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set__waitTimer_34(((float)il2cpp_codegen_subtract((float)L_25, (float)L_26)));
+		float L_27 = __this->get__waitTimer_34();
+		if ((!(((float)L_27) <= ((float)(0.0f)))))
 		{
-			goto IL_006c;
+			goto IL_010e;
 		}
 	}
 	{
 		StoryUI_ProcessCommandEvent_m3626611044(__this, 5, /*hidden argument*/NULL);
 	}
 
-IL_006c:
+IL_010e:
 	{
 		return;
 	}

@@ -2053,7 +2053,6 @@ extern String_t* _stringLiteral142104969;
 extern const uint32_t CreatureDataLoader__ctor_m1381275541_MetadataUsageId;
 extern RuntimeClass* Path_t1605229823_il2cpp_TypeInfo_var;
 extern RuntimeClass* XmlDocument_t2837193595_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var;
 extern String_t* _stringLiteral4264722599;
 extern String_t* _stringLiteral1101112244;
 extern String_t* _stringLiteral3988949892;
@@ -2347,6 +2346,7 @@ extern const RuntimeMethod* Enumerator_Dispose_m3663209637_RuntimeMethod_var;
 extern const uint32_t CreatureGenerateInfoManager_CheckCreatureUseState_m153545840_MetadataUsageId;
 extern RuntimeClass* CreatureGenerateModel_t3228506776_il2cpp_TypeInfo_var;
 extern RuntimeClass* CreatureSelectData_t554870171_il2cpp_TypeInfo_var;
+extern const RuntimeMethod* Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_ToArray_m1282164355_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2_Add_m585309998_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2_Add_m238134271_RuntimeMethod_var;
@@ -48170,8 +48170,8 @@ extern "C" IL2CPP_METHOD_ATTR void CreatureCommandQueue_Clear_m3895617953 (Creat
 #define LinkedList_1_AddFirst_m926668899(__this, p0, method) ((  LinkedListNode_1_t1019144476 * (*) (LinkedList_1_t113615382 *, CreatureCommand_t1273969373 *, const RuntimeMethod*))LinkedList_1_AddFirst_m4240701168_gshared)(__this, p0, method)
 // System.Collections.Generic.LinkedListNode`1<!0> System.Collections.Generic.LinkedList`1<CreatureCommand>::AddLast(!0)
 #define LinkedList_1_AddLast_m2916744780(__this, p0, method) ((  LinkedListNode_1_t1019144476 * (*) (LinkedList_1_t113615382 *, CreatureCommand_t1273969373 *, const RuntimeMethod*))LinkedList_1_AddLast_m1583460477_gshared)(__this, p0, method)
-// !!0 UnityEngine.Resources::Load<UnityEngine.TextAsset>(System.String)
-#define Resources_Load_TisTextAsset_t3022178571_m724759995(__this /* static, unused */, p0, method) ((  TextAsset_t3022178571 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))Resources_Load_TisRuntimeObject_m597869152_gshared)(__this /* static, unused */, p0, method)
+// UnityEngine.TextAsset SafeXmlLoader::Load(System.String)
+extern "C" IL2CPP_METHOD_ATTR TextAsset_t3022178571 * SafeXmlLoader_Load_m1449888044 (RuntimeObject * __this /* static, unused */, String_t* ___path0, const RuntimeMethod* method);
 // System.String UnityEngine.TextAsset::get_text()
 extern "C" IL2CPP_METHOD_ATTR String_t* TextAsset_get_text_m2027878391 (TextAsset_t3022178571 * __this, const RuntimeMethod* method);
 // System.String UnityEngine.Application::get_dataPath()
@@ -48558,6 +48558,8 @@ extern "C" IL2CPP_METHOD_ATTR void ActivateStateList_DayUpdate_m448416332 (Activ
 #define Enumerator_MoveNext_m1345604630(__this, method) ((  bool (*) (Enumerator_t4058875975 *, const RuntimeMethod*))Enumerator_MoveNext_m20766638_gshared)(__this, method)
 // System.Void System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<RiskLevel,CreatureGenerate.ActivateStateList>::Dispose()
 #define Enumerator_Dispose_m3663209637(__this, method) ((  void (*) (Enumerator_t4058875975 *, const RuntimeMethod*))Enumerator_Dispose_m909297545_gshared)(__this, method)
+// !!0 UnityEngine.Resources::Load<UnityEngine.TextAsset>(System.String)
+#define Resources_Load_TisTextAsset_t3022178571_m724759995(__this /* static, unused */, p0, method) ((  TextAsset_t3022178571 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))Resources_Load_TisRuntimeObject_m597869152_gshared)(__this /* static, unused */, p0, method)
 // System.Void CreatureGenerate.CreatureGenerateModel::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void CreatureGenerateModel__ctor_m1280053632 (CreatureGenerateModel_t3228506776 * __this, const RuntimeMethod* method);
 // System.Void CreatureGenerate.CreatureSelectData::.ctor(System.Int32)
@@ -68289,7 +68291,7 @@ extern "C" IL2CPP_METHOD_ATTR XmlDocument_t2837193595 * CreatureDataLoader_LoadC
 		String_t* L_0 = ___statName0;
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral4264722599, L_0, /*hidden argument*/NULL);
-		TextAsset_t3022178571 * L_2 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_2 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
 		V_1 = L_2;
 		TextAsset_t3022178571 * L_3 = V_1;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
@@ -68483,7 +68485,7 @@ IL_0019:
 		NullCheck(L_2);
 		String_t* L_3 = GlobalGameManager_GetCurrentLanguage_m2256731701(L_2, /*hidden argument*/NULL);
 		__this->set_currentLn_0(L_3);
-		TextAsset_t3022178571 * L_4 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, _stringLiteral285584971, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_4 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, _stringLiteral285584971, /*hidden argument*/NULL);
 		V_0 = L_4;
 		XmlDocument_t2837193595 * L_5 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
 		XmlDocument__ctor_m1447119458(L_5, /*hidden argument*/NULL);

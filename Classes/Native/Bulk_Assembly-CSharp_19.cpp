@@ -1572,7 +1572,6 @@ extern RuntimeClass* EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var;
 extern RuntimeClass* Dictionary_2_t2736202052_il2cpp_TypeInfo_var;
 extern RuntimeClass* IDisposable_t3640265483_il2cpp_TypeInfo_var;
 extern RuntimeClass* ArgumentException_t132251570_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2__ctor_m243280690_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2_Add_m2799738156_RuntimeMethod_var;
 extern const RuntimeMethod* List_1__ctor_m2798621806_RuntimeMethod_var;
@@ -43826,8 +43825,8 @@ extern "C" IL2CPP_METHOD_ATTR UnitEquipSpace_t1343524331 * UnitModel_get_Equipme
 #define Enumerator_MoveNext_m1726210906(__this, method) ((  bool (*) (Enumerator_t634066760 *, const RuntimeMethod*))Enumerator_MoveNext_m2142368520_gshared)(__this, method)
 // System.Void System.Collections.Generic.List`1/Enumerator<AgentModel>::Dispose()
 #define Enumerator_Dispose_m1939275397(__this, method) ((  void (*) (Enumerator_t634066760 *, const RuntimeMethod*))Enumerator_Dispose_m3007748546_gshared)(__this, method)
-// !!0 UnityEngine.Resources::Load<UnityEngine.TextAsset>(System.String)
-#define Resources_Load_TisTextAsset_t3022178571_m724759995(__this /* static, unused */, p0, method) ((  TextAsset_t3022178571 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))Resources_Load_TisRuntimeObject_m597869152_gshared)(__this /* static, unused */, p0, method)
+// UnityEngine.TextAsset SafeXmlLoader::Load(System.String)
+extern "C" IL2CPP_METHOD_ATTR TextAsset_t3022178571 * SafeXmlLoader_Load_m1449888044 (RuntimeObject * __this /* static, unused */, String_t* ___path0, const RuntimeMethod* method);
 // System.Void System.Xml.XmlDocument::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void XmlDocument__ctor_m1447119458 (XmlDocument_t2837193595 * __this, const RuntimeMethod* method);
 // System.String UnityEngine.TextAsset::get_text()
@@ -49298,722 +49297,736 @@ extern "C" IL2CPP_METHOD_ATTR void EquipmentDataLoader_Load_m1371160763 (Equipme
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		TextAsset_t3022178571 * L_0 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, _stringLiteral2234035165, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_0 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, _stringLiteral2234035165, /*hidden argument*/NULL);
 		V_0 = L_0;
-		XmlDocument_t2837193595 * L_1 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
-		XmlDocument__ctor_m1447119458(L_1, /*hidden argument*/NULL);
-		V_1 = L_1;
-		XmlDocument_t2837193595 * L_2 = V_1;
-		TextAsset_t3022178571 * L_3 = V_0;
-		NullCheck(L_3);
-		String_t* L_4 = TextAsset_get_text_m2027878391(L_3, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_2, L_4);
-		Dictionary_2_t1746187545 * L_5 = (Dictionary_2_t1746187545 *)il2cpp_codegen_object_new(Dictionary_2_t1746187545_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m243280690(L_5, /*hidden argument*/Dictionary_2__ctor_m243280690_RuntimeMethod_var);
-		V_2 = L_5;
-		XmlDocument_t2837193595 * L_6 = V_1;
-		NullCheck(L_6);
-		XmlNode_t3767805227 * L_7 = XmlNode_SelectSingleNode_m2944339946(L_6, _stringLiteral851243502, /*hidden argument*/NULL);
-		V_3 = L_7;
-		XmlNode_t3767805227 * L_8 = V_3;
-		NullCheck(L_8);
-		XmlNodeList_t2551693786 * L_9 = XmlNode_SelectNodes_m3596713167(L_8, _stringLiteral1486137571, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		RuntimeObject* L_10 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_9);
-		V_5 = L_10;
+		TextAsset_t3022178571 * L_1 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_1, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
 	}
 
-IL_0041:
+IL_0018:
+	{
+		XmlDocument_t2837193595 * L_3 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
+		XmlDocument__ctor_m1447119458(L_3, /*hidden argument*/NULL);
+		V_1 = L_3;
+		XmlDocument_t2837193595 * L_4 = V_1;
+		TextAsset_t3022178571 * L_5 = V_0;
+		NullCheck(L_5);
+		String_t* L_6 = TextAsset_get_text_m2027878391(L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_4, L_6);
+		Dictionary_2_t1746187545 * L_7 = (Dictionary_2_t1746187545 *)il2cpp_codegen_object_new(Dictionary_2_t1746187545_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m243280690(L_7, /*hidden argument*/Dictionary_2__ctor_m243280690_RuntimeMethod_var);
+		V_2 = L_7;
+		XmlDocument_t2837193595 * L_8 = V_1;
+		NullCheck(L_8);
+		XmlNode_t3767805227 * L_9 = XmlNode_SelectSingleNode_m2944339946(L_8, _stringLiteral851243502, /*hidden argument*/NULL);
+		V_3 = L_9;
+		XmlNode_t3767805227 * L_10 = V_3;
+		NullCheck(L_10);
+		XmlNodeList_t2551693786 * L_11 = XmlNode_SelectNodes_m3596713167(L_10, _stringLiteral1486137571, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		RuntimeObject* L_12 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_11);
+		V_5 = L_12;
+	}
+
+IL_004e:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_04b6;
+			goto IL_04c3;
 		}
 
-IL_0046:
+IL_0053:
 		{
-			RuntimeObject* L_11 = V_5;
-			NullCheck(L_11);
-			RuntimeObject * L_12 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_11);
-			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_12, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-			EquipmentTypeInfo_t2857474214 * L_13 = (EquipmentTypeInfo_t2857474214 *)il2cpp_codegen_object_new(EquipmentTypeInfo_t2857474214_il2cpp_TypeInfo_var);
-			EquipmentTypeInfo__ctor_m3360207787(L_13, /*hidden argument*/NULL);
-			V_6 = L_13;
-			XmlNode_t3767805227 * L_14 = V_4;
-			NullCheck(L_14);
-			XmlAttributeCollection_t2316283784 * L_15 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_14);
-			NullCheck(L_15);
-			XmlNode_t3767805227 * L_16 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_15, _stringLiteral3454449607);
+			RuntimeObject* L_13 = V_5;
+			NullCheck(L_13);
+			RuntimeObject * L_14 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_13);
+			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_14, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+			EquipmentTypeInfo_t2857474214 * L_15 = (EquipmentTypeInfo_t2857474214 *)il2cpp_codegen_object_new(EquipmentTypeInfo_t2857474214_il2cpp_TypeInfo_var);
+			EquipmentTypeInfo__ctor_m3360207787(L_15, /*hidden argument*/NULL);
+			V_6 = L_15;
+			XmlNode_t3767805227 * L_16 = V_4;
 			NullCheck(L_16);
-			String_t* L_17 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_16);
-			int32_t L_18 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_17, /*hidden argument*/NULL);
-			V_7 = L_18;
-			XmlNode_t3767805227 * L_19 = V_4;
-			NullCheck(L_19);
-			XmlAttributeCollection_t2316283784 * L_20 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_19);
-			NullCheck(L_20);
-			XmlNode_t3767805227 * L_21 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_20, _stringLiteral3243520166);
+			XmlAttributeCollection_t2316283784 * L_17 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_16);
+			NullCheck(L_17);
+			XmlNode_t3767805227 * L_18 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_17, _stringLiteral3454449607);
+			NullCheck(L_18);
+			String_t* L_19 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_18);
+			int32_t L_20 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
+			V_7 = L_20;
+			XmlNode_t3767805227 * L_21 = V_4;
 			NullCheck(L_21);
-			String_t* L_22 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_21);
-			V_8 = L_22;
-			EquipmentTypeInfo_t2857474214 * L_23 = V_6;
-			int32_t L_24 = V_7;
+			XmlAttributeCollection_t2316283784 * L_22 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_21);
+			NullCheck(L_22);
+			XmlNode_t3767805227 * L_23 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_22, _stringLiteral3243520166);
 			NullCheck(L_23);
-			L_23->set_id_0(L_24);
-			XmlNode_t3767805227 * L_25 = V_4;
+			String_t* L_24 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_23);
+			V_8 = L_24;
+			EquipmentTypeInfo_t2857474214 * L_25 = V_6;
+			int32_t L_26 = V_7;
 			NullCheck(L_25);
-			XmlNode_t3767805227 * L_26 = XmlNode_SelectSingleNode_m2944339946(L_25, _stringLiteral62725243, /*hidden argument*/NULL);
-			V_9 = L_26;
-			XmlNode_t3767805227 * L_27 = V_9;
-			if (!L_27)
+			L_25->set_id_0(L_26);
+			XmlNode_t3767805227 * L_27 = V_4;
+			NullCheck(L_27);
+			XmlNode_t3767805227 * L_28 = XmlNode_SelectSingleNode_m2944339946(L_27, _stringLiteral62725243, /*hidden argument*/NULL);
+			V_9 = L_28;
+			XmlNode_t3767805227 * L_29 = V_9;
+			if (!L_29)
 			{
-				goto IL_00d0;
+				goto IL_00dd;
 			}
 		}
 
-IL_00ae:
+IL_00bb:
 		{
-			EquipmentTypeInfo_t2857474214 * L_28 = V_6;
-			NullCheck(L_28);
-			Dictionary_2_t1632706988 * L_29 = L_28->get_localizeData_18();
-			XmlNode_t3767805227 * L_30 = V_9;
+			EquipmentTypeInfo_t2857474214 * L_30 = V_6;
 			NullCheck(L_30);
-			String_t* L_31 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_30);
-			NullCheck(L_31);
-			String_t* L_32 = String_Trim_m923598732(L_31, /*hidden argument*/NULL);
-			NullCheck(L_29);
-			Dictionary_2_Add_m2799738156(L_29, _stringLiteral62725243, L_32, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
-			goto IL_00f2;
-		}
-
-IL_00d0:
-		{
-			EquipmentTypeInfo_t2857474214 * L_33 = V_6;
+			Dictionary_2_t1632706988 * L_31 = L_30->get_localizeData_18();
+			XmlNode_t3767805227 * L_32 = V_9;
+			NullCheck(L_32);
+			String_t* L_33 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_32);
 			NullCheck(L_33);
-			Dictionary_2_t1632706988 * L_34 = L_33->get_localizeData_18();
-			int32_t L_35 = V_7;
-			int32_t L_36 = L_35;
-			RuntimeObject * L_37 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_36);
+			String_t* L_34 = String_Trim_m923598732(L_33, /*hidden argument*/NULL);
+			NullCheck(L_31);
+			Dictionary_2_Add_m2799738156(L_31, _stringLiteral62725243, L_34, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
+			goto IL_00ff;
+		}
+
+IL_00dd:
+		{
+			EquipmentTypeInfo_t2857474214 * L_35 = V_6;
+			NullCheck(L_35);
+			Dictionary_2_t1632706988 * L_36 = L_35->get_localizeData_18();
+			int32_t L_37 = V_7;
+			int32_t L_38 = L_37;
+			RuntimeObject * L_39 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_38);
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_38 = String_Concat_m904156431(NULL /*static, unused*/, L_37, _stringLiteral62725243, /*hidden argument*/NULL);
-			NullCheck(L_34);
-			Dictionary_2_Add_m2799738156(L_34, _stringLiteral62725243, L_38, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
+			String_t* L_40 = String_Concat_m904156431(NULL /*static, unused*/, L_39, _stringLiteral62725243, /*hidden argument*/NULL);
+			NullCheck(L_36);
+			Dictionary_2_Add_m2799738156(L_36, _stringLiteral62725243, L_40, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
 		}
 
-IL_00f2:
+IL_00ff:
 		{
-			XmlNode_t3767805227 * L_39 = V_4;
-			NullCheck(L_39);
-			XmlNode_t3767805227 * L_40 = XmlNode_SelectSingleNode_m2944339946(L_39, _stringLiteral3454777282, /*hidden argument*/NULL);
-			V_10 = L_40;
-			XmlNode_t3767805227 * L_41 = V_10;
-			if (!L_41)
+			XmlNode_t3767805227 * L_41 = V_4;
+			NullCheck(L_41);
+			XmlNode_t3767805227 * L_42 = XmlNode_SelectSingleNode_m2944339946(L_41, _stringLiteral3454777282, /*hidden argument*/NULL);
+			V_10 = L_42;
+			XmlNode_t3767805227 * L_43 = V_10;
+			if (!L_43)
 			{
-				goto IL_0137;
+				goto IL_0144;
 			}
 		}
 
-IL_0107:
+IL_0114:
 		{
-			EquipmentTypeInfo_t2857474214 * L_42 = V_6;
-			NullCheck(L_42);
-			Dictionary_2_t1632706988 * L_43 = L_42->get_localizeData_18();
-			XmlNode_t3767805227 * L_44 = V_10;
+			EquipmentTypeInfo_t2857474214 * L_44 = V_6;
 			NullCheck(L_44);
-			String_t* L_45 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_44);
-			NullCheck(L_45);
-			String_t* L_46 = String_Trim_m923598732(L_45, /*hidden argument*/NULL);
-			NullCheck(L_43);
-			Dictionary_2_Add_m2799738156(L_43, _stringLiteral3454777282, L_46, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
-			EquipmentTypeInfo_t2857474214 * L_47 = V_6;
-			XmlNode_t3767805227 * L_48 = V_10;
-			NullCheck(L_48);
-			String_t* L_49 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_48);
+			Dictionary_2_t1632706988 * L_45 = L_44->get_localizeData_18();
+			XmlNode_t3767805227 * L_46 = V_10;
+			NullCheck(L_46);
+			String_t* L_47 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_46);
 			NullCheck(L_47);
-			L_47->set_no_7(L_49);
-			goto IL_014b;
-		}
-
-IL_0137:
-		{
-			EquipmentTypeInfo_t2857474214 * L_50 = V_6;
-			String_t* L_51 = Int32_ToString_m141394615((&V_7), /*hidden argument*/NULL);
+			String_t* L_48 = String_Trim_m923598732(L_47, /*hidden argument*/NULL);
+			NullCheck(L_45);
+			Dictionary_2_Add_m2799738156(L_45, _stringLiteral3454777282, L_48, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
+			EquipmentTypeInfo_t2857474214 * L_49 = V_6;
+			XmlNode_t3767805227 * L_50 = V_10;
 			NullCheck(L_50);
-			L_50->set_no_7(L_51);
+			String_t* L_51 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_50);
+			NullCheck(L_49);
+			L_49->set_no_7(L_51);
+			goto IL_0158;
 		}
 
-IL_014b:
+IL_0144:
 		{
-			XmlNode_t3767805227 * L_52 = V_4;
+			EquipmentTypeInfo_t2857474214 * L_52 = V_6;
+			String_t* L_53 = Int32_ToString_m141394615((&V_7), /*hidden argument*/NULL);
 			NullCheck(L_52);
-			XmlNode_t3767805227 * L_53 = XmlNode_SelectSingleNode_m2944339946(L_52, _stringLiteral3220737639, /*hidden argument*/NULL);
-			V_11 = L_53;
-			XmlNode_t3767805227 * L_54 = V_11;
-			if (!L_54)
+			L_52->set_no_7(L_53);
+		}
+
+IL_0158:
+		{
+			XmlNode_t3767805227 * L_54 = V_4;
+			NullCheck(L_54);
+			XmlNode_t3767805227 * L_55 = XmlNode_SelectSingleNode_m2944339946(L_54, _stringLiteral3220737639, /*hidden argument*/NULL);
+			V_11 = L_55;
+			XmlNode_t3767805227 * L_56 = V_11;
+			if (!L_56)
 			{
-				goto IL_017d;
+				goto IL_018a;
 			}
 		}
 
-IL_0160:
+IL_016d:
 		{
-			EquipmentTypeInfo_t2857474214 * L_55 = V_6;
-			NullCheck(L_55);
-			Dictionary_2_t1632706988 * L_56 = L_55->get_localizeData_18();
-			XmlNode_t3767805227 * L_57 = V_11;
+			EquipmentTypeInfo_t2857474214 * L_57 = V_6;
 			NullCheck(L_57);
-			String_t* L_58 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_57);
-			NullCheck(L_58);
-			String_t* L_59 = String_Trim_m923598732(L_58, /*hidden argument*/NULL);
-			NullCheck(L_56);
-			Dictionary_2_Add_m2799738156(L_56, _stringLiteral3220737639, L_59, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
-		}
-
-IL_017d:
-		{
-			XmlNode_t3767805227 * L_60 = V_4;
+			Dictionary_2_t1632706988 * L_58 = L_57->get_localizeData_18();
+			XmlNode_t3767805227 * L_59 = V_11;
+			NullCheck(L_59);
+			String_t* L_60 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_59);
 			NullCheck(L_60);
-			XmlNode_t3767805227 * L_61 = XmlNode_SelectSingleNode_m2944339946(L_60, _stringLiteral2001732862, /*hidden argument*/NULL);
-			V_12 = L_61;
-			XmlNode_t3767805227 * L_62 = V_12;
-			if (!L_62)
+			String_t* L_61 = String_Trim_m923598732(L_60, /*hidden argument*/NULL);
+			NullCheck(L_58);
+			Dictionary_2_Add_m2799738156(L_58, _stringLiteral3220737639, L_61, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
+		}
+
+IL_018a:
+		{
+			XmlNode_t3767805227 * L_62 = V_4;
+			NullCheck(L_62);
+			XmlNode_t3767805227 * L_63 = XmlNode_SelectSingleNode_m2944339946(L_62, _stringLiteral2001732862, /*hidden argument*/NULL);
+			V_12 = L_63;
+			XmlNode_t3767805227 * L_64 = V_12;
+			if (!L_64)
 			{
-				goto IL_01af;
+				goto IL_01bc;
 			}
 		}
 
-IL_0192:
+IL_019f:
 		{
-			EquipmentTypeInfo_t2857474214 * L_63 = V_6;
-			NullCheck(L_63);
-			Dictionary_2_t1632706988 * L_64 = L_63->get_localizeData_18();
-			XmlNode_t3767805227 * L_65 = V_12;
+			EquipmentTypeInfo_t2857474214 * L_65 = V_6;
 			NullCheck(L_65);
-			String_t* L_66 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_65);
+			Dictionary_2_t1632706988 * L_66 = L_65->get_localizeData_18();
+			XmlNode_t3767805227 * L_67 = V_12;
+			NullCheck(L_67);
+			String_t* L_68 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_67);
+			NullCheck(L_68);
+			String_t* L_69 = String_Trim_m923598732(L_68, /*hidden argument*/NULL);
 			NullCheck(L_66);
-			String_t* L_67 = String_Trim_m923598732(L_66, /*hidden argument*/NULL);
-			NullCheck(L_64);
-			Dictionary_2_Add_m2799738156(L_64, _stringLiteral2001732862, L_67, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
+			Dictionary_2_Add_m2799738156(L_66, _stringLiteral2001732862, L_69, /*hidden argument*/Dictionary_2_Add_m2799738156_RuntimeMethod_var);
 		}
 
-IL_01af:
+IL_01bc:
 		{
-			XmlNode_t3767805227 * L_68 = V_4;
-			NullCheck(L_68);
-			XmlNode_t3767805227 * L_69 = XmlNode_SelectSingleNode_m2944339946(L_68, _stringLiteral1202705475, /*hidden argument*/NULL);
-			V_13 = L_69;
-			XmlNode_t3767805227 * L_70 = V_13;
-			if (!L_70)
+			XmlNode_t3767805227 * L_70 = V_4;
+			NullCheck(L_70);
+			XmlNode_t3767805227 * L_71 = XmlNode_SelectSingleNode_m2944339946(L_70, _stringLiteral1202705475, /*hidden argument*/NULL);
+			V_13 = L_71;
+			XmlNode_t3767805227 * L_72 = V_13;
+			if (!L_72)
 			{
-				goto IL_01d2;
+				goto IL_01df;
 			}
 		}
 
-IL_01c4:
+IL_01d1:
 		{
-			EquipmentTypeInfo_t2857474214 * L_71 = V_6;
-			XmlNode_t3767805227 * L_72 = V_13;
-			NullCheck(L_72);
-			String_t* L_73 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_72);
-			NullCheck(L_71);
-			L_71->set_script_8(L_73);
-		}
-
-IL_01d2:
-		{
-			EquipmentTypeInfo_t2857474214 * L_74 = V_6;
-			List_1_t3481873583 * L_75 = (List_1_t3481873583 *)il2cpp_codegen_object_new(List_1_t3481873583_il2cpp_TypeInfo_var);
-			List_1__ctor_m2798621806(L_75, /*hidden argument*/List_1__ctor_m2798621806_RuntimeMethod_var);
+			EquipmentTypeInfo_t2857474214 * L_73 = V_6;
+			XmlNode_t3767805227 * L_74 = V_13;
 			NullCheck(L_74);
-			L_74->set_requires_6(L_75);
-			XmlNode_t3767805227 * L_76 = V_4;
-			NullCheck(L_76);
-			XmlNodeList_t2551693786 * L_77 = XmlNode_SelectNodes_m3596713167(L_76, _stringLiteral2754313967, /*hidden argument*/NULL);
-			NullCheck(L_77);
-			RuntimeObject* L_78 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_77);
-			V_15 = L_78;
+			String_t* L_75 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_74);
+			NullCheck(L_73);
+			L_73->set_script_8(L_75);
 		}
 
-IL_01f1:
+IL_01df:
+		{
+			EquipmentTypeInfo_t2857474214 * L_76 = V_6;
+			List_1_t3481873583 * L_77 = (List_1_t3481873583 *)il2cpp_codegen_object_new(List_1_t3481873583_il2cpp_TypeInfo_var);
+			List_1__ctor_m2798621806(L_77, /*hidden argument*/List_1__ctor_m2798621806_RuntimeMethod_var);
+			NullCheck(L_76);
+			L_76->set_requires_6(L_77);
+			XmlNode_t3767805227 * L_78 = V_4;
+			NullCheck(L_78);
+			XmlNodeList_t2551693786 * L_79 = XmlNode_SelectNodes_m3596713167(L_78, _stringLiteral2754313967, /*hidden argument*/NULL);
+			NullCheck(L_79);
+			RuntimeObject* L_80 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_79);
+			V_15 = L_80;
+		}
+
+IL_01fe:
 		try
 		{ // begin try (depth: 2)
 			{
-				goto IL_0376;
+				goto IL_0383;
 			}
 
-IL_01f6:
+IL_0203:
 			{
-				RuntimeObject* L_79 = V_15;
-				NullCheck(L_79);
-				RuntimeObject * L_80 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_79);
-				V_14 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_80, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-				XmlNode_t3767805227 * L_81 = V_14;
+				RuntimeObject* L_81 = V_15;
 				NullCheck(L_81);
-				XmlAttributeCollection_t2316283784 * L_82 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_81);
-				NullCheck(L_82);
-				XmlNode_t3767805227 * L_83 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_82, _stringLiteral3243520166);
+				RuntimeObject * L_82 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_81);
+				V_14 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_82, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+				XmlNode_t3767805227 * L_83 = V_14;
 				NullCheck(L_83);
-				String_t* L_84 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_83);
-				V_16 = L_84;
-				XmlNode_t3767805227 * L_85 = V_14;
+				XmlAttributeCollection_t2316283784 * L_84 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_83);
+				NullCheck(L_84);
+				XmlNode_t3767805227 * L_85 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_84, _stringLiteral3243520166);
 				NullCheck(L_85);
 				String_t* L_86 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_85);
-				int32_t L_87 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_86, /*hidden argument*/NULL);
-				V_17 = L_87;
-				EgoRequire_t2009798841 * L_88 = (EgoRequire_t2009798841 *)il2cpp_codegen_object_new(EgoRequire_t2009798841_il2cpp_TypeInfo_var);
-				EgoRequire__ctor_m274773074(L_88, /*hidden argument*/NULL);
-				V_18 = L_88;
-				String_t* L_89 = V_16;
-				if (!L_89)
+				V_16 = L_86;
+				XmlNode_t3767805227 * L_87 = V_14;
+				NullCheck(L_87);
+				String_t* L_88 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_87);
+				int32_t L_89 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_88, /*hidden argument*/NULL);
+				V_17 = L_89;
+				EgoRequire_t2009798841 * L_90 = (EgoRequire_t2009798841 *)il2cpp_codegen_object_new(EgoRequire_t2009798841_il2cpp_TypeInfo_var);
+				EgoRequire__ctor_m274773074(L_90, /*hidden argument*/NULL);
+				V_18 = L_90;
+				String_t* L_91 = V_16;
+				if (!L_91)
 				{
-					goto IL_0368;
+					goto IL_0375;
 				}
 			}
 
-IL_0238:
+IL_0245:
 			{
-				Dictionary_2_t2736202052 * L_90 = ((EquipmentDataLoader_t2006094114_StaticFields*)il2cpp_codegen_static_fields_for(EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var))->get_U3CU3Ef__switchU24map4_0();
-				if (L_90)
+				Dictionary_2_t2736202052 * L_92 = ((EquipmentDataLoader_t2006094114_StaticFields*)il2cpp_codegen_static_fields_for(EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var))->get_U3CU3Ef__switchU24map4_0();
+				if (L_92)
 				{
-					goto IL_02c7;
+					goto IL_02d4;
 				}
 			}
 
-IL_0242:
+IL_024f:
 			{
-				Dictionary_2_t2736202052 * L_91 = (Dictionary_2_t2736202052 *)il2cpp_codegen_object_new(Dictionary_2_t2736202052_il2cpp_TypeInfo_var);
-				Dictionary_2__ctor_m2392909825(L_91, ((int32_t)9), /*hidden argument*/Dictionary_2__ctor_m2392909825_RuntimeMethod_var);
-				V_19 = L_91;
-				Dictionary_2_t2736202052 * L_92 = V_19;
-				NullCheck(L_92);
-				Dictionary_2_Add_m282647386(L_92, _stringLiteral1232840130, 0, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
-				Dictionary_2_t2736202052 * L_93 = V_19;
-				NullCheck(L_93);
-				Dictionary_2_Add_m282647386(L_93, _stringLiteral3452614638, 1, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_t2736202052 * L_93 = (Dictionary_2_t2736202052 *)il2cpp_codegen_object_new(Dictionary_2_t2736202052_il2cpp_TypeInfo_var);
+				Dictionary_2__ctor_m2392909825(L_93, ((int32_t)9), /*hidden argument*/Dictionary_2__ctor_m2392909825_RuntimeMethod_var);
+				V_19 = L_93;
 				Dictionary_2_t2736202052 * L_94 = V_19;
 				NullCheck(L_94);
-				Dictionary_2_Add_m282647386(L_94, _stringLiteral765176772, 1, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_94, _stringLiteral1232840130, 0, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_95 = V_19;
 				NullCheck(L_95);
-				Dictionary_2_Add_m282647386(L_95, _stringLiteral3452614633, 2, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_95, _stringLiteral3452614638, 1, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_96 = V_19;
 				NullCheck(L_96);
-				Dictionary_2_Add_m282647386(L_96, _stringLiteral1381753855, 2, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_96, _stringLiteral765176772, 1, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_97 = V_19;
 				NullCheck(L_97);
-				Dictionary_2_Add_m282647386(L_97, _stringLiteral3452614622, 3, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_97, _stringLiteral3452614633, 2, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_98 = V_19;
 				NullCheck(L_98);
-				Dictionary_2_Add_m282647386(L_98, _stringLiteral1306138111, 3, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_98, _stringLiteral1381753855, 2, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_99 = V_19;
 				NullCheck(L_99);
-				Dictionary_2_Add_m282647386(L_99, _stringLiteral3452614640, 4, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_99, _stringLiteral3452614622, 3, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_100 = V_19;
 				NullCheck(L_100);
-				Dictionary_2_Add_m282647386(L_100, _stringLiteral3417978517, 4, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_Add_m282647386(L_100, _stringLiteral1306138111, 3, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
 				Dictionary_2_t2736202052 * L_101 = V_19;
-				((EquipmentDataLoader_t2006094114_StaticFields*)il2cpp_codegen_static_fields_for(EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var))->set_U3CU3Ef__switchU24map4_0(L_101);
+				NullCheck(L_101);
+				Dictionary_2_Add_m282647386(L_101, _stringLiteral3452614640, 4, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_t2736202052 * L_102 = V_19;
+				NullCheck(L_102);
+				Dictionary_2_Add_m282647386(L_102, _stringLiteral3417978517, 4, /*hidden argument*/Dictionary_2_Add_m282647386_RuntimeMethod_var);
+				Dictionary_2_t2736202052 * L_103 = V_19;
+				((EquipmentDataLoader_t2006094114_StaticFields*)il2cpp_codegen_static_fields_for(EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var))->set_U3CU3Ef__switchU24map4_0(L_103);
 			}
 
-IL_02c7:
+IL_02d4:
 			{
-				Dictionary_2_t2736202052 * L_102 = ((EquipmentDataLoader_t2006094114_StaticFields*)il2cpp_codegen_static_fields_for(EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var))->get_U3CU3Ef__switchU24map4_0();
-				String_t* L_103 = V_16;
-				NullCheck(L_102);
-				bool L_104 = Dictionary_2_TryGetValue_m1013208020(L_102, L_103, (&V_20), /*hidden argument*/Dictionary_2_TryGetValue_m1013208020_RuntimeMethod_var);
-				if (!L_104)
+				Dictionary_2_t2736202052 * L_104 = ((EquipmentDataLoader_t2006094114_StaticFields*)il2cpp_codegen_static_fields_for(EquipmentDataLoader_t2006094114_il2cpp_TypeInfo_var))->get_U3CU3Ef__switchU24map4_0();
+				String_t* L_105 = V_16;
+				NullCheck(L_104);
+				bool L_106 = Dictionary_2_TryGetValue_m1013208020(L_104, L_105, (&V_20), /*hidden argument*/Dictionary_2_TryGetValue_m1013208020_RuntimeMethod_var);
+				if (!L_106)
 				{
-					goto IL_0368;
+					goto IL_0375;
 				}
 			}
 
-IL_02da:
+IL_02e7:
 			{
-				int32_t L_105 = V_20;
-				switch (L_105)
+				int32_t L_107 = V_20;
+				switch (L_107)
 				{
 					case 0:
 					{
-						goto IL_02fa;
+						goto IL_0307;
 					}
 					case 1:
 					{
-						goto IL_0310;
+						goto IL_031d;
 					}
 					case 2:
 					{
-						goto IL_0326;
+						goto IL_0333;
 					}
 					case 3:
 					{
-						goto IL_033c;
+						goto IL_0349;
 					}
 					case 4:
 					{
-						goto IL_0352;
+						goto IL_035f;
 					}
 				}
 			}
 
-IL_02f5:
+IL_0302:
 			{
-				goto IL_0368;
+				goto IL_0375;
 			}
 
-IL_02fa:
+IL_0307:
 			{
-				EgoRequire_t2009798841 * L_106 = V_18;
-				NullCheck(L_106);
-				L_106->set_type_0(0);
-				EgoRequire_t2009798841 * L_107 = V_18;
-				int32_t L_108 = V_17;
-				NullCheck(L_107);
-				L_107->set_value_1(L_108);
-				goto IL_0368;
-			}
-
-IL_0310:
-			{
+				EgoRequire_t2009798841 * L_108 = V_18;
+				NullCheck(L_108);
+				L_108->set_type_0(0);
 				EgoRequire_t2009798841 * L_109 = V_18;
+				int32_t L_110 = V_17;
 				NullCheck(L_109);
-				L_109->set_type_0(1);
-				EgoRequire_t2009798841 * L_110 = V_18;
-				int32_t L_111 = V_17;
-				NullCheck(L_110);
-				L_110->set_value_1(L_111);
-				goto IL_0368;
+				L_109->set_value_1(L_110);
+				goto IL_0375;
 			}
 
-IL_0326:
+IL_031d:
 			{
+				EgoRequire_t2009798841 * L_111 = V_18;
+				NullCheck(L_111);
+				L_111->set_type_0(1);
 				EgoRequire_t2009798841 * L_112 = V_18;
+				int32_t L_113 = V_17;
 				NullCheck(L_112);
-				L_112->set_type_0(2);
-				EgoRequire_t2009798841 * L_113 = V_18;
-				int32_t L_114 = V_17;
-				NullCheck(L_113);
-				L_113->set_value_1(L_114);
-				goto IL_0368;
+				L_112->set_value_1(L_113);
+				goto IL_0375;
 			}
 
-IL_033c:
+IL_0333:
 			{
+				EgoRequire_t2009798841 * L_114 = V_18;
+				NullCheck(L_114);
+				L_114->set_type_0(2);
 				EgoRequire_t2009798841 * L_115 = V_18;
+				int32_t L_116 = V_17;
 				NullCheck(L_115);
-				L_115->set_type_0(3);
-				EgoRequire_t2009798841 * L_116 = V_18;
-				int32_t L_117 = V_17;
-				NullCheck(L_116);
-				L_116->set_value_1(L_117);
-				goto IL_0368;
+				L_115->set_value_1(L_116);
+				goto IL_0375;
 			}
 
-IL_0352:
+IL_0349:
 			{
+				EgoRequire_t2009798841 * L_117 = V_18;
+				NullCheck(L_117);
+				L_117->set_type_0(3);
 				EgoRequire_t2009798841 * L_118 = V_18;
+				int32_t L_119 = V_17;
 				NullCheck(L_118);
-				L_118->set_type_0(4);
-				EgoRequire_t2009798841 * L_119 = V_18;
-				int32_t L_120 = V_17;
-				NullCheck(L_119);
-				L_119->set_value_1(L_120);
-				goto IL_0368;
+				L_118->set_value_1(L_119);
+				goto IL_0375;
 			}
 
-IL_0368:
+IL_035f:
 			{
-				EquipmentTypeInfo_t2857474214 * L_121 = V_6;
+				EgoRequire_t2009798841 * L_120 = V_18;
+				NullCheck(L_120);
+				L_120->set_type_0(4);
+				EgoRequire_t2009798841 * L_121 = V_18;
+				int32_t L_122 = V_17;
 				NullCheck(L_121);
-				List_1_t3481873583 * L_122 = L_121->get_requires_6();
-				EgoRequire_t2009798841 * L_123 = V_18;
-				NullCheck(L_122);
-				List_1_Add_m2329316256(L_122, L_123, /*hidden argument*/List_1_Add_m2329316256_RuntimeMethod_var);
+				L_121->set_value_1(L_122);
+				goto IL_0375;
 			}
 
-IL_0376:
+IL_0375:
 			{
-				RuntimeObject* L_124 = V_15;
+				EquipmentTypeInfo_t2857474214 * L_123 = V_6;
+				NullCheck(L_123);
+				List_1_t3481873583 * L_124 = L_123->get_requires_6();
+				EgoRequire_t2009798841 * L_125 = V_18;
 				NullCheck(L_124);
-				bool L_125 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_124);
-				if (L_125)
+				List_1_Add_m2329316256(L_124, L_125, /*hidden argument*/List_1_Add_m2329316256_RuntimeMethod_var);
+			}
+
+IL_0383:
+			{
+				RuntimeObject* L_126 = V_15;
+				NullCheck(L_126);
+				bool L_127 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_126);
+				if (L_127)
 				{
-					goto IL_01f6;
+					goto IL_0203;
 				}
 			}
 
-IL_0382:
+IL_038f:
 			{
-				IL2CPP_LEAVE(0x39E, FINALLY_0387);
+				IL2CPP_LEAVE(0x3AB, FINALLY_0394);
 			}
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_0387;
+			goto FINALLY_0394;
 		}
 
-FINALLY_0387:
+FINALLY_0394:
 		{ // begin finally (depth: 2)
 			{
-				RuntimeObject* L_126 = V_15;
-				RuntimeObject* L_127 = ((RuntimeObject*)IsInst((RuntimeObject*)L_126, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-				V_21 = L_127;
-				if (!L_127)
+				RuntimeObject* L_128 = V_15;
+				RuntimeObject* L_129 = ((RuntimeObject*)IsInst((RuntimeObject*)L_128, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+				V_21 = L_129;
+				if (!L_129)
 				{
-					goto IL_039d;
+					goto IL_03aa;
 				}
 			}
 
-IL_0396:
+IL_03a3:
 			{
-				RuntimeObject* L_128 = V_21;
-				NullCheck(L_128);
-				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_128);
+				RuntimeObject* L_130 = V_21;
+				NullCheck(L_130);
+				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_130);
 			}
 
-IL_039d:
+IL_03aa:
 			{
-				IL2CPP_END_FINALLY(903)
+				IL2CPP_END_FINALLY(916)
 			}
 		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(903)
+		IL2CPP_CLEANUP(916)
 		{
-			IL2CPP_JUMP_TBL(0x39E, IL_039e)
+			IL2CPP_JUMP_TBL(0x3AB, IL_03ab)
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		}
 
-IL_039e:
+IL_03ab:
 		{
-			XmlNode_t3767805227 * L_129 = V_4;
-			NullCheck(L_129);
-			XmlNode_t3767805227 * L_130 = XmlNode_SelectSingleNode_m2944339946(L_129, _stringLiteral2710390128, /*hidden argument*/NULL);
-			V_22 = L_130;
-			XmlNode_t3767805227 * L_131 = V_22;
-			if (!L_131)
-			{
-				goto IL_03c6;
-			}
-		}
-
-IL_03b3:
-		{
-			EquipmentTypeInfo_t2857474214 * L_132 = V_6;
+			XmlNode_t3767805227 * L_131 = V_4;
+			NullCheck(L_131);
+			XmlNode_t3767805227 * L_132 = XmlNode_SelectSingleNode_m2944339946(L_131, _stringLiteral2710390128, /*hidden argument*/NULL);
+			V_22 = L_132;
 			XmlNode_t3767805227 * L_133 = V_22;
-			NullCheck(L_133);
-			String_t* L_134 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_133);
-			int32_t L_135 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_134, /*hidden argument*/NULL);
-			NullCheck(L_132);
-			L_132->set_maxNum_4(L_135);
-		}
-
-IL_03c6:
-		{
-			XmlNode_t3767805227 * L_136 = V_4;
-			NullCheck(L_136);
-			XmlNode_t3767805227 * L_137 = XmlNode_SelectSingleNode_m2944339946(L_136, _stringLiteral3565528817, /*hidden argument*/NULL);
-			V_23 = L_137;
-			XmlNode_t3767805227 * L_138 = V_23;
-			if (!L_138)
+			if (!L_133)
 			{
-				goto IL_03ee;
+				goto IL_03d3;
 			}
 		}
 
-IL_03db:
+IL_03c0:
 		{
-			EquipmentTypeInfo_t2857474214 * L_139 = V_6;
-			XmlNode_t3767805227 * L_140 = V_23;
-			NullCheck(L_140);
-			String_t* L_141 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_140);
-			NullCheck(L_141);
-			String_t* L_142 = String_Trim_m923598732(L_141, /*hidden argument*/NULL);
-			NullCheck(L_139);
-			L_139->set_grade_9(L_142);
+			EquipmentTypeInfo_t2857474214 * L_134 = V_6;
+			XmlNode_t3767805227 * L_135 = V_22;
+			NullCheck(L_135);
+			String_t* L_136 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_135);
+			int32_t L_137 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_136, /*hidden argument*/NULL);
+			NullCheck(L_134);
+			L_134->set_maxNum_4(L_137);
 		}
 
-IL_03ee:
+IL_03d3:
+		{
+			XmlNode_t3767805227 * L_138 = V_4;
+			NullCheck(L_138);
+			XmlNode_t3767805227 * L_139 = XmlNode_SelectSingleNode_m2944339946(L_138, _stringLiteral3565528817, /*hidden argument*/NULL);
+			V_23 = L_139;
+			XmlNode_t3767805227 * L_140 = V_23;
+			if (!L_140)
+			{
+				goto IL_03fb;
+			}
+		}
+
+IL_03e8:
+		{
+			EquipmentTypeInfo_t2857474214 * L_141 = V_6;
+			XmlNode_t3767805227 * L_142 = V_23;
+			NullCheck(L_142);
+			String_t* L_143 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_142);
+			NullCheck(L_143);
+			String_t* L_144 = String_Trim_m923598732(L_143, /*hidden argument*/NULL);
+			NullCheck(L_141);
+			L_141->set_grade_9(L_144);
+		}
+
+IL_03fb:
 		try
 		{ // begin try (depth: 2)
 			{
-				String_t* L_143 = V_8;
-				if (!L_143)
+				String_t* L_145 = V_8;
+				if (!L_145)
 				{
-					goto IL_0492;
+					goto IL_049f;
 				}
 			}
 
-IL_03f5:
-			{
-				String_t* L_144 = V_8;
-				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				bool L_145 = String_op_Equality_m920492651(NULL /*static, unused*/, L_144, _stringLiteral3059001543, /*hidden argument*/NULL);
-				if (L_145)
-				{
-					goto IL_042d;
-				}
-			}
-
-IL_0406:
+IL_0402:
 			{
 				String_t* L_146 = V_8;
 				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				bool L_147 = String_op_Equality_m920492651(NULL /*static, unused*/, L_146, _stringLiteral48288960, /*hidden argument*/NULL);
+				bool L_147 = String_op_Equality_m920492651(NULL /*static, unused*/, L_146, _stringLiteral3059001543, /*hidden argument*/NULL);
 				if (L_147)
 				{
-					goto IL_044f;
+					goto IL_043a;
 				}
 			}
 
-IL_0417:
+IL_0413:
 			{
 				String_t* L_148 = V_8;
 				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				bool L_149 = String_op_Equality_m920492651(NULL /*static, unused*/, L_148, _stringLiteral237045639, /*hidden argument*/NULL);
+				bool L_149 = String_op_Equality_m920492651(NULL /*static, unused*/, L_148, _stringLiteral48288960, /*hidden argument*/NULL);
 				if (L_149)
 				{
-					goto IL_0471;
+					goto IL_045c;
 				}
 			}
 
-IL_0428:
+IL_0424:
 			{
-				goto IL_0492;
+				String_t* L_150 = V_8;
+				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+				bool L_151 = String_op_Equality_m920492651(NULL /*static, unused*/, L_150, _stringLiteral237045639, /*hidden argument*/NULL);
+				if (L_151)
+				{
+					goto IL_047e;
+				}
 			}
 
-IL_042d:
+IL_0435:
 			{
-				EquipmentTypeInfo_t2857474214 * L_150 = V_6;
-				NullCheck(L_150);
-				L_150->set_type_1(0);
-				EquipmentTypeInfo_t2857474214 * L_151 = V_6;
-				XmlNode_t3767805227 * L_152 = V_4;
-				EquipmentDataLoader_LoadWeapon_m341261204(__this, L_151, L_152, /*hidden argument*/NULL);
-				Dictionary_2_t1746187545 * L_153 = V_2;
-				int32_t L_154 = V_7;
-				EquipmentTypeInfo_t2857474214 * L_155 = V_6;
-				NullCheck(L_153);
-				Dictionary_2_Add_m4044337147(L_153, L_154, L_155, /*hidden argument*/Dictionary_2_Add_m4044337147_RuntimeMethod_var);
-				goto IL_0492;
+				goto IL_049f;
 			}
 
-IL_044f:
+IL_043a:
 			{
-				EquipmentTypeInfo_t2857474214 * L_156 = V_6;
-				NullCheck(L_156);
-				L_156->set_type_1(1);
+				EquipmentTypeInfo_t2857474214 * L_152 = V_6;
+				NullCheck(L_152);
+				L_152->set_type_1(0);
+				EquipmentTypeInfo_t2857474214 * L_153 = V_6;
+				XmlNode_t3767805227 * L_154 = V_4;
+				EquipmentDataLoader_LoadWeapon_m341261204(__this, L_153, L_154, /*hidden argument*/NULL);
+				Dictionary_2_t1746187545 * L_155 = V_2;
+				int32_t L_156 = V_7;
 				EquipmentTypeInfo_t2857474214 * L_157 = V_6;
-				XmlNode_t3767805227 * L_158 = V_4;
-				EquipmentDataLoader_LoadArmor_m2511564949(__this, L_157, L_158, /*hidden argument*/NULL);
-				Dictionary_2_t1746187545 * L_159 = V_2;
-				int32_t L_160 = V_7;
-				EquipmentTypeInfo_t2857474214 * L_161 = V_6;
-				NullCheck(L_159);
-				Dictionary_2_Add_m4044337147(L_159, L_160, L_161, /*hidden argument*/Dictionary_2_Add_m4044337147_RuntimeMethod_var);
-				goto IL_0492;
+				NullCheck(L_155);
+				Dictionary_2_Add_m4044337147(L_155, L_156, L_157, /*hidden argument*/Dictionary_2_Add_m4044337147_RuntimeMethod_var);
+				goto IL_049f;
 			}
 
-IL_0471:
+IL_045c:
 			{
-				EquipmentTypeInfo_t2857474214 * L_162 = V_6;
-				NullCheck(L_162);
-				L_162->set_type_1(2);
+				EquipmentTypeInfo_t2857474214 * L_158 = V_6;
+				NullCheck(L_158);
+				L_158->set_type_1(1);
+				EquipmentTypeInfo_t2857474214 * L_159 = V_6;
+				XmlNode_t3767805227 * L_160 = V_4;
+				EquipmentDataLoader_LoadArmor_m2511564949(__this, L_159, L_160, /*hidden argument*/NULL);
+				Dictionary_2_t1746187545 * L_161 = V_2;
+				int32_t L_162 = V_7;
 				EquipmentTypeInfo_t2857474214 * L_163 = V_6;
-				XmlNode_t3767805227 * L_164 = V_4;
-				EquipmentDataLoader_LoadEGOgift_m2087296742(__this, L_163, L_164, /*hidden argument*/NULL);
-				Dictionary_2_t1746187545 * L_165 = V_2;
-				int32_t L_166 = V_7;
-				EquipmentTypeInfo_t2857474214 * L_167 = V_6;
-				NullCheck(L_165);
-				Dictionary_2_Add_m4044337147(L_165, L_166, L_167, /*hidden argument*/Dictionary_2_Add_m4044337147_RuntimeMethod_var);
-				goto IL_0492;
+				NullCheck(L_161);
+				Dictionary_2_Add_m4044337147(L_161, L_162, L_163, /*hidden argument*/Dictionary_2_Add_m4044337147_RuntimeMethod_var);
+				goto IL_049f;
 			}
 
-IL_0492:
+IL_047e:
 			{
-				goto IL_04b6;
+				EquipmentTypeInfo_t2857474214 * L_164 = V_6;
+				NullCheck(L_164);
+				L_164->set_type_1(2);
+				EquipmentTypeInfo_t2857474214 * L_165 = V_6;
+				XmlNode_t3767805227 * L_166 = V_4;
+				EquipmentDataLoader_LoadEGOgift_m2087296742(__this, L_165, L_166, /*hidden argument*/NULL);
+				Dictionary_2_t1746187545 * L_167 = V_2;
+				int32_t L_168 = V_7;
+				EquipmentTypeInfo_t2857474214 * L_169 = V_6;
+				NullCheck(L_167);
+				Dictionary_2_Add_m4044337147(L_167, L_168, L_169, /*hidden argument*/Dictionary_2_Add_m4044337147_RuntimeMethod_var);
+				goto IL_049f;
+			}
+
+IL_049f:
+			{
+				goto IL_04c3;
 			}
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__exception_local = (Exception_t *)e.ex;
 			if(il2cpp_codegen_class_is_assignable_from (ArgumentException_t132251570_il2cpp_TypeInfo_var, il2cpp_codegen_object_class(e.ex)))
-				goto CATCH_0497;
+				goto CATCH_04a4;
 			throw e;
 		}
 
-CATCH_0497:
+CATCH_04a4:
 		{ // begin catch(System.ArgumentException)
 			V_24 = ((ArgumentException_t132251570 *)__exception_local);
-			int32_t L_168 = V_7;
-			int32_t L_169 = L_168;
-			RuntimeObject * L_170 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_169);
-			ArgumentException_t132251570 * L_171 = V_24;
+			int32_t L_170 = V_7;
+			int32_t L_171 = L_170;
+			RuntimeObject * L_172 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_171);
+			ArgumentException_t132251570 * L_173 = V_24;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_172 = String_Concat_m1715369213(NULL /*static, unused*/, L_170, _stringLiteral3452614528, L_171, /*hidden argument*/NULL);
+			String_t* L_174 = String_Concat_m1715369213(NULL /*static, unused*/, L_172, _stringLiteral3452614528, L_173, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_LogError_m2850623458(NULL /*static, unused*/, L_172, /*hidden argument*/NULL);
-			goto IL_04b6;
+			Debug_LogError_m2850623458(NULL /*static, unused*/, L_174, /*hidden argument*/NULL);
+			goto IL_04c3;
 		} // end catch (depth: 2)
 
-IL_04b6:
+IL_04c3:
 		{
-			RuntimeObject* L_173 = V_5;
-			NullCheck(L_173);
-			bool L_174 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_173);
-			if (L_174)
+			RuntimeObject* L_175 = V_5;
+			NullCheck(L_175);
+			bool L_176 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_175);
+			if (L_176)
 			{
-				goto IL_0046;
+				goto IL_0053;
 			}
 		}
 
-IL_04c2:
+IL_04cf:
 		{
-			IL2CPP_LEAVE(0x4DE, FINALLY_04c7);
+			IL2CPP_LEAVE(0x4EB, FINALLY_04d4);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_04c7;
+		goto FINALLY_04d4;
 	}
 
-FINALLY_04c7:
+FINALLY_04d4:
 	{ // begin finally (depth: 1)
 		{
-			RuntimeObject* L_175 = V_5;
-			RuntimeObject* L_176 = ((RuntimeObject*)IsInst((RuntimeObject*)L_175, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-			V_25 = L_176;
-			if (!L_176)
+			RuntimeObject* L_177 = V_5;
+			RuntimeObject* L_178 = ((RuntimeObject*)IsInst((RuntimeObject*)L_177, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+			V_25 = L_178;
+			if (!L_178)
 			{
-				goto IL_04dd;
+				goto IL_04ea;
 			}
 		}
 
-IL_04d6:
+IL_04e3:
 		{
-			RuntimeObject* L_177 = V_25;
-			NullCheck(L_177);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_177);
+			RuntimeObject* L_179 = V_25;
+			NullCheck(L_179);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_179);
 		}
 
-IL_04dd:
+IL_04ea:
 		{
-			IL2CPP_END_FINALLY(1223)
+			IL2CPP_END_FINALLY(1236)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(1223)
+	IL2CPP_CLEANUP(1236)
 	{
-		IL2CPP_JUMP_TBL(0x4DE, IL_04de)
+		IL2CPP_JUMP_TBL(0x4EB, IL_04eb)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_04de:
+IL_04eb:
 	{
-		EquipmentTypeList_t1756422084 * L_178 = EquipmentTypeList_get_instance_m3843044845(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Dictionary_2_t1746187545 * L_179 = V_2;
-		NullCheck(L_178);
-		EquipmentTypeList_Init_m875495510(L_178, L_179, /*hidden argument*/NULL);
+		EquipmentTypeList_t1756422084 * L_180 = EquipmentTypeList_get_instance_m3843044845(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Dictionary_2_t1746187545 * L_181 = V_2;
+		NullCheck(L_180);
+		EquipmentTypeList_Init_m875495510(L_180, L_181, /*hidden argument*/NULL);
 		return;
 	}
 }

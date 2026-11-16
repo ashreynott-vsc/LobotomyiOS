@@ -1798,7 +1798,6 @@ extern const uint32_t WorkerSpriteDataLoader_LoadnPrint_m2898112237_MetadataUsag
 extern RuntimeClass* XmlDocument_t2837193595_il2cpp_TypeInfo_var;
 extern RuntimeClass* XmlNode_t3767805227_il2cpp_TypeInfo_var;
 extern RuntimeClass* WorkerColorPreset_t1063632140_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Add_m3960970014_RuntimeMethod_var;
 extern String_t* _stringLiteral1449162068;
 extern String_t* _stringLiteral1751493683;
@@ -32534,8 +32533,8 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerSpriteDataLoader_LoadEquipmentData_m174
 extern "C" IL2CPP_METHOD_ATTR void WorkerSpriteDataLoader_LoadColorPreset_m2122976034 (WorkerSpriteDataLoader_t211275172 * __this, const RuntimeMethod* method);
 // System.Void WorkerSpriteDataLoader::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void WorkerSpriteDataLoader__ctor_m2874999353 (WorkerSpriteDataLoader_t211275172 * __this, const RuntimeMethod* method);
-// !!0 UnityEngine.Resources::Load<UnityEngine.TextAsset>(System.String)
-#define Resources_Load_TisTextAsset_t3022178571_m724759995(__this /* static, unused */, p0, method) ((  TextAsset_t3022178571 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))Resources_Load_TisRuntimeObject_m597869152_gshared)(__this /* static, unused */, p0, method)
+// UnityEngine.TextAsset SafeXmlLoader::Load(System.String)
+extern "C" IL2CPP_METHOD_ATTR TextAsset_t3022178571 * SafeXmlLoader_Load_m1449888044 (RuntimeObject * __this /* static, unused */, String_t* ___path0, const RuntimeMethod* method);
 // System.Void System.Xml.XmlDocument::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void XmlDocument__ctor_m1447119458 (XmlDocument_t2837193595 * __this, const RuntimeMethod* method);
 // System.String UnityEngine.TextAsset::get_text()
@@ -56537,163 +56536,177 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerSpriteDataLoader_LoadColorPreset_m21229
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		TextAsset_t3022178571 * L_0 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, _stringLiteral1449162068, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_0 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, _stringLiteral1449162068, /*hidden argument*/NULL);
 		V_0 = L_0;
-		XmlDocument_t2837193595 * L_1 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
-		XmlDocument__ctor_m1447119458(L_1, /*hidden argument*/NULL);
-		V_1 = L_1;
-		XmlDocument_t2837193595 * L_2 = V_1;
-		TextAsset_t3022178571 * L_3 = V_0;
-		NullCheck(L_3);
-		String_t* L_4 = TextAsset_get_text_m2027878391(L_3, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_2, L_4);
-		List_1_t2535706882 * L_5 = (List_1_t2535706882 *)il2cpp_codegen_object_new(List_1_t2535706882_il2cpp_TypeInfo_var);
-		List_1__ctor_m1232375292(L_5, /*hidden argument*/List_1__ctor_m1232375292_RuntimeMethod_var);
-		V_2 = L_5;
-		XmlDocument_t2837193595 * L_6 = V_1;
-		NullCheck(L_6);
-		XmlNodeList_t2551693786 * L_7 = XmlNode_SelectNodes_m3596713167(L_6, _stringLiteral1751493683, /*hidden argument*/NULL);
-		V_3 = L_7;
-		XmlNodeList_t2551693786 * L_8 = V_3;
-		NullCheck(L_8);
-		RuntimeObject* L_9 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_8);
-		V_5 = L_9;
+		TextAsset_t3022178571 * L_1 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_1, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
 	}
 
-IL_0037:
+IL_0018:
+	{
+		XmlDocument_t2837193595 * L_3 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
+		XmlDocument__ctor_m1447119458(L_3, /*hidden argument*/NULL);
+		V_1 = L_3;
+		XmlDocument_t2837193595 * L_4 = V_1;
+		TextAsset_t3022178571 * L_5 = V_0;
+		NullCheck(L_5);
+		String_t* L_6 = TextAsset_get_text_m2027878391(L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_4, L_6);
+		List_1_t2535706882 * L_7 = (List_1_t2535706882 *)il2cpp_codegen_object_new(List_1_t2535706882_il2cpp_TypeInfo_var);
+		List_1__ctor_m1232375292(L_7, /*hidden argument*/List_1__ctor_m1232375292_RuntimeMethod_var);
+		V_2 = L_7;
+		XmlDocument_t2837193595 * L_8 = V_1;
+		NullCheck(L_8);
+		XmlNodeList_t2551693786 * L_9 = XmlNode_SelectNodes_m3596713167(L_8, _stringLiteral1751493683, /*hidden argument*/NULL);
+		V_3 = L_9;
+		XmlNodeList_t2551693786 * L_10 = V_3;
+		NullCheck(L_10);
+		RuntimeObject* L_11 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_10);
+		V_5 = L_11;
+	}
+
+IL_0044:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_00e1;
+			goto IL_00ee;
 		}
 
-IL_003c:
+IL_0049:
 		{
-			RuntimeObject* L_10 = V_5;
-			NullCheck(L_10);
-			RuntimeObject * L_11 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_10);
-			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_11, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-			XmlNode_t3767805227 * L_12 = V_4;
+			RuntimeObject* L_12 = V_5;
 			NullCheck(L_12);
-			String_t* L_13 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_12);
-			V_6 = L_13;
+			RuntimeObject * L_13 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_12);
+			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_13, XmlNode_t3767805227_il2cpp_TypeInfo_var));
 			XmlNode_t3767805227 * L_14 = V_4;
 			NullCheck(L_14);
-			XmlAttributeCollection_t2316283784 * L_15 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_14);
-			NullCheck(L_15);
-			XmlNode_t3767805227 * L_16 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_15, _stringLiteral62725243);
+			String_t* L_15 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_14);
+			V_6 = L_15;
+			XmlNode_t3767805227 * L_16 = V_4;
 			NullCheck(L_16);
-			String_t* L_17 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_16);
-			V_7 = L_17;
-			XmlNode_t3767805227 * L_18 = V_4;
+			XmlAttributeCollection_t2316283784 * L_17 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_16);
+			NullCheck(L_17);
+			XmlNode_t3767805227 * L_18 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_17, _stringLiteral62725243);
 			NullCheck(L_18);
-			XmlAttributeCollection_t2316283784 * L_19 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_18);
-			NullCheck(L_19);
-			XmlNode_t3767805227 * L_20 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_19, _stringLiteral3454449607);
+			String_t* L_19 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_18);
+			V_7 = L_19;
+			XmlNode_t3767805227 * L_20 = V_4;
 			NullCheck(L_20);
-			String_t* L_21 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_20);
-			float L_22 = Single_Parse_m364357836(NULL /*static, unused*/, L_21, /*hidden argument*/NULL);
-			V_8 = (((int32_t)((int32_t)L_22)));
-			WorkerColorPreset_t1063632140 * L_23 = (WorkerColorPreset_t1063632140 *)il2cpp_codegen_object_new(WorkerColorPreset_t1063632140_il2cpp_TypeInfo_var);
-			WorkerColorPreset__ctor_m558670243(L_23, /*hidden argument*/NULL);
-			V_9 = L_23;
-			String_t* L_24 = V_6;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_25 = String_Concat_m3755062657(NULL /*static, unused*/, _stringLiteral3452614525, L_24, _stringLiteral3456415706, /*hidden argument*/NULL);
-			V_6 = L_25;
+			XmlAttributeCollection_t2316283784 * L_21 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_20);
+			NullCheck(L_21);
+			XmlNode_t3767805227 * L_22 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_21, _stringLiteral3454449607);
+			NullCheck(L_22);
+			String_t* L_23 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_22);
+			float L_24 = Single_Parse_m364357836(NULL /*static, unused*/, L_23, /*hidden argument*/NULL);
+			V_8 = (((int32_t)((int32_t)L_24)));
+			WorkerColorPreset_t1063632140 * L_25 = (WorkerColorPreset_t1063632140 *)il2cpp_codegen_object_new(WorkerColorPreset_t1063632140_il2cpp_TypeInfo_var);
+			WorkerColorPreset__ctor_m558670243(L_25, /*hidden argument*/NULL);
+			V_9 = L_25;
 			String_t* L_26 = V_6;
-			WorkerColorPreset_t1063632140 * L_27 = V_9;
-			NullCheck(L_27);
-			Color_t2555686324 * L_28 = L_27->get_address_of_color_0();
-			bool L_29 = ColorUtility_TryParseHtmlString_m1532239634(NULL /*static, unused*/, L_26, L_28, /*hidden argument*/NULL);
-			if (L_29)
-			{
-				goto IL_00c7;
-			}
-		}
-
-IL_00b6:
-		{
-			String_t* L_30 = V_6;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_31 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral2491471449, L_30, /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_LogError_m2850623458(NULL /*static, unused*/, L_31, /*hidden argument*/NULL);
-		}
-
-IL_00c7:
-		{
-			WorkerColorPreset_t1063632140 * L_32 = V_9;
-			String_t* L_33 = V_7;
-			NullCheck(L_32);
-			L_32->set_name_2(L_33);
-			WorkerColorPreset_t1063632140 * L_34 = V_9;
-			int32_t L_35 = V_8;
-			NullCheck(L_34);
-			L_34->set_id_1(L_35);
-			List_1_t2535706882 * L_36 = V_2;
-			WorkerColorPreset_t1063632140 * L_37 = V_9;
-			NullCheck(L_36);
-			List_1_Add_m3960970014(L_36, L_37, /*hidden argument*/List_1_Add_m3960970014_RuntimeMethod_var);
-		}
-
-IL_00e1:
-		{
-			RuntimeObject* L_38 = V_5;
-			NullCheck(L_38);
-			bool L_39 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_38);
-			if (L_39)
+			String_t* L_27 = String_Concat_m3755062657(NULL /*static, unused*/, _stringLiteral3452614525, L_26, _stringLiteral3456415706, /*hidden argument*/NULL);
+			V_6 = L_27;
+			String_t* L_28 = V_6;
+			WorkerColorPreset_t1063632140 * L_29 = V_9;
+			NullCheck(L_29);
+			Color_t2555686324 * L_30 = L_29->get_address_of_color_0();
+			bool L_31 = ColorUtility_TryParseHtmlString_m1532239634(NULL /*static, unused*/, L_28, L_30, /*hidden argument*/NULL);
+			if (L_31)
 			{
-				goto IL_003c;
+				goto IL_00d4;
 			}
 		}
 
-IL_00ed:
+IL_00c3:
 		{
-			IL2CPP_LEAVE(0x109, FINALLY_00f2);
+			String_t* L_32 = V_6;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_33 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral2491471449, L_32, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_LogError_m2850623458(NULL /*static, unused*/, L_33, /*hidden argument*/NULL);
+		}
+
+IL_00d4:
+		{
+			WorkerColorPreset_t1063632140 * L_34 = V_9;
+			String_t* L_35 = V_7;
+			NullCheck(L_34);
+			L_34->set_name_2(L_35);
+			WorkerColorPreset_t1063632140 * L_36 = V_9;
+			int32_t L_37 = V_8;
+			NullCheck(L_36);
+			L_36->set_id_1(L_37);
+			List_1_t2535706882 * L_38 = V_2;
+			WorkerColorPreset_t1063632140 * L_39 = V_9;
+			NullCheck(L_38);
+			List_1_Add_m3960970014(L_38, L_39, /*hidden argument*/List_1_Add_m3960970014_RuntimeMethod_var);
+		}
+
+IL_00ee:
+		{
+			RuntimeObject* L_40 = V_5;
+			NullCheck(L_40);
+			bool L_41 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_40);
+			if (L_41)
+			{
+				goto IL_0049;
+			}
+		}
+
+IL_00fa:
+		{
+			IL2CPP_LEAVE(0x116, FINALLY_00ff);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_00f2;
+		goto FINALLY_00ff;
 	}
 
-FINALLY_00f2:
+FINALLY_00ff:
 	{ // begin finally (depth: 1)
 		{
-			RuntimeObject* L_40 = V_5;
-			RuntimeObject* L_41 = ((RuntimeObject*)IsInst((RuntimeObject*)L_40, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-			V_10 = L_41;
-			if (!L_41)
+			RuntimeObject* L_42 = V_5;
+			RuntimeObject* L_43 = ((RuntimeObject*)IsInst((RuntimeObject*)L_42, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+			V_10 = L_43;
+			if (!L_43)
 			{
-				goto IL_0108;
+				goto IL_0115;
 			}
 		}
 
-IL_0101:
+IL_010e:
 		{
-			RuntimeObject* L_42 = V_10;
-			NullCheck(L_42);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_42);
+			RuntimeObject* L_44 = V_10;
+			NullCheck(L_44);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_44);
 		}
 
-IL_0108:
+IL_0115:
 		{
-			IL2CPP_END_FINALLY(242)
+			IL2CPP_END_FINALLY(255)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(242)
+	IL2CPP_CLEANUP(255)
 	{
-		IL2CPP_JUMP_TBL(0x109, IL_0109)
+		IL2CPP_JUMP_TBL(0x116, IL_0116)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_0109:
+IL_0116:
 	{
-		List_1_t2535706882 * L_43 = V_2;
-		__this->set_colorLoaded_3(L_43);
+		List_1_t2535706882 * L_45 = V_2;
+		__this->set_colorLoaded_3(L_45);
 		return;
 	}
 }
@@ -56741,440 +56754,454 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerSpriteDataLoader_LoadBasicData_m9604616
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		TextAsset_t3022178571 * L_0 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, _stringLiteral895919260, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_0 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, _stringLiteral895919260, /*hidden argument*/NULL);
 		V_0 = L_0;
-		XmlDocument_t2837193595 * L_1 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
-		XmlDocument__ctor_m1447119458(L_1, /*hidden argument*/NULL);
-		V_1 = L_1;
-		XmlDocument_t2837193595 * L_2 = V_1;
-		TextAsset_t3022178571 * L_3 = V_0;
-		NullCheck(L_3);
-		String_t* L_4 = TextAsset_get_text_m2027878391(L_3, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_2, L_4);
-		WorkerBasicSpriteController_t188525599 * L_5 = (WorkerBasicSpriteController_t188525599 *)il2cpp_codegen_object_new(WorkerBasicSpriteController_t188525599_il2cpp_TypeInfo_var);
-		WorkerBasicSpriteController__ctor_m1624058149(L_5, /*hidden argument*/NULL);
-		V_2 = L_5;
-		XmlDocument_t2837193595 * L_6 = V_1;
-		NullCheck(L_6);
-		XmlNodeList_t2551693786 * L_7 = XmlNode_SelectNodes_m3596713167(L_6, _stringLiteral2103699227, /*hidden argument*/NULL);
-		V_3 = L_7;
-		XmlNodeList_t2551693786 * L_8 = V_3;
-		NullCheck(L_8);
-		RuntimeObject* L_9 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_8);
-		V_5 = L_9;
+		TextAsset_t3022178571 * L_1 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_1, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
 	}
 
-IL_0037:
+IL_0018:
+	{
+		XmlDocument_t2837193595 * L_3 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
+		XmlDocument__ctor_m1447119458(L_3, /*hidden argument*/NULL);
+		V_1 = L_3;
+		XmlDocument_t2837193595 * L_4 = V_1;
+		TextAsset_t3022178571 * L_5 = V_0;
+		NullCheck(L_5);
+		String_t* L_6 = TextAsset_get_text_m2027878391(L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_4, L_6);
+		WorkerBasicSpriteController_t188525599 * L_7 = (WorkerBasicSpriteController_t188525599 *)il2cpp_codegen_object_new(WorkerBasicSpriteController_t188525599_il2cpp_TypeInfo_var);
+		WorkerBasicSpriteController__ctor_m1624058149(L_7, /*hidden argument*/NULL);
+		V_2 = L_7;
+		XmlDocument_t2837193595 * L_8 = V_1;
+		NullCheck(L_8);
+		XmlNodeList_t2551693786 * L_9 = XmlNode_SelectNodes_m3596713167(L_8, _stringLiteral2103699227, /*hidden argument*/NULL);
+		V_3 = L_9;
+		XmlNodeList_t2551693786 * L_10 = V_3;
+		NullCheck(L_10);
+		RuntimeObject* L_11 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_10);
+		V_5 = L_11;
+	}
+
+IL_0044:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_026f;
+			goto IL_027c;
 		}
 
-IL_003c:
+IL_0049:
 		{
-			RuntimeObject* L_10 = V_5;
-			NullCheck(L_10);
-			RuntimeObject * L_11 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_10);
-			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_11, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-			WorkerBasicSprite_t2162738187 * L_12 = (WorkerBasicSprite_t2162738187 *)il2cpp_codegen_object_new(WorkerBasicSprite_t2162738187_il2cpp_TypeInfo_var);
-			WorkerBasicSprite__ctor_m4050579642(L_12, /*hidden argument*/NULL);
-			V_6 = L_12;
-			XmlNode_t3767805227 * L_13 = V_4;
-			NullCheck(L_13);
-			XmlAttributeCollection_t2316283784 * L_14 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_13);
-			NullCheck(L_14);
-			XmlNode_t3767805227 * L_15 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_14, _stringLiteral62725243);
+			RuntimeObject* L_12 = V_5;
+			NullCheck(L_12);
+			RuntimeObject * L_13 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_12);
+			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_13, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+			WorkerBasicSprite_t2162738187 * L_14 = (WorkerBasicSprite_t2162738187 *)il2cpp_codegen_object_new(WorkerBasicSprite_t2162738187_il2cpp_TypeInfo_var);
+			WorkerBasicSprite__ctor_m4050579642(L_14, /*hidden argument*/NULL);
+			V_6 = L_14;
+			XmlNode_t3767805227 * L_15 = V_4;
 			NullCheck(L_15);
-			String_t* L_16 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_15);
-			V_7 = L_16;
-			String_t* L_17 = V_7;
-			int32_t L_18 = WorkerSpriteData_GetBasicSpriteRegion_m3759283120(NULL /*static, unused*/, L_17, /*hidden argument*/NULL);
-			V_8 = L_18;
-			WorkerBasicSprite_t2162738187 * L_19 = V_6;
-			int32_t L_20 = V_8;
-			NullCheck(L_19);
-			L_19->set_subRegion_0(L_20);
-			XmlNode_t3767805227 * L_21 = V_4;
+			XmlAttributeCollection_t2316283784 * L_16 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_15);
+			NullCheck(L_16);
+			XmlNode_t3767805227 * L_17 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_16, _stringLiteral62725243);
+			NullCheck(L_17);
+			String_t* L_18 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_17);
+			V_7 = L_18;
+			String_t* L_19 = V_7;
+			int32_t L_20 = WorkerSpriteData_GetBasicSpriteRegion_m3759283120(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
+			V_8 = L_20;
+			WorkerBasicSprite_t2162738187 * L_21 = V_6;
+			int32_t L_22 = V_8;
 			NullCheck(L_21);
-			XmlNodeList_t2551693786 * L_22 = XmlNode_SelectNodes_m3596713167(L_21, _stringLiteral3686006468, /*hidden argument*/NULL);
-			V_9 = L_22;
+			L_21->set_subRegion_0(L_22);
 			XmlNode_t3767805227 * L_23 = V_4;
 			NullCheck(L_23);
-			XmlNodeList_t2551693786 * L_24 = XmlNode_SelectNodes_m3596713167(L_23, _stringLiteral546558823, /*hidden argument*/NULL);
-			V_10 = L_24;
-			XmlNodeList_t2551693786 * L_25 = V_9;
+			XmlNodeList_t2551693786 * L_24 = XmlNode_SelectNodes_m3596713167(L_23, _stringLiteral3686006468, /*hidden argument*/NULL);
+			V_9 = L_24;
+			XmlNode_t3767805227 * L_25 = V_4;
 			NullCheck(L_25);
-			RuntimeObject* L_26 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_25);
-			V_12 = L_26;
+			XmlNodeList_t2551693786 * L_26 = XmlNode_SelectNodes_m3596713167(L_25, _stringLiteral546558823, /*hidden argument*/NULL);
+			V_10 = L_26;
+			XmlNodeList_t2551693786 * L_27 = V_9;
+			NullCheck(L_27);
+			RuntimeObject* L_28 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_27);
+			V_12 = L_28;
 		}
 
-IL_00a0:
+IL_00ad:
 		try
 		{ // begin try (depth: 2)
 			{
-				goto IL_016c;
+				goto IL_0179;
 			}
 
-IL_00a5:
+IL_00b2:
 			{
-				RuntimeObject* L_27 = V_12;
-				NullCheck(L_27);
-				RuntimeObject * L_28 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_27);
-				V_11 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_28, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-				XmlNode_t3767805227 * L_29 = V_11;
+				RuntimeObject* L_29 = V_12;
 				NullCheck(L_29);
-				XmlAttributeCollection_t2316283784 * L_30 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_29);
-				NullCheck(L_30);
-				XmlNode_t3767805227 * L_31 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_30, _stringLiteral3454449607);
+				RuntimeObject * L_30 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_29);
+				V_11 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_30, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+				XmlNode_t3767805227 * L_31 = V_11;
 				NullCheck(L_31);
-				String_t* L_32 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_31);
-				int32_t L_33 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_32, /*hidden argument*/NULL);
-				V_13 = L_33;
-				XmlNode_t3767805227 * L_34 = V_11;
-				NullCheck(L_34);
-				String_t* L_35 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_34);
-				NullCheck(L_35);
-				String_t* L_36 = String_Trim_m923598732(L_35, /*hidden argument*/NULL);
-				V_14 = L_36;
-				String_t* L_37 = V_14;
+				XmlAttributeCollection_t2316283784 * L_32 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_31);
+				NullCheck(L_32);
+				XmlNode_t3767805227 * L_33 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_32, _stringLiteral3454449607);
+				NullCheck(L_33);
+				String_t* L_34 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_33);
+				int32_t L_35 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_34, /*hidden argument*/NULL);
+				V_13 = L_35;
+				XmlNode_t3767805227 * L_36 = V_11;
+				NullCheck(L_36);
+				String_t* L_37 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_36);
+				NullCheck(L_37);
+				String_t* L_38 = String_Trim_m923598732(L_37, /*hidden argument*/NULL);
+				V_14 = L_38;
+				String_t* L_39 = V_14;
 				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				String_t* L_38 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
-				bool L_39 = String_op_Equality_m920492651(NULL /*static, unused*/, L_37, L_38, /*hidden argument*/NULL);
-				if (!L_39)
+				String_t* L_40 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+				bool L_41 = String_op_Equality_m920492651(NULL /*static, unused*/, L_39, L_40, /*hidden argument*/NULL);
+				if (!L_41)
 				{
-					goto IL_00f4;
+					goto IL_0101;
 				}
 			}
 
-IL_00ef:
+IL_00fc:
 			{
-				goto IL_016c;
+				goto IL_0179;
 			}
 
-IL_00f4:
+IL_0101:
 			{
-				AtlasLoadData_t42178900 * L_40 = (AtlasLoadData_t42178900 *)il2cpp_codegen_object_new(AtlasLoadData_t42178900_il2cpp_TypeInfo_var);
-				AtlasLoadData__ctor_m3526501243(L_40, /*hidden argument*/NULL);
-				V_15 = L_40;
-				AtlasLoadData_t42178900 * L_41 = V_15;
-				NullCheck(L_41);
-				((SpriteResourceLoadData_t4131239456 *)L_41)->set_type_2(0);
-				AtlasLoadData_t42178900 * L_42 = V_15;
-				String_t* L_43 = V_14;
-				NullCheck(L_42);
-				((SpriteResourceLoadData_t4131239456 *)L_42)->set_src_0(L_43);
+				AtlasLoadData_t42178900 * L_42 = (AtlasLoadData_t42178900 *)il2cpp_codegen_object_new(AtlasLoadData_t42178900_il2cpp_TypeInfo_var);
+				AtlasLoadData__ctor_m3526501243(L_42, /*hidden argument*/NULL);
+				V_15 = L_42;
+				AtlasLoadData_t42178900 * L_43 = V_15;
+				NullCheck(L_43);
+				((SpriteResourceLoadData_t4131239456 *)L_43)->set_type_2(0);
 				AtlasLoadData_t42178900 * L_44 = V_15;
-				int32_t L_45 = V_13;
+				String_t* L_45 = V_14;
 				NullCheck(L_44);
-				((SpriteResourceLoadData_t4131239456 *)L_44)->set_id_1(L_45);
+				((SpriteResourceLoadData_t4131239456 *)L_44)->set_src_0(L_45);
 				AtlasLoadData_t42178900 * L_46 = V_15;
-				V_16 = L_46;
-				XmlNode_t3767805227 * L_47 = V_11;
-				NullCheck(L_47);
-				XmlAttributeCollection_t2316283784 * L_48 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_47);
-				NullCheck(L_48);
-				XmlNode_t3767805227 * L_49 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_48, _stringLiteral2774877945);
-				V_17 = L_49;
-				XmlNode_t3767805227 * L_50 = V_17;
-				if (!L_50)
+				int32_t L_47 = V_13;
+				NullCheck(L_46);
+				((SpriteResourceLoadData_t4131239456 *)L_46)->set_id_1(L_47);
+				AtlasLoadData_t42178900 * L_48 = V_15;
+				V_16 = L_48;
+				XmlNode_t3767805227 * L_49 = V_11;
+				NullCheck(L_49);
+				XmlAttributeCollection_t2316283784 * L_50 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_49);
+				NullCheck(L_50);
+				XmlNode_t3767805227 * L_51 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_50, _stringLiteral2774877945);
+				V_17 = L_51;
+				XmlNode_t3767805227 * L_52 = V_17;
+				if (!L_52)
 				{
-					goto IL_0157;
+					goto IL_0164;
 				}
 			}
 
-IL_0133:
+IL_0140:
 			{
 				V_18 = (bool)0;
-				XmlNode_t3767805227 * L_51 = V_17;
-				NullCheck(L_51);
-				String_t* L_52 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_51);
-				NullCheck(L_52);
-				String_t* L_53 = String_Trim_m923598732(L_52, /*hidden argument*/NULL);
+				XmlNode_t3767805227 * L_53 = V_17;
+				NullCheck(L_53);
+				String_t* L_54 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_53);
+				NullCheck(L_54);
+				String_t* L_55 = String_Trim_m923598732(L_54, /*hidden argument*/NULL);
 				IL2CPP_RUNTIME_CLASS_INIT(Boolean_t97287965_il2cpp_TypeInfo_var);
-				bool L_54 = Boolean_TryParse_m1999513058(NULL /*static, unused*/, L_53, (&V_18), /*hidden argument*/NULL);
-				if (!L_54)
+				bool L_56 = Boolean_TryParse_m1999513058(NULL /*static, unused*/, L_55, (&V_18), /*hidden argument*/NULL);
+				if (!L_56)
 				{
-					goto IL_0157;
+					goto IL_0164;
 				}
 			}
 
-IL_014e:
-			{
-				AtlasLoadData_t42178900 * L_55 = V_16;
-				bool L_56 = V_18;
-				NullCheck(L_55);
-				((SpriteResourceLoadData_t4131239456 *)L_55)->set_isCredit_5(L_56);
-			}
-
-IL_0157:
+IL_015b:
 			{
 				AtlasLoadData_t42178900 * L_57 = V_16;
+				bool L_58 = V_18;
 				NullCheck(L_57);
-				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_57);
-				WorkerBasicSprite_t2162738187 * L_58 = V_6;
-				NullCheck(L_58);
-				List_1_t1308346902 * L_59 = L_58->get_loadedData_1();
-				AtlasLoadData_t42178900 * L_60 = V_16;
-				NullCheck(L_59);
-				List_1_Add_m2416302390(L_59, L_60, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
+				((SpriteResourceLoadData_t4131239456 *)L_57)->set_isCredit_5(L_58);
 			}
 
-IL_016c:
+IL_0164:
 			{
-				RuntimeObject* L_61 = V_12;
+				AtlasLoadData_t42178900 * L_59 = V_16;
+				NullCheck(L_59);
+				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_59);
+				WorkerBasicSprite_t2162738187 * L_60 = V_6;
+				NullCheck(L_60);
+				List_1_t1308346902 * L_61 = L_60->get_loadedData_1();
+				AtlasLoadData_t42178900 * L_62 = V_16;
 				NullCheck(L_61);
-				bool L_62 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_61);
-				if (L_62)
+				List_1_Add_m2416302390(L_61, L_62, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
+			}
+
+IL_0179:
+			{
+				RuntimeObject* L_63 = V_12;
+				NullCheck(L_63);
+				bool L_64 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_63);
+				if (L_64)
 				{
-					goto IL_00a5;
+					goto IL_00b2;
 				}
 			}
 
-IL_0178:
+IL_0185:
 			{
-				IL2CPP_LEAVE(0x194, FINALLY_017d);
+				IL2CPP_LEAVE(0x1A1, FINALLY_018a);
 			}
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_017d;
+			goto FINALLY_018a;
 		}
 
-FINALLY_017d:
+FINALLY_018a:
 		{ // begin finally (depth: 2)
 			{
-				RuntimeObject* L_63 = V_12;
-				RuntimeObject* L_64 = ((RuntimeObject*)IsInst((RuntimeObject*)L_63, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-				V_19 = L_64;
-				if (!L_64)
+				RuntimeObject* L_65 = V_12;
+				RuntimeObject* L_66 = ((RuntimeObject*)IsInst((RuntimeObject*)L_65, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+				V_19 = L_66;
+				if (!L_66)
 				{
-					goto IL_0193;
+					goto IL_01a0;
 				}
 			}
 
-IL_018c:
+IL_0199:
 			{
-				RuntimeObject* L_65 = V_19;
-				NullCheck(L_65);
-				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_65);
+				RuntimeObject* L_67 = V_19;
+				NullCheck(L_67);
+				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_67);
 			}
 
-IL_0193:
+IL_01a0:
 			{
-				IL2CPP_END_FINALLY(381)
+				IL2CPP_END_FINALLY(394)
 			}
 		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(381)
+		IL2CPP_CLEANUP(394)
 		{
-			IL2CPP_JUMP_TBL(0x194, IL_0194)
+			IL2CPP_JUMP_TBL(0x1A1, IL_01a1)
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		}
 
-IL_0194:
+IL_01a1:
 		{
-			XmlNodeList_t2551693786 * L_66 = V_10;
-			NullCheck(L_66);
-			RuntimeObject* L_67 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_66);
-			V_21 = L_67;
+			XmlNodeList_t2551693786 * L_68 = V_10;
+			NullCheck(L_68);
+			RuntimeObject* L_69 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_68);
+			V_21 = L_69;
 		}
 
-IL_019d:
+IL_01aa:
 		try
 		{ // begin try (depth: 2)
 			{
-				goto IL_0226;
+				goto IL_0233;
 			}
 
-IL_01a2:
+IL_01af:
 			{
-				RuntimeObject* L_68 = V_21;
-				NullCheck(L_68);
-				RuntimeObject * L_69 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_68);
-				V_20 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_69, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-				XmlNode_t3767805227 * L_70 = V_20;
+				RuntimeObject* L_70 = V_21;
 				NullCheck(L_70);
-				XmlAttributeCollection_t2316283784 * L_71 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_70);
-				NullCheck(L_71);
-				XmlNode_t3767805227 * L_72 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_71, _stringLiteral3454449607);
+				RuntimeObject * L_71 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_70);
+				V_20 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_71, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+				XmlNode_t3767805227 * L_72 = V_20;
 				NullCheck(L_72);
-				String_t* L_73 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_72);
-				int32_t L_74 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_73, /*hidden argument*/NULL);
-				V_22 = L_74;
-				XmlNode_t3767805227 * L_75 = V_20;
-				NullCheck(L_75);
-				String_t* L_76 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_75);
-				NullCheck(L_76);
-				String_t* L_77 = String_Trim_m923598732(L_76, /*hidden argument*/NULL);
-				V_23 = L_77;
-				String_t* L_78 = V_23;
+				XmlAttributeCollection_t2316283784 * L_73 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_72);
+				NullCheck(L_73);
+				XmlNode_t3767805227 * L_74 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_73, _stringLiteral3454449607);
+				NullCheck(L_74);
+				String_t* L_75 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_74);
+				int32_t L_76 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_75, /*hidden argument*/NULL);
+				V_22 = L_76;
+				XmlNode_t3767805227 * L_77 = V_20;
+				NullCheck(L_77);
+				String_t* L_78 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_77);
+				NullCheck(L_78);
+				String_t* L_79 = String_Trim_m923598732(L_78, /*hidden argument*/NULL);
+				V_23 = L_79;
+				String_t* L_80 = V_23;
 				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				String_t* L_79 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
-				bool L_80 = String_op_Equality_m920492651(NULL /*static, unused*/, L_78, L_79, /*hidden argument*/NULL);
-				if (L_80)
+				String_t* L_81 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+				bool L_82 = String_op_Equality_m920492651(NULL /*static, unused*/, L_80, L_81, /*hidden argument*/NULL);
+				if (L_82)
 				{
-					goto IL_0226;
+					goto IL_0233;
 				}
 			}
 
-IL_01ec:
+IL_01f9:
 			{
-				SpriteLoadData_t2013617770 * L_81 = (SpriteLoadData_t2013617770 *)il2cpp_codegen_object_new(SpriteLoadData_t2013617770_il2cpp_TypeInfo_var);
-				SpriteLoadData__ctor_m1047319824(L_81, /*hidden argument*/NULL);
-				V_24 = L_81;
-				SpriteLoadData_t2013617770 * L_82 = V_24;
-				NullCheck(L_82);
-				((SpriteResourceLoadData_t4131239456 *)L_82)->set_type_2(1);
-				SpriteLoadData_t2013617770 * L_83 = V_24;
-				String_t* L_84 = V_23;
-				NullCheck(L_83);
-				((SpriteResourceLoadData_t4131239456 *)L_83)->set_src_0(L_84);
+				SpriteLoadData_t2013617770 * L_83 = (SpriteLoadData_t2013617770 *)il2cpp_codegen_object_new(SpriteLoadData_t2013617770_il2cpp_TypeInfo_var);
+				SpriteLoadData__ctor_m1047319824(L_83, /*hidden argument*/NULL);
+				V_24 = L_83;
+				SpriteLoadData_t2013617770 * L_84 = V_24;
+				NullCheck(L_84);
+				((SpriteResourceLoadData_t4131239456 *)L_84)->set_type_2(1);
 				SpriteLoadData_t2013617770 * L_85 = V_24;
-				int32_t L_86 = V_22;
+				String_t* L_86 = V_23;
 				NullCheck(L_85);
-				((SpriteResourceLoadData_t4131239456 *)L_85)->set_id_1(L_86);
+				((SpriteResourceLoadData_t4131239456 *)L_85)->set_src_0(L_86);
 				SpriteLoadData_t2013617770 * L_87 = V_24;
-				V_25 = L_87;
-				SpriteLoadData_t2013617770 * L_88 = V_25;
-				NullCheck(L_88);
-				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_88);
-				WorkerBasicSprite_t2162738187 * L_89 = V_6;
-				NullCheck(L_89);
-				List_1_t1308346902 * L_90 = L_89->get_loadedData_1();
-				SpriteLoadData_t2013617770 * L_91 = V_25;
+				int32_t L_88 = V_22;
+				NullCheck(L_87);
+				((SpriteResourceLoadData_t4131239456 *)L_87)->set_id_1(L_88);
+				SpriteLoadData_t2013617770 * L_89 = V_24;
+				V_25 = L_89;
+				SpriteLoadData_t2013617770 * L_90 = V_25;
 				NullCheck(L_90);
-				List_1_Add_m2416302390(L_90, L_91, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
+				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_90);
+				WorkerBasicSprite_t2162738187 * L_91 = V_6;
+				NullCheck(L_91);
+				List_1_t1308346902 * L_92 = L_91->get_loadedData_1();
+				SpriteLoadData_t2013617770 * L_93 = V_25;
+				NullCheck(L_92);
+				List_1_Add_m2416302390(L_92, L_93, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
 			}
 
-IL_0226:
+IL_0233:
 			{
-				RuntimeObject* L_92 = V_21;
-				NullCheck(L_92);
-				bool L_93 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_92);
-				if (L_93)
+				RuntimeObject* L_94 = V_21;
+				NullCheck(L_94);
+				bool L_95 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_94);
+				if (L_95)
 				{
-					goto IL_01a2;
+					goto IL_01af;
 				}
 			}
 
-IL_0232:
+IL_023f:
 			{
-				IL2CPP_LEAVE(0x24E, FINALLY_0237);
+				IL2CPP_LEAVE(0x25B, FINALLY_0244);
 			}
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_0237;
+			goto FINALLY_0244;
 		}
 
-FINALLY_0237:
+FINALLY_0244:
 		{ // begin finally (depth: 2)
 			{
-				RuntimeObject* L_94 = V_21;
-				RuntimeObject* L_95 = ((RuntimeObject*)IsInst((RuntimeObject*)L_94, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-				V_26 = L_95;
-				if (!L_95)
+				RuntimeObject* L_96 = V_21;
+				RuntimeObject* L_97 = ((RuntimeObject*)IsInst((RuntimeObject*)L_96, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+				V_26 = L_97;
+				if (!L_97)
 				{
-					goto IL_024d;
+					goto IL_025a;
 				}
 			}
 
-IL_0246:
+IL_0253:
 			{
-				RuntimeObject* L_96 = V_26;
-				NullCheck(L_96);
-				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_96);
+				RuntimeObject* L_98 = V_26;
+				NullCheck(L_98);
+				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_98);
 			}
 
-IL_024d:
+IL_025a:
 			{
-				IL2CPP_END_FINALLY(567)
+				IL2CPP_END_FINALLY(580)
 			}
 		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(567)
+		IL2CPP_CLEANUP(580)
 		{
-			IL2CPP_JUMP_TBL(0x24E, IL_024e)
+			IL2CPP_JUMP_TBL(0x25B, IL_025b)
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		}
 
-IL_024e:
+IL_025b:
 		{
-			WorkerBasicSpriteController_t188525599 * L_97 = V_2;
-			NullCheck(L_97);
-			Dictionary_2_t3408797007 * L_98 = L_97->get_lib_2();
-			WorkerBasicSprite_t2162738187 * L_99 = V_6;
+			WorkerBasicSpriteController_t188525599 * L_99 = V_2;
 			NullCheck(L_99);
-			int32_t L_100 = L_99->get_subRegion_0();
+			Dictionary_2_t3408797007 * L_100 = L_99->get_lib_2();
 			WorkerBasicSprite_t2162738187 * L_101 = V_6;
-			NullCheck(L_98);
-			Dictionary_2_Add_m3611426597(L_98, L_100, L_101, /*hidden argument*/Dictionary_2_Add_m3611426597_RuntimeMethod_var);
-			WorkerBasicSpriteController_t188525599 * L_102 = V_2;
-			NullCheck(L_102);
-			List_1_t3634812929 * L_103 = L_102->get_list_3();
-			WorkerBasicSprite_t2162738187 * L_104 = V_6;
-			NullCheck(L_103);
-			List_1_Add_m2195620801(L_103, L_104, /*hidden argument*/List_1_Add_m2195620801_RuntimeMethod_var);
+			NullCheck(L_101);
+			int32_t L_102 = L_101->get_subRegion_0();
+			WorkerBasicSprite_t2162738187 * L_103 = V_6;
+			NullCheck(L_100);
+			Dictionary_2_Add_m3611426597(L_100, L_102, L_103, /*hidden argument*/Dictionary_2_Add_m3611426597_RuntimeMethod_var);
+			WorkerBasicSpriteController_t188525599 * L_104 = V_2;
+			NullCheck(L_104);
+			List_1_t3634812929 * L_105 = L_104->get_list_3();
+			WorkerBasicSprite_t2162738187 * L_106 = V_6;
+			NullCheck(L_105);
+			List_1_Add_m2195620801(L_105, L_106, /*hidden argument*/List_1_Add_m2195620801_RuntimeMethod_var);
 		}
 
-IL_026f:
+IL_027c:
 		{
-			RuntimeObject* L_105 = V_5;
-			NullCheck(L_105);
-			bool L_106 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_105);
-			if (L_106)
+			RuntimeObject* L_107 = V_5;
+			NullCheck(L_107);
+			bool L_108 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_107);
+			if (L_108)
 			{
-				goto IL_003c;
+				goto IL_0049;
 			}
 		}
 
-IL_027b:
+IL_0288:
 		{
-			IL2CPP_LEAVE(0x297, FINALLY_0280);
+			IL2CPP_LEAVE(0x2A4, FINALLY_028d);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0280;
+		goto FINALLY_028d;
 	}
 
-FINALLY_0280:
+FINALLY_028d:
 	{ // begin finally (depth: 1)
 		{
-			RuntimeObject* L_107 = V_5;
-			RuntimeObject* L_108 = ((RuntimeObject*)IsInst((RuntimeObject*)L_107, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-			V_27 = L_108;
-			if (!L_108)
+			RuntimeObject* L_109 = V_5;
+			RuntimeObject* L_110 = ((RuntimeObject*)IsInst((RuntimeObject*)L_109, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+			V_27 = L_110;
+			if (!L_110)
 			{
-				goto IL_0296;
+				goto IL_02a3;
 			}
 		}
 
-IL_028f:
+IL_029c:
 		{
-			RuntimeObject* L_109 = V_27;
-			NullCheck(L_109);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_109);
+			RuntimeObject* L_111 = V_27;
+			NullCheck(L_111);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_111);
 		}
 
-IL_0296:
+IL_02a3:
 		{
-			IL2CPP_END_FINALLY(640)
+			IL2CPP_END_FINALLY(653)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(640)
+	IL2CPP_CLEANUP(653)
 	{
-		IL2CPP_JUMP_TBL(0x297, IL_0297)
+		IL2CPP_JUMP_TBL(0x2A4, IL_02a4)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_0297:
+IL_02a4:
 	{
-		WorkerBasicSpriteController_t188525599 * L_110 = V_2;
-		__this->set_basic_1(L_110);
+		WorkerBasicSpriteController_t188525599 * L_112 = V_2;
+		__this->set_basic_1(L_112);
 		return;
 	}
 }
@@ -57220,396 +57247,410 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerSpriteDataLoader_LoadEquipmentData_m174
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		TextAsset_t3022178571 * L_0 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, _stringLiteral4243780671, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_0 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, _stringLiteral4243780671, /*hidden argument*/NULL);
 		V_0 = L_0;
-		XmlDocument_t2837193595 * L_1 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
-		XmlDocument__ctor_m1447119458(L_1, /*hidden argument*/NULL);
-		V_1 = L_1;
-		XmlDocument_t2837193595 * L_2 = V_1;
-		TextAsset_t3022178571 * L_3 = V_0;
-		NullCheck(L_3);
-		String_t* L_4 = TextAsset_get_text_m2027878391(L_3, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_2, L_4);
-		WorkerEquipmentSpriteController_t1014519979 * L_5 = (WorkerEquipmentSpriteController_t1014519979 *)il2cpp_codegen_object_new(WorkerEquipmentSpriteController_t1014519979_il2cpp_TypeInfo_var);
-		WorkerEquipmentSpriteController__ctor_m3176703(L_5, /*hidden argument*/NULL);
-		V_2 = L_5;
-		XmlDocument_t2837193595 * L_6 = V_1;
-		NullCheck(L_6);
-		XmlNodeList_t2551693786 * L_7 = XmlNode_SelectNodes_m3596713167(L_6, _stringLiteral2103699227, /*hidden argument*/NULL);
-		V_3 = L_7;
-		XmlNodeList_t2551693786 * L_8 = V_3;
-		NullCheck(L_8);
-		RuntimeObject* L_9 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_8);
-		V_5 = L_9;
+		TextAsset_t3022178571 * L_1 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_1, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
 	}
 
-IL_0037:
+IL_0018:
+	{
+		XmlDocument_t2837193595 * L_3 = (XmlDocument_t2837193595 *)il2cpp_codegen_object_new(XmlDocument_t2837193595_il2cpp_TypeInfo_var);
+		XmlDocument__ctor_m1447119458(L_3, /*hidden argument*/NULL);
+		V_1 = L_3;
+		XmlDocument_t2837193595 * L_4 = V_1;
+		TextAsset_t3022178571 * L_5 = V_0;
+		NullCheck(L_5);
+		String_t* L_6 = TextAsset_get_text_m2027878391(L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		VirtActionInvoker1< String_t* >::Invoke(85 /* System.Void System.Xml.XmlDocument::LoadXml(System.String) */, L_4, L_6);
+		WorkerEquipmentSpriteController_t1014519979 * L_7 = (WorkerEquipmentSpriteController_t1014519979 *)il2cpp_codegen_object_new(WorkerEquipmentSpriteController_t1014519979_il2cpp_TypeInfo_var);
+		WorkerEquipmentSpriteController__ctor_m3176703(L_7, /*hidden argument*/NULL);
+		V_2 = L_7;
+		XmlDocument_t2837193595 * L_8 = V_1;
+		NullCheck(L_8);
+		XmlNodeList_t2551693786 * L_9 = XmlNode_SelectNodes_m3596713167(L_8, _stringLiteral2103699227, /*hidden argument*/NULL);
+		V_3 = L_9;
+		XmlNodeList_t2551693786 * L_10 = V_3;
+		NullCheck(L_10);
+		RuntimeObject* L_11 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_10);
+		V_5 = L_11;
+	}
+
+IL_0044:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_022c;
+			goto IL_0239;
 		}
 
-IL_003c:
+IL_0049:
 		{
-			RuntimeObject* L_10 = V_5;
-			NullCheck(L_10);
-			RuntimeObject * L_11 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_10);
-			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_11, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-			WorkerEquipmentSprite_t3348899659 * L_12 = (WorkerEquipmentSprite_t3348899659 *)il2cpp_codegen_object_new(WorkerEquipmentSprite_t3348899659_il2cpp_TypeInfo_var);
-			WorkerEquipmentSprite__ctor_m428186016(L_12, /*hidden argument*/NULL);
-			V_6 = L_12;
-			XmlNode_t3767805227 * L_13 = V_4;
-			NullCheck(L_13);
-			XmlAttributeCollection_t2316283784 * L_14 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_13);
-			NullCheck(L_14);
-			XmlNode_t3767805227 * L_15 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_14, _stringLiteral62725243);
+			RuntimeObject* L_12 = V_5;
+			NullCheck(L_12);
+			RuntimeObject * L_13 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_12);
+			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_13, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+			WorkerEquipmentSprite_t3348899659 * L_14 = (WorkerEquipmentSprite_t3348899659 *)il2cpp_codegen_object_new(WorkerEquipmentSprite_t3348899659_il2cpp_TypeInfo_var);
+			WorkerEquipmentSprite__ctor_m428186016(L_14, /*hidden argument*/NULL);
+			V_6 = L_14;
+			XmlNode_t3767805227 * L_15 = V_4;
 			NullCheck(L_15);
-			String_t* L_16 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_15);
-			V_7 = L_16;
-			String_t* L_17 = V_7;
-			int32_t L_18 = WorkerSpriteData_GetEquipmentSpriteRegion_m3329969472(NULL /*static, unused*/, L_17, /*hidden argument*/NULL);
-			V_8 = L_18;
-			WorkerEquipmentSprite_t3348899659 * L_19 = V_6;
-			int32_t L_20 = V_8;
-			NullCheck(L_19);
-			L_19->set_subRegion_0(L_20);
-			XmlNode_t3767805227 * L_21 = V_4;
+			XmlAttributeCollection_t2316283784 * L_16 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_15);
+			NullCheck(L_16);
+			XmlNode_t3767805227 * L_17 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_16, _stringLiteral62725243);
+			NullCheck(L_17);
+			String_t* L_18 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_17);
+			V_7 = L_18;
+			String_t* L_19 = V_7;
+			int32_t L_20 = WorkerSpriteData_GetEquipmentSpriteRegion_m3329969472(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
+			V_8 = L_20;
+			WorkerEquipmentSprite_t3348899659 * L_21 = V_6;
+			int32_t L_22 = V_8;
 			NullCheck(L_21);
-			XmlNodeList_t2551693786 * L_22 = XmlNode_SelectNodes_m3596713167(L_21, _stringLiteral3686006468, /*hidden argument*/NULL);
-			V_9 = L_22;
+			L_21->set_subRegion_0(L_22);
 			XmlNode_t3767805227 * L_23 = V_4;
 			NullCheck(L_23);
-			XmlNodeList_t2551693786 * L_24 = XmlNode_SelectNodes_m3596713167(L_23, _stringLiteral546558823, /*hidden argument*/NULL);
-			V_10 = L_24;
-			XmlNodeList_t2551693786 * L_25 = V_9;
+			XmlNodeList_t2551693786 * L_24 = XmlNode_SelectNodes_m3596713167(L_23, _stringLiteral3686006468, /*hidden argument*/NULL);
+			V_9 = L_24;
+			XmlNode_t3767805227 * L_25 = V_4;
 			NullCheck(L_25);
-			RuntimeObject* L_26 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_25);
-			V_12 = L_26;
+			XmlNodeList_t2551693786 * L_26 = XmlNode_SelectNodes_m3596713167(L_25, _stringLiteral546558823, /*hidden argument*/NULL);
+			V_10 = L_26;
+			XmlNodeList_t2551693786 * L_27 = V_9;
+			NullCheck(L_27);
+			RuntimeObject* L_28 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_27);
+			V_12 = L_28;
 		}
 
-IL_00a0:
+IL_00ad:
 		try
 		{ // begin try (depth: 2)
 			{
-				goto IL_0129;
+				goto IL_0136;
 			}
 
-IL_00a5:
+IL_00b2:
 			{
-				RuntimeObject* L_27 = V_12;
-				NullCheck(L_27);
-				RuntimeObject * L_28 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_27);
-				V_11 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_28, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-				XmlNode_t3767805227 * L_29 = V_11;
+				RuntimeObject* L_29 = V_12;
 				NullCheck(L_29);
-				XmlAttributeCollection_t2316283784 * L_30 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_29);
-				NullCheck(L_30);
-				XmlNode_t3767805227 * L_31 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_30, _stringLiteral3454449607);
+				RuntimeObject * L_30 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_29);
+				V_11 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_30, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+				XmlNode_t3767805227 * L_31 = V_11;
 				NullCheck(L_31);
-				String_t* L_32 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_31);
-				int32_t L_33 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_32, /*hidden argument*/NULL);
-				V_13 = L_33;
-				XmlNode_t3767805227 * L_34 = V_11;
-				NullCheck(L_34);
-				String_t* L_35 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_34);
-				NullCheck(L_35);
-				String_t* L_36 = String_Trim_m923598732(L_35, /*hidden argument*/NULL);
-				V_14 = L_36;
-				String_t* L_37 = V_14;
+				XmlAttributeCollection_t2316283784 * L_32 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_31);
+				NullCheck(L_32);
+				XmlNode_t3767805227 * L_33 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_32, _stringLiteral3454449607);
+				NullCheck(L_33);
+				String_t* L_34 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_33);
+				int32_t L_35 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_34, /*hidden argument*/NULL);
+				V_13 = L_35;
+				XmlNode_t3767805227 * L_36 = V_11;
+				NullCheck(L_36);
+				String_t* L_37 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_36);
+				NullCheck(L_37);
+				String_t* L_38 = String_Trim_m923598732(L_37, /*hidden argument*/NULL);
+				V_14 = L_38;
+				String_t* L_39 = V_14;
 				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				String_t* L_38 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
-				bool L_39 = String_op_Equality_m920492651(NULL /*static, unused*/, L_37, L_38, /*hidden argument*/NULL);
-				if (L_39)
+				String_t* L_40 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+				bool L_41 = String_op_Equality_m920492651(NULL /*static, unused*/, L_39, L_40, /*hidden argument*/NULL);
+				if (L_41)
 				{
-					goto IL_0129;
+					goto IL_0136;
 				}
 			}
 
-IL_00ef:
+IL_00fc:
 			{
-				AtlasLoadData_t42178900 * L_40 = (AtlasLoadData_t42178900 *)il2cpp_codegen_object_new(AtlasLoadData_t42178900_il2cpp_TypeInfo_var);
-				AtlasLoadData__ctor_m3526501243(L_40, /*hidden argument*/NULL);
-				V_15 = L_40;
-				AtlasLoadData_t42178900 * L_41 = V_15;
-				NullCheck(L_41);
-				((SpriteResourceLoadData_t4131239456 *)L_41)->set_type_2(0);
-				AtlasLoadData_t42178900 * L_42 = V_15;
-				String_t* L_43 = V_14;
-				NullCheck(L_42);
-				((SpriteResourceLoadData_t4131239456 *)L_42)->set_src_0(L_43);
+				AtlasLoadData_t42178900 * L_42 = (AtlasLoadData_t42178900 *)il2cpp_codegen_object_new(AtlasLoadData_t42178900_il2cpp_TypeInfo_var);
+				AtlasLoadData__ctor_m3526501243(L_42, /*hidden argument*/NULL);
+				V_15 = L_42;
+				AtlasLoadData_t42178900 * L_43 = V_15;
+				NullCheck(L_43);
+				((SpriteResourceLoadData_t4131239456 *)L_43)->set_type_2(0);
 				AtlasLoadData_t42178900 * L_44 = V_15;
-				int32_t L_45 = V_13;
+				String_t* L_45 = V_14;
 				NullCheck(L_44);
-				((SpriteResourceLoadData_t4131239456 *)L_44)->set_id_1(L_45);
+				((SpriteResourceLoadData_t4131239456 *)L_44)->set_src_0(L_45);
 				AtlasLoadData_t42178900 * L_46 = V_15;
-				V_16 = L_46;
-				AtlasLoadData_t42178900 * L_47 = V_16;
-				NullCheck(L_47);
-				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_47);
-				WorkerEquipmentSprite_t3348899659 * L_48 = V_6;
-				NullCheck(L_48);
-				List_1_t1308346902 * L_49 = L_48->get_loadedData_1();
-				AtlasLoadData_t42178900 * L_50 = V_16;
+				int32_t L_47 = V_13;
+				NullCheck(L_46);
+				((SpriteResourceLoadData_t4131239456 *)L_46)->set_id_1(L_47);
+				AtlasLoadData_t42178900 * L_48 = V_15;
+				V_16 = L_48;
+				AtlasLoadData_t42178900 * L_49 = V_16;
 				NullCheck(L_49);
-				List_1_Add_m2416302390(L_49, L_50, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
-			}
-
-IL_0129:
-			{
-				RuntimeObject* L_51 = V_12;
+				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_49);
+				WorkerEquipmentSprite_t3348899659 * L_50 = V_6;
+				NullCheck(L_50);
+				List_1_t1308346902 * L_51 = L_50->get_loadedData_1();
+				AtlasLoadData_t42178900 * L_52 = V_16;
 				NullCheck(L_51);
-				bool L_52 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_51);
-				if (L_52)
-				{
-					goto IL_00a5;
-				}
+				List_1_Add_m2416302390(L_51, L_52, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
 			}
 
-IL_0135:
-			{
-				IL2CPP_LEAVE(0x151, FINALLY_013a);
-			}
-		} // end try (depth: 2)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_013a;
-		}
-
-FINALLY_013a:
-		{ // begin finally (depth: 2)
+IL_0136:
 			{
 				RuntimeObject* L_53 = V_12;
-				RuntimeObject* L_54 = ((RuntimeObject*)IsInst((RuntimeObject*)L_53, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-				V_17 = L_54;
-				if (!L_54)
+				NullCheck(L_53);
+				bool L_54 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_53);
+				if (L_54)
 				{
-					goto IL_0150;
+					goto IL_00b2;
 				}
 			}
 
-IL_0149:
+IL_0142:
 			{
-				RuntimeObject* L_55 = V_17;
-				NullCheck(L_55);
-				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_55);
-			}
-
-IL_0150:
-			{
-				IL2CPP_END_FINALLY(314)
-			}
-		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(314)
-		{
-			IL2CPP_JUMP_TBL(0x151, IL_0151)
-			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		}
-
-IL_0151:
-		{
-			XmlNodeList_t2551693786 * L_56 = V_10;
-			NullCheck(L_56);
-			RuntimeObject* L_57 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_56);
-			V_19 = L_57;
-		}
-
-IL_015a:
-		try
-		{ // begin try (depth: 2)
-			{
-				goto IL_01e3;
-			}
-
-IL_015f:
-			{
-				RuntimeObject* L_58 = V_19;
-				NullCheck(L_58);
-				RuntimeObject * L_59 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_58);
-				V_18 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_59, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-				XmlNode_t3767805227 * L_60 = V_18;
-				NullCheck(L_60);
-				XmlAttributeCollection_t2316283784 * L_61 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_60);
-				NullCheck(L_61);
-				XmlNode_t3767805227 * L_62 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_61, _stringLiteral3454449607);
-				NullCheck(L_62);
-				String_t* L_63 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_62);
-				int32_t L_64 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_63, /*hidden argument*/NULL);
-				V_20 = L_64;
-				XmlNode_t3767805227 * L_65 = V_18;
-				NullCheck(L_65);
-				String_t* L_66 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_65);
-				NullCheck(L_66);
-				String_t* L_67 = String_Trim_m923598732(L_66, /*hidden argument*/NULL);
-				V_21 = L_67;
-				String_t* L_68 = V_21;
-				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-				String_t* L_69 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
-				bool L_70 = String_op_Equality_m920492651(NULL /*static, unused*/, L_68, L_69, /*hidden argument*/NULL);
-				if (L_70)
-				{
-					goto IL_01e3;
-				}
-			}
-
-IL_01a9:
-			{
-				SpriteLoadData_t2013617770 * L_71 = (SpriteLoadData_t2013617770 *)il2cpp_codegen_object_new(SpriteLoadData_t2013617770_il2cpp_TypeInfo_var);
-				SpriteLoadData__ctor_m1047319824(L_71, /*hidden argument*/NULL);
-				V_22 = L_71;
-				SpriteLoadData_t2013617770 * L_72 = V_22;
-				NullCheck(L_72);
-				((SpriteResourceLoadData_t4131239456 *)L_72)->set_type_2(1);
-				SpriteLoadData_t2013617770 * L_73 = V_22;
-				String_t* L_74 = V_21;
-				NullCheck(L_73);
-				((SpriteResourceLoadData_t4131239456 *)L_73)->set_src_0(L_74);
-				SpriteLoadData_t2013617770 * L_75 = V_22;
-				int32_t L_76 = V_20;
-				NullCheck(L_75);
-				((SpriteResourceLoadData_t4131239456 *)L_75)->set_id_1(L_76);
-				SpriteLoadData_t2013617770 * L_77 = V_22;
-				V_23 = L_77;
-				SpriteLoadData_t2013617770 * L_78 = V_23;
-				NullCheck(L_78);
-				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_78);
-				WorkerEquipmentSprite_t3348899659 * L_79 = V_6;
-				NullCheck(L_79);
-				List_1_t1308346902 * L_80 = L_79->get_loadedData_1();
-				SpriteLoadData_t2013617770 * L_81 = V_23;
-				NullCheck(L_80);
-				List_1_Add_m2416302390(L_80, L_81, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
-			}
-
-IL_01e3:
-			{
-				RuntimeObject* L_82 = V_19;
-				NullCheck(L_82);
-				bool L_83 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_82);
-				if (L_83)
-				{
-					goto IL_015f;
-				}
-			}
-
-IL_01ef:
-			{
-				IL2CPP_LEAVE(0x20B, FINALLY_01f4);
+				IL2CPP_LEAVE(0x15E, FINALLY_0147);
 			}
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_01f4;
+			goto FINALLY_0147;
 		}
 
-FINALLY_01f4:
+FINALLY_0147:
 		{ // begin finally (depth: 2)
 			{
-				RuntimeObject* L_84 = V_19;
-				RuntimeObject* L_85 = ((RuntimeObject*)IsInst((RuntimeObject*)L_84, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-				V_24 = L_85;
-				if (!L_85)
+				RuntimeObject* L_55 = V_12;
+				RuntimeObject* L_56 = ((RuntimeObject*)IsInst((RuntimeObject*)L_55, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+				V_17 = L_56;
+				if (!L_56)
 				{
-					goto IL_020a;
+					goto IL_015d;
 				}
 			}
 
-IL_0203:
+IL_0156:
 			{
-				RuntimeObject* L_86 = V_24;
-				NullCheck(L_86);
-				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_86);
+				RuntimeObject* L_57 = V_17;
+				NullCheck(L_57);
+				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_57);
 			}
 
-IL_020a:
+IL_015d:
 			{
-				IL2CPP_END_FINALLY(500)
+				IL2CPP_END_FINALLY(327)
 			}
 		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(500)
+		IL2CPP_CLEANUP(327)
 		{
-			IL2CPP_JUMP_TBL(0x20B, IL_020b)
+			IL2CPP_JUMP_TBL(0x15E, IL_015e)
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		}
 
-IL_020b:
+IL_015e:
 		{
-			WorkerEquipmentSpriteController_t1014519979 * L_87 = V_2;
-			NullCheck(L_87);
-			Dictionary_2_t3030645290 * L_88 = L_87->get_lib_2();
-			WorkerEquipmentSprite_t3348899659 * L_89 = V_6;
-			NullCheck(L_89);
-			int32_t L_90 = L_89->get_subRegion_0();
-			WorkerEquipmentSprite_t3348899659 * L_91 = V_6;
-			NullCheck(L_88);
-			Dictionary_2_Add_m3681345362(L_88, L_90, L_91, /*hidden argument*/Dictionary_2_Add_m3681345362_RuntimeMethod_var);
-			WorkerEquipmentSpriteController_t1014519979 * L_92 = V_2;
-			NullCheck(L_92);
-			List_1_t526007105 * L_93 = L_92->get_list_3();
-			WorkerEquipmentSprite_t3348899659 * L_94 = V_6;
-			NullCheck(L_93);
-			List_1_Add_m2978988516(L_93, L_94, /*hidden argument*/List_1_Add_m2978988516_RuntimeMethod_var);
+			XmlNodeList_t2551693786 * L_58 = V_10;
+			NullCheck(L_58);
+			RuntimeObject* L_59 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_58);
+			V_19 = L_59;
 		}
 
-IL_022c:
-		{
-			RuntimeObject* L_95 = V_5;
-			NullCheck(L_95);
-			bool L_96 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_95);
-			if (L_96)
+IL_0167:
+		try
+		{ // begin try (depth: 2)
 			{
-				goto IL_003c;
+				goto IL_01f0;
+			}
+
+IL_016c:
+			{
+				RuntimeObject* L_60 = V_19;
+				NullCheck(L_60);
+				RuntimeObject * L_61 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_60);
+				V_18 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_61, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+				XmlNode_t3767805227 * L_62 = V_18;
+				NullCheck(L_62);
+				XmlAttributeCollection_t2316283784 * L_63 = VirtFuncInvoker0< XmlAttributeCollection_t2316283784 * >::Invoke(7 /* System.Xml.XmlAttributeCollection System.Xml.XmlNode::get_Attributes() */, L_62);
+				NullCheck(L_63);
+				XmlNode_t3767805227 * L_64 = VirtFuncInvoker1< XmlNode_t3767805227 *, String_t* >::Invoke(7 /* System.Xml.XmlNode System.Xml.XmlNamedNodeMap::GetNamedItem(System.String) */, L_63, _stringLiteral3454449607);
+				NullCheck(L_64);
+				String_t* L_65 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_64);
+				int32_t L_66 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_65, /*hidden argument*/NULL);
+				V_20 = L_66;
+				XmlNode_t3767805227 * L_67 = V_18;
+				NullCheck(L_67);
+				String_t* L_68 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_67);
+				NullCheck(L_68);
+				String_t* L_69 = String_Trim_m923598732(L_68, /*hidden argument*/NULL);
+				V_21 = L_69;
+				String_t* L_70 = V_21;
+				IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+				String_t* L_71 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+				bool L_72 = String_op_Equality_m920492651(NULL /*static, unused*/, L_70, L_71, /*hidden argument*/NULL);
+				if (L_72)
+				{
+					goto IL_01f0;
+				}
+			}
+
+IL_01b6:
+			{
+				SpriteLoadData_t2013617770 * L_73 = (SpriteLoadData_t2013617770 *)il2cpp_codegen_object_new(SpriteLoadData_t2013617770_il2cpp_TypeInfo_var);
+				SpriteLoadData__ctor_m1047319824(L_73, /*hidden argument*/NULL);
+				V_22 = L_73;
+				SpriteLoadData_t2013617770 * L_74 = V_22;
+				NullCheck(L_74);
+				((SpriteResourceLoadData_t4131239456 *)L_74)->set_type_2(1);
+				SpriteLoadData_t2013617770 * L_75 = V_22;
+				String_t* L_76 = V_21;
+				NullCheck(L_75);
+				((SpriteResourceLoadData_t4131239456 *)L_75)->set_src_0(L_76);
+				SpriteLoadData_t2013617770 * L_77 = V_22;
+				int32_t L_78 = V_20;
+				NullCheck(L_77);
+				((SpriteResourceLoadData_t4131239456 *)L_77)->set_id_1(L_78);
+				SpriteLoadData_t2013617770 * L_79 = V_22;
+				V_23 = L_79;
+				SpriteLoadData_t2013617770 * L_80 = V_23;
+				NullCheck(L_80);
+				VirtActionInvoker0::Invoke(4 /* System.Void WorkerSprite.SpriteResourceLoadData::LoadSprite() */, L_80);
+				WorkerEquipmentSprite_t3348899659 * L_81 = V_6;
+				NullCheck(L_81);
+				List_1_t1308346902 * L_82 = L_81->get_loadedData_1();
+				SpriteLoadData_t2013617770 * L_83 = V_23;
+				NullCheck(L_82);
+				List_1_Add_m2416302390(L_82, L_83, /*hidden argument*/List_1_Add_m2416302390_RuntimeMethod_var);
+			}
+
+IL_01f0:
+			{
+				RuntimeObject* L_84 = V_19;
+				NullCheck(L_84);
+				bool L_85 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_84);
+				if (L_85)
+				{
+					goto IL_016c;
+				}
+			}
+
+IL_01fc:
+			{
+				IL2CPP_LEAVE(0x218, FINALLY_0201);
+			}
+		} // end try (depth: 2)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__last_unhandled_exception = (Exception_t *)e.ex;
+			goto FINALLY_0201;
+		}
+
+FINALLY_0201:
+		{ // begin finally (depth: 2)
+			{
+				RuntimeObject* L_86 = V_19;
+				RuntimeObject* L_87 = ((RuntimeObject*)IsInst((RuntimeObject*)L_86, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+				V_24 = L_87;
+				if (!L_87)
+				{
+					goto IL_0217;
+				}
+			}
+
+IL_0210:
+			{
+				RuntimeObject* L_88 = V_24;
+				NullCheck(L_88);
+				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_88);
+			}
+
+IL_0217:
+			{
+				IL2CPP_END_FINALLY(513)
+			}
+		} // end finally (depth: 2)
+		IL2CPP_CLEANUP(513)
+		{
+			IL2CPP_JUMP_TBL(0x218, IL_0218)
+			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		}
+
+IL_0218:
+		{
+			WorkerEquipmentSpriteController_t1014519979 * L_89 = V_2;
+			NullCheck(L_89);
+			Dictionary_2_t3030645290 * L_90 = L_89->get_lib_2();
+			WorkerEquipmentSprite_t3348899659 * L_91 = V_6;
+			NullCheck(L_91);
+			int32_t L_92 = L_91->get_subRegion_0();
+			WorkerEquipmentSprite_t3348899659 * L_93 = V_6;
+			NullCheck(L_90);
+			Dictionary_2_Add_m3681345362(L_90, L_92, L_93, /*hidden argument*/Dictionary_2_Add_m3681345362_RuntimeMethod_var);
+			WorkerEquipmentSpriteController_t1014519979 * L_94 = V_2;
+			NullCheck(L_94);
+			List_1_t526007105 * L_95 = L_94->get_list_3();
+			WorkerEquipmentSprite_t3348899659 * L_96 = V_6;
+			NullCheck(L_95);
+			List_1_Add_m2978988516(L_95, L_96, /*hidden argument*/List_1_Add_m2978988516_RuntimeMethod_var);
+		}
+
+IL_0239:
+		{
+			RuntimeObject* L_97 = V_5;
+			NullCheck(L_97);
+			bool L_98 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_97);
+			if (L_98)
+			{
+				goto IL_0049;
 			}
 		}
 
-IL_0238:
+IL_0245:
 		{
-			IL2CPP_LEAVE(0x254, FINALLY_023d);
+			IL2CPP_LEAVE(0x261, FINALLY_024a);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_023d;
+		goto FINALLY_024a;
 	}
 
-FINALLY_023d:
+FINALLY_024a:
 	{ // begin finally (depth: 1)
 		{
-			RuntimeObject* L_97 = V_5;
-			RuntimeObject* L_98 = ((RuntimeObject*)IsInst((RuntimeObject*)L_97, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-			V_25 = L_98;
-			if (!L_98)
+			RuntimeObject* L_99 = V_5;
+			RuntimeObject* L_100 = ((RuntimeObject*)IsInst((RuntimeObject*)L_99, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+			V_25 = L_100;
+			if (!L_100)
 			{
-				goto IL_0253;
+				goto IL_0260;
 			}
 		}
 
-IL_024c:
+IL_0259:
 		{
-			RuntimeObject* L_99 = V_25;
-			NullCheck(L_99);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_99);
+			RuntimeObject* L_101 = V_25;
+			NullCheck(L_101);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_101);
 		}
 
-IL_0253:
+IL_0260:
 		{
-			IL2CPP_END_FINALLY(573)
+			IL2CPP_END_FINALLY(586)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(573)
+	IL2CPP_CLEANUP(586)
 	{
-		IL2CPP_JUMP_TBL(0x254, IL_0254)
+		IL2CPP_JUMP_TBL(0x261, IL_0261)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_0254:
+IL_0261:
 	{
-		WorkerEquipmentSpriteController_t1014519979 * L_100 = V_2;
-		__this->set_equip_2(L_100);
+		WorkerEquipmentSpriteController_t1014519979 * L_102 = V_2;
+		__this->set_equip_2(L_102);
 		return;
 	}
 }

@@ -2043,6 +2043,8 @@ extern String_t* _stringLiteral3454449607;
 extern const uint32_t LocalizeTextDataLoader_LoadLocalizeTextData_m386940331_MetadataUsageId;
 extern const RuntimeMethod* List_1_ToArray_m3983937259_RuntimeMethod_var;
 extern String_t* _stringLiteral4006691028;
+extern String_t* _stringLiteral410721447;
+extern String_t* _stringLiteral754710180;
 extern String_t* _stringLiteral1274500461;
 extern const uint32_t LocalizeTextDataLoader_GetLocalizeList_m685886892_MetadataUsageId;
 extern const uint32_t LocalizeTextDataModel__ctor_m789720881_MetadataUsageId;
@@ -43581,6 +43583,8 @@ extern "C" IL2CPP_METHOD_ATTR XmlNodeList_t2551693786 * XmlNode_SelectNodes_m359
 extern "C" IL2CPP_METHOD_ATTR LocalizeTextDataModel_t285271484 * LocalizeTextDataModel_get_instance_m2543021359 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void LocalizeTextDataModel::Init(System.Collections.Generic.Dictionary`2<System.String,System.String>)
 extern "C" IL2CPP_METHOD_ATTR void LocalizeTextDataModel_Init_m3136418004 (LocalizeTextDataModel_t285271484 * __this, Dictionary_2_t1632706988 * ___data0, const RuntimeMethod* method);
+// System.Void UnityEngine.Debug::LogWarning(System.Object)
+extern "C" IL2CPP_METHOD_ATTR void Debug_LogWarning_m3752629331 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, const RuntimeMethod* method);
 // !0[] System.Collections.Generic.List`1<System.String>::ToArray()
 #define List_1_ToArray_m3983937259(__this, method) ((  StringU5BU5D_t1281789340* (*) (List_1_t3319525431 *, const RuntimeMethod*))List_1_ToArray_m4168020446_gshared)(__this, method)
 // System.Void LocalizeTextDataModel::.ctor()
@@ -65573,98 +65577,143 @@ extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* LocalizeTextDataLoader_G
 		XmlDocument_t2837193595 * L_1 = AssetLoader_LoadExternalXML_m1534863644(NULL /*static, unused*/, _stringLiteral4006691028, /*hidden argument*/NULL);
 		V_1 = L_1;
 		XmlDocument_t2837193595 * L_2 = V_1;
-		NullCheck(L_2);
-		XmlNode_t3767805227 * L_3 = XmlNode_SelectSingleNode_m2944339946(L_2, _stringLiteral1274500461, /*hidden argument*/NULL);
-		V_2 = L_3;
-		XmlNode_t3767805227 * L_4 = V_2;
-		NullCheck(L_4);
-		XmlNodeList_t2551693786 * L_5 = XmlNode_SelectNodes_m3596713167(L_4, _stringLiteral1083616909, /*hidden argument*/NULL);
-		V_3 = L_5;
-		XmlNodeList_t2551693786 * L_6 = V_3;
-		NullCheck(L_6);
-		RuntimeObject* L_7 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_6);
-		V_5 = L_7;
+		if (L_2)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		XmlDocument_t2837193595 * L_3 = AssetLoader_LoadExternalXML_m1534863644(NULL /*static, unused*/, _stringLiteral410721447, /*hidden argument*/NULL);
+		V_1 = L_3;
 	}
 
-IL_0031:
+IL_0022:
+	{
+		XmlDocument_t2837193595 * L_4 = V_1;
+		if (L_4)
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m3752629331(NULL /*static, unused*/, _stringLiteral754710180, /*hidden argument*/NULL);
+		List_1_t3319525431 * L_5 = V_0;
+		NullCheck(L_5);
+		StringU5BU5D_t1281789340* L_6 = List_1_ToArray_m3983937259(L_5, /*hidden argument*/List_1_ToArray_m3983937259_RuntimeMethod_var);
+		return L_6;
+	}
+
+IL_0039:
+	{
+		XmlDocument_t2837193595 * L_7 = V_1;
+		NullCheck(L_7);
+		XmlNode_t3767805227 * L_8 = XmlNode_SelectSingleNode_m2944339946(L_7, _stringLiteral1274500461, /*hidden argument*/NULL);
+		V_2 = L_8;
+		XmlNode_t3767805227 * L_9 = V_2;
+		if (L_9)
+		{
+			goto IL_0052;
+		}
+	}
+	{
+		List_1_t3319525431 * L_10 = V_0;
+		NullCheck(L_10);
+		StringU5BU5D_t1281789340* L_11 = List_1_ToArray_m3983937259(L_10, /*hidden argument*/List_1_ToArray_m3983937259_RuntimeMethod_var);
+		return L_11;
+	}
+
+IL_0052:
+	{
+		XmlNode_t3767805227 * L_12 = V_2;
+		NullCheck(L_12);
+		XmlNodeList_t2551693786 * L_13 = XmlNode_SelectNodes_m3596713167(L_12, _stringLiteral1083616909, /*hidden argument*/NULL);
+		V_3 = L_13;
+		XmlNodeList_t2551693786 * L_14 = V_3;
+		NullCheck(L_14);
+		RuntimeObject* L_15 = VirtFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Xml.XmlNodeList::GetEnumerator() */, L_14);
+		V_5 = L_15;
+	}
+
+IL_0066:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_0051;
+			goto IL_0086;
 		}
 
-IL_0036:
+IL_006b:
 		{
-			RuntimeObject* L_8 = V_5;
-			NullCheck(L_8);
-			RuntimeObject * L_9 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_8);
-			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_9, XmlNode_t3767805227_il2cpp_TypeInfo_var));
-			List_1_t3319525431 * L_10 = V_0;
-			XmlNode_t3767805227 * L_11 = V_4;
-			NullCheck(L_11);
-			String_t* L_12 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_11);
-			NullCheck(L_10);
-			List_1_Add_m1685793073(L_10, L_12, /*hidden argument*/List_1_Add_m1685793073_RuntimeMethod_var);
+			RuntimeObject* L_16 = V_5;
+			NullCheck(L_16);
+			RuntimeObject * L_17 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_16);
+			V_4 = ((XmlNode_t3767805227 *)CastclassClass((RuntimeObject*)L_17, XmlNode_t3767805227_il2cpp_TypeInfo_var));
+			List_1_t3319525431 * L_18 = V_0;
+			XmlNode_t3767805227 * L_19 = V_4;
+			NullCheck(L_19);
+			String_t* L_20 = VirtFuncInvoker0< String_t* >::Invoke(13 /* System.String System.Xml.XmlNode::get_InnerText() */, L_19);
+			NullCheck(L_18);
+			List_1_Add_m1685793073(L_18, L_20, /*hidden argument*/List_1_Add_m1685793073_RuntimeMethod_var);
 		}
 
-IL_0051:
+IL_0086:
 		{
-			RuntimeObject* L_13 = V_5;
-			NullCheck(L_13);
-			bool L_14 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_13);
-			if (L_14)
+			RuntimeObject* L_21 = V_5;
+			NullCheck(L_21);
+			bool L_22 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_21);
+			if (L_22)
 			{
-				goto IL_0036;
+				goto IL_006b;
 			}
 		}
 
-IL_005d:
+IL_0092:
 		{
-			IL2CPP_LEAVE(0x79, FINALLY_0062);
+			IL2CPP_LEAVE(0xAE, FINALLY_0097);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0062;
+		goto FINALLY_0097;
 	}
 
-FINALLY_0062:
+FINALLY_0097:
 	{ // begin finally (depth: 1)
 		{
-			RuntimeObject* L_15 = V_5;
-			RuntimeObject* L_16 = ((RuntimeObject*)IsInst((RuntimeObject*)L_15, IDisposable_t3640265483_il2cpp_TypeInfo_var));
-			V_6 = L_16;
-			if (!L_16)
+			RuntimeObject* L_23 = V_5;
+			RuntimeObject* L_24 = ((RuntimeObject*)IsInst((RuntimeObject*)L_23, IDisposable_t3640265483_il2cpp_TypeInfo_var));
+			V_6 = L_24;
+			if (!L_24)
 			{
-				goto IL_0078;
+				goto IL_00ad;
 			}
 		}
 
-IL_0071:
+IL_00a6:
 		{
-			RuntimeObject* L_17 = V_6;
-			NullCheck(L_17);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_17);
+			RuntimeObject* L_25 = V_6;
+			NullCheck(L_25);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_25);
 		}
 
-IL_0078:
+IL_00ad:
 		{
-			IL2CPP_END_FINALLY(98)
+			IL2CPP_END_FINALLY(151)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(98)
+	IL2CPP_CLEANUP(151)
 	{
-		IL2CPP_JUMP_TBL(0x79, IL_0079)
+		IL2CPP_JUMP_TBL(0xAE, IL_00ae)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_0079:
+IL_00ae:
 	{
-		List_1_t3319525431 * L_18 = V_0;
-		NullCheck(L_18);
-		StringU5BU5D_t1281789340* L_19 = List_1_ToArray_m3983937259(L_18, /*hidden argument*/List_1_ToArray_m3983937259_RuntimeMethod_var);
-		return L_19;
+		List_1_t3319525431 * L_26 = V_0;
+		NullCheck(L_26);
+		StringU5BU5D_t1281789340* L_27 = List_1_ToArray_m3983937259(L_26, /*hidden argument*/List_1_ToArray_m3983937259_RuntimeMethod_var);
+		return L_27;
 	}
 }
 #ifdef __clang__

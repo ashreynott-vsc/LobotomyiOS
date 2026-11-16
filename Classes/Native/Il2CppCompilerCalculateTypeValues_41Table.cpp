@@ -21,8 +21,6 @@
 
 // AgentHistory/History
 struct History_t3096563685;
-// System.Collections.Generic.Dictionary`2<RwbpType,System.Int32>
-struct Dictionary_2_t2767852297;
 // System.Char[]
 struct CharU5BU5D_t3528271667;
 // System.Void
@@ -33,26 +31,26 @@ struct MethodInfo_t;
 struct DelegateData_t1677132599;
 // System.String
 struct String_t;
+// System.Object[]
+struct ObjectU5BU5D_t2843939325;
 // System.IAsyncResult
 struct IAsyncResult_t767004451;
 // System.AsyncCallback
 struct AsyncCallback_t3962456242;
-// System.Object[]
-struct ObjectU5BU5D_t2843939325;
 // UnityEngine.Material
 struct Material_t340375123;
-// UnityEngine.UI.Image
-struct Image_t2670269651;
 // UnityEngine.Texture2D
 struct Texture2D_t3840446185;
+// UnityEngine.UI.Image
+struct Image_t2670269651;
 // UnityEngine.AnimationCurve
 struct AnimationCurve_t3046754366;
 // CameraFilterPack_AAA_WaterDrop
 struct CameraFilterPack_AAA_WaterDrop_t1967463866;
+// CameraFilterPack_AAA_SuperComputer
+struct CameraFilterPack_AAA_SuperComputer_t3434389749;
 // CameraFilterPack_AAA_SuperHexagon
 struct CameraFilterPack_AAA_SuperHexagon_t787473630;
-// UnityEngine.Animator
-struct Animator_t434523843;
 // UnityEngine.Canvas[]
 struct CanvasU5BU5D_t682926938;
 // UnityEngine.GameObject[]
@@ -65,8 +63,8 @@ struct List_1_t1289527958;
 struct Text_t1901882714;
 // AgentModel
 struct AgentModel_t1567715437;
-// CameraFilterPack_AAA_SuperComputer
-struct CameraFilterPack_AAA_SuperComputer_t3434389749;
+// UnityEngine.Animator
+struct Animator_t434523843;
 // UnscaledTimer
 struct UnscaledTimer_t2981502462;
 // UnityEngine.Sprite[]
@@ -105,6 +103,34 @@ struct Transform_t3600365921;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEOBJECT_H
+#ifndef VALUETYPE_T3640485471_H
+#define VALUETYPE_T3640485471_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.ValueType
+struct  ValueType_t3640485471  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_com
+{
+};
+#endif // VALUETYPE_T3640485471_H
 #ifndef AGENTHISTORY_T3996091975_H
 #define AGENTHISTORY_T3996091975_H
 #ifdef __clang__
@@ -156,470 +182,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AGENTHISTORY_T3996091975_H
-#ifndef VALUETYPE_T3640485471_H
-#define VALUETYPE_T3640485471_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.ValueType
-struct  ValueType_t3640485471  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_com
-{
-};
-#endif // VALUETYPE_T3640485471_H
-#ifndef HISTORY_T3096563685_H
-#define HISTORY_T3096563685_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentHistory/History
-struct  History_t3096563685  : public RuntimeObject
-{
-public:
-	// System.Collections.Generic.Dictionary`2<RwbpType,System.Int32> AgentHistory/History::workCubeCounts
-	Dictionary_2_t2767852297 * ___workCubeCounts_0;
-	// System.Int32 AgentHistory/History::<workSuccess>k__BackingField
-	int32_t ___U3CworkSuccessU3Ek__BackingField_1;
-	// System.Int32 AgentHistory/History::<workFail>k__BackingField
-	int32_t ___U3CworkFailU3Ek__BackingField_2;
-	// System.Int32 AgentHistory/History::<takePhysicalDamage>k__BackingField
-	int32_t ___U3CtakePhysicalDamageU3Ek__BackingField_3;
-	// System.Int32 AgentHistory/History::<takeMentalDamage>k__BackingField
-	int32_t ___U3CtakeMentalDamageU3Ek__BackingField_4;
-	// System.Int32 AgentHistory/History::<deathByCreature>k__BackingField
-	int32_t ___U3CdeathByCreatureU3Ek__BackingField_5;
-	// System.Int32 AgentHistory/History::<panicByCreature>k__BackingField
-	int32_t ___U3CpanicByCreatureU3Ek__BackingField_6;
-	// System.Int32 AgentHistory/History::<deathByWorker>k__BackingField
-	int32_t ___U3CdeathByWorkerU3Ek__BackingField_7;
-	// System.Int32 AgentHistory/History::<panic>k__BackingField
-	int32_t ___U3CpanicU3Ek__BackingField_8;
-	// System.Int32 AgentHistory/History::<creatureDamage>k__BackingField
-	int32_t ___U3CcreatureDamageU3Ek__BackingField_9;
-	// System.Int32 AgentHistory/History::<workerDamage>k__BackingField
-	int32_t ___U3CworkerDamageU3Ek__BackingField_10;
-	// System.Int32 AgentHistory/History::<panicWorkerDamage>k__BackingField
-	int32_t ___U3CpanicWorkerDamageU3Ek__BackingField_11;
-	// System.Int32 AgentHistory/History::<suppressDamage>k__BackingField
-	int32_t ___U3CsuppressDamageU3Ek__BackingField_12;
-	// System.Int32 AgentHistory/History::<disposal>k__BackingField
-	int32_t ___U3CdisposalU3Ek__BackingField_13;
-	// System.Int32 AgentHistory/History::<promotionVal>k__BackingField
-	int32_t ___U3CpromotionValU3Ek__BackingField_14;
-
-public:
-	inline static int32_t get_offset_of_workCubeCounts_0() { return static_cast<int32_t>(offsetof(History_t3096563685, ___workCubeCounts_0)); }
-	inline Dictionary_2_t2767852297 * get_workCubeCounts_0() const { return ___workCubeCounts_0; }
-	inline Dictionary_2_t2767852297 ** get_address_of_workCubeCounts_0() { return &___workCubeCounts_0; }
-	inline void set_workCubeCounts_0(Dictionary_2_t2767852297 * value)
-	{
-		___workCubeCounts_0 = value;
-		Il2CppCodeGenWriteBarrier((&___workCubeCounts_0), value);
-	}
-
-	inline static int32_t get_offset_of_U3CworkSuccessU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CworkSuccessU3Ek__BackingField_1)); }
-	inline int32_t get_U3CworkSuccessU3Ek__BackingField_1() const { return ___U3CworkSuccessU3Ek__BackingField_1; }
-	inline int32_t* get_address_of_U3CworkSuccessU3Ek__BackingField_1() { return &___U3CworkSuccessU3Ek__BackingField_1; }
-	inline void set_U3CworkSuccessU3Ek__BackingField_1(int32_t value)
-	{
-		___U3CworkSuccessU3Ek__BackingField_1 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CworkFailU3Ek__BackingField_2() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CworkFailU3Ek__BackingField_2)); }
-	inline int32_t get_U3CworkFailU3Ek__BackingField_2() const { return ___U3CworkFailU3Ek__BackingField_2; }
-	inline int32_t* get_address_of_U3CworkFailU3Ek__BackingField_2() { return &___U3CworkFailU3Ek__BackingField_2; }
-	inline void set_U3CworkFailU3Ek__BackingField_2(int32_t value)
-	{
-		___U3CworkFailU3Ek__BackingField_2 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CtakePhysicalDamageU3Ek__BackingField_3() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CtakePhysicalDamageU3Ek__BackingField_3)); }
-	inline int32_t get_U3CtakePhysicalDamageU3Ek__BackingField_3() const { return ___U3CtakePhysicalDamageU3Ek__BackingField_3; }
-	inline int32_t* get_address_of_U3CtakePhysicalDamageU3Ek__BackingField_3() { return &___U3CtakePhysicalDamageU3Ek__BackingField_3; }
-	inline void set_U3CtakePhysicalDamageU3Ek__BackingField_3(int32_t value)
-	{
-		___U3CtakePhysicalDamageU3Ek__BackingField_3 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CtakeMentalDamageU3Ek__BackingField_4() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CtakeMentalDamageU3Ek__BackingField_4)); }
-	inline int32_t get_U3CtakeMentalDamageU3Ek__BackingField_4() const { return ___U3CtakeMentalDamageU3Ek__BackingField_4; }
-	inline int32_t* get_address_of_U3CtakeMentalDamageU3Ek__BackingField_4() { return &___U3CtakeMentalDamageU3Ek__BackingField_4; }
-	inline void set_U3CtakeMentalDamageU3Ek__BackingField_4(int32_t value)
-	{
-		___U3CtakeMentalDamageU3Ek__BackingField_4 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CdeathByCreatureU3Ek__BackingField_5() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CdeathByCreatureU3Ek__BackingField_5)); }
-	inline int32_t get_U3CdeathByCreatureU3Ek__BackingField_5() const { return ___U3CdeathByCreatureU3Ek__BackingField_5; }
-	inline int32_t* get_address_of_U3CdeathByCreatureU3Ek__BackingField_5() { return &___U3CdeathByCreatureU3Ek__BackingField_5; }
-	inline void set_U3CdeathByCreatureU3Ek__BackingField_5(int32_t value)
-	{
-		___U3CdeathByCreatureU3Ek__BackingField_5 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CpanicByCreatureU3Ek__BackingField_6() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CpanicByCreatureU3Ek__BackingField_6)); }
-	inline int32_t get_U3CpanicByCreatureU3Ek__BackingField_6() const { return ___U3CpanicByCreatureU3Ek__BackingField_6; }
-	inline int32_t* get_address_of_U3CpanicByCreatureU3Ek__BackingField_6() { return &___U3CpanicByCreatureU3Ek__BackingField_6; }
-	inline void set_U3CpanicByCreatureU3Ek__BackingField_6(int32_t value)
-	{
-		___U3CpanicByCreatureU3Ek__BackingField_6 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CdeathByWorkerU3Ek__BackingField_7() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CdeathByWorkerU3Ek__BackingField_7)); }
-	inline int32_t get_U3CdeathByWorkerU3Ek__BackingField_7() const { return ___U3CdeathByWorkerU3Ek__BackingField_7; }
-	inline int32_t* get_address_of_U3CdeathByWorkerU3Ek__BackingField_7() { return &___U3CdeathByWorkerU3Ek__BackingField_7; }
-	inline void set_U3CdeathByWorkerU3Ek__BackingField_7(int32_t value)
-	{
-		___U3CdeathByWorkerU3Ek__BackingField_7 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CpanicU3Ek__BackingField_8() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CpanicU3Ek__BackingField_8)); }
-	inline int32_t get_U3CpanicU3Ek__BackingField_8() const { return ___U3CpanicU3Ek__BackingField_8; }
-	inline int32_t* get_address_of_U3CpanicU3Ek__BackingField_8() { return &___U3CpanicU3Ek__BackingField_8; }
-	inline void set_U3CpanicU3Ek__BackingField_8(int32_t value)
-	{
-		___U3CpanicU3Ek__BackingField_8 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CcreatureDamageU3Ek__BackingField_9() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CcreatureDamageU3Ek__BackingField_9)); }
-	inline int32_t get_U3CcreatureDamageU3Ek__BackingField_9() const { return ___U3CcreatureDamageU3Ek__BackingField_9; }
-	inline int32_t* get_address_of_U3CcreatureDamageU3Ek__BackingField_9() { return &___U3CcreatureDamageU3Ek__BackingField_9; }
-	inline void set_U3CcreatureDamageU3Ek__BackingField_9(int32_t value)
-	{
-		___U3CcreatureDamageU3Ek__BackingField_9 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CworkerDamageU3Ek__BackingField_10() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CworkerDamageU3Ek__BackingField_10)); }
-	inline int32_t get_U3CworkerDamageU3Ek__BackingField_10() const { return ___U3CworkerDamageU3Ek__BackingField_10; }
-	inline int32_t* get_address_of_U3CworkerDamageU3Ek__BackingField_10() { return &___U3CworkerDamageU3Ek__BackingField_10; }
-	inline void set_U3CworkerDamageU3Ek__BackingField_10(int32_t value)
-	{
-		___U3CworkerDamageU3Ek__BackingField_10 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CpanicWorkerDamageU3Ek__BackingField_11() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CpanicWorkerDamageU3Ek__BackingField_11)); }
-	inline int32_t get_U3CpanicWorkerDamageU3Ek__BackingField_11() const { return ___U3CpanicWorkerDamageU3Ek__BackingField_11; }
-	inline int32_t* get_address_of_U3CpanicWorkerDamageU3Ek__BackingField_11() { return &___U3CpanicWorkerDamageU3Ek__BackingField_11; }
-	inline void set_U3CpanicWorkerDamageU3Ek__BackingField_11(int32_t value)
-	{
-		___U3CpanicWorkerDamageU3Ek__BackingField_11 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CsuppressDamageU3Ek__BackingField_12() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CsuppressDamageU3Ek__BackingField_12)); }
-	inline int32_t get_U3CsuppressDamageU3Ek__BackingField_12() const { return ___U3CsuppressDamageU3Ek__BackingField_12; }
-	inline int32_t* get_address_of_U3CsuppressDamageU3Ek__BackingField_12() { return &___U3CsuppressDamageU3Ek__BackingField_12; }
-	inline void set_U3CsuppressDamageU3Ek__BackingField_12(int32_t value)
-	{
-		___U3CsuppressDamageU3Ek__BackingField_12 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CdisposalU3Ek__BackingField_13() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CdisposalU3Ek__BackingField_13)); }
-	inline int32_t get_U3CdisposalU3Ek__BackingField_13() const { return ___U3CdisposalU3Ek__BackingField_13; }
-	inline int32_t* get_address_of_U3CdisposalU3Ek__BackingField_13() { return &___U3CdisposalU3Ek__BackingField_13; }
-	inline void set_U3CdisposalU3Ek__BackingField_13(int32_t value)
-	{
-		___U3CdisposalU3Ek__BackingField_13 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CpromotionValU3Ek__BackingField_14() { return static_cast<int32_t>(offsetof(History_t3096563685, ___U3CpromotionValU3Ek__BackingField_14)); }
-	inline int32_t get_U3CpromotionValU3Ek__BackingField_14() const { return ___U3CpromotionValU3Ek__BackingField_14; }
-	inline int32_t* get_address_of_U3CpromotionValU3Ek__BackingField_14() { return &___U3CpromotionValU3Ek__BackingField_14; }
-	inline void set_U3CpromotionValU3Ek__BackingField_14(int32_t value)
-	{
-		___U3CpromotionValU3Ek__BackingField_14 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // HISTORY_T3096563685_H
-#ifndef PROMOTIONNEEDVAL_T1608125077_H
-#define PROMOTIONNEEDVAL_T1608125077_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentHistory/PromotionNeedVal
-struct  PromotionNeedVal_t1608125077  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct PromotionNeedVal_t1608125077_StaticFields
-{
-public:
-	// System.Int32 AgentHistory/PromotionNeedVal::level1
-	int32_t ___level1_0;
-	// System.Int32 AgentHistory/PromotionNeedVal::level2
-	int32_t ___level2_1;
-	// System.Int32 AgentHistory/PromotionNeedVal::level3
-	int32_t ___level3_2;
-	// System.Int32 AgentHistory/PromotionNeedVal::level4
-	int32_t ___level4_3;
-
-public:
-	inline static int32_t get_offset_of_level1_0() { return static_cast<int32_t>(offsetof(PromotionNeedVal_t1608125077_StaticFields, ___level1_0)); }
-	inline int32_t get_level1_0() const { return ___level1_0; }
-	inline int32_t* get_address_of_level1_0() { return &___level1_0; }
-	inline void set_level1_0(int32_t value)
-	{
-		___level1_0 = value;
-	}
-
-	inline static int32_t get_offset_of_level2_1() { return static_cast<int32_t>(offsetof(PromotionNeedVal_t1608125077_StaticFields, ___level2_1)); }
-	inline int32_t get_level2_1() const { return ___level2_1; }
-	inline int32_t* get_address_of_level2_1() { return &___level2_1; }
-	inline void set_level2_1(int32_t value)
-	{
-		___level2_1 = value;
-	}
-
-	inline static int32_t get_offset_of_level3_2() { return static_cast<int32_t>(offsetof(PromotionNeedVal_t1608125077_StaticFields, ___level3_2)); }
-	inline int32_t get_level3_2() const { return ___level3_2; }
-	inline int32_t* get_address_of_level3_2() { return &___level3_2; }
-	inline void set_level3_2(int32_t value)
-	{
-		___level3_2 = value;
-	}
-
-	inline static int32_t get_offset_of_level4_3() { return static_cast<int32_t>(offsetof(PromotionNeedVal_t1608125077_StaticFields, ___level4_3)); }
-	inline int32_t get_level4_3() const { return ___level4_3; }
-	inline int32_t* get_address_of_level4_3() { return &___level4_3; }
-	inline void set_level4_3(int32_t value)
-	{
-		___level4_3 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PROMOTIONNEEDVAL_T1608125077_H
-#ifndef PROMOTIONVALSCORE_T2040843033_H
-#define PROMOTIONVALSCORE_T2040843033_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentHistory/PromotionValScore
-struct  PromotionValScore_t2040843033  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct PromotionValScore_t2040843033_StaticFields
-{
-public:
-	// System.Int32 AgentHistory/PromotionValScore::Success
-	int32_t ___Success_0;
-	// System.Int32 AgentHistory/PromotionValScore::Fail
-	int32_t ___Fail_1;
-	// System.Int32 AgentHistory/PromotionValScore::WorkDay
-	int32_t ___WorkDay_2;
-	// System.Int32 AgentHistory/PromotionValScore::PanicCnt
-	int32_t ___PanicCnt_3;
-	// System.Int32 AgentHistory/PromotionValScore::Phyiscal
-	int32_t ___Phyiscal_4;
-	// System.Int32 AgentHistory/PromotionValScore::Mental
-	int32_t ___Mental_5;
-	// System.Int32 AgentHistory/PromotionValScore::Suppresss
-	int32_t ___Suppresss_6;
-
-public:
-	inline static int32_t get_offset_of_Success_0() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___Success_0)); }
-	inline int32_t get_Success_0() const { return ___Success_0; }
-	inline int32_t* get_address_of_Success_0() { return &___Success_0; }
-	inline void set_Success_0(int32_t value)
-	{
-		___Success_0 = value;
-	}
-
-	inline static int32_t get_offset_of_Fail_1() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___Fail_1)); }
-	inline int32_t get_Fail_1() const { return ___Fail_1; }
-	inline int32_t* get_address_of_Fail_1() { return &___Fail_1; }
-	inline void set_Fail_1(int32_t value)
-	{
-		___Fail_1 = value;
-	}
-
-	inline static int32_t get_offset_of_WorkDay_2() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___WorkDay_2)); }
-	inline int32_t get_WorkDay_2() const { return ___WorkDay_2; }
-	inline int32_t* get_address_of_WorkDay_2() { return &___WorkDay_2; }
-	inline void set_WorkDay_2(int32_t value)
-	{
-		___WorkDay_2 = value;
-	}
-
-	inline static int32_t get_offset_of_PanicCnt_3() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___PanicCnt_3)); }
-	inline int32_t get_PanicCnt_3() const { return ___PanicCnt_3; }
-	inline int32_t* get_address_of_PanicCnt_3() { return &___PanicCnt_3; }
-	inline void set_PanicCnt_3(int32_t value)
-	{
-		___PanicCnt_3 = value;
-	}
-
-	inline static int32_t get_offset_of_Phyiscal_4() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___Phyiscal_4)); }
-	inline int32_t get_Phyiscal_4() const { return ___Phyiscal_4; }
-	inline int32_t* get_address_of_Phyiscal_4() { return &___Phyiscal_4; }
-	inline void set_Phyiscal_4(int32_t value)
-	{
-		___Phyiscal_4 = value;
-	}
-
-	inline static int32_t get_offset_of_Mental_5() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___Mental_5)); }
-	inline int32_t get_Mental_5() const { return ___Mental_5; }
-	inline int32_t* get_address_of_Mental_5() { return &___Mental_5; }
-	inline void set_Mental_5(int32_t value)
-	{
-		___Mental_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Suppresss_6() { return static_cast<int32_t>(offsetof(PromotionValScore_t2040843033_StaticFields, ___Suppresss_6)); }
-	inline int32_t get_Suppresss_6() const { return ___Suppresss_6; }
-	inline int32_t* get_address_of_Suppresss_6() { return &___Suppresss_6; }
-	inline void set_Suppresss_6(int32_t value)
-	{
-		___Suppresss_6 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PROMOTIONVALSCORE_T2040843033_H
-#ifndef ENUM_T4135868527_H
-#define ENUM_T4135868527_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Enum
-struct  Enum_t4135868527  : public ValueType_t3640485471
-{
-public:
-
-public:
-};
-
-struct Enum_t4135868527_StaticFields
-{
-public:
-	// System.Char[] System.Enum::split_char
-	CharU5BU5D_t3528271667* ___split_char_0;
-
-public:
-	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
-	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
-	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
-	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
-	{
-		___split_char_0 = value;
-		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.Enum
-struct Enum_t4135868527_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.Enum
-struct Enum_t4135868527_marshaled_com
-{
-};
-#endif // ENUM_T4135868527_H
-#ifndef COLOR_T2555686324_H
-#define COLOR_T2555686324_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Color
-struct  Color_t2555686324 
-{
-public:
-	// System.Single UnityEngine.Color::r
-	float ___r_0;
-	// System.Single UnityEngine.Color::g
-	float ___g_1;
-	// System.Single UnityEngine.Color::b
-	float ___b_2;
-	// System.Single UnityEngine.Color::a
-	float ___a_3;
-
-public:
-	inline static int32_t get_offset_of_r_0() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___r_0)); }
-	inline float get_r_0() const { return ___r_0; }
-	inline float* get_address_of_r_0() { return &___r_0; }
-	inline void set_r_0(float value)
-	{
-		___r_0 = value;
-	}
-
-	inline static int32_t get_offset_of_g_1() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___g_1)); }
-	inline float get_g_1() const { return ___g_1; }
-	inline float* get_address_of_g_1() { return &___g_1; }
-	inline void set_g_1(float value)
-	{
-		___g_1 = value;
-	}
-
-	inline static int32_t get_offset_of_b_2() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___b_2)); }
-	inline float get_b_2() const { return ___b_2; }
-	inline float* get_address_of_b_2() { return &___b_2; }
-	inline void set_b_2(float value)
-	{
-		___b_2 = value;
-	}
-
-	inline static int32_t get_offset_of_a_3() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___a_3)); }
-	inline float get_a_3() const { return ___a_3; }
-	inline float* get_address_of_a_3() { return &___a_3; }
-	inline void set_a_3(float value)
-	{
-		___a_3 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLOR_T2555686324_H
 #ifndef VECTOR3_T3722313464_H
 #define VECTOR3_T3722313464_H
 #ifdef __clang__
@@ -775,6 +337,130 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VECTOR3_T3722313464_H
+#ifndef COLOR_T2555686324_H
+#define COLOR_T2555686324_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Color
+struct  Color_t2555686324 
+{
+public:
+	// System.Single UnityEngine.Color::r
+	float ___r_0;
+	// System.Single UnityEngine.Color::g
+	float ___g_1;
+	// System.Single UnityEngine.Color::b
+	float ___b_2;
+	// System.Single UnityEngine.Color::a
+	float ___a_3;
+
+public:
+	inline static int32_t get_offset_of_r_0() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___r_0)); }
+	inline float get_r_0() const { return ___r_0; }
+	inline float* get_address_of_r_0() { return &___r_0; }
+	inline void set_r_0(float value)
+	{
+		___r_0 = value;
+	}
+
+	inline static int32_t get_offset_of_g_1() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___g_1)); }
+	inline float get_g_1() const { return ___g_1; }
+	inline float* get_address_of_g_1() { return &___g_1; }
+	inline void set_g_1(float value)
+	{
+		___g_1 = value;
+	}
+
+	inline static int32_t get_offset_of_b_2() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___b_2)); }
+	inline float get_b_2() const { return ___b_2; }
+	inline float* get_address_of_b_2() { return &___b_2; }
+	inline void set_b_2(float value)
+	{
+		___b_2 = value;
+	}
+
+	inline static int32_t get_offset_of_a_3() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___a_3)); }
+	inline float get_a_3() const { return ___a_3; }
+	inline float* get_address_of_a_3() { return &___a_3; }
+	inline void set_a_3(float value)
+	{
+		___a_3 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLOR_T2555686324_H
+#ifndef VOID_T1185182177_H
+#define VOID_T1185182177_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Void
+struct  Void_t1185182177 
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VOID_T1185182177_H
+#ifndef ENUM_T4135868527_H
+#define ENUM_T4135868527_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Enum
+struct  Enum_t4135868527  : public ValueType_t3640485471
+{
+public:
+
+public:
+};
+
+struct Enum_t4135868527_StaticFields
+{
+public:
+	// System.Char[] System.Enum::split_char
+	CharU5BU5D_t3528271667* ___split_char_0;
+
+public:
+	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
+	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
+	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
+	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
+	{
+		___split_char_0 = value;
+		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of System.Enum
+struct Enum_t4135868527_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.Enum
+struct Enum_t4135868527_marshaled_com
+{
+};
+#endif // ENUM_T4135868527_H
 #ifndef INTPTR_T_H
 #define INTPTR_T_H
 #ifdef __clang__
@@ -820,142 +506,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // INTPTR_T_H
-#ifndef VOID_T1185182177_H
-#define VOID_T1185182177_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Void
-struct  Void_t1185182177 
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // VOID_T1185182177_H
-#ifndef ACTIVATABLEOBJECTPOS_T3238555802_H
-#define ACTIVATABLEOBJECTPOS_T3238555802_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// ActivatableObjectPos
-struct  ActivatableObjectPos_t3238555802 
-{
-public:
-	// System.Int32 ActivatableObjectPos::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(ActivatableObjectPos_t3238555802, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ACTIVATABLEOBJECTPOS_T3238555802_H
-#ifndef AGENTAISTATE_T3715733213_H
-#define AGENTAISTATE_T3715733213_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentAIState
-struct  AgentAIState_t3715733213 
-{
-public:
-	// System.Int32 AgentAIState::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(AgentAIState_t3715733213, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // AGENTAISTATE_T3715733213_H
-#ifndef PARAMETERTYPE_T2246630605_H
-#define PARAMETERTYPE_T2246630605_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentAnim/ParameterInfo/ParameterType
-struct  ParameterType_t2246630605 
-{
-public:
-	// System.Int32 AgentAnim/ParameterInfo/ParameterType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(ParameterType_t2246630605, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PARAMETERTYPE_T2246630605_H
-#ifndef AGENTEVENTENUM_T1404746411_H
-#define AGENTEVENTENUM_T1404746411_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentEventEnum
-struct  AgentEventEnum_t1404746411 
-{
-public:
-	// System.Int32 AgentEventEnum::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(AgentEventEnum_t1404746411, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // AGENTEVENTENUM_T1404746411_H
 #ifndef AGENTCMDTYPE_T3364556965_H
 #define AGENTCMDTYPE_T3364556965_H
 #ifdef __clang__
@@ -985,6 +535,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AGENTCMDTYPE_T3364556965_H
+#ifndef AGENTEVENTENUM_T1404746411_H
+#define AGENTEVENTENUM_T1404746411_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// AgentEventEnum
+struct  AgentEventEnum_t1404746411 
+{
+public:
+	// System.Int32 AgentEventEnum::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(AgentEventEnum_t1404746411, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // AGENTEVENTENUM_T1404746411_H
 #ifndef AGENTANIMPOS_T1067474846_H
 #define AGENTANIMPOS_T1067474846_H
 #ifdef __clang__
@@ -1014,61 +593,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AGENTANIMPOS_T1067474846_H
-#ifndef OBJECT_T631007953_H
-#define OBJECT_T631007953_H
+#ifndef PARAMETERTYPE_T2246630605_H
+#define PARAMETERTYPE_T2246630605_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Object
-struct  Object_t631007953  : public RuntimeObject
+// AgentAnim/ParameterInfo/ParameterType
+struct  ParameterType_t2246630605 
 {
 public:
-	// System.IntPtr UnityEngine.Object::m_CachedPtr
-	intptr_t ___m_CachedPtr_0;
+	// System.Int32 AgentAnim/ParameterInfo/ParameterType::value__
+	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_m_CachedPtr_0() { return static_cast<int32_t>(offsetof(Object_t631007953, ___m_CachedPtr_0)); }
-	inline intptr_t get_m_CachedPtr_0() const { return ___m_CachedPtr_0; }
-	inline intptr_t* get_address_of_m_CachedPtr_0() { return &___m_CachedPtr_0; }
-	inline void set_m_CachedPtr_0(intptr_t value)
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(ParameterType_t2246630605, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
 	{
-		___m_CachedPtr_0 = value;
-	}
-};
-
-struct Object_t631007953_StaticFields
-{
-public:
-	// System.Int32 UnityEngine.Object::OffsetOfInstanceIDInCPlusPlusObject
-	int32_t ___OffsetOfInstanceIDInCPlusPlusObject_1;
-
-public:
-	inline static int32_t get_offset_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return static_cast<int32_t>(offsetof(Object_t631007953_StaticFields, ___OffsetOfInstanceIDInCPlusPlusObject_1)); }
-	inline int32_t get_OffsetOfInstanceIDInCPlusPlusObject_1() const { return ___OffsetOfInstanceIDInCPlusPlusObject_1; }
-	inline int32_t* get_address_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return &___OffsetOfInstanceIDInCPlusPlusObject_1; }
-	inline void set_OffsetOfInstanceIDInCPlusPlusObject_1(int32_t value)
-	{
-		___OffsetOfInstanceIDInCPlusPlusObject_1 = value;
+		___value___1 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Native definition for P/Invoke marshalling of UnityEngine.Object
-struct Object_t631007953_marshaled_pinvoke
-{
-	intptr_t ___m_CachedPtr_0;
-};
-// Native definition for COM marshalling of UnityEngine.Object
-struct Object_t631007953_marshaled_com
-{
-	intptr_t ___m_CachedPtr_0;
-};
-#endif // OBJECT_T631007953_H
+#endif // PARAMETERTYPE_T2246630605_H
 #ifndef DELEGATE_T1188392813_H
 #define DELEGATE_T1188392813_H
 #ifdef __clang__
@@ -1182,6 +735,180 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DELEGATE_T1188392813_H
+#ifndef AGENTAISTATE_T3715733213_H
+#define AGENTAISTATE_T3715733213_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// AgentAIState
+struct  AgentAIState_t3715733213 
+{
+public:
+	// System.Int32 AgentAIState::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(AgentAIState_t3715733213, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // AGENTAISTATE_T3715733213_H
+#ifndef ACTIVATABLEOBJECTPOS_T3238555802_H
+#define ACTIVATABLEOBJECTPOS_T3238555802_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// ActivatableObjectPos
+struct  ActivatableObjectPos_t3238555802 
+{
+public:
+	// System.Int32 ActivatableObjectPos::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(ActivatableObjectPos_t3238555802, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ACTIVATABLEOBJECTPOS_T3238555802_H
+#ifndef OBJECT_T631007953_H
+#define OBJECT_T631007953_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Object
+struct  Object_t631007953  : public RuntimeObject
+{
+public:
+	// System.IntPtr UnityEngine.Object::m_CachedPtr
+	intptr_t ___m_CachedPtr_0;
+
+public:
+	inline static int32_t get_offset_of_m_CachedPtr_0() { return static_cast<int32_t>(offsetof(Object_t631007953, ___m_CachedPtr_0)); }
+	inline intptr_t get_m_CachedPtr_0() const { return ___m_CachedPtr_0; }
+	inline intptr_t* get_address_of_m_CachedPtr_0() { return &___m_CachedPtr_0; }
+	inline void set_m_CachedPtr_0(intptr_t value)
+	{
+		___m_CachedPtr_0 = value;
+	}
+};
+
+struct Object_t631007953_StaticFields
+{
+public:
+	// System.Int32 UnityEngine.Object::OffsetOfInstanceIDInCPlusPlusObject
+	int32_t ___OffsetOfInstanceIDInCPlusPlusObject_1;
+
+public:
+	inline static int32_t get_offset_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return static_cast<int32_t>(offsetof(Object_t631007953_StaticFields, ___OffsetOfInstanceIDInCPlusPlusObject_1)); }
+	inline int32_t get_OffsetOfInstanceIDInCPlusPlusObject_1() const { return ___OffsetOfInstanceIDInCPlusPlusObject_1; }
+	inline int32_t* get_address_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return &___OffsetOfInstanceIDInCPlusPlusObject_1; }
+	inline void set_OffsetOfInstanceIDInCPlusPlusObject_1(int32_t value)
+	{
+		___OffsetOfInstanceIDInCPlusPlusObject_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of UnityEngine.Object
+struct Object_t631007953_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr_0;
+};
+// Native definition for COM marshalling of UnityEngine.Object
+struct Object_t631007953_marshaled_com
+{
+	intptr_t ___m_CachedPtr_0;
+};
+#endif // OBJECT_T631007953_H
+#ifndef COMPONENT_T1923634451_H
+#define COMPONENT_T1923634451_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Component
+struct  Component_t1923634451  : public Object_t631007953
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COMPONENT_T1923634451_H
+#ifndef MULTICASTDELEGATE_T_H
+#define MULTICASTDELEGATE_T_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.MulticastDelegate
+struct  MulticastDelegate_t  : public Delegate_t1188392813
+{
+public:
+	// System.MulticastDelegate System.MulticastDelegate::prev
+	MulticastDelegate_t * ___prev_9;
+	// System.MulticastDelegate System.MulticastDelegate::kpm_next
+	MulticastDelegate_t * ___kpm_next_10;
+
+public:
+	inline static int32_t get_offset_of_prev_9() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___prev_9)); }
+	inline MulticastDelegate_t * get_prev_9() const { return ___prev_9; }
+	inline MulticastDelegate_t ** get_address_of_prev_9() { return &___prev_9; }
+	inline void set_prev_9(MulticastDelegate_t * value)
+	{
+		___prev_9 = value;
+		Il2CppCodeGenWriteBarrier((&___prev_9), value);
+	}
+
+	inline static int32_t get_offset_of_kpm_next_10() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___kpm_next_10)); }
+	inline MulticastDelegate_t * get_kpm_next_10() const { return ___kpm_next_10; }
+	inline MulticastDelegate_t ** get_address_of_kpm_next_10() { return &___kpm_next_10; }
+	inline void set_kpm_next_10(MulticastDelegate_t * value)
+	{
+		___kpm_next_10 = value;
+		Il2CppCodeGenWriteBarrier((&___kpm_next_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MULTICASTDELEGATE_T_H
 #ifndef PARAMETERINFO_T2053157579_H
 #define PARAMETERINFO_T2053157579_H
 #ifdef __clang__
@@ -1262,87 +989,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // PARAMETERINFO_T2053157579_H
-#ifndef COMPONENT_T1923634451_H
-#define COMPONENT_T1923634451_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Component
-struct  Component_t1923634451  : public Object_t631007953
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COMPONENT_T1923634451_H
-#ifndef MULTICASTDELEGATE_T_H
-#define MULTICASTDELEGATE_T_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t1188392813
-{
-public:
-	// System.MulticastDelegate System.MulticastDelegate::prev
-	MulticastDelegate_t * ___prev_9;
-	// System.MulticastDelegate System.MulticastDelegate::kpm_next
-	MulticastDelegate_t * ___kpm_next_10;
-
-public:
-	inline static int32_t get_offset_of_prev_9() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___prev_9)); }
-	inline MulticastDelegate_t * get_prev_9() const { return ___prev_9; }
-	inline MulticastDelegate_t ** get_address_of_prev_9() { return &___prev_9; }
-	inline void set_prev_9(MulticastDelegate_t * value)
-	{
-		___prev_9 = value;
-		Il2CppCodeGenWriteBarrier((&___prev_9), value);
-	}
-
-	inline static int32_t get_offset_of_kpm_next_10() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___kpm_next_10)); }
-	inline MulticastDelegate_t * get_kpm_next_10() const { return ___kpm_next_10; }
-	inline MulticastDelegate_t ** get_address_of_kpm_next_10() { return &___kpm_next_10; }
-	inline void set_kpm_next_10(MulticastDelegate_t * value)
-	{
-		___kpm_next_10 = value;
-		Il2CppCodeGenWriteBarrier((&___kpm_next_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // MULTICASTDELEGATE_T_H
-#ifndef AFTERRESETEVENT_T3750500064_H
-#define AFTERRESETEVENT_T3750500064_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AgentAnim/AfterResetEvent
-struct  AfterResetEvent_t3750500064  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // AFTERRESETEVENT_T3750500064_H
 #ifndef BEHAVIOUR_T1437897464_H
 #define BEHAVIOUR_T1437897464_H
 #ifdef __clang__
@@ -1383,6 +1029,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AGENTEVENTLISTENERDELEGATE_T372478704_H
+#ifndef AFTERRESETEVENT_T3750500064_H
+#define AFTERRESETEVENT_T3750500064_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// AgentAnim/AfterResetEvent
+struct  AfterResetEvent_t3750500064  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // AFTERRESETEVENT_T3750500064_H
 #ifndef MONOBEHAVIOUR_T3962482529_H
 #define MONOBEHAVIOUR_T3962482529_H
 #ifdef __clang__
@@ -1403,244 +1069,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // MONOBEHAVIOUR_T3962482529_H
-#ifndef _2DXFX_TELEPORTATION_T402163804_H
-#define _2DXFX_TELEPORTATION_T402163804_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Teleportation
-struct  _2dxFX_Teleportation_t402163804  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Teleportation::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Teleportation::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Teleportation::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Teleportation::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Teleportation::Teleportation
-	float ___Teleportation_6;
-	// System.Int32 _2dxFX_Teleportation::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_Teleportation::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_Teleportation::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_Teleportation::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Teleportation_6() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___Teleportation_6)); }
-	inline float get_Teleportation_6() const { return ___Teleportation_6; }
-	inline float* get_address_of_Teleportation_6() { return &___Teleportation_6; }
-	inline void set_Teleportation_6(float value)
-	{
-		___Teleportation_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_TELEPORTATION_T402163804_H
-#ifndef _2DXFX_STONEFX_T1074579988_H
-#define _2DXFX_STONEFX_T1074579988_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_StoneFX
-struct  _2dxFX_StoneFX_t1074579988  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_StoneFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_StoneFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_StoneFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_StoneFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_StoneFX::IntoStone
-	float ___IntoStone_6;
-	// System.Single _2dxFX_StoneFX::Deep
-	float ___Deep_7;
-	// System.Int32 _2dxFX_StoneFX::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_StoneFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_StoneFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_StoneFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_IntoStone_6() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___IntoStone_6)); }
-	inline float get_IntoStone_6() const { return ___IntoStone_6; }
-	inline float* get_address_of_IntoStone_6() { return &___IntoStone_6; }
-	inline void set_IntoStone_6(float value)
-	{
-		___IntoStone_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Deep_7() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___Deep_7)); }
-	inline float get_Deep_7() const { return ___Deep_7; }
-	inline float* get_address_of_Deep_7() { return &___Deep_7; }
-	inline void set_Deep_7(float value)
-	{
-		___Deep_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_STONEFX_T1074579988_H
 #ifndef _2DXFX_SMOKE_T3112061757_H
 #define _2DXFX_SMOKE_T3112061757_H
 #ifdef __clang__
@@ -1876,45 +1304,41 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_SMOKE_T3112061757_H
-#ifndef _2DXFX_WATERANDBACKGROUNDDELUXE_T2649314378_H
-#define _2DXFX_WATERANDBACKGROUNDDELUXE_T2649314378_H
+#ifndef _2DXFX_STONEFX_T1074579988_H
+#define _2DXFX_STONEFX_T1074579988_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_WaterAndBackgroundDeluxe
-struct  _2dxFX_WaterAndBackgroundDeluxe_t2649314378  : public MonoBehaviour_t3962482529
+// _2dxFX_StoneFX
+struct  _2dxFX_StoneFX_t1074579988  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_WaterAndBackgroundDeluxe::ForceMaterial
+	// UnityEngine.Material _2dxFX_StoneFX::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_WaterAndBackgroundDeluxe::ActiveChange
+	// System.Boolean _2dxFX_StoneFX::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_WaterAndBackgroundDeluxe::shader
+	// System.String _2dxFX_StoneFX::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_WaterAndBackgroundDeluxe::_Alpha
+	// System.Single _2dxFX_StoneFX::_Alpha
 	float ____Alpha_5;
-	// System.Single _2dxFX_WaterAndBackgroundDeluxe::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_WaterAndBackgroundDeluxe::Speed
-	float ___Speed_7;
-	// System.Single _2dxFX_WaterAndBackgroundDeluxe::EValue
-	float ___EValue_8;
-	// System.Single _2dxFX_WaterAndBackgroundDeluxe::Light
-	float ___Light_9;
-	// System.Int32 _2dxFX_WaterAndBackgroundDeluxe::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_WaterAndBackgroundDeluxe::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_WaterAndBackgroundDeluxe::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_WaterAndBackgroundDeluxe::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
+	// System.Single _2dxFX_StoneFX::IntoStone
+	float ___IntoStone_6;
+	// System.Single _2dxFX_StoneFX::Deep
+	float ___Deep_7;
+	// System.Int32 _2dxFX_StoneFX::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_StoneFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_StoneFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_StoneFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -1923,7 +1347,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -1931,7 +1355,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -1940,7 +1364,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -1948,1131 +1372,62 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
+	inline static int32_t get_offset_of_IntoStone_6() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___IntoStone_6)); }
+	inline float get_IntoStone_6() const { return ___IntoStone_6; }
+	inline float* get_address_of_IntoStone_6() { return &___IntoStone_6; }
+	inline void set_IntoStone_6(float value)
 	{
-		___Heat_6 = value;
+		___IntoStone_6 = value;
 	}
 
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
+	inline static int32_t get_offset_of_Deep_7() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___Deep_7)); }
+	inline float get_Deep_7() const { return ___Deep_7; }
+	inline float* get_address_of_Deep_7() { return &___Deep_7; }
+	inline void set_Deep_7(float value)
 	{
-		___Speed_7 = value;
+		___Deep_7 = value;
 	}
 
-	inline static int32_t get_offset_of_EValue_8() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___EValue_8)); }
-	inline float get_EValue_8() const { return ___EValue_8; }
-	inline float* get_address_of_EValue_8() { return &___EValue_8; }
-	inline void set_EValue_8(float value)
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
 	{
-		___EValue_8 = value;
+		___ShaderChange_8 = value;
 	}
 
-	inline static int32_t get_offset_of_Light_9() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___Light_9)); }
-	inline float get_Light_9() const { return ___Light_9; }
-	inline float* get_address_of_Light_9() { return &___Light_9; }
-	inline void set_Light_9(float value)
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
 	{
-		___Light_9 = value;
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
 	{
-		___ShaderChange_10 = value;
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_StoneFX_t1074579988, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
 	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_WATERANDBACKGROUNDDELUXE_T2649314378_H
-#ifndef _2DXFX_TWIST_T217397679_H
-#define _2DXFX_TWIST_T217397679_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Twist
-struct  _2dxFX_Twist_t217397679  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Twist::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Twist::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Twist::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Twist::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Twist::Distortion
-	float ___Distortion_6;
-	// System.Single _2dxFX_Twist::_PosX
-	float ____PosX_7;
-	// System.Single _2dxFX_Twist::_PosY
-	float ____PosY_8;
-	// UnityEngine.Color _2dxFX_Twist::_ColorX
-	Color_t2555686324  ____ColorX_9;
-	// System.Int32 _2dxFX_Twist::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_Twist::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_Twist::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_Twist::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___Distortion_6)); }
-	inline float get_Distortion_6() const { return ___Distortion_6; }
-	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
-	inline void set_Distortion_6(float value)
-	{
-		___Distortion_6 = value;
-	}
-
-	inline static int32_t get_offset_of__PosX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____PosX_7)); }
-	inline float get__PosX_7() const { return ____PosX_7; }
-	inline float* get_address_of__PosX_7() { return &____PosX_7; }
-	inline void set__PosX_7(float value)
-	{
-		____PosX_7 = value;
-	}
-
-	inline static int32_t get_offset_of__PosY_8() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____PosY_8)); }
-	inline float get__PosY_8() const { return ____PosY_8; }
-	inline float* get_address_of__PosY_8() { return &____PosY_8; }
-	inline void set__PosY_8(float value)
-	{
-		____PosY_8 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorX_9() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____ColorX_9)); }
-	inline Color_t2555686324  get__ColorX_9() const { return ____ColorX_9; }
-	inline Color_t2555686324 * get_address_of__ColorX_9() { return &____ColorX_9; }
-	inline void set__ColorX_9(Color_t2555686324  value)
-	{
-		____ColorX_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_TWIST_T217397679_H
-#ifndef _2DXFX_WATERANDBACKGROUND_T2514510209_H
-#define _2DXFX_WATERANDBACKGROUND_T2514510209_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_WaterAndBackground
-struct  _2dxFX_WaterAndBackground_t2514510209  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_WaterAndBackground::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_WaterAndBackground::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_WaterAndBackground::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_WaterAndBackground::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_WaterAndBackground::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_WaterAndBackground::Speed
-	float ___Speed_7;
-	// System.Single _2dxFX_WaterAndBackground::EValue
-	float ___EValue_8;
-	// System.Single _2dxFX_WaterAndBackground::Light
-	float ___Light_9;
-	// System.Int32 _2dxFX_WaterAndBackground::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_WaterAndBackground::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_WaterAndBackground::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_WaterAndBackground::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
-	{
-		___Heat_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
-	{
-		___Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of_EValue_8() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___EValue_8)); }
-	inline float get_EValue_8() const { return ___EValue_8; }
-	inline float* get_address_of_EValue_8() { return &___EValue_8; }
-	inline void set_EValue_8(float value)
-	{
-		___EValue_8 = value;
-	}
-
-	inline static int32_t get_offset_of_Light_9() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___Light_9)); }
-	inline float get_Light_9() const { return ___Light_9; }
-	inline float* get_address_of_Light_9() { return &___Light_9; }
-	inline void set_Light_9(float value)
-	{
-		___Light_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_WATERANDBACKGROUND_T2514510209_H
-#ifndef _2DXFX_THRESHOLD_T363078937_H
-#define _2DXFX_THRESHOLD_T363078937_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Threshold
-struct  _2dxFX_Threshold_t363078937  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Threshold::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Threshold::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Threshold::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Threshold::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Threshold::Threshold
-	float ___Threshold_6;
-	// System.Int32 _2dxFX_Threshold::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_Threshold::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_Threshold::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_Threshold::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Threshold_6() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___Threshold_6)); }
-	inline float get_Threshold_6() const { return ___Threshold_6; }
-	inline float* get_address_of_Threshold_6() { return &___Threshold_6; }
-	inline void set_Threshold_6(float value)
-	{
-		___Threshold_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_THRESHOLD_T363078937_H
-#ifndef _2DXFX_SLIM_T2056914656_H
-#define _2DXFX_SLIM_T2056914656_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Slim
-struct  _2dxFX_Slim_t2056914656  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Slim::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Slim::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Slim::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Slim::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_Slim::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_Slim::TurnToLiquid
-	float ___TurnToLiquid_7;
-	// System.Single _2dxFX_Slim::Heat
-	float ___Heat_8;
-	// System.Single _2dxFX_Slim::Speed
-	float ___Speed_9;
-	// System.Single _2dxFX_Slim::EValue
-	float ___EValue_10;
-	// System.Single _2dxFX_Slim::Light
-	float ___Light_11;
-	// System.Int32 _2dxFX_Slim::ShaderChange
-	int32_t ___ShaderChange_12;
-	// UnityEngine.Material _2dxFX_Slim::tempMaterial
-	Material_t340375123 * ___tempMaterial_13;
-	// UnityEngine.Material _2dxFX_Slim::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_14;
-	// UnityEngine.UI.Image _2dxFX_Slim::CanvasImage
-	Image_t2670269651 * ___CanvasImage_15;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of_TurnToLiquid_7() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___TurnToLiquid_7)); }
-	inline float get_TurnToLiquid_7() const { return ___TurnToLiquid_7; }
-	inline float* get_address_of_TurnToLiquid_7() { return &___TurnToLiquid_7; }
-	inline void set_TurnToLiquid_7(float value)
-	{
-		___TurnToLiquid_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_8() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___Heat_8)); }
-	inline float get_Heat_8() const { return ___Heat_8; }
-	inline float* get_address_of_Heat_8() { return &___Heat_8; }
-	inline void set_Heat_8(float value)
-	{
-		___Heat_8 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___Speed_9)); }
-	inline float get_Speed_9() const { return ___Speed_9; }
-	inline float* get_address_of_Speed_9() { return &___Speed_9; }
-	inline void set_Speed_9(float value)
-	{
-		___Speed_9 = value;
-	}
-
-	inline static int32_t get_offset_of_EValue_10() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___EValue_10)); }
-	inline float get_EValue_10() const { return ___EValue_10; }
-	inline float* get_address_of_EValue_10() { return &___EValue_10; }
-	inline void set_EValue_10(float value)
-	{
-		___EValue_10 = value;
-	}
-
-	inline static int32_t get_offset_of_Light_11() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___Light_11)); }
-	inline float get_Light_11() const { return ___Light_11; }
-	inline float* get_address_of_Light_11() { return &___Light_11; }
-	inline void set_Light_11(float value)
-	{
-		___Light_11 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_12() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___ShaderChange_12)); }
-	inline int32_t get_ShaderChange_12() const { return ___ShaderChange_12; }
-	inline int32_t* get_address_of_ShaderChange_12() { return &___ShaderChange_12; }
-	inline void set_ShaderChange_12(int32_t value)
-	{
-		___ShaderChange_12 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___tempMaterial_13)); }
-	inline Material_t340375123 * get_tempMaterial_13() const { return ___tempMaterial_13; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_13() { return &___tempMaterial_13; }
-	inline void set_tempMaterial_13(Material_t340375123 * value)
-	{
-		___tempMaterial_13 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_13), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_14() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___defaultMaterial_14)); }
-	inline Material_t340375123 * get_defaultMaterial_14() const { return ___defaultMaterial_14; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_14() { return &___defaultMaterial_14; }
-	inline void set_defaultMaterial_14(Material_t340375123 * value)
-	{
-		___defaultMaterial_14 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_14), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_15() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___CanvasImage_15)); }
-	inline Image_t2670269651 * get_CanvasImage_15() const { return ___CanvasImage_15; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_15() { return &___CanvasImage_15; }
-	inline void set_CanvasImage_15(Image_t2670269651 * value)
-	{
-		___CanvasImage_15 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_15), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_SLIM_T2056914656_H
-#ifndef _2DXFX_SANDFX_T2083216051_H
-#define _2DXFX_SANDFX_T2083216051_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_SandFX
-struct  _2dxFX_SandFX_t2083216051  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_SandFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_SandFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_SandFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_SandFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_SandFX::Sand
-	float ___Sand_6;
-	// System.Int32 _2dxFX_SandFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_SandFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_SandFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_SandFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Sand_6() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___Sand_6)); }
-	inline float get_Sand_6() const { return ___Sand_6; }
-	inline float* get_address_of_Sand_6() { return &___Sand_6; }
-	inline void set_Sand_6(float value)
-	{
-		___Sand_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_SANDFX_T2083216051_H
-#ifndef _2DXFX_POSTERIZE_T2695202757_H
-#define _2DXFX_POSTERIZE_T2695202757_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Posterize
-struct  _2dxFX_Posterize_t2695202757  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Posterize::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Posterize::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Posterize::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Posterize::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Posterize::Posterize
-	float ___Posterize_6;
-	// System.Int32 _2dxFX_Posterize::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_Posterize::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_Posterize::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_Posterize::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Posterize_6() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___Posterize_6)); }
-	inline float get_Posterize_6() const { return ___Posterize_6; }
-	inline float* get_address_of_Posterize_6() { return &___Posterize_6; }
-	inline void set_Posterize_6(float value)
-	{
-		___Posterize_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_POSTERIZE_T2695202757_H
-#ifndef _2DXFX_PLASMASHIELD_T1475112776_H
-#define _2DXFX_PLASMASHIELD_T1475112776_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_PlasmaShield
-struct  _2dxFX_PlasmaShield_t1475112776  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_PlasmaShield::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_PlasmaShield::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_PlasmaShield::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_PlasmaShield::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Color _2dxFX_PlasmaShield::_ColorX
-	Color_t2555686324  ____ColorX_6;
-	// System.Single _2dxFX_PlasmaShield::_Offset
-	float ____Offset_7;
-	// System.Single _2dxFX_PlasmaShield::_TimeX
-	float ____TimeX_8;
-	// System.Single _2dxFX_PlasmaShield::Speed
-	float ___Speed_9;
-	// System.Int32 _2dxFX_PlasmaShield::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_PlasmaShield::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_PlasmaShield::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_PlasmaShield::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorX_6() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____ColorX_6)); }
-	inline Color_t2555686324  get__ColorX_6() const { return ____ColorX_6; }
-	inline Color_t2555686324 * get_address_of__ColorX_6() { return &____ColorX_6; }
-	inline void set__ColorX_6(Color_t2555686324  value)
-	{
-		____ColorX_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____Offset_7)); }
-	inline float get__Offset_7() const { return ____Offset_7; }
-	inline float* get_address_of__Offset_7() { return &____Offset_7; }
-	inline void set__Offset_7(float value)
-	{
-		____Offset_7 = value;
-	}
-
-	inline static int32_t get_offset_of__TimeX_8() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____TimeX_8)); }
-	inline float get__TimeX_8() const { return ____TimeX_8; }
-	inline float* get_address_of__TimeX_8() { return &____TimeX_8; }
-	inline void set__TimeX_8(float value)
-	{
-		____TimeX_8 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___Speed_9)); }
-	inline float get_Speed_9() const { return ___Speed_9; }
-	inline float* get_address_of_Speed_9() { return &___Speed_9; }
-	inline void set_Speed_9(float value)
-	{
-		___Speed_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PLASMASHIELD_T1475112776_H
-#ifndef _2DXFX_SEPIA_T3510645867_H
-#define _2DXFX_SEPIA_T3510645867_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Sepia
-struct  _2dxFX_Sepia_t3510645867  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Sepia::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Sepia::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Sepia::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Sepia::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Sepia::_EffectAmount
-	float ____EffectAmount_6;
-	// System.Int32 _2dxFX_Sepia::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_Sepia::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_Sepia::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_Sepia::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__EffectAmount_6() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ____EffectAmount_6)); }
-	inline float get__EffectAmount_6() const { return ____EffectAmount_6; }
-	inline float* get_address_of__EffectAmount_6() { return &____EffectAmount_6; }
-	inline void set__EffectAmount_6(float value)
-	{
-		____EffectAmount_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_SEPIA_T3510645867_H
+#endif // _2DXFX_STONEFX_T1074579988_H
 #ifndef _2DXFX_SKYCLOUD_T2529631033_H
 #define _2DXFX_SKYCLOUD_T2529631033_H
 #ifdef __clang__
@@ -3288,6 +1643,687 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_SKYCLOUD_T2529631033_H
+#ifndef _2DXFX_SLIM_T2056914656_H
+#define _2DXFX_SLIM_T2056914656_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Slim
+struct  _2dxFX_Slim_t2056914656  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Slim::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Slim::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Slim::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Slim::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_Slim::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_Slim::TurnToLiquid
+	float ___TurnToLiquid_7;
+	// System.Single _2dxFX_Slim::Heat
+	float ___Heat_8;
+	// System.Single _2dxFX_Slim::Speed
+	float ___Speed_9;
+	// System.Single _2dxFX_Slim::EValue
+	float ___EValue_10;
+	// System.Single _2dxFX_Slim::Light
+	float ___Light_11;
+	// System.Int32 _2dxFX_Slim::ShaderChange
+	int32_t ___ShaderChange_12;
+	// UnityEngine.Material _2dxFX_Slim::tempMaterial
+	Material_t340375123 * ___tempMaterial_13;
+	// UnityEngine.Material _2dxFX_Slim::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_14;
+	// UnityEngine.UI.Image _2dxFX_Slim::CanvasImage
+	Image_t2670269651 * ___CanvasImage_15;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of_TurnToLiquid_7() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___TurnToLiquid_7)); }
+	inline float get_TurnToLiquid_7() const { return ___TurnToLiquid_7; }
+	inline float* get_address_of_TurnToLiquid_7() { return &___TurnToLiquid_7; }
+	inline void set_TurnToLiquid_7(float value)
+	{
+		___TurnToLiquid_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_8() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___Heat_8)); }
+	inline float get_Heat_8() const { return ___Heat_8; }
+	inline float* get_address_of_Heat_8() { return &___Heat_8; }
+	inline void set_Heat_8(float value)
+	{
+		___Heat_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___Speed_9)); }
+	inline float get_Speed_9() const { return ___Speed_9; }
+	inline float* get_address_of_Speed_9() { return &___Speed_9; }
+	inline void set_Speed_9(float value)
+	{
+		___Speed_9 = value;
+	}
+
+	inline static int32_t get_offset_of_EValue_10() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___EValue_10)); }
+	inline float get_EValue_10() const { return ___EValue_10; }
+	inline float* get_address_of_EValue_10() { return &___EValue_10; }
+	inline void set_EValue_10(float value)
+	{
+		___EValue_10 = value;
+	}
+
+	inline static int32_t get_offset_of_Light_11() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___Light_11)); }
+	inline float get_Light_11() const { return ___Light_11; }
+	inline float* get_address_of_Light_11() { return &___Light_11; }
+	inline void set_Light_11(float value)
+	{
+		___Light_11 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_12() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___ShaderChange_12)); }
+	inline int32_t get_ShaderChange_12() const { return ___ShaderChange_12; }
+	inline int32_t* get_address_of_ShaderChange_12() { return &___ShaderChange_12; }
+	inline void set_ShaderChange_12(int32_t value)
+	{
+		___ShaderChange_12 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___tempMaterial_13)); }
+	inline Material_t340375123 * get_tempMaterial_13() const { return ___tempMaterial_13; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_13() { return &___tempMaterial_13; }
+	inline void set_tempMaterial_13(Material_t340375123 * value)
+	{
+		___tempMaterial_13 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_13), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_14() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___defaultMaterial_14)); }
+	inline Material_t340375123 * get_defaultMaterial_14() const { return ___defaultMaterial_14; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_14() { return &___defaultMaterial_14; }
+	inline void set_defaultMaterial_14(Material_t340375123 * value)
+	{
+		___defaultMaterial_14 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_14), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_15() { return static_cast<int32_t>(offsetof(_2dxFX_Slim_t2056914656, ___CanvasImage_15)); }
+	inline Image_t2670269651 * get_CanvasImage_15() const { return ___CanvasImage_15; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_15() { return &___CanvasImage_15; }
+	inline void set_CanvasImage_15(Image_t2670269651 * value)
+	{
+		___CanvasImage_15 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_15), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_SLIM_T2056914656_H
+#ifndef _2DXFX_THRESHOLD_T363078937_H
+#define _2DXFX_THRESHOLD_T363078937_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Threshold
+struct  _2dxFX_Threshold_t363078937  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Threshold::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Threshold::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Threshold::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Threshold::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Threshold::Threshold
+	float ___Threshold_6;
+	// System.Int32 _2dxFX_Threshold::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_Threshold::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_Threshold::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_Threshold::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Threshold_6() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___Threshold_6)); }
+	inline float get_Threshold_6() const { return ___Threshold_6; }
+	inline float* get_address_of_Threshold_6() { return &___Threshold_6; }
+	inline void set_Threshold_6(float value)
+	{
+		___Threshold_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Threshold_t363078937, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_THRESHOLD_T363078937_H
+#ifndef _2DXFX_TELEPORTATION_T402163804_H
+#define _2DXFX_TELEPORTATION_T402163804_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Teleportation
+struct  _2dxFX_Teleportation_t402163804  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Teleportation::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Teleportation::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Teleportation::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Teleportation::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Teleportation::Teleportation
+	float ___Teleportation_6;
+	// System.Int32 _2dxFX_Teleportation::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_Teleportation::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_Teleportation::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_Teleportation::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Teleportation_6() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___Teleportation_6)); }
+	inline float get_Teleportation_6() const { return ___Teleportation_6; }
+	inline float* get_address_of_Teleportation_6() { return &___Teleportation_6; }
+	inline void set_Teleportation_6(float value)
+	{
+		___Teleportation_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Teleportation_t402163804, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_TELEPORTATION_T402163804_H
+#ifndef _2DXFX_WATERANDBACKGROUND_T2514510209_H
+#define _2DXFX_WATERANDBACKGROUND_T2514510209_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_WaterAndBackground
+struct  _2dxFX_WaterAndBackground_t2514510209  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_WaterAndBackground::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_WaterAndBackground::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_WaterAndBackground::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_WaterAndBackground::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_WaterAndBackground::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_WaterAndBackground::Speed
+	float ___Speed_7;
+	// System.Single _2dxFX_WaterAndBackground::EValue
+	float ___EValue_8;
+	// System.Single _2dxFX_WaterAndBackground::Light
+	float ___Light_9;
+	// System.Int32 _2dxFX_WaterAndBackground::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_WaterAndBackground::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_WaterAndBackground::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_WaterAndBackground::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_EValue_8() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___EValue_8)); }
+	inline float get_EValue_8() const { return ___EValue_8; }
+	inline float* get_address_of_EValue_8() { return &___EValue_8; }
+	inline void set_EValue_8(float value)
+	{
+		___EValue_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Light_9() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___Light_9)); }
+	inline float get_Light_9() const { return ___Light_9; }
+	inline float* get_address_of_Light_9() { return &___Light_9; }
+	inline void set_Light_9(float value)
+	{
+		___Light_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackground_t2514510209, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_WATERANDBACKGROUND_T2514510209_H
+#ifndef _2DXFX_TWIST_T217397679_H
+#define _2DXFX_TWIST_T217397679_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Twist
+struct  _2dxFX_Twist_t217397679  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Twist::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Twist::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Twist::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Twist::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Twist::Distortion
+	float ___Distortion_6;
+	// System.Single _2dxFX_Twist::_PosX
+	float ____PosX_7;
+	// System.Single _2dxFX_Twist::_PosY
+	float ____PosY_8;
+	// UnityEngine.Color _2dxFX_Twist::_ColorX
+	Color_t2555686324  ____ColorX_9;
+	// System.Int32 _2dxFX_Twist::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_Twist::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_Twist::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_Twist::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___Distortion_6)); }
+	inline float get_Distortion_6() const { return ___Distortion_6; }
+	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
+	inline void set_Distortion_6(float value)
+	{
+		___Distortion_6 = value;
+	}
+
+	inline static int32_t get_offset_of__PosX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____PosX_7)); }
+	inline float get__PosX_7() const { return ____PosX_7; }
+	inline float* get_address_of__PosX_7() { return &____PosX_7; }
+	inline void set__PosX_7(float value)
+	{
+		____PosX_7 = value;
+	}
+
+	inline static int32_t get_offset_of__PosY_8() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____PosY_8)); }
+	inline float get__PosY_8() const { return ____PosY_8; }
+	inline float* get_address_of__PosY_8() { return &____PosY_8; }
+	inline void set__PosY_8(float value)
+	{
+		____PosY_8 = value;
+	}
+
+	inline static int32_t get_offset_of__ColorX_9() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ____ColorX_9)); }
+	inline Color_t2555686324  get__ColorX_9() const { return ____ColorX_9; }
+	inline Color_t2555686324 * get_address_of__ColorX_9() { return &____ColorX_9; }
+	inline void set__ColorX_9(Color_t2555686324  value)
+	{
+		____ColorX_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_Twist_t217397679, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_TWIST_T217397679_H
 #ifndef _2DXFX_SHINY_REFLECT_T822361570_H
 #define _2DXFX_SHINY_REFLECT_T822361570_H
 #ifdef __clang__
@@ -3494,6 +2530,767 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_SHINY_REFLECT_T822361570_H
+#ifndef _2DXFX_PLASMARAINBOW_COLOR_T1556315044_H
+#define _2DXFX_PLASMARAINBOW_COLOR_T1556315044_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_PlasmaRainbow_Color
+struct  _2dxFX_PlasmaRainbow_Color_t1556315044  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_PlasmaRainbow_Color::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_PlasmaRainbow_Color::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_PlasmaRainbow_Color::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_PlasmaRainbow_Color::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_PlasmaRainbow_Color::_Colors
+	float ____Colors_6;
+	// System.Single _2dxFX_PlasmaRainbow_Color::_Offset
+	float ____Offset_7;
+	// System.Single _2dxFX_PlasmaRainbow_Color::_TimeX
+	float ____TimeX_8;
+	// System.Single _2dxFX_PlasmaRainbow_Color::Speed
+	float ___Speed_9;
+	// System.Int32 _2dxFX_PlasmaRainbow_Color::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_PlasmaRainbow_Color::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_PlasmaRainbow_Color::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_PlasmaRainbow_Color::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Colors_6() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____Colors_6)); }
+	inline float get__Colors_6() const { return ____Colors_6; }
+	inline float* get_address_of__Colors_6() { return &____Colors_6; }
+	inline void set__Colors_6(float value)
+	{
+		____Colors_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____Offset_7)); }
+	inline float get__Offset_7() const { return ____Offset_7; }
+	inline float* get_address_of__Offset_7() { return &____Offset_7; }
+	inline void set__Offset_7(float value)
+	{
+		____Offset_7 = value;
+	}
+
+	inline static int32_t get_offset_of__TimeX_8() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____TimeX_8)); }
+	inline float get__TimeX_8() const { return ____TimeX_8; }
+	inline float* get_address_of__TimeX_8() { return &____TimeX_8; }
+	inline void set__TimeX_8(float value)
+	{
+		____TimeX_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___Speed_9)); }
+	inline float get_Speed_9() const { return ___Speed_9; }
+	inline float* get_address_of_Speed_9() { return &___Speed_9; }
+	inline void set_Speed_9(float value)
+	{
+		___Speed_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PLASMARAINBOW_COLOR_T1556315044_H
+#ifndef _2DXFX_PLASMASHIELD_T1475112776_H
+#define _2DXFX_PLASMASHIELD_T1475112776_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_PlasmaShield
+struct  _2dxFX_PlasmaShield_t1475112776  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_PlasmaShield::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_PlasmaShield::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_PlasmaShield::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_PlasmaShield::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Color _2dxFX_PlasmaShield::_ColorX
+	Color_t2555686324  ____ColorX_6;
+	// System.Single _2dxFX_PlasmaShield::_Offset
+	float ____Offset_7;
+	// System.Single _2dxFX_PlasmaShield::_TimeX
+	float ____TimeX_8;
+	// System.Single _2dxFX_PlasmaShield::Speed
+	float ___Speed_9;
+	// System.Int32 _2dxFX_PlasmaShield::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_PlasmaShield::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_PlasmaShield::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_PlasmaShield::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__ColorX_6() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____ColorX_6)); }
+	inline Color_t2555686324  get__ColorX_6() const { return ____ColorX_6; }
+	inline Color_t2555686324 * get_address_of__ColorX_6() { return &____ColorX_6; }
+	inline void set__ColorX_6(Color_t2555686324  value)
+	{
+		____ColorX_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____Offset_7)); }
+	inline float get__Offset_7() const { return ____Offset_7; }
+	inline float* get_address_of__Offset_7() { return &____Offset_7; }
+	inline void set__Offset_7(float value)
+	{
+		____Offset_7 = value;
+	}
+
+	inline static int32_t get_offset_of__TimeX_8() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ____TimeX_8)); }
+	inline float get__TimeX_8() const { return ____TimeX_8; }
+	inline float* get_address_of__TimeX_8() { return &____TimeX_8; }
+	inline void set__TimeX_8(float value)
+	{
+		____TimeX_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___Speed_9)); }
+	inline float get_Speed_9() const { return ___Speed_9; }
+	inline float* get_address_of_Speed_9() { return &___Speed_9; }
+	inline void set_Speed_9(float value)
+	{
+		___Speed_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaShield_t1475112776, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PLASMASHIELD_T1475112776_H
+#ifndef _2DXFX_PIXELDIE_T3065265623_H
+#define _2DXFX_PIXELDIE_T3065265623_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_PixelDie
+struct  _2dxFX_PixelDie_t3065265623  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_PixelDie::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_PixelDie::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_PixelDie::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_PixelDie::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_PixelDie::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_PixelDie::_Value1
+	float ____Value1_7;
+	// System.Single _2dxFX_PixelDie::_Value2
+	float ____Value2_8;
+	// System.Single _2dxFX_PixelDie::_Value3
+	float ____Value3_9;
+	// System.Single _2dxFX_PixelDie::_Value4
+	float ____Value4_10;
+	// System.Boolean _2dxFX_PixelDie::_AutoScrollX
+	bool ____AutoScrollX_11;
+	// System.Single _2dxFX_PixelDie::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_12;
+	// System.Boolean _2dxFX_PixelDie::_AutoScrollY
+	bool ____AutoScrollY_13;
+	// System.Single _2dxFX_PixelDie::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_14;
+	// System.Single _2dxFX_PixelDie::_AutoScrollCountX
+	float ____AutoScrollCountX_15;
+	// System.Single _2dxFX_PixelDie::_AutoScrollCountY
+	float ____AutoScrollCountY_16;
+	// System.Int32 _2dxFX_PixelDie::ShaderChange
+	int32_t ___ShaderChange_17;
+	// UnityEngine.Material _2dxFX_PixelDie::tempMaterial
+	Material_t340375123 * ___tempMaterial_18;
+	// UnityEngine.Material _2dxFX_PixelDie::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_19;
+	// UnityEngine.UI.Image _2dxFX_PixelDie::CanvasImage
+	Image_t2670269651 * ___CanvasImage_20;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value1_7)); }
+	inline float get__Value1_7() const { return ____Value1_7; }
+	inline float* get_address_of__Value1_7() { return &____Value1_7; }
+	inline void set__Value1_7(float value)
+	{
+		____Value1_7 = value;
+	}
+
+	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value2_8)); }
+	inline float get__Value2_8() const { return ____Value2_8; }
+	inline float* get_address_of__Value2_8() { return &____Value2_8; }
+	inline void set__Value2_8(float value)
+	{
+		____Value2_8 = value;
+	}
+
+	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value3_9)); }
+	inline float get__Value3_9() const { return ____Value3_9; }
+	inline float* get_address_of__Value3_9() { return &____Value3_9; }
+	inline void set__Value3_9(float value)
+	{
+		____Value3_9 = value;
+	}
+
+	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value4_10)); }
+	inline float get__Value4_10() const { return ____Value4_10; }
+	inline float* get_address_of__Value4_10() { return &____Value4_10; }
+	inline void set__Value4_10(float value)
+	{
+		____Value4_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollX_11)); }
+	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
+	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
+	inline void set__AutoScrollX_11(bool value)
+	{
+		____AutoScrollX_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollSpeedX_12)); }
+	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
+	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
+	inline void set__AutoScrollSpeedX_12(float value)
+	{
+		____AutoScrollSpeedX_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollY_13)); }
+	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
+	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
+	inline void set__AutoScrollY_13(bool value)
+	{
+		____AutoScrollY_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollSpeedY_14)); }
+	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
+	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
+	inline void set__AutoScrollSpeedY_14(float value)
+	{
+		____AutoScrollSpeedY_14 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollCountX_15)); }
+	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
+	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
+	inline void set__AutoScrollCountX_15(float value)
+	{
+		____AutoScrollCountX_15 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollCountY_16)); }
+	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
+	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
+	inline void set__AutoScrollCountY_16(float value)
+	{
+		____AutoScrollCountY_16 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___ShaderChange_17)); }
+	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
+	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
+	inline void set_ShaderChange_17(int32_t value)
+	{
+		___ShaderChange_17 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___tempMaterial_18)); }
+	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
+	inline void set_tempMaterial_18(Material_t340375123 * value)
+	{
+		___tempMaterial_18 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___defaultMaterial_19)); }
+	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
+	inline void set_defaultMaterial_19(Material_t340375123 * value)
+	{
+		___defaultMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___CanvasImage_20)); }
+	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
+	inline void set_CanvasImage_20(Image_t2670269651 * value)
+	{
+		___CanvasImage_20 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PIXELDIE_T3065265623_H
+#ifndef _2DXFX_PLASMARAINBOW_T1368616563_H
+#define _2DXFX_PLASMARAINBOW_T1368616563_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_PlasmaRainbow
+struct  _2dxFX_PlasmaRainbow_t1368616563  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_PlasmaRainbow::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_PlasmaRainbow::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_PlasmaRainbow::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_PlasmaRainbow::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_PlasmaRainbow::_Colors
+	float ____Colors_6;
+	// System.Single _2dxFX_PlasmaRainbow::_Offset
+	float ____Offset_7;
+	// System.Single _2dxFX_PlasmaRainbow::_TimeX
+	float ____TimeX_8;
+	// System.Single _2dxFX_PlasmaRainbow::Speed
+	float ___Speed_9;
+	// System.Int32 _2dxFX_PlasmaRainbow::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_PlasmaRainbow::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_PlasmaRainbow::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_PlasmaRainbow::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Colors_6() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____Colors_6)); }
+	inline float get__Colors_6() const { return ____Colors_6; }
+	inline float* get_address_of__Colors_6() { return &____Colors_6; }
+	inline void set__Colors_6(float value)
+	{
+		____Colors_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____Offset_7)); }
+	inline float get__Offset_7() const { return ____Offset_7; }
+	inline float* get_address_of__Offset_7() { return &____Offset_7; }
+	inline void set__Offset_7(float value)
+	{
+		____Offset_7 = value;
+	}
+
+	inline static int32_t get_offset_of__TimeX_8() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____TimeX_8)); }
+	inline float get__TimeX_8() const { return ____TimeX_8; }
+	inline float* get_address_of__TimeX_8() { return &____TimeX_8; }
+	inline void set__TimeX_8(float value)
+	{
+		____TimeX_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___Speed_9)); }
+	inline float get_Speed_9() const { return ___Speed_9; }
+	inline float* get_address_of_Speed_9() { return &___Speed_9; }
+	inline void set_Speed_9(float value)
+	{
+		___Speed_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PLASMARAINBOW_T1368616563_H
+#ifndef _2DXFX_SEPIA_T3510645867_H
+#define _2DXFX_SEPIA_T3510645867_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Sepia
+struct  _2dxFX_Sepia_t3510645867  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Sepia::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Sepia::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Sepia::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Sepia::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Sepia::_EffectAmount
+	float ____EffectAmount_6;
+	// System.Int32 _2dxFX_Sepia::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_Sepia::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_Sepia::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_Sepia::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__EffectAmount_6() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ____EffectAmount_6)); }
+	inline float get__EffectAmount_6() const { return ____EffectAmount_6; }
+	inline float* get_address_of__EffectAmount_6() { return &____EffectAmount_6; }
+	inline void set__EffectAmount_6(float value)
+	{
+		____EffectAmount_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Sepia_t3510645867, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_SEPIA_T3510645867_H
 #ifndef _2DXFX_SHARPEN_T2616912503_H
 #define _2DXFX_SHARPEN_T2616912503_H
 #ifdef __clang__
@@ -3608,51 +3405,39 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_SHARPEN_T2616912503_H
-#ifndef _2DXFX_WATERFALL_T1208099646_H
-#define _2DXFX_WATERFALL_T1208099646_H
+#ifndef _2DXFX_POSTERIZE_T2695202757_H
+#define _2DXFX_POSTERIZE_T2695202757_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_Waterfall
-struct  _2dxFX_Waterfall_t1208099646  : public MonoBehaviour_t3962482529
+// _2dxFX_Posterize
+struct  _2dxFX_Posterize_t2695202757  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_Waterfall::ForceMaterial
+	// UnityEngine.Material _2dxFX_Posterize::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Waterfall::ActiveChange
+	// System.Boolean _2dxFX_Posterize::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_Waterfall::shader
+	// System.String _2dxFX_Posterize::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_Waterfall::_Alpha
+	// System.Single _2dxFX_Posterize::_Alpha
 	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_Waterfall::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_Waterfall::Liquid
-	float ___Liquid_7;
-	// System.Single _2dxFX_Waterfall::Speed
-	float ___Speed_8;
-	// System.Single _2dxFX_Waterfall::EValue
-	float ___EValue_9;
-	// System.Single _2dxFX_Waterfall::TValue
-	float ___TValue_10;
-	// UnityEngine.Color _2dxFX_Waterfall::LightColor
-	Color_t2555686324  ___LightColor_11;
-	// System.Single _2dxFX_Waterfall::Light
-	float ___Light_12;
-	// System.Int32 _2dxFX_Waterfall::ShaderChange
-	int32_t ___ShaderChange_13;
-	// UnityEngine.Material _2dxFX_Waterfall::tempMaterial
-	Material_t340375123 * ___tempMaterial_14;
-	// UnityEngine.Material _2dxFX_Waterfall::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_15;
-	// UnityEngine.UI.Image _2dxFX_Waterfall::CanvasImage
-	Image_t2670269651 * ___CanvasImage_16;
+	// System.Single _2dxFX_Posterize::Posterize
+	float ___Posterize_6;
+	// System.Int32 _2dxFX_Posterize::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_Posterize::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_Posterize::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_Posterize::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -3661,7 +3446,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -3669,7 +3454,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -3678,7 +3463,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -3686,123 +3471,168 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	inline static int32_t get_offset_of_Posterize_6() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___Posterize_6)); }
+	inline float get_Posterize_6() const { return ___Posterize_6; }
+	inline float* get_address_of_Posterize_6() { return &___Posterize_6; }
+	inline void set_Posterize_6(float value)
 	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+		___Posterize_6 = value;
 	}
 
-	inline static int32_t get_offset_of_Liquid_7() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___Liquid_7)); }
-	inline float get_Liquid_7() const { return ___Liquid_7; }
-	inline float* get_address_of_Liquid_7() { return &___Liquid_7; }
-	inline void set_Liquid_7(float value)
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
 	{
-		___Liquid_7 = value;
+		___ShaderChange_7 = value;
 	}
 
-	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___Speed_8)); }
-	inline float get_Speed_8() const { return ___Speed_8; }
-	inline float* get_address_of_Speed_8() { return &___Speed_8; }
-	inline void set_Speed_8(float value)
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
 	{
-		___Speed_8 = value;
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
 	}
 
-	inline static int32_t get_offset_of_EValue_9() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___EValue_9)); }
-	inline float get_EValue_9() const { return ___EValue_9; }
-	inline float* get_address_of_EValue_9() { return &___EValue_9; }
-	inline void set_EValue_9(float value)
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
 	{
-		___EValue_9 = value;
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
 	}
 
-	inline static int32_t get_offset_of_TValue_10() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___TValue_10)); }
-	inline float get_TValue_10() const { return ___TValue_10; }
-	inline float* get_address_of_TValue_10() { return &___TValue_10; }
-	inline void set_TValue_10(float value)
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Posterize_t2695202757, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
 	{
-		___TValue_10 = value;
-	}
-
-	inline static int32_t get_offset_of_LightColor_11() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___LightColor_11)); }
-	inline Color_t2555686324  get_LightColor_11() const { return ___LightColor_11; }
-	inline Color_t2555686324 * get_address_of_LightColor_11() { return &___LightColor_11; }
-	inline void set_LightColor_11(Color_t2555686324  value)
-	{
-		___LightColor_11 = value;
-	}
-
-	inline static int32_t get_offset_of_Light_12() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___Light_12)); }
-	inline float get_Light_12() const { return ___Light_12; }
-	inline float* get_address_of_Light_12() { return &___Light_12; }
-	inline void set_Light_12(float value)
-	{
-		___Light_12 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_13() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___ShaderChange_13)); }
-	inline int32_t get_ShaderChange_13() const { return ___ShaderChange_13; }
-	inline int32_t* get_address_of_ShaderChange_13() { return &___ShaderChange_13; }
-	inline void set_ShaderChange_13(int32_t value)
-	{
-		___ShaderChange_13 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_14() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___tempMaterial_14)); }
-	inline Material_t340375123 * get_tempMaterial_14() const { return ___tempMaterial_14; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_14() { return &___tempMaterial_14; }
-	inline void set_tempMaterial_14(Material_t340375123 * value)
-	{
-		___tempMaterial_14 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_14), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_15() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___defaultMaterial_15)); }
-	inline Material_t340375123 * get_defaultMaterial_15() const { return ___defaultMaterial_15; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_15() { return &___defaultMaterial_15; }
-	inline void set_defaultMaterial_15(Material_t340375123 * value)
-	{
-		___defaultMaterial_15 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_15), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_16() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___CanvasImage_16)); }
-	inline Image_t2670269651 * get_CanvasImage_16() const { return ___CanvasImage_16; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_16() { return &___CanvasImage_16; }
-	inline void set_CanvasImage_16(Image_t2670269651 * value)
-	{
-		___CanvasImage_16 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_16), value);
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_WATERFALL_T1208099646_H
-#ifndef ACTIONCLASSBASE_T3220895508_H
-#define ACTIONCLASSBASE_T3220895508_H
+#endif // _2DXFX_POSTERIZE_T2695202757_H
+#ifndef _2DXFX_SANDFX_T2083216051_H
+#define _2DXFX_SANDFX_T2083216051_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// ActionClassBase
-struct  ActionClassBase_t3220895508  : public MonoBehaviour_t3962482529
+// _2dxFX_SandFX
+struct  _2dxFX_SandFX_t2083216051  : public MonoBehaviour_t3962482529
 {
 public:
+	// UnityEngine.Material _2dxFX_SandFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_SandFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_SandFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_SandFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_SandFX::Sand
+	float ___Sand_6;
+	// System.Int32 _2dxFX_SandFX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_SandFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_SandFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_SandFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
 
 public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Sand_6() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___Sand_6)); }
+	inline float get_Sand_6() const { return ___Sand_6; }
+	inline float* get_address_of_Sand_6() { return &___Sand_6; }
+	inline void set_Sand_6(float value)
+	{
+		___Sand_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_SandFX_t2083216051, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // ACTIONCLASSBASE_T3220895508_H
+#endif // _2DXFX_SANDFX_T2083216051_H
 #ifndef AAAWATERDROPEFFECTER_T851522039_H
 #define AAAWATERDROPEFFECTER_T851522039_H
 #ifdef __clang__
@@ -3843,6 +3673,66 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AAAWATERDROPEFFECTER_T851522039_H
+#ifndef ACTIONCLASSBASE_T3220895508_H
+#define ACTIONCLASSBASE_T3220895508_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// ActionClassBase
+struct  ActionClassBase_t3220895508  : public MonoBehaviour_t3962482529
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ACTIONCLASSBASE_T3220895508_H
+#ifndef AAASUPERCOMPUTEREFFECTER_T65112767_H
+#define AAASUPERCOMPUTEREFFECTER_T65112767_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// AAASuperComputerEffecter
+struct  AAASuperComputerEffecter_t65112767  : public MonoBehaviour_t3962482529
+{
+public:
+	// CameraFilterPack_AAA_SuperComputer AAASuperComputerEffecter::target
+	CameraFilterPack_AAA_SuperComputer_t3434389749 * ___target_2;
+	// System.Single AAASuperComputerEffecter::_elapsedTime
+	float ____elapsedTime_3;
+
+public:
+	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(AAASuperComputerEffecter_t65112767, ___target_2)); }
+	inline CameraFilterPack_AAA_SuperComputer_t3434389749 * get_target_2() const { return ___target_2; }
+	inline CameraFilterPack_AAA_SuperComputer_t3434389749 ** get_address_of_target_2() { return &___target_2; }
+	inline void set_target_2(CameraFilterPack_AAA_SuperComputer_t3434389749 * value)
+	{
+		___target_2 = value;
+		Il2CppCodeGenWriteBarrier((&___target_2), value);
+	}
+
+	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(AAASuperComputerEffecter_t65112767, ____elapsedTime_3)); }
+	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
+	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
+	inline void set__elapsedTime_3(float value)
+	{
+		____elapsedTime_3 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // AAASUPERCOMPUTEREFFECTER_T65112767_H
 #ifndef AAASUPERHEXAGONEFFECTER_T1929047350_H
 #define AAASUPERHEXAGONEFFECTER_T1929047350_H
 #ifdef __clang__
@@ -3883,170 +3773,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AAASUPERHEXAGONEFFECTER_T1929047350_H
-#ifndef _2DXFX_BURNINGFX_T3904567925_H
-#define _2DXFX_BURNINGFX_T3904567925_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_BurningFX
-struct  _2dxFX_BurningFX_t3904567925  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_BurningFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_BurningFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_BurningFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_BurningFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_BurningFX::Colors
-	float ___Colors_6;
-	// System.Int32 _2dxFX_BurningFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_BurningFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_BurningFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_BurningFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Colors_6() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___Colors_6)); }
-	inline float get_Colors_6() const { return ___Colors_6; }
-	inline float* get_address_of_Colors_6() { return &___Colors_6; }
-	inline void set_Colors_6(float value)
-	{
-		___Colors_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_BURNINGFX_T3904567925_H
-#ifndef ANIMSCRIPT_T2927161892_H
-#define ANIMSCRIPT_T2927161892_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// AnimScript
-struct  AnimScript_t2927161892  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Animator AnimScript::animator
-	Animator_t434523843 * ___animator_2;
-	// System.Single AnimScript::motionDelay
-	float ___motionDelay_3;
-	// System.Single AnimScript::defaultSpeed
-	float ___defaultSpeed_4;
-
-public:
-	inline static int32_t get_offset_of_animator_2() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___animator_2)); }
-	inline Animator_t434523843 * get_animator_2() const { return ___animator_2; }
-	inline Animator_t434523843 ** get_address_of_animator_2() { return &___animator_2; }
-	inline void set_animator_2(Animator_t434523843 * value)
-	{
-		___animator_2 = value;
-		Il2CppCodeGenWriteBarrier((&___animator_2), value);
-	}
-
-	inline static int32_t get_offset_of_motionDelay_3() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___motionDelay_3)); }
-	inline float get_motionDelay_3() const { return ___motionDelay_3; }
-	inline float* get_address_of_motionDelay_3() { return &___motionDelay_3; }
-	inline void set_motionDelay_3(float value)
-	{
-		___motionDelay_3 = value;
-	}
-
-	inline static int32_t get_offset_of_defaultSpeed_4() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___defaultSpeed_4)); }
-	inline float get_defaultSpeed_4() const { return ___defaultSpeed_4; }
-	inline float* get_address_of_defaultSpeed_4() { return &___defaultSpeed_4; }
-	inline void set_defaultSpeed_4(float value)
-	{
-		___defaultSpeed_4 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ANIMSCRIPT_T2927161892_H
 #ifndef TUTORIAL_T2275885037_H
 #define TUTORIAL_T2275885037_H
 #ifdef __clang__
@@ -4171,6 +3897,120 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TUTORIAL_T2275885037_H
+#ifndef _2DXFX_BLURHQ_T2760370655_H
+#define _2DXFX_BLURHQ_T2760370655_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_BlurHQ
+struct  _2dxFX_BlurHQ_t2760370655  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_BlurHQ::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_BlurHQ::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_BlurHQ::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_BlurHQ::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_BlurHQ::Blur
+	float ___Blur_6;
+	// System.Int32 _2dxFX_BlurHQ::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_BlurHQ::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_BlurHQ::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_BlurHQ::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Blur_6() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___Blur_6)); }
+	inline float get_Blur_6() const { return ___Blur_6; }
+	inline float* get_address_of_Blur_6() { return &___Blur_6; }
+	inline void set_Blur_6(float value)
+	{
+		___Blur_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQ_t2760370655, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_BLURHQ_T2760370655_H
 #ifndef AGENTCONTINUEUI_T3323732470_H
 #define AGENTCONTINUEUI_T3323732470_H
 #ifdef __clang__
@@ -4267,184 +4107,91 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AGENTCONTINUEUI_T3323732470_H
-#ifndef AAASUPERCOMPUTEREFFECTER_T65112767_H
-#define AAASUPERCOMPUTEREFFECTER_T65112767_H
+#ifndef ANIMSCRIPT_T2927161892_H
+#define ANIMSCRIPT_T2927161892_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// AAASuperComputerEffecter
-struct  AAASuperComputerEffecter_t65112767  : public MonoBehaviour_t3962482529
+// AnimScript
+struct  AnimScript_t2927161892  : public MonoBehaviour_t3962482529
 {
 public:
-	// CameraFilterPack_AAA_SuperComputer AAASuperComputerEffecter::target
-	CameraFilterPack_AAA_SuperComputer_t3434389749 * ___target_2;
-	// System.Single AAASuperComputerEffecter::_elapsedTime
-	float ____elapsedTime_3;
+	// UnityEngine.Animator AnimScript::animator
+	Animator_t434523843 * ___animator_2;
+	// System.Single AnimScript::motionDelay
+	float ___motionDelay_3;
+	// System.Single AnimScript::defaultSpeed
+	float ___defaultSpeed_4;
 
 public:
-	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(AAASuperComputerEffecter_t65112767, ___target_2)); }
-	inline CameraFilterPack_AAA_SuperComputer_t3434389749 * get_target_2() const { return ___target_2; }
-	inline CameraFilterPack_AAA_SuperComputer_t3434389749 ** get_address_of_target_2() { return &___target_2; }
-	inline void set_target_2(CameraFilterPack_AAA_SuperComputer_t3434389749 * value)
+	inline static int32_t get_offset_of_animator_2() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___animator_2)); }
+	inline Animator_t434523843 * get_animator_2() const { return ___animator_2; }
+	inline Animator_t434523843 ** get_address_of_animator_2() { return &___animator_2; }
+	inline void set_animator_2(Animator_t434523843 * value)
 	{
-		___target_2 = value;
-		Il2CppCodeGenWriteBarrier((&___target_2), value);
+		___animator_2 = value;
+		Il2CppCodeGenWriteBarrier((&___animator_2), value);
 	}
 
-	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(AAASuperComputerEffecter_t65112767, ____elapsedTime_3)); }
-	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
-	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
-	inline void set__elapsedTime_3(float value)
+	inline static int32_t get_offset_of_motionDelay_3() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___motionDelay_3)); }
+	inline float get_motionDelay_3() const { return ___motionDelay_3; }
+	inline float* get_address_of_motionDelay_3() { return &___motionDelay_3; }
+	inline void set_motionDelay_3(float value)
 	{
-		____elapsedTime_3 = value;
+		___motionDelay_3 = value;
+	}
+
+	inline static int32_t get_offset_of_defaultSpeed_4() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___defaultSpeed_4)); }
+	inline float get_defaultSpeed_4() const { return ___defaultSpeed_4; }
+	inline float* get_address_of_defaultSpeed_4() { return &___defaultSpeed_4; }
+	inline void set_defaultSpeed_4(float value)
+	{
+		___defaultSpeed_4 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // AAASUPERCOMPUTEREFFECTER_T65112767_H
-#ifndef _FX_BLUR_SPINE_T1936575603_H
-#define _FX_BLUR_SPINE_T1936575603_H
+#endif // ANIMSCRIPT_T2927161892_H
+#ifndef _FX_OUTLINE_SPINE_T2000141904_H
+#define _FX_OUTLINE_SPINE_T2000141904_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _FX_Blur_Spine
-struct  _FX_Blur_Spine_t1936575603  : public MonoBehaviour_t3962482529
+// _FX_Outline_Spine
+struct  _FX_Outline_Spine_t2000141904  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _FX_Blur_Spine::ForceMaterial
+	// UnityEngine.Material _FX_Outline_Spine::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _FX_Blur_Spine::ActiveChange
+	// System.Boolean _FX_Outline_Spine::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _FX_Blur_Spine::shader
+	// System.String _FX_Outline_Spine::shader
 	String_t* ___shader_4;
-	// System.Single _FX_Blur_Spine::_Alpha
+	// System.Single _FX_Outline_Spine::_Alpha
 	float ____Alpha_5;
-	// System.Single _FX_Blur_Spine::Blur
-	float ___Blur_6;
-	// System.Int32 _FX_Blur_Spine::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _FX_Blur_Spine::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _FX_Blur_Spine::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Blur_6() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___Blur_6)); }
-	inline float get_Blur_6() const { return ___Blur_6; }
-	inline float* get_address_of_Blur_6() { return &___Blur_6; }
-	inline void set_Blur_6(float value)
-	{
-		___Blur_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _FX_BLUR_SPINE_T1936575603_H
-#ifndef _2DXFX_WOODFX_T1087265785_H
-#define _2DXFX_WOODFX_T1087265785_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_WoodFX
-struct  _2dxFX_WoodFX_t1087265785  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_WoodFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_WoodFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_WoodFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_WoodFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_WoodFX::IntoWood
-	float ___IntoWood_6;
-	// System.Single _2dxFX_WoodFX::Deep
-	float ___Deep_7;
-	// System.Int32 _2dxFX_WoodFX::ShaderChange
+	// UnityEngine.Color _FX_Outline_Spine::_ColorX
+	Color_t2555686324  ____ColorX_6;
+	// System.Single _FX_Outline_Spine::_OutLineSpread
+	float ____OutLineSpread_7;
+	// System.Int32 _FX_Outline_Spine::ShaderChange
 	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_WoodFX::tempMaterial
+	// UnityEngine.Material _FX_Outline_Spine::tempMaterial
 	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_WoodFX::defaultMaterial
+	// UnityEngine.Material _FX_Outline_Spine::defaultMaterial
 	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_WoodFX::CanvasImage
+	// UnityEngine.UI.Image _FX_Outline_Spine::CanvasImage
 	Image_t2670269651 * ___CanvasImage_11;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -4453,7 +4200,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -4461,7 +4208,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -4470,7 +4217,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -4478,23 +4225,23 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of_IntoWood_6() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___IntoWood_6)); }
-	inline float get_IntoWood_6() const { return ___IntoWood_6; }
-	inline float* get_address_of_IntoWood_6() { return &___IntoWood_6; }
-	inline void set_IntoWood_6(float value)
+	inline static int32_t get_offset_of__ColorX_6() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ____ColorX_6)); }
+	inline Color_t2555686324  get__ColorX_6() const { return ____ColorX_6; }
+	inline Color_t2555686324 * get_address_of__ColorX_6() { return &____ColorX_6; }
+	inline void set__ColorX_6(Color_t2555686324  value)
 	{
-		___IntoWood_6 = value;
+		____ColorX_6 = value;
 	}
 
-	inline static int32_t get_offset_of_Deep_7() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___Deep_7)); }
-	inline float get_Deep_7() const { return ___Deep_7; }
-	inline float* get_address_of_Deep_7() { return &___Deep_7; }
-	inline void set_Deep_7(float value)
+	inline static int32_t get_offset_of__OutLineSpread_7() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ____OutLineSpread_7)); }
+	inline float get__OutLineSpread_7() const { return ____OutLineSpread_7; }
+	inline float* get_address_of__OutLineSpread_7() { return &____OutLineSpread_7; }
+	inline void set__OutLineSpread_7(float value)
 	{
-		___Deep_7 = value;
+		____OutLineSpread_7 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___ShaderChange_8)); }
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___ShaderChange_8)); }
 	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
 	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
 	inline void set_ShaderChange_8(int32_t value)
@@ -4502,7 +4249,7 @@ public:
 		___ShaderChange_8 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___tempMaterial_9)); }
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___tempMaterial_9)); }
 	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
 	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
 	inline void set_tempMaterial_9(Material_t340375123 * value)
@@ -4511,7 +4258,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___defaultMaterial_10)); }
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___defaultMaterial_10)); }
 	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
 	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
 	inline void set_defaultMaterial_10(Material_t340375123 * value)
@@ -4520,7 +4267,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___CanvasImage_11)); }
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___CanvasImage_11)); }
 	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
 	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
 	inline void set_CanvasImage_11(Image_t2670269651 * value)
@@ -4533,7 +4280,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_WOODFX_T1087265785_H
+#endif // _FX_OUTLINE_SPINE_T2000141904_H
 #ifndef _2DXFX_WAVE_T2949426099_H
 #define _2DXFX_WAVE_T2949426099_H
 #ifdef __clang__
@@ -4758,6 +4505,810 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_WAVE_T2949426099_H
+#ifndef _2DXFX_WOODFX_T1087265785_H
+#define _2DXFX_WOODFX_T1087265785_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_WoodFX
+struct  _2dxFX_WoodFX_t1087265785  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_WoodFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_WoodFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_WoodFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_WoodFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_WoodFX::IntoWood
+	float ___IntoWood_6;
+	// System.Single _2dxFX_WoodFX::Deep
+	float ___Deep_7;
+	// System.Int32 _2dxFX_WoodFX::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_WoodFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_WoodFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_WoodFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_IntoWood_6() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___IntoWood_6)); }
+	inline float get_IntoWood_6() const { return ___IntoWood_6; }
+	inline float* get_address_of_IntoWood_6() { return &___IntoWood_6; }
+	inline void set_IntoWood_6(float value)
+	{
+		___IntoWood_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Deep_7() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___Deep_7)); }
+	inline float get_Deep_7() const { return ___Deep_7; }
+	inline float* get_address_of_Deep_7() { return &___Deep_7; }
+	inline void set_Deep_7(float value)
+	{
+		___Deep_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_WoodFX_t1087265785, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_WOODFX_T1087265785_H
+#ifndef _2DXFX_WATERANDBACKGROUNDDELUXE_T2649314378_H
+#define _2DXFX_WATERANDBACKGROUNDDELUXE_T2649314378_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_WaterAndBackgroundDeluxe
+struct  _2dxFX_WaterAndBackgroundDeluxe_t2649314378  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_WaterAndBackgroundDeluxe::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_WaterAndBackgroundDeluxe::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_WaterAndBackgroundDeluxe::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_WaterAndBackgroundDeluxe::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_WaterAndBackgroundDeluxe::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_WaterAndBackgroundDeluxe::Speed
+	float ___Speed_7;
+	// System.Single _2dxFX_WaterAndBackgroundDeluxe::EValue
+	float ___EValue_8;
+	// System.Single _2dxFX_WaterAndBackgroundDeluxe::Light
+	float ___Light_9;
+	// System.Int32 _2dxFX_WaterAndBackgroundDeluxe::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_WaterAndBackgroundDeluxe::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_WaterAndBackgroundDeluxe::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_WaterAndBackgroundDeluxe::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_EValue_8() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___EValue_8)); }
+	inline float get_EValue_8() const { return ___EValue_8; }
+	inline float* get_address_of_EValue_8() { return &___EValue_8; }
+	inline void set_EValue_8(float value)
+	{
+		___EValue_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Light_9() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___Light_9)); }
+	inline float get_Light_9() const { return ___Light_9; }
+	inline float* get_address_of_Light_9() { return &___Light_9; }
+	inline void set_Light_9(float value)
+	{
+		___Light_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_WaterAndBackgroundDeluxe_t2649314378, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_WATERANDBACKGROUNDDELUXE_T2649314378_H
+#ifndef _2DXFX_WATERFALL_T1208099646_H
+#define _2DXFX_WATERFALL_T1208099646_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Waterfall
+struct  _2dxFX_Waterfall_t1208099646  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Waterfall::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Waterfall::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Waterfall::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Waterfall::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_Waterfall::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_Waterfall::Liquid
+	float ___Liquid_7;
+	// System.Single _2dxFX_Waterfall::Speed
+	float ___Speed_8;
+	// System.Single _2dxFX_Waterfall::EValue
+	float ___EValue_9;
+	// System.Single _2dxFX_Waterfall::TValue
+	float ___TValue_10;
+	// UnityEngine.Color _2dxFX_Waterfall::LightColor
+	Color_t2555686324  ___LightColor_11;
+	// System.Single _2dxFX_Waterfall::Light
+	float ___Light_12;
+	// System.Int32 _2dxFX_Waterfall::ShaderChange
+	int32_t ___ShaderChange_13;
+	// UnityEngine.Material _2dxFX_Waterfall::tempMaterial
+	Material_t340375123 * ___tempMaterial_14;
+	// UnityEngine.Material _2dxFX_Waterfall::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_15;
+	// UnityEngine.UI.Image _2dxFX_Waterfall::CanvasImage
+	Image_t2670269651 * ___CanvasImage_16;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of_Liquid_7() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___Liquid_7)); }
+	inline float get_Liquid_7() const { return ___Liquid_7; }
+	inline float* get_address_of_Liquid_7() { return &___Liquid_7; }
+	inline void set_Liquid_7(float value)
+	{
+		___Liquid_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___Speed_8)); }
+	inline float get_Speed_8() const { return ___Speed_8; }
+	inline float* get_address_of_Speed_8() { return &___Speed_8; }
+	inline void set_Speed_8(float value)
+	{
+		___Speed_8 = value;
+	}
+
+	inline static int32_t get_offset_of_EValue_9() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___EValue_9)); }
+	inline float get_EValue_9() const { return ___EValue_9; }
+	inline float* get_address_of_EValue_9() { return &___EValue_9; }
+	inline void set_EValue_9(float value)
+	{
+		___EValue_9 = value;
+	}
+
+	inline static int32_t get_offset_of_TValue_10() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___TValue_10)); }
+	inline float get_TValue_10() const { return ___TValue_10; }
+	inline float* get_address_of_TValue_10() { return &___TValue_10; }
+	inline void set_TValue_10(float value)
+	{
+		___TValue_10 = value;
+	}
+
+	inline static int32_t get_offset_of_LightColor_11() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___LightColor_11)); }
+	inline Color_t2555686324  get_LightColor_11() const { return ___LightColor_11; }
+	inline Color_t2555686324 * get_address_of_LightColor_11() { return &___LightColor_11; }
+	inline void set_LightColor_11(Color_t2555686324  value)
+	{
+		___LightColor_11 = value;
+	}
+
+	inline static int32_t get_offset_of_Light_12() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___Light_12)); }
+	inline float get_Light_12() const { return ___Light_12; }
+	inline float* get_address_of_Light_12() { return &___Light_12; }
+	inline void set_Light_12(float value)
+	{
+		___Light_12 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_13() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___ShaderChange_13)); }
+	inline int32_t get_ShaderChange_13() const { return ___ShaderChange_13; }
+	inline int32_t* get_address_of_ShaderChange_13() { return &___ShaderChange_13; }
+	inline void set_ShaderChange_13(int32_t value)
+	{
+		___ShaderChange_13 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_14() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___tempMaterial_14)); }
+	inline Material_t340375123 * get_tempMaterial_14() const { return ___tempMaterial_14; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_14() { return &___tempMaterial_14; }
+	inline void set_tempMaterial_14(Material_t340375123 * value)
+	{
+		___tempMaterial_14 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_14), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_15() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___defaultMaterial_15)); }
+	inline Material_t340375123 * get_defaultMaterial_15() const { return ___defaultMaterial_15; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_15() { return &___defaultMaterial_15; }
+	inline void set_defaultMaterial_15(Material_t340375123 * value)
+	{
+		___defaultMaterial_15 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_15), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_16() { return static_cast<int32_t>(offsetof(_2dxFX_Waterfall_t1208099646, ___CanvasImage_16)); }
+	inline Image_t2670269651 * get_CanvasImage_16() const { return ___CanvasImage_16; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_16() { return &___CanvasImage_16; }
+	inline void set_CanvasImage_16(Image_t2670269651 * value)
+	{
+		___CanvasImage_16 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_16), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_WATERFALL_T1208099646_H
+#ifndef _FX_HOLOGRAM_SPINE_T3471974154_H
+#define _FX_HOLOGRAM_SPINE_T3471974154_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _FX_Hologram_Spine
+struct  _FX_Hologram_Spine_t3471974154  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _FX_Hologram_Spine::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _FX_Hologram_Spine::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _FX_Hologram_Spine::shader
+	String_t* ___shader_4;
+	// System.Single _FX_Hologram_Spine::_Alpha
+	float ____Alpha_5;
+	// System.Single _FX_Hologram_Spine::Distortion
+	float ___Distortion_6;
+	// System.Single _FX_Hologram_Spine::Speed
+	float ___Speed_7;
+	// System.Int32 _FX_Hologram_Spine::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _FX_Hologram_Spine::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _FX_Hologram_Spine::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _FX_Hologram_Spine::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___Distortion_6)); }
+	inline float get_Distortion_6() const { return ___Distortion_6; }
+	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
+	inline void set_Distortion_6(float value)
+	{
+		___Distortion_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _FX_HOLOGRAM_SPINE_T3471974154_H
+#ifndef _FX_HOLOGRAM2_SPINE_T2374662042_H
+#define _FX_HOLOGRAM2_SPINE_T2374662042_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _FX_Hologram2_Spine
+struct  _FX_Hologram2_Spine_t2374662042  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _FX_Hologram2_Spine::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _FX_Hologram2_Spine::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _FX_Hologram2_Spine::shader
+	String_t* ___shader_4;
+	// System.Single _FX_Hologram2_Spine::_Alpha
+	float ____Alpha_5;
+	// System.Single _FX_Hologram2_Spine::Distortion
+	float ___Distortion_6;
+	// System.Single _FX_Hologram2_Spine::_TimeX
+	float ____TimeX_7;
+	// System.Single _FX_Hologram2_Spine::Speed
+	float ___Speed_8;
+	// System.Int32 _FX_Hologram2_Spine::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _FX_Hologram2_Spine::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _FX_Hologram2_Spine::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _FX_Hologram2_Spine::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___Distortion_6)); }
+	inline float get_Distortion_6() const { return ___Distortion_6; }
+	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
+	inline void set_Distortion_6(float value)
+	{
+		___Distortion_6 = value;
+	}
+
+	inline static int32_t get_offset_of__TimeX_7() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ____TimeX_7)); }
+	inline float get__TimeX_7() const { return ____TimeX_7; }
+	inline float* get_address_of__TimeX_7() { return &____TimeX_7; }
+	inline void set__TimeX_7(float value)
+	{
+		____TimeX_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___Speed_8)); }
+	inline float get_Speed_8() const { return ___Speed_8; }
+	inline float* get_address_of_Speed_8() { return &___Speed_8; }
+	inline void set_Speed_8(float value)
+	{
+		___Speed_8 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
+	{
+		___ShaderChange_9 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
+	{
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
+	{
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
+	{
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _FX_HOLOGRAM2_SPINE_T2374662042_H
+#ifndef _FX_BLUR_SPINE_T1936575603_H
+#define _FX_BLUR_SPINE_T1936575603_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _FX_Blur_Spine
+struct  _FX_Blur_Spine_t1936575603  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _FX_Blur_Spine::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _FX_Blur_Spine::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _FX_Blur_Spine::shader
+	String_t* ___shader_4;
+	// System.Single _FX_Blur_Spine::_Alpha
+	float ____Alpha_5;
+	// System.Single _FX_Blur_Spine::Blur
+	float ___Blur_6;
+	// System.Int32 _FX_Blur_Spine::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _FX_Blur_Spine::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _FX_Blur_Spine::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Blur_6() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___Blur_6)); }
+	inline float get_Blur_6() const { return ___Blur_6; }
+	inline float* get_address_of_Blur_6() { return &___Blur_6; }
+	inline void set_Blur_6(float value)
+	{
+		___Blur_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_FX_Blur_Spine_t1936575603, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _FX_BLUR_SPINE_T1936575603_H
 #ifndef _FX_COMPRESSIONFX_SPINE_T117493990_H
 #define _FX_COMPRESSIONFX_SPINE_T117493990_H
 #ifdef __clang__
@@ -4913,167 +5464,43 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _FX_COMPRESSIONFX_SPINE_T117493990_H
-#ifndef _FX_OUTLINE_SPINE_T2000141904_H
-#define _FX_OUTLINE_SPINE_T2000141904_H
+#ifndef _2DXFX_FLAME_T3329885920_H
+#define _2DXFX_FLAME_T3329885920_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _FX_Outline_Spine
-struct  _FX_Outline_Spine_t2000141904  : public MonoBehaviour_t3962482529
+// _2dxFX_Flame
+struct  _2dxFX_Flame_t3329885920  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _FX_Outline_Spine::ForceMaterial
+	// UnityEngine.Material _2dxFX_Flame::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _FX_Outline_Spine::ActiveChange
+	// System.Boolean _2dxFX_Flame::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _FX_Outline_Spine::shader
+	// System.String _2dxFX_Flame::shader
 	String_t* ___shader_4;
-	// System.Single _FX_Outline_Spine::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Color _FX_Outline_Spine::_ColorX
-	Color_t2555686324  ____ColorX_6;
-	// System.Single _FX_Outline_Spine::_OutLineSpread
-	float ____OutLineSpread_7;
-	// System.Int32 _FX_Outline_Spine::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _FX_Outline_Spine::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _FX_Outline_Spine::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _FX_Outline_Spine::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorX_6() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ____ColorX_6)); }
-	inline Color_t2555686324  get__ColorX_6() const { return ____ColorX_6; }
-	inline Color_t2555686324 * get_address_of__ColorX_6() { return &____ColorX_6; }
-	inline void set__ColorX_6(Color_t2555686324  value)
-	{
-		____ColorX_6 = value;
-	}
-
-	inline static int32_t get_offset_of__OutLineSpread_7() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ____OutLineSpread_7)); }
-	inline float get__OutLineSpread_7() const { return ____OutLineSpread_7; }
-	inline float* get_address_of__OutLineSpread_7() { return &____OutLineSpread_7; }
-	inline void set__OutLineSpread_7(float value)
-	{
-		____OutLineSpread_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_FX_Outline_Spine_t2000141904, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _FX_OUTLINE_SPINE_T2000141904_H
-#ifndef _FX_HOLOGRAM2_SPINE_T2374662042_H
-#define _FX_HOLOGRAM2_SPINE_T2374662042_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _FX_Hologram2_Spine
-struct  _FX_Hologram2_Spine_t2374662042  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _FX_Hologram2_Spine::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _FX_Hologram2_Spine::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _FX_Hologram2_Spine::shader
-	String_t* ___shader_4;
-	// System.Single _FX_Hologram2_Spine::_Alpha
-	float ____Alpha_5;
-	// System.Single _FX_Hologram2_Spine::Distortion
-	float ___Distortion_6;
-	// System.Single _FX_Hologram2_Spine::_TimeX
-	float ____TimeX_7;
-	// System.Single _FX_Hologram2_Spine::Speed
-	float ___Speed_8;
-	// System.Int32 _FX_Hologram2_Spine::ShaderChange
+	// UnityEngine.Texture2D _2dxFX_Flame::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_5;
+	// System.Single _2dxFX_Flame::_Alpha
+	float ____Alpha_6;
+	// System.Single _2dxFX_Flame::_Speed
+	float ____Speed_7;
+	// System.Single _2dxFX_Flame::_Intensity
+	float ____Intensity_8;
+	// System.Int32 _2dxFX_Flame::ShaderChange
 	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _FX_Hologram2_Spine::tempMaterial
+	// UnityEngine.Material _2dxFX_Flame::tempMaterial
 	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _FX_Hologram2_Spine::defaultMaterial
+	// UnityEngine.Material _2dxFX_Flame::defaultMaterial
 	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _FX_Hologram2_Spine::CanvasImage
+	// UnityEngine.UI.Image _2dxFX_Flame::CanvasImage
 	Image_t2670269651 * ___CanvasImage_12;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -5082,7 +5509,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -5090,7 +5517,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -5099,39 +5526,40 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
+	inline static int32_t get_offset_of___MainTex2_5() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, _____MainTex2_5)); }
+	inline Texture2D_t3840446185 * get___MainTex2_5() const { return _____MainTex2_5; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_5() { return &_____MainTex2_5; }
+	inline void set___MainTex2_5(Texture2D_t3840446185 * value)
 	{
-		____Alpha_5 = value;
+		_____MainTex2_5 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_5), value);
 	}
 
-	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___Distortion_6)); }
-	inline float get_Distortion_6() const { return ___Distortion_6; }
-	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
-	inline void set_Distortion_6(float value)
+	inline static int32_t get_offset_of__Alpha_6() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ____Alpha_6)); }
+	inline float get__Alpha_6() const { return ____Alpha_6; }
+	inline float* get_address_of__Alpha_6() { return &____Alpha_6; }
+	inline void set__Alpha_6(float value)
 	{
-		___Distortion_6 = value;
+		____Alpha_6 = value;
 	}
 
-	inline static int32_t get_offset_of__TimeX_7() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ____TimeX_7)); }
-	inline float get__TimeX_7() const { return ____TimeX_7; }
-	inline float* get_address_of__TimeX_7() { return &____TimeX_7; }
-	inline void set__TimeX_7(float value)
+	inline static int32_t get_offset_of__Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ____Speed_7)); }
+	inline float get__Speed_7() const { return ____Speed_7; }
+	inline float* get_address_of__Speed_7() { return &____Speed_7; }
+	inline void set__Speed_7(float value)
 	{
-		____TimeX_7 = value;
+		____Speed_7 = value;
 	}
 
-	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___Speed_8)); }
-	inline float get_Speed_8() const { return ___Speed_8; }
-	inline float* get_address_of_Speed_8() { return &___Speed_8; }
-	inline void set_Speed_8(float value)
+	inline static int32_t get_offset_of__Intensity_8() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ____Intensity_8)); }
+	inline float get__Intensity_8() const { return ____Intensity_8; }
+	inline float* get_address_of__Intensity_8() { return &____Intensity_8; }
+	inline void set__Intensity_8(float value)
 	{
-		___Speed_8 = value;
+		____Intensity_8 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___ShaderChange_9)); }
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___ShaderChange_9)); }
 	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
 	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
 	inline void set_ShaderChange_9(int32_t value)
@@ -5139,7 +5567,7 @@ public:
 		___ShaderChange_9 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___tempMaterial_10)); }
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___tempMaterial_10)); }
 	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
 	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
 	inline void set_tempMaterial_10(Material_t340375123 * value)
@@ -5148,7 +5576,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___defaultMaterial_11)); }
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___defaultMaterial_11)); }
 	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
 	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
 	inline void set_defaultMaterial_11(Material_t340375123 * value)
@@ -5157,7 +5585,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_FX_Hologram2_Spine_t2374662042, ___CanvasImage_12)); }
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___CanvasImage_12)); }
 	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
 	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
 	inline void set_CanvasImage_12(Image_t2670269651 * value)
@@ -5170,42 +5598,44 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _FX_HOLOGRAM2_SPINE_T2374662042_H
-#ifndef _FX_HOLOGRAM_SPINE_T3471974154_H
-#define _FX_HOLOGRAM_SPINE_T3471974154_H
+#endif // _2DXFX_FLAME_T3329885920_H
+#ifndef _2DXFX_FLAMEADDITIVE_T722264892_H
+#define _2DXFX_FLAMEADDITIVE_T722264892_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _FX_Hologram_Spine
-struct  _FX_Hologram_Spine_t3471974154  : public MonoBehaviour_t3962482529
+// _2dxFX_FlameAdditive
+struct  _2dxFX_FlameAdditive_t722264892  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _FX_Hologram_Spine::ForceMaterial
+	// UnityEngine.Material _2dxFX_FlameAdditive::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _FX_Hologram_Spine::ActiveChange
+	// System.Boolean _2dxFX_FlameAdditive::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _FX_Hologram_Spine::shader
+	// System.String _2dxFX_FlameAdditive::shader
 	String_t* ___shader_4;
-	// System.Single _FX_Hologram_Spine::_Alpha
-	float ____Alpha_5;
-	// System.Single _FX_Hologram_Spine::Distortion
-	float ___Distortion_6;
-	// System.Single _FX_Hologram_Spine::Speed
-	float ___Speed_7;
-	// System.Int32 _FX_Hologram_Spine::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _FX_Hologram_Spine::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _FX_Hologram_Spine::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _FX_Hologram_Spine::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
+	// UnityEngine.Texture2D _2dxFX_FlameAdditive::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_5;
+	// System.Single _2dxFX_FlameAdditive::_Alpha
+	float ____Alpha_6;
+	// System.Single _2dxFX_FlameAdditive::_Speed
+	float ____Speed_7;
+	// System.Single _2dxFX_FlameAdditive::_Intensity
+	float ____Intensity_8;
+	// System.Int32 _2dxFX_FlameAdditive::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_FlameAdditive::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_FlameAdditive::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_FlameAdditive::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -5214,7 +5644,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -5222,7 +5652,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -5231,452 +5661,79 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
+	inline static int32_t get_offset_of___MainTex2_5() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, _____MainTex2_5)); }
+	inline Texture2D_t3840446185 * get___MainTex2_5() const { return _____MainTex2_5; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_5() { return &_____MainTex2_5; }
+	inline void set___MainTex2_5(Texture2D_t3840446185 * value)
 	{
-		____Alpha_5 = value;
+		_____MainTex2_5 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_5), value);
 	}
 
-	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___Distortion_6)); }
-	inline float get_Distortion_6() const { return ___Distortion_6; }
-	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
-	inline void set_Distortion_6(float value)
+	inline static int32_t get_offset_of__Alpha_6() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ____Alpha_6)); }
+	inline float get__Alpha_6() const { return ____Alpha_6; }
+	inline float* get_address_of__Alpha_6() { return &____Alpha_6; }
+	inline void set__Alpha_6(float value)
 	{
-		___Distortion_6 = value;
+		____Alpha_6 = value;
 	}
 
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
+	inline static int32_t get_offset_of__Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ____Speed_7)); }
+	inline float get__Speed_7() const { return ____Speed_7; }
+	inline float* get_address_of__Speed_7() { return &____Speed_7; }
+	inline void set__Speed_7(float value)
 	{
-		___Speed_7 = value;
+		____Speed_7 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
+	inline static int32_t get_offset_of__Intensity_8() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ____Intensity_8)); }
+	inline float get__Intensity_8() const { return ____Intensity_8; }
+	inline float* get_address_of__Intensity_8() { return &____Intensity_8; }
+	inline void set__Intensity_8(float value)
 	{
-		___ShaderChange_8 = value;
+		____Intensity_8 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
 	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+		___ShaderChange_9 = value;
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
 	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_FX_Hologram_Spine_t3471974154, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
 	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _FX_HOLOGRAM_SPINE_T3471974154_H
-#ifndef _2DXFX_GHOST_T324680138_H
-#define _2DXFX_GHOST_T324680138_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Ghost
-struct  _2dxFX_Ghost_t324680138  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Ghost::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Ghost::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Ghost::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Ghost::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Ghost::_offset
-	float ____offset_6;
-	// System.Single _2dxFX_Ghost::_ClipLeft
-	float ____ClipLeft_7;
-	// System.Single _2dxFX_Ghost::_ClipRight
-	float ____ClipRight_8;
-	// System.Single _2dxFX_Ghost::_ClipUp
-	float ____ClipUp_9;
-	// System.Single _2dxFX_Ghost::_ClipDown
-	float ____ClipDown_10;
-	// System.Int32 _2dxFX_Ghost::ShaderChange
-	int32_t ___ShaderChange_11;
-	// UnityEngine.Material _2dxFX_Ghost::tempMaterial
-	Material_t340375123 * ___tempMaterial_12;
-	// UnityEngine.Material _2dxFX_Ghost::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_13;
-	// UnityEngine.UI.Image _2dxFX_Ghost::CanvasImage
-	Image_t2670269651 * ___CanvasImage_14;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
 	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__offset_6() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____offset_6)); }
-	inline float get__offset_6() const { return ____offset_6; }
-	inline float* get_address_of__offset_6() { return &____offset_6; }
-	inline void set__offset_6(float value)
-	{
-		____offset_6 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipLeft_7() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipLeft_7)); }
-	inline float get__ClipLeft_7() const { return ____ClipLeft_7; }
-	inline float* get_address_of__ClipLeft_7() { return &____ClipLeft_7; }
-	inline void set__ClipLeft_7(float value)
-	{
-		____ClipLeft_7 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipRight_8() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipRight_8)); }
-	inline float get__ClipRight_8() const { return ____ClipRight_8; }
-	inline float* get_address_of__ClipRight_8() { return &____ClipRight_8; }
-	inline void set__ClipRight_8(float value)
-	{
-		____ClipRight_8 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipUp_9() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipUp_9)); }
-	inline float get__ClipUp_9() const { return ____ClipUp_9; }
-	inline float* get_address_of__ClipUp_9() { return &____ClipUp_9; }
-	inline void set__ClipUp_9(float value)
-	{
-		____ClipUp_9 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipDown_10() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipDown_10)); }
-	inline float get__ClipDown_10() const { return ____ClipDown_10; }
-	inline float* get_address_of__ClipDown_10() { return &____ClipDown_10; }
-	inline void set__ClipDown_10(float value)
-	{
-		____ClipDown_10 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_11() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___ShaderChange_11)); }
-	inline int32_t get_ShaderChange_11() const { return ___ShaderChange_11; }
-	inline int32_t* get_address_of_ShaderChange_11() { return &___ShaderChange_11; }
-	inline void set_ShaderChange_11(int32_t value)
-	{
-		___ShaderChange_11 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___tempMaterial_12)); }
-	inline Material_t340375123 * get_tempMaterial_12() const { return ___tempMaterial_12; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_12() { return &___tempMaterial_12; }
-	inline void set_tempMaterial_12(Material_t340375123 * value)
-	{
-		___tempMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___defaultMaterial_13)); }
-	inline Material_t340375123 * get_defaultMaterial_13() const { return ___defaultMaterial_13; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_13() { return &___defaultMaterial_13; }
-	inline void set_defaultMaterial_13(Material_t340375123 * value)
-	{
-		___defaultMaterial_13 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_13), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_14() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___CanvasImage_14)); }
-	inline Image_t2670269651 * get_CanvasImage_14() const { return ___CanvasImage_14; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_14() { return &___CanvasImage_14; }
-	inline void set_CanvasImage_14(Image_t2670269651 * value)
-	{
-		___CanvasImage_14 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_14), value);
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_GHOST_T324680138_H
-#ifndef _2DXFX_GOLDENFX_T3771068735_H
-#define _2DXFX_GOLDENFX_T3771068735_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_GoldenFX
-struct  _2dxFX_GoldenFX_t3771068735  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_GoldenFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_GoldenFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_GoldenFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_GoldenFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_GoldenFX::Golden
-	float ___Golden_6;
-	// System.Int32 _2dxFX_GoldenFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_GoldenFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_GoldenFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_GoldenFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Golden_6() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___Golden_6)); }
-	inline float get_Golden_6() const { return ___Golden_6; }
-	inline float* get_address_of_Golden_6() { return &___Golden_6; }
-	inline void set_Golden_6(float value)
-	{
-		___Golden_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_GOLDENFX_T3771068735_H
-#ifndef _2DXFX_GOLDFX_T3246480377_H
-#define _2DXFX_GOLDFX_T3246480377_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_GoldFX
-struct  _2dxFX_GoldFX_t3246480377  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_GoldFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_GoldFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_GoldFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_GoldFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_GoldFX::Gold
-	float ___Gold_6;
-	// System.Int32 _2dxFX_GoldFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_GoldFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_GoldFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_GoldFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Gold_6() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___Gold_6)); }
-	inline float get_Gold_6() const { return ___Gold_6; }
-	inline float* get_address_of_Gold_6() { return &___Gold_6; }
-	inline void set_Gold_6(float value)
-	{
-		___Gold_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_GOLDFX_T3246480377_H
+#endif // _2DXFX_FLAMEADDITIVE_T722264892_H
 #ifndef _2DXFX_FROZEN_T490160778_H
 #define _2DXFX_FROZEN_T490160778_H
 #ifdef __clang__
@@ -6107,2144 +6164,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_FIREADDITIVE_T4163587848_H
-#ifndef _2DXFX_FLAME_T3329885920_H
-#define _2DXFX_FLAME_T3329885920_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Flame
-struct  _2dxFX_Flame_t3329885920  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Flame::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Flame::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Flame::shader
-	String_t* ___shader_4;
-	// UnityEngine.Texture2D _2dxFX_Flame::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_5;
-	// System.Single _2dxFX_Flame::_Alpha
-	float ____Alpha_6;
-	// System.Single _2dxFX_Flame::_Speed
-	float ____Speed_7;
-	// System.Single _2dxFX_Flame::_Intensity
-	float ____Intensity_8;
-	// System.Int32 _2dxFX_Flame::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_Flame::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_Flame::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_Flame::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of___MainTex2_5() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, _____MainTex2_5)); }
-	inline Texture2D_t3840446185 * get___MainTex2_5() const { return _____MainTex2_5; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_5() { return &_____MainTex2_5; }
-	inline void set___MainTex2_5(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_5 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_5), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_6() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ____Alpha_6)); }
-	inline float get__Alpha_6() const { return ____Alpha_6; }
-	inline float* get_address_of__Alpha_6() { return &____Alpha_6; }
-	inline void set__Alpha_6(float value)
-	{
-		____Alpha_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ____Speed_7)); }
-	inline float get__Speed_7() const { return ____Speed_7; }
-	inline float* get_address_of__Speed_7() { return &____Speed_7; }
-	inline void set__Speed_7(float value)
-	{
-		____Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Intensity_8() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ____Intensity_8)); }
-	inline float get__Intensity_8() const { return ____Intensity_8; }
-	inline float* get_address_of__Intensity_8() { return &____Intensity_8; }
-	inline void set__Intensity_8(float value)
-	{
-		____Intensity_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Flame_t3329885920, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_FLAME_T3329885920_H
-#ifndef _2DXFX_FLAMEADDITIVE_T722264892_H
-#define _2DXFX_FLAMEADDITIVE_T722264892_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_FlameAdditive
-struct  _2dxFX_FlameAdditive_t722264892  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_FlameAdditive::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_FlameAdditive::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_FlameAdditive::shader
-	String_t* ___shader_4;
-	// UnityEngine.Texture2D _2dxFX_FlameAdditive::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_5;
-	// System.Single _2dxFX_FlameAdditive::_Alpha
-	float ____Alpha_6;
-	// System.Single _2dxFX_FlameAdditive::_Speed
-	float ____Speed_7;
-	// System.Single _2dxFX_FlameAdditive::_Intensity
-	float ____Intensity_8;
-	// System.Int32 _2dxFX_FlameAdditive::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_FlameAdditive::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_FlameAdditive::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_FlameAdditive::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of___MainTex2_5() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, _____MainTex2_5)); }
-	inline Texture2D_t3840446185 * get___MainTex2_5() const { return _____MainTex2_5; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_5() { return &_____MainTex2_5; }
-	inline void set___MainTex2_5(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_5 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_5), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_6() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ____Alpha_6)); }
-	inline float get__Alpha_6() const { return ____Alpha_6; }
-	inline float* get_address_of__Alpha_6() { return &____Alpha_6; }
-	inline void set__Alpha_6(float value)
-	{
-		____Alpha_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ____Speed_7)); }
-	inline float get__Speed_7() const { return ____Speed_7; }
-	inline float* get_address_of__Speed_7() { return &____Speed_7; }
-	inline void set__Speed_7(float value)
-	{
-		____Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Intensity_8() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ____Intensity_8)); }
-	inline float get__Intensity_8() const { return ____Intensity_8; }
-	inline float* get_address_of__Intensity_8() { return &____Intensity_8; }
-	inline void set__Intensity_8(float value)
-	{
-		____Intensity_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_FlameAdditive_t722264892, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_FLAMEADDITIVE_T722264892_H
-#ifndef _2DXFX_HOLOGRAM_T3899187337_H
-#define _2DXFX_HOLOGRAM_T3899187337_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Hologram
-struct  _2dxFX_Hologram_t3899187337  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Hologram::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Hologram::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Hologram::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Hologram::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Hologram::Distortion
-	float ___Distortion_6;
-	// System.Single _2dxFX_Hologram::Speed
-	float ___Speed_7;
-	// System.Int32 _2dxFX_Hologram::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_Hologram::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_Hologram::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_Hologram::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___Distortion_6)); }
-	inline float get_Distortion_6() const { return ___Distortion_6; }
-	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
-	inline void set_Distortion_6(float value)
-	{
-		___Distortion_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
-	{
-		___Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_HOLOGRAM_T3899187337_H
-#ifndef _2DXFX_HOLOGRAM2_T2930696329_H
-#define _2DXFX_HOLOGRAM2_T2930696329_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Hologram2
-struct  _2dxFX_Hologram2_t2930696329  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Hologram2::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Hologram2::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Hologram2::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Hologram2::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Hologram2::Distortion
-	float ___Distortion_6;
-	// System.Single _2dxFX_Hologram2::_TimeX
-	float ____TimeX_7;
-	// System.Single _2dxFX_Hologram2::Speed
-	float ___Speed_8;
-	// System.Int32 _2dxFX_Hologram2::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_Hologram2::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_Hologram2::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_Hologram2::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___Distortion_6)); }
-	inline float get_Distortion_6() const { return ___Distortion_6; }
-	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
-	inline void set_Distortion_6(float value)
-	{
-		___Distortion_6 = value;
-	}
-
-	inline static int32_t get_offset_of__TimeX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ____TimeX_7)); }
-	inline float get__TimeX_7() const { return ____TimeX_7; }
-	inline float* get_address_of__TimeX_7() { return &____TimeX_7; }
-	inline void set__TimeX_7(float value)
-	{
-		____TimeX_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___Speed_8)); }
-	inline float get_Speed_8() const { return ___Speed_8; }
-	inline float* get_address_of_Speed_8() { return &___Speed_8; }
-	inline void set_Speed_8(float value)
-	{
-		___Speed_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_HOLOGRAM2_T2930696329_H
-#ifndef _2DXFX_HOLOGRAM3_T974381193_H
-#define _2DXFX_HOLOGRAM3_T974381193_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Hologram3
-struct  _2dxFX_Hologram3_t974381193  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Hologram3::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Hologram3::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Hologram3::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Hologram3::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Hologram3::Distortion
-	float ___Distortion_6;
-	// System.Single _2dxFX_Hologram3::_TimeX
-	float ____TimeX_7;
-	// System.Single _2dxFX_Hologram3::Speed
-	float ___Speed_8;
-	// UnityEngine.Color _2dxFX_Hologram3::_ColorX
-	Color_t2555686324  ____ColorX_9;
-	// System.Int32 _2dxFX_Hologram3::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_Hologram3::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_Hologram3::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_Hologram3::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___Distortion_6)); }
-	inline float get_Distortion_6() const { return ___Distortion_6; }
-	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
-	inline void set_Distortion_6(float value)
-	{
-		___Distortion_6 = value;
-	}
-
-	inline static int32_t get_offset_of__TimeX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ____TimeX_7)); }
-	inline float get__TimeX_7() const { return ____TimeX_7; }
-	inline float* get_address_of__TimeX_7() { return &____TimeX_7; }
-	inline void set__TimeX_7(float value)
-	{
-		____TimeX_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___Speed_8)); }
-	inline float get_Speed_8() const { return ___Speed_8; }
-	inline float* get_address_of_Speed_8() { return &___Speed_8; }
-	inline void set_Speed_8(float value)
-	{
-		___Speed_8 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorX_9() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ____ColorX_9)); }
-	inline Color_t2555686324  get__ColorX_9() const { return ____ColorX_9; }
-	inline Color_t2555686324 * get_address_of__ColorX_9() { return &____ColorX_9; }
-	inline void set__ColorX_9(Color_t2555686324  value)
-	{
-		____ColorX_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_HOLOGRAM3_T974381193_H
-#ifndef _2DXFX_HEAT_T2506713594_H
-#define _2DXFX_HEAT_T2506713594_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Heat
-struct  _2dxFX_Heat_t2506713594  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Heat::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Heat::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Heat::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Heat::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Heat::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_Heat::Speed
-	float ___Speed_7;
-	// System.Int32 _2dxFX_Heat::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_Heat::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_Heat::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_Heat::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
-	{
-		___Heat_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
-	{
-		___Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_HEAT_T2506713594_H
-#ifndef _2DXFX_GRASSFX_T4149113567_H
-#define _2DXFX_GRASSFX_T4149113567_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_GrassFX
-struct  _2dxFX_GrassFX_t4149113567  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_GrassFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_GrassFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_GrassFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_GrassFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_GrassFX::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_GrassFX::Speed
-	float ___Speed_7;
-	// UnityEngine.AnimationCurve _2dxFX_GrassFX::Wind
-	AnimationCurve_t3046754366 * ___Wind_8;
-	// System.Single _2dxFX_GrassFX::WindTime1
-	float ___WindTime1_9;
-	// System.Int32 _2dxFX_GrassFX::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_GrassFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_GrassFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_GrassFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
-	{
-		___Heat_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
-	{
-		___Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Wind_8() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___Wind_8)); }
-	inline AnimationCurve_t3046754366 * get_Wind_8() const { return ___Wind_8; }
-	inline AnimationCurve_t3046754366 ** get_address_of_Wind_8() { return &___Wind_8; }
-	inline void set_Wind_8(AnimationCurve_t3046754366 * value)
-	{
-		___Wind_8 = value;
-		Il2CppCodeGenWriteBarrier((&___Wind_8), value);
-	}
-
-	inline static int32_t get_offset_of_WindTime1_9() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___WindTime1_9)); }
-	inline float get_WindTime1_9() const { return ___WindTime1_9; }
-	inline float* get_address_of_WindTime1_9() { return &___WindTime1_9; }
-	inline void set_WindTime1_9(float value)
-	{
-		___WindTime1_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_GRASSFX_T4149113567_H
-#ifndef _2DXFX_GRASSMULTIFX_T954429804_H
-#define _2DXFX_GRASSMULTIFX_T954429804_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_GrassMultiFX
-struct  _2dxFX_GrassMultiFX_t954429804  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_GrassMultiFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_GrassMultiFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_GrassMultiFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_GrassMultiFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_GrassMultiFX::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_GrassMultiFX::Speed
-	float ___Speed_7;
-	// UnityEngine.AnimationCurve _2dxFX_GrassMultiFX::Wind
-	AnimationCurve_t3046754366 * ___Wind_8;
-	// System.Single _2dxFX_GrassMultiFX::WindTime1
-	float ___WindTime1_9;
-	// System.Single _2dxFX_GrassMultiFX::WindTime2
-	float ___WindTime2_10;
-	// System.Single _2dxFX_GrassMultiFX::WindTime3
-	float ___WindTime3_11;
-	// System.Single _2dxFX_GrassMultiFX::WindTime4
-	float ___WindTime4_12;
-	// System.Int32 _2dxFX_GrassMultiFX::ShaderChange
-	int32_t ___ShaderChange_13;
-	// UnityEngine.Material _2dxFX_GrassMultiFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_14;
-	// UnityEngine.Material _2dxFX_GrassMultiFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_15;
-	// UnityEngine.UI.Image _2dxFX_GrassMultiFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_16;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
-	{
-		___Heat_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___Speed_7)); }
-	inline float get_Speed_7() const { return ___Speed_7; }
-	inline float* get_address_of_Speed_7() { return &___Speed_7; }
-	inline void set_Speed_7(float value)
-	{
-		___Speed_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Wind_8() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___Wind_8)); }
-	inline AnimationCurve_t3046754366 * get_Wind_8() const { return ___Wind_8; }
-	inline AnimationCurve_t3046754366 ** get_address_of_Wind_8() { return &___Wind_8; }
-	inline void set_Wind_8(AnimationCurve_t3046754366 * value)
-	{
-		___Wind_8 = value;
-		Il2CppCodeGenWriteBarrier((&___Wind_8), value);
-	}
-
-	inline static int32_t get_offset_of_WindTime1_9() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime1_9)); }
-	inline float get_WindTime1_9() const { return ___WindTime1_9; }
-	inline float* get_address_of_WindTime1_9() { return &___WindTime1_9; }
-	inline void set_WindTime1_9(float value)
-	{
-		___WindTime1_9 = value;
-	}
-
-	inline static int32_t get_offset_of_WindTime2_10() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime2_10)); }
-	inline float get_WindTime2_10() const { return ___WindTime2_10; }
-	inline float* get_address_of_WindTime2_10() { return &___WindTime2_10; }
-	inline void set_WindTime2_10(float value)
-	{
-		___WindTime2_10 = value;
-	}
-
-	inline static int32_t get_offset_of_WindTime3_11() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime3_11)); }
-	inline float get_WindTime3_11() const { return ___WindTime3_11; }
-	inline float* get_address_of_WindTime3_11() { return &___WindTime3_11; }
-	inline void set_WindTime3_11(float value)
-	{
-		___WindTime3_11 = value;
-	}
-
-	inline static int32_t get_offset_of_WindTime4_12() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime4_12)); }
-	inline float get_WindTime4_12() const { return ___WindTime4_12; }
-	inline float* get_address_of_WindTime4_12() { return &___WindTime4_12; }
-	inline void set_WindTime4_12(float value)
-	{
-		___WindTime4_12 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_13() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___ShaderChange_13)); }
-	inline int32_t get_ShaderChange_13() const { return ___ShaderChange_13; }
-	inline int32_t* get_address_of_ShaderChange_13() { return &___ShaderChange_13; }
-	inline void set_ShaderChange_13(int32_t value)
-	{
-		___ShaderChange_13 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_14() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___tempMaterial_14)); }
-	inline Material_t340375123 * get_tempMaterial_14() const { return ___tempMaterial_14; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_14() { return &___tempMaterial_14; }
-	inline void set_tempMaterial_14(Material_t340375123 * value)
-	{
-		___tempMaterial_14 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_14), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_15() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___defaultMaterial_15)); }
-	inline Material_t340375123 * get_defaultMaterial_15() const { return ___defaultMaterial_15; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_15() { return &___defaultMaterial_15; }
-	inline void set_defaultMaterial_15(Material_t340375123 * value)
-	{
-		___defaultMaterial_15 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_15), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_16() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___CanvasImage_16)); }
-	inline Image_t2670269651 * get_CanvasImage_16() const { return ___CanvasImage_16; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_16() { return &___CanvasImage_16; }
-	inline void set_CanvasImage_16(Image_t2670269651 * value)
-	{
-		___CanvasImage_16 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_16), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_GRASSMULTIFX_T954429804_H
-#ifndef _2DXFX_GRAYSCALE_T2311953698_H
-#define _2DXFX_GRAYSCALE_T2311953698_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_GrayScale
-struct  _2dxFX_GrayScale_t2311953698  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_GrayScale::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_GrayScale::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_GrayScale::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_GrayScale::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_GrayScale::_EffectAmount
-	float ____EffectAmount_6;
-	// System.Int32 _2dxFX_GrayScale::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_GrayScale::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_GrayScale::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_GrayScale::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__EffectAmount_6() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ____EffectAmount_6)); }
-	inline float get__EffectAmount_6() const { return ____EffectAmount_6; }
-	inline float* get_address_of__EffectAmount_6() { return &____EffectAmount_6; }
-	inline void set__EffectAmount_6(float value)
-	{
-		____EffectAmount_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_GRAYSCALE_T2311953698_H
-#ifndef _2DXFX_COLORCHANGE_T731387307_H
-#define _2DXFX_COLORCHANGE_T731387307_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_ColorChange
-struct  _2dxFX_ColorChange_t731387307  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_ColorChange::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_ColorChange::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_ColorChange::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_ColorChange::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_ColorChange::_Tolerance
-	float ____Tolerance_6;
-	// System.Single _2dxFX_ColorChange::_HueShift
-	float ____HueShift_7;
-	// System.Single _2dxFX_ColorChange::_Saturation
-	float ____Saturation_8;
-	// System.Single _2dxFX_ColorChange::_ValueBrightness
-	float ____ValueBrightness_9;
-	// UnityEngine.Color _2dxFX_ColorChange::_Color
-	Color_t2555686324  ____Color_10;
-	// System.Int32 _2dxFX_ColorChange::ShaderChange
-	int32_t ___ShaderChange_11;
-	// UnityEngine.Material _2dxFX_ColorChange::tempMaterial
-	Material_t340375123 * ___tempMaterial_12;
-	// UnityEngine.Material _2dxFX_ColorChange::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_13;
-	// UnityEngine.UI.Image _2dxFX_ColorChange::CanvasImage
-	Image_t2670269651 * ___CanvasImage_14;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Tolerance_6() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Tolerance_6)); }
-	inline float get__Tolerance_6() const { return ____Tolerance_6; }
-	inline float* get_address_of__Tolerance_6() { return &____Tolerance_6; }
-	inline void set__Tolerance_6(float value)
-	{
-		____Tolerance_6 = value;
-	}
-
-	inline static int32_t get_offset_of__HueShift_7() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____HueShift_7)); }
-	inline float get__HueShift_7() const { return ____HueShift_7; }
-	inline float* get_address_of__HueShift_7() { return &____HueShift_7; }
-	inline void set__HueShift_7(float value)
-	{
-		____HueShift_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Saturation_8() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Saturation_8)); }
-	inline float get__Saturation_8() const { return ____Saturation_8; }
-	inline float* get_address_of__Saturation_8() { return &____Saturation_8; }
-	inline void set__Saturation_8(float value)
-	{
-		____Saturation_8 = value;
-	}
-
-	inline static int32_t get_offset_of__ValueBrightness_9() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____ValueBrightness_9)); }
-	inline float get__ValueBrightness_9() const { return ____ValueBrightness_9; }
-	inline float* get_address_of__ValueBrightness_9() { return &____ValueBrightness_9; }
-	inline void set__ValueBrightness_9(float value)
-	{
-		____ValueBrightness_9 = value;
-	}
-
-	inline static int32_t get_offset_of__Color_10() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Color_10)); }
-	inline Color_t2555686324  get__Color_10() const { return ____Color_10; }
-	inline Color_t2555686324 * get_address_of__Color_10() { return &____Color_10; }
-	inline void set__Color_10(Color_t2555686324  value)
-	{
-		____Color_10 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_11() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___ShaderChange_11)); }
-	inline int32_t get_ShaderChange_11() const { return ___ShaderChange_11; }
-	inline int32_t* get_address_of_ShaderChange_11() { return &___ShaderChange_11; }
-	inline void set_ShaderChange_11(int32_t value)
-	{
-		___ShaderChange_11 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___tempMaterial_12)); }
-	inline Material_t340375123 * get_tempMaterial_12() const { return ___tempMaterial_12; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_12() { return &___tempMaterial_12; }
-	inline void set_tempMaterial_12(Material_t340375123 * value)
-	{
-		___tempMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___defaultMaterial_13)); }
-	inline Material_t340375123 * get_defaultMaterial_13() const { return ___defaultMaterial_13; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_13() { return &___defaultMaterial_13; }
-	inline void set_defaultMaterial_13(Material_t340375123 * value)
-	{
-		___defaultMaterial_13 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_13), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_14() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___CanvasImage_14)); }
-	inline Image_t2670269651 * get_CanvasImage_14() const { return ___CanvasImage_14; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_14() { return &___CanvasImage_14; }
-	inline void set_CanvasImage_14(Image_t2670269651 * value)
-	{
-		___CanvasImage_14 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_14), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_COLORCHANGE_T731387307_H
-#ifndef _2DXFX_COLORRGB_T201945440_H
-#define _2DXFX_COLORRGB_T201945440_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_ColorRGB
-struct  _2dxFX_ColorRGB_t201945440  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_ColorRGB::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_ColorRGB::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_ColorRGB::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_ColorRGB::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_ColorRGB::_ColorR
-	float ____ColorR_6;
-	// System.Single _2dxFX_ColorRGB::_ColorG
-	float ____ColorG_7;
-	// System.Single _2dxFX_ColorRGB::_ColorB
-	float ____ColorB_8;
-	// System.Int32 _2dxFX_ColorRGB::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_ColorRGB::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_ColorRGB::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_ColorRGB::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorR_6() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____ColorR_6)); }
-	inline float get__ColorR_6() const { return ____ColorR_6; }
-	inline float* get_address_of__ColorR_6() { return &____ColorR_6; }
-	inline void set__ColorR_6(float value)
-	{
-		____ColorR_6 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorG_7() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____ColorG_7)); }
-	inline float get__ColorG_7() const { return ____ColorG_7; }
-	inline float* get_address_of__ColorG_7() { return &____ColorG_7; }
-	inline void set__ColorG_7(float value)
-	{
-		____ColorG_7 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorB_8() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____ColorB_8)); }
-	inline float get__ColorB_8() const { return ____ColorB_8; }
-	inline float* get_address_of__ColorB_8() { return &____ColorB_8; }
-	inline void set__ColorB_8(float value)
-	{
-		____ColorB_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_COLORRGB_T201945440_H
-#ifndef _2DXFX_COMPRESSIONFX_T738100557_H
-#define _2DXFX_COMPRESSIONFX_T738100557_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_CompressionFX
-struct  _2dxFX_CompressionFX_t738100557  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_CompressionFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_CompressionFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_CompressionFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_CompressionFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_CompressionFX::Parasite
-	float ___Parasite_6;
-	// System.Int32 _2dxFX_CompressionFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_CompressionFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_CompressionFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_CompressionFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Parasite_6() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___Parasite_6)); }
-	inline float get_Parasite_6() const { return ___Parasite_6; }
-	inline float* get_address_of_Parasite_6() { return &___Parasite_6; }
-	inline void set_Parasite_6(float value)
-	{
-		___Parasite_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_COMPRESSIONFX_T738100557_H
-#ifndef _2DXFX_COLOR_T3901103531_H
-#define _2DXFX_COLOR_T3901103531_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Color
-struct  _2dxFX_Color_t3901103531  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Color::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Color::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Color::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Color::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Color _2dxFX_Color::_Color
-	Color_t2555686324  ____Color_6;
-	// System.Int32 _2dxFX_Color::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_Color::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_Color::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_Color::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Color_6() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ____Color_6)); }
-	inline Color_t2555686324  get__Color_6() const { return ____Color_6; }
-	inline Color_t2555686324 * get_address_of__Color_6() { return &____Color_6; }
-	inline void set__Color_6(Color_t2555686324  value)
-	{
-		____Color_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_COLOR_T3901103531_H
-#ifndef _2DXFX_CARTOON_T2969805880_H
-#define _2DXFX_CARTOON_T2969805880_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Cartoon
-struct  _2dxFX_Cartoon_t2969805880  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Cartoon::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Cartoon::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Cartoon::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Cartoon::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Cartoon::_ColorLevel
-	float ____ColorLevel_6;
-	// System.Single _2dxFX_Cartoon::_EdgeSize
-	float ____EdgeSize_7;
-	// System.Int32 _2dxFX_Cartoon::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_Cartoon::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_Cartoon::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_Cartoon::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorLevel_6() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ____ColorLevel_6)); }
-	inline float get__ColorLevel_6() const { return ____ColorLevel_6; }
-	inline float* get_address_of__ColorLevel_6() { return &____ColorLevel_6; }
-	inline void set__ColorLevel_6(float value)
-	{
-		____ColorLevel_6 = value;
-	}
-
-	inline static int32_t get_offset_of__EdgeSize_7() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ____EdgeSize_7)); }
-	inline float get__EdgeSize_7() const { return ____EdgeSize_7; }
-	inline float* get_address_of__EdgeSize_7() { return &____EdgeSize_7; }
-	inline void set__EdgeSize_7(float value)
-	{
-		____EdgeSize_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_CARTOON_T2969805880_H
-#ifndef _2DXFX_CIRCLEFADE_T2975017661_H
-#define _2DXFX_CIRCLEFADE_T2975017661_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_CircleFade
-struct  _2dxFX_CircleFade_t2975017661  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_CircleFade::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_CircleFade::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_CircleFade::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_CircleFade::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_CircleFade::_Offset
-	float ____Offset_6;
-	// System.Int32 _2dxFX_CircleFade::_InOut
-	int32_t ____InOut_7;
-	// System.Int32 _2dxFX_CircleFade::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_CircleFade::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_CircleFade::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_CircleFade::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_6() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ____Offset_6)); }
-	inline float get__Offset_6() const { return ____Offset_6; }
-	inline float* get_address_of__Offset_6() { return &____Offset_6; }
-	inline void set__Offset_6(float value)
-	{
-		____Offset_6 = value;
-	}
-
-	inline static int32_t get_offset_of__InOut_7() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ____InOut_7)); }
-	inline int32_t get__InOut_7() const { return ____InOut_7; }
-	inline int32_t* get_address_of__InOut_7() { return &____InOut_7; }
-	inline void set__InOut_7(int32_t value)
-	{
-		____InOut_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_CIRCLEFADE_T2975017661_H
-#ifndef _2DXFX_CLIPPING_T757758996_H
-#define _2DXFX_CLIPPING_T757758996_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Clipping
-struct  _2dxFX_Clipping_t757758996  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Clipping::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Clipping::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Clipping::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Clipping::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Clipping::_ClipLeft
-	float ____ClipLeft_6;
-	// System.Single _2dxFX_Clipping::_ClipRight
-	float ____ClipRight_7;
-	// System.Single _2dxFX_Clipping::_ClipUp
-	float ____ClipUp_8;
-	// System.Single _2dxFX_Clipping::_ClipDown
-	float ____ClipDown_9;
-	// System.Int32 _2dxFX_Clipping::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_Clipping::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_Clipping::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_Clipping::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipLeft_6() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipLeft_6)); }
-	inline float get__ClipLeft_6() const { return ____ClipLeft_6; }
-	inline float* get_address_of__ClipLeft_6() { return &____ClipLeft_6; }
-	inline void set__ClipLeft_6(float value)
-	{
-		____ClipLeft_6 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipRight_7() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipRight_7)); }
-	inline float get__ClipRight_7() const { return ____ClipRight_7; }
-	inline float* get_address_of__ClipRight_7() { return &____ClipRight_7; }
-	inline void set__ClipRight_7(float value)
-	{
-		____ClipRight_7 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipUp_8() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipUp_8)); }
-	inline float get__ClipUp_8() const { return ____ClipUp_8; }
-	inline float* get_address_of__ClipUp_8() { return &____ClipUp_8; }
-	inline void set__ClipUp_8(float value)
-	{
-		____ClipUp_8 = value;
-	}
-
-	inline static int32_t get_offset_of__ClipDown_9() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipDown_9)); }
-	inline float get__ClipDown_9() const { return ____ClipDown_9; }
-	inline float* get_address_of__ClipDown_9() { return &____ClipDown_9; }
-	inline void set__ClipDown_9(float value)
-	{
-		____ClipDown_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_CLIPPING_T757758996_H
 #ifndef _2DXFX_EDGECOLOR_T640265773_H
 #define _2DXFX_EDGECOLOR_T640265773_H
 #ifdef __clang__
@@ -8728,6 +6647,2152 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_FIRE_T940813243_H
+#ifndef _2DXFX_GRASSMULTIFX_T954429804_H
+#define _2DXFX_GRASSMULTIFX_T954429804_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_GrassMultiFX
+struct  _2dxFX_GrassMultiFX_t954429804  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_GrassMultiFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_GrassMultiFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_GrassMultiFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_GrassMultiFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_GrassMultiFX::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_GrassMultiFX::Speed
+	float ___Speed_7;
+	// UnityEngine.AnimationCurve _2dxFX_GrassMultiFX::Wind
+	AnimationCurve_t3046754366 * ___Wind_8;
+	// System.Single _2dxFX_GrassMultiFX::WindTime1
+	float ___WindTime1_9;
+	// System.Single _2dxFX_GrassMultiFX::WindTime2
+	float ___WindTime2_10;
+	// System.Single _2dxFX_GrassMultiFX::WindTime3
+	float ___WindTime3_11;
+	// System.Single _2dxFX_GrassMultiFX::WindTime4
+	float ___WindTime4_12;
+	// System.Int32 _2dxFX_GrassMultiFX::ShaderChange
+	int32_t ___ShaderChange_13;
+	// UnityEngine.Material _2dxFX_GrassMultiFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_14;
+	// UnityEngine.Material _2dxFX_GrassMultiFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_15;
+	// UnityEngine.UI.Image _2dxFX_GrassMultiFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_16;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Wind_8() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___Wind_8)); }
+	inline AnimationCurve_t3046754366 * get_Wind_8() const { return ___Wind_8; }
+	inline AnimationCurve_t3046754366 ** get_address_of_Wind_8() { return &___Wind_8; }
+	inline void set_Wind_8(AnimationCurve_t3046754366 * value)
+	{
+		___Wind_8 = value;
+		Il2CppCodeGenWriteBarrier((&___Wind_8), value);
+	}
+
+	inline static int32_t get_offset_of_WindTime1_9() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime1_9)); }
+	inline float get_WindTime1_9() const { return ___WindTime1_9; }
+	inline float* get_address_of_WindTime1_9() { return &___WindTime1_9; }
+	inline void set_WindTime1_9(float value)
+	{
+		___WindTime1_9 = value;
+	}
+
+	inline static int32_t get_offset_of_WindTime2_10() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime2_10)); }
+	inline float get_WindTime2_10() const { return ___WindTime2_10; }
+	inline float* get_address_of_WindTime2_10() { return &___WindTime2_10; }
+	inline void set_WindTime2_10(float value)
+	{
+		___WindTime2_10 = value;
+	}
+
+	inline static int32_t get_offset_of_WindTime3_11() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime3_11)); }
+	inline float get_WindTime3_11() const { return ___WindTime3_11; }
+	inline float* get_address_of_WindTime3_11() { return &___WindTime3_11; }
+	inline void set_WindTime3_11(float value)
+	{
+		___WindTime3_11 = value;
+	}
+
+	inline static int32_t get_offset_of_WindTime4_12() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___WindTime4_12)); }
+	inline float get_WindTime4_12() const { return ___WindTime4_12; }
+	inline float* get_address_of_WindTime4_12() { return &___WindTime4_12; }
+	inline void set_WindTime4_12(float value)
+	{
+		___WindTime4_12 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_13() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___ShaderChange_13)); }
+	inline int32_t get_ShaderChange_13() const { return ___ShaderChange_13; }
+	inline int32_t* get_address_of_ShaderChange_13() { return &___ShaderChange_13; }
+	inline void set_ShaderChange_13(int32_t value)
+	{
+		___ShaderChange_13 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_14() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___tempMaterial_14)); }
+	inline Material_t340375123 * get_tempMaterial_14() const { return ___tempMaterial_14; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_14() { return &___tempMaterial_14; }
+	inline void set_tempMaterial_14(Material_t340375123 * value)
+	{
+		___tempMaterial_14 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_14), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_15() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___defaultMaterial_15)); }
+	inline Material_t340375123 * get_defaultMaterial_15() const { return ___defaultMaterial_15; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_15() { return &___defaultMaterial_15; }
+	inline void set_defaultMaterial_15(Material_t340375123 * value)
+	{
+		___defaultMaterial_15 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_15), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_16() { return static_cast<int32_t>(offsetof(_2dxFX_GrassMultiFX_t954429804, ___CanvasImage_16)); }
+	inline Image_t2670269651 * get_CanvasImage_16() const { return ___CanvasImage_16; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_16() { return &___CanvasImage_16; }
+	inline void set_CanvasImage_16(Image_t2670269651 * value)
+	{
+		___CanvasImage_16 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_16), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_GRASSMULTIFX_T954429804_H
+#ifndef _2DXFX_GRAYSCALE_T2311953698_H
+#define _2DXFX_GRAYSCALE_T2311953698_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_GrayScale
+struct  _2dxFX_GrayScale_t2311953698  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_GrayScale::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_GrayScale::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_GrayScale::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_GrayScale::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_GrayScale::_EffectAmount
+	float ____EffectAmount_6;
+	// System.Int32 _2dxFX_GrayScale::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_GrayScale::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_GrayScale::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_GrayScale::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__EffectAmount_6() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ____EffectAmount_6)); }
+	inline float get__EffectAmount_6() const { return ____EffectAmount_6; }
+	inline float* get_address_of__EffectAmount_6() { return &____EffectAmount_6; }
+	inline void set__EffectAmount_6(float value)
+	{
+		____EffectAmount_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_GrayScale_t2311953698, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_GRAYSCALE_T2311953698_H
+#ifndef _2DXFX_HEAT_T2506713594_H
+#define _2DXFX_HEAT_T2506713594_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Heat
+struct  _2dxFX_Heat_t2506713594  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Heat::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Heat::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Heat::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Heat::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Heat::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_Heat::Speed
+	float ___Speed_7;
+	// System.Int32 _2dxFX_Heat::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_Heat::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_Heat::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_Heat::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Heat_t2506713594, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_HEAT_T2506713594_H
+#ifndef _2DXFX_GRASSFX_T4149113567_H
+#define _2DXFX_GRASSFX_T4149113567_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_GrassFX
+struct  _2dxFX_GrassFX_t4149113567  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_GrassFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_GrassFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_GrassFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_GrassFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_GrassFX::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_GrassFX::Speed
+	float ___Speed_7;
+	// UnityEngine.AnimationCurve _2dxFX_GrassFX::Wind
+	AnimationCurve_t3046754366 * ___Wind_8;
+	// System.Single _2dxFX_GrassFX::WindTime1
+	float ___WindTime1_9;
+	// System.Int32 _2dxFX_GrassFX::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_GrassFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_GrassFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_GrassFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Wind_8() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___Wind_8)); }
+	inline AnimationCurve_t3046754366 * get_Wind_8() const { return ___Wind_8; }
+	inline AnimationCurve_t3046754366 ** get_address_of_Wind_8() { return &___Wind_8; }
+	inline void set_Wind_8(AnimationCurve_t3046754366 * value)
+	{
+		___Wind_8 = value;
+		Il2CppCodeGenWriteBarrier((&___Wind_8), value);
+	}
+
+	inline static int32_t get_offset_of_WindTime1_9() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___WindTime1_9)); }
+	inline float get_WindTime1_9() const { return ___WindTime1_9; }
+	inline float* get_address_of_WindTime1_9() { return &___WindTime1_9; }
+	inline void set_WindTime1_9(float value)
+	{
+		___WindTime1_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_GrassFX_t4149113567, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_GRASSFX_T4149113567_H
+#ifndef _2DXFX_GHOST_T324680138_H
+#define _2DXFX_GHOST_T324680138_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Ghost
+struct  _2dxFX_Ghost_t324680138  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Ghost::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Ghost::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Ghost::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Ghost::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Ghost::_offset
+	float ____offset_6;
+	// System.Single _2dxFX_Ghost::_ClipLeft
+	float ____ClipLeft_7;
+	// System.Single _2dxFX_Ghost::_ClipRight
+	float ____ClipRight_8;
+	// System.Single _2dxFX_Ghost::_ClipUp
+	float ____ClipUp_9;
+	// System.Single _2dxFX_Ghost::_ClipDown
+	float ____ClipDown_10;
+	// System.Int32 _2dxFX_Ghost::ShaderChange
+	int32_t ___ShaderChange_11;
+	// UnityEngine.Material _2dxFX_Ghost::tempMaterial
+	Material_t340375123 * ___tempMaterial_12;
+	// UnityEngine.Material _2dxFX_Ghost::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_13;
+	// UnityEngine.UI.Image _2dxFX_Ghost::CanvasImage
+	Image_t2670269651 * ___CanvasImage_14;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__offset_6() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____offset_6)); }
+	inline float get__offset_6() const { return ____offset_6; }
+	inline float* get_address_of__offset_6() { return &____offset_6; }
+	inline void set__offset_6(float value)
+	{
+		____offset_6 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipLeft_7() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipLeft_7)); }
+	inline float get__ClipLeft_7() const { return ____ClipLeft_7; }
+	inline float* get_address_of__ClipLeft_7() { return &____ClipLeft_7; }
+	inline void set__ClipLeft_7(float value)
+	{
+		____ClipLeft_7 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipRight_8() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipRight_8)); }
+	inline float get__ClipRight_8() const { return ____ClipRight_8; }
+	inline float* get_address_of__ClipRight_8() { return &____ClipRight_8; }
+	inline void set__ClipRight_8(float value)
+	{
+		____ClipRight_8 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipUp_9() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipUp_9)); }
+	inline float get__ClipUp_9() const { return ____ClipUp_9; }
+	inline float* get_address_of__ClipUp_9() { return &____ClipUp_9; }
+	inline void set__ClipUp_9(float value)
+	{
+		____ClipUp_9 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipDown_10() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ____ClipDown_10)); }
+	inline float get__ClipDown_10() const { return ____ClipDown_10; }
+	inline float* get_address_of__ClipDown_10() { return &____ClipDown_10; }
+	inline void set__ClipDown_10(float value)
+	{
+		____ClipDown_10 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_11() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___ShaderChange_11)); }
+	inline int32_t get_ShaderChange_11() const { return ___ShaderChange_11; }
+	inline int32_t* get_address_of_ShaderChange_11() { return &___ShaderChange_11; }
+	inline void set_ShaderChange_11(int32_t value)
+	{
+		___ShaderChange_11 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___tempMaterial_12)); }
+	inline Material_t340375123 * get_tempMaterial_12() const { return ___tempMaterial_12; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_12() { return &___tempMaterial_12; }
+	inline void set_tempMaterial_12(Material_t340375123 * value)
+	{
+		___tempMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___defaultMaterial_13)); }
+	inline Material_t340375123 * get_defaultMaterial_13() const { return ___defaultMaterial_13; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_13() { return &___defaultMaterial_13; }
+	inline void set_defaultMaterial_13(Material_t340375123 * value)
+	{
+		___defaultMaterial_13 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_13), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_14() { return static_cast<int32_t>(offsetof(_2dxFX_Ghost_t324680138, ___CanvasImage_14)); }
+	inline Image_t2670269651 * get_CanvasImage_14() const { return ___CanvasImage_14; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_14() { return &___CanvasImage_14; }
+	inline void set_CanvasImage_14(Image_t2670269651 * value)
+	{
+		___CanvasImage_14 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_14), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_GHOST_T324680138_H
+#ifndef _2DXFX_GOLDENFX_T3771068735_H
+#define _2DXFX_GOLDENFX_T3771068735_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_GoldenFX
+struct  _2dxFX_GoldenFX_t3771068735  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_GoldenFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_GoldenFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_GoldenFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_GoldenFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_GoldenFX::Golden
+	float ___Golden_6;
+	// System.Int32 _2dxFX_GoldenFX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_GoldenFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_GoldenFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_GoldenFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Golden_6() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___Golden_6)); }
+	inline float get_Golden_6() const { return ___Golden_6; }
+	inline float* get_address_of_Golden_6() { return &___Golden_6; }
+	inline void set_Golden_6(float value)
+	{
+		___Golden_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_GoldenFX_t3771068735, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_GOLDENFX_T3771068735_H
+#ifndef _2DXFX_GOLDFX_T3246480377_H
+#define _2DXFX_GOLDFX_T3246480377_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_GoldFX
+struct  _2dxFX_GoldFX_t3246480377  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_GoldFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_GoldFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_GoldFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_GoldFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_GoldFX::Gold
+	float ___Gold_6;
+	// System.Int32 _2dxFX_GoldFX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_GoldFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_GoldFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_GoldFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Gold_6() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___Gold_6)); }
+	inline float get_Gold_6() const { return ___Gold_6; }
+	inline float* get_address_of_Gold_6() { return &___Gold_6; }
+	inline void set_Gold_6(float value)
+	{
+		___Gold_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_GoldFX_t3246480377, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_GOLDFX_T3246480377_H
+#ifndef _2DXFX_CIRCLEFADE_T2975017661_H
+#define _2DXFX_CIRCLEFADE_T2975017661_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_CircleFade
+struct  _2dxFX_CircleFade_t2975017661  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_CircleFade::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_CircleFade::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_CircleFade::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_CircleFade::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_CircleFade::_Offset
+	float ____Offset_6;
+	// System.Int32 _2dxFX_CircleFade::_InOut
+	int32_t ____InOut_7;
+	// System.Int32 _2dxFX_CircleFade::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_CircleFade::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_CircleFade::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_CircleFade::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_6() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ____Offset_6)); }
+	inline float get__Offset_6() const { return ____Offset_6; }
+	inline float* get_address_of__Offset_6() { return &____Offset_6; }
+	inline void set__Offset_6(float value)
+	{
+		____Offset_6 = value;
+	}
+
+	inline static int32_t get_offset_of__InOut_7() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ____InOut_7)); }
+	inline int32_t get__InOut_7() const { return ____InOut_7; }
+	inline int32_t* get_address_of__InOut_7() { return &____InOut_7; }
+	inline void set__InOut_7(int32_t value)
+	{
+		____InOut_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_CircleFade_t2975017661, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_CIRCLEFADE_T2975017661_H
+#ifndef _2DXFX_CLIPPING_T757758996_H
+#define _2DXFX_CLIPPING_T757758996_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Clipping
+struct  _2dxFX_Clipping_t757758996  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Clipping::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Clipping::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Clipping::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Clipping::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Clipping::_ClipLeft
+	float ____ClipLeft_6;
+	// System.Single _2dxFX_Clipping::_ClipRight
+	float ____ClipRight_7;
+	// System.Single _2dxFX_Clipping::_ClipUp
+	float ____ClipUp_8;
+	// System.Single _2dxFX_Clipping::_ClipDown
+	float ____ClipDown_9;
+	// System.Int32 _2dxFX_Clipping::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_Clipping::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_Clipping::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_Clipping::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipLeft_6() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipLeft_6)); }
+	inline float get__ClipLeft_6() const { return ____ClipLeft_6; }
+	inline float* get_address_of__ClipLeft_6() { return &____ClipLeft_6; }
+	inline void set__ClipLeft_6(float value)
+	{
+		____ClipLeft_6 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipRight_7() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipRight_7)); }
+	inline float get__ClipRight_7() const { return ____ClipRight_7; }
+	inline float* get_address_of__ClipRight_7() { return &____ClipRight_7; }
+	inline void set__ClipRight_7(float value)
+	{
+		____ClipRight_7 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipUp_8() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipUp_8)); }
+	inline float get__ClipUp_8() const { return ____ClipUp_8; }
+	inline float* get_address_of__ClipUp_8() { return &____ClipUp_8; }
+	inline void set__ClipUp_8(float value)
+	{
+		____ClipUp_8 = value;
+	}
+
+	inline static int32_t get_offset_of__ClipDown_9() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ____ClipDown_9)); }
+	inline float get__ClipDown_9() const { return ____ClipDown_9; }
+	inline float* get_address_of__ClipDown_9() { return &____ClipDown_9; }
+	inline void set__ClipDown_9(float value)
+	{
+		____ClipDown_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_Clipping_t757758996, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_CLIPPING_T757758996_H
+#ifndef _2DXFX_COLOR_T3901103531_H
+#define _2DXFX_COLOR_T3901103531_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Color
+struct  _2dxFX_Color_t3901103531  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Color::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Color::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Color::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Color::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Color _2dxFX_Color::_Color
+	Color_t2555686324  ____Color_6;
+	// System.Int32 _2dxFX_Color::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_Color::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_Color::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_Color::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Color_6() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ____Color_6)); }
+	inline Color_t2555686324  get__Color_6() const { return ____Color_6; }
+	inline Color_t2555686324 * get_address_of__Color_6() { return &____Color_6; }
+	inline void set__Color_6(Color_t2555686324  value)
+	{
+		____Color_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Color_t3901103531, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_COLOR_T3901103531_H
+#ifndef _2DXFX_CARTOON_T2969805880_H
+#define _2DXFX_CARTOON_T2969805880_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Cartoon
+struct  _2dxFX_Cartoon_t2969805880  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Cartoon::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Cartoon::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Cartoon::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Cartoon::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Cartoon::_ColorLevel
+	float ____ColorLevel_6;
+	// System.Single _2dxFX_Cartoon::_EdgeSize
+	float ____EdgeSize_7;
+	// System.Int32 _2dxFX_Cartoon::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_Cartoon::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_Cartoon::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_Cartoon::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__ColorLevel_6() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ____ColorLevel_6)); }
+	inline float get__ColorLevel_6() const { return ____ColorLevel_6; }
+	inline float* get_address_of__ColorLevel_6() { return &____ColorLevel_6; }
+	inline void set__ColorLevel_6(float value)
+	{
+		____ColorLevel_6 = value;
+	}
+
+	inline static int32_t get_offset_of__EdgeSize_7() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ____EdgeSize_7)); }
+	inline float get__EdgeSize_7() const { return ____EdgeSize_7; }
+	inline float* get_address_of__EdgeSize_7() { return &____EdgeSize_7; }
+	inline void set__EdgeSize_7(float value)
+	{
+		____EdgeSize_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Cartoon_t2969805880, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_CARTOON_T2969805880_H
+#ifndef _2DXFX_BLURHQX_T2764040671_H
+#define _2DXFX_BLURHQX_T2764040671_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_BlurHQX
+struct  _2dxFX_BlurHQX_t2764040671  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_BlurHQX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_BlurHQX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_BlurHQX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_BlurHQX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_BlurHQX::Blur
+	float ___Blur_6;
+	// System.Int32 _2dxFX_BlurHQX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_BlurHQX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_BlurHQX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_BlurHQX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Blur_6() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___Blur_6)); }
+	inline float get_Blur_6() const { return ___Blur_6; }
+	inline float* get_address_of_Blur_6() { return &___Blur_6; }
+	inline void set_Blur_6(float value)
+	{
+		___Blur_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_BlurHQX_t2764040671, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_BLURHQX_T2764040671_H
+#ifndef _2DXFX_BURNFX_T2859452929_H
+#define _2DXFX_BURNFX_T2859452929_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_BurnFX
+struct  _2dxFX_BurnFX_t2859452929  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_BurnFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_BurnFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_BurnFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_BurnFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_BurnFX::Seed
+	float ___Seed_6;
+	// System.Single _2dxFX_BurnFX::Destroyed
+	float ___Destroyed_7;
+	// System.Int32 _2dxFX_BurnFX::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_BurnFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_BurnFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_BurnFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Seed_6() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___Seed_6)); }
+	inline float get_Seed_6() const { return ___Seed_6; }
+	inline float* get_address_of_Seed_6() { return &___Seed_6; }
+	inline void set_Seed_6(float value)
+	{
+		___Seed_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Destroyed_7() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___Destroyed_7)); }
+	inline float get_Destroyed_7() const { return ___Destroyed_7; }
+	inline float* get_address_of_Destroyed_7() { return &___Destroyed_7; }
+	inline void set_Destroyed_7(float value)
+	{
+		___Destroyed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_BurnFX_t2859452929, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_BURNFX_T2859452929_H
+#ifndef _2DXFX_BURNINGFX_T3904567925_H
+#define _2DXFX_BURNINGFX_T3904567925_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_BurningFX
+struct  _2dxFX_BurningFX_t3904567925  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_BurningFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_BurningFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_BurningFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_BurningFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_BurningFX::Colors
+	float ___Colors_6;
+	// System.Int32 _2dxFX_BurningFX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_BurningFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_BurningFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_BurningFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Colors_6() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___Colors_6)); }
+	inline float get_Colors_6() const { return ___Colors_6; }
+	inline float* get_address_of_Colors_6() { return &___Colors_6; }
+	inline void set_Colors_6(float value)
+	{
+		___Colors_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_BurningFX_t3904567925, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_BURNINGFX_T3904567925_H
+#ifndef _2DXFX_DESTROYEDFX_T3244269131_H
+#define _2DXFX_DESTROYEDFX_T3244269131_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_DestroyedFX
+struct  _2dxFX_DestroyedFX_t3244269131  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_DestroyedFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_DestroyedFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_DestroyedFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_DestroyedFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_DestroyedFX::Seed
+	float ___Seed_6;
+	// System.Single _2dxFX_DestroyedFX::Destroyed
+	float ___Destroyed_7;
+	// System.Int32 _2dxFX_DestroyedFX::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_DestroyedFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_DestroyedFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_DestroyedFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Seed_6() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___Seed_6)); }
+	inline float get_Seed_6() const { return ___Seed_6; }
+	inline float* get_address_of_Seed_6() { return &___Seed_6; }
+	inline void set_Seed_6(float value)
+	{
+		___Seed_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Destroyed_7() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___Destroyed_7)); }
+	inline float get_Destroyed_7() const { return ___Destroyed_7; }
+	inline float* get_address_of_Destroyed_7() { return &___Destroyed_7; }
+	inline void set_Destroyed_7(float value)
+	{
+		___Destroyed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_DESTROYEDFX_T3244269131_H
+#ifndef _2DXFX_DISTORTION_T3560396152_H
+#define _2DXFX_DISTORTION_T3560396152_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Distortion
+struct  _2dxFX_Distortion_t3560396152  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Distortion::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Distortion::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Distortion::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Distortion::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Distortion::_OffsetX
+	float ____OffsetX_6;
+	// System.Single _2dxFX_Distortion::_OffsetY
+	float ____OffsetY_7;
+	// System.Single _2dxFX_Distortion::_DistanceX
+	float ____DistanceX_8;
+	// System.Single _2dxFX_Distortion::_DistanceY
+	float ____DistanceY_9;
+	// System.Single _2dxFX_Distortion::_WaveTimeX
+	float ____WaveTimeX_10;
+	// System.Single _2dxFX_Distortion::_WaveTimeY
+	float ____WaveTimeY_11;
+	// System.Boolean _2dxFX_Distortion::AutoPlayWaveX
+	bool ___AutoPlayWaveX_12;
+	// System.Single _2dxFX_Distortion::AutoPlaySpeedX
+	float ___AutoPlaySpeedX_13;
+	// System.Boolean _2dxFX_Distortion::AutoPlayWaveY
+	bool ___AutoPlayWaveY_14;
+	// System.Single _2dxFX_Distortion::AutoPlaySpeedY
+	float ___AutoPlaySpeedY_15;
+	// System.Boolean _2dxFX_Distortion::AutoRandom
+	bool ___AutoRandom_16;
+	// System.Single _2dxFX_Distortion::AutoRandomRange
+	float ___AutoRandomRange_17;
+	// System.Int32 _2dxFX_Distortion::ShaderChange
+	int32_t ___ShaderChange_18;
+	// UnityEngine.Material _2dxFX_Distortion::tempMaterial
+	Material_t340375123 * ___tempMaterial_19;
+	// UnityEngine.Material _2dxFX_Distortion::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_20;
+	// UnityEngine.UI.Image _2dxFX_Distortion::CanvasImage
+	Image_t2670269651 * ___CanvasImage_21;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__OffsetX_6() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____OffsetX_6)); }
+	inline float get__OffsetX_6() const { return ____OffsetX_6; }
+	inline float* get_address_of__OffsetX_6() { return &____OffsetX_6; }
+	inline void set__OffsetX_6(float value)
+	{
+		____OffsetX_6 = value;
+	}
+
+	inline static int32_t get_offset_of__OffsetY_7() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____OffsetY_7)); }
+	inline float get__OffsetY_7() const { return ____OffsetY_7; }
+	inline float* get_address_of__OffsetY_7() { return &____OffsetY_7; }
+	inline void set__OffsetY_7(float value)
+	{
+		____OffsetY_7 = value;
+	}
+
+	inline static int32_t get_offset_of__DistanceX_8() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____DistanceX_8)); }
+	inline float get__DistanceX_8() const { return ____DistanceX_8; }
+	inline float* get_address_of__DistanceX_8() { return &____DistanceX_8; }
+	inline void set__DistanceX_8(float value)
+	{
+		____DistanceX_8 = value;
+	}
+
+	inline static int32_t get_offset_of__DistanceY_9() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____DistanceY_9)); }
+	inline float get__DistanceY_9() const { return ____DistanceY_9; }
+	inline float* get_address_of__DistanceY_9() { return &____DistanceY_9; }
+	inline void set__DistanceY_9(float value)
+	{
+		____DistanceY_9 = value;
+	}
+
+	inline static int32_t get_offset_of__WaveTimeX_10() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____WaveTimeX_10)); }
+	inline float get__WaveTimeX_10() const { return ____WaveTimeX_10; }
+	inline float* get_address_of__WaveTimeX_10() { return &____WaveTimeX_10; }
+	inline void set__WaveTimeX_10(float value)
+	{
+		____WaveTimeX_10 = value;
+	}
+
+	inline static int32_t get_offset_of__WaveTimeY_11() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____WaveTimeY_11)); }
+	inline float get__WaveTimeY_11() const { return ____WaveTimeY_11; }
+	inline float* get_address_of__WaveTimeY_11() { return &____WaveTimeY_11; }
+	inline void set__WaveTimeY_11(float value)
+	{
+		____WaveTimeY_11 = value;
+	}
+
+	inline static int32_t get_offset_of_AutoPlayWaveX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlayWaveX_12)); }
+	inline bool get_AutoPlayWaveX_12() const { return ___AutoPlayWaveX_12; }
+	inline bool* get_address_of_AutoPlayWaveX_12() { return &___AutoPlayWaveX_12; }
+	inline void set_AutoPlayWaveX_12(bool value)
+	{
+		___AutoPlayWaveX_12 = value;
+	}
+
+	inline static int32_t get_offset_of_AutoPlaySpeedX_13() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlaySpeedX_13)); }
+	inline float get_AutoPlaySpeedX_13() const { return ___AutoPlaySpeedX_13; }
+	inline float* get_address_of_AutoPlaySpeedX_13() { return &___AutoPlaySpeedX_13; }
+	inline void set_AutoPlaySpeedX_13(float value)
+	{
+		___AutoPlaySpeedX_13 = value;
+	}
+
+	inline static int32_t get_offset_of_AutoPlayWaveY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlayWaveY_14)); }
+	inline bool get_AutoPlayWaveY_14() const { return ___AutoPlayWaveY_14; }
+	inline bool* get_address_of_AutoPlayWaveY_14() { return &___AutoPlayWaveY_14; }
+	inline void set_AutoPlayWaveY_14(bool value)
+	{
+		___AutoPlayWaveY_14 = value;
+	}
+
+	inline static int32_t get_offset_of_AutoPlaySpeedY_15() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlaySpeedY_15)); }
+	inline float get_AutoPlaySpeedY_15() const { return ___AutoPlaySpeedY_15; }
+	inline float* get_address_of_AutoPlaySpeedY_15() { return &___AutoPlaySpeedY_15; }
+	inline void set_AutoPlaySpeedY_15(float value)
+	{
+		___AutoPlaySpeedY_15 = value;
+	}
+
+	inline static int32_t get_offset_of_AutoRandom_16() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoRandom_16)); }
+	inline bool get_AutoRandom_16() const { return ___AutoRandom_16; }
+	inline bool* get_address_of_AutoRandom_16() { return &___AutoRandom_16; }
+	inline void set_AutoRandom_16(bool value)
+	{
+		___AutoRandom_16 = value;
+	}
+
+	inline static int32_t get_offset_of_AutoRandomRange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoRandomRange_17)); }
+	inline float get_AutoRandomRange_17() const { return ___AutoRandomRange_17; }
+	inline float* get_address_of_AutoRandomRange_17() { return &___AutoRandomRange_17; }
+	inline void set_AutoRandomRange_17(float value)
+	{
+		___AutoRandomRange_17 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_18() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___ShaderChange_18)); }
+	inline int32_t get_ShaderChange_18() const { return ___ShaderChange_18; }
+	inline int32_t* get_address_of_ShaderChange_18() { return &___ShaderChange_18; }
+	inline void set_ShaderChange_18(int32_t value)
+	{
+		___ShaderChange_18 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___tempMaterial_19)); }
+	inline Material_t340375123 * get_tempMaterial_19() const { return ___tempMaterial_19; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_19() { return &___tempMaterial_19; }
+	inline void set_tempMaterial_19(Material_t340375123 * value)
+	{
+		___tempMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_20() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___defaultMaterial_20)); }
+	inline Material_t340375123 * get_defaultMaterial_20() const { return ___defaultMaterial_20; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_20() { return &___defaultMaterial_20; }
+	inline void set_defaultMaterial_20(Material_t340375123 * value)
+	{
+		___defaultMaterial_20 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_20), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_21() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___CanvasImage_21)); }
+	inline Image_t2670269651 * get_CanvasImage_21() const { return ___CanvasImage_21; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_21() { return &___CanvasImage_21; }
+	inline void set_CanvasImage_21(Image_t2670269651 * value)
+	{
+		___CanvasImage_21 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_21), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_DISTORTION_T3560396152_H
 #ifndef _2DXFX_DISTORTION_ADDITIVE_T1916819100_H
 #define _2DXFX_DISTORTION_ADDITIVE_T1916819100_H
 #ifdef __clang__
@@ -9086,41 +9151,47 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_DESINTEGRATIONFX_T2638853887_H
-#ifndef _2DXFX_DESTROYEDFX_T3244269131_H
-#define _2DXFX_DESTROYEDFX_T3244269131_H
+#ifndef _2DXFX_COLORCHANGE_T731387307_H
+#define _2DXFX_COLORCHANGE_T731387307_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_DestroyedFX
-struct  _2dxFX_DestroyedFX_t3244269131  : public MonoBehaviour_t3962482529
+// _2dxFX_ColorChange
+struct  _2dxFX_ColorChange_t731387307  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_DestroyedFX::ForceMaterial
+	// UnityEngine.Material _2dxFX_ColorChange::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_DestroyedFX::ActiveChange
+	// System.Boolean _2dxFX_ColorChange::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_DestroyedFX::shader
+	// System.String _2dxFX_ColorChange::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_DestroyedFX::_Alpha
+	// System.Single _2dxFX_ColorChange::_Alpha
 	float ____Alpha_5;
-	// System.Single _2dxFX_DestroyedFX::Seed
-	float ___Seed_6;
-	// System.Single _2dxFX_DestroyedFX::Destroyed
-	float ___Destroyed_7;
-	// System.Int32 _2dxFX_DestroyedFX::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_DestroyedFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_DestroyedFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_DestroyedFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
+	// System.Single _2dxFX_ColorChange::_Tolerance
+	float ____Tolerance_6;
+	// System.Single _2dxFX_ColorChange::_HueShift
+	float ____HueShift_7;
+	// System.Single _2dxFX_ColorChange::_Saturation
+	float ____Saturation_8;
+	// System.Single _2dxFX_ColorChange::_ValueBrightness
+	float ____ValueBrightness_9;
+	// UnityEngine.Color _2dxFX_ColorChange::_Color
+	Color_t2555686324  ____Color_10;
+	// System.Int32 _2dxFX_ColorChange::ShaderChange
+	int32_t ___ShaderChange_11;
+	// UnityEngine.Material _2dxFX_ColorChange::tempMaterial
+	Material_t340375123 * ___tempMaterial_12;
+	// UnityEngine.Material _2dxFX_ColorChange::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_13;
+	// UnityEngine.UI.Image _2dxFX_ColorChange::CanvasImage
+	Image_t2670269651 * ___CanvasImage_14;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -9129,7 +9200,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -9137,7 +9208,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -9146,7 +9217,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -9154,117 +9225,123 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of_Seed_6() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___Seed_6)); }
-	inline float get_Seed_6() const { return ___Seed_6; }
-	inline float* get_address_of_Seed_6() { return &___Seed_6; }
-	inline void set_Seed_6(float value)
+	inline static int32_t get_offset_of__Tolerance_6() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Tolerance_6)); }
+	inline float get__Tolerance_6() const { return ____Tolerance_6; }
+	inline float* get_address_of__Tolerance_6() { return &____Tolerance_6; }
+	inline void set__Tolerance_6(float value)
 	{
-		___Seed_6 = value;
+		____Tolerance_6 = value;
 	}
 
-	inline static int32_t get_offset_of_Destroyed_7() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___Destroyed_7)); }
-	inline float get_Destroyed_7() const { return ___Destroyed_7; }
-	inline float* get_address_of_Destroyed_7() { return &___Destroyed_7; }
-	inline void set_Destroyed_7(float value)
+	inline static int32_t get_offset_of__HueShift_7() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____HueShift_7)); }
+	inline float get__HueShift_7() const { return ____HueShift_7; }
+	inline float* get_address_of__HueShift_7() { return &____HueShift_7; }
+	inline void set__HueShift_7(float value)
 	{
-		___Destroyed_7 = value;
+		____HueShift_7 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
+	inline static int32_t get_offset_of__Saturation_8() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Saturation_8)); }
+	inline float get__Saturation_8() const { return ____Saturation_8; }
+	inline float* get_address_of__Saturation_8() { return &____Saturation_8; }
+	inline void set__Saturation_8(float value)
 	{
-		___ShaderChange_8 = value;
+		____Saturation_8 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
+	inline static int32_t get_offset_of__ValueBrightness_9() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____ValueBrightness_9)); }
+	inline float get__ValueBrightness_9() const { return ____ValueBrightness_9; }
+	inline float* get_address_of__ValueBrightness_9() { return &____ValueBrightness_9; }
+	inline void set__ValueBrightness_9(float value)
 	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+		____ValueBrightness_9 = value;
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	inline static int32_t get_offset_of__Color_10() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ____Color_10)); }
+	inline Color_t2555686324  get__Color_10() const { return ____Color_10; }
+	inline Color_t2555686324 * get_address_of__Color_10() { return &____Color_10; }
+	inline void set__Color_10(Color_t2555686324  value)
 	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+		____Color_10 = value;
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_DestroyedFX_t3244269131, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	inline static int32_t get_offset_of_ShaderChange_11() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___ShaderChange_11)); }
+	inline int32_t get_ShaderChange_11() const { return ___ShaderChange_11; }
+	inline int32_t* get_address_of_ShaderChange_11() { return &___ShaderChange_11; }
+	inline void set_ShaderChange_11(int32_t value)
 	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+		___ShaderChange_11 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___tempMaterial_12)); }
+	inline Material_t340375123 * get_tempMaterial_12() const { return ___tempMaterial_12; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_12() { return &___tempMaterial_12; }
+	inline void set_tempMaterial_12(Material_t340375123 * value)
+	{
+		___tempMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___defaultMaterial_13)); }
+	inline Material_t340375123 * get_defaultMaterial_13() const { return ___defaultMaterial_13; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_13() { return &___defaultMaterial_13; }
+	inline void set_defaultMaterial_13(Material_t340375123 * value)
+	{
+		___defaultMaterial_13 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_13), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_14() { return static_cast<int32_t>(offsetof(_2dxFX_ColorChange_t731387307, ___CanvasImage_14)); }
+	inline Image_t2670269651 * get_CanvasImage_14() const { return ___CanvasImage_14; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_14() { return &___CanvasImage_14; }
+	inline void set_CanvasImage_14(Image_t2670269651 * value)
+	{
+		___CanvasImage_14 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_14), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_DESTROYEDFX_T3244269131_H
-#ifndef _2DXFX_DISTORTION_T3560396152_H
-#define _2DXFX_DISTORTION_T3560396152_H
+#endif // _2DXFX_COLORCHANGE_T731387307_H
+#ifndef _2DXFX_COLORRGB_T201945440_H
+#define _2DXFX_COLORRGB_T201945440_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_Distortion
-struct  _2dxFX_Distortion_t3560396152  : public MonoBehaviour_t3962482529
+// _2dxFX_ColorRGB
+struct  _2dxFX_ColorRGB_t201945440  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_Distortion::ForceMaterial
+	// UnityEngine.Material _2dxFX_ColorRGB::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Distortion::ActiveChange
+	// System.Boolean _2dxFX_ColorRGB::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_Distortion::shader
+	// System.String _2dxFX_ColorRGB::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_Distortion::_Alpha
+	// System.Single _2dxFX_ColorRGB::_Alpha
 	float ____Alpha_5;
-	// System.Single _2dxFX_Distortion::_OffsetX
-	float ____OffsetX_6;
-	// System.Single _2dxFX_Distortion::_OffsetY
-	float ____OffsetY_7;
-	// System.Single _2dxFX_Distortion::_DistanceX
-	float ____DistanceX_8;
-	// System.Single _2dxFX_Distortion::_DistanceY
-	float ____DistanceY_9;
-	// System.Single _2dxFX_Distortion::_WaveTimeX
-	float ____WaveTimeX_10;
-	// System.Single _2dxFX_Distortion::_WaveTimeY
-	float ____WaveTimeY_11;
-	// System.Boolean _2dxFX_Distortion::AutoPlayWaveX
-	bool ___AutoPlayWaveX_12;
-	// System.Single _2dxFX_Distortion::AutoPlaySpeedX
-	float ___AutoPlaySpeedX_13;
-	// System.Boolean _2dxFX_Distortion::AutoPlayWaveY
-	bool ___AutoPlayWaveY_14;
-	// System.Single _2dxFX_Distortion::AutoPlaySpeedY
-	float ___AutoPlaySpeedY_15;
-	// System.Boolean _2dxFX_Distortion::AutoRandom
-	bool ___AutoRandom_16;
-	// System.Single _2dxFX_Distortion::AutoRandomRange
-	float ___AutoRandomRange_17;
-	// System.Int32 _2dxFX_Distortion::ShaderChange
-	int32_t ___ShaderChange_18;
-	// UnityEngine.Material _2dxFX_Distortion::tempMaterial
-	Material_t340375123 * ___tempMaterial_19;
-	// UnityEngine.Material _2dxFX_Distortion::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_20;
-	// UnityEngine.UI.Image _2dxFX_Distortion::CanvasImage
-	Image_t2670269651 * ___CanvasImage_21;
+	// System.Single _2dxFX_ColorRGB::_ColorR
+	float ____ColorR_6;
+	// System.Single _2dxFX_ColorRGB::_ColorG
+	float ____ColorG_7;
+	// System.Single _2dxFX_ColorRGB::_ColorB
+	float ____ColorB_8;
+	// System.Int32 _2dxFX_ColorRGB::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_ColorRGB::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_ColorRGB::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_ColorRGB::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -9273,7 +9350,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -9281,7 +9358,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -9290,7 +9367,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -9298,708 +9375,103 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of__OffsetX_6() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____OffsetX_6)); }
-	inline float get__OffsetX_6() const { return ____OffsetX_6; }
-	inline float* get_address_of__OffsetX_6() { return &____OffsetX_6; }
-	inline void set__OffsetX_6(float value)
+	inline static int32_t get_offset_of__ColorR_6() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____ColorR_6)); }
+	inline float get__ColorR_6() const { return ____ColorR_6; }
+	inline float* get_address_of__ColorR_6() { return &____ColorR_6; }
+	inline void set__ColorR_6(float value)
 	{
-		____OffsetX_6 = value;
+		____ColorR_6 = value;
 	}
 
-	inline static int32_t get_offset_of__OffsetY_7() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____OffsetY_7)); }
-	inline float get__OffsetY_7() const { return ____OffsetY_7; }
-	inline float* get_address_of__OffsetY_7() { return &____OffsetY_7; }
-	inline void set__OffsetY_7(float value)
+	inline static int32_t get_offset_of__ColorG_7() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____ColorG_7)); }
+	inline float get__ColorG_7() const { return ____ColorG_7; }
+	inline float* get_address_of__ColorG_7() { return &____ColorG_7; }
+	inline void set__ColorG_7(float value)
 	{
-		____OffsetY_7 = value;
+		____ColorG_7 = value;
 	}
 
-	inline static int32_t get_offset_of__DistanceX_8() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____DistanceX_8)); }
-	inline float get__DistanceX_8() const { return ____DistanceX_8; }
-	inline float* get_address_of__DistanceX_8() { return &____DistanceX_8; }
-	inline void set__DistanceX_8(float value)
+	inline static int32_t get_offset_of__ColorB_8() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ____ColorB_8)); }
+	inline float get__ColorB_8() const { return ____ColorB_8; }
+	inline float* get_address_of__ColorB_8() { return &____ColorB_8; }
+	inline void set__ColorB_8(float value)
 	{
-		____DistanceX_8 = value;
+		____ColorB_8 = value;
 	}
 
-	inline static int32_t get_offset_of__DistanceY_9() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____DistanceY_9)); }
-	inline float get__DistanceY_9() const { return ____DistanceY_9; }
-	inline float* get_address_of__DistanceY_9() { return &____DistanceY_9; }
-	inline void set__DistanceY_9(float value)
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
 	{
-		____DistanceY_9 = value;
+		___ShaderChange_9 = value;
 	}
 
-	inline static int32_t get_offset_of__WaveTimeX_10() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____WaveTimeX_10)); }
-	inline float get__WaveTimeX_10() const { return ____WaveTimeX_10; }
-	inline float* get_address_of__WaveTimeX_10() { return &____WaveTimeX_10; }
-	inline void set__WaveTimeX_10(float value)
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
 	{
-		____WaveTimeX_10 = value;
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
 	}
 
-	inline static int32_t get_offset_of__WaveTimeY_11() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ____WaveTimeY_11)); }
-	inline float get__WaveTimeY_11() const { return ____WaveTimeY_11; }
-	inline float* get_address_of__WaveTimeY_11() { return &____WaveTimeY_11; }
-	inline void set__WaveTimeY_11(float value)
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
 	{
-		____WaveTimeY_11 = value;
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
 	}
 
-	inline static int32_t get_offset_of_AutoPlayWaveX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlayWaveX_12)); }
-	inline bool get_AutoPlayWaveX_12() const { return ___AutoPlayWaveX_12; }
-	inline bool* get_address_of_AutoPlayWaveX_12() { return &___AutoPlayWaveX_12; }
-	inline void set_AutoPlayWaveX_12(bool value)
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_ColorRGB_t201945440, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
 	{
-		___AutoPlayWaveX_12 = value;
-	}
-
-	inline static int32_t get_offset_of_AutoPlaySpeedX_13() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlaySpeedX_13)); }
-	inline float get_AutoPlaySpeedX_13() const { return ___AutoPlaySpeedX_13; }
-	inline float* get_address_of_AutoPlaySpeedX_13() { return &___AutoPlaySpeedX_13; }
-	inline void set_AutoPlaySpeedX_13(float value)
-	{
-		___AutoPlaySpeedX_13 = value;
-	}
-
-	inline static int32_t get_offset_of_AutoPlayWaveY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlayWaveY_14)); }
-	inline bool get_AutoPlayWaveY_14() const { return ___AutoPlayWaveY_14; }
-	inline bool* get_address_of_AutoPlayWaveY_14() { return &___AutoPlayWaveY_14; }
-	inline void set_AutoPlayWaveY_14(bool value)
-	{
-		___AutoPlayWaveY_14 = value;
-	}
-
-	inline static int32_t get_offset_of_AutoPlaySpeedY_15() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoPlaySpeedY_15)); }
-	inline float get_AutoPlaySpeedY_15() const { return ___AutoPlaySpeedY_15; }
-	inline float* get_address_of_AutoPlaySpeedY_15() { return &___AutoPlaySpeedY_15; }
-	inline void set_AutoPlaySpeedY_15(float value)
-	{
-		___AutoPlaySpeedY_15 = value;
-	}
-
-	inline static int32_t get_offset_of_AutoRandom_16() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoRandom_16)); }
-	inline bool get_AutoRandom_16() const { return ___AutoRandom_16; }
-	inline bool* get_address_of_AutoRandom_16() { return &___AutoRandom_16; }
-	inline void set_AutoRandom_16(bool value)
-	{
-		___AutoRandom_16 = value;
-	}
-
-	inline static int32_t get_offset_of_AutoRandomRange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___AutoRandomRange_17)); }
-	inline float get_AutoRandomRange_17() const { return ___AutoRandomRange_17; }
-	inline float* get_address_of_AutoRandomRange_17() { return &___AutoRandomRange_17; }
-	inline void set_AutoRandomRange_17(float value)
-	{
-		___AutoRandomRange_17 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_18() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___ShaderChange_18)); }
-	inline int32_t get_ShaderChange_18() const { return ___ShaderChange_18; }
-	inline int32_t* get_address_of_ShaderChange_18() { return &___ShaderChange_18; }
-	inline void set_ShaderChange_18(int32_t value)
-	{
-		___ShaderChange_18 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___tempMaterial_19)); }
-	inline Material_t340375123 * get_tempMaterial_19() const { return ___tempMaterial_19; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_19() { return &___tempMaterial_19; }
-	inline void set_tempMaterial_19(Material_t340375123 * value)
-	{
-		___tempMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_19), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_20() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___defaultMaterial_20)); }
-	inline Material_t340375123 * get_defaultMaterial_20() const { return ___defaultMaterial_20; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_20() { return &___defaultMaterial_20; }
-	inline void set_defaultMaterial_20(Material_t340375123 * value)
-	{
-		___defaultMaterial_20 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_20), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_21() { return static_cast<int32_t>(offsetof(_2dxFX_Distortion_t3560396152, ___CanvasImage_21)); }
-	inline Image_t2670269651 * get_CanvasImage_21() const { return ___CanvasImage_21; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_21() { return &___CanvasImage_21; }
-	inline void set_CanvasImage_21(Image_t2670269651 * value)
-	{
-		___CanvasImage_21 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_21), value);
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_DISTORTION_T3560396152_H
-#ifndef _2DXFX_OFFSET_T2110223393_H
-#define _2DXFX_OFFSET_T2110223393_H
+#endif // _2DXFX_COLORRGB_T201945440_H
+#ifndef _2DXFX_COMPRESSIONFX_T738100557_H
+#define _2DXFX_COMPRESSIONFX_T738100557_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_Offset
-struct  _2dxFX_Offset_t2110223393  : public MonoBehaviour_t3962482529
+// _2dxFX_CompressionFX
+struct  _2dxFX_CompressionFX_t738100557  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_Offset::ForceMaterial
+	// UnityEngine.Material _2dxFX_CompressionFX::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Offset::ActiveChange
+	// System.Boolean _2dxFX_CompressionFX::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_Offset::shader
+	// System.String _2dxFX_CompressionFX::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_Offset::_Alpha
+	// System.Single _2dxFX_CompressionFX::_Alpha
 	float ____Alpha_5;
-	// System.Single _2dxFX_Offset::_OffsetX
-	float ____OffsetX_6;
-	// System.Single _2dxFX_Offset::_OffsetY
-	float ____OffsetY_7;
-	// System.Single _2dxFX_Offset::_ZoomX
-	float ____ZoomX_8;
-	// System.Single _2dxFX_Offset::_ZoomY
-	float ____ZoomY_9;
-	// System.Single _2dxFX_Offset::_ZoomXY
-	float ____ZoomXY_10;
-	// System.Boolean _2dxFX_Offset::_AutoScrollX
-	bool ____AutoScrollX_11;
-	// System.Single _2dxFX_Offset::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_12;
-	// System.Boolean _2dxFX_Offset::_AutoScrollY
-	bool ____AutoScrollY_13;
-	// System.Single _2dxFX_Offset::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_14;
-	// System.Single _2dxFX_Offset::_AutoScrollCountX
-	float ____AutoScrollCountX_15;
-	// System.Single _2dxFX_Offset::_AutoScrollCountY
-	float ____AutoScrollCountY_16;
-	// System.Int32 _2dxFX_Offset::ShaderChange
-	int32_t ___ShaderChange_17;
-	// UnityEngine.Material _2dxFX_Offset::tempMaterial
-	Material_t340375123 * ___tempMaterial_18;
-	// UnityEngine.Material _2dxFX_Offset::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_19;
-	// UnityEngine.UI.Image _2dxFX_Offset::CanvasImage
-	Image_t2670269651 * ___CanvasImage_20;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__OffsetX_6() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____OffsetX_6)); }
-	inline float get__OffsetX_6() const { return ____OffsetX_6; }
-	inline float* get_address_of__OffsetX_6() { return &____OffsetX_6; }
-	inline void set__OffsetX_6(float value)
-	{
-		____OffsetX_6 = value;
-	}
-
-	inline static int32_t get_offset_of__OffsetY_7() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____OffsetY_7)); }
-	inline float get__OffsetY_7() const { return ____OffsetY_7; }
-	inline float* get_address_of__OffsetY_7() { return &____OffsetY_7; }
-	inline void set__OffsetY_7(float value)
-	{
-		____OffsetY_7 = value;
-	}
-
-	inline static int32_t get_offset_of__ZoomX_8() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____ZoomX_8)); }
-	inline float get__ZoomX_8() const { return ____ZoomX_8; }
-	inline float* get_address_of__ZoomX_8() { return &____ZoomX_8; }
-	inline void set__ZoomX_8(float value)
-	{
-		____ZoomX_8 = value;
-	}
-
-	inline static int32_t get_offset_of__ZoomY_9() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____ZoomY_9)); }
-	inline float get__ZoomY_9() const { return ____ZoomY_9; }
-	inline float* get_address_of__ZoomY_9() { return &____ZoomY_9; }
-	inline void set__ZoomY_9(float value)
-	{
-		____ZoomY_9 = value;
-	}
-
-	inline static int32_t get_offset_of__ZoomXY_10() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____ZoomXY_10)); }
-	inline float get__ZoomXY_10() const { return ____ZoomXY_10; }
-	inline float* get_address_of__ZoomXY_10() { return &____ZoomXY_10; }
-	inline void set__ZoomXY_10(float value)
-	{
-		____ZoomXY_10 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollX_11)); }
-	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
-	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
-	inline void set__AutoScrollX_11(bool value)
-	{
-		____AutoScrollX_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollSpeedX_12)); }
-	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
-	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
-	inline void set__AutoScrollSpeedX_12(float value)
-	{
-		____AutoScrollSpeedX_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollY_13)); }
-	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
-	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
-	inline void set__AutoScrollY_13(bool value)
-	{
-		____AutoScrollY_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollSpeedY_14)); }
-	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
-	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
-	inline void set__AutoScrollSpeedY_14(float value)
-	{
-		____AutoScrollSpeedY_14 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollCountX_15)); }
-	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
-	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
-	inline void set__AutoScrollCountX_15(float value)
-	{
-		____AutoScrollCountX_15 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollCountY_16)); }
-	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
-	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
-	inline void set__AutoScrollCountY_16(float value)
-	{
-		____AutoScrollCountY_16 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___ShaderChange_17)); }
-	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
-	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
-	inline void set_ShaderChange_17(int32_t value)
-	{
-		___ShaderChange_17 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___tempMaterial_18)); }
-	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
-	inline void set_tempMaterial_18(Material_t340375123 * value)
-	{
-		___tempMaterial_18 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___defaultMaterial_19)); }
-	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
-	inline void set_defaultMaterial_19(Material_t340375123 * value)
-	{
-		___defaultMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___CanvasImage_20)); }
-	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
-	inline void set_CanvasImage_20(Image_t2670269651 * value)
-	{
-		___CanvasImage_20 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_OFFSET_T2110223393_H
-#ifndef _2DXFX_OUTLINE_T1004254021_H
-#define _2DXFX_OUTLINE_T1004254021_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Outline
-struct  _2dxFX_Outline_t1004254021  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Outline::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Outline::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Outline::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Outline::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Color _2dxFX_Outline::_ColorX
-	Color_t2555686324  ____ColorX_6;
-	// System.Single _2dxFX_Outline::_OutLineSpread
-	float ____OutLineSpread_7;
-	// System.Int32 _2dxFX_Outline::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_Outline::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_Outline::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_Outline::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__ColorX_6() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ____ColorX_6)); }
-	inline Color_t2555686324  get__ColorX_6() const { return ____ColorX_6; }
-	inline Color_t2555686324 * get_address_of__ColorX_6() { return &____ColorX_6; }
-	inline void set__ColorX_6(Color_t2555686324  value)
-	{
-		____ColorX_6 = value;
-	}
-
-	inline static int32_t get_offset_of__OutLineSpread_7() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ____OutLineSpread_7)); }
-	inline float get__OutLineSpread_7() const { return ____OutLineSpread_7; }
-	inline float* get_address_of__OutLineSpread_7() { return &____OutLineSpread_7; }
-	inline void set__OutLineSpread_7(float value)
-	{
-		____OutLineSpread_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_OUTLINE_T1004254021_H
-#ifndef _2DXFX_PATTERN_T2704712765_H
-#define _2DXFX_PATTERN_T2704712765_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Pattern
-struct  _2dxFX_Pattern_t2704712765  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Pattern::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Pattern::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Pattern::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Pattern::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_Pattern::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_Pattern::_OffsetX
-	float ____OffsetX_7;
-	// System.Single _2dxFX_Pattern::_OffsetY
-	float ____OffsetY_8;
-	// System.Boolean _2dxFX_Pattern::_AutoScrollX
-	bool ____AutoScrollX_9;
-	// System.Single _2dxFX_Pattern::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_10;
-	// System.Boolean _2dxFX_Pattern::_AutoScrollY
-	bool ____AutoScrollY_11;
-	// System.Single _2dxFX_Pattern::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_12;
-	// System.Single _2dxFX_Pattern::_AutoScrollCountX
-	float ____AutoScrollCountX_13;
-	// System.Single _2dxFX_Pattern::_AutoScrollCountY
-	float ____AutoScrollCountY_14;
-	// System.Int32 _2dxFX_Pattern::ShaderChange
-	int32_t ___ShaderChange_15;
-	// UnityEngine.Material _2dxFX_Pattern::tempMaterial
-	Material_t340375123 * ___tempMaterial_16;
-	// UnityEngine.Material _2dxFX_Pattern::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_17;
-	// UnityEngine.UI.Image _2dxFX_Pattern::CanvasImage
-	Image_t2670269651 * ___CanvasImage_18;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of__OffsetX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____OffsetX_7)); }
-	inline float get__OffsetX_7() const { return ____OffsetX_7; }
-	inline float* get_address_of__OffsetX_7() { return &____OffsetX_7; }
-	inline void set__OffsetX_7(float value)
-	{
-		____OffsetX_7 = value;
-	}
-
-	inline static int32_t get_offset_of__OffsetY_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____OffsetY_8)); }
-	inline float get__OffsetY_8() const { return ____OffsetY_8; }
-	inline float* get_address_of__OffsetY_8() { return &____OffsetY_8; }
-	inline void set__OffsetY_8(float value)
-	{
-		____OffsetY_8 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollX_9)); }
-	inline bool get__AutoScrollX_9() const { return ____AutoScrollX_9; }
-	inline bool* get_address_of__AutoScrollX_9() { return &____AutoScrollX_9; }
-	inline void set__AutoScrollX_9(bool value)
-	{
-		____AutoScrollX_9 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollSpeedX_10)); }
-	inline float get__AutoScrollSpeedX_10() const { return ____AutoScrollSpeedX_10; }
-	inline float* get_address_of__AutoScrollSpeedX_10() { return &____AutoScrollSpeedX_10; }
-	inline void set__AutoScrollSpeedX_10(float value)
-	{
-		____AutoScrollSpeedX_10 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollY_11)); }
-	inline bool get__AutoScrollY_11() const { return ____AutoScrollY_11; }
-	inline bool* get_address_of__AutoScrollY_11() { return &____AutoScrollY_11; }
-	inline void set__AutoScrollY_11(bool value)
-	{
-		____AutoScrollY_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_12() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollSpeedY_12)); }
-	inline float get__AutoScrollSpeedY_12() const { return ____AutoScrollSpeedY_12; }
-	inline float* get_address_of__AutoScrollSpeedY_12() { return &____AutoScrollSpeedY_12; }
-	inline void set__AutoScrollSpeedY_12(float value)
-	{
-		____AutoScrollSpeedY_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_13() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollCountX_13)); }
-	inline float get__AutoScrollCountX_13() const { return ____AutoScrollCountX_13; }
-	inline float* get_address_of__AutoScrollCountX_13() { return &____AutoScrollCountX_13; }
-	inline void set__AutoScrollCountX_13(float value)
-	{
-		____AutoScrollCountX_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollCountY_14)); }
-	inline float get__AutoScrollCountY_14() const { return ____AutoScrollCountY_14; }
-	inline float* get_address_of__AutoScrollCountY_14() { return &____AutoScrollCountY_14; }
-	inline void set__AutoScrollCountY_14(float value)
-	{
-		____AutoScrollCountY_14 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_15() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___ShaderChange_15)); }
-	inline int32_t get_ShaderChange_15() const { return ___ShaderChange_15; }
-	inline int32_t* get_address_of_ShaderChange_15() { return &___ShaderChange_15; }
-	inline void set_ShaderChange_15(int32_t value)
-	{
-		___ShaderChange_15 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_16() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___tempMaterial_16)); }
-	inline Material_t340375123 * get_tempMaterial_16() const { return ___tempMaterial_16; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_16() { return &___tempMaterial_16; }
-	inline void set_tempMaterial_16(Material_t340375123 * value)
-	{
-		___tempMaterial_16 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_16), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_17() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___defaultMaterial_17)); }
-	inline Material_t340375123 * get_defaultMaterial_17() const { return ___defaultMaterial_17; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_17() { return &___defaultMaterial_17; }
-	inline void set_defaultMaterial_17(Material_t340375123 * value)
-	{
-		___defaultMaterial_17 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_17), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_18() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___CanvasImage_18)); }
-	inline Image_t2670269651 * get_CanvasImage_18() const { return ___CanvasImage_18; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_18() { return &___CanvasImage_18; }
-	inline void set_CanvasImage_18(Image_t2670269651 * value)
-	{
-		___CanvasImage_18 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_18), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PATTERN_T2704712765_H
-#ifndef _2DXFX_NOISEANIMATED_T1634809653_H
-#define _2DXFX_NOISEANIMATED_T1634809653_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_NoiseAnimated
-struct  _2dxFX_NoiseAnimated_t1634809653  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_NoiseAnimated::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_NoiseAnimated::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_NoiseAnimated::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_NoiseAnimated::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_NoiseAnimated::Noise
-	float ___Noise_6;
-	// System.Int32 _2dxFX_NoiseAnimated::ShaderChange
+	// System.Single _2dxFX_CompressionFX::Parasite
+	float ___Parasite_6;
+	// System.Int32 _2dxFX_CompressionFX::ShaderChange
 	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_NoiseAnimated::tempMaterial
+	// UnityEngine.Material _2dxFX_CompressionFX::tempMaterial
 	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_NoiseAnimated::defaultMaterial
+	// UnityEngine.Material _2dxFX_CompressionFX::defaultMaterial
 	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_NoiseAnimated::CanvasImage
+	// UnityEngine.UI.Image _2dxFX_CompressionFX::CanvasImage
 	Image_t2670269651 * ___CanvasImage_10;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -10008,7 +9480,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -10016,7 +9488,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -10025,7 +9497,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -10033,15 +9505,15 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of_Noise_6() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___Noise_6)); }
-	inline float get_Noise_6() const { return ___Noise_6; }
-	inline float* get_address_of_Noise_6() { return &___Noise_6; }
-	inline void set_Noise_6(float value)
+	inline static int32_t get_offset_of_Parasite_6() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___Parasite_6)); }
+	inline float get_Parasite_6() const { return ___Parasite_6; }
+	inline float* get_address_of_Parasite_6() { return &___Parasite_6; }
+	inline void set_Parasite_6(float value)
 	{
-		___Noise_6 = value;
+		___Parasite_6 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___ShaderChange_7)); }
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___ShaderChange_7)); }
 	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
 	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
 	inline void set_ShaderChange_7(int32_t value)
@@ -10049,7 +9521,7 @@ public:
 		___ShaderChange_7 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___tempMaterial_8)); }
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___tempMaterial_8)); }
 	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
 	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
 	inline void set_tempMaterial_8(Material_t340375123 * value)
@@ -10058,7 +9530,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___defaultMaterial_9)); }
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___defaultMaterial_9)); }
 	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
 	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
 	inline void set_defaultMaterial_9(Material_t340375123 * value)
@@ -10067,7 +9539,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___CanvasImage_10)); }
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_CompressionFX_t738100557, ___CanvasImage_10)); }
 	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
 	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
 	inline void set_CanvasImage_10(Image_t2670269651 * value)
@@ -10080,232 +9552,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_NOISEANIMATED_T1634809653_H
-#ifndef _2DXFX_NEWTELEPORTATION_T1690554931_H
-#define _2DXFX_NEWTELEPORTATION_T1690554931_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_NewTeleportation
-struct  _2dxFX_NewTeleportation_t1690554931  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_NewTeleportation::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_NewTeleportation::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_NewTeleportation::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_NewTeleportation::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_NewTeleportation::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_NewTeleportation::_Fade
-	float ____Fade_7;
-	// System.Single _2dxFX_NewTeleportation::_HDR_Intensity
-	float ____HDR_Intensity_8;
-	// UnityEngine.Color _2dxFX_NewTeleportation::TeleportationColor
-	Color_t2555686324  ___TeleportationColor_9;
-	// System.Single _2dxFX_NewTeleportation::_Distortion
-	float ____Distortion_10;
-	// System.Single _2dxFX_NewTeleportation::_Value4
-	float ____Value4_11;
-	// System.Boolean _2dxFX_NewTeleportation::_AutoScrollX
-	bool ____AutoScrollX_12;
-	// System.Single _2dxFX_NewTeleportation::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_13;
-	// System.Boolean _2dxFX_NewTeleportation::_AutoScrollY
-	bool ____AutoScrollY_14;
-	// System.Single _2dxFX_NewTeleportation::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_15;
-	// System.Single _2dxFX_NewTeleportation::_AutoScrollCountX
-	float ____AutoScrollCountX_16;
-	// System.Single _2dxFX_NewTeleportation::_AutoScrollCountY
-	float ____AutoScrollCountY_17;
-	// System.Int32 _2dxFX_NewTeleportation::ShaderChange
-	int32_t ___ShaderChange_18;
-	// UnityEngine.Material _2dxFX_NewTeleportation::tempMaterial
-	Material_t340375123 * ___tempMaterial_19;
-	// UnityEngine.Material _2dxFX_NewTeleportation::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_20;
-	// UnityEngine.UI.Image _2dxFX_NewTeleportation::CanvasImage
-	Image_t2670269651 * ___CanvasImage_21;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of__Fade_7() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Fade_7)); }
-	inline float get__Fade_7() const { return ____Fade_7; }
-	inline float* get_address_of__Fade_7() { return &____Fade_7; }
-	inline void set__Fade_7(float value)
-	{
-		____Fade_7 = value;
-	}
-
-	inline static int32_t get_offset_of__HDR_Intensity_8() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____HDR_Intensity_8)); }
-	inline float get__HDR_Intensity_8() const { return ____HDR_Intensity_8; }
-	inline float* get_address_of__HDR_Intensity_8() { return &____HDR_Intensity_8; }
-	inline void set__HDR_Intensity_8(float value)
-	{
-		____HDR_Intensity_8 = value;
-	}
-
-	inline static int32_t get_offset_of_TeleportationColor_9() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___TeleportationColor_9)); }
-	inline Color_t2555686324  get_TeleportationColor_9() const { return ___TeleportationColor_9; }
-	inline Color_t2555686324 * get_address_of_TeleportationColor_9() { return &___TeleportationColor_9; }
-	inline void set_TeleportationColor_9(Color_t2555686324  value)
-	{
-		___TeleportationColor_9 = value;
-	}
-
-	inline static int32_t get_offset_of__Distortion_10() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Distortion_10)); }
-	inline float get__Distortion_10() const { return ____Distortion_10; }
-	inline float* get_address_of__Distortion_10() { return &____Distortion_10; }
-	inline void set__Distortion_10(float value)
-	{
-		____Distortion_10 = value;
-	}
-
-	inline static int32_t get_offset_of__Value4_11() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Value4_11)); }
-	inline float get__Value4_11() const { return ____Value4_11; }
-	inline float* get_address_of__Value4_11() { return &____Value4_11; }
-	inline void set__Value4_11(float value)
-	{
-		____Value4_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_12() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollX_12)); }
-	inline bool get__AutoScrollX_12() const { return ____AutoScrollX_12; }
-	inline bool* get_address_of__AutoScrollX_12() { return &____AutoScrollX_12; }
-	inline void set__AutoScrollX_12(bool value)
-	{
-		____AutoScrollX_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_13() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollSpeedX_13)); }
-	inline float get__AutoScrollSpeedX_13() const { return ____AutoScrollSpeedX_13; }
-	inline float* get_address_of__AutoScrollSpeedX_13() { return &____AutoScrollSpeedX_13; }
-	inline void set__AutoScrollSpeedX_13(float value)
-	{
-		____AutoScrollSpeedX_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_14() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollY_14)); }
-	inline bool get__AutoScrollY_14() const { return ____AutoScrollY_14; }
-	inline bool* get_address_of__AutoScrollY_14() { return &____AutoScrollY_14; }
-	inline void set__AutoScrollY_14(bool value)
-	{
-		____AutoScrollY_14 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_15() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollSpeedY_15)); }
-	inline float get__AutoScrollSpeedY_15() const { return ____AutoScrollSpeedY_15; }
-	inline float* get_address_of__AutoScrollSpeedY_15() { return &____AutoScrollSpeedY_15; }
-	inline void set__AutoScrollSpeedY_15(float value)
-	{
-		____AutoScrollSpeedY_15 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_16() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollCountX_16)); }
-	inline float get__AutoScrollCountX_16() const { return ____AutoScrollCountX_16; }
-	inline float* get_address_of__AutoScrollCountX_16() { return &____AutoScrollCountX_16; }
-	inline void set__AutoScrollCountX_16(float value)
-	{
-		____AutoScrollCountX_16 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_17() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollCountY_17)); }
-	inline float get__AutoScrollCountY_17() const { return ____AutoScrollCountY_17; }
-	inline float* get_address_of__AutoScrollCountY_17() { return &____AutoScrollCountY_17; }
-	inline void set__AutoScrollCountY_17(float value)
-	{
-		____AutoScrollCountY_17 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_18() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___ShaderChange_18)); }
-	inline int32_t get_ShaderChange_18() const { return ___ShaderChange_18; }
-	inline int32_t* get_address_of_ShaderChange_18() { return &___ShaderChange_18; }
-	inline void set_ShaderChange_18(int32_t value)
-	{
-		___ShaderChange_18 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___tempMaterial_19)); }
-	inline Material_t340375123 * get_tempMaterial_19() const { return ___tempMaterial_19; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_19() { return &___tempMaterial_19; }
-	inline void set_tempMaterial_19(Material_t340375123 * value)
-	{
-		___tempMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_19), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_20() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___defaultMaterial_20)); }
-	inline Material_t340375123 * get_defaultMaterial_20() const { return ___defaultMaterial_20; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_20() { return &___defaultMaterial_20; }
-	inline void set_defaultMaterial_20(Material_t340375123 * value)
-	{
-		___defaultMaterial_20 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_20), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_21() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___CanvasImage_21)); }
-	inline Image_t2670269651 * get_CanvasImage_21() const { return ___CanvasImage_21; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_21() { return &___CanvasImage_21; }
-	inline void set_CanvasImage_21(Image_t2670269651 * value)
-	{
-		___CanvasImage_21 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_21), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_NEWTELEPORTATION_T1690554931_H
+#endif // _2DXFX_COMPRESSIONFX_T738100557_H
 #ifndef _2DXFX_NEWTELEPORTATION2_T1486737971_H
 #define _2DXFX_NEWTELEPORTATION2_T1486737971_H
 #ifdef __clang__
@@ -10645,861 +9892,39 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_NOISE_T489699783_H
-#ifndef _2DXFX_PATTERNADDITIVE_T1594767377_H
-#define _2DXFX_PATTERNADDITIVE_T1594767377_H
+#ifndef _2DXFX_NOISEANIMATED_T1634809653_H
+#define _2DXFX_NOISEANIMATED_T1634809653_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_PatternAdditive
-struct  _2dxFX_PatternAdditive_t1594767377  : public MonoBehaviour_t3962482529
+// _2dxFX_NoiseAnimated
+struct  _2dxFX_NoiseAnimated_t1634809653  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_PatternAdditive::ForceMaterial
+	// UnityEngine.Material _2dxFX_NoiseAnimated::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_PatternAdditive::ActiveChange
+	// System.Boolean _2dxFX_NoiseAnimated::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_PatternAdditive::shader
+	// System.String _2dxFX_NoiseAnimated::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_PatternAdditive::_Alpha
+	// System.Single _2dxFX_NoiseAnimated::_Alpha
 	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_PatternAdditive::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_PatternAdditive::_OffsetX
-	float ____OffsetX_7;
-	// System.Single _2dxFX_PatternAdditive::_OffsetY
-	float ____OffsetY_8;
-	// System.Boolean _2dxFX_PatternAdditive::_AutoScrollX
-	bool ____AutoScrollX_9;
-	// System.Single _2dxFX_PatternAdditive::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_10;
-	// System.Boolean _2dxFX_PatternAdditive::_AutoScrollY
-	bool ____AutoScrollY_11;
-	// System.Single _2dxFX_PatternAdditive::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_12;
-	// System.Single _2dxFX_PatternAdditive::_AutoScrollCountX
-	float ____AutoScrollCountX_13;
-	// System.Single _2dxFX_PatternAdditive::_AutoScrollCountY
-	float ____AutoScrollCountY_14;
-	// System.Int32 _2dxFX_PatternAdditive::ShaderChange
-	int32_t ___ShaderChange_15;
-	// UnityEngine.Material _2dxFX_PatternAdditive::tempMaterial
-	Material_t340375123 * ___tempMaterial_16;
-	// UnityEngine.Material _2dxFX_PatternAdditive::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_17;
-	// UnityEngine.UI.Image _2dxFX_PatternAdditive::CanvasImage
-	Image_t2670269651 * ___CanvasImage_18;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of__OffsetX_7() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____OffsetX_7)); }
-	inline float get__OffsetX_7() const { return ____OffsetX_7; }
-	inline float* get_address_of__OffsetX_7() { return &____OffsetX_7; }
-	inline void set__OffsetX_7(float value)
-	{
-		____OffsetX_7 = value;
-	}
-
-	inline static int32_t get_offset_of__OffsetY_8() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____OffsetY_8)); }
-	inline float get__OffsetY_8() const { return ____OffsetY_8; }
-	inline float* get_address_of__OffsetY_8() { return &____OffsetY_8; }
-	inline void set__OffsetY_8(float value)
-	{
-		____OffsetY_8 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_9() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollX_9)); }
-	inline bool get__AutoScrollX_9() const { return ____AutoScrollX_9; }
-	inline bool* get_address_of__AutoScrollX_9() { return &____AutoScrollX_9; }
-	inline void set__AutoScrollX_9(bool value)
-	{
-		____AutoScrollX_9 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_10() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollSpeedX_10)); }
-	inline float get__AutoScrollSpeedX_10() const { return ____AutoScrollSpeedX_10; }
-	inline float* get_address_of__AutoScrollSpeedX_10() { return &____AutoScrollSpeedX_10; }
-	inline void set__AutoScrollSpeedX_10(float value)
-	{
-		____AutoScrollSpeedX_10 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_11() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollY_11)); }
-	inline bool get__AutoScrollY_11() const { return ____AutoScrollY_11; }
-	inline bool* get_address_of__AutoScrollY_11() { return &____AutoScrollY_11; }
-	inline void set__AutoScrollY_11(bool value)
-	{
-		____AutoScrollY_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_12() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollSpeedY_12)); }
-	inline float get__AutoScrollSpeedY_12() const { return ____AutoScrollSpeedY_12; }
-	inline float* get_address_of__AutoScrollSpeedY_12() { return &____AutoScrollSpeedY_12; }
-	inline void set__AutoScrollSpeedY_12(float value)
-	{
-		____AutoScrollSpeedY_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_13() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollCountX_13)); }
-	inline float get__AutoScrollCountX_13() const { return ____AutoScrollCountX_13; }
-	inline float* get_address_of__AutoScrollCountX_13() { return &____AutoScrollCountX_13; }
-	inline void set__AutoScrollCountX_13(float value)
-	{
-		____AutoScrollCountX_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_14() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollCountY_14)); }
-	inline float get__AutoScrollCountY_14() const { return ____AutoScrollCountY_14; }
-	inline float* get_address_of__AutoScrollCountY_14() { return &____AutoScrollCountY_14; }
-	inline void set__AutoScrollCountY_14(float value)
-	{
-		____AutoScrollCountY_14 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_15() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___ShaderChange_15)); }
-	inline int32_t get_ShaderChange_15() const { return ___ShaderChange_15; }
-	inline int32_t* get_address_of_ShaderChange_15() { return &___ShaderChange_15; }
-	inline void set_ShaderChange_15(int32_t value)
-	{
-		___ShaderChange_15 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_16() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___tempMaterial_16)); }
-	inline Material_t340375123 * get_tempMaterial_16() const { return ___tempMaterial_16; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_16() { return &___tempMaterial_16; }
-	inline void set_tempMaterial_16(Material_t340375123 * value)
-	{
-		___tempMaterial_16 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_16), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_17() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___defaultMaterial_17)); }
-	inline Material_t340375123 * get_defaultMaterial_17() const { return ___defaultMaterial_17; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_17() { return &___defaultMaterial_17; }
-	inline void set_defaultMaterial_17(Material_t340375123 * value)
-	{
-		___defaultMaterial_17 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_17), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_18() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___CanvasImage_18)); }
-	inline Image_t2670269651 * get_CanvasImage_18() const { return ___CanvasImage_18; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_18() { return &___CanvasImage_18; }
-	inline void set_CanvasImage_18(Image_t2670269651 * value)
-	{
-		___CanvasImage_18 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_18), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PATTERNADDITIVE_T1594767377_H
-#ifndef _2DXFX_PIXELDIE_T3065265623_H
-#define _2DXFX_PIXELDIE_T3065265623_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_PixelDie
-struct  _2dxFX_PixelDie_t3065265623  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_PixelDie::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_PixelDie::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_PixelDie::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_PixelDie::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_PixelDie::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_PixelDie::_Value1
-	float ____Value1_7;
-	// System.Single _2dxFX_PixelDie::_Value2
-	float ____Value2_8;
-	// System.Single _2dxFX_PixelDie::_Value3
-	float ____Value3_9;
-	// System.Single _2dxFX_PixelDie::_Value4
-	float ____Value4_10;
-	// System.Boolean _2dxFX_PixelDie::_AutoScrollX
-	bool ____AutoScrollX_11;
-	// System.Single _2dxFX_PixelDie::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_12;
-	// System.Boolean _2dxFX_PixelDie::_AutoScrollY
-	bool ____AutoScrollY_13;
-	// System.Single _2dxFX_PixelDie::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_14;
-	// System.Single _2dxFX_PixelDie::_AutoScrollCountX
-	float ____AutoScrollCountX_15;
-	// System.Single _2dxFX_PixelDie::_AutoScrollCountY
-	float ____AutoScrollCountY_16;
-	// System.Int32 _2dxFX_PixelDie::ShaderChange
-	int32_t ___ShaderChange_17;
-	// UnityEngine.Material _2dxFX_PixelDie::tempMaterial
-	Material_t340375123 * ___tempMaterial_18;
-	// UnityEngine.Material _2dxFX_PixelDie::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_19;
-	// UnityEngine.UI.Image _2dxFX_PixelDie::CanvasImage
-	Image_t2670269651 * ___CanvasImage_20;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value1_7)); }
-	inline float get__Value1_7() const { return ____Value1_7; }
-	inline float* get_address_of__Value1_7() { return &____Value1_7; }
-	inline void set__Value1_7(float value)
-	{
-		____Value1_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value2_8)); }
-	inline float get__Value2_8() const { return ____Value2_8; }
-	inline float* get_address_of__Value2_8() { return &____Value2_8; }
-	inline void set__Value2_8(float value)
-	{
-		____Value2_8 = value;
-	}
-
-	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value3_9)); }
-	inline float get__Value3_9() const { return ____Value3_9; }
-	inline float* get_address_of__Value3_9() { return &____Value3_9; }
-	inline void set__Value3_9(float value)
-	{
-		____Value3_9 = value;
-	}
-
-	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____Value4_10)); }
-	inline float get__Value4_10() const { return ____Value4_10; }
-	inline float* get_address_of__Value4_10() { return &____Value4_10; }
-	inline void set__Value4_10(float value)
-	{
-		____Value4_10 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollX_11)); }
-	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
-	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
-	inline void set__AutoScrollX_11(bool value)
-	{
-		____AutoScrollX_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollSpeedX_12)); }
-	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
-	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
-	inline void set__AutoScrollSpeedX_12(float value)
-	{
-		____AutoScrollSpeedX_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollY_13)); }
-	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
-	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
-	inline void set__AutoScrollY_13(bool value)
-	{
-		____AutoScrollY_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollSpeedY_14)); }
-	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
-	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
-	inline void set__AutoScrollSpeedY_14(float value)
-	{
-		____AutoScrollSpeedY_14 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollCountX_15)); }
-	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
-	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
-	inline void set__AutoScrollCountX_15(float value)
-	{
-		____AutoScrollCountX_15 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ____AutoScrollCountY_16)); }
-	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
-	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
-	inline void set__AutoScrollCountY_16(float value)
-	{
-		____AutoScrollCountY_16 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___ShaderChange_17)); }
-	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
-	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
-	inline void set_ShaderChange_17(int32_t value)
-	{
-		___ShaderChange_17 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___tempMaterial_18)); }
-	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
-	inline void set_tempMaterial_18(Material_t340375123 * value)
-	{
-		___tempMaterial_18 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___defaultMaterial_19)); }
-	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
-	inline void set_defaultMaterial_19(Material_t340375123 * value)
-	{
-		___defaultMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_PixelDie_t3065265623, ___CanvasImage_20)); }
-	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
-	inline void set_CanvasImage_20(Image_t2670269651 * value)
-	{
-		___CanvasImage_20 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PIXELDIE_T3065265623_H
-#ifndef _2DXFX_PLASMARAINBOW_T1368616563_H
-#define _2DXFX_PLASMARAINBOW_T1368616563_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_PlasmaRainbow
-struct  _2dxFX_PlasmaRainbow_t1368616563  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_PlasmaRainbow::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_PlasmaRainbow::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_PlasmaRainbow::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_PlasmaRainbow::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_PlasmaRainbow::_Colors
-	float ____Colors_6;
-	// System.Single _2dxFX_PlasmaRainbow::_Offset
-	float ____Offset_7;
-	// System.Single _2dxFX_PlasmaRainbow::_TimeX
-	float ____TimeX_8;
-	// System.Single _2dxFX_PlasmaRainbow::Speed
-	float ___Speed_9;
-	// System.Int32 _2dxFX_PlasmaRainbow::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_PlasmaRainbow::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_PlasmaRainbow::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_PlasmaRainbow::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Colors_6() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____Colors_6)); }
-	inline float get__Colors_6() const { return ____Colors_6; }
-	inline float* get_address_of__Colors_6() { return &____Colors_6; }
-	inline void set__Colors_6(float value)
-	{
-		____Colors_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____Offset_7)); }
-	inline float get__Offset_7() const { return ____Offset_7; }
-	inline float* get_address_of__Offset_7() { return &____Offset_7; }
-	inline void set__Offset_7(float value)
-	{
-		____Offset_7 = value;
-	}
-
-	inline static int32_t get_offset_of__TimeX_8() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ____TimeX_8)); }
-	inline float get__TimeX_8() const { return ____TimeX_8; }
-	inline float* get_address_of__TimeX_8() { return &____TimeX_8; }
-	inline void set__TimeX_8(float value)
-	{
-		____TimeX_8 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___Speed_9)); }
-	inline float get_Speed_9() const { return ___Speed_9; }
-	inline float* get_address_of_Speed_9() { return &___Speed_9; }
-	inline void set_Speed_9(float value)
-	{
-		___Speed_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_t1368616563, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PLASMARAINBOW_T1368616563_H
-#ifndef _2DXFX_PLASMARAINBOW_COLOR_T1556315044_H
-#define _2DXFX_PLASMARAINBOW_COLOR_T1556315044_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_PlasmaRainbow_Color
-struct  _2dxFX_PlasmaRainbow_Color_t1556315044  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_PlasmaRainbow_Color::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_PlasmaRainbow_Color::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_PlasmaRainbow_Color::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_PlasmaRainbow_Color::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_PlasmaRainbow_Color::_Colors
-	float ____Colors_6;
-	// System.Single _2dxFX_PlasmaRainbow_Color::_Offset
-	float ____Offset_7;
-	// System.Single _2dxFX_PlasmaRainbow_Color::_TimeX
-	float ____TimeX_8;
-	// System.Single _2dxFX_PlasmaRainbow_Color::Speed
-	float ___Speed_9;
-	// System.Int32 _2dxFX_PlasmaRainbow_Color::ShaderChange
-	int32_t ___ShaderChange_10;
-	// UnityEngine.Material _2dxFX_PlasmaRainbow_Color::tempMaterial
-	Material_t340375123 * ___tempMaterial_11;
-	// UnityEngine.Material _2dxFX_PlasmaRainbow_Color::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_12;
-	// UnityEngine.UI.Image _2dxFX_PlasmaRainbow_Color::CanvasImage
-	Image_t2670269651 * ___CanvasImage_13;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Colors_6() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____Colors_6)); }
-	inline float get__Colors_6() const { return ____Colors_6; }
-	inline float* get_address_of__Colors_6() { return &____Colors_6; }
-	inline void set__Colors_6(float value)
-	{
-		____Colors_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____Offset_7)); }
-	inline float get__Offset_7() const { return ____Offset_7; }
-	inline float* get_address_of__Offset_7() { return &____Offset_7; }
-	inline void set__Offset_7(float value)
-	{
-		____Offset_7 = value;
-	}
-
-	inline static int32_t get_offset_of__TimeX_8() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ____TimeX_8)); }
-	inline float get__TimeX_8() const { return ____TimeX_8; }
-	inline float* get_address_of__TimeX_8() { return &____TimeX_8; }
-	inline void set__TimeX_8(float value)
-	{
-		____TimeX_8 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_9() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___Speed_9)); }
-	inline float get_Speed_9() const { return ___Speed_9; }
-	inline float* get_address_of_Speed_9() { return &___Speed_9; }
-	inline void set_Speed_9(float value)
-	{
-		___Speed_9 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___ShaderChange_10)); }
-	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
-	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
-	inline void set_ShaderChange_10(int32_t value)
-	{
-		___ShaderChange_10 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___tempMaterial_11)); }
-	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
-	inline void set_tempMaterial_11(Material_t340375123 * value)
-	{
-		___tempMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___defaultMaterial_12)); }
-	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
-	inline void set_defaultMaterial_12(Material_t340375123 * value)
-	{
-		___defaultMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_PlasmaRainbow_Color_t1556315044, ___CanvasImage_13)); }
-	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
-	inline void set_CanvasImage_13(Image_t2670269651 * value)
-	{
-		___CanvasImage_13 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PLASMARAINBOW_COLOR_T1556315044_H
-#ifndef _2DXFX_PIXEL8BITSGB_T1674268507_H
-#define _2DXFX_PIXEL8BITSGB_T1674268507_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Pixel8bitsGB
-struct  _2dxFX_Pixel8bitsGB_t1674268507  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Pixel8bitsGB::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Pixel8bitsGB::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Pixel8bitsGB::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Pixel8bitsGB::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Pixel8bitsGB::_Size
-	float ____Size_6;
-	// System.Single _2dxFX_Pixel8bitsGB::_Offset
-	float ____Offset_7;
-	// System.Int32 _2dxFX_Pixel8bitsGB::ShaderChange
-	int32_t ___ShaderChange_8;
-	// UnityEngine.Material _2dxFX_Pixel8bitsGB::tempMaterial
-	Material_t340375123 * ___tempMaterial_9;
-	// UnityEngine.Material _2dxFX_Pixel8bitsGB::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_10;
-	// UnityEngine.UI.Image _2dxFX_Pixel8bitsGB::CanvasImage
-	Image_t2670269651 * ___CanvasImage_11;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Size_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ____Size_6)); }
-	inline float get__Size_6() const { return ____Size_6; }
-	inline float* get_address_of__Size_6() { return &____Size_6; }
-	inline void set__Size_6(float value)
-	{
-		____Size_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ____Offset_7)); }
-	inline float get__Offset_7() const { return ____Offset_7; }
-	inline float* get_address_of__Offset_7() { return &____Offset_7; }
-	inline void set__Offset_7(float value)
-	{
-		____Offset_7 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___ShaderChange_8)); }
-	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
-	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
-	inline void set_ShaderChange_8(int32_t value)
-	{
-		___ShaderChange_8 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___tempMaterial_9)); }
-	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
-	inline void set_tempMaterial_9(Material_t340375123 * value)
-	{
-		___tempMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___defaultMaterial_10)); }
-	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
-	inline void set_defaultMaterial_10(Material_t340375123 * value)
-	{
-		___defaultMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___CanvasImage_11)); }
-	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
-	inline void set_CanvasImage_11(Image_t2670269651 * value)
-	{
-		___CanvasImage_11 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PIXEL8BITSGB_T1674268507_H
-#ifndef _2DXFX_PIXEL_T1222618043_H
-#define _2DXFX_PIXEL_T1222618043_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Pixel
-struct  _2dxFX_Pixel_t1222618043  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Pixel::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Pixel::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Pixel::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Pixel::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Pixel::_Offset
-	float ____Offset_6;
-	// System.Int32 _2dxFX_Pixel::ShaderChange
+	// System.Single _2dxFX_NoiseAnimated::Noise
+	float ___Noise_6;
+	// System.Int32 _2dxFX_NoiseAnimated::ShaderChange
 	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_Pixel::tempMaterial
+	// UnityEngine.Material _2dxFX_NoiseAnimated::tempMaterial
 	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_Pixel::defaultMaterial
+	// UnityEngine.Material _2dxFX_NoiseAnimated::defaultMaterial
 	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_Pixel::CanvasImage
+	// UnityEngine.UI.Image _2dxFX_NoiseAnimated::CanvasImage
 	Image_t2670269651 * ___CanvasImage_10;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -11508,7 +9933,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -11516,7 +9941,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -11525,7 +9950,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -11533,15 +9958,15 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of__Offset_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ____Offset_6)); }
-	inline float get__Offset_6() const { return ____Offset_6; }
-	inline float* get_address_of__Offset_6() { return &____Offset_6; }
-	inline void set__Offset_6(float value)
+	inline static int32_t get_offset_of_Noise_6() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___Noise_6)); }
+	inline float get_Noise_6() const { return ___Noise_6; }
+	inline float* get_address_of_Noise_6() { return &___Noise_6; }
+	inline void set_Noise_6(float value)
 	{
-		____Offset_6 = value;
+		___Noise_6 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___ShaderChange_7)); }
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___ShaderChange_7)); }
 	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
 	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
 	inline void set_ShaderChange_7(int32_t value)
@@ -11549,7 +9974,7 @@ public:
 		___ShaderChange_7 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___tempMaterial_8)); }
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___tempMaterial_8)); }
 	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
 	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
 	inline void set_tempMaterial_8(Material_t340375123 * value)
@@ -11558,7 +9983,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___defaultMaterial_9)); }
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___defaultMaterial_9)); }
 	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
 	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
 	inline void set_defaultMaterial_9(Material_t340375123 * value)
@@ -11567,7 +9992,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___CanvasImage_10)); }
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_NoiseAnimated_t1634809653, ___CanvasImage_10)); }
 	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
 	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
 	inline void set_CanvasImage_10(Image_t2670269651 * value)
@@ -11580,636 +10005,62 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_PIXEL_T1222618043_H
-#ifndef _2DXFX_PIXEL8BITSBW_T1365288922_H
-#define _2DXFX_PIXEL8BITSBW_T1365288922_H
+#endif // _2DXFX_NOISEANIMATED_T1634809653_H
+#ifndef _2DXFX_NEWTELEPORTATION_T1690554931_H
+#define _2DXFX_NEWTELEPORTATION_T1690554931_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_Pixel8bitsBW
-struct  _2dxFX_Pixel8bitsBW_t1365288922  : public MonoBehaviour_t3962482529
+// _2dxFX_NewTeleportation
+struct  _2dxFX_NewTeleportation_t1690554931  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_Pixel8bitsBW::ForceMaterial
+	// UnityEngine.Material _2dxFX_NewTeleportation::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Pixel8bitsBW::ActiveChange
+	// System.Boolean _2dxFX_NewTeleportation::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_Pixel8bitsBW::shader
+	// System.String _2dxFX_NewTeleportation::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_Pixel8bitsBW::_Alpha
+	// System.Single _2dxFX_NewTeleportation::_Alpha
 	float ____Alpha_5;
-	// System.Single _2dxFX_Pixel8bitsBW::_Size
-	float ____Size_6;
-	// System.Single _2dxFX_Pixel8bitsBW::_Offset
-	float ____Offset_7;
-	// System.Single _2dxFX_Pixel8bitsBW::_Offset2
-	float ____Offset2_8;
-	// System.Int32 _2dxFX_Pixel8bitsBW::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_Pixel8bitsBW::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_Pixel8bitsBW::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_Pixel8bitsBW::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Size_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Size_6)); }
-	inline float get__Size_6() const { return ____Size_6; }
-	inline float* get_address_of__Size_6() { return &____Size_6; }
-	inline void set__Size_6(float value)
-	{
-		____Size_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Offset_7)); }
-	inline float get__Offset_7() const { return ____Offset_7; }
-	inline float* get_address_of__Offset_7() { return &____Offset_7; }
-	inline void set__Offset_7(float value)
-	{
-		____Offset_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Offset2_8)); }
-	inline float get__Offset2_8() const { return ____Offset2_8; }
-	inline float* get_address_of__Offset2_8() { return &____Offset2_8; }
-	inline void set__Offset2_8(float value)
-	{
-		____Offset2_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PIXEL8BITSBW_T1365288922_H
-#ifndef _2DXFX_PIXEL8BITSC64_T1978114015_H
-#define _2DXFX_PIXEL8BITSC64_T1978114015_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Pixel8bitsC64
-struct  _2dxFX_Pixel8bitsC64_t1978114015  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Pixel8bitsC64::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Pixel8bitsC64::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Pixel8bitsC64::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Pixel8bitsC64::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Pixel8bitsC64::_Size
-	float ____Size_6;
-	// System.Single _2dxFX_Pixel8bitsC64::_Offset
-	float ____Offset_7;
-	// System.Single _2dxFX_Pixel8bitsC64::_Offset2
-	float ____Offset2_8;
-	// System.Int32 _2dxFX_Pixel8bitsC64::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_Pixel8bitsC64::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_Pixel8bitsC64::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_Pixel8bitsC64::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__Size_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Size_6)); }
-	inline float get__Size_6() const { return ____Size_6; }
-	inline float* get_address_of__Size_6() { return &____Size_6; }
-	inline void set__Size_6(float value)
-	{
-		____Size_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Offset_7)); }
-	inline float get__Offset_7() const { return ____Offset_7; }
-	inline float* get_address_of__Offset_7() { return &____Offset_7; }
-	inline void set__Offset_7(float value)
-	{
-		____Offset_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Offset2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Offset2_8)); }
-	inline float get__Offset2_8() const { return ____Offset2_8; }
-	inline float* get_address_of__Offset2_8() { return &____Offset2_8; }
-	inline void set__Offset2_8(float value)
-	{
-		____Offset2_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_PIXEL8BITSC64_T1978114015_H
-#ifndef _2DXFX_JELLY_T3102112626_H
-#define _2DXFX_JELLY_T3102112626_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Jelly
-struct  _2dxFX_Jelly_t3102112626  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Jelly::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Jelly::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Jelly::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Jelly::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_Jelly::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_Jelly::Inside
-	float ___Inside_7;
-	// System.Single _2dxFX_Jelly::Speed
-	float ___Speed_8;
-	// System.Int32 _2dxFX_Jelly::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_Jelly::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_Jelly::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_Jelly::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
-	{
-		___Heat_6 = value;
-	}
-
-	inline static int32_t get_offset_of_Inside_7() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___Inside_7)); }
-	inline float get_Inside_7() const { return ___Inside_7; }
-	inline float* get_address_of_Inside_7() { return &___Inside_7; }
-	inline void set_Inside_7(float value)
-	{
-		___Inside_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___Speed_8)); }
-	inline float get_Speed_8() const { return ___Speed_8; }
-	inline float* get_address_of_Speed_8() { return &___Speed_8; }
-	inline void set_Speed_8(float value)
-	{
-		___Speed_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_JELLY_T3102112626_H
-#ifndef _2DXFX_JELLYAUTOMOVE_T1508469494_H
-#define _2DXFX_JELLYAUTOMOVE_T1508469494_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_JellyAutoMove
-struct  _2dxFX_JellyAutoMove_t1508469494  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_JellyAutoMove::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_JellyAutoMove::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_JellyAutoMove::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_JellyAutoMove::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_JellyAutoMove::Heat
-	float ___Heat_6;
-	// System.Single _2dxFX_JellyAutoMove::RandomPos
-	float ___RandomPos_7;
-	// System.Single _2dxFX_JellyAutoMove::Inside
-	float ___Inside_8;
-	// System.Single _2dxFX_JellyAutoMove::Stabilisation
-	float ___Stabilisation_9;
-	// System.Single _2dxFX_JellyAutoMove::Speed
-	float ___Speed_10;
-	// System.Int32 _2dxFX_JellyAutoMove::ShaderChange
-	int32_t ___ShaderChange_11;
-	// UnityEngine.Material _2dxFX_JellyAutoMove::tempMaterial
-	Material_t340375123 * ___tempMaterial_12;
-	// UnityEngine.Material _2dxFX_JellyAutoMove::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_13;
-	// UnityEngine.UI.Image _2dxFX_JellyAutoMove::CanvasImage
-	Image_t2670269651 * ___CanvasImage_14;
-	// UnityEngine.Vector3 _2dxFX_JellyAutoMove::SaveMove1
-	Vector3_t3722313464  ___SaveMove1_15;
-	// UnityEngine.Vector3 _2dxFX_JellyAutoMove::SaveMove2
-	Vector3_t3722313464  ___SaveMove2_16;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Heat_6)); }
-	inline float get_Heat_6() const { return ___Heat_6; }
-	inline float* get_address_of_Heat_6() { return &___Heat_6; }
-	inline void set_Heat_6(float value)
-	{
-		___Heat_6 = value;
-	}
-
-	inline static int32_t get_offset_of_RandomPos_7() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___RandomPos_7)); }
-	inline float get_RandomPos_7() const { return ___RandomPos_7; }
-	inline float* get_address_of_RandomPos_7() { return &___RandomPos_7; }
-	inline void set_RandomPos_7(float value)
-	{
-		___RandomPos_7 = value;
-	}
-
-	inline static int32_t get_offset_of_Inside_8() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Inside_8)); }
-	inline float get_Inside_8() const { return ___Inside_8; }
-	inline float* get_address_of_Inside_8() { return &___Inside_8; }
-	inline void set_Inside_8(float value)
-	{
-		___Inside_8 = value;
-	}
-
-	inline static int32_t get_offset_of_Stabilisation_9() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Stabilisation_9)); }
-	inline float get_Stabilisation_9() const { return ___Stabilisation_9; }
-	inline float* get_address_of_Stabilisation_9() { return &___Stabilisation_9; }
-	inline void set_Stabilisation_9(float value)
-	{
-		___Stabilisation_9 = value;
-	}
-
-	inline static int32_t get_offset_of_Speed_10() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Speed_10)); }
-	inline float get_Speed_10() const { return ___Speed_10; }
-	inline float* get_address_of_Speed_10() { return &___Speed_10; }
-	inline void set_Speed_10(float value)
-	{
-		___Speed_10 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_11() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___ShaderChange_11)); }
-	inline int32_t get_ShaderChange_11() const { return ___ShaderChange_11; }
-	inline int32_t* get_address_of_ShaderChange_11() { return &___ShaderChange_11; }
-	inline void set_ShaderChange_11(int32_t value)
-	{
-		___ShaderChange_11 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___tempMaterial_12)); }
-	inline Material_t340375123 * get_tempMaterial_12() const { return ___tempMaterial_12; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_12() { return &___tempMaterial_12; }
-	inline void set_tempMaterial_12(Material_t340375123 * value)
-	{
-		___tempMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___defaultMaterial_13)); }
-	inline Material_t340375123 * get_defaultMaterial_13() const { return ___defaultMaterial_13; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_13() { return &___defaultMaterial_13; }
-	inline void set_defaultMaterial_13(Material_t340375123 * value)
-	{
-		___defaultMaterial_13 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_13), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_14() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___CanvasImage_14)); }
-	inline Image_t2670269651 * get_CanvasImage_14() const { return ___CanvasImage_14; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_14() { return &___CanvasImage_14; }
-	inline void set_CanvasImage_14(Image_t2670269651 * value)
-	{
-		___CanvasImage_14 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_14), value);
-	}
-
-	inline static int32_t get_offset_of_SaveMove1_15() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___SaveMove1_15)); }
-	inline Vector3_t3722313464  get_SaveMove1_15() const { return ___SaveMove1_15; }
-	inline Vector3_t3722313464 * get_address_of_SaveMove1_15() { return &___SaveMove1_15; }
-	inline void set_SaveMove1_15(Vector3_t3722313464  value)
-	{
-		___SaveMove1_15 = value;
-	}
-
-	inline static int32_t get_offset_of_SaveMove2_16() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___SaveMove2_16)); }
-	inline Vector3_t3722313464  get_SaveMove2_16() const { return ___SaveMove2_16; }
-	inline Vector3_t3722313464 * get_address_of_SaveMove2_16() { return &___SaveMove2_16; }
-	inline void set_SaveMove2_16(Vector3_t3722313464  value)
-	{
-		___SaveMove2_16 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_JELLYAUTOMOVE_T1508469494_H
-#ifndef _2DXFX_LIGHTNING_T3745231527_H
-#define _2DXFX_LIGHTNING_T3745231527_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Lightning
-struct  _2dxFX_Lightning_t3745231527  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Lightning::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Lightning::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Lightning::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Lightning::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_Lightning::__MainTex2
+	// UnityEngine.Texture2D _2dxFX_NewTeleportation::__MainTex2
 	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_Lightning::_Value1
-	float ____Value1_7;
-	// System.Single _2dxFX_Lightning::_Value2
-	float ____Value2_8;
-	// System.Single _2dxFX_Lightning::_Value3
-	float ____Value3_9;
-	// System.Single _2dxFX_Lightning::_Value4
-	float ____Value4_10;
-	// System.Boolean _2dxFX_Lightning::_AutoScrollX
-	bool ____AutoScrollX_11;
-	// System.Single _2dxFX_Lightning::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_12;
-	// System.Boolean _2dxFX_Lightning::_AutoScrollY
-	bool ____AutoScrollY_13;
-	// System.Single _2dxFX_Lightning::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_14;
-	// System.Single _2dxFX_Lightning::_AutoScrollCountX
-	float ____AutoScrollCountX_15;
-	// System.Single _2dxFX_Lightning::_AutoScrollCountY
-	float ____AutoScrollCountY_16;
-	// System.Int32 _2dxFX_Lightning::ShaderChange
-	int32_t ___ShaderChange_17;
-	// UnityEngine.Material _2dxFX_Lightning::tempMaterial
-	Material_t340375123 * ___tempMaterial_18;
-	// UnityEngine.Material _2dxFX_Lightning::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_19;
-	// UnityEngine.UI.Image _2dxFX_Lightning::CanvasImage
-	Image_t2670269651 * ___CanvasImage_20;
+	// System.Single _2dxFX_NewTeleportation::_Fade
+	float ____Fade_7;
+	// System.Single _2dxFX_NewTeleportation::_HDR_Intensity
+	float ____HDR_Intensity_8;
+	// UnityEngine.Color _2dxFX_NewTeleportation::TeleportationColor
+	Color_t2555686324  ___TeleportationColor_9;
+	// System.Single _2dxFX_NewTeleportation::_Distortion
+	float ____Distortion_10;
+	// System.Single _2dxFX_NewTeleportation::_Value4
+	float ____Value4_11;
+	// System.Boolean _2dxFX_NewTeleportation::_AutoScrollX
+	bool ____AutoScrollX_12;
+	// System.Single _2dxFX_NewTeleportation::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_13;
+	// System.Boolean _2dxFX_NewTeleportation::_AutoScrollY
+	bool ____AutoScrollY_14;
+	// System.Single _2dxFX_NewTeleportation::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_15;
+	// System.Single _2dxFX_NewTeleportation::_AutoScrollCountX
+	float ____AutoScrollCountX_16;
+	// System.Single _2dxFX_NewTeleportation::_AutoScrollCountY
+	float ____AutoScrollCountY_17;
+	// System.Int32 _2dxFX_NewTeleportation::ShaderChange
+	int32_t ___ShaderChange_18;
+	// UnityEngine.Material _2dxFX_NewTeleportation::tempMaterial
+	Material_t340375123 * ___tempMaterial_19;
+	// UnityEngine.Material _2dxFX_NewTeleportation::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_20;
+	// UnityEngine.UI.Image _2dxFX_NewTeleportation::CanvasImage
+	Image_t2670269651 * ___CanvasImage_21;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -12218,7 +10069,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -12226,7 +10077,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -12235,7 +10086,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -12243,7 +10094,7 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, _____MainTex2_6)); }
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, _____MainTex2_6)); }
 	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
 	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
 	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
@@ -12252,804 +10103,134 @@ public:
 		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
 	}
 
-	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value1_7)); }
-	inline float get__Value1_7() const { return ____Value1_7; }
-	inline float* get_address_of__Value1_7() { return &____Value1_7; }
-	inline void set__Value1_7(float value)
+	inline static int32_t get_offset_of__Fade_7() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Fade_7)); }
+	inline float get__Fade_7() const { return ____Fade_7; }
+	inline float* get_address_of__Fade_7() { return &____Fade_7; }
+	inline void set__Fade_7(float value)
 	{
-		____Value1_7 = value;
+		____Fade_7 = value;
 	}
 
-	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value2_8)); }
-	inline float get__Value2_8() const { return ____Value2_8; }
-	inline float* get_address_of__Value2_8() { return &____Value2_8; }
-	inline void set__Value2_8(float value)
+	inline static int32_t get_offset_of__HDR_Intensity_8() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____HDR_Intensity_8)); }
+	inline float get__HDR_Intensity_8() const { return ____HDR_Intensity_8; }
+	inline float* get_address_of__HDR_Intensity_8() { return &____HDR_Intensity_8; }
+	inline void set__HDR_Intensity_8(float value)
 	{
-		____Value2_8 = value;
+		____HDR_Intensity_8 = value;
 	}
 
-	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value3_9)); }
-	inline float get__Value3_9() const { return ____Value3_9; }
-	inline float* get_address_of__Value3_9() { return &____Value3_9; }
-	inline void set__Value3_9(float value)
+	inline static int32_t get_offset_of_TeleportationColor_9() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___TeleportationColor_9)); }
+	inline Color_t2555686324  get_TeleportationColor_9() const { return ___TeleportationColor_9; }
+	inline Color_t2555686324 * get_address_of_TeleportationColor_9() { return &___TeleportationColor_9; }
+	inline void set_TeleportationColor_9(Color_t2555686324  value)
 	{
-		____Value3_9 = value;
+		___TeleportationColor_9 = value;
 	}
 
-	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value4_10)); }
-	inline float get__Value4_10() const { return ____Value4_10; }
-	inline float* get_address_of__Value4_10() { return &____Value4_10; }
-	inline void set__Value4_10(float value)
+	inline static int32_t get_offset_of__Distortion_10() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Distortion_10)); }
+	inline float get__Distortion_10() const { return ____Distortion_10; }
+	inline float* get_address_of__Distortion_10() { return &____Distortion_10; }
+	inline void set__Distortion_10(float value)
 	{
-		____Value4_10 = value;
+		____Distortion_10 = value;
 	}
 
-	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollX_11)); }
-	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
-	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
-	inline void set__AutoScrollX_11(bool value)
+	inline static int32_t get_offset_of__Value4_11() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____Value4_11)); }
+	inline float get__Value4_11() const { return ____Value4_11; }
+	inline float* get_address_of__Value4_11() { return &____Value4_11; }
+	inline void set__Value4_11(float value)
 	{
-		____AutoScrollX_11 = value;
+		____Value4_11 = value;
 	}
 
-	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollSpeedX_12)); }
-	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
-	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
-	inline void set__AutoScrollSpeedX_12(float value)
+	inline static int32_t get_offset_of__AutoScrollX_12() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollX_12)); }
+	inline bool get__AutoScrollX_12() const { return ____AutoScrollX_12; }
+	inline bool* get_address_of__AutoScrollX_12() { return &____AutoScrollX_12; }
+	inline void set__AutoScrollX_12(bool value)
 	{
-		____AutoScrollSpeedX_12 = value;
+		____AutoScrollX_12 = value;
 	}
 
-	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollY_13)); }
-	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
-	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
-	inline void set__AutoScrollY_13(bool value)
+	inline static int32_t get_offset_of__AutoScrollSpeedX_13() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollSpeedX_13)); }
+	inline float get__AutoScrollSpeedX_13() const { return ____AutoScrollSpeedX_13; }
+	inline float* get_address_of__AutoScrollSpeedX_13() { return &____AutoScrollSpeedX_13; }
+	inline void set__AutoScrollSpeedX_13(float value)
 	{
-		____AutoScrollY_13 = value;
+		____AutoScrollSpeedX_13 = value;
 	}
 
-	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollSpeedY_14)); }
-	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
-	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
-	inline void set__AutoScrollSpeedY_14(float value)
+	inline static int32_t get_offset_of__AutoScrollY_14() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollY_14)); }
+	inline bool get__AutoScrollY_14() const { return ____AutoScrollY_14; }
+	inline bool* get_address_of__AutoScrollY_14() { return &____AutoScrollY_14; }
+	inline void set__AutoScrollY_14(bool value)
 	{
-		____AutoScrollSpeedY_14 = value;
+		____AutoScrollY_14 = value;
 	}
 
-	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollCountX_15)); }
-	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
-	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
-	inline void set__AutoScrollCountX_15(float value)
+	inline static int32_t get_offset_of__AutoScrollSpeedY_15() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollSpeedY_15)); }
+	inline float get__AutoScrollSpeedY_15() const { return ____AutoScrollSpeedY_15; }
+	inline float* get_address_of__AutoScrollSpeedY_15() { return &____AutoScrollSpeedY_15; }
+	inline void set__AutoScrollSpeedY_15(float value)
 	{
-		____AutoScrollCountX_15 = value;
+		____AutoScrollSpeedY_15 = value;
 	}
 
-	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollCountY_16)); }
-	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
-	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
-	inline void set__AutoScrollCountY_16(float value)
+	inline static int32_t get_offset_of__AutoScrollCountX_16() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollCountX_16)); }
+	inline float get__AutoScrollCountX_16() const { return ____AutoScrollCountX_16; }
+	inline float* get_address_of__AutoScrollCountX_16() { return &____AutoScrollCountX_16; }
+	inline void set__AutoScrollCountX_16(float value)
 	{
-		____AutoScrollCountY_16 = value;
+		____AutoScrollCountX_16 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___ShaderChange_17)); }
-	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
-	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
-	inline void set_ShaderChange_17(int32_t value)
+	inline static int32_t get_offset_of__AutoScrollCountY_17() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ____AutoScrollCountY_17)); }
+	inline float get__AutoScrollCountY_17() const { return ____AutoScrollCountY_17; }
+	inline float* get_address_of__AutoScrollCountY_17() { return &____AutoScrollCountY_17; }
+	inline void set__AutoScrollCountY_17(float value)
 	{
-		___ShaderChange_17 = value;
+		____AutoScrollCountY_17 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___tempMaterial_18)); }
-	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
-	inline void set_tempMaterial_18(Material_t340375123 * value)
+	inline static int32_t get_offset_of_ShaderChange_18() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___ShaderChange_18)); }
+	inline int32_t get_ShaderChange_18() const { return ___ShaderChange_18; }
+	inline int32_t* get_address_of_ShaderChange_18() { return &___ShaderChange_18; }
+	inline void set_ShaderChange_18(int32_t value)
 	{
-		___tempMaterial_18 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
+		___ShaderChange_18 = value;
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___defaultMaterial_19)); }
-	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
-	inline void set_defaultMaterial_19(Material_t340375123 * value)
+	inline static int32_t get_offset_of_tempMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___tempMaterial_19)); }
+	inline Material_t340375123 * get_tempMaterial_19() const { return ___tempMaterial_19; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_19() { return &___tempMaterial_19; }
+	inline void set_tempMaterial_19(Material_t340375123 * value)
 	{
-		___defaultMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
+		___tempMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_19), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___CanvasImage_20)); }
-	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
-	inline void set_CanvasImage_20(Image_t2670269651 * value)
+	inline static int32_t get_offset_of_defaultMaterial_20() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___defaultMaterial_20)); }
+	inline Material_t340375123 * get_defaultMaterial_20() const { return ___defaultMaterial_20; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_20() { return &___defaultMaterial_20; }
+	inline void set_defaultMaterial_20(Material_t340375123 * value)
 	{
-		___CanvasImage_20 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_LIGHTNING_T3745231527_H
-#ifndef _2DXFX_HSV_T3595236558_H
-#define _2DXFX_HSV_T3595236558_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_HSV
-struct  _2dxFX_HSV_t3595236558  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_HSV::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_HSV::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_HSV::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_HSV::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_HSV::_HueShift
-	float ____HueShift_6;
-	// System.Single _2dxFX_HSV::_Saturation
-	float ____Saturation_7;
-	// System.Single _2dxFX_HSV::_ValueBrightness
-	float ____ValueBrightness_8;
-	// System.Int32 _2dxFX_HSV::ShaderChange
-	int32_t ___ShaderChange_9;
-	// UnityEngine.Material _2dxFX_HSV::tempMaterial
-	Material_t340375123 * ___tempMaterial_10;
-	// UnityEngine.Material _2dxFX_HSV::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_11;
-	// UnityEngine.UI.Image _2dxFX_HSV::CanvasImage
-	Image_t2670269651 * ___CanvasImage_12;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+		___defaultMaterial_20 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_20), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
+	inline static int32_t get_offset_of_CanvasImage_21() { return static_cast<int32_t>(offsetof(_2dxFX_NewTeleportation_t1690554931, ___CanvasImage_21)); }
+	inline Image_t2670269651 * get_CanvasImage_21() const { return ___CanvasImage_21; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_21() { return &___CanvasImage_21; }
+	inline void set_CanvasImage_21(Image_t2670269651 * value)
 	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of__HueShift_6() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____HueShift_6)); }
-	inline float get__HueShift_6() const { return ____HueShift_6; }
-	inline float* get_address_of__HueShift_6() { return &____HueShift_6; }
-	inline void set__HueShift_6(float value)
-	{
-		____HueShift_6 = value;
-	}
-
-	inline static int32_t get_offset_of__Saturation_7() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____Saturation_7)); }
-	inline float get__Saturation_7() const { return ____Saturation_7; }
-	inline float* get_address_of__Saturation_7() { return &____Saturation_7; }
-	inline void set__Saturation_7(float value)
-	{
-		____Saturation_7 = value;
-	}
-
-	inline static int32_t get_offset_of__ValueBrightness_8() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____ValueBrightness_8)); }
-	inline float get__ValueBrightness_8() const { return ____ValueBrightness_8; }
-	inline float* get_address_of__ValueBrightness_8() { return &____ValueBrightness_8; }
-	inline void set__ValueBrightness_8(float value)
-	{
-		____ValueBrightness_8 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___ShaderChange_9)); }
-	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
-	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
-	inline void set_ShaderChange_9(int32_t value)
-	{
-		___ShaderChange_9 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___tempMaterial_10)); }
-	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
-	inline void set_tempMaterial_10(Material_t340375123 * value)
-	{
-		___tempMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___defaultMaterial_11)); }
-	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
-	inline void set_defaultMaterial_11(Material_t340375123 * value)
-	{
-		___defaultMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___CanvasImage_12)); }
-	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
-	inline void set_CanvasImage_12(Image_t2670269651 * value)
-	{
-		___CanvasImage_12 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+		___CanvasImage_21 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_21), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_HSV_T3595236558_H
-#ifndef _2DXFX_ICE_T1635841214_H
-#define _2DXFX_ICE_T1635841214_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_Ice
-struct  _2dxFX_Ice_t1635841214  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_Ice::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_Ice::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_Ice::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_Ice::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_Ice::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_Ice::_Value1
-	float ____Value1_7;
-	// System.Single _2dxFX_Ice::_Value2
-	float ____Value2_8;
-	// System.Single _2dxFX_Ice::_Value3
-	float ____Value3_9;
-	// System.Single _2dxFX_Ice::_Value4
-	float ____Value4_10;
-	// System.Boolean _2dxFX_Ice::_AutoScrollX
-	bool ____AutoScrollX_11;
-	// System.Single _2dxFX_Ice::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_12;
-	// System.Boolean _2dxFX_Ice::_AutoScrollY
-	bool ____AutoScrollY_13;
-	// System.Single _2dxFX_Ice::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_14;
-	// System.Single _2dxFX_Ice::_AutoScrollCountX
-	float ____AutoScrollCountX_15;
-	// System.Single _2dxFX_Ice::_AutoScrollCountY
-	float ____AutoScrollCountY_16;
-	// System.Int32 _2dxFX_Ice::ShaderChange
-	int32_t ___ShaderChange_17;
-	// UnityEngine.Material _2dxFX_Ice::tempMaterial
-	Material_t340375123 * ___tempMaterial_18;
-	// UnityEngine.Material _2dxFX_Ice::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_19;
-	// UnityEngine.UI.Image _2dxFX_Ice::CanvasImage
-	Image_t2670269651 * ___CanvasImage_20;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value1_7)); }
-	inline float get__Value1_7() const { return ____Value1_7; }
-	inline float* get_address_of__Value1_7() { return &____Value1_7; }
-	inline void set__Value1_7(float value)
-	{
-		____Value1_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value2_8)); }
-	inline float get__Value2_8() const { return ____Value2_8; }
-	inline float* get_address_of__Value2_8() { return &____Value2_8; }
-	inline void set__Value2_8(float value)
-	{
-		____Value2_8 = value;
-	}
-
-	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value3_9)); }
-	inline float get__Value3_9() const { return ____Value3_9; }
-	inline float* get_address_of__Value3_9() { return &____Value3_9; }
-	inline void set__Value3_9(float value)
-	{
-		____Value3_9 = value;
-	}
-
-	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value4_10)); }
-	inline float get__Value4_10() const { return ____Value4_10; }
-	inline float* get_address_of__Value4_10() { return &____Value4_10; }
-	inline void set__Value4_10(float value)
-	{
-		____Value4_10 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollX_11)); }
-	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
-	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
-	inline void set__AutoScrollX_11(bool value)
-	{
-		____AutoScrollX_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollSpeedX_12)); }
-	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
-	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
-	inline void set__AutoScrollSpeedX_12(float value)
-	{
-		____AutoScrollSpeedX_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollY_13)); }
-	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
-	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
-	inline void set__AutoScrollY_13(bool value)
-	{
-		____AutoScrollY_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollSpeedY_14)); }
-	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
-	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
-	inline void set__AutoScrollSpeedY_14(float value)
-	{
-		____AutoScrollSpeedY_14 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollCountX_15)); }
-	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
-	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
-	inline void set__AutoScrollCountX_15(float value)
-	{
-		____AutoScrollCountX_15 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollCountY_16)); }
-	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
-	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
-	inline void set__AutoScrollCountY_16(float value)
-	{
-		____AutoScrollCountY_16 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___ShaderChange_17)); }
-	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
-	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
-	inline void set_ShaderChange_17(int32_t value)
-	{
-		___ShaderChange_17 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___tempMaterial_18)); }
-	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
-	inline void set_tempMaterial_18(Material_t340375123 * value)
-	{
-		___tempMaterial_18 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___defaultMaterial_19)); }
-	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
-	inline void set_defaultMaterial_19(Material_t340375123 * value)
-	{
-		___defaultMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___CanvasImage_20)); }
-	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
-	inline void set_CanvasImage_20(Image_t2670269651 * value)
-	{
-		___CanvasImage_20 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_ICE_T1635841214_H
-#ifndef _2DXFX_ICEDFX_T2117229429_H
-#define _2DXFX_ICEDFX_T2117229429_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_IcedFX
-struct  _2dxFX_IcedFX_t2117229429  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_IcedFX::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_IcedFX::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_IcedFX::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_IcedFX::_Alpha
-	float ____Alpha_5;
-	// System.Single _2dxFX_IcedFX::Iced
-	float ___Iced_6;
-	// System.Int32 _2dxFX_IcedFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_IcedFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_IcedFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_IcedFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of_Iced_6() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___Iced_6)); }
-	inline float get_Iced_6() const { return ___Iced_6; }
-	inline float* get_address_of_Iced_6() { return &___Iced_6; }
-	inline void set_Iced_6(float value)
-	{
-		___Iced_6 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___ShaderChange_7)); }
-	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
-	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
-	inline void set_ShaderChange_7(int32_t value)
-	{
-		___ShaderChange_7 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___tempMaterial_8)); }
-	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
-	inline void set_tempMaterial_8(Material_t340375123 * value)
-	{
-		___tempMaterial_8 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___defaultMaterial_9)); }
-	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
-	inline void set_defaultMaterial_9(Material_t340375123 * value)
-	{
-		___defaultMaterial_9 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___CanvasImage_10)); }
-	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
-	inline void set_CanvasImage_10(Image_t2670269651 * value)
-	{
-		___CanvasImage_10 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_ICEDFX_T2117229429_H
-#ifndef _2DXFX_LIGHTNINGBOLT_T3274298740_H
-#define _2DXFX_LIGHTNINGBOLT_T3274298740_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// _2dxFX_LightningBolt
-struct  _2dxFX_LightningBolt_t3274298740  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Material _2dxFX_LightningBolt::ForceMaterial
-	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_LightningBolt::ActiveChange
-	bool ___ActiveChange_3;
-	// System.String _2dxFX_LightningBolt::shader
-	String_t* ___shader_4;
-	// System.Single _2dxFX_LightningBolt::_Alpha
-	float ____Alpha_5;
-	// UnityEngine.Texture2D _2dxFX_LightningBolt::__MainTex2
-	Texture2D_t3840446185 * _____MainTex2_6;
-	// System.Single _2dxFX_LightningBolt::_Value1
-	float ____Value1_7;
-	// System.Single _2dxFX_LightningBolt::_Value2
-	float ____Value2_8;
-	// System.Single _2dxFX_LightningBolt::_Value3
-	float ____Value3_9;
-	// System.Single _2dxFX_LightningBolt::_Value4
-	float ____Value4_10;
-	// System.Boolean _2dxFX_LightningBolt::_AutoScrollX
-	bool ____AutoScrollX_11;
-	// System.Single _2dxFX_LightningBolt::_AutoScrollSpeedX
-	float ____AutoScrollSpeedX_12;
-	// System.Boolean _2dxFX_LightningBolt::_AutoScrollY
-	bool ____AutoScrollY_13;
-	// System.Single _2dxFX_LightningBolt::_AutoScrollSpeedY
-	float ____AutoScrollSpeedY_14;
-	// System.Single _2dxFX_LightningBolt::_AutoScrollCountX
-	float ____AutoScrollCountX_15;
-	// System.Single _2dxFX_LightningBolt::_AutoScrollCountY
-	float ____AutoScrollCountY_16;
-	// System.Int32 _2dxFX_LightningBolt::ShaderChange
-	int32_t ___ShaderChange_17;
-	// UnityEngine.Material _2dxFX_LightningBolt::tempMaterial
-	Material_t340375123 * ___tempMaterial_18;
-	// UnityEngine.Material _2dxFX_LightningBolt::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_19;
-	// UnityEngine.UI.Image _2dxFX_LightningBolt::CanvasImage
-	Image_t2670269651 * ___CanvasImage_20;
-
-public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___ForceMaterial_2)); }
-	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
-	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
-	inline void set_ForceMaterial_2(Material_t340375123 * value)
-	{
-		___ForceMaterial_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
-	}
-
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___ActiveChange_3)); }
-	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
-	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
-	inline void set_ActiveChange_3(bool value)
-	{
-		___ActiveChange_3 = value;
-	}
-
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___shader_4)); }
-	inline String_t* get_shader_4() const { return ___shader_4; }
-	inline String_t** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(String_t* value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Alpha_5)); }
-	inline float get__Alpha_5() const { return ____Alpha_5; }
-	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
-	inline void set__Alpha_5(float value)
-	{
-		____Alpha_5 = value;
-	}
-
-	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, _____MainTex2_6)); }
-	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
-	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
-	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
-	{
-		_____MainTex2_6 = value;
-		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
-	}
-
-	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value1_7)); }
-	inline float get__Value1_7() const { return ____Value1_7; }
-	inline float* get_address_of__Value1_7() { return &____Value1_7; }
-	inline void set__Value1_7(float value)
-	{
-		____Value1_7 = value;
-	}
-
-	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value2_8)); }
-	inline float get__Value2_8() const { return ____Value2_8; }
-	inline float* get_address_of__Value2_8() { return &____Value2_8; }
-	inline void set__Value2_8(float value)
-	{
-		____Value2_8 = value;
-	}
-
-	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value3_9)); }
-	inline float get__Value3_9() const { return ____Value3_9; }
-	inline float* get_address_of__Value3_9() { return &____Value3_9; }
-	inline void set__Value3_9(float value)
-	{
-		____Value3_9 = value;
-	}
-
-	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value4_10)); }
-	inline float get__Value4_10() const { return ____Value4_10; }
-	inline float* get_address_of__Value4_10() { return &____Value4_10; }
-	inline void set__Value4_10(float value)
-	{
-		____Value4_10 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollX_11)); }
-	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
-	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
-	inline void set__AutoScrollX_11(bool value)
-	{
-		____AutoScrollX_11 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollSpeedX_12)); }
-	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
-	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
-	inline void set__AutoScrollSpeedX_12(float value)
-	{
-		____AutoScrollSpeedX_12 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollY_13)); }
-	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
-	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
-	inline void set__AutoScrollY_13(bool value)
-	{
-		____AutoScrollY_13 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollSpeedY_14)); }
-	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
-	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
-	inline void set__AutoScrollSpeedY_14(float value)
-	{
-		____AutoScrollSpeedY_14 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollCountX_15)); }
-	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
-	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
-	inline void set__AutoScrollCountX_15(float value)
-	{
-		____AutoScrollCountX_15 = value;
-	}
-
-	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollCountY_16)); }
-	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
-	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
-	inline void set__AutoScrollCountY_16(float value)
-	{
-		____AutoScrollCountY_16 = value;
-	}
-
-	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___ShaderChange_17)); }
-	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
-	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
-	inline void set_ShaderChange_17(int32_t value)
-	{
-		___ShaderChange_17 = value;
-	}
-
-	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___tempMaterial_18)); }
-	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
-	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
-	inline void set_tempMaterial_18(Material_t340375123 * value)
-	{
-		___tempMaterial_18 = value;
-		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
-	}
-
-	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___defaultMaterial_19)); }
-	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
-	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
-	inline void set_defaultMaterial_19(Material_t340375123 * value)
-	{
-		___defaultMaterial_19 = value;
-		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
-	}
-
-	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___CanvasImage_20)); }
-	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
-	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
-	inline void set_CanvasImage_20(Image_t2670269651 * value)
-	{
-		___CanvasImage_20 = value;
-		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // _2DXFX_LIGHTNINGBOLT_T3274298740_H
+#endif // _2DXFX_NEWTELEPORTATION_T1690554931_H
 #ifndef _2DXFX_MYSTIC_DISTORTION_T2476226469_H
 #define _2DXFX_MYSTIC_DISTORTION_T2476226469_H
 #ifdef __clang__
@@ -13692,39 +10873,59 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_NEGATIVE_T4244666266_H
-#ifndef _2DXFX_METALFX_T3372749582_H
-#define _2DXFX_METALFX_T3372749582_H
+#ifndef _2DXFX_OFFSET_T2110223393_H
+#define _2DXFX_OFFSET_T2110223393_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// _2dxFX_MetalFX
-struct  _2dxFX_MetalFX_t3372749582  : public MonoBehaviour_t3962482529
+// _2dxFX_Offset
+struct  _2dxFX_Offset_t2110223393  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Material _2dxFX_MetalFX::ForceMaterial
+	// UnityEngine.Material _2dxFX_Offset::ForceMaterial
 	Material_t340375123 * ___ForceMaterial_2;
-	// System.Boolean _2dxFX_MetalFX::ActiveChange
+	// System.Boolean _2dxFX_Offset::ActiveChange
 	bool ___ActiveChange_3;
-	// System.String _2dxFX_MetalFX::shader
+	// System.String _2dxFX_Offset::shader
 	String_t* ___shader_4;
-	// System.Single _2dxFX_MetalFX::_Alpha
+	// System.Single _2dxFX_Offset::_Alpha
 	float ____Alpha_5;
-	// System.Single _2dxFX_MetalFX::Metal
-	float ___Metal_6;
-	// System.Int32 _2dxFX_MetalFX::ShaderChange
-	int32_t ___ShaderChange_7;
-	// UnityEngine.Material _2dxFX_MetalFX::tempMaterial
-	Material_t340375123 * ___tempMaterial_8;
-	// UnityEngine.Material _2dxFX_MetalFX::defaultMaterial
-	Material_t340375123 * ___defaultMaterial_9;
-	// UnityEngine.UI.Image _2dxFX_MetalFX::CanvasImage
-	Image_t2670269651 * ___CanvasImage_10;
+	// System.Single _2dxFX_Offset::_OffsetX
+	float ____OffsetX_6;
+	// System.Single _2dxFX_Offset::_OffsetY
+	float ____OffsetY_7;
+	// System.Single _2dxFX_Offset::_ZoomX
+	float ____ZoomX_8;
+	// System.Single _2dxFX_Offset::_ZoomY
+	float ____ZoomY_9;
+	// System.Single _2dxFX_Offset::_ZoomXY
+	float ____ZoomXY_10;
+	// System.Boolean _2dxFX_Offset::_AutoScrollX
+	bool ____AutoScrollX_11;
+	// System.Single _2dxFX_Offset::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_12;
+	// System.Boolean _2dxFX_Offset::_AutoScrollY
+	bool ____AutoScrollY_13;
+	// System.Single _2dxFX_Offset::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_14;
+	// System.Single _2dxFX_Offset::_AutoScrollCountX
+	float ____AutoScrollCountX_15;
+	// System.Single _2dxFX_Offset::_AutoScrollCountY
+	float ____AutoScrollCountY_16;
+	// System.Int32 _2dxFX_Offset::ShaderChange
+	int32_t ___ShaderChange_17;
+	// UnityEngine.Material _2dxFX_Offset::tempMaterial
+	Material_t340375123 * ___tempMaterial_18;
+	// UnityEngine.Material _2dxFX_Offset::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_19;
+	// UnityEngine.UI.Image _2dxFX_Offset::CanvasImage
+	Image_t2670269651 * ___CanvasImage_20;
 
 public:
-	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___ForceMaterial_2)); }
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___ForceMaterial_2)); }
 	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
 	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
 	inline void set_ForceMaterial_2(Material_t340375123 * value)
@@ -13733,7 +10934,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___ActiveChange_3)); }
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___ActiveChange_3)); }
 	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
 	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
 	inline void set_ActiveChange_3(bool value)
@@ -13741,7 +10942,7 @@ public:
 		___ActiveChange_3 = value;
 	}
 
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___shader_4)); }
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___shader_4)); }
 	inline String_t* get_shader_4() const { return ___shader_4; }
 	inline String_t** get_address_of_shader_4() { return &___shader_4; }
 	inline void set_shader_4(String_t* value)
@@ -13750,7 +10951,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___shader_4), value);
 	}
 
-	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ____Alpha_5)); }
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____Alpha_5)); }
 	inline float get__Alpha_5() const { return ____Alpha_5; }
 	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
 	inline void set__Alpha_5(float value)
@@ -13758,15 +10959,601 @@ public:
 		____Alpha_5 = value;
 	}
 
-	inline static int32_t get_offset_of_Metal_6() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___Metal_6)); }
-	inline float get_Metal_6() const { return ___Metal_6; }
-	inline float* get_address_of_Metal_6() { return &___Metal_6; }
-	inline void set_Metal_6(float value)
+	inline static int32_t get_offset_of__OffsetX_6() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____OffsetX_6)); }
+	inline float get__OffsetX_6() const { return ____OffsetX_6; }
+	inline float* get_address_of__OffsetX_6() { return &____OffsetX_6; }
+	inline void set__OffsetX_6(float value)
 	{
-		___Metal_6 = value;
+		____OffsetX_6 = value;
 	}
 
-	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___ShaderChange_7)); }
+	inline static int32_t get_offset_of__OffsetY_7() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____OffsetY_7)); }
+	inline float get__OffsetY_7() const { return ____OffsetY_7; }
+	inline float* get_address_of__OffsetY_7() { return &____OffsetY_7; }
+	inline void set__OffsetY_7(float value)
+	{
+		____OffsetY_7 = value;
+	}
+
+	inline static int32_t get_offset_of__ZoomX_8() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____ZoomX_8)); }
+	inline float get__ZoomX_8() const { return ____ZoomX_8; }
+	inline float* get_address_of__ZoomX_8() { return &____ZoomX_8; }
+	inline void set__ZoomX_8(float value)
+	{
+		____ZoomX_8 = value;
+	}
+
+	inline static int32_t get_offset_of__ZoomY_9() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____ZoomY_9)); }
+	inline float get__ZoomY_9() const { return ____ZoomY_9; }
+	inline float* get_address_of__ZoomY_9() { return &____ZoomY_9; }
+	inline void set__ZoomY_9(float value)
+	{
+		____ZoomY_9 = value;
+	}
+
+	inline static int32_t get_offset_of__ZoomXY_10() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____ZoomXY_10)); }
+	inline float get__ZoomXY_10() const { return ____ZoomXY_10; }
+	inline float* get_address_of__ZoomXY_10() { return &____ZoomXY_10; }
+	inline void set__ZoomXY_10(float value)
+	{
+		____ZoomXY_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollX_11)); }
+	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
+	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
+	inline void set__AutoScrollX_11(bool value)
+	{
+		____AutoScrollX_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollSpeedX_12)); }
+	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
+	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
+	inline void set__AutoScrollSpeedX_12(float value)
+	{
+		____AutoScrollSpeedX_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollY_13)); }
+	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
+	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
+	inline void set__AutoScrollY_13(bool value)
+	{
+		____AutoScrollY_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollSpeedY_14)); }
+	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
+	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
+	inline void set__AutoScrollSpeedY_14(float value)
+	{
+		____AutoScrollSpeedY_14 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollCountX_15)); }
+	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
+	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
+	inline void set__AutoScrollCountX_15(float value)
+	{
+		____AutoScrollCountX_15 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ____AutoScrollCountY_16)); }
+	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
+	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
+	inline void set__AutoScrollCountY_16(float value)
+	{
+		____AutoScrollCountY_16 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___ShaderChange_17)); }
+	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
+	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
+	inline void set_ShaderChange_17(int32_t value)
+	{
+		___ShaderChange_17 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___tempMaterial_18)); }
+	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
+	inline void set_tempMaterial_18(Material_t340375123 * value)
+	{
+		___tempMaterial_18 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___defaultMaterial_19)); }
+	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
+	inline void set_defaultMaterial_19(Material_t340375123 * value)
+	{
+		___defaultMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_Offset_t2110223393, ___CanvasImage_20)); }
+	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
+	inline void set_CanvasImage_20(Image_t2670269651 * value)
+	{
+		___CanvasImage_20 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_OFFSET_T2110223393_H
+#ifndef _2DXFX_PIXEL8BITSBW_T1365288922_H
+#define _2DXFX_PIXEL8BITSBW_T1365288922_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Pixel8bitsBW
+struct  _2dxFX_Pixel8bitsBW_t1365288922  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Pixel8bitsBW::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Pixel8bitsBW::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Pixel8bitsBW::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Pixel8bitsBW::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Pixel8bitsBW::_Size
+	float ____Size_6;
+	// System.Single _2dxFX_Pixel8bitsBW::_Offset
+	float ____Offset_7;
+	// System.Single _2dxFX_Pixel8bitsBW::_Offset2
+	float ____Offset2_8;
+	// System.Int32 _2dxFX_Pixel8bitsBW::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_Pixel8bitsBW::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_Pixel8bitsBW::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_Pixel8bitsBW::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Size_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Size_6)); }
+	inline float get__Size_6() const { return ____Size_6; }
+	inline float* get_address_of__Size_6() { return &____Size_6; }
+	inline void set__Size_6(float value)
+	{
+		____Size_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Offset_7)); }
+	inline float get__Offset_7() const { return ____Offset_7; }
+	inline float* get_address_of__Offset_7() { return &____Offset_7; }
+	inline void set__Offset_7(float value)
+	{
+		____Offset_7 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ____Offset2_8)); }
+	inline float get__Offset2_8() const { return ____Offset2_8; }
+	inline float* get_address_of__Offset2_8() { return &____Offset2_8; }
+	inline void set__Offset2_8(float value)
+	{
+		____Offset2_8 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
+	{
+		___ShaderChange_9 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
+	{
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
+	{
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsBW_t1365288922, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
+	{
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PIXEL8BITSBW_T1365288922_H
+#ifndef _2DXFX_PIXEL8BITSC64_T1978114015_H
+#define _2DXFX_PIXEL8BITSC64_T1978114015_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Pixel8bitsC64
+struct  _2dxFX_Pixel8bitsC64_t1978114015  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Pixel8bitsC64::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Pixel8bitsC64::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Pixel8bitsC64::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Pixel8bitsC64::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Pixel8bitsC64::_Size
+	float ____Size_6;
+	// System.Single _2dxFX_Pixel8bitsC64::_Offset
+	float ____Offset_7;
+	// System.Single _2dxFX_Pixel8bitsC64::_Offset2
+	float ____Offset2_8;
+	// System.Int32 _2dxFX_Pixel8bitsC64::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_Pixel8bitsC64::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_Pixel8bitsC64::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_Pixel8bitsC64::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Size_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Size_6)); }
+	inline float get__Size_6() const { return ____Size_6; }
+	inline float* get_address_of__Size_6() { return &____Size_6; }
+	inline void set__Size_6(float value)
+	{
+		____Size_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Offset_7)); }
+	inline float get__Offset_7() const { return ____Offset_7; }
+	inline float* get_address_of__Offset_7() { return &____Offset_7; }
+	inline void set__Offset_7(float value)
+	{
+		____Offset_7 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ____Offset2_8)); }
+	inline float get__Offset2_8() const { return ____Offset2_8; }
+	inline float* get_address_of__Offset2_8() { return &____Offset2_8; }
+	inline void set__Offset2_8(float value)
+	{
+		____Offset2_8 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
+	{
+		___ShaderChange_9 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
+	{
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
+	{
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsC64_t1978114015, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
+	{
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PIXEL8BITSC64_T1978114015_H
+#ifndef _2DXFX_PIXEL8BITSGB_T1674268507_H
+#define _2DXFX_PIXEL8BITSGB_T1674268507_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Pixel8bitsGB
+struct  _2dxFX_Pixel8bitsGB_t1674268507  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Pixel8bitsGB::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Pixel8bitsGB::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Pixel8bitsGB::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Pixel8bitsGB::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Pixel8bitsGB::_Size
+	float ____Size_6;
+	// System.Single _2dxFX_Pixel8bitsGB::_Offset
+	float ____Offset_7;
+	// System.Int32 _2dxFX_Pixel8bitsGB::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_Pixel8bitsGB::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_Pixel8bitsGB::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_Pixel8bitsGB::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Size_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ____Size_6)); }
+	inline float get__Size_6() const { return ____Size_6; }
+	inline float* get_address_of__Size_6() { return &____Size_6; }
+	inline void set__Size_6(float value)
+	{
+		____Size_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ____Offset_7)); }
+	inline float get__Offset_7() const { return ____Offset_7; }
+	inline float* get_address_of__Offset_7() { return &____Offset_7; }
+	inline void set__Offset_7(float value)
+	{
+		____Offset_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel8bitsGB_t1674268507, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PIXEL8BITSGB_T1674268507_H
+#ifndef _2DXFX_PIXEL_T1222618043_H
+#define _2DXFX_PIXEL_T1222618043_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Pixel
+struct  _2dxFX_Pixel_t1222618043  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Pixel::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Pixel::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Pixel::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Pixel::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Pixel::_Offset
+	float ____Offset_6;
+	// System.Int32 _2dxFX_Pixel::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_Pixel::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_Pixel::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_Pixel::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__Offset_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ____Offset_6)); }
+	inline float get__Offset_6() const { return ____Offset_6; }
+	inline float* get_address_of__Offset_6() { return &____Offset_6; }
+	inline void set__Offset_6(float value)
+	{
+		____Offset_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___ShaderChange_7)); }
 	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
 	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
 	inline void set_ShaderChange_7(int32_t value)
@@ -13774,7 +11561,7 @@ public:
 		___ShaderChange_7 = value;
 	}
 
-	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___tempMaterial_8)); }
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___tempMaterial_8)); }
 	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
 	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
 	inline void set_tempMaterial_8(Material_t340375123 * value)
@@ -13783,7 +11570,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
 	}
 
-	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___defaultMaterial_9)); }
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___defaultMaterial_9)); }
 	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
 	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
 	inline void set_defaultMaterial_9(Material_t340375123 * value)
@@ -13792,7 +11579,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
 	}
 
-	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___CanvasImage_10)); }
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pixel_t1222618043, ___CanvasImage_10)); }
 	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
 	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
 	inline void set_CanvasImage_10(Image_t2670269651 * value)
@@ -13805,7 +11592,1735 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // _2DXFX_METALFX_T3372749582_H
+#endif // _2DXFX_PIXEL_T1222618043_H
+#ifndef _2DXFX_OUTLINE_T1004254021_H
+#define _2DXFX_OUTLINE_T1004254021_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Outline
+struct  _2dxFX_Outline_t1004254021  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Outline::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Outline::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Outline::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Outline::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Color _2dxFX_Outline::_ColorX
+	Color_t2555686324  ____ColorX_6;
+	// System.Single _2dxFX_Outline::_OutLineSpread
+	float ____OutLineSpread_7;
+	// System.Int32 _2dxFX_Outline::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_Outline::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_Outline::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_Outline::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__ColorX_6() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ____ColorX_6)); }
+	inline Color_t2555686324  get__ColorX_6() const { return ____ColorX_6; }
+	inline Color_t2555686324 * get_address_of__ColorX_6() { return &____ColorX_6; }
+	inline void set__ColorX_6(Color_t2555686324  value)
+	{
+		____ColorX_6 = value;
+	}
+
+	inline static int32_t get_offset_of__OutLineSpread_7() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ____OutLineSpread_7)); }
+	inline float get__OutLineSpread_7() const { return ____OutLineSpread_7; }
+	inline float* get_address_of__OutLineSpread_7() { return &____OutLineSpread_7; }
+	inline void set__OutLineSpread_7(float value)
+	{
+		____OutLineSpread_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Outline_t1004254021, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_OUTLINE_T1004254021_H
+#ifndef _2DXFX_PATTERN_T2704712765_H
+#define _2DXFX_PATTERN_T2704712765_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Pattern
+struct  _2dxFX_Pattern_t2704712765  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Pattern::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Pattern::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Pattern::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Pattern::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_Pattern::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_Pattern::_OffsetX
+	float ____OffsetX_7;
+	// System.Single _2dxFX_Pattern::_OffsetY
+	float ____OffsetY_8;
+	// System.Boolean _2dxFX_Pattern::_AutoScrollX
+	bool ____AutoScrollX_9;
+	// System.Single _2dxFX_Pattern::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_10;
+	// System.Boolean _2dxFX_Pattern::_AutoScrollY
+	bool ____AutoScrollY_11;
+	// System.Single _2dxFX_Pattern::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_12;
+	// System.Single _2dxFX_Pattern::_AutoScrollCountX
+	float ____AutoScrollCountX_13;
+	// System.Single _2dxFX_Pattern::_AutoScrollCountY
+	float ____AutoScrollCountY_14;
+	// System.Int32 _2dxFX_Pattern::ShaderChange
+	int32_t ___ShaderChange_15;
+	// UnityEngine.Material _2dxFX_Pattern::tempMaterial
+	Material_t340375123 * ___tempMaterial_16;
+	// UnityEngine.Material _2dxFX_Pattern::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_17;
+	// UnityEngine.UI.Image _2dxFX_Pattern::CanvasImage
+	Image_t2670269651 * ___CanvasImage_18;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of__OffsetX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____OffsetX_7)); }
+	inline float get__OffsetX_7() const { return ____OffsetX_7; }
+	inline float* get_address_of__OffsetX_7() { return &____OffsetX_7; }
+	inline void set__OffsetX_7(float value)
+	{
+		____OffsetX_7 = value;
+	}
+
+	inline static int32_t get_offset_of__OffsetY_8() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____OffsetY_8)); }
+	inline float get__OffsetY_8() const { return ____OffsetY_8; }
+	inline float* get_address_of__OffsetY_8() { return &____OffsetY_8; }
+	inline void set__OffsetY_8(float value)
+	{
+		____OffsetY_8 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_9() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollX_9)); }
+	inline bool get__AutoScrollX_9() const { return ____AutoScrollX_9; }
+	inline bool* get_address_of__AutoScrollX_9() { return &____AutoScrollX_9; }
+	inline void set__AutoScrollX_9(bool value)
+	{
+		____AutoScrollX_9 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_10() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollSpeedX_10)); }
+	inline float get__AutoScrollSpeedX_10() const { return ____AutoScrollSpeedX_10; }
+	inline float* get_address_of__AutoScrollSpeedX_10() { return &____AutoScrollSpeedX_10; }
+	inline void set__AutoScrollSpeedX_10(float value)
+	{
+		____AutoScrollSpeedX_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_11() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollY_11)); }
+	inline bool get__AutoScrollY_11() const { return ____AutoScrollY_11; }
+	inline bool* get_address_of__AutoScrollY_11() { return &____AutoScrollY_11; }
+	inline void set__AutoScrollY_11(bool value)
+	{
+		____AutoScrollY_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_12() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollSpeedY_12)); }
+	inline float get__AutoScrollSpeedY_12() const { return ____AutoScrollSpeedY_12; }
+	inline float* get_address_of__AutoScrollSpeedY_12() { return &____AutoScrollSpeedY_12; }
+	inline void set__AutoScrollSpeedY_12(float value)
+	{
+		____AutoScrollSpeedY_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_13() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollCountX_13)); }
+	inline float get__AutoScrollCountX_13() const { return ____AutoScrollCountX_13; }
+	inline float* get_address_of__AutoScrollCountX_13() { return &____AutoScrollCountX_13; }
+	inline void set__AutoScrollCountX_13(float value)
+	{
+		____AutoScrollCountX_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ____AutoScrollCountY_14)); }
+	inline float get__AutoScrollCountY_14() const { return ____AutoScrollCountY_14; }
+	inline float* get_address_of__AutoScrollCountY_14() { return &____AutoScrollCountY_14; }
+	inline void set__AutoScrollCountY_14(float value)
+	{
+		____AutoScrollCountY_14 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_15() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___ShaderChange_15)); }
+	inline int32_t get_ShaderChange_15() const { return ___ShaderChange_15; }
+	inline int32_t* get_address_of_ShaderChange_15() { return &___ShaderChange_15; }
+	inline void set_ShaderChange_15(int32_t value)
+	{
+		___ShaderChange_15 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_16() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___tempMaterial_16)); }
+	inline Material_t340375123 * get_tempMaterial_16() const { return ___tempMaterial_16; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_16() { return &___tempMaterial_16; }
+	inline void set_tempMaterial_16(Material_t340375123 * value)
+	{
+		___tempMaterial_16 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_16), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_17() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___defaultMaterial_17)); }
+	inline Material_t340375123 * get_defaultMaterial_17() const { return ___defaultMaterial_17; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_17() { return &___defaultMaterial_17; }
+	inline void set_defaultMaterial_17(Material_t340375123 * value)
+	{
+		___defaultMaterial_17 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_17), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_18() { return static_cast<int32_t>(offsetof(_2dxFX_Pattern_t2704712765, ___CanvasImage_18)); }
+	inline Image_t2670269651 * get_CanvasImage_18() const { return ___CanvasImage_18; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_18() { return &___CanvasImage_18; }
+	inline void set_CanvasImage_18(Image_t2670269651 * value)
+	{
+		___CanvasImage_18 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_18), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PATTERN_T2704712765_H
+#ifndef _2DXFX_PATTERNADDITIVE_T1594767377_H
+#define _2DXFX_PATTERNADDITIVE_T1594767377_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_PatternAdditive
+struct  _2dxFX_PatternAdditive_t1594767377  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_PatternAdditive::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_PatternAdditive::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_PatternAdditive::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_PatternAdditive::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_PatternAdditive::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_PatternAdditive::_OffsetX
+	float ____OffsetX_7;
+	// System.Single _2dxFX_PatternAdditive::_OffsetY
+	float ____OffsetY_8;
+	// System.Boolean _2dxFX_PatternAdditive::_AutoScrollX
+	bool ____AutoScrollX_9;
+	// System.Single _2dxFX_PatternAdditive::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_10;
+	// System.Boolean _2dxFX_PatternAdditive::_AutoScrollY
+	bool ____AutoScrollY_11;
+	// System.Single _2dxFX_PatternAdditive::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_12;
+	// System.Single _2dxFX_PatternAdditive::_AutoScrollCountX
+	float ____AutoScrollCountX_13;
+	// System.Single _2dxFX_PatternAdditive::_AutoScrollCountY
+	float ____AutoScrollCountY_14;
+	// System.Int32 _2dxFX_PatternAdditive::ShaderChange
+	int32_t ___ShaderChange_15;
+	// UnityEngine.Material _2dxFX_PatternAdditive::tempMaterial
+	Material_t340375123 * ___tempMaterial_16;
+	// UnityEngine.Material _2dxFX_PatternAdditive::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_17;
+	// UnityEngine.UI.Image _2dxFX_PatternAdditive::CanvasImage
+	Image_t2670269651 * ___CanvasImage_18;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of__OffsetX_7() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____OffsetX_7)); }
+	inline float get__OffsetX_7() const { return ____OffsetX_7; }
+	inline float* get_address_of__OffsetX_7() { return &____OffsetX_7; }
+	inline void set__OffsetX_7(float value)
+	{
+		____OffsetX_7 = value;
+	}
+
+	inline static int32_t get_offset_of__OffsetY_8() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____OffsetY_8)); }
+	inline float get__OffsetY_8() const { return ____OffsetY_8; }
+	inline float* get_address_of__OffsetY_8() { return &____OffsetY_8; }
+	inline void set__OffsetY_8(float value)
+	{
+		____OffsetY_8 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_9() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollX_9)); }
+	inline bool get__AutoScrollX_9() const { return ____AutoScrollX_9; }
+	inline bool* get_address_of__AutoScrollX_9() { return &____AutoScrollX_9; }
+	inline void set__AutoScrollX_9(bool value)
+	{
+		____AutoScrollX_9 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_10() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollSpeedX_10)); }
+	inline float get__AutoScrollSpeedX_10() const { return ____AutoScrollSpeedX_10; }
+	inline float* get_address_of__AutoScrollSpeedX_10() { return &____AutoScrollSpeedX_10; }
+	inline void set__AutoScrollSpeedX_10(float value)
+	{
+		____AutoScrollSpeedX_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_11() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollY_11)); }
+	inline bool get__AutoScrollY_11() const { return ____AutoScrollY_11; }
+	inline bool* get_address_of__AutoScrollY_11() { return &____AutoScrollY_11; }
+	inline void set__AutoScrollY_11(bool value)
+	{
+		____AutoScrollY_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_12() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollSpeedY_12)); }
+	inline float get__AutoScrollSpeedY_12() const { return ____AutoScrollSpeedY_12; }
+	inline float* get_address_of__AutoScrollSpeedY_12() { return &____AutoScrollSpeedY_12; }
+	inline void set__AutoScrollSpeedY_12(float value)
+	{
+		____AutoScrollSpeedY_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_13() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollCountX_13)); }
+	inline float get__AutoScrollCountX_13() const { return ____AutoScrollCountX_13; }
+	inline float* get_address_of__AutoScrollCountX_13() { return &____AutoScrollCountX_13; }
+	inline void set__AutoScrollCountX_13(float value)
+	{
+		____AutoScrollCountX_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_14() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ____AutoScrollCountY_14)); }
+	inline float get__AutoScrollCountY_14() const { return ____AutoScrollCountY_14; }
+	inline float* get_address_of__AutoScrollCountY_14() { return &____AutoScrollCountY_14; }
+	inline void set__AutoScrollCountY_14(float value)
+	{
+		____AutoScrollCountY_14 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_15() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___ShaderChange_15)); }
+	inline int32_t get_ShaderChange_15() const { return ___ShaderChange_15; }
+	inline int32_t* get_address_of_ShaderChange_15() { return &___ShaderChange_15; }
+	inline void set_ShaderChange_15(int32_t value)
+	{
+		___ShaderChange_15 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_16() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___tempMaterial_16)); }
+	inline Material_t340375123 * get_tempMaterial_16() const { return ___tempMaterial_16; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_16() { return &___tempMaterial_16; }
+	inline void set_tempMaterial_16(Material_t340375123 * value)
+	{
+		___tempMaterial_16 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_16), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_17() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___defaultMaterial_17)); }
+	inline Material_t340375123 * get_defaultMaterial_17() const { return ___defaultMaterial_17; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_17() { return &___defaultMaterial_17; }
+	inline void set_defaultMaterial_17(Material_t340375123 * value)
+	{
+		___defaultMaterial_17 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_17), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_18() { return static_cast<int32_t>(offsetof(_2dxFX_PatternAdditive_t1594767377, ___CanvasImage_18)); }
+	inline Image_t2670269651 * get_CanvasImage_18() const { return ___CanvasImage_18; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_18() { return &___CanvasImage_18; }
+	inline void set_CanvasImage_18(Image_t2670269651 * value)
+	{
+		___CanvasImage_18 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_18), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_PATTERNADDITIVE_T1594767377_H
+#ifndef _2DXFX_ICE_T1635841214_H
+#define _2DXFX_ICE_T1635841214_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Ice
+struct  _2dxFX_Ice_t1635841214  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Ice::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Ice::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Ice::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Ice::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_Ice::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_Ice::_Value1
+	float ____Value1_7;
+	// System.Single _2dxFX_Ice::_Value2
+	float ____Value2_8;
+	// System.Single _2dxFX_Ice::_Value3
+	float ____Value3_9;
+	// System.Single _2dxFX_Ice::_Value4
+	float ____Value4_10;
+	// System.Boolean _2dxFX_Ice::_AutoScrollX
+	bool ____AutoScrollX_11;
+	// System.Single _2dxFX_Ice::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_12;
+	// System.Boolean _2dxFX_Ice::_AutoScrollY
+	bool ____AutoScrollY_13;
+	// System.Single _2dxFX_Ice::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_14;
+	// System.Single _2dxFX_Ice::_AutoScrollCountX
+	float ____AutoScrollCountX_15;
+	// System.Single _2dxFX_Ice::_AutoScrollCountY
+	float ____AutoScrollCountY_16;
+	// System.Int32 _2dxFX_Ice::ShaderChange
+	int32_t ___ShaderChange_17;
+	// UnityEngine.Material _2dxFX_Ice::tempMaterial
+	Material_t340375123 * ___tempMaterial_18;
+	// UnityEngine.Material _2dxFX_Ice::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_19;
+	// UnityEngine.UI.Image _2dxFX_Ice::CanvasImage
+	Image_t2670269651 * ___CanvasImage_20;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value1_7)); }
+	inline float get__Value1_7() const { return ____Value1_7; }
+	inline float* get_address_of__Value1_7() { return &____Value1_7; }
+	inline void set__Value1_7(float value)
+	{
+		____Value1_7 = value;
+	}
+
+	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value2_8)); }
+	inline float get__Value2_8() const { return ____Value2_8; }
+	inline float* get_address_of__Value2_8() { return &____Value2_8; }
+	inline void set__Value2_8(float value)
+	{
+		____Value2_8 = value;
+	}
+
+	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value3_9)); }
+	inline float get__Value3_9() const { return ____Value3_9; }
+	inline float* get_address_of__Value3_9() { return &____Value3_9; }
+	inline void set__Value3_9(float value)
+	{
+		____Value3_9 = value;
+	}
+
+	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____Value4_10)); }
+	inline float get__Value4_10() const { return ____Value4_10; }
+	inline float* get_address_of__Value4_10() { return &____Value4_10; }
+	inline void set__Value4_10(float value)
+	{
+		____Value4_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollX_11)); }
+	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
+	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
+	inline void set__AutoScrollX_11(bool value)
+	{
+		____AutoScrollX_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollSpeedX_12)); }
+	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
+	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
+	inline void set__AutoScrollSpeedX_12(float value)
+	{
+		____AutoScrollSpeedX_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollY_13)); }
+	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
+	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
+	inline void set__AutoScrollY_13(bool value)
+	{
+		____AutoScrollY_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollSpeedY_14)); }
+	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
+	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
+	inline void set__AutoScrollSpeedY_14(float value)
+	{
+		____AutoScrollSpeedY_14 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollCountX_15)); }
+	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
+	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
+	inline void set__AutoScrollCountX_15(float value)
+	{
+		____AutoScrollCountX_15 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ____AutoScrollCountY_16)); }
+	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
+	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
+	inline void set__AutoScrollCountY_16(float value)
+	{
+		____AutoScrollCountY_16 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___ShaderChange_17)); }
+	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
+	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
+	inline void set_ShaderChange_17(int32_t value)
+	{
+		___ShaderChange_17 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___tempMaterial_18)); }
+	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
+	inline void set_tempMaterial_18(Material_t340375123 * value)
+	{
+		___tempMaterial_18 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___defaultMaterial_19)); }
+	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
+	inline void set_defaultMaterial_19(Material_t340375123 * value)
+	{
+		___defaultMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_Ice_t1635841214, ___CanvasImage_20)); }
+	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
+	inline void set_CanvasImage_20(Image_t2670269651 * value)
+	{
+		___CanvasImage_20 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_ICE_T1635841214_H
+#ifndef _2DXFX_ICEDFX_T2117229429_H
+#define _2DXFX_ICEDFX_T2117229429_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_IcedFX
+struct  _2dxFX_IcedFX_t2117229429  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_IcedFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_IcedFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_IcedFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_IcedFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_IcedFX::Iced
+	float ___Iced_6;
+	// System.Int32 _2dxFX_IcedFX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_IcedFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_IcedFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_IcedFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Iced_6() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___Iced_6)); }
+	inline float get_Iced_6() const { return ___Iced_6; }
+	inline float* get_address_of_Iced_6() { return &___Iced_6; }
+	inline void set_Iced_6(float value)
+	{
+		___Iced_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_IcedFX_t2117229429, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_ICEDFX_T2117229429_H
+#ifndef _2DXFX_JELLY_T3102112626_H
+#define _2DXFX_JELLY_T3102112626_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Jelly
+struct  _2dxFX_Jelly_t3102112626  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Jelly::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Jelly::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Jelly::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Jelly::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Jelly::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_Jelly::Inside
+	float ___Inside_7;
+	// System.Single _2dxFX_Jelly::Speed
+	float ___Speed_8;
+	// System.Int32 _2dxFX_Jelly::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_Jelly::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_Jelly::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_Jelly::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Inside_7() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___Inside_7)); }
+	inline float get_Inside_7() const { return ___Inside_7; }
+	inline float* get_address_of_Inside_7() { return &___Inside_7; }
+	inline void set_Inside_7(float value)
+	{
+		___Inside_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___Speed_8)); }
+	inline float get_Speed_8() const { return ___Speed_8; }
+	inline float* get_address_of_Speed_8() { return &___Speed_8; }
+	inline void set_Speed_8(float value)
+	{
+		___Speed_8 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
+	{
+		___ShaderChange_9 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
+	{
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
+	{
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Jelly_t3102112626, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
+	{
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_JELLY_T3102112626_H
+#ifndef _2DXFX_HSV_T3595236558_H
+#define _2DXFX_HSV_T3595236558_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_HSV
+struct  _2dxFX_HSV_t3595236558  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_HSV::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_HSV::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_HSV::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_HSV::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_HSV::_HueShift
+	float ____HueShift_6;
+	// System.Single _2dxFX_HSV::_Saturation
+	float ____Saturation_7;
+	// System.Single _2dxFX_HSV::_ValueBrightness
+	float ____ValueBrightness_8;
+	// System.Int32 _2dxFX_HSV::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_HSV::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_HSV::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_HSV::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of__HueShift_6() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____HueShift_6)); }
+	inline float get__HueShift_6() const { return ____HueShift_6; }
+	inline float* get_address_of__HueShift_6() { return &____HueShift_6; }
+	inline void set__HueShift_6(float value)
+	{
+		____HueShift_6 = value;
+	}
+
+	inline static int32_t get_offset_of__Saturation_7() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____Saturation_7)); }
+	inline float get__Saturation_7() const { return ____Saturation_7; }
+	inline float* get_address_of__Saturation_7() { return &____Saturation_7; }
+	inline void set__Saturation_7(float value)
+	{
+		____Saturation_7 = value;
+	}
+
+	inline static int32_t get_offset_of__ValueBrightness_8() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ____ValueBrightness_8)); }
+	inline float get__ValueBrightness_8() const { return ____ValueBrightness_8; }
+	inline float* get_address_of__ValueBrightness_8() { return &____ValueBrightness_8; }
+	inline void set__ValueBrightness_8(float value)
+	{
+		____ValueBrightness_8 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
+	{
+		___ShaderChange_9 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
+	{
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
+	{
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_HSV_t3595236558, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
+	{
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_HSV_T3595236558_H
+#ifndef _2DXFX_HOLOGRAM_T3899187337_H
+#define _2DXFX_HOLOGRAM_T3899187337_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Hologram
+struct  _2dxFX_Hologram_t3899187337  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Hologram::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Hologram::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Hologram::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Hologram::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Hologram::Distortion
+	float ___Distortion_6;
+	// System.Single _2dxFX_Hologram::Speed
+	float ___Speed_7;
+	// System.Int32 _2dxFX_Hologram::ShaderChange
+	int32_t ___ShaderChange_8;
+	// UnityEngine.Material _2dxFX_Hologram::tempMaterial
+	Material_t340375123 * ___tempMaterial_9;
+	// UnityEngine.Material _2dxFX_Hologram::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_10;
+	// UnityEngine.UI.Image _2dxFX_Hologram::CanvasImage
+	Image_t2670269651 * ___CanvasImage_11;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___Distortion_6)); }
+	inline float get_Distortion_6() const { return ___Distortion_6; }
+	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
+	inline void set_Distortion_6(float value)
+	{
+		___Distortion_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_7() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___Speed_7)); }
+	inline float get_Speed_7() const { return ___Speed_7; }
+	inline float* get_address_of_Speed_7() { return &___Speed_7; }
+	inline void set_Speed_7(float value)
+	{
+		___Speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_8() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___ShaderChange_8)); }
+	inline int32_t get_ShaderChange_8() const { return ___ShaderChange_8; }
+	inline int32_t* get_address_of_ShaderChange_8() { return &___ShaderChange_8; }
+	inline void set_ShaderChange_8(int32_t value)
+	{
+		___ShaderChange_8 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___tempMaterial_9)); }
+	inline Material_t340375123 * get_tempMaterial_9() const { return ___tempMaterial_9; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_9() { return &___tempMaterial_9; }
+	inline void set_tempMaterial_9(Material_t340375123 * value)
+	{
+		___tempMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___defaultMaterial_10)); }
+	inline Material_t340375123 * get_defaultMaterial_10() const { return ___defaultMaterial_10; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_10() { return &___defaultMaterial_10; }
+	inline void set_defaultMaterial_10(Material_t340375123 * value)
+	{
+		___defaultMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_11() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram_t3899187337, ___CanvasImage_11)); }
+	inline Image_t2670269651 * get_CanvasImage_11() const { return ___CanvasImage_11; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_11() { return &___CanvasImage_11; }
+	inline void set_CanvasImage_11(Image_t2670269651 * value)
+	{
+		___CanvasImage_11 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_HOLOGRAM_T3899187337_H
+#ifndef _2DXFX_HOLOGRAM2_T2930696329_H
+#define _2DXFX_HOLOGRAM2_T2930696329_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Hologram2
+struct  _2dxFX_Hologram2_t2930696329  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Hologram2::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Hologram2::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Hologram2::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Hologram2::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Hologram2::Distortion
+	float ___Distortion_6;
+	// System.Single _2dxFX_Hologram2::_TimeX
+	float ____TimeX_7;
+	// System.Single _2dxFX_Hologram2::Speed
+	float ___Speed_8;
+	// System.Int32 _2dxFX_Hologram2::ShaderChange
+	int32_t ___ShaderChange_9;
+	// UnityEngine.Material _2dxFX_Hologram2::tempMaterial
+	Material_t340375123 * ___tempMaterial_10;
+	// UnityEngine.Material _2dxFX_Hologram2::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_11;
+	// UnityEngine.UI.Image _2dxFX_Hologram2::CanvasImage
+	Image_t2670269651 * ___CanvasImage_12;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___Distortion_6)); }
+	inline float get_Distortion_6() const { return ___Distortion_6; }
+	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
+	inline void set_Distortion_6(float value)
+	{
+		___Distortion_6 = value;
+	}
+
+	inline static int32_t get_offset_of__TimeX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ____TimeX_7)); }
+	inline float get__TimeX_7() const { return ____TimeX_7; }
+	inline float* get_address_of__TimeX_7() { return &____TimeX_7; }
+	inline void set__TimeX_7(float value)
+	{
+		____TimeX_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___Speed_8)); }
+	inline float get_Speed_8() const { return ___Speed_8; }
+	inline float* get_address_of_Speed_8() { return &___Speed_8; }
+	inline void set_Speed_8(float value)
+	{
+		___Speed_8 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_9() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___ShaderChange_9)); }
+	inline int32_t get_ShaderChange_9() const { return ___ShaderChange_9; }
+	inline int32_t* get_address_of_ShaderChange_9() { return &___ShaderChange_9; }
+	inline void set_ShaderChange_9(int32_t value)
+	{
+		___ShaderChange_9 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_10() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___tempMaterial_10)); }
+	inline Material_t340375123 * get_tempMaterial_10() const { return ___tempMaterial_10; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_10() { return &___tempMaterial_10; }
+	inline void set_tempMaterial_10(Material_t340375123 * value)
+	{
+		___tempMaterial_10 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_10), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___defaultMaterial_11)); }
+	inline Material_t340375123 * get_defaultMaterial_11() const { return ___defaultMaterial_11; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_11() { return &___defaultMaterial_11; }
+	inline void set_defaultMaterial_11(Material_t340375123 * value)
+	{
+		___defaultMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_12() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram2_t2930696329, ___CanvasImage_12)); }
+	inline Image_t2670269651 * get_CanvasImage_12() const { return ___CanvasImage_12; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_12() { return &___CanvasImage_12; }
+	inline void set_CanvasImage_12(Image_t2670269651 * value)
+	{
+		___CanvasImage_12 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_HOLOGRAM2_T2930696329_H
+#ifndef _2DXFX_HOLOGRAM3_T974381193_H
+#define _2DXFX_HOLOGRAM3_T974381193_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Hologram3
+struct  _2dxFX_Hologram3_t974381193  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Hologram3::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Hologram3::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Hologram3::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Hologram3::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_Hologram3::Distortion
+	float ___Distortion_6;
+	// System.Single _2dxFX_Hologram3::_TimeX
+	float ____TimeX_7;
+	// System.Single _2dxFX_Hologram3::Speed
+	float ___Speed_8;
+	// UnityEngine.Color _2dxFX_Hologram3::_ColorX
+	Color_t2555686324  ____ColorX_9;
+	// System.Int32 _2dxFX_Hologram3::ShaderChange
+	int32_t ___ShaderChange_10;
+	// UnityEngine.Material _2dxFX_Hologram3::tempMaterial
+	Material_t340375123 * ___tempMaterial_11;
+	// UnityEngine.Material _2dxFX_Hologram3::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_12;
+	// UnityEngine.UI.Image _2dxFX_Hologram3::CanvasImage
+	Image_t2670269651 * ___CanvasImage_13;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Distortion_6() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___Distortion_6)); }
+	inline float get_Distortion_6() const { return ___Distortion_6; }
+	inline float* get_address_of_Distortion_6() { return &___Distortion_6; }
+	inline void set_Distortion_6(float value)
+	{
+		___Distortion_6 = value;
+	}
+
+	inline static int32_t get_offset_of__TimeX_7() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ____TimeX_7)); }
+	inline float get__TimeX_7() const { return ____TimeX_7; }
+	inline float* get_address_of__TimeX_7() { return &____TimeX_7; }
+	inline void set__TimeX_7(float value)
+	{
+		____TimeX_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_8() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___Speed_8)); }
+	inline float get_Speed_8() const { return ___Speed_8; }
+	inline float* get_address_of_Speed_8() { return &___Speed_8; }
+	inline void set_Speed_8(float value)
+	{
+		___Speed_8 = value;
+	}
+
+	inline static int32_t get_offset_of__ColorX_9() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ____ColorX_9)); }
+	inline Color_t2555686324  get__ColorX_9() const { return ____ColorX_9; }
+	inline Color_t2555686324 * get_address_of__ColorX_9() { return &____ColorX_9; }
+	inline void set__ColorX_9(Color_t2555686324  value)
+	{
+		____ColorX_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_10() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___ShaderChange_10)); }
+	inline int32_t get_ShaderChange_10() const { return ___ShaderChange_10; }
+	inline int32_t* get_address_of_ShaderChange_10() { return &___ShaderChange_10; }
+	inline void set_ShaderChange_10(int32_t value)
+	{
+		___ShaderChange_10 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_11() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___tempMaterial_11)); }
+	inline Material_t340375123 * get_tempMaterial_11() const { return ___tempMaterial_11; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_11() { return &___tempMaterial_11; }
+	inline void set_tempMaterial_11(Material_t340375123 * value)
+	{
+		___tempMaterial_11 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_11), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___defaultMaterial_12)); }
+	inline Material_t340375123 * get_defaultMaterial_12() const { return ___defaultMaterial_12; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_12() { return &___defaultMaterial_12; }
+	inline void set_defaultMaterial_12(Material_t340375123 * value)
+	{
+		___defaultMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_13() { return static_cast<int32_t>(offsetof(_2dxFX_Hologram3_t974381193, ___CanvasImage_13)); }
+	inline Image_t2670269651 * get_CanvasImage_13() const { return ___CanvasImage_13; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_13() { return &___CanvasImage_13; }
+	inline void set_CanvasImage_13(Image_t2670269651 * value)
+	{
+		___CanvasImage_13 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_HOLOGRAM3_T974381193_H
+#ifndef _2DXFX_LIGHTNINGBOLT_T3274298740_H
+#define _2DXFX_LIGHTNINGBOLT_T3274298740_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_LightningBolt
+struct  _2dxFX_LightningBolt_t3274298740  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_LightningBolt::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_LightningBolt::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_LightningBolt::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_LightningBolt::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_LightningBolt::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_LightningBolt::_Value1
+	float ____Value1_7;
+	// System.Single _2dxFX_LightningBolt::_Value2
+	float ____Value2_8;
+	// System.Single _2dxFX_LightningBolt::_Value3
+	float ____Value3_9;
+	// System.Single _2dxFX_LightningBolt::_Value4
+	float ____Value4_10;
+	// System.Boolean _2dxFX_LightningBolt::_AutoScrollX
+	bool ____AutoScrollX_11;
+	// System.Single _2dxFX_LightningBolt::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_12;
+	// System.Boolean _2dxFX_LightningBolt::_AutoScrollY
+	bool ____AutoScrollY_13;
+	// System.Single _2dxFX_LightningBolt::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_14;
+	// System.Single _2dxFX_LightningBolt::_AutoScrollCountX
+	float ____AutoScrollCountX_15;
+	// System.Single _2dxFX_LightningBolt::_AutoScrollCountY
+	float ____AutoScrollCountY_16;
+	// System.Int32 _2dxFX_LightningBolt::ShaderChange
+	int32_t ___ShaderChange_17;
+	// UnityEngine.Material _2dxFX_LightningBolt::tempMaterial
+	Material_t340375123 * ___tempMaterial_18;
+	// UnityEngine.Material _2dxFX_LightningBolt::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_19;
+	// UnityEngine.UI.Image _2dxFX_LightningBolt::CanvasImage
+	Image_t2670269651 * ___CanvasImage_20;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value1_7)); }
+	inline float get__Value1_7() const { return ____Value1_7; }
+	inline float* get_address_of__Value1_7() { return &____Value1_7; }
+	inline void set__Value1_7(float value)
+	{
+		____Value1_7 = value;
+	}
+
+	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value2_8)); }
+	inline float get__Value2_8() const { return ____Value2_8; }
+	inline float* get_address_of__Value2_8() { return &____Value2_8; }
+	inline void set__Value2_8(float value)
+	{
+		____Value2_8 = value;
+	}
+
+	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value3_9)); }
+	inline float get__Value3_9() const { return ____Value3_9; }
+	inline float* get_address_of__Value3_9() { return &____Value3_9; }
+	inline void set__Value3_9(float value)
+	{
+		____Value3_9 = value;
+	}
+
+	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____Value4_10)); }
+	inline float get__Value4_10() const { return ____Value4_10; }
+	inline float* get_address_of__Value4_10() { return &____Value4_10; }
+	inline void set__Value4_10(float value)
+	{
+		____Value4_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollX_11)); }
+	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
+	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
+	inline void set__AutoScrollX_11(bool value)
+	{
+		____AutoScrollX_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollSpeedX_12)); }
+	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
+	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
+	inline void set__AutoScrollSpeedX_12(float value)
+	{
+		____AutoScrollSpeedX_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollY_13)); }
+	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
+	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
+	inline void set__AutoScrollY_13(bool value)
+	{
+		____AutoScrollY_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollSpeedY_14)); }
+	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
+	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
+	inline void set__AutoScrollSpeedY_14(float value)
+	{
+		____AutoScrollSpeedY_14 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollCountX_15)); }
+	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
+	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
+	inline void set__AutoScrollCountX_15(float value)
+	{
+		____AutoScrollCountX_15 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ____AutoScrollCountY_16)); }
+	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
+	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
+	inline void set__AutoScrollCountY_16(float value)
+	{
+		____AutoScrollCountY_16 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___ShaderChange_17)); }
+	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
+	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
+	inline void set_ShaderChange_17(int32_t value)
+	{
+		___ShaderChange_17 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___tempMaterial_18)); }
+	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
+	inline void set_tempMaterial_18(Material_t340375123 * value)
+	{
+		___tempMaterial_18 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___defaultMaterial_19)); }
+	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
+	inline void set_defaultMaterial_19(Material_t340375123 * value)
+	{
+		___defaultMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_LightningBolt_t3274298740, ___CanvasImage_20)); }
+	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
+	inline void set_CanvasImage_20(Image_t2670269651 * value)
+	{
+		___CanvasImage_20 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_LIGHTNINGBOLT_T3274298740_H
 #ifndef _2DXFX_LIQUID_T1465659548_H
 #define _2DXFX_LIQUID_T1465659548_H
 #ifdef __clang__
@@ -14115,45 +13630,509 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // _2DXFX_LIQUIFY_T1471361182_H
-#ifndef AGENTATTACKTUTORIAL_T2903660873_H
-#define AGENTATTACKTUTORIAL_T2903660873_H
+#ifndef _2DXFX_METALFX_T3372749582_H
+#define _2DXFX_METALFX_T3372749582_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// AgentAttackTutorial
-struct  AgentAttackTutorial_t2903660873  : public Tutorial_t2275885037
+// _2dxFX_MetalFX
+struct  _2dxFX_MetalFX_t3372749582  : public MonoBehaviour_t3962482529
 {
 public:
-	// System.Int32 AgentAttackTutorial::AttackNum
-	int32_t ___AttackNum_12;
-	// System.Single AgentAttackTutorial::blockTime
-	float ___blockTime_13;
+	// UnityEngine.Material _2dxFX_MetalFX::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_MetalFX::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_MetalFX::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_MetalFX::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_MetalFX::Metal
+	float ___Metal_6;
+	// System.Int32 _2dxFX_MetalFX::ShaderChange
+	int32_t ___ShaderChange_7;
+	// UnityEngine.Material _2dxFX_MetalFX::tempMaterial
+	Material_t340375123 * ___tempMaterial_8;
+	// UnityEngine.Material _2dxFX_MetalFX::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_9;
+	// UnityEngine.UI.Image _2dxFX_MetalFX::CanvasImage
+	Image_t2670269651 * ___CanvasImage_10;
 
 public:
-	inline static int32_t get_offset_of_AttackNum_12() { return static_cast<int32_t>(offsetof(AgentAttackTutorial_t2903660873, ___AttackNum_12)); }
-	inline int32_t get_AttackNum_12() const { return ___AttackNum_12; }
-	inline int32_t* get_address_of_AttackNum_12() { return &___AttackNum_12; }
-	inline void set_AttackNum_12(int32_t value)
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
 	{
-		___AttackNum_12 = value;
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
 	}
 
-	inline static int32_t get_offset_of_blockTime_13() { return static_cast<int32_t>(offsetof(AgentAttackTutorial_t2903660873, ___blockTime_13)); }
-	inline float get_blockTime_13() const { return ___blockTime_13; }
-	inline float* get_address_of_blockTime_13() { return &___blockTime_13; }
-	inline void set_blockTime_13(float value)
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
 	{
-		___blockTime_13 = value;
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Metal_6() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___Metal_6)); }
+	inline float get_Metal_6() const { return ___Metal_6; }
+	inline float* get_address_of_Metal_6() { return &___Metal_6; }
+	inline void set_Metal_6(float value)
+	{
+		___Metal_6 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_7() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___ShaderChange_7)); }
+	inline int32_t get_ShaderChange_7() const { return ___ShaderChange_7; }
+	inline int32_t* get_address_of_ShaderChange_7() { return &___ShaderChange_7; }
+	inline void set_ShaderChange_7(int32_t value)
+	{
+		___ShaderChange_7 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_8() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___tempMaterial_8)); }
+	inline Material_t340375123 * get_tempMaterial_8() const { return ___tempMaterial_8; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_8() { return &___tempMaterial_8; }
+	inline void set_tempMaterial_8(Material_t340375123 * value)
+	{
+		___tempMaterial_8 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_8), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_9() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___defaultMaterial_9)); }
+	inline Material_t340375123 * get_defaultMaterial_9() const { return ___defaultMaterial_9; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_9() { return &___defaultMaterial_9; }
+	inline void set_defaultMaterial_9(Material_t340375123 * value)
+	{
+		___defaultMaterial_9 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_9), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_10() { return static_cast<int32_t>(offsetof(_2dxFX_MetalFX_t3372749582, ___CanvasImage_10)); }
+	inline Image_t2670269651 * get_CanvasImage_10() const { return ___CanvasImage_10; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_10() { return &___CanvasImage_10; }
+	inline void set_CanvasImage_10(Image_t2670269651 * value)
+	{
+		___CanvasImage_10 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_10), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // AGENTATTACKTUTORIAL_T2903660873_H
+#endif // _2DXFX_METALFX_T3372749582_H
+#ifndef _2DXFX_JELLYAUTOMOVE_T1508469494_H
+#define _2DXFX_JELLYAUTOMOVE_T1508469494_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_JellyAutoMove
+struct  _2dxFX_JellyAutoMove_t1508469494  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_JellyAutoMove::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_JellyAutoMove::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_JellyAutoMove::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_JellyAutoMove::_Alpha
+	float ____Alpha_5;
+	// System.Single _2dxFX_JellyAutoMove::Heat
+	float ___Heat_6;
+	// System.Single _2dxFX_JellyAutoMove::RandomPos
+	float ___RandomPos_7;
+	// System.Single _2dxFX_JellyAutoMove::Inside
+	float ___Inside_8;
+	// System.Single _2dxFX_JellyAutoMove::Stabilisation
+	float ___Stabilisation_9;
+	// System.Single _2dxFX_JellyAutoMove::Speed
+	float ___Speed_10;
+	// System.Int32 _2dxFX_JellyAutoMove::ShaderChange
+	int32_t ___ShaderChange_11;
+	// UnityEngine.Material _2dxFX_JellyAutoMove::tempMaterial
+	Material_t340375123 * ___tempMaterial_12;
+	// UnityEngine.Material _2dxFX_JellyAutoMove::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_13;
+	// UnityEngine.UI.Image _2dxFX_JellyAutoMove::CanvasImage
+	Image_t2670269651 * ___CanvasImage_14;
+	// UnityEngine.Vector3 _2dxFX_JellyAutoMove::SaveMove1
+	Vector3_t3722313464  ___SaveMove1_15;
+	// UnityEngine.Vector3 _2dxFX_JellyAutoMove::SaveMove2
+	Vector3_t3722313464  ___SaveMove2_16;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Heat_6() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Heat_6)); }
+	inline float get_Heat_6() const { return ___Heat_6; }
+	inline float* get_address_of_Heat_6() { return &___Heat_6; }
+	inline void set_Heat_6(float value)
+	{
+		___Heat_6 = value;
+	}
+
+	inline static int32_t get_offset_of_RandomPos_7() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___RandomPos_7)); }
+	inline float get_RandomPos_7() const { return ___RandomPos_7; }
+	inline float* get_address_of_RandomPos_7() { return &___RandomPos_7; }
+	inline void set_RandomPos_7(float value)
+	{
+		___RandomPos_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Inside_8() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Inside_8)); }
+	inline float get_Inside_8() const { return ___Inside_8; }
+	inline float* get_address_of_Inside_8() { return &___Inside_8; }
+	inline void set_Inside_8(float value)
+	{
+		___Inside_8 = value;
+	}
+
+	inline static int32_t get_offset_of_Stabilisation_9() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Stabilisation_9)); }
+	inline float get_Stabilisation_9() const { return ___Stabilisation_9; }
+	inline float* get_address_of_Stabilisation_9() { return &___Stabilisation_9; }
+	inline void set_Stabilisation_9(float value)
+	{
+		___Stabilisation_9 = value;
+	}
+
+	inline static int32_t get_offset_of_Speed_10() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___Speed_10)); }
+	inline float get_Speed_10() const { return ___Speed_10; }
+	inline float* get_address_of_Speed_10() { return &___Speed_10; }
+	inline void set_Speed_10(float value)
+	{
+		___Speed_10 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_11() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___ShaderChange_11)); }
+	inline int32_t get_ShaderChange_11() const { return ___ShaderChange_11; }
+	inline int32_t* get_address_of_ShaderChange_11() { return &___ShaderChange_11; }
+	inline void set_ShaderChange_11(int32_t value)
+	{
+		___ShaderChange_11 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_12() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___tempMaterial_12)); }
+	inline Material_t340375123 * get_tempMaterial_12() const { return ___tempMaterial_12; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_12() { return &___tempMaterial_12; }
+	inline void set_tempMaterial_12(Material_t340375123 * value)
+	{
+		___tempMaterial_12 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_12), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_13() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___defaultMaterial_13)); }
+	inline Material_t340375123 * get_defaultMaterial_13() const { return ___defaultMaterial_13; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_13() { return &___defaultMaterial_13; }
+	inline void set_defaultMaterial_13(Material_t340375123 * value)
+	{
+		___defaultMaterial_13 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_13), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_14() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___CanvasImage_14)); }
+	inline Image_t2670269651 * get_CanvasImage_14() const { return ___CanvasImage_14; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_14() { return &___CanvasImage_14; }
+	inline void set_CanvasImage_14(Image_t2670269651 * value)
+	{
+		___CanvasImage_14 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_14), value);
+	}
+
+	inline static int32_t get_offset_of_SaveMove1_15() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___SaveMove1_15)); }
+	inline Vector3_t3722313464  get_SaveMove1_15() const { return ___SaveMove1_15; }
+	inline Vector3_t3722313464 * get_address_of_SaveMove1_15() { return &___SaveMove1_15; }
+	inline void set_SaveMove1_15(Vector3_t3722313464  value)
+	{
+		___SaveMove1_15 = value;
+	}
+
+	inline static int32_t get_offset_of_SaveMove2_16() { return static_cast<int32_t>(offsetof(_2dxFX_JellyAutoMove_t1508469494, ___SaveMove2_16)); }
+	inline Vector3_t3722313464  get_SaveMove2_16() const { return ___SaveMove2_16; }
+	inline Vector3_t3722313464 * get_address_of_SaveMove2_16() { return &___SaveMove2_16; }
+	inline void set_SaveMove2_16(Vector3_t3722313464  value)
+	{
+		___SaveMove2_16 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_JELLYAUTOMOVE_T1508469494_H
+#ifndef _2DXFX_LIGHTNING_T3745231527_H
+#define _2DXFX_LIGHTNING_T3745231527_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// _2dxFX_Lightning
+struct  _2dxFX_Lightning_t3745231527  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material _2dxFX_Lightning::ForceMaterial
+	Material_t340375123 * ___ForceMaterial_2;
+	// System.Boolean _2dxFX_Lightning::ActiveChange
+	bool ___ActiveChange_3;
+	// System.String _2dxFX_Lightning::shader
+	String_t* ___shader_4;
+	// System.Single _2dxFX_Lightning::_Alpha
+	float ____Alpha_5;
+	// UnityEngine.Texture2D _2dxFX_Lightning::__MainTex2
+	Texture2D_t3840446185 * _____MainTex2_6;
+	// System.Single _2dxFX_Lightning::_Value1
+	float ____Value1_7;
+	// System.Single _2dxFX_Lightning::_Value2
+	float ____Value2_8;
+	// System.Single _2dxFX_Lightning::_Value3
+	float ____Value3_9;
+	// System.Single _2dxFX_Lightning::_Value4
+	float ____Value4_10;
+	// System.Boolean _2dxFX_Lightning::_AutoScrollX
+	bool ____AutoScrollX_11;
+	// System.Single _2dxFX_Lightning::_AutoScrollSpeedX
+	float ____AutoScrollSpeedX_12;
+	// System.Boolean _2dxFX_Lightning::_AutoScrollY
+	bool ____AutoScrollY_13;
+	// System.Single _2dxFX_Lightning::_AutoScrollSpeedY
+	float ____AutoScrollSpeedY_14;
+	// System.Single _2dxFX_Lightning::_AutoScrollCountX
+	float ____AutoScrollCountX_15;
+	// System.Single _2dxFX_Lightning::_AutoScrollCountY
+	float ____AutoScrollCountY_16;
+	// System.Int32 _2dxFX_Lightning::ShaderChange
+	int32_t ___ShaderChange_17;
+	// UnityEngine.Material _2dxFX_Lightning::tempMaterial
+	Material_t340375123 * ___tempMaterial_18;
+	// UnityEngine.Material _2dxFX_Lightning::defaultMaterial
+	Material_t340375123 * ___defaultMaterial_19;
+	// UnityEngine.UI.Image _2dxFX_Lightning::CanvasImage
+	Image_t2670269651 * ___CanvasImage_20;
+
+public:
+	inline static int32_t get_offset_of_ForceMaterial_2() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___ForceMaterial_2)); }
+	inline Material_t340375123 * get_ForceMaterial_2() const { return ___ForceMaterial_2; }
+	inline Material_t340375123 ** get_address_of_ForceMaterial_2() { return &___ForceMaterial_2; }
+	inline void set_ForceMaterial_2(Material_t340375123 * value)
+	{
+		___ForceMaterial_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ForceMaterial_2), value);
+	}
+
+	inline static int32_t get_offset_of_ActiveChange_3() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___ActiveChange_3)); }
+	inline bool get_ActiveChange_3() const { return ___ActiveChange_3; }
+	inline bool* get_address_of_ActiveChange_3() { return &___ActiveChange_3; }
+	inline void set_ActiveChange_3(bool value)
+	{
+		___ActiveChange_3 = value;
+	}
+
+	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___shader_4)); }
+	inline String_t* get_shader_4() const { return ___shader_4; }
+	inline String_t** get_address_of_shader_4() { return &___shader_4; }
+	inline void set_shader_4(String_t* value)
+	{
+		___shader_4 = value;
+		Il2CppCodeGenWriteBarrier((&___shader_4), value);
+	}
+
+	inline static int32_t get_offset_of__Alpha_5() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Alpha_5)); }
+	inline float get__Alpha_5() const { return ____Alpha_5; }
+	inline float* get_address_of__Alpha_5() { return &____Alpha_5; }
+	inline void set__Alpha_5(float value)
+	{
+		____Alpha_5 = value;
+	}
+
+	inline static int32_t get_offset_of___MainTex2_6() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, _____MainTex2_6)); }
+	inline Texture2D_t3840446185 * get___MainTex2_6() const { return _____MainTex2_6; }
+	inline Texture2D_t3840446185 ** get_address_of___MainTex2_6() { return &_____MainTex2_6; }
+	inline void set___MainTex2_6(Texture2D_t3840446185 * value)
+	{
+		_____MainTex2_6 = value;
+		Il2CppCodeGenWriteBarrier((&_____MainTex2_6), value);
+	}
+
+	inline static int32_t get_offset_of__Value1_7() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value1_7)); }
+	inline float get__Value1_7() const { return ____Value1_7; }
+	inline float* get_address_of__Value1_7() { return &____Value1_7; }
+	inline void set__Value1_7(float value)
+	{
+		____Value1_7 = value;
+	}
+
+	inline static int32_t get_offset_of__Value2_8() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value2_8)); }
+	inline float get__Value2_8() const { return ____Value2_8; }
+	inline float* get_address_of__Value2_8() { return &____Value2_8; }
+	inline void set__Value2_8(float value)
+	{
+		____Value2_8 = value;
+	}
+
+	inline static int32_t get_offset_of__Value3_9() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value3_9)); }
+	inline float get__Value3_9() const { return ____Value3_9; }
+	inline float* get_address_of__Value3_9() { return &____Value3_9; }
+	inline void set__Value3_9(float value)
+	{
+		____Value3_9 = value;
+	}
+
+	inline static int32_t get_offset_of__Value4_10() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____Value4_10)); }
+	inline float get__Value4_10() const { return ____Value4_10; }
+	inline float* get_address_of__Value4_10() { return &____Value4_10; }
+	inline void set__Value4_10(float value)
+	{
+		____Value4_10 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollX_11() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollX_11)); }
+	inline bool get__AutoScrollX_11() const { return ____AutoScrollX_11; }
+	inline bool* get_address_of__AutoScrollX_11() { return &____AutoScrollX_11; }
+	inline void set__AutoScrollX_11(bool value)
+	{
+		____AutoScrollX_11 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedX_12() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollSpeedX_12)); }
+	inline float get__AutoScrollSpeedX_12() const { return ____AutoScrollSpeedX_12; }
+	inline float* get_address_of__AutoScrollSpeedX_12() { return &____AutoScrollSpeedX_12; }
+	inline void set__AutoScrollSpeedX_12(float value)
+	{
+		____AutoScrollSpeedX_12 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollY_13() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollY_13)); }
+	inline bool get__AutoScrollY_13() const { return ____AutoScrollY_13; }
+	inline bool* get_address_of__AutoScrollY_13() { return &____AutoScrollY_13; }
+	inline void set__AutoScrollY_13(bool value)
+	{
+		____AutoScrollY_13 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollSpeedY_14() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollSpeedY_14)); }
+	inline float get__AutoScrollSpeedY_14() const { return ____AutoScrollSpeedY_14; }
+	inline float* get_address_of__AutoScrollSpeedY_14() { return &____AutoScrollSpeedY_14; }
+	inline void set__AutoScrollSpeedY_14(float value)
+	{
+		____AutoScrollSpeedY_14 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountX_15() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollCountX_15)); }
+	inline float get__AutoScrollCountX_15() const { return ____AutoScrollCountX_15; }
+	inline float* get_address_of__AutoScrollCountX_15() { return &____AutoScrollCountX_15; }
+	inline void set__AutoScrollCountX_15(float value)
+	{
+		____AutoScrollCountX_15 = value;
+	}
+
+	inline static int32_t get_offset_of__AutoScrollCountY_16() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ____AutoScrollCountY_16)); }
+	inline float get__AutoScrollCountY_16() const { return ____AutoScrollCountY_16; }
+	inline float* get_address_of__AutoScrollCountY_16() { return &____AutoScrollCountY_16; }
+	inline void set__AutoScrollCountY_16(float value)
+	{
+		____AutoScrollCountY_16 = value;
+	}
+
+	inline static int32_t get_offset_of_ShaderChange_17() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___ShaderChange_17)); }
+	inline int32_t get_ShaderChange_17() const { return ___ShaderChange_17; }
+	inline int32_t* get_address_of_ShaderChange_17() { return &___ShaderChange_17; }
+	inline void set_ShaderChange_17(int32_t value)
+	{
+		___ShaderChange_17 = value;
+	}
+
+	inline static int32_t get_offset_of_tempMaterial_18() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___tempMaterial_18)); }
+	inline Material_t340375123 * get_tempMaterial_18() const { return ___tempMaterial_18; }
+	inline Material_t340375123 ** get_address_of_tempMaterial_18() { return &___tempMaterial_18; }
+	inline void set_tempMaterial_18(Material_t340375123 * value)
+	{
+		___tempMaterial_18 = value;
+		Il2CppCodeGenWriteBarrier((&___tempMaterial_18), value);
+	}
+
+	inline static int32_t get_offset_of_defaultMaterial_19() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___defaultMaterial_19)); }
+	inline Material_t340375123 * get_defaultMaterial_19() const { return ___defaultMaterial_19; }
+	inline Material_t340375123 ** get_address_of_defaultMaterial_19() { return &___defaultMaterial_19; }
+	inline void set_defaultMaterial_19(Material_t340375123 * value)
+	{
+		___defaultMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_CanvasImage_20() { return static_cast<int32_t>(offsetof(_2dxFX_Lightning_t3745231527, ___CanvasImage_20)); }
+	inline Image_t2670269651 * get_CanvasImage_20() const { return ___CanvasImage_20; }
+	inline Image_t2670269651 ** get_address_of_CanvasImage_20() { return &___CanvasImage_20; }
+	inline void set_CanvasImage_20(Image_t2670269651 * value)
+	{
+		___CanvasImage_20 = value;
+		Il2CppCodeGenWriteBarrier((&___CanvasImage_20), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // _2DXFX_LIGHTNING_T3745231527_H
 #ifndef AGENTANIM_T3102860560_H
 #define AGENTANIM_T3102860560_H
 #ifdef __clang__
@@ -14552,6 +14531,45 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AGENTANIM_T3102860560_H
+#ifndef AGENTATTACKTUTORIAL_T2903660873_H
+#define AGENTATTACKTUTORIAL_T2903660873_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// AgentAttackTutorial
+struct  AgentAttackTutorial_t2903660873  : public Tutorial_t2275885037
+{
+public:
+	// System.Int32 AgentAttackTutorial::AttackNum
+	int32_t ___AttackNum_12;
+	// System.Single AgentAttackTutorial::blockTime
+	float ___blockTime_13;
+
+public:
+	inline static int32_t get_offset_of_AttackNum_12() { return static_cast<int32_t>(offsetof(AgentAttackTutorial_t2903660873, ___AttackNum_12)); }
+	inline int32_t get_AttackNum_12() const { return ___AttackNum_12; }
+	inline int32_t* get_address_of_AttackNum_12() { return &___AttackNum_12; }
+	inline void set_AttackNum_12(int32_t value)
+	{
+		___AttackNum_12 = value;
+	}
+
+	inline static int32_t get_offset_of_blockTime_13() { return static_cast<int32_t>(offsetof(AgentAttackTutorial_t2903660873, ___blockTime_13)); }
+	inline float get_blockTime_13() const { return ___blockTime_13; }
+	inline float* get_address_of_blockTime_13() { return &___blockTime_13; }
+	inline void set_blockTime_13(float value)
+	{
+		___blockTime_13 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // AGENTATTACKTUTORIAL_T2903660873_H
 
 
 
@@ -14562,8 +14580,48 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4100 = { sizeof (_2dxFX_BurningFX_t3904567925), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4100 = { sizeof (_2dxFX_BlurHQ_t2760370655), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable4100[9] = 
+{
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_ForceMaterial_2(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_ActiveChange_3(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_shader_4(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of__Alpha_5(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_Blur_6(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_ShaderChange_7(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_tempMaterial_8(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_defaultMaterial_9(),
+	_2dxFX_BlurHQ_t2760370655::get_offset_of_CanvasImage_10(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4101 = { sizeof (_2dxFX_BlurHQX_t2764040671), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4101[9] = 
+{
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_ForceMaterial_2(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_ActiveChange_3(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_shader_4(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of__Alpha_5(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_Blur_6(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_ShaderChange_7(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_tempMaterial_8(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_defaultMaterial_9(),
+	_2dxFX_BlurHQX_t2764040671::get_offset_of_CanvasImage_10(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4102 = { sizeof (_2dxFX_BurnFX_t2859452929), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4102[10] = 
+{
+	_2dxFX_BurnFX_t2859452929::get_offset_of_ForceMaterial_2(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_ActiveChange_3(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_shader_4(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of__Alpha_5(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_Seed_6(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_Destroyed_7(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_ShaderChange_8(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_tempMaterial_9(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_defaultMaterial_10(),
+	_2dxFX_BurnFX_t2859452929::get_offset_of_CanvasImage_11(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4103 = { sizeof (_2dxFX_BurningFX_t3904567925), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4103[9] = 
 {
 	_2dxFX_BurningFX_t3904567925::get_offset_of_ForceMaterial_2(),
 	_2dxFX_BurningFX_t3904567925::get_offset_of_ActiveChange_3(),
@@ -14575,8 +14633,8 @@ extern const int32_t g_FieldOffsetTable4100[9] =
 	_2dxFX_BurningFX_t3904567925::get_offset_of_defaultMaterial_9(),
 	_2dxFX_BurningFX_t3904567925::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4101 = { sizeof (_2dxFX_Cartoon_t2969805880), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4101[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4104 = { sizeof (_2dxFX_Cartoon_t2969805880), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4104[10] = 
 {
 	_2dxFX_Cartoon_t2969805880::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Cartoon_t2969805880::get_offset_of_ActiveChange_3(),
@@ -14589,8 +14647,8 @@ extern const int32_t g_FieldOffsetTable4101[10] =
 	_2dxFX_Cartoon_t2969805880::get_offset_of_defaultMaterial_10(),
 	_2dxFX_Cartoon_t2969805880::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4102 = { sizeof (_2dxFX_CircleFade_t2975017661), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4102[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4105 = { sizeof (_2dxFX_CircleFade_t2975017661), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4105[10] = 
 {
 	_2dxFX_CircleFade_t2975017661::get_offset_of_ForceMaterial_2(),
 	_2dxFX_CircleFade_t2975017661::get_offset_of_ActiveChange_3(),
@@ -14603,8 +14661,8 @@ extern const int32_t g_FieldOffsetTable4102[10] =
 	_2dxFX_CircleFade_t2975017661::get_offset_of_defaultMaterial_10(),
 	_2dxFX_CircleFade_t2975017661::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4103 = { sizeof (_2dxFX_Clipping_t757758996), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4103[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4106 = { sizeof (_2dxFX_Clipping_t757758996), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4106[12] = 
 {
 	_2dxFX_Clipping_t757758996::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Clipping_t757758996::get_offset_of_ActiveChange_3(),
@@ -14619,8 +14677,8 @@ extern const int32_t g_FieldOffsetTable4103[12] =
 	_2dxFX_Clipping_t757758996::get_offset_of_defaultMaterial_12(),
 	_2dxFX_Clipping_t757758996::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4104 = { sizeof (_2dxFX_Color_t3901103531), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4104[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4107 = { sizeof (_2dxFX_Color_t3901103531), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4107[9] = 
 {
 	_2dxFX_Color_t3901103531::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Color_t3901103531::get_offset_of_ActiveChange_3(),
@@ -14632,8 +14690,8 @@ extern const int32_t g_FieldOffsetTable4104[9] =
 	_2dxFX_Color_t3901103531::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Color_t3901103531::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4105 = { sizeof (_2dxFX_ColorChange_t731387307), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4105[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4108 = { sizeof (_2dxFX_ColorChange_t731387307), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4108[13] = 
 {
 	_2dxFX_ColorChange_t731387307::get_offset_of_ForceMaterial_2(),
 	_2dxFX_ColorChange_t731387307::get_offset_of_ActiveChange_3(),
@@ -14649,8 +14707,8 @@ extern const int32_t g_FieldOffsetTable4105[13] =
 	_2dxFX_ColorChange_t731387307::get_offset_of_defaultMaterial_13(),
 	_2dxFX_ColorChange_t731387307::get_offset_of_CanvasImage_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4106 = { sizeof (_2dxFX_ColorRGB_t201945440), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4106[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4109 = { sizeof (_2dxFX_ColorRGB_t201945440), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4109[11] = 
 {
 	_2dxFX_ColorRGB_t201945440::get_offset_of_ForceMaterial_2(),
 	_2dxFX_ColorRGB_t201945440::get_offset_of_ActiveChange_3(),
@@ -14664,8 +14722,8 @@ extern const int32_t g_FieldOffsetTable4106[11] =
 	_2dxFX_ColorRGB_t201945440::get_offset_of_defaultMaterial_11(),
 	_2dxFX_ColorRGB_t201945440::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4107 = { sizeof (_2dxFX_CompressionFX_t738100557), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4107[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4110 = { sizeof (_2dxFX_CompressionFX_t738100557), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4110[9] = 
 {
 	_2dxFX_CompressionFX_t738100557::get_offset_of_ForceMaterial_2(),
 	_2dxFX_CompressionFX_t738100557::get_offset_of_ActiveChange_3(),
@@ -14677,8 +14735,8 @@ extern const int32_t g_FieldOffsetTable4107[9] =
 	_2dxFX_CompressionFX_t738100557::get_offset_of_defaultMaterial_9(),
 	_2dxFX_CompressionFX_t738100557::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4108 = { sizeof (_2dxFX_DesintegrationFX_t2638853887), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4108[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4111 = { sizeof (_2dxFX_DesintegrationFX_t2638853887), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4111[11] = 
 {
 	_2dxFX_DesintegrationFX_t2638853887::get_offset_of_ForceMaterial_2(),
 	_2dxFX_DesintegrationFX_t2638853887::get_offset_of_ActiveChange_3(),
@@ -14692,8 +14750,8 @@ extern const int32_t g_FieldOffsetTable4108[11] =
 	_2dxFX_DesintegrationFX_t2638853887::get_offset_of_defaultMaterial_11(),
 	_2dxFX_DesintegrationFX_t2638853887::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4109 = { sizeof (_2dxFX_DestroyedFX_t3244269131), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4109[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4112 = { sizeof (_2dxFX_DestroyedFX_t3244269131), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4112[10] = 
 {
 	_2dxFX_DestroyedFX_t3244269131::get_offset_of_ForceMaterial_2(),
 	_2dxFX_DestroyedFX_t3244269131::get_offset_of_ActiveChange_3(),
@@ -14706,8 +14764,8 @@ extern const int32_t g_FieldOffsetTable4109[10] =
 	_2dxFX_DestroyedFX_t3244269131::get_offset_of_defaultMaterial_10(),
 	_2dxFX_DestroyedFX_t3244269131::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4110 = { sizeof (_2dxFX_Distortion_t3560396152), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4110[20] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4113 = { sizeof (_2dxFX_Distortion_t3560396152), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4113[20] = 
 {
 	_2dxFX_Distortion_t3560396152::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Distortion_t3560396152::get_offset_of_ActiveChange_3(),
@@ -14730,8 +14788,8 @@ extern const int32_t g_FieldOffsetTable4110[20] =
 	_2dxFX_Distortion_t3560396152::get_offset_of_defaultMaterial_20(),
 	_2dxFX_Distortion_t3560396152::get_offset_of_CanvasImage_21(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4111 = { sizeof (_2dxFX_Distortion_Additive_t1916819100), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4111[20] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4114 = { sizeof (_2dxFX_Distortion_Additive_t1916819100), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4114[20] = 
 {
 	_2dxFX_Distortion_Additive_t1916819100::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Distortion_Additive_t1916819100::get_offset_of_ActiveChange_3(),
@@ -14754,8 +14812,8 @@ extern const int32_t g_FieldOffsetTable4111[20] =
 	_2dxFX_Distortion_Additive_t1916819100::get_offset_of_defaultMaterial_20(),
 	_2dxFX_Distortion_Additive_t1916819100::get_offset_of_CanvasImage_21(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4112 = { sizeof (_2dxFX_EdgeColor_t640265773), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4112[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4115 = { sizeof (_2dxFX_EdgeColor_t640265773), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4115[9] = 
 {
 	_2dxFX_EdgeColor_t640265773::get_offset_of_ForceMaterial_2(),
 	_2dxFX_EdgeColor_t640265773::get_offset_of_ActiveChange_3(),
@@ -14767,8 +14825,8 @@ extern const int32_t g_FieldOffsetTable4112[9] =
 	_2dxFX_EdgeColor_t640265773::get_offset_of_defaultMaterial_9(),
 	_2dxFX_EdgeColor_t640265773::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4113 = { sizeof (_2dxFX_EnergyBar_t1548343810), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4113[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4116 = { sizeof (_2dxFX_EnergyBar_t1548343810), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4116[13] = 
 {
 	_2dxFX_EnergyBar_t1548343810::get_offset_of_ForceMaterial_2(),
 	_2dxFX_EnergyBar_t1548343810::get_offset_of_ActiveChange_3(),
@@ -14784,8 +14842,8 @@ extern const int32_t g_FieldOffsetTable4113[13] =
 	_2dxFX_EnergyBar_t1548343810::get_offset_of_defaultMaterial_13(),
 	_2dxFX_EnergyBar_t1548343810::get_offset_of_CanvasImage_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4114 = { sizeof (_2dxFX_Fire_t940813243), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4114[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4117 = { sizeof (_2dxFX_Fire_t940813243), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4117[19] = 
 {
 	_2dxFX_Fire_t940813243::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Fire_t940813243::get_offset_of_ActiveChange_3(),
@@ -14807,8 +14865,8 @@ extern const int32_t g_FieldOffsetTable4114[19] =
 	_2dxFX_Fire_t940813243::get_offset_of_defaultMaterial_19(),
 	_2dxFX_Fire_t940813243::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4115 = { sizeof (_2dxFX_FireAdditive_t4163587848), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4115[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4118 = { sizeof (_2dxFX_FireAdditive_t4163587848), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4118[19] = 
 {
 	_2dxFX_FireAdditive_t4163587848::get_offset_of_ForceMaterial_2(),
 	_2dxFX_FireAdditive_t4163587848::get_offset_of_ActiveChange_3(),
@@ -14830,8 +14888,8 @@ extern const int32_t g_FieldOffsetTable4115[19] =
 	_2dxFX_FireAdditive_t4163587848::get_offset_of_defaultMaterial_19(),
 	_2dxFX_FireAdditive_t4163587848::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4116 = { sizeof (_2dxFX_Flame_t3329885920), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4116[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4119 = { sizeof (_2dxFX_Flame_t3329885920), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4119[11] = 
 {
 	_2dxFX_Flame_t3329885920::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Flame_t3329885920::get_offset_of_ActiveChange_3(),
@@ -14845,8 +14903,8 @@ extern const int32_t g_FieldOffsetTable4116[11] =
 	_2dxFX_Flame_t3329885920::get_offset_of_defaultMaterial_11(),
 	_2dxFX_Flame_t3329885920::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4117 = { sizeof (_2dxFX_FlameAdditive_t722264892), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4117[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4120 = { sizeof (_2dxFX_FlameAdditive_t722264892), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4120[11] = 
 {
 	_2dxFX_FlameAdditive_t722264892::get_offset_of_ForceMaterial_2(),
 	_2dxFX_FlameAdditive_t722264892::get_offset_of_ActiveChange_3(),
@@ -14860,8 +14918,8 @@ extern const int32_t g_FieldOffsetTable4117[11] =
 	_2dxFX_FlameAdditive_t722264892::get_offset_of_defaultMaterial_11(),
 	_2dxFX_FlameAdditive_t722264892::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4118 = { sizeof (_2dxFX_Frozen_t490160778), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4118[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4121 = { sizeof (_2dxFX_Frozen_t490160778), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4121[19] = 
 {
 	_2dxFX_Frozen_t490160778::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Frozen_t490160778::get_offset_of_ActiveChange_3(),
@@ -14883,8 +14941,8 @@ extern const int32_t g_FieldOffsetTable4118[19] =
 	_2dxFX_Frozen_t490160778::get_offset_of_defaultMaterial_19(),
 	_2dxFX_Frozen_t490160778::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4119 = { sizeof (_2dxFX_Ghost_t324680138), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4119[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4122 = { sizeof (_2dxFX_Ghost_t324680138), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4122[13] = 
 {
 	_2dxFX_Ghost_t324680138::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Ghost_t324680138::get_offset_of_ActiveChange_3(),
@@ -14900,8 +14958,8 @@ extern const int32_t g_FieldOffsetTable4119[13] =
 	_2dxFX_Ghost_t324680138::get_offset_of_defaultMaterial_13(),
 	_2dxFX_Ghost_t324680138::get_offset_of_CanvasImage_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4120 = { sizeof (_2dxFX_GoldenFX_t3771068735), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4120[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4123 = { sizeof (_2dxFX_GoldenFX_t3771068735), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4123[9] = 
 {
 	_2dxFX_GoldenFX_t3771068735::get_offset_of_ForceMaterial_2(),
 	_2dxFX_GoldenFX_t3771068735::get_offset_of_ActiveChange_3(),
@@ -14913,8 +14971,8 @@ extern const int32_t g_FieldOffsetTable4120[9] =
 	_2dxFX_GoldenFX_t3771068735::get_offset_of_defaultMaterial_9(),
 	_2dxFX_GoldenFX_t3771068735::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4121 = { sizeof (_2dxFX_GoldFX_t3246480377), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4121[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4124 = { sizeof (_2dxFX_GoldFX_t3246480377), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4124[9] = 
 {
 	_2dxFX_GoldFX_t3246480377::get_offset_of_ForceMaterial_2(),
 	_2dxFX_GoldFX_t3246480377::get_offset_of_ActiveChange_3(),
@@ -14926,8 +14984,8 @@ extern const int32_t g_FieldOffsetTable4121[9] =
 	_2dxFX_GoldFX_t3246480377::get_offset_of_defaultMaterial_9(),
 	_2dxFX_GoldFX_t3246480377::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4122 = { sizeof (_2dxFX_GrassFX_t4149113567), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4122[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4125 = { sizeof (_2dxFX_GrassFX_t4149113567), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4125[12] = 
 {
 	_2dxFX_GrassFX_t4149113567::get_offset_of_ForceMaterial_2(),
 	_2dxFX_GrassFX_t4149113567::get_offset_of_ActiveChange_3(),
@@ -14942,8 +15000,8 @@ extern const int32_t g_FieldOffsetTable4122[12] =
 	_2dxFX_GrassFX_t4149113567::get_offset_of_defaultMaterial_12(),
 	_2dxFX_GrassFX_t4149113567::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4123 = { sizeof (_2dxFX_GrassMultiFX_t954429804), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4123[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4126 = { sizeof (_2dxFX_GrassMultiFX_t954429804), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4126[15] = 
 {
 	_2dxFX_GrassMultiFX_t954429804::get_offset_of_ForceMaterial_2(),
 	_2dxFX_GrassMultiFX_t954429804::get_offset_of_ActiveChange_3(),
@@ -14961,8 +15019,8 @@ extern const int32_t g_FieldOffsetTable4123[15] =
 	_2dxFX_GrassMultiFX_t954429804::get_offset_of_defaultMaterial_15(),
 	_2dxFX_GrassMultiFX_t954429804::get_offset_of_CanvasImage_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4124 = { sizeof (_2dxFX_GrayScale_t2311953698), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4124[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4127 = { sizeof (_2dxFX_GrayScale_t2311953698), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4127[9] = 
 {
 	_2dxFX_GrayScale_t2311953698::get_offset_of_ForceMaterial_2(),
 	_2dxFX_GrayScale_t2311953698::get_offset_of_ActiveChange_3(),
@@ -14974,8 +15032,8 @@ extern const int32_t g_FieldOffsetTable4124[9] =
 	_2dxFX_GrayScale_t2311953698::get_offset_of_defaultMaterial_9(),
 	_2dxFX_GrayScale_t2311953698::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4125 = { sizeof (_2dxFX_Heat_t2506713594), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4125[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4128 = { sizeof (_2dxFX_Heat_t2506713594), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4128[10] = 
 {
 	_2dxFX_Heat_t2506713594::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Heat_t2506713594::get_offset_of_ActiveChange_3(),
@@ -14988,8 +15046,8 @@ extern const int32_t g_FieldOffsetTable4125[10] =
 	_2dxFX_Heat_t2506713594::get_offset_of_defaultMaterial_10(),
 	_2dxFX_Heat_t2506713594::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4126 = { sizeof (_2dxFX_Hologram_t3899187337), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4126[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4129 = { sizeof (_2dxFX_Hologram_t3899187337), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4129[10] = 
 {
 	_2dxFX_Hologram_t3899187337::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Hologram_t3899187337::get_offset_of_ActiveChange_3(),
@@ -15002,8 +15060,8 @@ extern const int32_t g_FieldOffsetTable4126[10] =
 	_2dxFX_Hologram_t3899187337::get_offset_of_defaultMaterial_10(),
 	_2dxFX_Hologram_t3899187337::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4127 = { sizeof (_2dxFX_Hologram2_t2930696329), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4127[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4130 = { sizeof (_2dxFX_Hologram2_t2930696329), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4130[11] = 
 {
 	_2dxFX_Hologram2_t2930696329::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Hologram2_t2930696329::get_offset_of_ActiveChange_3(),
@@ -15017,8 +15075,8 @@ extern const int32_t g_FieldOffsetTable4127[11] =
 	_2dxFX_Hologram2_t2930696329::get_offset_of_defaultMaterial_11(),
 	_2dxFX_Hologram2_t2930696329::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4128 = { sizeof (_2dxFX_Hologram3_t974381193), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4128[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4131 = { sizeof (_2dxFX_Hologram3_t974381193), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4131[12] = 
 {
 	_2dxFX_Hologram3_t974381193::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Hologram3_t974381193::get_offset_of_ActiveChange_3(),
@@ -15033,8 +15091,8 @@ extern const int32_t g_FieldOffsetTable4128[12] =
 	_2dxFX_Hologram3_t974381193::get_offset_of_defaultMaterial_12(),
 	_2dxFX_Hologram3_t974381193::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4129 = { sizeof (_2dxFX_HSV_t3595236558), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4129[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4132 = { sizeof (_2dxFX_HSV_t3595236558), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4132[11] = 
 {
 	_2dxFX_HSV_t3595236558::get_offset_of_ForceMaterial_2(),
 	_2dxFX_HSV_t3595236558::get_offset_of_ActiveChange_3(),
@@ -15048,8 +15106,8 @@ extern const int32_t g_FieldOffsetTable4129[11] =
 	_2dxFX_HSV_t3595236558::get_offset_of_defaultMaterial_11(),
 	_2dxFX_HSV_t3595236558::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4130 = { sizeof (_2dxFX_Ice_t1635841214), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4130[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4133 = { sizeof (_2dxFX_Ice_t1635841214), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4133[19] = 
 {
 	_2dxFX_Ice_t1635841214::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Ice_t1635841214::get_offset_of_ActiveChange_3(),
@@ -15071,8 +15129,8 @@ extern const int32_t g_FieldOffsetTable4130[19] =
 	_2dxFX_Ice_t1635841214::get_offset_of_defaultMaterial_19(),
 	_2dxFX_Ice_t1635841214::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4131 = { sizeof (_2dxFX_IcedFX_t2117229429), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4131[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4134 = { sizeof (_2dxFX_IcedFX_t2117229429), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4134[9] = 
 {
 	_2dxFX_IcedFX_t2117229429::get_offset_of_ForceMaterial_2(),
 	_2dxFX_IcedFX_t2117229429::get_offset_of_ActiveChange_3(),
@@ -15084,8 +15142,8 @@ extern const int32_t g_FieldOffsetTable4131[9] =
 	_2dxFX_IcedFX_t2117229429::get_offset_of_defaultMaterial_9(),
 	_2dxFX_IcedFX_t2117229429::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4132 = { sizeof (_2dxFX_Jelly_t3102112626), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4132[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4135 = { sizeof (_2dxFX_Jelly_t3102112626), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4135[11] = 
 {
 	_2dxFX_Jelly_t3102112626::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Jelly_t3102112626::get_offset_of_ActiveChange_3(),
@@ -15099,8 +15157,8 @@ extern const int32_t g_FieldOffsetTable4132[11] =
 	_2dxFX_Jelly_t3102112626::get_offset_of_defaultMaterial_11(),
 	_2dxFX_Jelly_t3102112626::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4133 = { sizeof (_2dxFX_JellyAutoMove_t1508469494), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4133[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4136 = { sizeof (_2dxFX_JellyAutoMove_t1508469494), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4136[15] = 
 {
 	_2dxFX_JellyAutoMove_t1508469494::get_offset_of_ForceMaterial_2(),
 	_2dxFX_JellyAutoMove_t1508469494::get_offset_of_ActiveChange_3(),
@@ -15118,8 +15176,8 @@ extern const int32_t g_FieldOffsetTable4133[15] =
 	_2dxFX_JellyAutoMove_t1508469494::get_offset_of_SaveMove1_15(),
 	_2dxFX_JellyAutoMove_t1508469494::get_offset_of_SaveMove2_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4134 = { sizeof (_2dxFX_Lightning_t3745231527), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4134[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4137 = { sizeof (_2dxFX_Lightning_t3745231527), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4137[19] = 
 {
 	_2dxFX_Lightning_t3745231527::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Lightning_t3745231527::get_offset_of_ActiveChange_3(),
@@ -15141,8 +15199,8 @@ extern const int32_t g_FieldOffsetTable4134[19] =
 	_2dxFX_Lightning_t3745231527::get_offset_of_defaultMaterial_19(),
 	_2dxFX_Lightning_t3745231527::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4135 = { sizeof (_2dxFX_LightningBolt_t3274298740), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4135[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4138 = { sizeof (_2dxFX_LightningBolt_t3274298740), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4138[19] = 
 {
 	_2dxFX_LightningBolt_t3274298740::get_offset_of_ForceMaterial_2(),
 	_2dxFX_LightningBolt_t3274298740::get_offset_of_ActiveChange_3(),
@@ -15164,8 +15222,8 @@ extern const int32_t g_FieldOffsetTable4135[19] =
 	_2dxFX_LightningBolt_t3274298740::get_offset_of_defaultMaterial_19(),
 	_2dxFX_LightningBolt_t3274298740::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4136 = { sizeof (_2dxFX_Liquid_t1465659548), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4136[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4139 = { sizeof (_2dxFX_Liquid_t1465659548), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4139[12] = 
 {
 	_2dxFX_Liquid_t1465659548::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Liquid_t1465659548::get_offset_of_ActiveChange_3(),
@@ -15180,8 +15238,8 @@ extern const int32_t g_FieldOffsetTable4136[12] =
 	_2dxFX_Liquid_t1465659548::get_offset_of_defaultMaterial_12(),
 	_2dxFX_Liquid_t1465659548::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4137 = { sizeof (_2dxFX_Liquify_t1471361182), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4137[14] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4140 = { sizeof (_2dxFX_Liquify_t1471361182), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4140[14] = 
 {
 	_2dxFX_Liquify_t1471361182::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Liquify_t1471361182::get_offset_of_ActiveChange_3(),
@@ -15198,8 +15256,8 @@ extern const int32_t g_FieldOffsetTable4137[14] =
 	_2dxFX_Liquify_t1471361182::get_offset_of_defaultMaterial_14(),
 	_2dxFX_Liquify_t1471361182::get_offset_of_CanvasImage_15(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4138 = { sizeof (_2dxFX_MetalFX_t3372749582), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4138[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4141 = { sizeof (_2dxFX_MetalFX_t3372749582), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4141[9] = 
 {
 	_2dxFX_MetalFX_t3372749582::get_offset_of_ForceMaterial_2(),
 	_2dxFX_MetalFX_t3372749582::get_offset_of_ActiveChange_3(),
@@ -15211,8 +15269,8 @@ extern const int32_t g_FieldOffsetTable4138[9] =
 	_2dxFX_MetalFX_t3372749582::get_offset_of_defaultMaterial_9(),
 	_2dxFX_MetalFX_t3372749582::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4139 = { sizeof (_2dxFX_Mystic_Distortion_t2476226469), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4139[24] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4142 = { sizeof (_2dxFX_Mystic_Distortion_t2476226469), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4142[24] = 
 {
 	_2dxFX_Mystic_Distortion_t2476226469::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Mystic_Distortion_t2476226469::get_offset_of_ActiveChange_3(),
@@ -15239,8 +15297,8 @@ extern const int32_t g_FieldOffsetTable4139[24] =
 	_2dxFX_Mystic_Distortion_t2476226469::get_offset_of_defaultMaterial_24(),
 	_2dxFX_Mystic_Distortion_t2476226469::get_offset_of_CanvasImage_25(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4140 = { sizeof (_2dxFX_Mystic_Distortion_Additive_t2718952641), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4140[24] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4143 = { sizeof (_2dxFX_Mystic_Distortion_Additive_t2718952641), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4143[24] = 
 {
 	_2dxFX_Mystic_Distortion_Additive_t2718952641::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Mystic_Distortion_Additive_t2718952641::get_offset_of_ActiveChange_3(),
@@ -15267,8 +15325,8 @@ extern const int32_t g_FieldOffsetTable4140[24] =
 	_2dxFX_Mystic_Distortion_Additive_t2718952641::get_offset_of_defaultMaterial_24(),
 	_2dxFX_Mystic_Distortion_Additive_t2718952641::get_offset_of_CanvasImage_25(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4141 = { sizeof (_2dxFX_Negative_t4244666266), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4141[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4144 = { sizeof (_2dxFX_Negative_t4244666266), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4144[9] = 
 {
 	_2dxFX_Negative_t4244666266::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Negative_t4244666266::get_offset_of_ActiveChange_3(),
@@ -15280,8 +15338,8 @@ extern const int32_t g_FieldOffsetTable4141[9] =
 	_2dxFX_Negative_t4244666266::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Negative_t4244666266::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4142 = { sizeof (_2dxFX_NewTeleportation_t1690554931), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4142[20] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4145 = { sizeof (_2dxFX_NewTeleportation_t1690554931), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4145[20] = 
 {
 	_2dxFX_NewTeleportation_t1690554931::get_offset_of_ForceMaterial_2(),
 	_2dxFX_NewTeleportation_t1690554931::get_offset_of_ActiveChange_3(),
@@ -15304,8 +15362,8 @@ extern const int32_t g_FieldOffsetTable4142[20] =
 	_2dxFX_NewTeleportation_t1690554931::get_offset_of_defaultMaterial_20(),
 	_2dxFX_NewTeleportation_t1690554931::get_offset_of_CanvasImage_21(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4143 = { sizeof (_2dxFX_NewTeleportation2_t1486737971), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4143[20] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4146 = { sizeof (_2dxFX_NewTeleportation2_t1486737971), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4146[20] = 
 {
 	_2dxFX_NewTeleportation2_t1486737971::get_offset_of_ForceMaterial_2(),
 	_2dxFX_NewTeleportation2_t1486737971::get_offset_of_ActiveChange_3(),
@@ -15328,8 +15386,8 @@ extern const int32_t g_FieldOffsetTable4143[20] =
 	_2dxFX_NewTeleportation2_t1486737971::get_offset_of_defaultMaterial_20(),
 	_2dxFX_NewTeleportation2_t1486737971::get_offset_of_CanvasImage_21(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4144 = { sizeof (_2dxFX_Noise_t489699783), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4144[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4147 = { sizeof (_2dxFX_Noise_t489699783), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4147[9] = 
 {
 	_2dxFX_Noise_t489699783::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Noise_t489699783::get_offset_of_ActiveChange_3(),
@@ -15341,8 +15399,8 @@ extern const int32_t g_FieldOffsetTable4144[9] =
 	_2dxFX_Noise_t489699783::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Noise_t489699783::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4145 = { sizeof (_2dxFX_NoiseAnimated_t1634809653), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4145[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4148 = { sizeof (_2dxFX_NoiseAnimated_t1634809653), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4148[9] = 
 {
 	_2dxFX_NoiseAnimated_t1634809653::get_offset_of_ForceMaterial_2(),
 	_2dxFX_NoiseAnimated_t1634809653::get_offset_of_ActiveChange_3(),
@@ -15354,8 +15412,8 @@ extern const int32_t g_FieldOffsetTable4145[9] =
 	_2dxFX_NoiseAnimated_t1634809653::get_offset_of_defaultMaterial_9(),
 	_2dxFX_NoiseAnimated_t1634809653::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4146 = { sizeof (_2dxFX_Offset_t2110223393), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4146[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4149 = { sizeof (_2dxFX_Offset_t2110223393), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4149[19] = 
 {
 	_2dxFX_Offset_t2110223393::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Offset_t2110223393::get_offset_of_ActiveChange_3(),
@@ -15377,8 +15435,8 @@ extern const int32_t g_FieldOffsetTable4146[19] =
 	_2dxFX_Offset_t2110223393::get_offset_of_defaultMaterial_19(),
 	_2dxFX_Offset_t2110223393::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4147 = { sizeof (_2dxFX_Outline_t1004254021), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4147[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4150 = { sizeof (_2dxFX_Outline_t1004254021), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4150[10] = 
 {
 	_2dxFX_Outline_t1004254021::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Outline_t1004254021::get_offset_of_ActiveChange_3(),
@@ -15391,8 +15449,8 @@ extern const int32_t g_FieldOffsetTable4147[10] =
 	_2dxFX_Outline_t1004254021::get_offset_of_defaultMaterial_10(),
 	_2dxFX_Outline_t1004254021::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4148 = { sizeof (_2dxFX_Pattern_t2704712765), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4148[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4151 = { sizeof (_2dxFX_Pattern_t2704712765), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4151[17] = 
 {
 	_2dxFX_Pattern_t2704712765::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Pattern_t2704712765::get_offset_of_ActiveChange_3(),
@@ -15412,8 +15470,8 @@ extern const int32_t g_FieldOffsetTable4148[17] =
 	_2dxFX_Pattern_t2704712765::get_offset_of_defaultMaterial_17(),
 	_2dxFX_Pattern_t2704712765::get_offset_of_CanvasImage_18(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4149 = { sizeof (_2dxFX_PatternAdditive_t1594767377), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4149[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4152 = { sizeof (_2dxFX_PatternAdditive_t1594767377), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4152[17] = 
 {
 	_2dxFX_PatternAdditive_t1594767377::get_offset_of_ForceMaterial_2(),
 	_2dxFX_PatternAdditive_t1594767377::get_offset_of_ActiveChange_3(),
@@ -15433,8 +15491,8 @@ extern const int32_t g_FieldOffsetTable4149[17] =
 	_2dxFX_PatternAdditive_t1594767377::get_offset_of_defaultMaterial_17(),
 	_2dxFX_PatternAdditive_t1594767377::get_offset_of_CanvasImage_18(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4150 = { sizeof (_2dxFX_Pixel_t1222618043), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4150[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4153 = { sizeof (_2dxFX_Pixel_t1222618043), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4153[9] = 
 {
 	_2dxFX_Pixel_t1222618043::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Pixel_t1222618043::get_offset_of_ActiveChange_3(),
@@ -15446,8 +15504,8 @@ extern const int32_t g_FieldOffsetTable4150[9] =
 	_2dxFX_Pixel_t1222618043::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Pixel_t1222618043::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4151 = { sizeof (_2dxFX_Pixel8bitsBW_t1365288922), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4151[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4154 = { sizeof (_2dxFX_Pixel8bitsBW_t1365288922), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4154[11] = 
 {
 	_2dxFX_Pixel8bitsBW_t1365288922::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Pixel8bitsBW_t1365288922::get_offset_of_ActiveChange_3(),
@@ -15461,8 +15519,8 @@ extern const int32_t g_FieldOffsetTable4151[11] =
 	_2dxFX_Pixel8bitsBW_t1365288922::get_offset_of_defaultMaterial_11(),
 	_2dxFX_Pixel8bitsBW_t1365288922::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4152 = { sizeof (_2dxFX_Pixel8bitsC64_t1978114015), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4152[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4155 = { sizeof (_2dxFX_Pixel8bitsC64_t1978114015), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4155[11] = 
 {
 	_2dxFX_Pixel8bitsC64_t1978114015::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Pixel8bitsC64_t1978114015::get_offset_of_ActiveChange_3(),
@@ -15476,8 +15534,8 @@ extern const int32_t g_FieldOffsetTable4152[11] =
 	_2dxFX_Pixel8bitsC64_t1978114015::get_offset_of_defaultMaterial_11(),
 	_2dxFX_Pixel8bitsC64_t1978114015::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4153 = { sizeof (_2dxFX_Pixel8bitsGB_t1674268507), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4153[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4156 = { sizeof (_2dxFX_Pixel8bitsGB_t1674268507), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4156[10] = 
 {
 	_2dxFX_Pixel8bitsGB_t1674268507::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Pixel8bitsGB_t1674268507::get_offset_of_ActiveChange_3(),
@@ -15490,8 +15548,8 @@ extern const int32_t g_FieldOffsetTable4153[10] =
 	_2dxFX_Pixel8bitsGB_t1674268507::get_offset_of_defaultMaterial_10(),
 	_2dxFX_Pixel8bitsGB_t1674268507::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4154 = { sizeof (_2dxFX_PixelDie_t3065265623), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4154[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4157 = { sizeof (_2dxFX_PixelDie_t3065265623), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4157[19] = 
 {
 	_2dxFX_PixelDie_t3065265623::get_offset_of_ForceMaterial_2(),
 	_2dxFX_PixelDie_t3065265623::get_offset_of_ActiveChange_3(),
@@ -15513,8 +15571,8 @@ extern const int32_t g_FieldOffsetTable4154[19] =
 	_2dxFX_PixelDie_t3065265623::get_offset_of_defaultMaterial_19(),
 	_2dxFX_PixelDie_t3065265623::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4155 = { sizeof (_2dxFX_PlasmaRainbow_t1368616563), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4155[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4158 = { sizeof (_2dxFX_PlasmaRainbow_t1368616563), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4158[12] = 
 {
 	_2dxFX_PlasmaRainbow_t1368616563::get_offset_of_ForceMaterial_2(),
 	_2dxFX_PlasmaRainbow_t1368616563::get_offset_of_ActiveChange_3(),
@@ -15529,8 +15587,8 @@ extern const int32_t g_FieldOffsetTable4155[12] =
 	_2dxFX_PlasmaRainbow_t1368616563::get_offset_of_defaultMaterial_12(),
 	_2dxFX_PlasmaRainbow_t1368616563::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4156 = { sizeof (_2dxFX_PlasmaRainbow_Color_t1556315044), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4156[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4159 = { sizeof (_2dxFX_PlasmaRainbow_Color_t1556315044), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4159[12] = 
 {
 	_2dxFX_PlasmaRainbow_Color_t1556315044::get_offset_of_ForceMaterial_2(),
 	_2dxFX_PlasmaRainbow_Color_t1556315044::get_offset_of_ActiveChange_3(),
@@ -15545,8 +15603,8 @@ extern const int32_t g_FieldOffsetTable4156[12] =
 	_2dxFX_PlasmaRainbow_Color_t1556315044::get_offset_of_defaultMaterial_12(),
 	_2dxFX_PlasmaRainbow_Color_t1556315044::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4157 = { sizeof (_2dxFX_PlasmaShield_t1475112776), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4157[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4160 = { sizeof (_2dxFX_PlasmaShield_t1475112776), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4160[12] = 
 {
 	_2dxFX_PlasmaShield_t1475112776::get_offset_of_ForceMaterial_2(),
 	_2dxFX_PlasmaShield_t1475112776::get_offset_of_ActiveChange_3(),
@@ -15561,8 +15619,8 @@ extern const int32_t g_FieldOffsetTable4157[12] =
 	_2dxFX_PlasmaShield_t1475112776::get_offset_of_defaultMaterial_12(),
 	_2dxFX_PlasmaShield_t1475112776::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4158 = { sizeof (_2dxFX_Posterize_t2695202757), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4158[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4161 = { sizeof (_2dxFX_Posterize_t2695202757), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4161[9] = 
 {
 	_2dxFX_Posterize_t2695202757::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Posterize_t2695202757::get_offset_of_ActiveChange_3(),
@@ -15574,8 +15632,8 @@ extern const int32_t g_FieldOffsetTable4158[9] =
 	_2dxFX_Posterize_t2695202757::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Posterize_t2695202757::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4159 = { sizeof (_2dxFX_SandFX_t2083216051), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4159[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4162 = { sizeof (_2dxFX_SandFX_t2083216051), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4162[9] = 
 {
 	_2dxFX_SandFX_t2083216051::get_offset_of_ForceMaterial_2(),
 	_2dxFX_SandFX_t2083216051::get_offset_of_ActiveChange_3(),
@@ -15587,8 +15645,8 @@ extern const int32_t g_FieldOffsetTable4159[9] =
 	_2dxFX_SandFX_t2083216051::get_offset_of_defaultMaterial_9(),
 	_2dxFX_SandFX_t2083216051::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4160 = { sizeof (_2dxFX_Sepia_t3510645867), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4160[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4163 = { sizeof (_2dxFX_Sepia_t3510645867), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4163[9] = 
 {
 	_2dxFX_Sepia_t3510645867::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Sepia_t3510645867::get_offset_of_ActiveChange_3(),
@@ -15600,8 +15658,8 @@ extern const int32_t g_FieldOffsetTable4160[9] =
 	_2dxFX_Sepia_t3510645867::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Sepia_t3510645867::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4161 = { sizeof (_2dxFX_Sharpen_t2616912503), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4161[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4164 = { sizeof (_2dxFX_Sharpen_t2616912503), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4164[9] = 
 {
 	_2dxFX_Sharpen_t2616912503::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Sharpen_t2616912503::get_offset_of_ActiveChange_3(),
@@ -15613,8 +15671,8 @@ extern const int32_t g_FieldOffsetTable4161[9] =
 	_2dxFX_Sharpen_t2616912503::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Sharpen_t2616912503::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4162 = { sizeof (_2dxFX_Shiny_Reflect_t822361570), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4162[18] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4165 = { sizeof (_2dxFX_Shiny_Reflect_t822361570), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4165[18] = 
 {
 	_2dxFX_Shiny_Reflect_t822361570::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Shiny_Reflect_t822361570::get_offset_of_ActiveChange_3(),
@@ -15635,8 +15693,8 @@ extern const int32_t g_FieldOffsetTable4162[18] =
 	_2dxFX_Shiny_Reflect_t822361570::get_offset_of_defaultMaterial_18(),
 	_2dxFX_Shiny_Reflect_t822361570::get_offset_of_CanvasImage_19(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4163 = { sizeof (_2dxFX_SkyCloud_t2529631033), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4163[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4166 = { sizeof (_2dxFX_SkyCloud_t2529631033), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4166[19] = 
 {
 	_2dxFX_SkyCloud_t2529631033::get_offset_of_ForceMaterial_2(),
 	_2dxFX_SkyCloud_t2529631033::get_offset_of_ActiveChange_3(),
@@ -15658,8 +15716,8 @@ extern const int32_t g_FieldOffsetTable4163[19] =
 	_2dxFX_SkyCloud_t2529631033::get_offset_of_defaultMaterial_19(),
 	_2dxFX_SkyCloud_t2529631033::get_offset_of_CanvasImage_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4164 = { sizeof (_2dxFX_Slim_t2056914656), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4164[14] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4167 = { sizeof (_2dxFX_Slim_t2056914656), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4167[14] = 
 {
 	_2dxFX_Slim_t2056914656::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Slim_t2056914656::get_offset_of_ActiveChange_3(),
@@ -15676,8 +15734,8 @@ extern const int32_t g_FieldOffsetTable4164[14] =
 	_2dxFX_Slim_t2056914656::get_offset_of_defaultMaterial_14(),
 	_2dxFX_Slim_t2056914656::get_offset_of_CanvasImage_15(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4165 = { sizeof (_2dxFX_Smoke_t3112061757), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4165[21] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4168 = { sizeof (_2dxFX_Smoke_t3112061757), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4168[21] = 
 {
 	_2dxFX_Smoke_t3112061757::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Smoke_t3112061757::get_offset_of_ActiveChange_3(),
@@ -15701,8 +15759,8 @@ extern const int32_t g_FieldOffsetTable4165[21] =
 	_2dxFX_Smoke_t3112061757::get_offset_of_defaultMaterial_21(),
 	_2dxFX_Smoke_t3112061757::get_offset_of_CanvasImage_22(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4166 = { sizeof (_2dxFX_StoneFX_t1074579988), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4166[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4169 = { sizeof (_2dxFX_StoneFX_t1074579988), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4169[10] = 
 {
 	_2dxFX_StoneFX_t1074579988::get_offset_of_ForceMaterial_2(),
 	_2dxFX_StoneFX_t1074579988::get_offset_of_ActiveChange_3(),
@@ -15715,8 +15773,8 @@ extern const int32_t g_FieldOffsetTable4166[10] =
 	_2dxFX_StoneFX_t1074579988::get_offset_of_defaultMaterial_10(),
 	_2dxFX_StoneFX_t1074579988::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4167 = { sizeof (_2dxFX_Teleportation_t402163804), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4167[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4170 = { sizeof (_2dxFX_Teleportation_t402163804), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4170[9] = 
 {
 	_2dxFX_Teleportation_t402163804::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Teleportation_t402163804::get_offset_of_ActiveChange_3(),
@@ -15728,8 +15786,8 @@ extern const int32_t g_FieldOffsetTable4167[9] =
 	_2dxFX_Teleportation_t402163804::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Teleportation_t402163804::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4168 = { sizeof (_2dxFX_Threshold_t363078937), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4168[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4171 = { sizeof (_2dxFX_Threshold_t363078937), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4171[9] = 
 {
 	_2dxFX_Threshold_t363078937::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Threshold_t363078937::get_offset_of_ActiveChange_3(),
@@ -15741,8 +15799,8 @@ extern const int32_t g_FieldOffsetTable4168[9] =
 	_2dxFX_Threshold_t363078937::get_offset_of_defaultMaterial_9(),
 	_2dxFX_Threshold_t363078937::get_offset_of_CanvasImage_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4169 = { sizeof (_2dxFX_Twist_t217397679), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4169[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4172 = { sizeof (_2dxFX_Twist_t217397679), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4172[12] = 
 {
 	_2dxFX_Twist_t217397679::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Twist_t217397679::get_offset_of_ActiveChange_3(),
@@ -15757,8 +15815,8 @@ extern const int32_t g_FieldOffsetTable4169[12] =
 	_2dxFX_Twist_t217397679::get_offset_of_defaultMaterial_12(),
 	_2dxFX_Twist_t217397679::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4170 = { sizeof (_2dxFX_WaterAndBackground_t2514510209), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4170[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4173 = { sizeof (_2dxFX_WaterAndBackground_t2514510209), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4173[12] = 
 {
 	_2dxFX_WaterAndBackground_t2514510209::get_offset_of_ForceMaterial_2(),
 	_2dxFX_WaterAndBackground_t2514510209::get_offset_of_ActiveChange_3(),
@@ -15773,8 +15831,8 @@ extern const int32_t g_FieldOffsetTable4170[12] =
 	_2dxFX_WaterAndBackground_t2514510209::get_offset_of_defaultMaterial_12(),
 	_2dxFX_WaterAndBackground_t2514510209::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4171 = { sizeof (_2dxFX_WaterAndBackgroundDeluxe_t2649314378), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4171[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4174 = { sizeof (_2dxFX_WaterAndBackgroundDeluxe_t2649314378), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4174[12] = 
 {
 	_2dxFX_WaterAndBackgroundDeluxe_t2649314378::get_offset_of_ForceMaterial_2(),
 	_2dxFX_WaterAndBackgroundDeluxe_t2649314378::get_offset_of_ActiveChange_3(),
@@ -15789,8 +15847,8 @@ extern const int32_t g_FieldOffsetTable4171[12] =
 	_2dxFX_WaterAndBackgroundDeluxe_t2649314378::get_offset_of_defaultMaterial_12(),
 	_2dxFX_WaterAndBackgroundDeluxe_t2649314378::get_offset_of_CanvasImage_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4172 = { sizeof (_2dxFX_Waterfall_t1208099646), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4172[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4175 = { sizeof (_2dxFX_Waterfall_t1208099646), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4175[15] = 
 {
 	_2dxFX_Waterfall_t1208099646::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Waterfall_t1208099646::get_offset_of_ActiveChange_3(),
@@ -15808,8 +15866,8 @@ extern const int32_t g_FieldOffsetTable4172[15] =
 	_2dxFX_Waterfall_t1208099646::get_offset_of_defaultMaterial_15(),
 	_2dxFX_Waterfall_t1208099646::get_offset_of_CanvasImage_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4173 = { sizeof (_2dxFX_Wave_t2949426099), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4173[20] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4176 = { sizeof (_2dxFX_Wave_t2949426099), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4176[20] = 
 {
 	_2dxFX_Wave_t2949426099::get_offset_of_ForceMaterial_2(),
 	_2dxFX_Wave_t2949426099::get_offset_of_ActiveChange_3(),
@@ -15832,8 +15890,8 @@ extern const int32_t g_FieldOffsetTable4173[20] =
 	_2dxFX_Wave_t2949426099::get_offset_of_defaultMaterial_20(),
 	_2dxFX_Wave_t2949426099::get_offset_of_CanvasImage_21(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4174 = { sizeof (_2dxFX_WoodFX_t1087265785), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4174[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4177 = { sizeof (_2dxFX_WoodFX_t1087265785), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4177[10] = 
 {
 	_2dxFX_WoodFX_t1087265785::get_offset_of_ForceMaterial_2(),
 	_2dxFX_WoodFX_t1087265785::get_offset_of_ActiveChange_3(),
@@ -15846,8 +15904,8 @@ extern const int32_t g_FieldOffsetTable4174[10] =
 	_2dxFX_WoodFX_t1087265785::get_offset_of_defaultMaterial_10(),
 	_2dxFX_WoodFX_t1087265785::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4175 = { sizeof (_FX_Blur_Spine_t1936575603), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4175[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4178 = { sizeof (_FX_Blur_Spine_t1936575603), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4178[8] = 
 {
 	_FX_Blur_Spine_t1936575603::get_offset_of_ForceMaterial_2(),
 	_FX_Blur_Spine_t1936575603::get_offset_of_ActiveChange_3(),
@@ -15858,8 +15916,8 @@ extern const int32_t g_FieldOffsetTable4175[8] =
 	_FX_Blur_Spine_t1936575603::get_offset_of_tempMaterial_8(),
 	_FX_Blur_Spine_t1936575603::get_offset_of_defaultMaterial_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4176 = { sizeof (_FX_CompressionFX_Spine_t117493990), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4176[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4179 = { sizeof (_FX_CompressionFX_Spine_t117493990), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4179[13] = 
 {
 	_FX_CompressionFX_Spine_t117493990::get_offset_of_ForceMaterial_2(),
 	_FX_CompressionFX_Spine_t117493990::get_offset_of_ActiveChange_3(),
@@ -15875,8 +15933,8 @@ extern const int32_t g_FieldOffsetTable4176[13] =
 	_FX_CompressionFX_Spine_t117493990::get_offset_of__freqTimer_13(),
 	_FX_CompressionFX_Spine_t117493990::get_offset_of__freq_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4177 = { sizeof (_FX_Hologram_Spine_t3471974154), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4177[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4180 = { sizeof (_FX_Hologram_Spine_t3471974154), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4180[10] = 
 {
 	_FX_Hologram_Spine_t3471974154::get_offset_of_ForceMaterial_2(),
 	_FX_Hologram_Spine_t3471974154::get_offset_of_ActiveChange_3(),
@@ -15889,8 +15947,8 @@ extern const int32_t g_FieldOffsetTable4177[10] =
 	_FX_Hologram_Spine_t3471974154::get_offset_of_defaultMaterial_10(),
 	_FX_Hologram_Spine_t3471974154::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4178 = { sizeof (_FX_Hologram2_Spine_t2374662042), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4178[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4181 = { sizeof (_FX_Hologram2_Spine_t2374662042), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4181[11] = 
 {
 	_FX_Hologram2_Spine_t2374662042::get_offset_of_ForceMaterial_2(),
 	_FX_Hologram2_Spine_t2374662042::get_offset_of_ActiveChange_3(),
@@ -15904,8 +15962,8 @@ extern const int32_t g_FieldOffsetTable4178[11] =
 	_FX_Hologram2_Spine_t2374662042::get_offset_of_defaultMaterial_11(),
 	_FX_Hologram2_Spine_t2374662042::get_offset_of_CanvasImage_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4179 = { sizeof (_FX_Outline_Spine_t2000141904), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4179[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4182 = { sizeof (_FX_Outline_Spine_t2000141904), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4182[10] = 
 {
 	_FX_Outline_Spine_t2000141904::get_offset_of_ForceMaterial_2(),
 	_FX_Outline_Spine_t2000141904::get_offset_of_ActiveChange_3(),
@@ -15918,27 +15976,27 @@ extern const int32_t g_FieldOffsetTable4179[10] =
 	_FX_Outline_Spine_t2000141904::get_offset_of_defaultMaterial_10(),
 	_FX_Outline_Spine_t2000141904::get_offset_of_CanvasImage_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4180 = { sizeof (AAASuperComputerEffecter_t65112767), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4180[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4183 = { sizeof (AAASuperComputerEffecter_t65112767), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4183[2] = 
 {
 	AAASuperComputerEffecter_t65112767::get_offset_of_target_2(),
 	AAASuperComputerEffecter_t65112767::get_offset_of__elapsedTime_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4181 = { sizeof (AAASuperHexagonEffecter_t1929047350), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4181[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4184 = { sizeof (AAASuperHexagonEffecter_t1929047350), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4184[2] = 
 {
 	AAASuperHexagonEffecter_t1929047350::get_offset_of_target_2(),
 	AAASuperHexagonEffecter_t1929047350::get_offset_of__elapsedTime_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4182 = { sizeof (AAAWaterDropEffecter_t851522039), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4182[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4185 = { sizeof (AAAWaterDropEffecter_t851522039), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4185[2] = 
 {
 	AAAWaterDropEffecter_t851522039::get_offset_of_target_2(),
 	AAAWaterDropEffecter_t851522039::get_offset_of__elapsedTime_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4183 = { sizeof (ActionClassBase_t3220895508), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4184 = { sizeof (ActivatableObjectPos_t3238555802)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4184[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4186 = { sizeof (ActionClassBase_t3220895508), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4187 = { sizeof (ActivatableObjectPos_t3238555802)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4187[6] = 
 {
 	ActivatableObjectPos_t3238555802::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -15947,8 +16005,8 @@ extern const int32_t g_FieldOffsetTable4184[6] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4185 = { sizeof (AgentAIState_t3715733213)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4185[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4188 = { sizeof (AgentAIState_t3715733213)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4188[12] = 
 {
 	AgentAIState_t3715733213::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -15963,8 +16021,8 @@ extern const int32_t g_FieldOffsetTable4185[12] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4186 = { sizeof (AgentAnim_t3102860560), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4186[38] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4189 = { sizeof (AgentAnim_t3102860560), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4189[38] = 
 {
 	0,
 	0,
@@ -16005,8 +16063,8 @@ extern const int32_t g_FieldOffsetTable4186[38] =
 	AgentAnim_t3102860560::get_offset_of_haltDirectionUpdate_41(),
 	AgentAnim_t3102860560::get_offset_of_isLookingLeft_42(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4187 = { sizeof (ParameterInfo_t2053157579), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4187[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4190 = { sizeof (ParameterInfo_t2053157579), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4190[6] = 
 {
 	ParameterInfo_t2053157579::get_offset_of_name_0(),
 	ParameterInfo_t2053157579::get_offset_of_ivalue_1(),
@@ -16015,17 +16073,17 @@ extern const int32_t g_FieldOffsetTable4187[6] =
 	ParameterInfo_t2053157579::get_offset_of_remainTimer_4(),
 	ParameterInfo_t2053157579::get_offset_of_type_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4188 = { sizeof (ParameterType_t2246630605)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4188[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4191 = { sizeof (ParameterType_t2246630605)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4191[4] = 
 {
 	ParameterType_t2246630605::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4189 = { sizeof (AfterResetEvent_t3750500064), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4190 = { sizeof (AgentAnimPos_t1067474846)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4190[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4192 = { sizeof (AfterResetEvent_t3750500064), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4193 = { sizeof (AgentAnimPos_t1067474846)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4193[13] = 
 {
 	AgentAnimPos_t1067474846::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -16041,14 +16099,14 @@ extern const int32_t g_FieldOffsetTable4190[13] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4191 = { sizeof (AgentAttackTutorial_t2903660873), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4191[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4194 = { sizeof (AgentAttackTutorial_t2903660873), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4194[2] = 
 {
 	AgentAttackTutorial_t2903660873::get_offset_of_AttackNum_12(),
 	AgentAttackTutorial_t2903660873::get_offset_of_blockTime_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4192 = { sizeof (AgentCmdType_t3364556965)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4192[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4195 = { sizeof (AgentCmdType_t3364556965)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4195[5] = 
 {
 	AgentCmdType_t3364556965::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -16056,8 +16114,8 @@ extern const int32_t g_FieldOffsetTable4192[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4193 = { sizeof (AgentContinueUI_t3323732470), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4193[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4196 = { sizeof (AgentContinueUI_t3323732470), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4196[7] = 
 {
 	AgentContinueUI_t3323732470::get_offset_of_Default_2(),
 	AgentContinueUI_t3323732470::get_offset_of_Cont_1_3(),
@@ -16067,59 +16125,21 @@ extern const int32_t g_FieldOffsetTable4193[7] =
 	AgentContinueUI_t3323732470::get_offset_of_SefiraText_7(),
 	AgentContinueUI_t3323732470::get_offset_of__agent_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4194 = { sizeof (AgentEventEnum_t1404746411)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4194[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4197 = { sizeof (AgentEventEnum_t1404746411)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4197[4] = 
 {
 	AgentEventEnum_t1404746411::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4195 = { sizeof (AgentEventListenerDelegate_t372478704), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4196 = { sizeof (AgentHistory_t3996091975), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4196[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4198 = { sizeof (AgentEventListenerDelegate_t372478704), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4199 = { sizeof (AgentHistory_t3996091975), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4199[3] = 
 {
 	AgentHistory_t3996091975::get_offset_of_U3CworkDayU3Ek__BackingField_0(),
 	AgentHistory_t3996091975::get_offset_of_U3ConedayU3Ek__BackingField_1(),
 	AgentHistory_t3996091975::get_offset_of_U3CtotalU3Ek__BackingField_2(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4197 = { sizeof (History_t3096563685), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4197[15] = 
-{
-	History_t3096563685::get_offset_of_workCubeCounts_0(),
-	History_t3096563685::get_offset_of_U3CworkSuccessU3Ek__BackingField_1(),
-	History_t3096563685::get_offset_of_U3CworkFailU3Ek__BackingField_2(),
-	History_t3096563685::get_offset_of_U3CtakePhysicalDamageU3Ek__BackingField_3(),
-	History_t3096563685::get_offset_of_U3CtakeMentalDamageU3Ek__BackingField_4(),
-	History_t3096563685::get_offset_of_U3CdeathByCreatureU3Ek__BackingField_5(),
-	History_t3096563685::get_offset_of_U3CpanicByCreatureU3Ek__BackingField_6(),
-	History_t3096563685::get_offset_of_U3CdeathByWorkerU3Ek__BackingField_7(),
-	History_t3096563685::get_offset_of_U3CpanicU3Ek__BackingField_8(),
-	History_t3096563685::get_offset_of_U3CcreatureDamageU3Ek__BackingField_9(),
-	History_t3096563685::get_offset_of_U3CworkerDamageU3Ek__BackingField_10(),
-	History_t3096563685::get_offset_of_U3CpanicWorkerDamageU3Ek__BackingField_11(),
-	History_t3096563685::get_offset_of_U3CsuppressDamageU3Ek__BackingField_12(),
-	History_t3096563685::get_offset_of_U3CdisposalU3Ek__BackingField_13(),
-	History_t3096563685::get_offset_of_U3CpromotionValU3Ek__BackingField_14(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4198 = { sizeof (PromotionValScore_t2040843033), -1, sizeof(PromotionValScore_t2040843033_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4198[7] = 
-{
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_Success_0(),
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_Fail_1(),
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_WorkDay_2(),
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_PanicCnt_3(),
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_Phyiscal_4(),
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_Mental_5(),
-	PromotionValScore_t2040843033_StaticFields::get_offset_of_Suppresss_6(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4199 = { sizeof (PromotionNeedVal_t1608125077), -1, sizeof(PromotionNeedVal_t1608125077_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4199[4] = 
-{
-	PromotionNeedVal_t1608125077_StaticFields::get_offset_of_level1_0(),
-	PromotionNeedVal_t1608125077_StaticFields::get_offset_of_level2_1(),
-	PromotionNeedVal_t1608125077_StaticFields::get_offset_of_level3_2(),
-	PromotionNeedVal_t1608125077_StaticFields::get_offset_of_level4_3(),
 };
 #ifdef __clang__
 #pragma clang diagnostic pop

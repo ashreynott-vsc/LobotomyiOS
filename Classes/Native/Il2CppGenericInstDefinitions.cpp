@@ -1048,6 +1048,7 @@ extern const Il2CppType MissionConditionTypeInfo_t3287692124_0_0_0;
 extern const Il2CppType MissionTypeInfo_t121943433_0_0_0;
 extern const Il2CppType MissionPrerequisite_t2992804788_0_0_0;
 extern const Il2CppType MissionSlot_t127915906_0_0_0;
+extern const Il2CppType CanvasScaler_t2767979955_0_0_0;
 extern const Il2CppType PassType_t1566220485_0_0_0;
 extern const Il2CppType EventAction_t371246459_0_0_0;
 extern const Il2CppType TitleObject_t2049822640_0_0_0;
@@ -1419,12 +1420,12 @@ extern const Il2CppType List_1_t42469909_0_0_0;
 extern const Il2CppType List_1_t3559836490_0_0_0;
 extern const Il2CppType WorkerPrimaryStat_t80627538_0_0_0;
 extern const Il2CppType WorkerSpriteSaveData_t637197617_0_0_0;
-extern const Il2CppType TextAsset_t3022178571_0_0_0;
 extern const Il2CppType UnitAnimatorController_t115164100_0_0_0;
 extern const Il2CppType AgentSpriteChanger_t3859516151_0_0_0;
 extern const Il2CppType AutoDestroyer_t3271708721_0_0_0;
 extern const Il2CppType AudioClipPlayer_t2890902000_0_0_0;
 extern const Il2CppType Outline_t2536100125_0_0_0;
+extern const Il2CppType TextAsset_t3022178571_0_0_0;
 extern const Il2CppType RuntimeAnimatorController_t2933699135_0_0_0;
 extern const Il2CppType SkeletonRenderer_t2098681813_0_0_0;
 extern const Il2CppType AutoSizeSetter_t1676599653_0_0_0;
@@ -1539,6 +1540,7 @@ extern const Il2CppType CameraFilterPack_Vision_AuraDistortion_t2422837819_0_0_0
 extern const Il2CppType NodeCategorySlot_t464407632_0_0_0;
 extern const Il2CppType ManualTextSlot_t2629134321_0_0_0;
 extern const Il2CppType ManualLabel_t2247826984_0_0_0;
+extern const Il2CppType MobileScreenManager_t831028031_0_0_0;
 extern const Il2CppType LoggingScript_t3580749383_0_0_0;
 extern const Il2CppType CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0;
 extern const Il2CppType CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0;
@@ -5370,6 +5372,8 @@ static const RuntimeType* GenInst_MissionPrerequisite_t2992804788_0_0_0_Types[] 
 extern const Il2CppGenericInst GenInst_MissionPrerequisite_t2992804788_0_0_0 = { 1, GenInst_MissionPrerequisite_t2992804788_0_0_0_Types };
 static const RuntimeType* GenInst_MissionSlot_t127915906_0_0_0_Types[] = { (&MissionSlot_t127915906_0_0_0) };
 extern const Il2CppGenericInst GenInst_MissionSlot_t127915906_0_0_0 = { 1, GenInst_MissionSlot_t127915906_0_0_0_Types };
+static const RuntimeType* GenInst_CanvasScaler_t2767979955_0_0_0_Types[] = { (&CanvasScaler_t2767979955_0_0_0) };
+extern const Il2CppGenericInst GenInst_CanvasScaler_t2767979955_0_0_0 = { 1, GenInst_CanvasScaler_t2767979955_0_0_0_Types };
 static const RuntimeType* GenInst_PassType_t1566220485_0_0_0_Types[] = { (&PassType_t1566220485_0_0_0) };
 extern const Il2CppGenericInst GenInst_PassType_t1566220485_0_0_0 = { 1, GenInst_PassType_t1566220485_0_0_0_Types };
 static const RuntimeType* GenInst_EventAction_t371246459_0_0_0_Types[] = { (&EventAction_t371246459_0_0_0) };
@@ -6558,8 +6562,6 @@ static const RuntimeType* GenInst_WorkerPrimaryStat_t80627538_0_0_0_Types[] = { 
 extern const Il2CppGenericInst GenInst_WorkerPrimaryStat_t80627538_0_0_0 = { 1, GenInst_WorkerPrimaryStat_t80627538_0_0_0_Types };
 static const RuntimeType* GenInst_WorkerSpriteSaveData_t637197617_0_0_0_Types[] = { (&WorkerSpriteSaveData_t637197617_0_0_0) };
 extern const Il2CppGenericInst GenInst_WorkerSpriteSaveData_t637197617_0_0_0 = { 1, GenInst_WorkerSpriteSaveData_t637197617_0_0_0_Types };
-static const RuntimeType* GenInst_TextAsset_t3022178571_0_0_0_Types[] = { (&TextAsset_t3022178571_0_0_0) };
-extern const Il2CppGenericInst GenInst_TextAsset_t3022178571_0_0_0 = { 1, GenInst_TextAsset_t3022178571_0_0_0_Types };
 static const RuntimeType* GenInst_UnitAnimatorController_t115164100_0_0_0_Types[] = { (&UnitAnimatorController_t115164100_0_0_0) };
 extern const Il2CppGenericInst GenInst_UnitAnimatorController_t115164100_0_0_0 = { 1, GenInst_UnitAnimatorController_t115164100_0_0_0_Types };
 static const RuntimeType* GenInst_AgentSpriteChanger_t3859516151_0_0_0_Types[] = { (&AgentSpriteChanger_t3859516151_0_0_0) };
@@ -6570,6 +6572,8 @@ static const RuntimeType* GenInst_AudioClipPlayer_t2890902000_0_0_0_Types[] = { 
 extern const Il2CppGenericInst GenInst_AudioClipPlayer_t2890902000_0_0_0 = { 1, GenInst_AudioClipPlayer_t2890902000_0_0_0_Types };
 static const RuntimeType* GenInst_Outline_t2536100125_0_0_0_Types[] = { (&Outline_t2536100125_0_0_0) };
 extern const Il2CppGenericInst GenInst_Outline_t2536100125_0_0_0 = { 1, GenInst_Outline_t2536100125_0_0_0_Types };
+static const RuntimeType* GenInst_TextAsset_t3022178571_0_0_0_Types[] = { (&TextAsset_t3022178571_0_0_0) };
+extern const Il2CppGenericInst GenInst_TextAsset_t3022178571_0_0_0 = { 1, GenInst_TextAsset_t3022178571_0_0_0_Types };
 static const RuntimeType* GenInst_RuntimeAnimatorController_t2933699135_0_0_0_Types[] = { (&RuntimeAnimatorController_t2933699135_0_0_0) };
 extern const Il2CppGenericInst GenInst_RuntimeAnimatorController_t2933699135_0_0_0 = { 1, GenInst_RuntimeAnimatorController_t2933699135_0_0_0_Types };
 static const RuntimeType* GenInst_SkeletonRenderer_t2098681813_0_0_0_Types[] = { (&SkeletonRenderer_t2098681813_0_0_0) };
@@ -6798,6 +6802,8 @@ static const RuntimeType* GenInst_ManualTextSlot_t2629134321_0_0_0_Types[] = { (
 extern const Il2CppGenericInst GenInst_ManualTextSlot_t2629134321_0_0_0 = { 1, GenInst_ManualTextSlot_t2629134321_0_0_0_Types };
 static const RuntimeType* GenInst_ManualLabel_t2247826984_0_0_0_Types[] = { (&ManualLabel_t2247826984_0_0_0) };
 extern const Il2CppGenericInst GenInst_ManualLabel_t2247826984_0_0_0 = { 1, GenInst_ManualLabel_t2247826984_0_0_0_Types };
+static const RuntimeType* GenInst_MobileScreenManager_t831028031_0_0_0_Types[] = { (&MobileScreenManager_t831028031_0_0_0) };
+extern const Il2CppGenericInst GenInst_MobileScreenManager_t831028031_0_0_0 = { 1, GenInst_MobileScreenManager_t831028031_0_0_0_Types };
 static const RuntimeType* GenInst_LoggingScript_t3580749383_0_0_0_Types[] = { (&LoggingScript_t3580749383_0_0_0) };
 extern const Il2CppGenericInst GenInst_LoggingScript_t3580749383_0_0_0 = { 1, GenInst_LoggingScript_t3580749383_0_0_0_Types };
 static const RuntimeType* GenInst_CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0_Types[] = { (&CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0) };
@@ -9696,7 +9702,7 @@ static const RuntimeType* GenInst_SkeletonRenderer_AddSpineComponent_m952396782_
 extern const Il2CppGenericInst GenInst_SkeletonRenderer_AddSpineComponent_m952396782_gp_0_0_0_0 = { 1, GenInst_SkeletonRenderer_AddSpineComponent_m952396782_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0_Types[] = { (&UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0 = { 1, GenInst_UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3570] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3572] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -11105,6 +11111,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3570] =
 	&GenInst_MissionTypeInfo_t121943433_0_0_0,
 	&GenInst_MissionPrerequisite_t2992804788_0_0_0,
 	&GenInst_MissionSlot_t127915906_0_0_0,
+	&GenInst_CanvasScaler_t2767979955_0_0_0,
 	&GenInst_PassType_t1566220485_0_0_0,
 	&GenInst_EventAction_t371246459_0_0_0,
 	&GenInst_TitleObject_t2049822640_0_0_0,
@@ -11699,12 +11706,12 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3570] =
 	&GenInst_List_1_t3559836490_0_0_0,
 	&GenInst_WorkerPrimaryStat_t80627538_0_0_0,
 	&GenInst_WorkerSpriteSaveData_t637197617_0_0_0,
-	&GenInst_TextAsset_t3022178571_0_0_0,
 	&GenInst_UnitAnimatorController_t115164100_0_0_0,
 	&GenInst_AgentSpriteChanger_t3859516151_0_0_0,
 	&GenInst_AutoDestroyer_t3271708721_0_0_0,
 	&GenInst_AudioClipPlayer_t2890902000_0_0_0,
 	&GenInst_Outline_t2536100125_0_0_0,
+	&GenInst_TextAsset_t3022178571_0_0_0,
 	&GenInst_RuntimeAnimatorController_t2933699135_0_0_0,
 	&GenInst_SkeletonRenderer_t2098681813_0_0_0,
 	&GenInst_AutoSizeSetter_t1676599653_0_0_0,
@@ -11819,6 +11826,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3570] =
 	&GenInst_NodeCategorySlot_t464407632_0_0_0,
 	&GenInst_ManualTextSlot_t2629134321_0_0_0,
 	&GenInst_ManualLabel_t2247826984_0_0_0,
+	&GenInst_MobileScreenManager_t831028031_0_0_0,
 	&GenInst_LoggingScript_t3580749383_0_0_0,
 	&GenInst_CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0,
 	&GenInst_CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0,

@@ -39579,6 +39579,8 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Application_get_dataPath_m4232621142 (Ru
 extern "C" IL2CPP_METHOD_ATTR bool File_Exists_m3943585060 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
 // System.String System.IO.File::ReadAllText(System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* File_ReadAllText_m2815479134 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+// UnityEngine.TextAsset SafeXmlLoader::Load(System.String)
+extern "C" IL2CPP_METHOD_ATTR TextAsset_t3022178571 * SafeXmlLoader_Load_m1449888044 (RuntimeObject * __this /* static, unused */, String_t* ___path0, const RuntimeMethod* method);
 // System.String System.String::Format(System.String,System.Object[])
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Format_m630303134 (RuntimeObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t2843939325* p1, const RuntimeMethod* method);
 // System.Xml.XmlDocument AssetLoader::LoadExternalXML(System.String)
@@ -47455,7 +47457,7 @@ IL_00de:
 		String_t* L_40 = ___src0;
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_41 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral3426199542, L_40, /*hidden argument*/NULL);
-		TextAsset_t3022178571 * L_42 = Resources_Load_TisTextAsset_t3022178571_m724759995(NULL /*static, unused*/, L_41, /*hidden argument*/Resources_Load_TisTextAsset_t3022178571_m724759995_RuntimeMethod_var);
+		TextAsset_t3022178571 * L_42 = SafeXmlLoader_Load_m1449888044(NULL /*static, unused*/, L_41, /*hidden argument*/NULL);
 		V_7 = L_42;
 		TextAsset_t3022178571 * L_43 = V_7;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);

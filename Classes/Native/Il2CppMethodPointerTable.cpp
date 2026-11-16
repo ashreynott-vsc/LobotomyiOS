@@ -16255,6 +16255,8 @@ extern "C" void Resources_LoadAll_m1574480108 ();
 extern "C" void Resources_GetBuiltinResource_m3641967638 ();
 extern "C" void Resources_UnloadAsset_m4120664229 ();
 extern "C" void Resources_UnloadUnusedAssets_m2836736321 ();
+extern "C" void RuntimeInitializeOnLoadMethodAttribute__ctor_m787294852 ();
+extern "C" void RuntimeInitializeOnLoadMethodAttribute_set_loadType_m1884529061 ();
 extern "C" void Scene_get_handle_m1544696971_AdjustorThunk ();
 extern "C" void Scene_get_name_m622963475_AdjustorThunk ();
 extern "C" void Scene_GetHashCode_m2998285532_AdjustorThunk ();
@@ -16267,6 +16269,8 @@ extern "C" void SceneManager_LoadScene_m2298600132 ();
 extern "C" void SceneManager_LoadSceneAsync_m18587237 ();
 extern "C" void SceneManager_LoadSceneAsync_m3146814238 ();
 extern "C" void SceneManager_LoadSceneAsyncNameIndexInternal_m4031498323 ();
+extern "C" void SceneManager_add_sceneLoaded_m3678832055 ();
+extern "C" void SceneManager_remove_sceneLoaded_m2345981904 ();
 extern "C" void SceneManager_Internal_SceneLoaded_m2694652025 ();
 extern "C" void SceneManager_Internal_SceneUnloaded_m3247148570 ();
 extern "C" void SceneManager_Internal_ActiveSceneChanged_m3676176255 ();
@@ -16285,6 +16289,7 @@ extern "C" void MovedFromAttribute__ctor_m3367971602 ();
 extern "C" void MovedFromAttribute__ctor_m1135483886 ();
 extern "C" void MovedFromAttribute_set_Namespace_m108902551 ();
 extern "C" void MovedFromAttribute_set_IsInDifferentAssembly_m4025538826 ();
+extern "C" void PreserveAttribute__ctor_m1123812627 ();
 extern "C" void SelectionBaseAttribute__ctor_m2749097321 ();
 extern "C" void SendMouseEvents_SetMouseMoved_m2822596724 ();
 extern "C" void SendMouseEvents_HitTestLegacyGUI_m579942228 ();
@@ -43711,6 +43716,13 @@ extern "C" void MissionUI_OnClickButton_m2845486689 ();
 extern "C" void MissionUI_OnEnterButton_m3449589255 ();
 extern "C" void MissionUI_OnExitButton_m2349951492 ();
 extern "C" void MissionUI_OncePerSecond_m2919673498 ();
+extern "C" void MobileScreenManager__ctor_m3366620523 ();
+extern "C" void MobileScreenManager_Bootstrap_m3525258668 ();
+extern "C" void MobileScreenManager_Awake_m728696395 ();
+extern "C" void MobileScreenManager_OnDestroy_m2653332534 ();
+extern "C" void MobileScreenManager_OnSceneLoaded_m3492888858 ();
+extern "C" void MobileScreenManager_Update_m4254841170 ();
+extern "C" void MobileScreenManager_ApplyFullscreenSettings_m1725697124 ();
 extern "C" void MoneyModel__ctor_m2887490024 ();
 extern "C" void MoneyModel_get_instance_m889587587 ();
 extern "C" void MoneyModel_Init_m4109456535 ();
@@ -47398,6 +47410,7 @@ extern "C" void RudolphAnim_AttackDamageTimeCalled_m3156265876 ();
 extern "C" void RudolphAnim_AttackCalled_m470150918 ();
 extern "C" void RudolphAnim_SoundMake_m64143783 ();
 extern "C" void RudolphWeapon__ctor_m1978188285 ();
+extern "C" void SafeXmlLoader_Load_m1449888044 ();
 extern "C" void Sakura__ctor_m12422322 ();
 extern "C" void Sakura_get_cancelAttractDmg_m3408824418 ();
 extern "C" void Sakura_get_animScript_m3344960417 ();
@@ -54103,7 +54116,7 @@ extern "C" void ZoomTutorial__ctor_m3253980221 ();
 extern "C" void ZoomTutorial_StartTutorial_m4043354523 ();
 extern "C" void ZoomTutorial_CompleteTutorial_m736784446 ();
 extern "C" void ZoomTutorial_CheckIfHappening_m4251022969 ();
-extern const Il2CppMethodPointer g_MethodPointers[54085] = 
+extern const Il2CppMethodPointer g_MethodPointers[54098] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -70342,6 +70355,8 @@ extern const Il2CppMethodPointer g_MethodPointers[54085] =
 	Resources_GetBuiltinResource_m3641967638,
 	Resources_UnloadAsset_m4120664229,
 	Resources_UnloadUnusedAssets_m2836736321,
+	RuntimeInitializeOnLoadMethodAttribute__ctor_m787294852,
+	RuntimeInitializeOnLoadMethodAttribute_set_loadType_m1884529061,
 	Scene_get_handle_m1544696971_AdjustorThunk,
 	Scene_get_name_m622963475_AdjustorThunk,
 	Scene_GetHashCode_m2998285532_AdjustorThunk,
@@ -70354,6 +70369,8 @@ extern const Il2CppMethodPointer g_MethodPointers[54085] =
 	SceneManager_LoadSceneAsync_m18587237,
 	SceneManager_LoadSceneAsync_m3146814238,
 	SceneManager_LoadSceneAsyncNameIndexInternal_m4031498323,
+	SceneManager_add_sceneLoaded_m3678832055,
+	SceneManager_remove_sceneLoaded_m2345981904,
 	SceneManager_Internal_SceneLoaded_m2694652025,
 	SceneManager_Internal_SceneUnloaded_m3247148570,
 	SceneManager_Internal_ActiveSceneChanged_m3676176255,
@@ -70372,6 +70389,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54085] =
 	MovedFromAttribute__ctor_m1135483886,
 	MovedFromAttribute_set_Namespace_m108902551,
 	MovedFromAttribute_set_IsInDifferentAssembly_m4025538826,
+	PreserveAttribute__ctor_m1123812627,
 	SelectionBaseAttribute__ctor_m2749097321,
 	SendMouseEvents_SetMouseMoved_m2822596724,
 	SendMouseEvents_HitTestLegacyGUI_m579942228,
@@ -97798,6 +97816,13 @@ extern const Il2CppMethodPointer g_MethodPointers[54085] =
 	MissionUI_OnEnterButton_m3449589255,
 	MissionUI_OnExitButton_m2349951492,
 	MissionUI_OncePerSecond_m2919673498,
+	MobileScreenManager__ctor_m3366620523,
+	MobileScreenManager_Bootstrap_m3525258668,
+	MobileScreenManager_Awake_m728696395,
+	MobileScreenManager_OnDestroy_m2653332534,
+	MobileScreenManager_OnSceneLoaded_m3492888858,
+	MobileScreenManager_Update_m4254841170,
+	MobileScreenManager_ApplyFullscreenSettings_m1725697124,
 	MoneyModel__ctor_m2887490024,
 	MoneyModel_get_instance_m889587587,
 	MoneyModel_Init_m4109456535,
@@ -101485,6 +101510,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54085] =
 	RudolphAnim_AttackCalled_m470150918,
 	RudolphAnim_SoundMake_m64143783,
 	RudolphWeapon__ctor_m1978188285,
+	SafeXmlLoader_Load_m1449888044,
 	Sakura__ctor_m12422322,
 	Sakura_get_cancelAttractDmg_m3408824418,
 	Sakura_get_animScript_m3344960417,
