@@ -38,6 +38,10 @@ jobs:
           echo "Library files restored:"
           ls -lh *.a
 
+      - name: Make Scripts Executable
+        run: |
+          chmod +x *.sh
+
       - name: Build with Xcode
         run: |
           xcodebuild clean build \
