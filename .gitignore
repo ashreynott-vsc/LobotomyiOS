@@ -1,0 +1,22 @@
+# Build outputs
+build/
+DerivedData/
+*.ipa
+output/
+staging/
+
+# Raw static libraries (reconstituted via .7z parts in CI)
+Libraries/*.a
+
+# Xcode user settings
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+# OS files
+.DS_Store
+Thumbs.db

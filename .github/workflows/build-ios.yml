@@ -1,0 +1,88 @@
+name: Build LobotomyCorp iOS ARM64
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build iOS Binary
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Setup Xcode 15.4
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.4.app
+          xcodebuild -version
+
+      - name: Ensure 7-Zip Installed
+        run: |
+          if ! command -v 7z &> /dev/null; then
+            echo "Installing p7zip via Homebrew..."
+            brew install p7zip
+          fi
+          7z --help | head -n 3
+
+      - name: Extract Static Libraries
+        run: |
+          cd Libraries
+          echo "Extracting libiPhone-lib.a..."
+          7z x libiPhone-lib.7z.001 -y
+          echo "Extracting libil2cpp.a..."
+          7z x libil2cpp.7z -y
+          rm -f libiPhone-lib.7z.* libil2cpp.7z
+          echo "Library files restored:"
+          ls -lh *.a
+
+      - name: Build with Xcode
+        run: |
+          xcodebuild clean build \
+            -project Unity-iPhone.xcodeproj \
+            -scheme Unity-iPhone \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            ENABLE_BITCODE=NO \
+            OTHER_LDFLAGS="\$(inherited) -weak_framework CoreMotion -weak-lSystem -Wl,-ld_classic"
+
+      - name: Package Output Artifact
+        run: |
+          APP_DIR=$(find build -name "LobotomyCorp.app" -type d | head -n 1)
+          if [ -z "$APP_DIR" ]; then
+            echo "Error: LobotomyCorp.app not found!"
+            find build -type f
+            exit 1
+          fi
+          echo "Found compiled app bundle at: $APP_DIR"
+          
+          mkdir -p staging/Payload
+          cp -R "$APP_DIR" staging/Payload/
+          
+          # Remove dummy Data folder from staging app to keep artifact small
+          rm -rf staging/Payload/LobotomyCorp.app/Data
+          
+          mkdir -p output
+          # Copy standalone binary
+          cp "$APP_DIR/LobotomyCorp" output/LobotomyCorp
+          
+          # Zip the base payload template
+          cd staging
+          zip -r -9 ../output/LobotomyCorp-Base.zip Payload
+          cd ..
+          
+          echo "Output files ready:"
+          ls -lh output/
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: LobotomyCorp-iOS-ARM64
+          path: output/
+          retention-days: 14
