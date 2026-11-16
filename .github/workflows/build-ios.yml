@@ -8,21 +8,15 @@ on:
 jobs:
   build:
     name: Build iOS Binary
-    runs-on: macos-13
+    runs-on: macos-14
 
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
 
-      - name: Setup Xcode
+      - name: Setup Xcode 15.4
         run: |
-          if [ -d "/Applications/Xcode_15.2.app" ]; then
-            sudo xcode-select -s /Applications/Xcode_15.2.app
-          elif [ -d "/Applications/Xcode_15.0.1.app" ]; then
-            sudo xcode-select -s /Applications/Xcode_15.0.1.app
-          elif [ -d "/Applications/Xcode_14.3.1.app" ]; then
-            sudo xcode-select -s /Applications/Xcode_14.3.1.app
-          fi
+          sudo xcode-select -s /Applications/Xcode_15.4.app
           xcodebuild -version
 
       - name: Ensure 7-Zip Installed
