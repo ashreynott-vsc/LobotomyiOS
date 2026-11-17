@@ -6,6 +6,11 @@ extern "C" {
     UIView* UnityGetGLView(void);
     UIViewController* UnityGetGLViewController(void);
     void UnitySendMessage(const char* obj, const char* method, const char* msg);
+
+    void* Resources_UnloadUnusedAssets_m2836736321(void* __this, void* method);
+    void GC_Collect_m743975114(void* __this, void* method);
+    void QualitySettings_SetQualityLevel_m2320778053(void* __this, int32_t index, bool applyExpensiveChanges, void* method);
+    int32_t QualitySettings_GetQualityLevel_m848937883(void* __this, void* method);
 }
 
 __attribute__((constructor)) static void EnableMetalPerformanceHUD(void) {
@@ -24,6 +29,27 @@ static int64_t GetPhysicalMemoryMB(void) {
         return (int64_t)(vmInfo.phys_footprint / (1024 * 1024));
     }
     return 0;
+}
+
+static void PurgeMemoryNow(void) {
+    @try {
+        GC_Collect_m743975114(NULL, NULL);
+        Resources_UnloadUnusedAssets_m2836736321(NULL, NULL);
+        GC_Collect_m743975114(NULL, NULL);
+        NSLog(@"[LobotomyCorp] Purged unused assets and collected GC");
+    } @catch (NSException *e) {
+        NSLog(@"[LobotomyCorp] Purge error: %@", e);
+    }
+}
+
+static void SetTextureQualityLevel(int level) {
+    @try {
+        QualitySettings_SetQualityLevel_m2320778053(NULL, level, true, NULL);
+        PurgeMemoryNow();
+        NSLog(@"[LobotomyCorp] SetQualityLevel to %d", level);
+    } @catch (NSException *e) {
+        NSLog(@"[LobotomyCorp] SetTextureQuality error: %@", e);
+    }
 }
 
 // -------------------------------------------------------------
@@ -59,9 +85,12 @@ static int64_t GetPhysicalMemoryMB(void) {
 @property (nonatomic, strong) UITextField *commandTextField;
 @property (nonatomic, strong) UIButton *btnClean16x9;
 @property (nonatomic, strong) UIButton *btnWide;
+@property (nonatomic, strong) UIButton *btnTexFull;
+@property (nonatomic, strong) UIButton *btnTexHalf;
 @property (nonatomic, copy) NSString *gameObjectName;
 @property (nonatomic, assign) BOOL isMenuVisible;
 @property (nonatomic, assign) int currentAspectMode;
+@property (nonatomic, assign) int currentQualityLevel;
 
 + (instancetype)sharedInstance;
 - (void)setupWithGameObjectName:(NSString *)name;
@@ -71,6 +100,7 @@ static int64_t GetPhysicalMemoryMB(void) {
 - (void)updateTelemetry:(NSString *)text;
 - (void)updateStatusMessage:(NSString *)text;
 - (void)setAspectMode:(int)mode;
+- (void)updateQualityButtonStyles;
 
 @end
 
@@ -133,6 +163,19 @@ static UIButton* CreateGlassButton(NSString *title, id target, SEL action) {
 - (void)setupWithGameObjectName:(NSString *)name {
     self.gameObjectName = name;
     self.currentAspectMode = 1;
+    self.currentQualityLevel = 0;
+
+    // Register for iOS Low Memory Warning
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidReceiveMemoryWarningNotification
+                                                     object:nil
+                                                      queue:[NSOperationQueue mainQueue]
+                                                 usingBlock:^(NSNotification *note) {
+        NSLog(@"[LobotomyCorp] iOS Low Memory Warning! Emergency purging RAM...");
+        PurgeMemoryNow();
+        SetTextureQualityLevel(1);
+        [self updateQualityButtonStyles];
+        [self updateStatusMessage:@"[EMERGENCY] iOS Memory Warning -> Purged & Set Half-Res"];
+    }];
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [self createOverlayUI];
@@ -327,6 +370,29 @@ static UIButton* CreateGlassButton(NSString *title, id target, SEL action) {
 
     [self updateAspectButtonStyles];
 
+    // Section: Memory & Textures Optimization
+    UILabel *memHdr = [self makeSectionHeader:@"MEMORY & TEXTURE OPTIMIZATION"];
+    [mainStack addArrangedSubview:memHdr];
+
+    UIStackView *memStack = [[UIStackView alloc] init];
+    memStack.axis = UILayoutConstraintAxisHorizontal;
+    memStack.spacing = 10.0;
+    memStack.distribution = UIStackViewDistributionFillEqually;
+
+    self.btnTexFull = CreateGlassButton(@"TEXTURE: FULL (HIGH)", self, @selector(onTexFullTapped));
+    self.btnTexHalf = CreateGlassButton(@"TEXTURE: HALF (75% SAVED)", self, @selector(onTexHalfTapped));
+    [memStack addArrangedSubview:self.btnTexFull];
+    [memStack addArrangedSubview:self.btnTexHalf];
+    [self.btnTexFull.heightAnchor constraintEqualToConstant:32.0].active = YES;
+    [mainStack addArrangedSubview:memStack];
+
+    [self updateQualityButtonStyles];
+
+    UIButton *btnPurge = CreateGlassButton(@"PURGE UNUSED RAM (FORCE GC)", self, @selector(onPurgeRamTapped));
+    btnPurge.backgroundColor = [UIColor colorWithRed:0.2 green:0.55 blue:0.85 alpha:0.25];
+    [btnPurge.heightAnchor constraintEqualToConstant:30.0].active = YES;
+    [mainStack addArrangedSubview:btnPurge];
+
     // Section: In-Game ESC Button
     UIButton *btnEsc = CreateGlassButton(@"SEND ESC KEY (CLOSE POPUPS)", self, @selector(onEscTapped));
     [btnEsc.heightAnchor constraintEqualToConstant:30.0].active = YES;
@@ -428,6 +494,40 @@ static UIButton* CreateGlassButton(NSString *title, id target, SEL action) {
         self.btnClean16x9.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.12];
         self.btnWide.backgroundColor = [UIColor colorWithRed:0.15 green:0.45 blue:0.85 alpha:0.85];
     }
+}
+
+- (void)updateQualityButtonStyles {
+    if (self.currentQualityLevel == 0) {
+        self.btnTexFull.backgroundColor = [UIColor colorWithRed:0.15 green:0.45 blue:0.85 alpha:0.85];
+        self.btnTexHalf.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.12];
+    } else {
+        self.btnTexFull.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.12];
+        self.btnTexHalf.backgroundColor = [UIColor colorWithRed:0.15 green:0.75 blue:0.45 alpha:0.85];
+    }
+}
+
+- (void)onTexFullTapped {
+    TriggerHaptic();
+    self.currentQualityLevel = 0;
+    SetTextureQualityLevel(0);
+    [self updateQualityButtonStyles];
+    [self updateStatusMessage:@"Texture Quality: Full (High)"];
+}
+
+- (void)onTexHalfTapped {
+    TriggerHaptic();
+    self.currentQualityLevel = 1;
+    SetTextureQualityLevel(1);
+    [self updateQualityButtonStyles];
+    [self updateStatusMessage:@"Texture Quality: Half (75% VRAM saved)"];
+}
+
+- (void)onPurgeRamTapped {
+    TriggerHaptic();
+    int64_t beforeMB = GetPhysicalMemoryMB();
+    PurgeMemoryNow();
+    int64_t afterMB = GetPhysicalMemoryMB();
+    [self updateStatusMessage:[NSString stringWithFormat:@"RAM Purged: %lld MB -> %lld MB", beforeMB, afterMB]];
 }
 
 // -------------------------------------------------------------
@@ -532,6 +632,17 @@ static UIButton* CreateGlassButton(NSString *title, id target, SEL action) {
 
 - (void)updateTelemetry:(NSString *)text {
     int64_t physMB = GetPhysicalMemoryMB();
+
+    // Memory watchdog: auto-purge if memory gets dangerous (> 1500 MB)
+    static NSTimeInterval s_lastWatchdogPurge = 0;
+    if (physMB > 1500) {
+        NSTimeInterval now = [NSDate timeIntervalSinceReferenceDate];
+        if (now - s_lastWatchdogPurge > 30.0) {
+            s_lastWatchdogPurge = now;
+            NSLog(@"[LobotomyCorp] Auto-purging high RAM: %lld MB...", physMB);
+            PurgeMemoryNow();
+        }
+    }
 
     dispatch_async(dispatch_get_main_queue(), ^{
         NSArray *lines = [text componentsSeparatedByString:@"\n"];

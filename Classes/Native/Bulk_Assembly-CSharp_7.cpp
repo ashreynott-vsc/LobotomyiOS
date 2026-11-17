@@ -59682,6 +59682,9 @@ extern "C" IL2CPP_METHOD_ATTR void AgentSlotUI_SetUI_m771900119 (AgentSlotUI_t28
 		Image_t2670269651 * L_6 = __this->get_Grade_0();
 		NullCheck(L_6);
 		Behaviour_set_enabled_m20417929(L_6, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_gradeGo = Component_get_gameObject_m442555142(L_6, /*hidden argument*/NULL);
+		NullCheck(L_gradeGo);
+		GameObject_SetActive_m796801857(L_gradeGo, (bool)0, /*hidden argument*/NULL);
 		Text_t1901882714 * L_7 = __this->get_GradeText_1();
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		bool L_8 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_7, (Object_t631007953 *)NULL, /*hidden argument*/NULL);

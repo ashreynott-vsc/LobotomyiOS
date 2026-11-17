@@ -58836,6 +58836,7 @@ IL_001c:
 			{
 				goto IL_007d;
 			}
+			GameObject_SetActive_m796801857(V_1, (bool)0, /*hidden argument*/NULL);
 		}
 
 IL_0033:
