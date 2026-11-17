@@ -1306,7 +1306,6 @@ extern const uint32_t HitInfo_Compare_m2336739674_MetadataUsageId;
 extern const RuntimeMethod* SetupCoroutine_InvokeMoveNext_m3199342729_RuntimeMethod_var;
 extern const uint32_t SetupCoroutine_InvokeMoveNext_m3199342729_MetadataUsageId;
 extern const uint32_t SetupCoroutine_InvokeMember_m2661944898_MetadataUsageId;
-extern const uint32_t Shader__ctor_m837260462_MetadataUsageId;
 
 struct KeyframeU5BU5D_t1068524471;
 struct ObjectU5BU5D_t2843939325;
@@ -14504,6 +14503,8 @@ extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_set_worldToCameraMatrix_m1993
 extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_get_projectionMatrix_m3544213898 (Camera_t4157153871 * __this, Matrix4x4_t1817901843 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Camera::INTERNAL_set_projectionMatrix(UnityEngine.Matrix4x4&)
 extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_set_projectionMatrix_m3705557330 (Camera_t4157153871 * __this, Matrix4x4_t1817901843 * ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Camera::INTERNAL_CALL_ResetAspect(UnityEngine.Camera)
+extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_CALL_ResetAspect_m3002838000 (RuntimeObject * __this /* static, unused */, Camera_t4157153871 * ___self0, const RuntimeMethod* method);
 // System.Void UnityEngine.Camera::INTERNAL_CALL_WorldToScreenPoint(UnityEngine.Camera,UnityEngine.Vector3&,UnityEngine.Vector3&)
 extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_CALL_WorldToScreenPoint_m2090700276 (RuntimeObject * __this /* static, unused */, Camera_t4157153871 * ___self0, Vector3_t3722313464 * ___position1, Vector3_t3722313464 * ___value2, const RuntimeMethod* method);
 // System.Void UnityEngine.Camera::INTERNAL_CALL_ScreenToWorldPoint(UnityEngine.Camera,UnityEngine.Vector3&,UnityEngine.Vector3&)
@@ -15626,6 +15627,8 @@ extern "C" IL2CPP_METHOD_ATTR AsyncOperation_t1445031843 * SceneManager_LoadScen
 #define UnityAction_2_Invoke_m944492567(__this, p0, p1, method) ((  void (*) (UnityAction_2_t1262235195 *, Scene_t2348375561 , Scene_t2348375561 , const RuntimeMethod*))UnityAction_2_Invoke_m944492567_gshared)(__this, p0, p1, method)
 // System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR void Screen_SetResolution_m298539064 (RuntimeObject * __this /* static, unused */, int32_t ___width0, int32_t ___height1, bool ___fullscreen2, int32_t ___preferredRefreshRate3, const RuntimeMethod* method);
+// System.Void UnityEngine.Screen::get_safeArea_Injected(UnityEngine.Rect&)
+extern "C" IL2CPP_METHOD_ATTR void Screen_get_safeArea_Injected_m1359147542 (RuntimeObject * __this /* static, unused */, Rect_t2360479859 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.ScriptableObject::Internal_CreateScriptableObject(UnityEngine.ScriptableObject)
 extern "C" IL2CPP_METHOD_ATTR void ScriptableObject_Internal_CreateScriptableObject_m2945320968 (RuntimeObject * __this /* static, unused */, ScriptableObject_t2528358522 * ___self0, const RuntimeMethod* method);
 // UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateInstanceFromType(System.Type)
@@ -18625,15 +18628,6 @@ extern "C" IL2CPP_METHOD_ATTR float Camera_get_aspect_m862507514 (Camera_t415715
 	float retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
-// System.Void UnityEngine.Camera::set_aspect(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void Camera_set_aspect_m2625464181 (Camera_t4157153871 * __this, float ___value0, const RuntimeMethod* method)
-{
-	typedef void (*Camera_set_aspect_m2625464181_ftn) (Camera_t4157153871 *, float);
-	static Camera_set_aspect_m2625464181_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Camera_set_aspect_m2625464181_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::set_aspect(System.Single)");
-	_il2cpp_icall_func(__this, ___value0);
-}
 // System.Int32 UnityEngine.Camera::get_cullingMask()
 extern "C" IL2CPP_METHOD_ATTR int32_t Camera_get_cullingMask_m679085748 (Camera_t4157153871 * __this, const RuntimeMethod* method)
 {
@@ -18885,6 +18879,23 @@ extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_set_projectionMatrix_m3705557
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Camera_INTERNAL_set_projectionMatrix_m3705557330_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::INTERNAL_set_projectionMatrix(UnityEngine.Matrix4x4&)");
 	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.Camera::ResetAspect()
+extern "C" IL2CPP_METHOD_ATTR void Camera_ResetAspect_m3792783704 (Camera_t4157153871 * __this, const RuntimeMethod* method)
+{
+	{
+		Camera_INTERNAL_CALL_ResetAspect_m3002838000(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Camera::INTERNAL_CALL_ResetAspect(UnityEngine.Camera)
+extern "C" IL2CPP_METHOD_ATTR void Camera_INTERNAL_CALL_ResetAspect_m3002838000 (RuntimeObject * __this /* static, unused */, Camera_t4157153871 * ___self0, const RuntimeMethod* method)
+{
+	typedef void (*Camera_INTERNAL_CALL_ResetAspect_m3002838000_ftn) (Camera_t4157153871 *);
+	static Camera_INTERNAL_CALL_ResetAspect_m3002838000_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Camera_INTERNAL_CALL_ResetAspect_m3002838000_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::INTERNAL_CALL_ResetAspect(UnityEngine.Camera)");
+	_il2cpp_icall_func(___self0);
 }
 // UnityEngine.CameraClearFlags UnityEngine.Camera::get_clearFlags()
 extern "C" IL2CPP_METHOD_ATTR int32_t Camera_get_clearFlags_m992534691 (Camera_t4157153871 * __this, const RuntimeMethod* method)
@@ -40120,6 +40131,26 @@ extern "C" IL2CPP_METHOD_ATTR float Screen_get_dpi_m495672463 (RuntimeObject * _
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// UnityEngine.Rect UnityEngine.Screen::get_safeArea()
+extern "C" IL2CPP_METHOD_ATTR Rect_t2360479859  Screen_get_safeArea_m904922178 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	Rect_t2360479859  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Screen_get_safeArea_Injected_m1359147542(NULL /*static, unused*/, (&V_0), /*hidden argument*/NULL);
+		Rect_t2360479859  L_0 = V_0;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.Screen::get_safeArea_Injected(UnityEngine.Rect&)
+extern "C" IL2CPP_METHOD_ATTR void Screen_get_safeArea_Injected_m1359147542 (RuntimeObject * __this /* static, unused */, Rect_t2360479859 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*Screen_get_safeArea_Injected_m1359147542_ftn) (Rect_t2360479859 *);
+	static Screen_get_safeArea_Injected_m1359147542_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Screen_get_safeArea_Injected_m1359147542_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Screen::get_safeArea_Injected(UnityEngine.Rect&)");
+	_il2cpp_icall_func(___ret0);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -41505,59 +41536,6 @@ IL_0033:
 		RuntimeObject * L_9 = V_1;
 		return L_9;
 	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void UnityEngine.Shader::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void Shader__ctor_m837260462 (Shader_t4151988712 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Shader__ctor_m837260462_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		Object__ctor_m1087895580(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.Shader UnityEngine.Shader::Find(System.String)
-extern "C" IL2CPP_METHOD_ATTR Shader_t4151988712 * Shader_Find_m2092206247 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method)
-{
-	typedef Shader_t4151988712 * (*Shader_Find_m2092206247_ftn) (String_t*);
-	static Shader_Find_m2092206247_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Shader_Find_m2092206247_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Shader::Find(System.String)");
-	Shader_t4151988712 * retVal = _il2cpp_icall_func(___name0);
-	return retVal;
-}
-// System.Boolean UnityEngine.Shader::get_isSupported()
-extern "C" IL2CPP_METHOD_ATTR bool Shader_get_isSupported_m755080316 (Shader_t4151988712 * __this, const RuntimeMethod* method)
-{
-	typedef bool (*Shader_get_isSupported_m755080316_ftn) (Shader_t4151988712 *);
-	static Shader_get_isSupported_m755080316_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Shader_get_isSupported_m755080316_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Shader::get_isSupported()");
-	bool retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
-// System.Int32 UnityEngine.Shader::PropertyToID(System.String)
-extern "C" IL2CPP_METHOD_ATTR int32_t Shader_PropertyToID_m1030499873 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method)
-{
-	typedef int32_t (*Shader_PropertyToID_m1030499873_ftn) (String_t*);
-	static Shader_PropertyToID_m1030499873_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Shader_PropertyToID_m1030499873_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Shader::PropertyToID(System.String)");
-	int32_t retVal = _il2cpp_icall_func(___name0);
-	return retVal;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

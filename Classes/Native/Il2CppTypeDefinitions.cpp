@@ -1884,8 +1884,6 @@ extern const Il2CppGenericInst GenInst_MissionConditionTypeInfo_t3287692124_0_0_
 extern const Il2CppGenericInst GenInst_MissionTypeInfo_t121943433_0_0_0;
 extern const Il2CppGenericInst GenInst_MissionPrerequisite_t2992804788_0_0_0;
 extern const Il2CppGenericInst GenInst_MissionSlot_t127915906_0_0_0;
-extern const Il2CppGenericInst GenInst_CanvasScaler_t2767979955_0_0_0;
-extern const Il2CppGenericInst GenInst_RawImage_t3182918964_0_0_0;
 extern const Il2CppGenericInst GenInst_PassType_t1566220485_0_0_0;
 extern const Il2CppGenericInst GenInst_EventAction_t371246459_0_0_0;
 extern const Il2CppGenericInst GenInst_TitleObject_t2049822640_0_0_0;
@@ -33355,43 +33353,6 @@ extern const RuntimeType IComparer_1_t1382181385_0_0_0 = { &IComparer_1_t1382181
 Il2CppGenericClass Comparison_1_t4197814381_GenericClass = { 973, { &GenInst_MissionSlot_t127915906_0_0_0, NULL }, NULL };
 extern const RuntimeType Comparison_1_t4197814381_0_0_0 = { &Comparison_1_t4197814381_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
-Il2CppGenericClass IEnumerator_1_t3200550423_GenericClass = { 25, { &GenInst_CanvasScaler_t2767979955_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerator_1_t3200550423_0_0_0 = { &IEnumerator_1_t3200550423_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const RuntimeType CanvasScaler_t2767979955_0_0_0 = { (void*)3598, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType CanvasScaler_t2767979955_1_0_0 = { (void*)3598, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-
-Il2CppGenericClass InternalEnumerator_1_t3675044072_GenericClass = { 41, { &GenInst_CanvasScaler_t2767979955_0_0_0, NULL }, NULL };
-extern const RuntimeType InternalEnumerator_1_t3675044072_0_0_0 = { &InternalEnumerator_1_t3675044072_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IList_1_t288332442_GenericClass = { 48, { &GenInst_CanvasScaler_t2767979955_0_0_0, NULL }, NULL };
-extern const RuntimeType IList_1_t288332442_0_0_0 = { &IList_1_t288332442_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass ICollection_1_t1301164893_GenericClass = { 49, { &GenInst_CanvasScaler_t2767979955_0_0_0, NULL }, NULL };
-extern const RuntimeType ICollection_1_t1301164893_0_0_0 = { &ICollection_1_t1301164893_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IEnumerable_1_t1747832844_GenericClass = { 29, { &GenInst_CanvasScaler_t2767979955_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerable_1_t1747832844_0_0_0 = { &IEnumerable_1_t1747832844_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IEnumerator_1_t3615489432_GenericClass = { 25, { &GenInst_RawImage_t3182918964_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerator_1_t3615489432_0_0_0 = { &IEnumerator_1_t3615489432_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const RuntimeType RawImage_t3182918964_0_0_0 = { (void*)3564, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType RawImage_t3182918964_1_0_0 = { (void*)3564, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-extern const RuntimeType RawImage_t3182918964_0_0_6 = { (void*)3564, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-
-Il2CppGenericClass InternalEnumerator_1_t4089983081_GenericClass = { 41, { &GenInst_RawImage_t3182918964_0_0_0, NULL }, NULL };
-extern const RuntimeType InternalEnumerator_1_t4089983081_0_0_0 = { &InternalEnumerator_1_t4089983081_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IList_1_t703271451_GenericClass = { 48, { &GenInst_RawImage_t3182918964_0_0_0, NULL }, NULL };
-extern const RuntimeType IList_1_t703271451_0_0_0 = { &IList_1_t703271451_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass ICollection_1_t1716103902_GenericClass = { 49, { &GenInst_RawImage_t3182918964_0_0_0, NULL }, NULL };
-extern const RuntimeType ICollection_1_t1716103902_0_0_0 = { &ICollection_1_t1716103902_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IEnumerable_1_t2162771853_GenericClass = { 29, { &GenInst_RawImage_t3182918964_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerable_1_t2162771853_0_0_0 = { &IEnumerable_1_t2162771853_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
 Il2CppGenericClass List_1_t3038295227_GenericClass = { 177, { &GenInst_PassType_t1566220485_0_0_0, NULL }, NULL };
 extern const RuntimeType List_1_t3038295227_0_0_0 = { &List_1_t3038295227_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 extern const RuntimeType List_1_t3038295227_0_0_1 = { &List_1_t3038295227_GenericClass, 1, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
@@ -46397,6 +46358,10 @@ extern const RuntimeType AxisEventData_t2331243652_0_0_0 = { (void*)3486, 0, IL2
 extern const RuntimeType AxisEventData_t2331243652_1_0_0 = { (void*)3486, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 extern const RuntimeType AxisEventData_t2331243652_0_0_1 = { (void*)3486, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 
+extern const RuntimeType RawImage_t3182918964_0_0_0 = { (void*)3564, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const RuntimeType RawImage_t3182918964_1_0_0 = { (void*)3564, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const RuntimeType RawImage_t3182918964_0_0_6 = { (void*)3564, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+
 extern const RuntimeType Slider_t3903728902_0_0_0 = { (void*)3579, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType Slider_t3903728902_1_0_0 = { (void*)3579, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 extern const RuntimeType Slider_t3903728902_0_0_6 = { (void*)3579, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
@@ -47035,6 +47000,9 @@ extern const RuntimeType ManualLabel_t2247826984_1_0_0 = { (void*)5831, 0, IL2CP
 extern const RuntimeType MobileScreenManager_t831028031_0_0_0 = { (void*)5902, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType MobileScreenManager_t831028031_1_0_0 = { (void*)5902, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 extern const RuntimeType MobileScreenManager_t831028031_0_0_17 = { (void*)5902, 17, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+
+extern const RuntimeType CanvasScaler_t2767979955_0_0_0 = { (void*)3598, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const RuntimeType CanvasScaler_t2767979955_1_0_0 = { (void*)3598, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
 extern const RuntimeType LoggingScript_t3580749383_0_0_0 = { (void*)5741, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType LoggingScript_t3580749383_1_0_0 = { (void*)5741, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -75952,7 +75920,7 @@ extern const RuntimeType ITrackingHandlerU5BU5D_t3758023570_0_0_0 = { (void*)&IT
 extern const RuntimeType XmlIncludeAttributeU5BU5D_t670669338_0_0_0 = { (void*)&XmlIncludeAttribute_t1446401819_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
 
 extern const RuntimeType XPathNavigatorU5BU5D_t3671675027_0_0_0 = { (void*)&XPathNavigator_t787956054_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const RuntimeType* const  g_Il2CppTypeTable[36156] = 
+extern const RuntimeType* const  g_Il2CppTypeTable[36146] = 
 {
 	&IEnumerator_1_t3512676632_0_0_0,
 	&RuntimeObject_0_0_0,
@@ -85308,18 +85276,6 @@ extern const RuntimeType* const  g_Il2CppTypeTable[36156] =
 	&Enumerator_t3489234525_0_0_0,
 	&IComparer_1_t1382181385_0_0_0,
 	&Comparison_1_t4197814381_0_0_0,
-	&IEnumerator_1_t3200550423_0_0_0,
-	&CanvasScaler_t2767979955_0_0_0,
-	&InternalEnumerator_1_t3675044072_0_0_0,
-	&IList_1_t288332442_0_0_0,
-	&ICollection_1_t1301164893_0_0_0,
-	&IEnumerable_1_t1747832844_0_0_0,
-	&IEnumerator_1_t3615489432_0_0_0,
-	&RawImage_t3182918964_0_0_0,
-	&InternalEnumerator_1_t4089983081_0_0_0,
-	&IList_1_t703271451_0_0_0,
-	&ICollection_1_t1716103902_0_0_0,
-	&IEnumerable_1_t2162771853_0_0_0,
 	&List_1_t3038295227_0_0_0,
 	&PassType_t1566220485_0_0_0,
 	&ICollection_1_t99405423_0_0_0,
@@ -89454,6 +89410,7 @@ extern const RuntimeType* const  g_Il2CppTypeTable[36156] =
 	&XmlElementU5BU5D_t1541675355_0_0_0,
 	&XmlSchemaProviderAttribute_t3872582200_0_0_0,
 	&AxisEventData_t2331243652_0_0_0,
+	&RawImage_t3182918964_0_0_0,
 	&Slider_t3903728902_0_0_0,
 	&Scrollbar_t1494447233_0_0_0,
 	&InputField_t3762917431_0_0_0,
@@ -89617,6 +89574,7 @@ extern const RuntimeType* const  g_Il2CppTypeTable[36156] =
 	&ManualTextSlot_t2629134321_0_0_0,
 	&ManualLabel_t2247826984_0_0_0,
 	&MobileScreenManager_t831028031_0_0_0,
+	&CanvasScaler_t2767979955_0_0_0,
 	&LoggingScript_t3580749383_0_0_0,
 	&CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0,
 	&CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0,

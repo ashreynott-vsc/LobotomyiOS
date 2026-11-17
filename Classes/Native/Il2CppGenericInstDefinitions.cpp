@@ -1048,8 +1048,6 @@ extern const Il2CppType MissionConditionTypeInfo_t3287692124_0_0_0;
 extern const Il2CppType MissionTypeInfo_t121943433_0_0_0;
 extern const Il2CppType MissionPrerequisite_t2992804788_0_0_0;
 extern const Il2CppType MissionSlot_t127915906_0_0_0;
-extern const Il2CppType CanvasScaler_t2767979955_0_0_0;
-extern const Il2CppType RawImage_t3182918964_0_0_0;
 extern const Il2CppType PassType_t1566220485_0_0_0;
 extern const Il2CppType EventAction_t371246459_0_0_0;
 extern const Il2CppType TitleObject_t2049822640_0_0_0;
@@ -1396,6 +1394,7 @@ extern const Il2CppType DefaultExecutionOrder_t3059642329_0_0_0;
 extern const Il2CppType PlayerConnection_t3081694049_0_0_0;
 extern const Il2CppType GUILayer_t2783472903_0_0_0;
 extern const Il2CppType AxisEventData_t2331243652_0_0_0;
+extern const Il2CppType RawImage_t3182918964_0_0_0;
 extern const Il2CppType Slider_t3903728902_0_0_0;
 extern const Il2CppType Scrollbar_t1494447233_0_0_0;
 extern const Il2CppType InputField_t3762917431_0_0_0;
@@ -1541,6 +1540,7 @@ extern const Il2CppType NodeCategorySlot_t464407632_0_0_0;
 extern const Il2CppType ManualTextSlot_t2629134321_0_0_0;
 extern const Il2CppType ManualLabel_t2247826984_0_0_0;
 extern const Il2CppType MobileScreenManager_t831028031_0_0_0;
+extern const Il2CppType CanvasScaler_t2767979955_0_0_0;
 extern const Il2CppType LoggingScript_t3580749383_0_0_0;
 extern const Il2CppType CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0;
 extern const Il2CppType CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0;
@@ -5372,10 +5372,6 @@ static const RuntimeType* GenInst_MissionPrerequisite_t2992804788_0_0_0_Types[] 
 extern const Il2CppGenericInst GenInst_MissionPrerequisite_t2992804788_0_0_0 = { 1, GenInst_MissionPrerequisite_t2992804788_0_0_0_Types };
 static const RuntimeType* GenInst_MissionSlot_t127915906_0_0_0_Types[] = { (&MissionSlot_t127915906_0_0_0) };
 extern const Il2CppGenericInst GenInst_MissionSlot_t127915906_0_0_0 = { 1, GenInst_MissionSlot_t127915906_0_0_0_Types };
-static const RuntimeType* GenInst_CanvasScaler_t2767979955_0_0_0_Types[] = { (&CanvasScaler_t2767979955_0_0_0) };
-extern const Il2CppGenericInst GenInst_CanvasScaler_t2767979955_0_0_0 = { 1, GenInst_CanvasScaler_t2767979955_0_0_0_Types };
-static const RuntimeType* GenInst_RawImage_t3182918964_0_0_0_Types[] = { (&RawImage_t3182918964_0_0_0) };
-extern const Il2CppGenericInst GenInst_RawImage_t3182918964_0_0_0 = { 1, GenInst_RawImage_t3182918964_0_0_0_Types };
 static const RuntimeType* GenInst_PassType_t1566220485_0_0_0_Types[] = { (&PassType_t1566220485_0_0_0) };
 extern const Il2CppGenericInst GenInst_PassType_t1566220485_0_0_0 = { 1, GenInst_PassType_t1566220485_0_0_0_Types };
 static const RuntimeType* GenInst_EventAction_t371246459_0_0_0_Types[] = { (&EventAction_t371246459_0_0_0) };
@@ -6514,6 +6510,8 @@ static const RuntimeType* GenInst_GUILayer_t2783472903_0_0_0_Types[] = { (&GUILa
 extern const Il2CppGenericInst GenInst_GUILayer_t2783472903_0_0_0 = { 1, GenInst_GUILayer_t2783472903_0_0_0_Types };
 static const RuntimeType* GenInst_AxisEventData_t2331243652_0_0_0_Types[] = { (&AxisEventData_t2331243652_0_0_0) };
 extern const Il2CppGenericInst GenInst_AxisEventData_t2331243652_0_0_0 = { 1, GenInst_AxisEventData_t2331243652_0_0_0_Types };
+static const RuntimeType* GenInst_RawImage_t3182918964_0_0_0_Types[] = { (&RawImage_t3182918964_0_0_0) };
+extern const Il2CppGenericInst GenInst_RawImage_t3182918964_0_0_0 = { 1, GenInst_RawImage_t3182918964_0_0_0_Types };
 static const RuntimeType* GenInst_Slider_t3903728902_0_0_0_Types[] = { (&Slider_t3903728902_0_0_0) };
 extern const Il2CppGenericInst GenInst_Slider_t3903728902_0_0_0 = { 1, GenInst_Slider_t3903728902_0_0_0_Types };
 static const RuntimeType* GenInst_Scrollbar_t1494447233_0_0_0_Types[] = { (&Scrollbar_t1494447233_0_0_0) };
@@ -6804,6 +6802,8 @@ static const RuntimeType* GenInst_ManualLabel_t2247826984_0_0_0_Types[] = { (&Ma
 extern const Il2CppGenericInst GenInst_ManualLabel_t2247826984_0_0_0 = { 1, GenInst_ManualLabel_t2247826984_0_0_0_Types };
 static const RuntimeType* GenInst_MobileScreenManager_t831028031_0_0_0_Types[] = { (&MobileScreenManager_t831028031_0_0_0) };
 extern const Il2CppGenericInst GenInst_MobileScreenManager_t831028031_0_0_0 = { 1, GenInst_MobileScreenManager_t831028031_0_0_0_Types };
+static const RuntimeType* GenInst_CanvasScaler_t2767979955_0_0_0_Types[] = { (&CanvasScaler_t2767979955_0_0_0) };
+extern const Il2CppGenericInst GenInst_CanvasScaler_t2767979955_0_0_0 = { 1, GenInst_CanvasScaler_t2767979955_0_0_0_Types };
 static const RuntimeType* GenInst_LoggingScript_t3580749383_0_0_0_Types[] = { (&LoggingScript_t3580749383_0_0_0) };
 extern const Il2CppGenericInst GenInst_LoggingScript_t3580749383_0_0_0 = { 1, GenInst_LoggingScript_t3580749383_0_0_0_Types };
 static const RuntimeType* GenInst_CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0_Types[] = { (&CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0) };
@@ -11111,8 +11111,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3572] =
 	&GenInst_MissionTypeInfo_t121943433_0_0_0,
 	&GenInst_MissionPrerequisite_t2992804788_0_0_0,
 	&GenInst_MissionSlot_t127915906_0_0_0,
-	&GenInst_CanvasScaler_t2767979955_0_0_0,
-	&GenInst_RawImage_t3182918964_0_0_0,
 	&GenInst_PassType_t1566220485_0_0_0,
 	&GenInst_EventAction_t371246459_0_0_0,
 	&GenInst_TitleObject_t2049822640_0_0_0,
@@ -11682,6 +11680,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3572] =
 	&GenInst_PlayerConnection_t3081694049_0_0_0,
 	&GenInst_GUILayer_t2783472903_0_0_0,
 	&GenInst_AxisEventData_t2331243652_0_0_0,
+	&GenInst_RawImage_t3182918964_0_0_0,
 	&GenInst_Slider_t3903728902_0_0_0,
 	&GenInst_Scrollbar_t1494447233_0_0_0,
 	&GenInst_InputField_t3762917431_0_0_0,
@@ -11827,6 +11826,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3572] =
 	&GenInst_ManualTextSlot_t2629134321_0_0_0,
 	&GenInst_ManualLabel_t2247826984_0_0_0,
 	&GenInst_MobileScreenManager_t831028031_0_0_0,
+	&GenInst_CanvasScaler_t2767979955_0_0_0,
 	&GenInst_LoggingScript_t3580749383_0_0_0,
 	&GenInst_CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0,
 	&GenInst_CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0,

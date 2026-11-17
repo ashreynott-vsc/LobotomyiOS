@@ -251,6 +251,8 @@ struct BufStateUI_t866442561;
 struct RectTransform_t3704657025;
 // System.Collections.Generic.List`1<MissionSlot>
 struct List_1_t1599990648;
+// UnityEngine.Camera
+struct Camera_t4157153871;
 // UnityEngine.Texture2D
 struct Texture2D_t3840446185;
 // UnityEngine.GUIStyle
@@ -303,8 +305,6 @@ struct List_1_t2711838786;
 struct NoteU5BU5D_t2875391961;
 // UnityEngine.ParticleSystemRenderer[]
 struct ParticleSystemRendererU5BU5D_t1417660018;
-// UnityEngine.Camera
-struct Camera_t4157153871;
 // SuperArmorEffect
 struct SuperArmorEffect_t129670311;
 // System.Collections.Generic.Stack`1<CreatureAnimScript/ParameterInfo>
@@ -8947,36 +8947,52 @@ public:
 	int32_t ____lastHeight_4;
 	// System.String MobileScreenManager::_logFilePath
 	String_t* ____logFilePath_5;
+	// System.String MobileScreenManager::_settingsFilePath
+	String_t* ____settingsFilePath_6;
 	// System.Single MobileScreenManager::_deltaTime
-	float ____deltaTime_6;
+	float ____deltaTime_7;
 	// System.Single MobileScreenManager::_fps
-	float ____fps_7;
+	float ____fps_8;
 	// System.Single MobileScreenManager::_fpsTimer
-	float ____fpsTimer_8;
+	float ____fpsTimer_9;
+	// System.Int32 MobileScreenManager::_aspectMode
+	int32_t ____aspectMode_10;
 	// System.Boolean MobileScreenManager::_showHud
-	bool ____showHud_9;
+	bool ____showHud_11;
 	// System.String MobileScreenManager::_cmdInput
-	String_t* ____cmdInput_10;
+	String_t* ____cmdInput_12;
 	// System.String MobileScreenManager::_statusMsg
-	String_t* ____statusMsg_11;
+	String_t* ____statusMsg_13;
 	// UnityEngine.Vector2 MobileScreenManager::_scrollPos
-	Vector2_t2156229523  ____scrollPos_12;
+	Vector2_t2156229523  ____scrollPos_14;
+	// UnityEngine.Camera MobileScreenManager::_clearCamera
+	Camera_t4157153871 * ____clearCamera_15;
+	// UnityEngine.Camera MobileScreenManager::_uiCamera
+	Camera_t4157153871 * ____uiCamera_16;
 	// UnityEngine.Texture2D MobileScreenManager::_glassBg
-	Texture2D_t3840446185 * ____glassBg_13;
+	Texture2D_t3840446185 * ____glassBg_17;
 	// UnityEngine.Texture2D MobileScreenManager::_glassButtonBg
-	Texture2D_t3840446185 * ____glassButtonBg_14;
+	Texture2D_t3840446185 * ____glassButtonBg_18;
+	// UnityEngine.Texture2D MobileScreenManager::_glassPillBg
+	Texture2D_t3840446185 * ____glassPillBg_19;
+	// UnityEngine.Texture2D MobileScreenManager::_glassActiveBg
+	Texture2D_t3840446185 * ____glassActiveBg_20;
 	// UnityEngine.GUIStyle MobileScreenManager::_pillStyle
-	GUIStyle_t3956901511 * ____pillStyle_15;
+	GUIStyle_t3956901511 * ____pillStyle_21;
 	// UnityEngine.GUIStyle MobileScreenManager::_glassBoxStyle
-	GUIStyle_t3956901511 * ____glassBoxStyle_16;
+	GUIStyle_t3956901511 * ____glassBoxStyle_22;
 	// UnityEngine.GUIStyle MobileScreenManager::_glassButtonStyle
-	GUIStyle_t3956901511 * ____glassButtonStyle_17;
+	GUIStyle_t3956901511 * ____glassButtonStyle_23;
+	// UnityEngine.GUIStyle MobileScreenManager::_glassActiveButtonStyle
+	GUIStyle_t3956901511 * ____glassActiveButtonStyle_24;
 	// UnityEngine.GUIStyle MobileScreenManager::_glassLabelStyle
-	GUIStyle_t3956901511 * ____glassLabelStyle_18;
+	GUIStyle_t3956901511 * ____glassLabelStyle_25;
 	// UnityEngine.GUIStyle MobileScreenManager::_glassInputStyle
-	GUIStyle_t3956901511 * ____glassInputStyle_19;
+	GUIStyle_t3956901511 * ____glassInputStyle_26;
+	// UnityEngine.GUIStyle MobileScreenManager::_glassHeaderStyle
+	GUIStyle_t3956901511 * ____glassHeaderStyle_27;
 	// System.Boolean MobileScreenManager::_stylesInitialized
-	bool ____stylesInitialized_20;
+	bool ____stylesInitialized_28;
 
 public:
 	inline static int32_t get_offset_of__lastWidth_3() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____lastWidth_3)); }
@@ -9004,133 +9020,204 @@ public:
 		Il2CppCodeGenWriteBarrier((&____logFilePath_5), value);
 	}
 
-	inline static int32_t get_offset_of__deltaTime_6() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____deltaTime_6)); }
-	inline float get__deltaTime_6() const { return ____deltaTime_6; }
-	inline float* get_address_of__deltaTime_6() { return &____deltaTime_6; }
-	inline void set__deltaTime_6(float value)
+	inline static int32_t get_offset_of__settingsFilePath_6() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____settingsFilePath_6)); }
+	inline String_t* get__settingsFilePath_6() const { return ____settingsFilePath_6; }
+	inline String_t** get_address_of__settingsFilePath_6() { return &____settingsFilePath_6; }
+	inline void set__settingsFilePath_6(String_t* value)
 	{
-		____deltaTime_6 = value;
+		____settingsFilePath_6 = value;
+		Il2CppCodeGenWriteBarrier((&____settingsFilePath_6), value);
 	}
 
-	inline static int32_t get_offset_of__fps_7() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____fps_7)); }
-	inline float get__fps_7() const { return ____fps_7; }
-	inline float* get_address_of__fps_7() { return &____fps_7; }
-	inline void set__fps_7(float value)
+	inline static int32_t get_offset_of__deltaTime_7() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____deltaTime_7)); }
+	inline float get__deltaTime_7() const { return ____deltaTime_7; }
+	inline float* get_address_of__deltaTime_7() { return &____deltaTime_7; }
+	inline void set__deltaTime_7(float value)
 	{
-		____fps_7 = value;
+		____deltaTime_7 = value;
 	}
 
-	inline static int32_t get_offset_of__fpsTimer_8() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____fpsTimer_8)); }
-	inline float get__fpsTimer_8() const { return ____fpsTimer_8; }
-	inline float* get_address_of__fpsTimer_8() { return &____fpsTimer_8; }
-	inline void set__fpsTimer_8(float value)
+	inline static int32_t get_offset_of__fps_8() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____fps_8)); }
+	inline float get__fps_8() const { return ____fps_8; }
+	inline float* get_address_of__fps_8() { return &____fps_8; }
+	inline void set__fps_8(float value)
 	{
-		____fpsTimer_8 = value;
+		____fps_8 = value;
 	}
 
-	inline static int32_t get_offset_of__showHud_9() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____showHud_9)); }
-	inline bool get__showHud_9() const { return ____showHud_9; }
-	inline bool* get_address_of__showHud_9() { return &____showHud_9; }
-	inline void set__showHud_9(bool value)
+	inline static int32_t get_offset_of__fpsTimer_9() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____fpsTimer_9)); }
+	inline float get__fpsTimer_9() const { return ____fpsTimer_9; }
+	inline float* get_address_of__fpsTimer_9() { return &____fpsTimer_9; }
+	inline void set__fpsTimer_9(float value)
 	{
-		____showHud_9 = value;
+		____fpsTimer_9 = value;
 	}
 
-	inline static int32_t get_offset_of__cmdInput_10() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____cmdInput_10)); }
-	inline String_t* get__cmdInput_10() const { return ____cmdInput_10; }
-	inline String_t** get_address_of__cmdInput_10() { return &____cmdInput_10; }
-	inline void set__cmdInput_10(String_t* value)
+	inline static int32_t get_offset_of__aspectMode_10() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____aspectMode_10)); }
+	inline int32_t get__aspectMode_10() const { return ____aspectMode_10; }
+	inline int32_t* get_address_of__aspectMode_10() { return &____aspectMode_10; }
+	inline void set__aspectMode_10(int32_t value)
 	{
-		____cmdInput_10 = value;
-		Il2CppCodeGenWriteBarrier((&____cmdInput_10), value);
+		____aspectMode_10 = value;
 	}
 
-	inline static int32_t get_offset_of__statusMsg_11() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____statusMsg_11)); }
-	inline String_t* get__statusMsg_11() const { return ____statusMsg_11; }
-	inline String_t** get_address_of__statusMsg_11() { return &____statusMsg_11; }
-	inline void set__statusMsg_11(String_t* value)
+	inline static int32_t get_offset_of__showHud_11() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____showHud_11)); }
+	inline bool get__showHud_11() const { return ____showHud_11; }
+	inline bool* get_address_of__showHud_11() { return &____showHud_11; }
+	inline void set__showHud_11(bool value)
 	{
-		____statusMsg_11 = value;
-		Il2CppCodeGenWriteBarrier((&____statusMsg_11), value);
+		____showHud_11 = value;
 	}
 
-	inline static int32_t get_offset_of__scrollPos_12() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____scrollPos_12)); }
-	inline Vector2_t2156229523  get__scrollPos_12() const { return ____scrollPos_12; }
-	inline Vector2_t2156229523 * get_address_of__scrollPos_12() { return &____scrollPos_12; }
-	inline void set__scrollPos_12(Vector2_t2156229523  value)
+	inline static int32_t get_offset_of__cmdInput_12() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____cmdInput_12)); }
+	inline String_t* get__cmdInput_12() const { return ____cmdInput_12; }
+	inline String_t** get_address_of__cmdInput_12() { return &____cmdInput_12; }
+	inline void set__cmdInput_12(String_t* value)
 	{
-		____scrollPos_12 = value;
+		____cmdInput_12 = value;
+		Il2CppCodeGenWriteBarrier((&____cmdInput_12), value);
 	}
 
-	inline static int32_t get_offset_of__glassBg_13() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassBg_13)); }
-	inline Texture2D_t3840446185 * get__glassBg_13() const { return ____glassBg_13; }
-	inline Texture2D_t3840446185 ** get_address_of__glassBg_13() { return &____glassBg_13; }
-	inline void set__glassBg_13(Texture2D_t3840446185 * value)
+	inline static int32_t get_offset_of__statusMsg_13() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____statusMsg_13)); }
+	inline String_t* get__statusMsg_13() const { return ____statusMsg_13; }
+	inline String_t** get_address_of__statusMsg_13() { return &____statusMsg_13; }
+	inline void set__statusMsg_13(String_t* value)
 	{
-		____glassBg_13 = value;
-		Il2CppCodeGenWriteBarrier((&____glassBg_13), value);
+		____statusMsg_13 = value;
+		Il2CppCodeGenWriteBarrier((&____statusMsg_13), value);
 	}
 
-	inline static int32_t get_offset_of__glassButtonBg_14() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassButtonBg_14)); }
-	inline Texture2D_t3840446185 * get__glassButtonBg_14() const { return ____glassButtonBg_14; }
-	inline Texture2D_t3840446185 ** get_address_of__glassButtonBg_14() { return &____glassButtonBg_14; }
-	inline void set__glassButtonBg_14(Texture2D_t3840446185 * value)
+	inline static int32_t get_offset_of__scrollPos_14() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____scrollPos_14)); }
+	inline Vector2_t2156229523  get__scrollPos_14() const { return ____scrollPos_14; }
+	inline Vector2_t2156229523 * get_address_of__scrollPos_14() { return &____scrollPos_14; }
+	inline void set__scrollPos_14(Vector2_t2156229523  value)
 	{
-		____glassButtonBg_14 = value;
-		Il2CppCodeGenWriteBarrier((&____glassButtonBg_14), value);
+		____scrollPos_14 = value;
 	}
 
-	inline static int32_t get_offset_of__pillStyle_15() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____pillStyle_15)); }
-	inline GUIStyle_t3956901511 * get__pillStyle_15() const { return ____pillStyle_15; }
-	inline GUIStyle_t3956901511 ** get_address_of__pillStyle_15() { return &____pillStyle_15; }
-	inline void set__pillStyle_15(GUIStyle_t3956901511 * value)
+	inline static int32_t get_offset_of__clearCamera_15() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____clearCamera_15)); }
+	inline Camera_t4157153871 * get__clearCamera_15() const { return ____clearCamera_15; }
+	inline Camera_t4157153871 ** get_address_of__clearCamera_15() { return &____clearCamera_15; }
+	inline void set__clearCamera_15(Camera_t4157153871 * value)
 	{
-		____pillStyle_15 = value;
-		Il2CppCodeGenWriteBarrier((&____pillStyle_15), value);
+		____clearCamera_15 = value;
+		Il2CppCodeGenWriteBarrier((&____clearCamera_15), value);
 	}
 
-	inline static int32_t get_offset_of__glassBoxStyle_16() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassBoxStyle_16)); }
-	inline GUIStyle_t3956901511 * get__glassBoxStyle_16() const { return ____glassBoxStyle_16; }
-	inline GUIStyle_t3956901511 ** get_address_of__glassBoxStyle_16() { return &____glassBoxStyle_16; }
-	inline void set__glassBoxStyle_16(GUIStyle_t3956901511 * value)
+	inline static int32_t get_offset_of__uiCamera_16() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____uiCamera_16)); }
+	inline Camera_t4157153871 * get__uiCamera_16() const { return ____uiCamera_16; }
+	inline Camera_t4157153871 ** get_address_of__uiCamera_16() { return &____uiCamera_16; }
+	inline void set__uiCamera_16(Camera_t4157153871 * value)
 	{
-		____glassBoxStyle_16 = value;
-		Il2CppCodeGenWriteBarrier((&____glassBoxStyle_16), value);
+		____uiCamera_16 = value;
+		Il2CppCodeGenWriteBarrier((&____uiCamera_16), value);
 	}
 
-	inline static int32_t get_offset_of__glassButtonStyle_17() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassButtonStyle_17)); }
-	inline GUIStyle_t3956901511 * get__glassButtonStyle_17() const { return ____glassButtonStyle_17; }
-	inline GUIStyle_t3956901511 ** get_address_of__glassButtonStyle_17() { return &____glassButtonStyle_17; }
-	inline void set__glassButtonStyle_17(GUIStyle_t3956901511 * value)
+	inline static int32_t get_offset_of__glassBg_17() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassBg_17)); }
+	inline Texture2D_t3840446185 * get__glassBg_17() const { return ____glassBg_17; }
+	inline Texture2D_t3840446185 ** get_address_of__glassBg_17() { return &____glassBg_17; }
+	inline void set__glassBg_17(Texture2D_t3840446185 * value)
 	{
-		____glassButtonStyle_17 = value;
-		Il2CppCodeGenWriteBarrier((&____glassButtonStyle_17), value);
+		____glassBg_17 = value;
+		Il2CppCodeGenWriteBarrier((&____glassBg_17), value);
 	}
 
-	inline static int32_t get_offset_of__glassLabelStyle_18() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassLabelStyle_18)); }
-	inline GUIStyle_t3956901511 * get__glassLabelStyle_18() const { return ____glassLabelStyle_18; }
-	inline GUIStyle_t3956901511 ** get_address_of__glassLabelStyle_18() { return &____glassLabelStyle_18; }
-	inline void set__glassLabelStyle_18(GUIStyle_t3956901511 * value)
+	inline static int32_t get_offset_of__glassButtonBg_18() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassButtonBg_18)); }
+	inline Texture2D_t3840446185 * get__glassButtonBg_18() const { return ____glassButtonBg_18; }
+	inline Texture2D_t3840446185 ** get_address_of__glassButtonBg_18() { return &____glassButtonBg_18; }
+	inline void set__glassButtonBg_18(Texture2D_t3840446185 * value)
 	{
-		____glassLabelStyle_18 = value;
-		Il2CppCodeGenWriteBarrier((&____glassLabelStyle_18), value);
+		____glassButtonBg_18 = value;
+		Il2CppCodeGenWriteBarrier((&____glassButtonBg_18), value);
 	}
 
-	inline static int32_t get_offset_of__glassInputStyle_19() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassInputStyle_19)); }
-	inline GUIStyle_t3956901511 * get__glassInputStyle_19() const { return ____glassInputStyle_19; }
-	inline GUIStyle_t3956901511 ** get_address_of__glassInputStyle_19() { return &____glassInputStyle_19; }
-	inline void set__glassInputStyle_19(GUIStyle_t3956901511 * value)
+	inline static int32_t get_offset_of__glassPillBg_19() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassPillBg_19)); }
+	inline Texture2D_t3840446185 * get__glassPillBg_19() const { return ____glassPillBg_19; }
+	inline Texture2D_t3840446185 ** get_address_of__glassPillBg_19() { return &____glassPillBg_19; }
+	inline void set__glassPillBg_19(Texture2D_t3840446185 * value)
 	{
-		____glassInputStyle_19 = value;
-		Il2CppCodeGenWriteBarrier((&____glassInputStyle_19), value);
+		____glassPillBg_19 = value;
+		Il2CppCodeGenWriteBarrier((&____glassPillBg_19), value);
 	}
 
-	inline static int32_t get_offset_of__stylesInitialized_20() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____stylesInitialized_20)); }
-	inline bool get__stylesInitialized_20() const { return ____stylesInitialized_20; }
-	inline bool* get_address_of__stylesInitialized_20() { return &____stylesInitialized_20; }
-	inline void set__stylesInitialized_20(bool value)
+	inline static int32_t get_offset_of__glassActiveBg_20() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassActiveBg_20)); }
+	inline Texture2D_t3840446185 * get__glassActiveBg_20() const { return ____glassActiveBg_20; }
+	inline Texture2D_t3840446185 ** get_address_of__glassActiveBg_20() { return &____glassActiveBg_20; }
+	inline void set__glassActiveBg_20(Texture2D_t3840446185 * value)
 	{
-		____stylesInitialized_20 = value;
+		____glassActiveBg_20 = value;
+		Il2CppCodeGenWriteBarrier((&____glassActiveBg_20), value);
+	}
+
+	inline static int32_t get_offset_of__pillStyle_21() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____pillStyle_21)); }
+	inline GUIStyle_t3956901511 * get__pillStyle_21() const { return ____pillStyle_21; }
+	inline GUIStyle_t3956901511 ** get_address_of__pillStyle_21() { return &____pillStyle_21; }
+	inline void set__pillStyle_21(GUIStyle_t3956901511 * value)
+	{
+		____pillStyle_21 = value;
+		Il2CppCodeGenWriteBarrier((&____pillStyle_21), value);
+	}
+
+	inline static int32_t get_offset_of__glassBoxStyle_22() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassBoxStyle_22)); }
+	inline GUIStyle_t3956901511 * get__glassBoxStyle_22() const { return ____glassBoxStyle_22; }
+	inline GUIStyle_t3956901511 ** get_address_of__glassBoxStyle_22() { return &____glassBoxStyle_22; }
+	inline void set__glassBoxStyle_22(GUIStyle_t3956901511 * value)
+	{
+		____glassBoxStyle_22 = value;
+		Il2CppCodeGenWriteBarrier((&____glassBoxStyle_22), value);
+	}
+
+	inline static int32_t get_offset_of__glassButtonStyle_23() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassButtonStyle_23)); }
+	inline GUIStyle_t3956901511 * get__glassButtonStyle_23() const { return ____glassButtonStyle_23; }
+	inline GUIStyle_t3956901511 ** get_address_of__glassButtonStyle_23() { return &____glassButtonStyle_23; }
+	inline void set__glassButtonStyle_23(GUIStyle_t3956901511 * value)
+	{
+		____glassButtonStyle_23 = value;
+		Il2CppCodeGenWriteBarrier((&____glassButtonStyle_23), value);
+	}
+
+	inline static int32_t get_offset_of__glassActiveButtonStyle_24() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassActiveButtonStyle_24)); }
+	inline GUIStyle_t3956901511 * get__glassActiveButtonStyle_24() const { return ____glassActiveButtonStyle_24; }
+	inline GUIStyle_t3956901511 ** get_address_of__glassActiveButtonStyle_24() { return &____glassActiveButtonStyle_24; }
+	inline void set__glassActiveButtonStyle_24(GUIStyle_t3956901511 * value)
+	{
+		____glassActiveButtonStyle_24 = value;
+		Il2CppCodeGenWriteBarrier((&____glassActiveButtonStyle_24), value);
+	}
+
+	inline static int32_t get_offset_of__glassLabelStyle_25() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassLabelStyle_25)); }
+	inline GUIStyle_t3956901511 * get__glassLabelStyle_25() const { return ____glassLabelStyle_25; }
+	inline GUIStyle_t3956901511 ** get_address_of__glassLabelStyle_25() { return &____glassLabelStyle_25; }
+	inline void set__glassLabelStyle_25(GUIStyle_t3956901511 * value)
+	{
+		____glassLabelStyle_25 = value;
+		Il2CppCodeGenWriteBarrier((&____glassLabelStyle_25), value);
+	}
+
+	inline static int32_t get_offset_of__glassInputStyle_26() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassInputStyle_26)); }
+	inline GUIStyle_t3956901511 * get__glassInputStyle_26() const { return ____glassInputStyle_26; }
+	inline GUIStyle_t3956901511 ** get_address_of__glassInputStyle_26() { return &____glassInputStyle_26; }
+	inline void set__glassInputStyle_26(GUIStyle_t3956901511 * value)
+	{
+		____glassInputStyle_26 = value;
+		Il2CppCodeGenWriteBarrier((&____glassInputStyle_26), value);
+	}
+
+	inline static int32_t get_offset_of__glassHeaderStyle_27() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____glassHeaderStyle_27)); }
+	inline GUIStyle_t3956901511 * get__glassHeaderStyle_27() const { return ____glassHeaderStyle_27; }
+	inline GUIStyle_t3956901511 ** get_address_of__glassHeaderStyle_27() { return &____glassHeaderStyle_27; }
+	inline void set__glassHeaderStyle_27(GUIStyle_t3956901511 * value)
+	{
+		____glassHeaderStyle_27 = value;
+		Il2CppCodeGenWriteBarrier((&____glassHeaderStyle_27), value);
+	}
+
+	inline static int32_t get_offset_of__stylesInitialized_28() { return static_cast<int32_t>(offsetof(MobileScreenManager_t831028031, ____stylesInitialized_28)); }
+	inline bool get__stylesInitialized_28() const { return ____stylesInitialized_28; }
+	inline bool* get_address_of__stylesInitialized_28() { return &____stylesInitialized_28; }
+	inline void set__stylesInitialized_28(bool value)
+	{
+		____stylesInitialized_28 = value;
 	}
 };
 
@@ -12352,27 +12439,35 @@ extern const int32_t g_FieldOffsetTable5901[9] =
 	MissionUI_t1961037245::get_offset_of_missions_10(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5902 = { sizeof (MobileScreenManager_t831028031), -1, sizeof(MobileScreenManager_t831028031_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable5902[19] = 
+extern const int32_t g_FieldOffsetTable5902[27] = 
 {
 	MobileScreenManager_t831028031_StaticFields::get_offset_of__instance_2(),
 	MobileScreenManager_t831028031::get_offset_of__lastWidth_3(),
 	MobileScreenManager_t831028031::get_offset_of__lastHeight_4(),
 	MobileScreenManager_t831028031::get_offset_of__logFilePath_5(),
-	MobileScreenManager_t831028031::get_offset_of__deltaTime_6(),
-	MobileScreenManager_t831028031::get_offset_of__fps_7(),
-	MobileScreenManager_t831028031::get_offset_of__fpsTimer_8(),
-	MobileScreenManager_t831028031::get_offset_of__showHud_9(),
-	MobileScreenManager_t831028031::get_offset_of__cmdInput_10(),
-	MobileScreenManager_t831028031::get_offset_of__statusMsg_11(),
-	MobileScreenManager_t831028031::get_offset_of__scrollPos_12(),
-	MobileScreenManager_t831028031::get_offset_of__glassBg_13(),
-	MobileScreenManager_t831028031::get_offset_of__glassButtonBg_14(),
-	MobileScreenManager_t831028031::get_offset_of__pillStyle_15(),
-	MobileScreenManager_t831028031::get_offset_of__glassBoxStyle_16(),
-	MobileScreenManager_t831028031::get_offset_of__glassButtonStyle_17(),
-	MobileScreenManager_t831028031::get_offset_of__glassLabelStyle_18(),
-	MobileScreenManager_t831028031::get_offset_of__glassInputStyle_19(),
-	MobileScreenManager_t831028031::get_offset_of__stylesInitialized_20(),
+	MobileScreenManager_t831028031::get_offset_of__settingsFilePath_6(),
+	MobileScreenManager_t831028031::get_offset_of__deltaTime_7(),
+	MobileScreenManager_t831028031::get_offset_of__fps_8(),
+	MobileScreenManager_t831028031::get_offset_of__fpsTimer_9(),
+	MobileScreenManager_t831028031::get_offset_of__aspectMode_10(),
+	MobileScreenManager_t831028031::get_offset_of__showHud_11(),
+	MobileScreenManager_t831028031::get_offset_of__cmdInput_12(),
+	MobileScreenManager_t831028031::get_offset_of__statusMsg_13(),
+	MobileScreenManager_t831028031::get_offset_of__scrollPos_14(),
+	MobileScreenManager_t831028031::get_offset_of__clearCamera_15(),
+	MobileScreenManager_t831028031::get_offset_of__uiCamera_16(),
+	MobileScreenManager_t831028031::get_offset_of__glassBg_17(),
+	MobileScreenManager_t831028031::get_offset_of__glassButtonBg_18(),
+	MobileScreenManager_t831028031::get_offset_of__glassPillBg_19(),
+	MobileScreenManager_t831028031::get_offset_of__glassActiveBg_20(),
+	MobileScreenManager_t831028031::get_offset_of__pillStyle_21(),
+	MobileScreenManager_t831028031::get_offset_of__glassBoxStyle_22(),
+	MobileScreenManager_t831028031::get_offset_of__glassButtonStyle_23(),
+	MobileScreenManager_t831028031::get_offset_of__glassActiveButtonStyle_24(),
+	MobileScreenManager_t831028031::get_offset_of__glassLabelStyle_25(),
+	MobileScreenManager_t831028031::get_offset_of__glassInputStyle_26(),
+	MobileScreenManager_t831028031::get_offset_of__glassHeaderStyle_27(),
+	MobileScreenManager_t831028031::get_offset_of__stylesInitialized_28(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5903 = { sizeof (MoneyModel_t730300829), -1, sizeof(MoneyModel_t730300829_StaticFields), 0 };
 extern const int32_t g_FieldOffsetTable5903[2] = 

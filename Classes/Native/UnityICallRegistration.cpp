@@ -498,6 +498,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_get_orthographicSize();
 		Register_UnityEngine_Camera_get_orthographicSize();
 
+		//System.Void UnityEngine.Camera::INTERNAL_CALL_ResetAspect(UnityEngine.Camera)
+		void Register_UnityEngine_Camera_INTERNAL_CALL_ResetAspect();
+		Register_UnityEngine_Camera_INTERNAL_CALL_ResetAspect();
+
 		//System.Void UnityEngine.Camera::INTERNAL_CALL_ScreenPointToRay(UnityEngine.Camera,UnityEngine.Vector3&,UnityEngine.Ray&)
 		void Register_UnityEngine_Camera_INTERNAL_CALL_ScreenPointToRay();
 		Register_UnityEngine_Camera_INTERNAL_CALL_ScreenPointToRay();
@@ -549,10 +553,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Camera::Render()
 		void Register_UnityEngine_Camera_Render();
 		Register_UnityEngine_Camera_Render();
-
-		//System.Void UnityEngine.Camera::set_aspect(System.Single)
-		void Register_UnityEngine_Camera_set_aspect();
-		Register_UnityEngine_Camera_set_aspect();
 
 		//System.Void UnityEngine.Camera::set_clearFlags(UnityEngine.CameraClearFlags)
 		void Register_UnityEngine_Camera_set_clearFlags();
@@ -674,9 +674,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Canvas_set_overrideSorting();
 		Register_UnityEngine_Canvas_set_overrideSorting();
 
+		//System.Void UnityEngine.Canvas::set_planeDistance(System.Single)
+		void Register_UnityEngine_Canvas_set_planeDistance();
+		Register_UnityEngine_Canvas_set_planeDistance();
+
 		//System.Void UnityEngine.Canvas::set_referencePixelsPerUnit(System.Single)
 		void Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
 		Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
+
+		//System.Void UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)
+		void Register_UnityEngine_Canvas_set_renderMode();
+		Register_UnityEngine_Canvas_set_renderMode();
 
 		//System.Void UnityEngine.Canvas::set_scaleFactor(System.Single)
 		void Register_UnityEngine_Canvas_set_scaleFactor();
@@ -1425,6 +1433,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GUIStyle::set_fontSize(System.Int32)
 		void Register_UnityEngine_GUIStyle_set_fontSize();
 		Register_UnityEngine_GUIStyle_set_fontSize();
+
+		//System.Void UnityEngine.GUIStyle::set_fontStyle(UnityEngine.FontStyle)
+		void Register_UnityEngine_GUIStyle_set_fontStyle();
+		Register_UnityEngine_GUIStyle_set_fontStyle();
 
 		//System.Void UnityEngine.GUIStyle::set_name(System.String)
 		void Register_UnityEngine_GUIStyle_set_name();
@@ -2853,6 +2865,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean,System.Int32)
 		void Register_UnityEngine_Screen_SetResolution();
 		Register_UnityEngine_Screen_SetResolution();
+
+		//System.Void UnityEngine.Screen::get_safeArea_Injected(UnityEngine.Rect&)
+		void Register_UnityEngine_Screen_get_safeArea_Injected();
+		Register_UnityEngine_Screen_get_safeArea_Injected();
 
 		//UnityEngine.Resolution[] UnityEngine.Screen::get_resolutions()
 		void Register_UnityEngine_Screen_get_resolutions();

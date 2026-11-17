@@ -54538,6 +54538,14 @@ extern "C" IL2CPP_METHOD_ATTR GUISkin_t1244372282 * GUI_get_skin_m1874615010 (Ru
 extern "C" IL2CPP_METHOD_ATTR GUIStyle_t3956901511 * GUISkin_get_button_m2792560996 (GUISkin_t1244372282 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.GUIStyle::set_fontSize(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR void GUIStyle_set_fontSize_m1566850023 (GUIStyle_t3956901511 * __this, int32_t p0, const RuntimeMethod* method);
+// UnityEngine.Rect UnityEngine.Screen::get_safeArea()
+extern "C" IL2CPP_METHOD_ATTR Rect_t2360479859  Screen_get_safeArea_m904922178 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Single UnityEngine.Rect::get_xMax()
+extern "C" IL2CPP_METHOD_ATTR float Rect_get_xMax_m3018144503 (Rect_t2360479859 * __this, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Mathf::Max(System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR int32_t Mathf_Max_m3673002171 (RuntimeObject * __this /* static, unused */, int32_t p0, int32_t p1, const RuntimeMethod* method);
+// System.Single UnityEngine.Rect::get_yMax()
+extern "C" IL2CPP_METHOD_ATTR float Rect_get_yMax_m743455479 (Rect_t2360479859 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Rect__ctor_m2614021312 (Rect_t2360479859 * __this, float p0, float p1, float p2, float p3, const RuntimeMethod* method);
 // System.Boolean UnityEngine.GUI::Button(UnityEngine.Rect,System.String)
@@ -65752,13 +65760,20 @@ extern "C" IL2CPP_METHOD_ATTR void GlobalGameManager_OnGUI_m3274925533 (GlobalGa
 	float V_0 = 0.0f;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
+	float V_3 = 0.0f;
+	Rect_t2360479859  V_4;
+	memset(&V_4, 0, sizeof(V_4));
 	int32_t V_5 = 0;
 	int32_t V_6 = 0;
 	int32_t V_7 = 0;
-	String_t* V_8 = NULL;
-	String_t* V_9 = NULL;
+	Rect_t2360479859  V_8;
+	memset(&V_8, 0, sizeof(V_8));
+	int32_t V_9 = 0;
+	int32_t V_10 = 0;
+	int32_t V_11 = 0;
+	int32_t V_12 = 0;
+	String_t* V_13 = NULL;
+	String_t* V_14 = NULL;
 	String_t* G_B19_0 = NULL;
 	String_t* G_B24_0 = NULL;
 	{
@@ -65781,273 +65796,291 @@ extern "C" IL2CPP_METHOD_ATTR void GlobalGameManager_OnGUI_m3274925533 (GlobalGa
 		NullCheck(L_7);
 		GUIStyle_set_fontSize_m1566850023(L_7, L_9, /*hidden argument*/NULL);
 		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = V_2;
-		float L_12 = V_0;
-		int32_t L_13 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_12)), /*hidden argument*/NULL);
-		V_3 = ((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_10, (int32_t)L_11)), (int32_t)L_13));
-		float L_14 = V_0;
-		int32_t L_15 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(8.0f), (float)L_14)), /*hidden argument*/NULL);
-		V_4 = L_15;
-		int32_t L_16 = V_3;
-		int32_t L_17 = V_4;
-		int32_t L_18 = V_2;
-		int32_t L_19 = V_1;
-		Rect_t2360479859  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Rect__ctor_m2614021312((&L_20), (((float)((float)L_16))), (((float)((float)L_17))), (((float)((float)L_18))), (((float)((float)L_19))), /*hidden argument*/NULL);
-		bool L_21 = GUI_Button_m1518979886(NULL /*static, unused*/, L_20, _stringLiteral3410117846, /*hidden argument*/NULL);
-		if (!L_21)
+		Rect_t2360479859  L_11 = Screen_get_safeArea_m904922178(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_4 = L_11;
+		float L_12 = Rect_get_xMax_m3018144503((&V_4), /*hidden argument*/NULL);
+		V_3 = ((float)il2cpp_codegen_subtract((float)(((float)((float)L_10))), (float)L_12));
+		float L_13 = V_0;
+		int32_t L_14 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(14.0f), (float)L_13)), /*hidden argument*/NULL);
+		float L_15 = V_3;
+		int32_t L_16 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_add((float)L_15, (float)(6.0f))), /*hidden argument*/NULL);
+		int32_t L_17 = Mathf_Max_m3673002171(NULL /*static, unused*/, L_14, L_16, /*hidden argument*/NULL);
+		V_5 = L_17;
+		int32_t L_18 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t L_19 = V_2;
+		int32_t L_20 = V_5;
+		V_6 = ((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_18, (int32_t)L_19)), (int32_t)L_20));
+		float L_21 = V_0;
+		int32_t L_22 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_21)), /*hidden argument*/NULL);
+		int32_t L_23 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Rect_t2360479859  L_24 = Screen_get_safeArea_m904922178(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_8 = L_24;
+		float L_25 = Rect_get_yMax_m743455479((&V_8), /*hidden argument*/NULL);
+		int32_t L_26 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_subtract((float)(((float)((float)L_23))), (float)L_25)), (float)(4.0f))), /*hidden argument*/NULL);
+		int32_t L_27 = Mathf_Max_m3673002171(NULL /*static, unused*/, L_22, L_26, /*hidden argument*/NULL);
+		V_7 = L_27;
+		int32_t L_28 = V_7;
+		V_9 = L_28;
+		int32_t L_29 = V_6;
+		int32_t L_30 = V_9;
+		int32_t L_31 = V_2;
+		int32_t L_32 = V_1;
+		Rect_t2360479859  L_33;
+		memset(&L_33, 0, sizeof(L_33));
+		Rect__ctor_m2614021312((&L_33), (((float)((float)L_29))), (((float)((float)L_30))), (((float)((float)L_31))), (((float)((float)L_32))), /*hidden argument*/NULL);
+		bool L_34 = GUI_Button_m1518979886(NULL /*static, unused*/, L_33, _stringLiteral3410117846, /*hidden argument*/NULL);
+		if (!L_34)
 		{
-			goto IL_0141;
+			goto IL_0197;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(CreatureInfoWindow_t351477434_il2cpp_TypeInfo_var);
-		CreatureInfoWindow_t351477434 * L_22 = CreatureInfoWindow_get_CurrentWindow_m1262441798(NULL /*static, unused*/, /*hidden argument*/NULL);
+		CreatureInfoWindow_t351477434 * L_35 = CreatureInfoWindow_get_CurrentWindow_m1262441798(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_23 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_22, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_23)
+		bool L_36 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_35, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_36)
 		{
-			goto IL_00ba;
+			goto IL_0110;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(CreatureInfoWindow_t351477434_il2cpp_TypeInfo_var);
-		CreatureInfoWindow_t351477434 * L_24 = CreatureInfoWindow_get_CurrentWindow_m1262441798(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_24);
-		bool L_25 = CreatureInfoWindow_get_IsEnabled_m2599410291(L_24, /*hidden argument*/NULL);
-		if (!L_25)
+		CreatureInfoWindow_t351477434 * L_37 = CreatureInfoWindow_get_CurrentWindow_m1262441798(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_37);
+		bool L_38 = CreatureInfoWindow_get_IsEnabled_m2599410291(L_37, /*hidden argument*/NULL);
+		if (!L_38)
 		{
-			goto IL_00ba;
+			goto IL_0110;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(CreatureInfoWindow_t351477434_il2cpp_TypeInfo_var);
-		CreatureInfoWindow_t351477434 * L_26 = CreatureInfoWindow_get_CurrentWindow_m1262441798(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_26);
-		CreatureInfoWindow_CloseWindow_m3353107365(L_26, /*hidden argument*/NULL);
-		goto IL_0141;
+		CreatureInfoWindow_t351477434 * L_39 = CreatureInfoWindow_get_CurrentWindow_m1262441798(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_39);
+		CreatureInfoWindow_CloseWindow_m3353107365(L_39, /*hidden argument*/NULL);
+		goto IL_0197;
 	}
 
-IL_00ba:
+IL_0110:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ManualUI_t2119591165_il2cpp_TypeInfo_var);
-		ManualUI_t2119591165 * L_27 = ManualUI_get_Instance_m476989599(NULL /*static, unused*/, /*hidden argument*/NULL);
+		ManualUI_t2119591165 * L_40 = ManualUI_get_Instance_m476989599(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_28 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_27, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_28)
+		bool L_41 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_40, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_41)
 		{
-			goto IL_00e8;
+			goto IL_013e;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ManualUI_t2119591165_il2cpp_TypeInfo_var);
-		ManualUI_t2119591165 * L_29 = ManualUI_get_Instance_m476989599(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_29);
-		bool L_30 = ManualUI_get_IsActivated_m2559811200(L_29, /*hidden argument*/NULL);
-		if (!L_30)
+		ManualUI_t2119591165 * L_42 = ManualUI_get_Instance_m476989599(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_42);
+		bool L_43 = ManualUI_get_IsActivated_m2559811200(L_42, /*hidden argument*/NULL);
+		if (!L_43)
 		{
-			goto IL_00e8;
+			goto IL_013e;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ManualUI_t2119591165_il2cpp_TypeInfo_var);
-		ManualUI_t2119591165 * L_31 = ManualUI_get_Instance_m476989599(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_31);
-		ManualUI_CloseManual_m543959907(L_31, /*hidden argument*/NULL);
-		goto IL_0141;
+		ManualUI_t2119591165 * L_44 = ManualUI_get_Instance_m476989599(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_44);
+		ManualUI_CloseManual_m543959907(L_44, /*hidden argument*/NULL);
+		goto IL_0197;
 	}
 
-IL_00e8:
+IL_013e:
 	{
-		PlaySpeedSettingUI_t1667839297 * L_32 = PlaySpeedSettingUI_get_instance_m2171393539(NULL /*static, unused*/, /*hidden argument*/NULL);
+		PlaySpeedSettingUI_t1667839297 * L_45 = PlaySpeedSettingUI_get_instance_m2171393539(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_33 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_32, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_33)
+		bool L_46 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_45, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_46)
 		{
-			goto IL_0113;
+			goto IL_0169;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		GameManager_t1536523654 * L_34 = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameManager_t1536523654 * L_47 = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_35 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_34, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_35)
+		bool L_48 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_47, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_48)
 		{
-			goto IL_0113;
+			goto IL_0169;
 		}
 	}
 	{
 		((PlaySpeedSettingUI_t1667839297_StaticFields*)il2cpp_codegen_static_fields_for(PlaySpeedSettingUI_t1667839297_il2cpp_TypeInfo_var))->set_MobileEscapeRequested_25((bool)1);
-		goto IL_0141;
+		goto IL_0197;
 	}
 
-IL_0113:
+IL_0169:
 	{
-		EscapeUI_t115388541 * L_36 = EscapeUI_get_instance_m3913942141(NULL /*static, unused*/, /*hidden argument*/NULL);
+		EscapeUI_t115388541 * L_49 = EscapeUI_get_instance_m3913942141(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_37 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_36, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_37)
+		bool L_50 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_49, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_50)
 		{
-			goto IL_0141;
+			goto IL_0197;
 		}
 	}
 	{
-		EscapeUI_t115388541 * L_38 = EscapeUI_get_instance_m3913942141(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_38);
-		bool L_39 = EscapeUI_get_IsOpened_m1336948722(L_38, /*hidden argument*/NULL);
-		if (!L_39)
+		EscapeUI_t115388541 * L_51 = EscapeUI_get_instance_m3913942141(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_51);
+		bool L_52 = EscapeUI_get_IsOpened_m1336948722(L_51, /*hidden argument*/NULL);
+		if (!L_52)
 		{
-			goto IL_013c;
+			goto IL_0192;
 		}
 	}
 	{
 		EscapeUI_CloseWindow_m3621829190(NULL /*static, unused*/, /*hidden argument*/NULL);
-		goto IL_0141;
+		goto IL_0197;
 	}
 
-IL_013c:
+IL_0192:
 	{
 		EscapeUI_OpenWindow_m552213821(NULL /*static, unused*/, /*hidden argument*/NULL);
 	}
 
-IL_0141:
+IL_0197:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
-		bool L_40 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobileHudCollapsed_43();
-		if (!L_40)
+		bool L_53 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobileHudCollapsed_43();
+		if (!L_53)
 		{
-			goto IL_014c;
+			goto IL_01a2;
 		}
 	}
 	{
 		return;
 	}
 
-IL_014c:
+IL_01a2:
 	{
-		float L_41 = V_0;
+		float L_54 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		int32_t L_42 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(6.0f), (float)L_41)), /*hidden argument*/NULL);
-		V_5 = L_42;
-		int32_t L_43 = V_5;
-		V_6 = L_43;
-		int32_t L_44 = V_5;
-		V_7 = L_44;
+		int32_t L_55 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(6.0f), (float)L_54)), /*hidden argument*/NULL);
+		V_10 = L_55;
+		int32_t L_56 = V_10;
+		V_11 = L_56;
+		int32_t L_57 = V_10;
+		V_12 = L_57;
 		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
-		bool L_45 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobileRightClickMode_41();
-		if (!L_45)
+		bool L_58 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobileRightClickMode_41();
+		if (!L_58)
 		{
-			goto IL_0176;
+			goto IL_01cc;
 		}
 	}
 	{
 		G_B19_0 = _stringLiteral2017532384;
-		goto IL_017b;
+		goto IL_01d1;
 	}
 
-IL_0176:
+IL_01cc:
 	{
 		G_B19_0 = _stringLiteral2027100640;
 	}
 
-IL_017b:
+IL_01d1:
 	{
-		V_8 = G_B19_0;
-		int32_t L_46 = V_6;
-		int32_t L_47 = V_7;
-		float L_48 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		int32_t L_49 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(120.0f), (float)L_48)), /*hidden argument*/NULL);
-		int32_t L_50 = V_1;
-		Rect_t2360479859  L_51;
-		memset(&L_51, 0, sizeof(L_51));
-		Rect__ctor_m2614021312((&L_51), (((float)((float)L_46))), (((float)((float)L_47))), (((float)((float)L_49))), (((float)((float)L_50))), /*hidden argument*/NULL);
-		String_t* L_52 = V_8;
-		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1624858472_il2cpp_TypeInfo_var);
-		bool L_53 = GUI_Button_m1518979886(NULL /*static, unused*/, L_51, L_52, /*hidden argument*/NULL);
-		if (!L_53)
-		{
-			goto IL_01b0;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
-		bool L_54 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobileRightClickMode_41();
-		((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->set_mobileRightClickMode_41((bool)((((int32_t)L_54) == ((int32_t)0))? 1 : 0));
-	}
-
-IL_01b0:
-	{
-		int32_t L_55 = V_6;
-		float L_56 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		int32_t L_57 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(125.0f), (float)L_56)), /*hidden argument*/NULL);
-		V_6 = ((int32_t)il2cpp_codegen_add((int32_t)L_55, (int32_t)L_57));
-		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
-		bool L_58 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobilePanMode_42();
-		if (!L_58)
-		{
-			goto IL_01d5;
-		}
-	}
-	{
-		G_B24_0 = _stringLiteral3089501563;
-		goto IL_01da;
-	}
-
-IL_01d5:
-	{
-		G_B24_0 = _stringLiteral1596578431;
-	}
-
-IL_01da:
-	{
-		V_9 = G_B24_0;
-		int32_t L_59 = V_6;
-		int32_t L_60 = V_7;
+		V_13 = G_B19_0;
+		int32_t L_59 = V_11;
+		int32_t L_60 = V_12;
 		float L_61 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		int32_t L_62 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(105.0f), (float)L_61)), /*hidden argument*/NULL);
+		int32_t L_62 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(120.0f), (float)L_61)), /*hidden argument*/NULL);
 		int32_t L_63 = V_1;
 		Rect_t2360479859  L_64;
 		memset(&L_64, 0, sizeof(L_64));
 		Rect__ctor_m2614021312((&L_64), (((float)((float)L_59))), (((float)((float)L_60))), (((float)((float)L_62))), (((float)((float)L_63))), /*hidden argument*/NULL);
-		String_t* L_65 = V_9;
+		String_t* L_65 = V_13;
 		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1624858472_il2cpp_TypeInfo_var);
 		bool L_66 = GUI_Button_m1518979886(NULL /*static, unused*/, L_64, L_65, /*hidden argument*/NULL);
 		if (!L_66)
 		{
-			goto IL_020f;
+			goto IL_0206;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
-		bool L_67 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobilePanMode_42();
-		((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->set_mobilePanMode_42((bool)((((int32_t)L_67) == ((int32_t)0))? 1 : 0));
+		bool L_67 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobileRightClickMode_41();
+		((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->set_mobileRightClickMode_41((bool)((((int32_t)L_67) == ((int32_t)0))? 1 : 0));
 	}
 
-IL_020f:
+IL_0206:
 	{
-		int32_t L_68 = V_6;
+		int32_t L_68 = V_11;
 		float L_69 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		int32_t L_70 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(110.0f), (float)L_69)), /*hidden argument*/NULL);
-		V_6 = ((int32_t)il2cpp_codegen_add((int32_t)L_68, (int32_t)L_70));
-		int32_t L_71 = V_6;
-		int32_t L_72 = V_7;
-		float L_73 = V_0;
-		int32_t L_74 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(60.0f), (float)L_73)), /*hidden argument*/NULL);
-		int32_t L_75 = V_1;
-		Rect_t2360479859  L_76;
-		memset(&L_76, 0, sizeof(L_76));
-		Rect__ctor_m2614021312((&L_76), (((float)((float)L_71))), (((float)((float)L_72))), (((float)((float)L_74))), (((float)((float)L_75))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1624858472_il2cpp_TypeInfo_var);
-		bool L_77 = GUI_Button_m1518979886(NULL /*static, unused*/, L_76, _stringLiteral4215769415, /*hidden argument*/NULL);
-		if (!L_77)
+		int32_t L_70 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(125.0f), (float)L_69)), /*hidden argument*/NULL);
+		V_11 = ((int32_t)il2cpp_codegen_add((int32_t)L_68, (int32_t)L_70));
+		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
+		bool L_71 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobilePanMode_42();
+		if (!L_71)
 		{
-			goto IL_0254;
+			goto IL_022b;
+		}
+	}
+	{
+		G_B24_0 = _stringLiteral3089501563;
+		goto IL_0230;
+	}
+
+IL_022b:
+	{
+		G_B24_0 = _stringLiteral1596578431;
+	}
+
+IL_0230:
+	{
+		V_14 = G_B24_0;
+		int32_t L_72 = V_11;
+		int32_t L_73 = V_12;
+		float L_74 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		int32_t L_75 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(105.0f), (float)L_74)), /*hidden argument*/NULL);
+		int32_t L_76 = V_1;
+		Rect_t2360479859  L_77;
+		memset(&L_77, 0, sizeof(L_77));
+		Rect__ctor_m2614021312((&L_77), (((float)((float)L_72))), (((float)((float)L_73))), (((float)((float)L_75))), (((float)((float)L_76))), /*hidden argument*/NULL);
+		String_t* L_78 = V_14;
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1624858472_il2cpp_TypeInfo_var);
+		bool L_79 = GUI_Button_m1518979886(NULL /*static, unused*/, L_77, L_78, /*hidden argument*/NULL);
+		if (!L_79)
+		{
+			goto IL_0265;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var);
+		bool L_80 = ((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->get_mobilePanMode_42();
+		((GlobalGameManager_t4285013347_StaticFields*)il2cpp_codegen_static_fields_for(GlobalGameManager_t4285013347_il2cpp_TypeInfo_var))->set_mobilePanMode_42((bool)((((int32_t)L_80) == ((int32_t)0))? 1 : 0));
+	}
+
+IL_0265:
+	{
+		int32_t L_81 = V_11;
+		float L_82 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		int32_t L_83 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(110.0f), (float)L_82)), /*hidden argument*/NULL);
+		V_11 = ((int32_t)il2cpp_codegen_add((int32_t)L_81, (int32_t)L_83));
+		int32_t L_84 = V_11;
+		int32_t L_85 = V_12;
+		float L_86 = V_0;
+		int32_t L_87 = Mathf_RoundToInt_m1874334613(NULL /*static, unused*/, ((float)il2cpp_codegen_multiply((float)(60.0f), (float)L_86)), /*hidden argument*/NULL);
+		int32_t L_88 = V_1;
+		Rect_t2360479859  L_89;
+		memset(&L_89, 0, sizeof(L_89));
+		Rect__ctor_m2614021312((&L_89), (((float)((float)L_84))), (((float)((float)L_85))), (((float)((float)L_87))), (((float)((float)L_88))), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1624858472_il2cpp_TypeInfo_var);
+		bool L_90 = GUI_Button_m1518979886(NULL /*static, unused*/, L_89, _stringLiteral4215769415, /*hidden argument*/NULL);
+		if (!L_90)
+		{
+			goto IL_02aa;
 		}
 	}
 	{
@@ -66055,7 +66088,7 @@ IL_020f:
 		GC_Collect_m743975114(NULL /*static, unused*/, /*hidden argument*/NULL);
 	}
 
-IL_0254:
+IL_02aa:
 	{
 		return;
 	}

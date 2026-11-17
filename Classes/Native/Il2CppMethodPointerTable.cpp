@@ -15413,7 +15413,6 @@ extern "C" void Camera_set_orthographic_m2855749523 ();
 extern "C" void Camera_get_depth_m2555926613 ();
 extern "C" void Camera_set_depth_m3611516936 ();
 extern "C" void Camera_get_aspect_m862507514 ();
-extern "C" void Camera_set_aspect_m2625464181 ();
 extern "C" void Camera_get_cullingMask_m679085748 ();
 extern "C" void Camera_set_cullingMask_m1402455777 ();
 extern "C" void Camera_get_eventMask_m819189086 ();
@@ -15437,6 +15436,8 @@ extern "C" void Camera_get_projectionMatrix_m667780853 ();
 extern "C" void Camera_set_projectionMatrix_m3293177686 ();
 extern "C" void Camera_INTERNAL_get_projectionMatrix_m3544213898 ();
 extern "C" void Camera_INTERNAL_set_projectionMatrix_m3705557330 ();
+extern "C" void Camera_ResetAspect_m3792783704 ();
+extern "C" void Camera_INTERNAL_CALL_ResetAspect_m3002838000 ();
 extern "C" void Camera_get_clearFlags_m992534691 ();
 extern "C" void Camera_set_clearFlags_m2207032996 ();
 extern "C" void Camera_get_targetDisplay_m2285699927 ();
@@ -16333,6 +16334,8 @@ extern "C" void Screen_get_fullScreen_m2154041680 ();
 extern "C" void Screen_get_width_m345039817 ();
 extern "C" void Screen_get_height_m1623532518 ();
 extern "C" void Screen_get_dpi_m495672463 ();
+extern "C" void Screen_get_safeArea_m904922178 ();
+extern "C" void Screen_get_safeArea_Injected_m1359147542 ();
 extern "C" void ScriptableObject__ctor_m1310743131 ();
 extern "C" void ScriptableObject_Internal_CreateScriptableObject_m2945320968 ();
 extern "C" void ScriptableObject_CreateInstance_m2611081756 ();
@@ -17456,6 +17459,7 @@ extern "C" void GUIStyle_set_stretchHeight_m3442828884 ();
 extern "C" void GUIStyle_Internal_GetLineHeight_m4231395871 ();
 extern "C" void GUIStyle_GetFontInternal_m1734480648 ();
 extern "C" void GUIStyle_set_fontSize_m1566850023 ();
+extern "C" void GUIStyle_set_fontStyle_m1497341802 ();
 extern "C" void GUIStyle_Internal_Draw_m2685840060 ();
 extern "C" void GUIStyle_Internal_Draw2_m573548245 ();
 extern "C" void GUIStyle_INTERNAL_CALL_Internal_Draw2_m1418187183 ();
@@ -17883,6 +17887,7 @@ extern "C" void Tilemap_RefreshTile_m1116399155 ();
 extern "C" void Tilemap_RefreshTile_Injected_m3594480345 ();
 extern "C" void Canvas__ctor_m2509635467 ();
 extern "C" void Canvas_get_renderMode_m841659411 ();
+extern "C" void Canvas_set_renderMode_m1564704306 ();
 extern "C" void Canvas_get_isRootCanvas_m1263191473 ();
 extern "C" void Canvas_get_worldCamera_m3516267897 ();
 extern "C" void Canvas_set_worldCamera_m1964154654 ();
@@ -17893,6 +17898,7 @@ extern "C" void Canvas_set_scaleFactor_m3943377587 ();
 extern "C" void Canvas_get_referencePixelsPerUnit_m3420541976 ();
 extern "C" void Canvas_set_referencePixelsPerUnit_m2526332713 ();
 extern "C" void Canvas_get_pixelPerfect_m333060872 ();
+extern "C" void Canvas_set_planeDistance_m3497413231 ();
 extern "C" void Canvas_get_renderOrder_m1489855841 ();
 extern "C" void Canvas_get_overrideSorting_m2740418462 ();
 extern "C" void Canvas_set_overrideSorting_m4088794420 ();
@@ -43867,15 +43873,21 @@ extern "C" void MissionUI_OncePerSecond_m2919673498 ();
 extern "C" void MobileScreenManager__ctor_m3366620523 ();
 extern "C" void MobileScreenManager_Bootstrap_m3525258668 ();
 extern "C" void MobileScreenManager_Awake_m728696395 ();
+extern "C" void MobileScreenManager_LoadMobileSettings_m608013893 ();
+extern "C" void MobileScreenManager_SaveMobileSettings_m3779905403 ();
 extern "C" void MobileScreenManager_HandleLog_m649794438 ();
 extern "C" void MobileScreenManager_OnDestroy_m2653332534 ();
 extern "C" void MobileScreenManager_Start_m3747554585 ();
 extern "C" void MobileScreenManager_OnSceneLoaded_m3492888858 ();
 extern "C" void MobileScreenManager_Update_m4254841170 ();
+extern "C" void MobileScreenManager_SetAspectMode_m4064974544 ();
+extern "C" void MobileScreenManager_EnsureClearCamera_m2529242480 ();
+extern "C" void MobileScreenManager_EnsureUICamera_m1021779986 ();
 extern "C" void MobileScreenManager_ApplyFullscreenSettings_m1725697124 ();
 extern "C" void MobileScreenManager_MakeSolidTexture_m24044968 ();
 extern "C" void MobileScreenManager_InitStyles_m2437874210 ();
 extern "C" void MobileScreenManager_OnGUI_m41762560 ();
+extern "C" void MobileScreenManager_TriggerEsc_m3883136579 ();
 extern "C" void MobileScreenManager_RunCheat_m1197314851 ();
 extern "C" void MoneyModel__ctor_m2887490024 ();
 extern "C" void MoneyModel_get_instance_m889587587 ();
@@ -54270,7 +54282,7 @@ extern "C" void ZoomTutorial__ctor_m3253980221 ();
 extern "C" void ZoomTutorial_StartTutorial_m4043354523 ();
 extern "C" void ZoomTutorial_CompleteTutorial_m736784446 ();
 extern "C" void ZoomTutorial_CheckIfHappening_m4251022969 ();
-extern const Il2CppMethodPointer g_MethodPointers[54252] = 
+extern const Il2CppMethodPointer g_MethodPointers[54264] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -69667,7 +69679,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	Camera_get_depth_m2555926613,
 	Camera_set_depth_m3611516936,
 	Camera_get_aspect_m862507514,
-	Camera_set_aspect_m2625464181,
 	Camera_get_cullingMask_m679085748,
 	Camera_set_cullingMask_m1402455777,
 	Camera_get_eventMask_m819189086,
@@ -69691,6 +69702,8 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	Camera_set_projectionMatrix_m3293177686,
 	Camera_INTERNAL_get_projectionMatrix_m3544213898,
 	Camera_INTERNAL_set_projectionMatrix_m3705557330,
+	Camera_ResetAspect_m3792783704,
+	Camera_INTERNAL_CALL_ResetAspect_m3002838000,
 	Camera_get_clearFlags_m992534691,
 	Camera_set_clearFlags_m2207032996,
 	Camera_get_targetDisplay_m2285699927,
@@ -70587,6 +70600,8 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	Screen_get_width_m345039817,
 	Screen_get_height_m1623532518,
 	Screen_get_dpi_m495672463,
+	Screen_get_safeArea_m904922178,
+	Screen_get_safeArea_Injected_m1359147542,
 	ScriptableObject__ctor_m1310743131,
 	ScriptableObject_Internal_CreateScriptableObject_m2945320968,
 	ScriptableObject_CreateInstance_m2611081756,
@@ -71710,6 +71725,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	GUIStyle_Internal_GetLineHeight_m4231395871,
 	GUIStyle_GetFontInternal_m1734480648,
 	GUIStyle_set_fontSize_m1566850023,
+	GUIStyle_set_fontStyle_m1497341802,
 	GUIStyle_Internal_Draw_m2685840060,
 	GUIStyle_Internal_Draw2_m573548245,
 	GUIStyle_INTERNAL_CALL_Internal_Draw2_m1418187183,
@@ -72137,6 +72153,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	Tilemap_RefreshTile_Injected_m3594480345,
 	Canvas__ctor_m2509635467,
 	Canvas_get_renderMode_m841659411,
+	Canvas_set_renderMode_m1564704306,
 	Canvas_get_isRootCanvas_m1263191473,
 	Canvas_get_worldCamera_m3516267897,
 	Canvas_set_worldCamera_m1964154654,
@@ -72147,6 +72164,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	Canvas_get_referencePixelsPerUnit_m3420541976,
 	Canvas_set_referencePixelsPerUnit_m2526332713,
 	Canvas_get_pixelPerfect_m333060872,
+	Canvas_set_planeDistance_m3497413231,
 	Canvas_get_renderOrder_m1489855841,
 	Canvas_get_overrideSorting_m2740418462,
 	Canvas_set_overrideSorting_m4088794420,
@@ -98121,15 +98139,21 @@ extern const Il2CppMethodPointer g_MethodPointers[54252] =
 	MobileScreenManager__ctor_m3366620523,
 	MobileScreenManager_Bootstrap_m3525258668,
 	MobileScreenManager_Awake_m728696395,
+	MobileScreenManager_LoadMobileSettings_m608013893,
+	MobileScreenManager_SaveMobileSettings_m3779905403,
 	MobileScreenManager_HandleLog_m649794438,
 	MobileScreenManager_OnDestroy_m2653332534,
 	MobileScreenManager_Start_m3747554585,
 	MobileScreenManager_OnSceneLoaded_m3492888858,
 	MobileScreenManager_Update_m4254841170,
+	MobileScreenManager_SetAspectMode_m4064974544,
+	MobileScreenManager_EnsureClearCamera_m2529242480,
+	MobileScreenManager_EnsureUICamera_m1021779986,
 	MobileScreenManager_ApplyFullscreenSettings_m1725697124,
 	MobileScreenManager_MakeSolidTexture_m24044968,
 	MobileScreenManager_InitStyles_m2437874210,
 	MobileScreenManager_OnGUI_m41762560,
+	MobileScreenManager_TriggerEsc_m3883136579,
 	MobileScreenManager_RunCheat_m1197314851,
 	MoneyModel__ctor_m2887490024,
 	MoneyModel_get_instance_m889587587,
