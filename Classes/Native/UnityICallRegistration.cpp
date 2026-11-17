@@ -674,17 +674,9 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Canvas_set_overrideSorting();
 		Register_UnityEngine_Canvas_set_overrideSorting();
 
-		//System.Void UnityEngine.Canvas::set_planeDistance(System.Single)
-		void Register_UnityEngine_Canvas_set_planeDistance();
-		Register_UnityEngine_Canvas_set_planeDistance();
-
 		//System.Void UnityEngine.Canvas::set_referencePixelsPerUnit(System.Single)
 		void Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
 		Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
-
-		//System.Void UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)
-		void Register_UnityEngine_Canvas_set_renderMode();
-		Register_UnityEngine_Canvas_set_renderMode();
 
 		//System.Void UnityEngine.Canvas::set_scaleFactor(System.Single)
 		void Register_UnityEngine_Canvas_set_scaleFactor();

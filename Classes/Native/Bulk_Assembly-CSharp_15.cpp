@@ -2033,15 +2033,22 @@ extern const RuntimeMethod* GameObject_GetComponent_TisInputField_t3762917431_m1
 extern const uint32_t ConsoleScript_Start_m2056187293_MetadataUsageId;
 extern const uint32_t ConsoleScript_Update_m2407139664_MetadataUsageId;
 extern const RuntimeMethod* List_1_IndexOf_m1503948102_RuntimeMethod_var;
+extern String_t* _stringLiteral2664233163;
 extern String_t* _stringLiteral3527610011;
 extern String_t* _stringLiteral1602046662;
 extern String_t* _stringLiteral2251829370;
 extern String_t* _stringLiteral1209998456;
+extern String_t* _stringLiteral1983176600;
+extern String_t* _stringLiteral2245991411;
 extern String_t* _stringLiteral720549196;
 extern String_t* _stringLiteral2969123828;
+extern String_t* _stringLiteral4036168438;
+extern String_t* _stringLiteral34890618;
+extern String_t* _stringLiteral3275039542;
 extern String_t* _stringLiteral3306822864;
 extern String_t* _stringLiteral966951374;
 extern String_t* _stringLiteral2673339302;
+extern String_t* _stringLiteral4000073150;
 extern String_t* _stringLiteral2928161466;
 extern String_t* _stringLiteral3207803418;
 extern String_t* _stringLiteral204141367;
@@ -68505,8 +68512,8 @@ extern "C" IL2CPP_METHOD_ATTR void ConsoleScript_ExecuteRawCommand_m2229352777 (
 	NO_UNUSED_WARNING (__exception_local);
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
-	float G_B9_0 = 0.0f;
-	int32_t G_B16_0 = 0;
+	float G_B10_0 = 0.0f;
+	int32_t G_B17_0 = 0;
 	{
 		String_t* L_0 = ___command0;
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
@@ -68548,7 +68555,7 @@ IL_000c:
 
 IL_0033:
 		{
-			goto IL_04c5;
+			goto IL_0545;
 		}
 
 IL_0038:
@@ -68565,743 +68572,831 @@ IL_0038:
 			bool L_14 = String_op_Equality_m920492651(NULL /*static, unused*/, L_13, _stringLiteral724203817, /*hidden argument*/NULL);
 			if (L_14)
 			{
-				goto IL_0061;
+				goto IL_0071;
 			}
 		}
 
 IL_0051:
 		{
 			String_t* L_15 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_16 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_EnergyFill_17();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_17 = String_op_Equality_m920492651(NULL /*static, unused*/, L_15, L_16, /*hidden argument*/NULL);
-			if (!L_17)
+			bool L_16 = String_op_Equality_m920492651(NULL /*static, unused*/, L_15, _stringLiteral2664233163, /*hidden argument*/NULL);
+			if (L_16)
 			{
-				goto IL_00b1;
+				goto IL_0071;
 			}
 		}
 
 IL_0061:
 		{
-			StringU5BU5D_t1281789340* L_18 = V_1;
-			NullCheck(L_18);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_18)->max_length))))) <= ((int32_t)1)))
-			{
-				goto IL_0077;
-			}
-		}
-
-IL_006a:
-		{
-			StringU5BU5D_t1281789340* L_19 = V_1;
-			NullCheck(L_19);
-			int32_t L_20 = 1;
-			String_t* L_21 = (L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_20));
-			float L_22 = Single_Parse_m364357836(NULL /*static, unused*/, L_21, /*hidden argument*/NULL);
-			G_B9_0 = L_22;
-			goto IL_007c;
-		}
-
-IL_0077:
-		{
-			G_B9_0 = (500.0f);
-		}
-
-IL_007c:
-		{
-			V_3 = G_B9_0;
+			String_t* L_17 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_23 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			ObjectU5BU5D_t2843939325* L_24 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			float L_25 = V_3;
-			float L_26 = L_25;
-			RuntimeObject * L_27 = Box(Single_t1397266774_il2cpp_TypeInfo_var, &L_26);
-			NullCheck(L_24);
-			ArrayElementTypeCheck (L_24, L_27);
-			(L_24)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_27);
-			NullCheck(L_23);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_23, 1, L_24, /*hidden argument*/NULL);
-			float L_28 = V_3;
-			float L_29 = L_28;
-			RuntimeObject * L_30 = Box(Single_t1397266774_il2cpp_TypeInfo_var, &L_29);
+			String_t* L_18 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_EnergyFill_17();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_31 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral3527610011, L_30, /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, L_31, /*hidden argument*/NULL);
-			goto IL_04c5;
+			bool L_19 = String_op_Equality_m920492651(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
+			if (!L_19)
+			{
+				goto IL_00c1;
+			}
 		}
 
-IL_00b1:
+IL_0071:
 		{
-			String_t* L_32 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_33 = String_op_Equality_m920492651(NULL /*static, unused*/, L_32, _stringLiteral1602046662, /*hidden argument*/NULL);
-			if (L_33)
+			StringU5BU5D_t1281789340* L_20 = V_1;
+			NullCheck(L_20);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_20)->max_length))))) <= ((int32_t)1)))
 			{
-				goto IL_00e1;
+				goto IL_0087;
 			}
+		}
+
+IL_007a:
+		{
+			StringU5BU5D_t1281789340* L_21 = V_1;
+			NullCheck(L_21);
+			int32_t L_22 = 1;
+			String_t* L_23 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+			float L_24 = Single_Parse_m364357836(NULL /*static, unused*/, L_23, /*hidden argument*/NULL);
+			G_B10_0 = L_24;
+			goto IL_008c;
+		}
+
+IL_0087:
+		{
+			G_B10_0 = (500.0f);
+		}
+
+IL_008c:
+		{
+			V_3 = G_B10_0;
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_25 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			ObjectU5BU5D_t2843939325* L_26 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			float L_27 = V_3;
+			float L_28 = L_27;
+			RuntimeObject * L_29 = Box(Single_t1397266774_il2cpp_TypeInfo_var, &L_28);
+			NullCheck(L_26);
+			ArrayElementTypeCheck (L_26, L_29);
+			(L_26)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_29);
+			NullCheck(L_25);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_25, 1, L_26, /*hidden argument*/NULL);
+			float L_30 = V_3;
+			float L_31 = L_30;
+			RuntimeObject * L_32 = Box(Single_t1397266774_il2cpp_TypeInfo_var, &L_31);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_33 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral3527610011, L_32, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_33, /*hidden argument*/NULL);
+			goto IL_0545;
 		}
 
 IL_00c1:
 		{
 			String_t* L_34 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_35 = String_op_Equality_m920492651(NULL /*static, unused*/, L_34, _stringLiteral2103272324, /*hidden argument*/NULL);
+			bool L_35 = String_op_Equality_m920492651(NULL /*static, unused*/, L_34, _stringLiteral1602046662, /*hidden argument*/NULL);
 			if (L_35)
 			{
-				goto IL_00e1;
+				goto IL_00f1;
 			}
 		}
 
 IL_00d1:
 		{
 			String_t* L_36 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_37 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_AddMoney_11();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_38 = String_op_Equality_m920492651(NULL /*static, unused*/, L_36, L_37, /*hidden argument*/NULL);
-			if (!L_38)
+			bool L_37 = String_op_Equality_m920492651(NULL /*static, unused*/, L_36, _stringLiteral2103272324, /*hidden argument*/NULL);
+			if (L_37)
 			{
-				goto IL_0134;
+				goto IL_00f1;
 			}
 		}
 
 IL_00e1:
 		{
-			StringU5BU5D_t1281789340* L_39 = V_1;
-			NullCheck(L_39);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_39)->max_length))))) <= ((int32_t)1)))
-			{
-				goto IL_00f7;
-			}
-		}
-
-IL_00ea:
-		{
-			StringU5BU5D_t1281789340* L_40 = V_1;
-			NullCheck(L_40);
-			int32_t L_41 = 1;
-			String_t* L_42 = (L_40)->GetAt(static_cast<il2cpp_array_size_t>(L_41));
-			int32_t L_43 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_42, /*hidden argument*/NULL);
-			G_B16_0 = L_43;
-			goto IL_00fc;
-		}
-
-IL_00f7:
-		{
-			G_B16_0 = ((int32_t)1000);
-		}
-
-IL_00fc:
-		{
-			V_4 = G_B16_0;
+			String_t* L_38 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_44 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			ObjectU5BU5D_t2843939325* L_45 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			int32_t L_46 = V_4;
-			int32_t L_47 = L_46;
-			RuntimeObject * L_48 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_47);
-			NullCheck(L_45);
-			ArrayElementTypeCheck (L_45, L_48);
-			(L_45)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_48);
-			NullCheck(L_44);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_44, 4, L_45, /*hidden argument*/NULL);
-			int32_t L_49 = V_4;
-			int32_t L_50 = L_49;
-			RuntimeObject * L_51 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_50);
+			String_t* L_39 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_AddMoney_11();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_52 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral2251829370, L_51, /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, L_52, /*hidden argument*/NULL);
-			goto IL_04c5;
+			bool L_40 = String_op_Equality_m920492651(NULL /*static, unused*/, L_38, L_39, /*hidden argument*/NULL);
+			if (!L_40)
+			{
+				goto IL_0144;
+			}
 		}
 
-IL_0134:
+IL_00f1:
 		{
-			String_t* L_53 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_54 = String_op_Equality_m920492651(NULL /*static, unused*/, L_53, _stringLiteral1209998456, /*hidden argument*/NULL);
-			if (L_54)
+			StringU5BU5D_t1281789340* L_41 = V_1;
+			NullCheck(L_41);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_41)->max_length))))) <= ((int32_t)1)))
 			{
-				goto IL_0154;
+				goto IL_0107;
 			}
+		}
+
+IL_00fa:
+		{
+			StringU5BU5D_t1281789340* L_42 = V_1;
+			NullCheck(L_42);
+			int32_t L_43 = 1;
+			String_t* L_44 = (L_42)->GetAt(static_cast<il2cpp_array_size_t>(L_43));
+			int32_t L_45 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_44, /*hidden argument*/NULL);
+			G_B17_0 = L_45;
+			goto IL_010c;
+		}
+
+IL_0107:
+		{
+			G_B17_0 = ((int32_t)1000);
+		}
+
+IL_010c:
+		{
+			V_4 = G_B17_0;
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_46 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			ObjectU5BU5D_t2843939325* L_47 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			int32_t L_48 = V_4;
+			int32_t L_49 = L_48;
+			RuntimeObject * L_50 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_49);
+			NullCheck(L_47);
+			ArrayElementTypeCheck (L_47, L_50);
+			(L_47)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_50);
+			NullCheck(L_46);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_46, 4, L_47, /*hidden argument*/NULL);
+			int32_t L_51 = V_4;
+			int32_t L_52 = L_51;
+			RuntimeObject * L_53 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_52);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_54 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral2251829370, L_53, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_54, /*hidden argument*/NULL);
+			goto IL_0545;
 		}
 
 IL_0144:
 		{
 			String_t* L_55 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_56 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_FullAmmo_14();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_57 = String_op_Equality_m920492651(NULL /*static, unused*/, L_55, L_56, /*hidden argument*/NULL);
-			if (!L_57)
+			bool L_56 = String_op_Equality_m920492651(NULL /*static, unused*/, L_55, _stringLiteral1209998456, /*hidden argument*/NULL);
+			if (L_56)
 			{
-				goto IL_0175;
+				goto IL_0184;
 			}
 		}
 
 IL_0154:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_58 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_58);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_58, ((int32_t)10), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral720549196, /*hidden argument*/NULL);
-			goto IL_04c5;
-		}
-
-IL_0175:
-		{
-			String_t* L_59 = V_2;
+			String_t* L_57 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_60 = String_op_Equality_m920492651(NULL /*static, unused*/, L_59, _stringLiteral2969123828, /*hidden argument*/NULL);
-			if (L_60)
+			bool L_58 = String_op_Equality_m920492651(NULL /*static, unused*/, L_57, _stringLiteral1983176600, /*hidden argument*/NULL);
+			if (L_58)
 			{
-				goto IL_0195;
+				goto IL_0184;
 			}
 		}
 
-IL_0185:
+IL_0164:
+		{
+			String_t* L_59 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_60 = String_op_Equality_m920492651(NULL /*static, unused*/, L_59, _stringLiteral2245991411, /*hidden argument*/NULL);
+			if (L_60)
+			{
+				goto IL_0184;
+			}
+		}
+
+IL_0174:
 		{
 			String_t* L_61 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_62 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_SuperSoldier_21();
+			String_t* L_62 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_FullAmmo_14();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 			bool L_63 = String_op_Equality_m920492651(NULL /*static, unused*/, L_61, L_62, /*hidden argument*/NULL);
 			if (!L_63)
 			{
-				goto IL_01be;
+				goto IL_01a5;
 			}
 		}
 
-IL_0195:
+IL_0184:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
 			ConsoleCommand_t3167473278 * L_64 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			ObjectU5BU5D_t2843939325* L_65 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			bool L_66 = ((bool)1);
-			RuntimeObject * L_67 = Box(Boolean_t97287965_il2cpp_TypeInfo_var, &L_66);
-			NullCheck(L_65);
-			ArrayElementTypeCheck (L_65, L_67);
-			(L_65)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_67);
 			NullCheck(L_64);
-			ConsoleCommand_AgentCommandOperation_m3105860653(L_64, 2, L_65, /*hidden argument*/NULL);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_64, ((int32_t)10), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral720549196, /*hidden argument*/NULL);
+			goto IL_0545;
+		}
+
+IL_01a5:
+		{
+			String_t* L_65 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_66 = String_op_Equality_m920492651(NULL /*static, unused*/, L_65, _stringLiteral2969123828, /*hidden argument*/NULL);
+			if (L_66)
+			{
+				goto IL_01f5;
+			}
+		}
+
+IL_01b5:
+		{
+			String_t* L_67 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_68 = String_op_Equality_m920492651(NULL /*static, unused*/, L_67, _stringLiteral4036168438, /*hidden argument*/NULL);
+			if (L_68)
+			{
+				goto IL_01f5;
+			}
+		}
+
+IL_01c5:
+		{
+			String_t* L_69 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_70 = String_op_Equality_m920492651(NULL /*static, unused*/, L_69, _stringLiteral34890618, /*hidden argument*/NULL);
+			if (L_70)
+			{
+				goto IL_01f5;
+			}
+		}
+
+IL_01d5:
+		{
+			String_t* L_71 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_72 = String_op_Equality_m920492651(NULL /*static, unused*/, L_71, _stringLiteral3275039542, /*hidden argument*/NULL);
+			if (L_72)
+			{
+				goto IL_01f5;
+			}
+		}
+
+IL_01e5:
+		{
+			String_t* L_73 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			String_t* L_74 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_SuperSoldier_21();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_75 = String_op_Equality_m920492651(NULL /*static, unused*/, L_73, L_74, /*hidden argument*/NULL);
+			if (!L_75)
+			{
+				goto IL_021e;
+			}
+		}
+
+IL_01f5:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_76 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			ObjectU5BU5D_t2843939325* L_77 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			bool L_78 = ((bool)1);
+			RuntimeObject * L_79 = Box(Boolean_t97287965_il2cpp_TypeInfo_var, &L_78);
+			NullCheck(L_77);
+			ArrayElementTypeCheck (L_77, L_79);
+			(L_77)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_79);
+			NullCheck(L_76);
+			ConsoleCommand_AgentCommandOperation_m3105860653(L_76, 2, L_77, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral3306822864, /*hidden argument*/NULL);
-			goto IL_04c5;
+			goto IL_0545;
 		}
 
-IL_01be:
-		{
-			String_t* L_68 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_69 = String_op_Equality_m920492651(NULL /*static, unused*/, L_68, _stringLiteral966951374, /*hidden argument*/NULL);
-			if (L_69)
-			{
-				goto IL_01de;
-			}
-		}
-
-IL_01ce:
-		{
-			String_t* L_70 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_71 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_SuppressAll_41();
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_72 = String_op_Equality_m920492651(NULL /*static, unused*/, L_70, L_71, /*hidden argument*/NULL);
-			if (!L_72)
-			{
-				goto IL_01ff;
-			}
-		}
-
-IL_01de:
-		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_73 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_73);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_73, ((int32_t)19), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2673339302, /*hidden argument*/NULL);
-			goto IL_04c5;
-		}
-
-IL_01ff:
-		{
-			String_t* L_74 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_75 = String_op_Equality_m920492651(NULL /*static, unused*/, L_74, _stringLiteral1981720569, /*hidden argument*/NULL);
-			if (L_75)
-			{
-				goto IL_021f;
-			}
-		}
-
-IL_020f:
-		{
-			String_t* L_76 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_77 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_ClearOverload_40();
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_78 = String_op_Equality_m920492651(NULL /*static, unused*/, L_76, L_77, /*hidden argument*/NULL);
-			if (!L_78)
-			{
-				goto IL_0240;
-			}
-		}
-
-IL_021f:
-		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_79 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_79);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_79, ((int32_t)18), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2928161466, /*hidden argument*/NULL);
-			goto IL_04c5;
-		}
-
-IL_0240:
+IL_021e:
 		{
 			String_t* L_80 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_81 = String_op_Equality_m920492651(NULL /*static, unused*/, L_80, _stringLiteral3228645789, /*hidden argument*/NULL);
+			bool L_81 = String_op_Equality_m920492651(NULL /*static, unused*/, L_80, _stringLiteral966951374, /*hidden argument*/NULL);
 			if (L_81)
 			{
-				goto IL_0260;
+				goto IL_023e;
 			}
 		}
 
-IL_0250:
+IL_022e:
 		{
 			String_t* L_82 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_83 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_MissionClear_36();
+			String_t* L_83 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_SuppressAll_41();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 			bool L_84 = String_op_Equality_m920492651(NULL /*static, unused*/, L_82, L_83, /*hidden argument*/NULL);
 			if (!L_84)
 			{
-				goto IL_0281;
+				goto IL_025f;
 			}
 		}
 
-IL_0260:
+IL_023e:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
 			ConsoleCommand_t3167473278 * L_85 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
 			NullCheck(L_85);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_85, ((int32_t)14), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_85, ((int32_t)19), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral3207803418, /*hidden argument*/NULL);
-			goto IL_04c5;
+			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2673339302, /*hidden argument*/NULL);
+			goto IL_0545;
 		}
 
-IL_0281:
+IL_025f:
 		{
 			String_t* L_86 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_87 = String_op_Equality_m920492651(NULL /*static, unused*/, L_86, _stringLiteral204141367, /*hidden argument*/NULL);
+			bool L_87 = String_op_Equality_m920492651(NULL /*static, unused*/, L_86, _stringLiteral1981720569, /*hidden argument*/NULL);
 			if (L_87)
 			{
-				goto IL_02a1;
+				goto IL_029f;
 			}
 		}
 
-IL_0291:
+IL_026f:
 		{
 			String_t* L_88 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_89 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_ResearchAll_43();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_90 = String_op_Equality_m920492651(NULL /*static, unused*/, L_88, L_89, /*hidden argument*/NULL);
-			if (!L_90)
+			bool L_89 = String_op_Equality_m920492651(NULL /*static, unused*/, L_88, _stringLiteral4000073150, /*hidden argument*/NULL);
+			if (L_89)
 			{
-				goto IL_02c2;
+				goto IL_029f;
 			}
 		}
 
-IL_02a1:
+IL_027f:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_91 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_91);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_91, ((int32_t)20), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2496694344, /*hidden argument*/NULL);
-			goto IL_04c5;
+			String_t* L_90 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_91 = String_op_Equality_m920492651(NULL /*static, unused*/, L_90, _stringLiteral4175040082, /*hidden argument*/NULL);
+			if (L_91)
+			{
+				goto IL_029f;
+			}
 		}
 
-IL_02c2:
+IL_028f:
 		{
 			String_t* L_92 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_93 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_RootCommand_6();
+			String_t* L_93 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_ClearOverload_40();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 			bool L_94 = String_op_Equality_m920492651(NULL /*static, unused*/, L_92, L_93, /*hidden argument*/NULL);
 			if (!L_94)
 			{
-				goto IL_0319;
+				goto IL_02c0;
 			}
 		}
 
-IL_02d2:
+IL_029f:
 		{
-			StringU5BU5D_t1281789340* L_95 = V_1;
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_95 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
 			NullCheck(L_95);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_95)->max_length))))) <= ((int32_t)2)))
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_95, ((int32_t)18), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2928161466, /*hidden argument*/NULL);
+			goto IL_0545;
+		}
+
+IL_02c0:
+		{
+			String_t* L_96 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_97 = String_op_Equality_m920492651(NULL /*static, unused*/, L_96, _stringLiteral3228645789, /*hidden argument*/NULL);
+			if (L_97)
 			{
-				goto IL_0319;
+				goto IL_02e0;
 			}
 		}
 
-IL_02db:
+IL_02d0:
 		{
+			String_t* L_98 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_96 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_96);
-			List_1_t3319525431 * L_97 = L_96->get_rootCommand_50();
-			StringU5BU5D_t1281789340* L_98 = V_1;
-			NullCheck(L_98);
-			int32_t L_99 = 1;
-			String_t* L_100 = (L_98)->GetAt(static_cast<il2cpp_array_size_t>(L_99));
-			NullCheck(L_100);
-			String_t* L_101 = String_ToLower_m2029374922(L_100, /*hidden argument*/NULL);
-			NullCheck(L_97);
-			int32_t L_102 = List_1_IndexOf_m1503948102(L_97, L_101, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
-			V_5 = L_102;
-			int32_t L_103 = V_5;
-			if ((((int32_t)L_103) == ((int32_t)(-1))))
+			String_t* L_99 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_MissionClear_36();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_100 = String_op_Equality_m920492651(NULL /*static, unused*/, L_98, L_99, /*hidden argument*/NULL);
+			if (!L_100)
 			{
-				goto IL_0314;
+				goto IL_0301;
 			}
 		}
 
-IL_02fc:
+IL_02e0:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_104 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_105 = V_5;
-			ObjectU5BU5D_t2843939325* L_106 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			StringU5BU5D_t1281789340* L_107 = V_1;
+			ConsoleCommand_t3167473278 * L_101 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			NullCheck(L_101);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_101, ((int32_t)14), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral3207803418, /*hidden argument*/NULL);
+			goto IL_0545;
+		}
+
+IL_0301:
+		{
+			String_t* L_102 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_103 = String_op_Equality_m920492651(NULL /*static, unused*/, L_102, _stringLiteral204141367, /*hidden argument*/NULL);
+			if (L_103)
+			{
+				goto IL_0321;
+			}
+		}
+
+IL_0311:
+		{
+			String_t* L_104 = V_2;
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			String_t* L_105 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_ResearchAll_43();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_106 = String_op_Equality_m920492651(NULL /*static, unused*/, L_104, L_105, /*hidden argument*/NULL);
+			if (!L_106)
+			{
+				goto IL_0342;
+			}
+		}
+
+IL_0321:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_107 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
 			NullCheck(L_107);
-			int32_t L_108 = 2;
-			String_t* L_109 = (L_107)->GetAt(static_cast<il2cpp_array_size_t>(L_108));
-			NullCheck(L_106);
-			ArrayElementTypeCheck (L_106, L_109);
-			(L_106)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_109);
-			NullCheck(L_104);
-			ConsoleCommand_RootCommandOperation_m946702148(L_104, L_105, L_106, /*hidden argument*/NULL);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_107, ((int32_t)20), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2496694344, /*hidden argument*/NULL);
+			goto IL_0545;
 		}
 
-IL_0314:
+IL_0342:
 		{
-			goto IL_04c5;
-		}
-
-IL_0319:
-		{
-			String_t* L_110 = V_2;
+			String_t* L_108 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_111 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_StandardCommand_1();
+			String_t* L_109 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_RootCommand_6();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_112 = String_op_Equality_m920492651(NULL /*static, unused*/, L_110, L_111, /*hidden argument*/NULL);
-			if (!L_112)
+			bool L_110 = String_op_Equality_m920492651(NULL /*static, unused*/, L_108, L_109, /*hidden argument*/NULL);
+			if (!L_110)
 			{
-				goto IL_0390;
+				goto IL_0399;
 			}
 		}
 
-IL_0329:
+IL_0352:
 		{
-			StringU5BU5D_t1281789340* L_113 = V_1;
-			NullCheck(L_113);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_113)->max_length))))) <= ((int32_t)1)))
+			StringU5BU5D_t1281789340* L_111 = V_1;
+			NullCheck(L_111);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_111)->max_length))))) <= ((int32_t)2)))
 			{
-				goto IL_0390;
+				goto IL_0399;
 			}
 		}
 
-IL_0332:
+IL_035b:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_114 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			ConsoleCommand_t3167473278 * L_112 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			NullCheck(L_112);
+			List_1_t3319525431 * L_113 = L_112->get_rootCommand_50();
+			StringU5BU5D_t1281789340* L_114 = V_1;
 			NullCheck(L_114);
-			List_1_t3319525431 * L_115 = L_114->get_standardCommand_47();
-			StringU5BU5D_t1281789340* L_116 = V_1;
+			int32_t L_115 = 1;
+			String_t* L_116 = (L_114)->GetAt(static_cast<il2cpp_array_size_t>(L_115));
 			NullCheck(L_116);
-			int32_t L_117 = 1;
-			String_t* L_118 = (L_116)->GetAt(static_cast<il2cpp_array_size_t>(L_117));
-			NullCheck(L_118);
-			String_t* L_119 = String_ToLower_m2029374922(L_118, /*hidden argument*/NULL);
-			NullCheck(L_115);
-			int32_t L_120 = List_1_IndexOf_m1503948102(L_115, L_119, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
-			V_6 = L_120;
-			int32_t L_121 = V_6;
-			if ((((int32_t)L_121) == ((int32_t)(-1))))
+			String_t* L_117 = String_ToLower_m2029374922(L_116, /*hidden argument*/NULL);
+			NullCheck(L_113);
+			int32_t L_118 = List_1_IndexOf_m1503948102(L_113, L_117, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
+			V_5 = L_118;
+			int32_t L_119 = V_5;
+			if ((((int32_t)L_119) == ((int32_t)(-1))))
 			{
-				goto IL_038b;
+				goto IL_0394;
 			}
 		}
 
-IL_0353:
-		{
-			StringU5BU5D_t1281789340* L_122 = V_1;
-			NullCheck(L_122);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_122)->max_length))))) <= ((int32_t)2)))
-			{
-				goto IL_0379;
-			}
-		}
-
-IL_035c:
+IL_037c:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_123 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_124 = V_6;
-			ObjectU5BU5D_t2843939325* L_125 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			StringU5BU5D_t1281789340* L_126 = V_1;
-			NullCheck(L_126);
-			int32_t L_127 = 2;
-			String_t* L_128 = (L_126)->GetAt(static_cast<il2cpp_array_size_t>(L_127));
-			NullCheck(L_125);
-			ArrayElementTypeCheck (L_125, L_128);
-			(L_125)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_128);
+			ConsoleCommand_t3167473278 * L_120 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_121 = V_5;
+			ObjectU5BU5D_t2843939325* L_122 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			StringU5BU5D_t1281789340* L_123 = V_1;
 			NullCheck(L_123);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_123, L_124, L_125, /*hidden argument*/NULL);
-			goto IL_038b;
+			int32_t L_124 = 2;
+			String_t* L_125 = (L_123)->GetAt(static_cast<il2cpp_array_size_t>(L_124));
+			NullCheck(L_122);
+			ArrayElementTypeCheck (L_122, L_125);
+			(L_122)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_125);
+			NullCheck(L_120);
+			ConsoleCommand_RootCommandOperation_m946702148(L_120, L_121, L_122, /*hidden argument*/NULL);
 		}
 
-IL_0379:
+IL_0394:
 		{
+			goto IL_0545;
+		}
+
+IL_0399:
+		{
+			String_t* L_126 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_129 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_130 = V_6;
-			NullCheck(L_129);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_129, L_130, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
-		}
-
-IL_038b:
-		{
-			goto IL_04c5;
-		}
-
-IL_0390:
-		{
-			String_t* L_131 = V_2;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_132 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_AgentCommand_2();
+			String_t* L_127 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_StandardCommand_1();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_133 = String_op_Equality_m920492651(NULL /*static, unused*/, L_131, L_132, /*hidden argument*/NULL);
-			if (!L_133)
+			bool L_128 = String_op_Equality_m920492651(NULL /*static, unused*/, L_126, L_127, /*hidden argument*/NULL);
+			if (!L_128)
 			{
-				goto IL_03ea;
-			}
-		}
-
-IL_03a0:
-		{
-			StringU5BU5D_t1281789340* L_134 = V_1;
-			NullCheck(L_134);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_134)->max_length))))) <= ((int32_t)1)))
-			{
-				goto IL_03ea;
+				goto IL_0410;
 			}
 		}
 
 IL_03a9:
 		{
+			StringU5BU5D_t1281789340* L_129 = V_1;
+			NullCheck(L_129);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_129)->max_length))))) <= ((int32_t)1)))
+			{
+				goto IL_0410;
+			}
+		}
+
+IL_03b2:
+		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_135 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_135);
-			List_1_t3319525431 * L_136 = L_135->get_agentCommand_48();
-			StringU5BU5D_t1281789340* L_137 = V_1;
-			NullCheck(L_137);
-			int32_t L_138 = 1;
-			String_t* L_139 = (L_137)->GetAt(static_cast<il2cpp_array_size_t>(L_138));
+			ConsoleCommand_t3167473278 * L_130 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			NullCheck(L_130);
+			List_1_t3319525431 * L_131 = L_130->get_standardCommand_47();
+			StringU5BU5D_t1281789340* L_132 = V_1;
+			NullCheck(L_132);
+			int32_t L_133 = 1;
+			String_t* L_134 = (L_132)->GetAt(static_cast<il2cpp_array_size_t>(L_133));
+			NullCheck(L_134);
+			String_t* L_135 = String_ToLower_m2029374922(L_134, /*hidden argument*/NULL);
+			NullCheck(L_131);
+			int32_t L_136 = List_1_IndexOf_m1503948102(L_131, L_135, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
+			V_6 = L_136;
+			int32_t L_137 = V_6;
+			if ((((int32_t)L_137) == ((int32_t)(-1))))
+			{
+				goto IL_040b;
+			}
+		}
+
+IL_03d3:
+		{
+			StringU5BU5D_t1281789340* L_138 = V_1;
+			NullCheck(L_138);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_138)->max_length))))) <= ((int32_t)2)))
+			{
+				goto IL_03f9;
+			}
+		}
+
+IL_03dc:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_139 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_140 = V_6;
+			ObjectU5BU5D_t2843939325* L_141 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			StringU5BU5D_t1281789340* L_142 = V_1;
+			NullCheck(L_142);
+			int32_t L_143 = 2;
+			String_t* L_144 = (L_142)->GetAt(static_cast<il2cpp_array_size_t>(L_143));
+			NullCheck(L_141);
+			ArrayElementTypeCheck (L_141, L_144);
+			(L_141)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_144);
 			NullCheck(L_139);
-			String_t* L_140 = String_ToLower_m2029374922(L_139, /*hidden argument*/NULL);
-			NullCheck(L_136);
-			int32_t L_141 = List_1_IndexOf_m1503948102(L_136, L_140, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
-			V_7 = L_141;
-			int32_t L_142 = V_7;
-			if ((((int32_t)L_142) == ((int32_t)(-1))))
-			{
-				goto IL_03e5;
-			}
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_139, L_140, L_141, /*hidden argument*/NULL);
+			goto IL_040b;
 		}
 
-IL_03ca:
+IL_03f9:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_143 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_144 = V_7;
-			ObjectU5BU5D_t2843939325* L_145 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			bool L_146 = ((bool)1);
-			RuntimeObject * L_147 = Box(Boolean_t97287965_il2cpp_TypeInfo_var, &L_146);
+			ConsoleCommand_t3167473278 * L_145 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_146 = V_6;
 			NullCheck(L_145);
-			ArrayElementTypeCheck (L_145, L_147);
-			(L_145)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_147);
-			NullCheck(L_143);
-			ConsoleCommand_AgentCommandOperation_m3105860653(L_143, L_144, L_145, /*hidden argument*/NULL);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_145, L_146, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
 		}
 
-IL_03e5:
+IL_040b:
 		{
-			goto IL_04c5;
+			goto IL_0545;
 		}
 
-IL_03ea:
+IL_0410:
 		{
-			String_t* L_148 = V_2;
+			String_t* L_147 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			String_t* L_149 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_CreatureCommand_0();
+			String_t* L_148 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_AgentCommand_2();
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			bool L_150 = String_op_Equality_m920492651(NULL /*static, unused*/, L_148, L_149, /*hidden argument*/NULL);
-			if (!L_150)
+			bool L_149 = String_op_Equality_m920492651(NULL /*static, unused*/, L_147, L_148, /*hidden argument*/NULL);
+			if (!L_149)
 			{
-				goto IL_043c;
+				goto IL_046a;
 			}
 		}
 
-IL_03fa:
+IL_0420:
 		{
-			StringU5BU5D_t1281789340* L_151 = V_1;
+			StringU5BU5D_t1281789340* L_150 = V_1;
+			NullCheck(L_150);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_150)->max_length))))) <= ((int32_t)1)))
+			{
+				goto IL_046a;
+			}
+		}
+
+IL_0429:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_151 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
 			NullCheck(L_151);
-			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_151)->max_length))))) <= ((int32_t)1)))
-			{
-				goto IL_043c;
-			}
-		}
-
-IL_0403:
-		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_152 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_152);
-			List_1_t3319525431 * L_153 = L_152->get_creatureCommand_46();
-			StringU5BU5D_t1281789340* L_154 = V_1;
-			NullCheck(L_154);
-			int32_t L_155 = 1;
-			String_t* L_156 = (L_154)->GetAt(static_cast<il2cpp_array_size_t>(L_155));
-			NullCheck(L_156);
-			String_t* L_157 = String_ToLower_m2029374922(L_156, /*hidden argument*/NULL);
+			List_1_t3319525431 * L_152 = L_151->get_agentCommand_48();
+			StringU5BU5D_t1281789340* L_153 = V_1;
 			NullCheck(L_153);
-			int32_t L_158 = List_1_IndexOf_m1503948102(L_153, L_157, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
-			V_8 = L_158;
-			int32_t L_159 = V_8;
-			if ((((int32_t)L_159) == ((int32_t)(-1))))
+			int32_t L_154 = 1;
+			String_t* L_155 = (L_153)->GetAt(static_cast<il2cpp_array_size_t>(L_154));
+			NullCheck(L_155);
+			String_t* L_156 = String_ToLower_m2029374922(L_155, /*hidden argument*/NULL);
+			NullCheck(L_152);
+			int32_t L_157 = List_1_IndexOf_m1503948102(L_152, L_156, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
+			V_7 = L_157;
+			int32_t L_158 = V_7;
+			if ((((int32_t)L_158) == ((int32_t)(-1))))
 			{
-				goto IL_0437;
+				goto IL_0465;
 			}
 		}
 
-IL_0424:
+IL_044a:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_160 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_161 = V_8;
-			NullCheck(L_160);
-			ConsoleCommand_CreatureCommandOperation_m3822427968(L_160, L_161, (bool)1, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			ConsoleCommand_t3167473278 * L_159 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_160 = V_7;
+			ObjectU5BU5D_t2843939325* L_161 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			bool L_162 = ((bool)1);
+			RuntimeObject * L_163 = Box(Boolean_t97287965_il2cpp_TypeInfo_var, &L_162);
+			NullCheck(L_161);
+			ArrayElementTypeCheck (L_161, L_163);
+			(L_161)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_163);
+			NullCheck(L_159);
+			ConsoleCommand_AgentCommandOperation_m3105860653(L_159, L_160, L_161, /*hidden argument*/NULL);
 		}
 
-IL_0437:
+IL_0465:
 		{
-			goto IL_04c5;
+			goto IL_0545;
 		}
 
-IL_043c:
+IL_046a:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_162 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_162);
-			List_1_t3319525431 * L_163 = L_162->get_standardCommand_47();
 			String_t* L_164 = V_2;
-			NullCheck(L_163);
-			int32_t L_165 = List_1_IndexOf_m1503948102(L_163, L_164, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
-			V_9 = L_165;
-			int32_t L_166 = V_9;
-			if ((((int32_t)L_166) == ((int32_t)(-1))))
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			String_t* L_165 = ((ConsoleCommand_t3167473278_StaticFields*)il2cpp_codegen_static_fields_for(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var))->get_CreatureCommand_0();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_166 = String_op_Equality_m920492651(NULL /*static, unused*/, L_164, L_165, /*hidden argument*/NULL);
+			if (!L_166)
 			{
-				goto IL_0493;
+				goto IL_04bc;
 			}
 		}
 
-IL_0456:
+IL_047a:
 		{
 			StringU5BU5D_t1281789340* L_167 = V_1;
 			NullCheck(L_167);
 			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_167)->max_length))))) <= ((int32_t)1)))
 			{
-				goto IL_047c;
+				goto IL_04bc;
 			}
 		}
 
-IL_045f:
+IL_0483:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
 			ConsoleCommand_t3167473278 * L_168 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_169 = V_9;
-			ObjectU5BU5D_t2843939325* L_170 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			StringU5BU5D_t1281789340* L_171 = V_1;
-			NullCheck(L_171);
-			int32_t L_172 = 1;
-			String_t* L_173 = (L_171)->GetAt(static_cast<il2cpp_array_size_t>(L_172));
-			NullCheck(L_170);
-			ArrayElementTypeCheck (L_170, L_173);
-			(L_170)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_173);
 			NullCheck(L_168);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_168, L_169, L_170, /*hidden argument*/NULL);
-			goto IL_048e;
+			List_1_t3319525431 * L_169 = L_168->get_creatureCommand_46();
+			StringU5BU5D_t1281789340* L_170 = V_1;
+			NullCheck(L_170);
+			int32_t L_171 = 1;
+			String_t* L_172 = (L_170)->GetAt(static_cast<il2cpp_array_size_t>(L_171));
+			NullCheck(L_172);
+			String_t* L_173 = String_ToLower_m2029374922(L_172, /*hidden argument*/NULL);
+			NullCheck(L_169);
+			int32_t L_174 = List_1_IndexOf_m1503948102(L_169, L_173, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
+			V_8 = L_174;
+			int32_t L_175 = V_8;
+			if ((((int32_t)L_175) == ((int32_t)(-1))))
+			{
+				goto IL_04b7;
+			}
 		}
 
-IL_047c:
+IL_04a4:
 		{
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_174 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			int32_t L_175 = V_9;
-			NullCheck(L_174);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_174, L_175, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			ConsoleCommand_t3167473278 * L_176 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_177 = V_8;
+			NullCheck(L_176);
+			ConsoleCommand_CreatureCommandOperation_m3822427968(L_176, L_177, (bool)1, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
 		}
 
-IL_048e:
+IL_04b7:
 		{
-			goto IL_04c5;
+			goto IL_0545;
 		}
 
-IL_0493:
+IL_04bc:
 		{
-			String_t* L_176 = ___command0;
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_178 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			NullCheck(L_178);
+			List_1_t3319525431 * L_179 = L_178->get_standardCommand_47();
+			String_t* L_180 = V_2;
+			NullCheck(L_179);
+			int32_t L_181 = List_1_IndexOf_m1503948102(L_179, L_180, /*hidden argument*/List_1_IndexOf_m1503948102_RuntimeMethod_var);
+			V_9 = L_181;
+			int32_t L_182 = V_9;
+			if ((((int32_t)L_182) == ((int32_t)(-1))))
+			{
+				goto IL_0513;
+			}
+		}
+
+IL_04d6:
+		{
+			StringU5BU5D_t1281789340* L_183 = V_1;
+			NullCheck(L_183);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_183)->max_length))))) <= ((int32_t)1)))
+			{
+				goto IL_04fc;
+			}
+		}
+
+IL_04df:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_184 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_185 = V_9;
+			ObjectU5BU5D_t2843939325* L_186 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
+			StringU5BU5D_t1281789340* L_187 = V_1;
+			NullCheck(L_187);
+			int32_t L_188 = 1;
+			String_t* L_189 = (L_187)->GetAt(static_cast<il2cpp_array_size_t>(L_188));
+			NullCheck(L_186);
+			ArrayElementTypeCheck (L_186, L_189);
+			(L_186)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_189);
+			NullCheck(L_184);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_184, L_185, L_186, /*hidden argument*/NULL);
+			goto IL_050e;
+		}
+
+IL_04fc:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
+			ConsoleCommand_t3167473278 * L_190 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
+			int32_t L_191 = V_9;
+			NullCheck(L_190);
+			ConsoleCommand_StandardCommandOperation_m2896255686(L_190, L_191, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+		}
+
+IL_050e:
+		{
+			goto IL_0545;
+		}
+
+IL_0513:
+		{
+			String_t* L_192 = ___command0;
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_177 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral2897425459, L_176, /*hidden argument*/NULL);
+			String_t* L_193 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral2897425459, L_192, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_LogWarning_m3752629331(NULL /*static, unused*/, L_177, /*hidden argument*/NULL);
-			goto IL_04c5;
+			Debug_LogWarning_m3752629331(NULL /*static, unused*/, L_193, /*hidden argument*/NULL);
+			goto IL_0545;
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__exception_local = (Exception_t *)e.ex;
 		if(il2cpp_codegen_class_is_assignable_from (Exception_t_il2cpp_TypeInfo_var, il2cpp_codegen_object_class(e.ex)))
-			goto CATCH_04a8;
+			goto CATCH_0528;
 		throw e;
 	}
 
-CATCH_04a8:
+CATCH_0528:
 	{ // begin catch(System.Exception)
 		V_10 = ((Exception_t *)__exception_local);
-		Exception_t * L_178 = V_10;
-		NullCheck(L_178);
-		String_t* L_179 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String System.Exception::get_Message() */, L_178);
+		Exception_t * L_194 = V_10;
+		NullCheck(L_194);
+		String_t* L_195 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String System.Exception::get_Message() */, L_194);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_180 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral3589268289, L_179, /*hidden argument*/NULL);
+		String_t* L_196 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral3589268289, L_195, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-		Debug_LogError_m2850623458(NULL /*static, unused*/, L_180, /*hidden argument*/NULL);
-		goto IL_04c5;
+		Debug_LogError_m2850623458(NULL /*static, unused*/, L_196, /*hidden argument*/NULL);
+		goto IL_0545;
 	} // end catch (depth: 1)
 
-IL_04c5:
+IL_0545:
 	{
 		return;
 	}

@@ -4298,6 +4298,7 @@ RuntimeClass* Predicate_1_t947237557_il2cpp_TypeInfo_var;
 RuntimeClass* List_1_t1599990648_il2cpp_TypeInfo_var;
 RuntimeClass* MissionUI_t1961037245_il2cpp_TypeInfo_var;
 RuntimeClass* MobileScreenManager_t831028031_il2cpp_TypeInfo_var;
+RuntimeClass* NarrationLoggerUI_t3858267038_il2cpp_TypeInfo_var;
 RuntimeClass* MoneyModel_t730300829_il2cpp_TypeInfo_var;
 RuntimeClass* MotherBugAnim_t247865448_il2cpp_TypeInfo_var;
 RuntimeClass* List_1_t3038295227_il2cpp_TypeInfo_var;
@@ -4305,7 +4306,6 @@ RuntimeClass* List_1_t3891815959_il2cpp_TypeInfo_var;
 RuntimeClass* PathMoveBy_t1984124564_il2cpp_TypeInfo_var;
 RuntimeClass* NamelessFetusAnim_t4222462469_il2cpp_TypeInfo_var;
 RuntimeClass* Uncontrollable_Fetus_t382534186_il2cpp_TypeInfo_var;
-RuntimeClass* NarrationLoggerUI_t3858267038_il2cpp_TypeInfo_var;
 RuntimeClass* NetzachCoreScript_t1566661578_il2cpp_TypeInfo_var;
 RuntimeClass* NetzachCoreAnim_t1528648073_il2cpp_TypeInfo_var;
 RuntimeClass* NewTitleScript_t794585859_il2cpp_TypeInfo_var;
@@ -29983,15 +29983,22 @@ String_t* _stringLiteral2583969767;
 String_t* _stringLiteral2988915142;
 String_t* _stringLiteral3925716469;
 String_t* _stringLiteral415913809;
+String_t* _stringLiteral2664233163;
 String_t* _stringLiteral3527610011;
 String_t* _stringLiteral1602046662;
 String_t* _stringLiteral2251829370;
 String_t* _stringLiteral1209998456;
+String_t* _stringLiteral1983176600;
+String_t* _stringLiteral2245991411;
 String_t* _stringLiteral720549196;
 String_t* _stringLiteral2969123828;
+String_t* _stringLiteral4036168438;
+String_t* _stringLiteral34890618;
+String_t* _stringLiteral3275039542;
 String_t* _stringLiteral3306822864;
 String_t* _stringLiteral966951374;
 String_t* _stringLiteral2673339302;
+String_t* _stringLiteral4000073150;
 String_t* _stringLiteral2928161466;
 String_t* _stringLiteral3207803418;
 String_t* _stringLiteral204141367;
@@ -31762,7 +31769,6 @@ String_t* _stringLiteral2238470857;
 String_t* _stringLiteral3496521849;
 String_t* _stringLiteral995290345;
 String_t* _stringLiteral375823149;
-String_t* _stringLiteral3427575812;
 String_t* _stringLiteral2994580937;
 String_t* _stringLiteral3719868135;
 String_t* _stringLiteral3950194343;
@@ -31776,14 +31782,14 @@ String_t* _stringLiteral2723747673;
 String_t* _stringLiteral732958485;
 String_t* _stringLiteral2334423248;
 String_t* _stringLiteral1805647733;
-String_t* _stringLiteral1725184425;
-String_t* _stringLiteral3231956980;
+String_t* _stringLiteral1401318744;
+String_t* _stringLiteral3437990695;
 String_t* _stringLiteral4274670882;
 String_t* _stringLiteral3695271036;
-String_t* _stringLiteral4206614950;
-String_t* _stringLiteral2431170541;
+String_t* _stringLiteral912679256;
+String_t* _stringLiteral929442005;
 String_t* _stringLiteral1610792646;
-String_t* _stringLiteral2559753250;
+String_t* _stringLiteral1783634769;
 String_t* _stringLiteral1993291875;
 String_t* _stringLiteral3594440697;
 String_t* _stringLiteral4283223830;
@@ -33540,7 +33546,7 @@ String_t* _stringLiteral1864861238;
 String_t* _stringLiteral3926843441;
 String_t* _stringLiteral1132744560;
 String_t* _stringLiteral46997234;
-extern void** const g_MetadataUsages[33522] = 
+extern void** const g_MetadataUsages[33528] = 
 {
 	(void**)(&Contraction_t1589275354_0_0_0_var),
 	(void**)(&Level2Map_t3640798870_0_0_0_var),
@@ -37822,6 +37828,7 @@ extern void** const g_MetadataUsages[33522] =
 	(void**)(&List_1_t1599990648_il2cpp_TypeInfo_var),
 	(void**)(&MissionUI_t1961037245_il2cpp_TypeInfo_var),
 	(void**)(&MobileScreenManager_t831028031_il2cpp_TypeInfo_var),
+	(void**)(&NarrationLoggerUI_t3858267038_il2cpp_TypeInfo_var),
 	(void**)(&MoneyModel_t730300829_il2cpp_TypeInfo_var),
 	(void**)(&MotherBugAnim_t247865448_il2cpp_TypeInfo_var),
 	(void**)(&List_1_t3038295227_il2cpp_TypeInfo_var),
@@ -37829,7 +37836,6 @@ extern void** const g_MetadataUsages[33522] =
 	(void**)(&PathMoveBy_t1984124564_il2cpp_TypeInfo_var),
 	(void**)(&NamelessFetusAnim_t4222462469_il2cpp_TypeInfo_var),
 	(void**)(&Uncontrollable_Fetus_t382534186_il2cpp_TypeInfo_var),
-	(void**)(&NarrationLoggerUI_t3858267038_il2cpp_TypeInfo_var),
 	(void**)(&NetzachCoreScript_t1566661578_il2cpp_TypeInfo_var),
 	(void**)(&NetzachCoreAnim_t1528648073_il2cpp_TypeInfo_var),
 	(void**)(&NewTitleScript_t794585859_il2cpp_TypeInfo_var),
@@ -63507,15 +63513,22 @@ extern void** const g_MetadataUsages[33522] =
 	(void**)(&_stringLiteral2988915142),
 	(void**)(&_stringLiteral3925716469),
 	(void**)(&_stringLiteral415913809),
+	(void**)(&_stringLiteral2664233163),
 	(void**)(&_stringLiteral3527610011),
 	(void**)(&_stringLiteral1602046662),
 	(void**)(&_stringLiteral2251829370),
 	(void**)(&_stringLiteral1209998456),
+	(void**)(&_stringLiteral1983176600),
+	(void**)(&_stringLiteral2245991411),
 	(void**)(&_stringLiteral720549196),
 	(void**)(&_stringLiteral2969123828),
+	(void**)(&_stringLiteral4036168438),
+	(void**)(&_stringLiteral34890618),
+	(void**)(&_stringLiteral3275039542),
 	(void**)(&_stringLiteral3306822864),
 	(void**)(&_stringLiteral966951374),
 	(void**)(&_stringLiteral2673339302),
+	(void**)(&_stringLiteral4000073150),
 	(void**)(&_stringLiteral2928161466),
 	(void**)(&_stringLiteral3207803418),
 	(void**)(&_stringLiteral204141367),
@@ -65286,7 +65299,6 @@ extern void** const g_MetadataUsages[33522] =
 	(void**)(&_stringLiteral3496521849),
 	(void**)(&_stringLiteral995290345),
 	(void**)(&_stringLiteral375823149),
-	(void**)(&_stringLiteral3427575812),
 	(void**)(&_stringLiteral2994580937),
 	(void**)(&_stringLiteral3719868135),
 	(void**)(&_stringLiteral3950194343),
@@ -65300,14 +65312,14 @@ extern void** const g_MetadataUsages[33522] =
 	(void**)(&_stringLiteral732958485),
 	(void**)(&_stringLiteral2334423248),
 	(void**)(&_stringLiteral1805647733),
-	(void**)(&_stringLiteral1725184425),
-	(void**)(&_stringLiteral3231956980),
+	(void**)(&_stringLiteral1401318744),
+	(void**)(&_stringLiteral3437990695),
 	(void**)(&_stringLiteral4274670882),
 	(void**)(&_stringLiteral3695271036),
-	(void**)(&_stringLiteral4206614950),
-	(void**)(&_stringLiteral2431170541),
+	(void**)(&_stringLiteral912679256),
+	(void**)(&_stringLiteral929442005),
 	(void**)(&_stringLiteral1610792646),
-	(void**)(&_stringLiteral2559753250),
+	(void**)(&_stringLiteral1783634769),
 	(void**)(&_stringLiteral1993291875),
 	(void**)(&_stringLiteral3594440697),
 	(void**)(&_stringLiteral4283223830),
@@ -85350,10 +85362,10 @@ extern const uint32_t MMKVPMarshaller__ctor_m386213759_MetadataUsageId = 18281;
 extern const uint32_t MMKVPMarshaller_Finalize_m2800028537_MetadataUsageId = 18282;
 extern const uint32_t MobileScreenManager__ctor_m3366620523_MetadataUsageId = 18283;
 extern const uint32_t MobileScreenManager_ApplyFullscreenSettings_m1725697124_MetadataUsageId = 18284;
-extern const uint32_t MobileScreenManager_Awake_m728696395_MetadataUsageId = 18285;
-extern const uint32_t MobileScreenManager_Bootstrap_m3525258668_MetadataUsageId = 18286;
-extern const uint32_t MobileScreenManager_EnsureClearCamera_m2529242480_MetadataUsageId = 18287;
-extern const uint32_t MobileScreenManager_EnsureUICamera_m1021779986_MetadataUsageId = 18288;
+extern const uint32_t MobileScreenManager_ApplyInGameUIScaling_m4004252767_MetadataUsageId = 18285;
+extern const uint32_t MobileScreenManager_Awake_m728696395_MetadataUsageId = 18286;
+extern const uint32_t MobileScreenManager_Bootstrap_m3525258668_MetadataUsageId = 18287;
+extern const uint32_t MobileScreenManager_EnsureClearCamera_m2529242480_MetadataUsageId = 18288;
 extern const uint32_t MobileScreenManager_HandleLog_m649794438_MetadataUsageId = 18289;
 extern const uint32_t MobileScreenManager_InitStyles_m2437874210_MetadataUsageId = 18290;
 extern const uint32_t MobileScreenManager_LoadMobileSettings_m608013893_MetadataUsageId = 18291;

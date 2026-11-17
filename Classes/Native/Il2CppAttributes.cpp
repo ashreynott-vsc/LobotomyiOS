@@ -43336,13 +43336,6 @@ static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_renderM
 		GeneratedByOldBindingsGeneratorAttribute__ctor_m3683043001(tmp, NULL);
 	}
 }
-static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_renderMode_m1564704306(CustomAttributesCache* cache)
-{
-	{
-		GeneratedByOldBindingsGeneratorAttribute_t433318409 * tmp = (GeneratedByOldBindingsGeneratorAttribute_t433318409 *)cache->attributes[0];
-		GeneratedByOldBindingsGeneratorAttribute__ctor_m3683043001(tmp, NULL);
-	}
-}
 static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_isRootCanvas_m1263191473(CustomAttributesCache* cache)
 {
 	{
@@ -43400,13 +43393,6 @@ static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_referen
 	}
 }
 static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_pixelPerfect_m333060872(CustomAttributesCache* cache)
-{
-	{
-		GeneratedByOldBindingsGeneratorAttribute_t433318409 * tmp = (GeneratedByOldBindingsGeneratorAttribute_t433318409 *)cache->attributes[0];
-		GeneratedByOldBindingsGeneratorAttribute__ctor_m3683043001(tmp, NULL);
-	}
-}
-static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_planeDistance_m3497413231(CustomAttributesCache* cache)
 {
 	{
 		GeneratedByOldBindingsGeneratorAttribute_t433318409 * tmp = (GeneratedByOldBindingsGeneratorAttribute_t433318409 *)cache->attributes[0];
@@ -92839,7 +92825,7 @@ static void U3CPrivateImplementationDetailsU3E_t3057255367_CustomAttributesCache
 		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
 	}
 }
-extern const CustomAttributesCacheGenerator g_AttributeGenerators[10281] = 
+extern const CustomAttributesCacheGenerator g_AttributeGenerators[10279] = 
 {
 	NULL,
 	g_mscorlib_Assembly_CustomAttributesCacheGenerator,
@@ -97089,7 +97075,6 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[10281] =
 	Canvas_t3310196443_CustomAttributesCacheGenerator,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_willRenderCanvases,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_renderMode_m841659411,
-	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_renderMode_m1564704306,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_isRootCanvas_m1263191473,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_worldCamera_m3516267897,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_worldCamera_m1964154654,
@@ -97099,7 +97084,6 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[10281] =
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_referencePixelsPerUnit_m3420541976,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_referencePixelsPerUnit_m2526332713,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_pixelPerfect_m333060872,
-	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_planeDistance_m3497413231,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_renderOrder_m1489855841,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_overrideSorting_m2740418462,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_overrideSorting_m4088794420,

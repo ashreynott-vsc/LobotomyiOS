@@ -2320,15 +2320,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Canvas_get_renderMode_m841659411 (Canvas_t
 	int32_t retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
-// System.Void UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)
-extern "C" IL2CPP_METHOD_ATTR void Canvas_set_renderMode_m1564704306 (Canvas_t3310196443 * __this, int32_t ___value0, const RuntimeMethod* method)
-{
-	typedef void (*Canvas_set_renderMode_m1564704306_ftn) (Canvas_t3310196443 *, int32_t);
-	static Canvas_set_renderMode_m1564704306_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Canvas_set_renderMode_m1564704306_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)");
-	_il2cpp_icall_func(__this, ___value0);
-}
 // System.Boolean UnityEngine.Canvas::get_isRootCanvas()
 extern "C" IL2CPP_METHOD_ATTR bool Canvas_get_isRootCanvas_m1263191473 (Canvas_t3310196443 * __this, const RuntimeMethod* method)
 {
@@ -2434,15 +2425,6 @@ extern "C" IL2CPP_METHOD_ATTR bool Canvas_get_pixelPerfect_m333060872 (Canvas_t3
 	_il2cpp_icall_func = (Canvas_get_pixelPerfect_m333060872_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::get_pixelPerfect()");
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
-}
-// System.Void UnityEngine.Canvas::set_planeDistance(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void Canvas_set_planeDistance_m3497413231 (Canvas_t3310196443 * __this, float ___value0, const RuntimeMethod* method)
-{
-	typedef void (*Canvas_set_planeDistance_m3497413231_ftn) (Canvas_t3310196443 *, float);
-	static Canvas_set_planeDistance_m3497413231_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Canvas_set_planeDistance_m3497413231_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::set_planeDistance(System.Single)");
-	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Int32 UnityEngine.Canvas::get_renderOrder()
 extern "C" IL2CPP_METHOD_ATTR int32_t Canvas_get_renderOrder_m1489855841 (Canvas_t3310196443 * __this, const RuntimeMethod* method)

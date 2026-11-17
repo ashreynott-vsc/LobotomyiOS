@@ -17887,7 +17887,6 @@ extern "C" void Tilemap_RefreshTile_m1116399155 ();
 extern "C" void Tilemap_RefreshTile_Injected_m3594480345 ();
 extern "C" void Canvas__ctor_m2509635467 ();
 extern "C" void Canvas_get_renderMode_m841659411 ();
-extern "C" void Canvas_set_renderMode_m1564704306 ();
 extern "C" void Canvas_get_isRootCanvas_m1263191473 ();
 extern "C" void Canvas_get_worldCamera_m3516267897 ();
 extern "C" void Canvas_set_worldCamera_m1964154654 ();
@@ -17898,7 +17897,6 @@ extern "C" void Canvas_set_scaleFactor_m3943377587 ();
 extern "C" void Canvas_get_referencePixelsPerUnit_m3420541976 ();
 extern "C" void Canvas_set_referencePixelsPerUnit_m2526332713 ();
 extern "C" void Canvas_get_pixelPerfect_m333060872 ();
-extern "C" void Canvas_set_planeDistance_m3497413231 ();
 extern "C" void Canvas_get_renderOrder_m1489855841 ();
 extern "C" void Canvas_get_overrideSorting_m2740418462 ();
 extern "C" void Canvas_set_overrideSorting_m4088794420 ();
@@ -43880,9 +43878,9 @@ extern "C" void MobileScreenManager_OnDestroy_m2653332534 ();
 extern "C" void MobileScreenManager_Start_m3747554585 ();
 extern "C" void MobileScreenManager_OnSceneLoaded_m3492888858 ();
 extern "C" void MobileScreenManager_Update_m4254841170 ();
+extern "C" void MobileScreenManager_ApplyInGameUIScaling_m4004252767 ();
 extern "C" void MobileScreenManager_SetAspectMode_m4064974544 ();
 extern "C" void MobileScreenManager_EnsureClearCamera_m2529242480 ();
-extern "C" void MobileScreenManager_EnsureUICamera_m1021779986 ();
 extern "C" void MobileScreenManager_ApplyFullscreenSettings_m1725697124 ();
 extern "C" void MobileScreenManager_MakeSolidTexture_m24044968 ();
 extern "C" void MobileScreenManager_InitStyles_m2437874210 ();
@@ -54282,7 +54280,7 @@ extern "C" void ZoomTutorial__ctor_m3253980221 ();
 extern "C" void ZoomTutorial_StartTutorial_m4043354523 ();
 extern "C" void ZoomTutorial_CompleteTutorial_m736784446 ();
 extern "C" void ZoomTutorial_CheckIfHappening_m4251022969 ();
-extern const Il2CppMethodPointer g_MethodPointers[54264] = 
+extern const Il2CppMethodPointer g_MethodPointers[54262] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -72153,7 +72151,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54264] =
 	Tilemap_RefreshTile_Injected_m3594480345,
 	Canvas__ctor_m2509635467,
 	Canvas_get_renderMode_m841659411,
-	Canvas_set_renderMode_m1564704306,
 	Canvas_get_isRootCanvas_m1263191473,
 	Canvas_get_worldCamera_m3516267897,
 	Canvas_set_worldCamera_m1964154654,
@@ -72164,7 +72161,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54264] =
 	Canvas_get_referencePixelsPerUnit_m3420541976,
 	Canvas_set_referencePixelsPerUnit_m2526332713,
 	Canvas_get_pixelPerfect_m333060872,
-	Canvas_set_planeDistance_m3497413231,
 	Canvas_get_renderOrder_m1489855841,
 	Canvas_get_overrideSorting_m2740418462,
 	Canvas_set_overrideSorting_m4088794420,
@@ -98146,9 +98142,9 @@ extern const Il2CppMethodPointer g_MethodPointers[54264] =
 	MobileScreenManager_Start_m3747554585,
 	MobileScreenManager_OnSceneLoaded_m3492888858,
 	MobileScreenManager_Update_m4254841170,
+	MobileScreenManager_ApplyInGameUIScaling_m4004252767,
 	MobileScreenManager_SetAspectMode_m4064974544,
 	MobileScreenManager_EnsureClearCamera_m2529242480,
-	MobileScreenManager_EnsureUICamera_m1021779986,
 	MobileScreenManager_ApplyFullscreenSettings_m1725697124,
 	MobileScreenManager_MakeSolidTexture_m24044968,
 	MobileScreenManager_InitStyles_m2437874210,
