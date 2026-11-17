@@ -1542,8 +1542,6 @@ extern const Il2CppType ManualLabel_t2247826984_0_0_0;
 extern const Il2CppType MobileScreenManager_t831028031_0_0_0;
 extern const Il2CppType StoryUI_t865320912_0_0_0;
 extern const Il2CppType CanvasScaler_t2767979955_0_0_0;
-extern const Il2CppType StandaloneInputModule_t2760469101_0_0_0;
-extern const Il2CppType Shader_t4151988712_0_0_0;
 extern const Il2CppType LoggingScript_t3580749383_0_0_0;
 extern const Il2CppType CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0;
 extern const Il2CppType CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0;
@@ -6809,10 +6807,6 @@ static const RuntimeType* GenInst_StoryUI_t865320912_0_0_0_Types[] = { (&StoryUI
 extern const Il2CppGenericInst GenInst_StoryUI_t865320912_0_0_0 = { 1, GenInst_StoryUI_t865320912_0_0_0_Types };
 static const RuntimeType* GenInst_CanvasScaler_t2767979955_0_0_0_Types[] = { (&CanvasScaler_t2767979955_0_0_0) };
 extern const Il2CppGenericInst GenInst_CanvasScaler_t2767979955_0_0_0 = { 1, GenInst_CanvasScaler_t2767979955_0_0_0_Types };
-static const RuntimeType* GenInst_StandaloneInputModule_t2760469101_0_0_0_Types[] = { (&StandaloneInputModule_t2760469101_0_0_0) };
-extern const Il2CppGenericInst GenInst_StandaloneInputModule_t2760469101_0_0_0 = { 1, GenInst_StandaloneInputModule_t2760469101_0_0_0_Types };
-static const RuntimeType* GenInst_Shader_t4151988712_0_0_0_Types[] = { (&Shader_t4151988712_0_0_0) };
-extern const Il2CppGenericInst GenInst_Shader_t4151988712_0_0_0 = { 1, GenInst_Shader_t4151988712_0_0_0_Types };
 static const RuntimeType* GenInst_LoggingScript_t3580749383_0_0_0_Types[] = { (&LoggingScript_t3580749383_0_0_0) };
 extern const Il2CppGenericInst GenInst_LoggingScript_t3580749383_0_0_0 = { 1, GenInst_LoggingScript_t3580749383_0_0_0_Types };
 static const RuntimeType* GenInst_CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0_Types[] = { (&CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0) };
@@ -9711,7 +9705,7 @@ static const RuntimeType* GenInst_SkeletonRenderer_AddSpineComponent_m952396782_
 extern const Il2CppGenericInst GenInst_SkeletonRenderer_AddSpineComponent_m952396782_gp_0_0_0_0 = { 1, GenInst_SkeletonRenderer_AddSpineComponent_m952396782_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0_Types[] = { (&UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0 = { 1, GenInst_UIControllerStateMachine_TryGetComponent_m2375857172_gp_0_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3575] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3573] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -11837,8 +11831,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[3575] =
 	&GenInst_MobileScreenManager_t831028031_0_0_0,
 	&GenInst_StoryUI_t865320912_0_0_0,
 	&GenInst_CanvasScaler_t2767979955_0_0_0,
-	&GenInst_StandaloneInputModule_t2760469101_0_0_0,
-	&GenInst_Shader_t4151988712_0_0_0,
 	&GenInst_LoggingScript_t3580749383_0_0_0,
 	&GenInst_CameraFilterPack_AAA_WaterDrop_t1967463866_0_0_0,
 	&GenInst_CameraFilterPack_Atmosphere_Fog_t335820357_0_0_0,

@@ -16620,8 +16620,6 @@ extern "C" void Vector2_get_Item_m3559215723_AdjustorThunk ();
 extern "C" void Vector2_set_Item_m3557490725_AdjustorThunk ();
 extern "C" void Vector2_Lerp_m854472224 ();
 extern "C" void Vector2_Scale_m165605769 ();
-extern "C" void Vector2_Normalize_m1906922873_AdjustorThunk ();
-extern "C" void Vector2_get_normalized_m2683665860_AdjustorThunk ();
 extern "C" void Vector2_ToString_m1205609053_AdjustorThunk ();
 extern "C" void Vector2_GetHashCode_m3916089713_AdjustorThunk ();
 extern "C" void Vector2_Equals_m832062989_AdjustorThunk ();
@@ -16629,7 +16627,6 @@ extern "C" void Vector2_Dot_m1554553447 ();
 extern "C" void Vector2_get_magnitude_m2752892833_AdjustorThunk ();
 extern "C" void Vector2_get_sqrMagnitude_m837837635_AdjustorThunk ();
 extern "C" void Vector2_Distance_m3048868881 ();
-extern "C" void Vector2_SqrMagnitude_m2507415696_AdjustorThunk ();
 extern "C" void Vector2_op_Addition_m800700293 ();
 extern "C" void Vector2_op_Subtraction_m73004381 ();
 extern "C" void Vector2_op_Multiply_m2347887432 ();
@@ -17796,7 +17793,6 @@ extern "C" void Tilemap_RefreshTile_m1116399155 ();
 extern "C" void Tilemap_RefreshTile_Injected_m3594480345 ();
 extern "C" void Canvas__ctor_m2509635467 ();
 extern "C" void Canvas_get_renderMode_m841659411 ();
-extern "C" void Canvas_set_renderMode_m1564704306 ();
 extern "C" void Canvas_get_isRootCanvas_m1263191473 ();
 extern "C" void Canvas_get_worldCamera_m3516267897 ();
 extern "C" void Canvas_set_worldCamera_m1964154654 ();
@@ -43779,6 +43775,17 @@ extern "C" void MissionUI_OnEnterButton_m3449589255 ();
 extern "C" void MissionUI_OnExitButton_m2349951492 ();
 extern "C" void MissionUI_OncePerSecond_m2919673498 ();
 extern "C" void MobileScreenManager__ctor_m3366620523 ();
+extern "C" void MobileScreenManager__InitNativeLiquidGlassMenu_m2048531689 ();
+extern "C" void MobileScreenManager__ShowNativeLiquidGlassMenu_m2128873457 ();
+extern "C" void MobileScreenManager__HideNativeLiquidGlassMenu_m1279739172 ();
+extern "C" void MobileScreenManager__ToggleNativeLiquidGlassMenu_m137559678 ();
+extern "C" void MobileScreenManager__UpdateNativeTelemetry_m2628365948 ();
+extern "C" void MobileScreenManager__UpdateNativeStatusMessage_m2591818600 ();
+extern "C" void MobileScreenManager__SetNativeAspectMode_m1423745247 ();
+extern "C" void MobileScreenManager_NativeInit_m3853915216 ();
+extern "C" void MobileScreenManager_NativeUpdateTelemetry_m1371380010 ();
+extern "C" void MobileScreenManager_NativeUpdateStatusMessage_m2090696377 ();
+extern "C" void MobileScreenManager_NativeSetAspectMode_m1612487439 ();
 extern "C" void MobileScreenManager_Bootstrap_m3525258668 ();
 extern "C" void MobileScreenManager_Awake_m728696395 ();
 extern "C" void MobileScreenManager_LoadMobileSettings_m608013893 ();
@@ -43788,32 +43795,14 @@ extern "C" void MobileScreenManager_OnDestroy_m2653332534 ();
 extern "C" void MobileScreenManager_Start_m3747554585 ();
 extern "C" void MobileScreenManager_OnSceneLoaded_m3492888858 ();
 extern "C" void MobileScreenManager_Update_m4254841170 ();
-extern "C" void MobileScreenManager_ToggleHUD_m3217349342 ();
+extern "C" void MobileScreenManager_OnNativeCommandReceived_m2478862194 ();
 extern "C" void MobileScreenManager_EnforceFullscreenPerFrame_m1603762658 ();
 extern "C" void MobileScreenManager_ApplyInGameUIScaling_m4004252767 ();
 extern "C" void MobileScreenManager_SetAspectMode_m4064974544 ();
 extern "C" void MobileScreenManager_EnsureClearCamera_m2529242480 ();
 extern "C" void MobileScreenManager_ApplyFullscreenSettings_m1725697124 ();
-extern "C" void MobileScreenManager_EnsureLiquidGlassHUD_m3452843240 ();
-extern "C" void MobileScreenManager_BuildModalContent_m2303666760 ();
-extern "C" void MobileScreenManager_UpdateAspectButtonColors_m1999088159 ();
-extern "C" void MobileScreenManager_UpdateHUDTelemetry_m1323223209 ();
-extern "C" void MobileScreenManager_CreateUIButton_m4242935249 ();
 extern "C" void MobileScreenManager_TriggerEsc_m3883136579 ();
 extern "C" void MobileScreenManager_RunCheat_m1197314851 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__0_m258996958 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__1_m2215312094 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__2_m641333982 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__3_m2597649118 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__4_m3789290206 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__5_m1450638046 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__6_m4171627230 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__7_m1832975070 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__8_m3024616158 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__9_m685963998 ();
-extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__A_m3451583198 ();
-extern "C" void U3CCreateUIButtonU3Ec__AnonStorey0__ctor_m2234002684 ();
-extern "C" void U3CCreateUIButtonU3Ec__AnonStorey0_U3CU3Em__0_m3865350907 ();
 extern "C" void MoneyModel__ctor_m2887490024 ();
 extern "C" void MoneyModel_get_instance_m889587587 ();
 extern "C" void MoneyModel_Init_m4109456535 ();
@@ -54207,7 +54196,7 @@ extern "C" void ZoomTutorial__ctor_m3253980221 ();
 extern "C" void ZoomTutorial_StartTutorial_m4043354523 ();
 extern "C" void ZoomTutorial_CompleteTutorial_m736784446 ();
 extern "C" void ZoomTutorial_CheckIfHappening_m4251022969 ();
-extern const Il2CppMethodPointer g_MethodPointers[54189] = 
+extern const Il2CppMethodPointer g_MethodPointers[54178] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -70811,8 +70800,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54189] =
 	Vector2_set_Item_m3557490725_AdjustorThunk,
 	Vector2_Lerp_m854472224,
 	Vector2_Scale_m165605769,
-	Vector2_Normalize_m1906922873_AdjustorThunk,
-	Vector2_get_normalized_m2683665860_AdjustorThunk,
 	Vector2_ToString_m1205609053_AdjustorThunk,
 	Vector2_GetHashCode_m3916089713_AdjustorThunk,
 	Vector2_Equals_m832062989_AdjustorThunk,
@@ -70820,7 +70807,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54189] =
 	Vector2_get_magnitude_m2752892833_AdjustorThunk,
 	Vector2_get_sqrMagnitude_m837837635_AdjustorThunk,
 	Vector2_Distance_m3048868881,
-	Vector2_SqrMagnitude_m2507415696_AdjustorThunk,
 	Vector2_op_Addition_m800700293,
 	Vector2_op_Subtraction_m73004381,
 	Vector2_op_Multiply_m2347887432,
@@ -71987,7 +71973,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54189] =
 	Tilemap_RefreshTile_Injected_m3594480345,
 	Canvas__ctor_m2509635467,
 	Canvas_get_renderMode_m841659411,
-	Canvas_set_renderMode_m1564704306,
 	Canvas_get_isRootCanvas_m1263191473,
 	Canvas_get_worldCamera_m3516267897,
 	Canvas_set_worldCamera_m1964154654,
@@ -97970,6 +97955,17 @@ extern const Il2CppMethodPointer g_MethodPointers[54189] =
 	MissionUI_OnExitButton_m2349951492,
 	MissionUI_OncePerSecond_m2919673498,
 	MobileScreenManager__ctor_m3366620523,
+	MobileScreenManager__InitNativeLiquidGlassMenu_m2048531689,
+	MobileScreenManager__ShowNativeLiquidGlassMenu_m2128873457,
+	MobileScreenManager__HideNativeLiquidGlassMenu_m1279739172,
+	MobileScreenManager__ToggleNativeLiquidGlassMenu_m137559678,
+	MobileScreenManager__UpdateNativeTelemetry_m2628365948,
+	MobileScreenManager__UpdateNativeStatusMessage_m2591818600,
+	MobileScreenManager__SetNativeAspectMode_m1423745247,
+	MobileScreenManager_NativeInit_m3853915216,
+	MobileScreenManager_NativeUpdateTelemetry_m1371380010,
+	MobileScreenManager_NativeUpdateStatusMessage_m2090696377,
+	MobileScreenManager_NativeSetAspectMode_m1612487439,
 	MobileScreenManager_Bootstrap_m3525258668,
 	MobileScreenManager_Awake_m728696395,
 	MobileScreenManager_LoadMobileSettings_m608013893,
@@ -97979,32 +97975,14 @@ extern const Il2CppMethodPointer g_MethodPointers[54189] =
 	MobileScreenManager_Start_m3747554585,
 	MobileScreenManager_OnSceneLoaded_m3492888858,
 	MobileScreenManager_Update_m4254841170,
-	MobileScreenManager_ToggleHUD_m3217349342,
+	MobileScreenManager_OnNativeCommandReceived_m2478862194,
 	MobileScreenManager_EnforceFullscreenPerFrame_m1603762658,
 	MobileScreenManager_ApplyInGameUIScaling_m4004252767,
 	MobileScreenManager_SetAspectMode_m4064974544,
 	MobileScreenManager_EnsureClearCamera_m2529242480,
 	MobileScreenManager_ApplyFullscreenSettings_m1725697124,
-	MobileScreenManager_EnsureLiquidGlassHUD_m3452843240,
-	MobileScreenManager_BuildModalContent_m2303666760,
-	MobileScreenManager_UpdateAspectButtonColors_m1999088159,
-	MobileScreenManager_UpdateHUDTelemetry_m1323223209,
-	MobileScreenManager_CreateUIButton_m4242935249,
 	MobileScreenManager_TriggerEsc_m3883136579,
 	MobileScreenManager_RunCheat_m1197314851,
-	MobileScreenManager_U3CBuildModalContentU3Em__0_m258996958,
-	MobileScreenManager_U3CBuildModalContentU3Em__1_m2215312094,
-	MobileScreenManager_U3CBuildModalContentU3Em__2_m641333982,
-	MobileScreenManager_U3CBuildModalContentU3Em__3_m2597649118,
-	MobileScreenManager_U3CBuildModalContentU3Em__4_m3789290206,
-	MobileScreenManager_U3CBuildModalContentU3Em__5_m1450638046,
-	MobileScreenManager_U3CBuildModalContentU3Em__6_m4171627230,
-	MobileScreenManager_U3CBuildModalContentU3Em__7_m1832975070,
-	MobileScreenManager_U3CBuildModalContentU3Em__8_m3024616158,
-	MobileScreenManager_U3CBuildModalContentU3Em__9_m685963998,
-	MobileScreenManager_U3CBuildModalContentU3Em__A_m3451583198,
-	U3CCreateUIButtonU3Ec__AnonStorey0__ctor_m2234002684,
-	U3CCreateUIButtonU3Ec__AnonStorey0_U3CU3Em__0_m3865350907,
 	MoneyModel__ctor_m2887490024,
 	MoneyModel_get_instance_m889587587,
 	MoneyModel_Init_m4109456535,

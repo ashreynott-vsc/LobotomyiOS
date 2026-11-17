@@ -43106,12 +43106,12 @@ static void Canvas_t3310196443_CustomAttributesCacheGenerator(CustomAttributesCa
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		NativeClassAttribute_t2601352714 * tmp = (NativeClassAttribute_t2601352714 *)cache->attributes[0];
-		NativeClassAttribute__ctor_m2882942384(tmp, il2cpp_codegen_string_new_wrapper("UI::Canvas"), NULL);
+		RequireComponent_t3490506609 * tmp = (RequireComponent_t3490506609 *)cache->attributes[0];
+		RequireComponent__ctor_m886241599(tmp, il2cpp_codegen_type_get_object(RectTransform_t3704657025_0_0_0_var), NULL);
 	}
 	{
-		RequireComponent_t3490506609 * tmp = (RequireComponent_t3490506609 *)cache->attributes[1];
-		RequireComponent__ctor_m886241599(tmp, il2cpp_codegen_type_get_object(RectTransform_t3704657025_0_0_0_var), NULL);
+		NativeClassAttribute_t2601352714 * tmp = (NativeClassAttribute_t2601352714 *)cache->attributes[1];
+		NativeClassAttribute__ctor_m2882942384(tmp, il2cpp_codegen_string_new_wrapper("UI::Canvas"), NULL);
 	}
 }
 static void Canvas_t3310196443_CustomAttributesCacheGenerator_willRenderCanvases(CustomAttributesCache* cache)
@@ -43126,13 +43126,6 @@ static void Canvas_t3310196443_CustomAttributesCacheGenerator_willRenderCanvases
 	}
 }
 static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_renderMode_m841659411(CustomAttributesCache* cache)
-{
-	{
-		GeneratedByOldBindingsGeneratorAttribute_t433318409 * tmp = (GeneratedByOldBindingsGeneratorAttribute_t433318409 *)cache->attributes[0];
-		GeneratedByOldBindingsGeneratorAttribute__ctor_m3683043001(tmp, NULL);
-	}
-}
-static void Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_renderMode_m1564704306(CustomAttributesCache* cache)
 {
 	{
 		GeneratedByOldBindingsGeneratorAttribute_t433318409 * tmp = (GeneratedByOldBindingsGeneratorAttribute_t433318409 *)cache->attributes[0];
@@ -84782,90 +84775,6 @@ static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_Mobile
 		RuntimeInitializeOnLoadMethodAttribute__ctor_m787294852(tmp, 0LL, NULL);
 	}
 }
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__0_m258996958(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__1_m2215312094(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__2_m641333982(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__3_m2597649118(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__4_m3789290206(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__5_m1450638046(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__6_m4171627230(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__7_m1832975070(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__8_m3024616158(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__9_m685963998(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__A_m3451583198(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
-static void U3CCreateUIButtonU3Ec__AnonStorey0_t3026261782_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
-{
-	{
-		CompilerGeneratedAttribute_t23527886 * tmp = (CompilerGeneratedAttribute_t23527886 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
-	}
-}
 static void MotherBug_t2212345366_CustomAttributesCacheGenerator_U3CU3Ef__mgU24cache0(CustomAttributesCache* cache)
 {
 	{
@@ -92712,7 +92621,7 @@ static void U3CPrivateImplementationDetailsU3E_t3057255367_CustomAttributesCache
 		CompilerGeneratedAttribute__ctor_m3151881902(tmp, NULL);
 	}
 }
-extern const CustomAttributesCacheGenerator g_AttributeGenerators[10264] = 
+extern const CustomAttributesCacheGenerator g_AttributeGenerators[10251] = 
 {
 	NULL,
 	g_mscorlib_Assembly_CustomAttributesCacheGenerator,
@@ -96934,7 +96843,6 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[10264] =
 	Canvas_t3310196443_CustomAttributesCacheGenerator,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_willRenderCanvases,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_renderMode_m841659411,
-	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_renderMode_m1564704306,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_isRootCanvas_m1263191473,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_get_worldCamera_m3516267897,
 	Canvas_t3310196443_CustomAttributesCacheGenerator_Canvas_set_worldCamera_m1964154654,
@@ -101934,18 +101842,6 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[10264] =
 	U3CGetDataU3Ec__AnonStorey0_t2347932880_CustomAttributesCacheGenerator,
 	MissionUI_t1961037245_CustomAttributesCacheGenerator_MissionUI_OnNotice_m348843274____param1,
 	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_Bootstrap_m3525258668,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__0_m258996958,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__1_m2215312094,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__2_m641333982,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__3_m2597649118,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__4_m3789290206,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__5_m1450638046,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__6_m4171627230,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__7_m1832975070,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__8_m3024616158,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__9_m685963998,
-	MobileScreenManager_t831028031_CustomAttributesCacheGenerator_MobileScreenManager_U3CBuildModalContentU3Em__A_m3451583198,
-	U3CCreateUIButtonU3Ec__AnonStorey0_t3026261782_CustomAttributesCacheGenerator,
 	MotherBug_t2212345366_CustomAttributesCacheGenerator_U3CU3Ef__mgU24cache0,
 	MotherBug_t2212345366_CustomAttributesCacheGenerator_U3CU3Ef__mgU24cache1,
 	MultipleEvent_t1862371989_CustomAttributesCacheGenerator,

@@ -89,6 +89,7 @@
 		4C5F4D4482C9C7361C54C36A /* Il2CppCompilerCalculateTypeValues_10Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3F742EBA9B446064568AC68 /* Il2CppCompilerCalculateTypeValues_10Table.cpp */; };
 		4DDF4FA28F2BC189FD8D8D2D /* Il2CppCompilerCalculateTypeValues_57Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8F46089463D62A53ED3070 /* Il2CppCompilerCalculateTypeValues_57Table.cpp */; };
 		4E090A341F27885B0077B28D /* StoreReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E090A331F27884B0077B28D /* StoreReview.m */; };
+		4E090A991F27885B0077B28D /* LiquidGlassDebugMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E090A981F27884B0077B28D /* LiquidGlassDebugMenu.mm */; };
 		4E3040EBB637F6C0826E0CEC /* Bulk_Assembly-CSharp_41.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C5343659CC3259C38DD03C6 /* Bulk_Assembly-CSharp_41.cpp */; };
 		4E6E460FA85EB55961826510 /* Il2CppCompilerCalculateTypeValues_40Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46ED4A65B33A8244BA745BFE /* Il2CppCompilerCalculateTypeValues_40Table.cpp */; };
 		4E714AE88508373D8D825A60 /* Bulk_Assembly-CSharp_28.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54AF4D33BF1622DD7C48BC12 /* Bulk_Assembly-CSharp_28.cpp */; };
@@ -427,6 +428,7 @@
 		4D40409480A59DA7449B96EE /* Il2CppMetadataRegistration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppMetadataRegistration.cpp; path = Classes/Native/Il2CppMetadataRegistration.cpp; sourceTree = SOURCE_ROOT; };
 		4DA04FF3B4CB420A2A37D9EF /* Il2CppCompilerCalculateTypeValues_1Table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCompilerCalculateTypeValues_1Table.cpp; path = Classes/Native/Il2CppCompilerCalculateTypeValues_1Table.cpp; sourceTree = SOURCE_ROOT; };
 		4E090A331F27884B0077B28D /* StoreReview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreReview.m; sourceTree = "<group>"; };
+		4E090A981F27884B0077B28D /* LiquidGlassDebugMenu.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LiquidGlassDebugMenu.mm; sourceTree = "<group>"; };
 		52614BF68F526213B9546E11 /* Il2CppInvokerTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppInvokerTable.cpp; path = Classes/Native/Il2CppInvokerTable.cpp; sourceTree = SOURCE_ROOT; };
 		528648E4A02F5B355A96DD06 /* Il2CppCompilerCalculateTypeValues_62Table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCompilerCalculateTypeValues_62Table.cpp; path = Classes/Native/Il2CppCompilerCalculateTypeValues_62Table.cpp; sourceTree = SOURCE_ROOT; };
 		532C4ABD86871DC82255DF6D /* Bulk_Assembly-CSharp_30.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Bulk_Assembly-CSharp_30.cpp"; path = "Classes/Native/Bulk_Assembly-CSharp_30.cpp"; sourceTree = SOURCE_ROOT; };
@@ -1079,6 +1081,7 @@
 				8A3EDDC61615B7C1001839E9 /* SplashScreen.h */,
 				8A3EDDC71615B7C1001839E9 /* SplashScreen.mm */,
 				4E090A331F27884B0077B28D /* StoreReview.m */,
+				4E090A981F27884B0077B28D /* LiquidGlassDebugMenu.mm */,
 				8A4815BF17A287D2003FBFD5 /* UnityAppController+ViewHandling.h */,
 				8A4815C017A287D2003FBFD5 /* UnityAppController+ViewHandling.mm */,
 				8A851BA516FB2F6D00E911DB /* UnityView.h */,
@@ -1360,6 +1363,7 @@
 				8A851BA716FB2F6D00E911DB /* UnityView.mm in Sources */,
 				8A851BAA16FB3AD000E911DB /* UnityAppController.mm in Sources */,
 				4E090A341F27885B0077B28D /* StoreReview.m in Sources */,
+				4E090A991F27885B0077B28D /* LiquidGlassDebugMenu.mm in Sources */,
 				8AC74A9519B47FEF00019D38 /* AVCapture.mm in Sources */,
 				8A793A091ED43EE100B44EF1 /* UnityViewControllerBase+tvOS.mm in Sources */,
 				8A6720A519EEB905006C92E0 /* InternalProfiler.cpp in Sources */,
