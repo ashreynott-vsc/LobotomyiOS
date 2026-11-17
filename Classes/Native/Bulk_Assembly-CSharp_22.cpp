@@ -34767,7 +34767,7 @@ public:
 	// UnityEngine.GUISettings UnityEngine.GUISkin::m_Settings
 	GUISettings_t1774757634 * ___m_Settings_24;
 	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GUIStyle> UnityEngine.GUISkin::m_Styles
-	Dictionary_2_t3742157810 * ___m_Styles_26;
+	Dictionary_2_t3742157810 * ___m_Styles_25;
 
 public:
 	inline static int32_t get_offset_of_m_Font_2() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282, ___m_Font_2)); }
@@ -34977,52 +34977,41 @@ public:
 		Il2CppCodeGenWriteBarrier((&___m_Settings_24), value);
 	}
 
-	inline static int32_t get_offset_of_m_Styles_26() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282, ___m_Styles_26)); }
-	inline Dictionary_2_t3742157810 * get_m_Styles_26() const { return ___m_Styles_26; }
-	inline Dictionary_2_t3742157810 ** get_address_of_m_Styles_26() { return &___m_Styles_26; }
-	inline void set_m_Styles_26(Dictionary_2_t3742157810 * value)
+	inline static int32_t get_offset_of_m_Styles_25() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282, ___m_Styles_25)); }
+	inline Dictionary_2_t3742157810 * get_m_Styles_25() const { return ___m_Styles_25; }
+	inline Dictionary_2_t3742157810 ** get_address_of_m_Styles_25() { return &___m_Styles_25; }
+	inline void set_m_Styles_25(Dictionary_2_t3742157810 * value)
 	{
-		___m_Styles_26 = value;
-		Il2CppCodeGenWriteBarrier((&___m_Styles_26), value);
+		___m_Styles_25 = value;
+		Il2CppCodeGenWriteBarrier((&___m_Styles_25), value);
 	}
 };
 
 struct GUISkin_t1244372282_StaticFields
 {
 public:
-	// UnityEngine.GUIStyle UnityEngine.GUISkin::ms_Error
-	GUIStyle_t3956901511 * ___ms_Error_25;
 	// UnityEngine.GUISkin/SkinChangedDelegate UnityEngine.GUISkin::m_SkinChanged
-	SkinChangedDelegate_t1143955295 * ___m_SkinChanged_27;
+	SkinChangedDelegate_t1143955295 * ___m_SkinChanged_26;
 	// UnityEngine.GUISkin UnityEngine.GUISkin::current
-	GUISkin_t1244372282 * ___current_28;
+	GUISkin_t1244372282 * ___current_27;
 
 public:
-	inline static int32_t get_offset_of_ms_Error_25() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282_StaticFields, ___ms_Error_25)); }
-	inline GUIStyle_t3956901511 * get_ms_Error_25() const { return ___ms_Error_25; }
-	inline GUIStyle_t3956901511 ** get_address_of_ms_Error_25() { return &___ms_Error_25; }
-	inline void set_ms_Error_25(GUIStyle_t3956901511 * value)
+	inline static int32_t get_offset_of_m_SkinChanged_26() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282_StaticFields, ___m_SkinChanged_26)); }
+	inline SkinChangedDelegate_t1143955295 * get_m_SkinChanged_26() const { return ___m_SkinChanged_26; }
+	inline SkinChangedDelegate_t1143955295 ** get_address_of_m_SkinChanged_26() { return &___m_SkinChanged_26; }
+	inline void set_m_SkinChanged_26(SkinChangedDelegate_t1143955295 * value)
 	{
-		___ms_Error_25 = value;
-		Il2CppCodeGenWriteBarrier((&___ms_Error_25), value);
+		___m_SkinChanged_26 = value;
+		Il2CppCodeGenWriteBarrier((&___m_SkinChanged_26), value);
 	}
 
-	inline static int32_t get_offset_of_m_SkinChanged_27() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282_StaticFields, ___m_SkinChanged_27)); }
-	inline SkinChangedDelegate_t1143955295 * get_m_SkinChanged_27() const { return ___m_SkinChanged_27; }
-	inline SkinChangedDelegate_t1143955295 ** get_address_of_m_SkinChanged_27() { return &___m_SkinChanged_27; }
-	inline void set_m_SkinChanged_27(SkinChangedDelegate_t1143955295 * value)
+	inline static int32_t get_offset_of_current_27() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282_StaticFields, ___current_27)); }
+	inline GUISkin_t1244372282 * get_current_27() const { return ___current_27; }
+	inline GUISkin_t1244372282 ** get_address_of_current_27() { return &___current_27; }
+	inline void set_current_27(GUISkin_t1244372282 * value)
 	{
-		___m_SkinChanged_27 = value;
-		Il2CppCodeGenWriteBarrier((&___m_SkinChanged_27), value);
-	}
-
-	inline static int32_t get_offset_of_current_28() { return static_cast<int32_t>(offsetof(GUISkin_t1244372282_StaticFields, ___current_28)); }
-	inline GUISkin_t1244372282 * get_current_28() const { return ___current_28; }
-	inline GUISkin_t1244372282 ** get_address_of_current_28() { return &___current_28; }
-	inline void set_current_28(GUISkin_t1244372282 * value)
-	{
-		___current_28 = value;
-		Il2CppCodeGenWriteBarrier((&___current_28), value);
+		___current_27 = value;
+		Il2CppCodeGenWriteBarrier((&___current_27), value);
 	}
 };
 

@@ -492,10 +492,6 @@ extern "C" void GUIStyleState_t1397964415_marshal_pinvoke(void* managedStructure
 extern "C" void GUIStyleState_t1397964415_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void GUIStyleState_t1397964415_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const RuntimeType GUIStyleState_t1397964415_0_0_0;
-extern "C" void SliderHandler_t1154919399_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
-extern "C" void SliderHandler_t1154919399_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
-extern "C" void SliderHandler_t1154919399_marshal_pinvoke_cleanup(void* marshaledStructure);
-extern const RuntimeType SliderHandler_t1154919399_0_0_0;
 extern "C" void DelegatePInvokeWrapper_NativeDeviceDiscoveredCallback_t3494240628();
 extern const RuntimeType NativeDeviceDiscoveredCallback_t3494240628_0_0_0;
 extern "C" void DelegatePInvokeWrapper_NativeEventCallback_t83445637();
@@ -1080,7 +1076,7 @@ extern "C" void DelegatePInvokeWrapper_DeathAngelVoidAction_t454341407();
 extern const RuntimeType DeathAngelVoidAction_t454341407_0_0_0;
 extern "C" void DelegatePInvokeWrapper_EventMethod_t886444918();
 extern const RuntimeType EventMethod_t886444918_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[334] = 
+extern Il2CppInteropData g_Il2CppInteropData[333] = 
 {
 	{ NULL, Context_t1744531130_marshal_pinvoke, Context_t1744531130_marshal_pinvoke_back, Context_t1744531130_marshal_pinvoke_cleanup, NULL, NULL, &Context_t1744531130_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t3294788190_marshal_pinvoke, Escape_t3294788190_marshal_pinvoke_back, Escape_t3294788190_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t3294788190_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -1217,7 +1213,6 @@ extern Il2CppInteropData g_Il2CppInteropData[334] =
 	{ DelegatePInvokeWrapper_SkinChangedDelegate_t1143955295, NULL, NULL, NULL, NULL, NULL, &SkinChangedDelegate_t1143955295_0_0_0 } /* UnityEngine.GUISkin/SkinChangedDelegate */,
 	{ NULL, GUIStyle_t3956901511_marshal_pinvoke, GUIStyle_t3956901511_marshal_pinvoke_back, GUIStyle_t3956901511_marshal_pinvoke_cleanup, NULL, NULL, &GUIStyle_t3956901511_0_0_0 } /* UnityEngine.GUIStyle */,
 	{ NULL, GUIStyleState_t1397964415_marshal_pinvoke, GUIStyleState_t1397964415_marshal_pinvoke_back, GUIStyleState_t1397964415_marshal_pinvoke_cleanup, NULL, NULL, &GUIStyleState_t1397964415_0_0_0 } /* UnityEngine.GUIStyleState */,
-	{ NULL, SliderHandler_t1154919399_marshal_pinvoke, SliderHandler_t1154919399_marshal_pinvoke_back, SliderHandler_t1154919399_marshal_pinvoke_cleanup, NULL, NULL, &SliderHandler_t1154919399_0_0_0 } /* UnityEngine.SliderHandler */,
 	{ DelegatePInvokeWrapper_NativeDeviceDiscoveredCallback_t3494240628, NULL, NULL, NULL, NULL, NULL, &NativeDeviceDiscoveredCallback_t3494240628_0_0_0 } /* UnityEngineInternal.Input.NativeDeviceDiscoveredCallback */,
 	{ DelegatePInvokeWrapper_NativeEventCallback_t83445637, NULL, NULL, NULL, NULL, NULL, &NativeEventCallback_t83445637_0_0_0 } /* UnityEngineInternal.Input.NativeEventCallback */,
 	{ NULL, NativeInputDeviceInfo_t3032009285_marshal_pinvoke, NativeInputDeviceInfo_t3032009285_marshal_pinvoke_back, NativeInputDeviceInfo_t3032009285_marshal_pinvoke_cleanup, NULL, NULL, &NativeInputDeviceInfo_t3032009285_0_0_0 } /* UnityEngineInternal.Input.NativeInputDeviceInfo */,

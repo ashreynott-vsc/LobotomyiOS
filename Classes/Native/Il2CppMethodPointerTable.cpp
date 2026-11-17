@@ -15878,8 +15878,6 @@ extern "C" void Mathf_Repeat_m1502810009 ();
 extern "C" void Mathf_InverseLerp_m4155825980 ();
 extern "C" void Mathf__cctor_m1175545152 ();
 extern "C" void Matrix4x4__ctor_m53065545_AdjustorThunk ();
-extern "C" void Matrix4x4_TRS_m3801934620 ();
-extern "C" void Matrix4x4_INTERNAL_CALL_TRS_m1955463634 ();
 extern "C" void Matrix4x4_GetHashCode_m4034747639_AdjustorThunk ();
 extern "C" void Matrix4x4_Equals_m3210071278_AdjustorThunk ();
 extern "C" void Matrix4x4_op_Multiply_m1876492807 ();
@@ -16110,7 +16108,6 @@ extern "C" void Ray_get_direction_m761601601_AdjustorThunk ();
 extern "C" void Ray_GetPoint_m1852405345_AdjustorThunk ();
 extern "C" void Ray_ToString_m1732834890_AdjustorThunk ();
 extern "C" void Rect__ctor_m2614021312_AdjustorThunk ();
-extern "C" void Rect__ctor_m499992824_AdjustorThunk ();
 extern "C" void Rect_get_zero_m4034156123 ();
 extern "C" void Rect_MinMaxRect_m1878824187 ();
 extern "C" void Rect_get_x_m3839990490_AdjustorThunk ();
@@ -16418,8 +16415,6 @@ extern "C" void StackTraceUtility_ExtractStringFromExceptionInternal_m2686726792
 extern "C" void StackTraceUtility_PostprocessStacktrace_m1043256299 ();
 extern "C" void StackTraceUtility_ExtractFormattedStackTrace_m1281750362 ();
 extern "C" void StackTraceUtility__cctor_m1981266436 ();
-extern "C" void SystemClock_get_now_m3370142516 ();
-extern "C" void SystemClock__cctor_m1862440887 ();
 extern "C" void SystemInfo_get_operatingSystemFamily_m4256884728 ();
 extern "C" void SystemInfo_get_supportsImageEffects_m2886934848 ();
 extern "C" void SystemInfo_get_supports3DTextures_m3262866358 ();
@@ -16625,6 +16620,8 @@ extern "C" void Vector2_get_Item_m3559215723_AdjustorThunk ();
 extern "C" void Vector2_set_Item_m3557490725_AdjustorThunk ();
 extern "C" void Vector2_Lerp_m854472224 ();
 extern "C" void Vector2_Scale_m165605769 ();
+extern "C" void Vector2_Normalize_m1906922873_AdjustorThunk ();
+extern "C" void Vector2_get_normalized_m2683665860_AdjustorThunk ();
 extern "C" void Vector2_ToString_m1205609053_AdjustorThunk ();
 extern "C" void Vector2_GetHashCode_m3916089713_AdjustorThunk ();
 extern "C" void Vector2_Equals_m832062989_AdjustorThunk ();
@@ -16632,6 +16629,7 @@ extern "C" void Vector2_Dot_m1554553447 ();
 extern "C" void Vector2_get_magnitude_m2752892833_AdjustorThunk ();
 extern "C" void Vector2_get_sqrMagnitude_m837837635_AdjustorThunk ();
 extern "C" void Vector2_Distance_m3048868881 ();
+extern "C" void Vector2_SqrMagnitude_m2507415696_AdjustorThunk ();
 extern "C" void Vector2_op_Addition_m800700293 ();
 extern "C" void Vector2_op_Subtraction_m73004381 ();
 extern "C" void Vector2_op_Multiply_m2347887432 ();
@@ -17232,9 +17230,7 @@ extern "C" void Event_Cleanup_m2477919477 ();
 extern "C" void Event_get_rawType_m2996166859 ();
 extern "C" void Event_get_type_m1370041809 ();
 extern "C" void Event_set_type_m3901523645 ();
-extern "C" void Event_GetTypeForControl_m70254145 ();
 extern "C" void Event_Internal_GetMousePosition_m1101229675 ();
-extern "C" void Event_Internal_GetMouseDelta_m1376443907 ();
 extern "C" void Event_get_modifiers_m995073384 ();
 extern "C" void Event_set_modifiers_m1736248727 ();
 extern "C" void Event_get_clickCount_m2853192404 ();
@@ -17249,7 +17245,6 @@ extern "C" void Event_Internal_Use_m1097157232 ();
 extern "C" void Event_PopEvent_m2275423287 ();
 extern "C" void Event_Finalize_m2235592665 ();
 extern "C" void Event_get_mousePosition_m733809635 ();
-extern "C" void Event_get_delta_m4188019461 ();
 extern "C" void Event_get_shift_m2390976042 ();
 extern "C" void Event_get_alt_m3910191449 ();
 extern "C" void Event_get_current_m2393892120 ();
@@ -17267,40 +17262,23 @@ extern "C" void GUI_DoLabel_m1422046243 ();
 extern "C" void GUI_INTERNAL_CALL_DoLabel_m2007226197 ();
 extern "C" void GUI_DoButton_m3631925833 ();
 extern "C" void GUI_INTERNAL_CALL_DoButton_m789917463 ();
-extern "C" void GUI_get_usePageScrollbars_m938601778 ();
-extern "C" void GUI_InternalRepaintEditorWindow_m3647566631 ();
-extern "C" void GUI_get_scrollTroughSide_m947384426 ();
-extern "C" void GUI_set_scrollTroughSide_m1819344668 ();
-extern "C" void GUI_get_nextScrollStepTime_m2576333102 ();
 extern "C" void GUI_set_nextScrollStepTime_m1026410471 ();
 extern "C" void GUI_set_skin_m3073574632 ();
 extern "C" void GUI_get_skin_m1874615010 ();
 extern "C" void GUI_DoSetSkin_m604425702 ();
-extern "C" void GUI_get_matrix_m2941988505 ();
-extern "C" void GUI_set_matrix_m3965800372 ();
 extern "C" void GUI_Label_m3404668030 ();
-extern "C" void GUI_Box_m1417531562 ();
 extern "C" void GUI_Box_m1178071121 ();
 extern "C" void GUI_Button_m1518979886 ();
-extern "C" void GUI_Button_m2223708732 ();
 extern "C" void GUI_Button_m1546789121 ();
-extern "C" void GUI_DoRepeatButton_m3185749623 ();
 extern "C" void GUI_PasswordFieldGetStrToShow_m613030658 ();
 extern "C" void GUI_DoTextField_m2995045020 ();
 extern "C" void GUI_DoTextField_m981649653 ();
 extern "C" void GUI_DoTextField_m1332167741 ();
 extern "C" void GUI_HandleTextFieldEventForTouchscreen_m1092737262 ();
 extern "C" void GUI_HandleTextFieldEventForDesktop_m2685229389 ();
-extern "C" void GUI_Slider_m2442020672 ();
-extern "C" void GUI_HorizontalScrollbar_m1728204509 ();
-extern "C" void GUI_ScrollerRepeatButton_m211796786 ();
-extern "C" void GUI_VerticalScrollbar_m4069779343 ();
-extern "C" void GUI_Scroller_m311420527 ();
 extern "C" void GUI_BeginGroup_m3916957346 ();
 extern "C" void GUI_BeginGroup_m614745649 ();
 extern "C" void GUI_EndGroup_m2365201131 ();
-extern "C" void GUI_BeginScrollView_m1877251175 ();
-extern "C" void GUI_EndScrollView_m1403810075 ();
 extern "C" void GUI_CallWindowDelegate_m3309453386 ();
 extern "C" void WindowFunction__ctor_m2544237635 ();
 extern "C" void WindowFunction_Invoke_m3205356586 ();
@@ -17309,12 +17287,7 @@ extern "C" void WindowFunction_EndInvoke_m2850430521 ();
 extern "C" void GUIClip_Internal_Push_m2522557466 ();
 extern "C" void GUIClip_INTERNAL_CALL_Internal_Push_m1987478103 ();
 extern "C" void GUIClip_Internal_Pop_m2311481377 ();
-extern "C" void GUIClip_GetMatrix_m2318205077 ();
-extern "C" void GUIClip_INTERNAL_CALL_GetMatrix_m1709770068 ();
-extern "C" void GUIClip_SetMatrix_m1909786704 ();
-extern "C" void GUIClip_INTERNAL_CALL_SetMatrix_m1474850923 ();
 extern "C" void GUIClip_Push_m1724200065 ();
-extern "C" void GUIClip_Pop_m3335776105 ();
 extern "C" void GUIContent__ctor_m3360759894 ();
 extern "C" void GUIContent__ctor_m890195579 ();
 extern "C" void GUIContent__ctor_m2166411317 ();
@@ -17327,13 +17300,10 @@ extern "C" void GUIContent_Temp_m3538793263 ();
 extern "C" void GUIContent_ClearStaticCache_m1205116045 ();
 extern "C" void GUIContent__cctor_m3964999451 ();
 extern "C" void GUILayout_Label_m1960000298 ();
-extern "C" void GUILayout_Label_m1096010274 ();
 extern "C" void GUILayout_DoLabel_m607126153 ();
 extern "C" void GUILayout_Button_m1340817034 ();
-extern "C" void GUILayout_Button_m3728892478 ();
 extern "C" void GUILayout_DoButton_m1587659841 ();
 extern "C" void GUILayout_TextField_m3881040103 ();
-extern "C" void GUILayout_TextField_m4150770174 ();
 extern "C" void GUILayout_DoTextField_m1420261529 ();
 extern "C" void GUILayout_Space_m3613068479 ();
 extern "C" void GUILayout_FlexibleSpace_m1607797253 ();
@@ -17343,10 +17313,6 @@ extern "C" void GUILayout_EndHorizontal_m125407884 ();
 extern "C" void GUILayout_BeginArea_m3340577749 ();
 extern "C" void GUILayout_BeginArea_m1296045995 ();
 extern "C" void GUILayout_EndArea_m2046611416 ();
-extern "C" void GUILayout_BeginScrollView_m3542895037 ();
-extern "C" void GUILayout_BeginScrollView_m3375171120 ();
-extern "C" void GUILayout_EndScrollView_m1561653937 ();
-extern "C" void GUILayout_EndScrollView_m4250425993 ();
 extern "C" void GUILayout_Width_m1777696537 ();
 extern "C" void GUILayout_Height_m3349769634 ();
 extern "C" void GUILayout_ExpandWidth_m1325694983 ();
@@ -17413,36 +17379,22 @@ extern "C" void GUISettings_get_cursorFlashSpeed_m873595026 ();
 extern "C" void GUISettings_get_selectionColor_m689844895 ();
 extern "C" void GUISkin__ctor_m3576427628 ();
 extern "C" void GUISkin_get_font_m3937910082 ();
-extern "C" void GUISkin_get_box_m1243835431 ();
 extern "C" void GUISkin_get_label_m1693050720 ();
 extern "C" void GUISkin_get_textField_m1918733755 ();
 extern "C" void GUISkin_get_button_m2792560996 ();
-extern "C" void GUISkin_get_horizontalScrollbar_m358224077 ();
-extern "C" void GUISkin_get_verticalScrollbar_m485236103 ();
-extern "C" void GUISkin_get_scrollView_m1326654741 ();
 extern "C" void GUISkin_get_settings_m545552441 ();
-extern "C" void GUISkin_get_error_m3656702485 ();
-extern "C" void GUISkin_BuildStyleCache_m1553793917 ();
-extern "C" void GUISkin_GetStyle_m2344315993 ();
-extern "C" void GUISkin_FindStyle_m1654492643 ();
 extern "C" void GUISkin_MakeCurrent_m3239192349 ();
 extern "C" void SkinChangedDelegate__ctor_m1270439727 ();
 extern "C" void SkinChangedDelegate_Invoke_m3627689407 ();
 extern "C" void SkinChangedDelegate_BeginInvoke_m2963887440 ();
 extern "C" void SkinChangedDelegate_EndInvoke_m1346531361 ();
 extern "C" void GUIStyle__ctor_m4038363858 ();
-extern "C" void GUIStyle__ctor_m2912682974 ();
 extern "C" void GUIStyle_Init_m3558067362 ();
-extern "C" void GUIStyle_InitCopy_m1059147009 ();
 extern "C" void GUIStyle_Cleanup_m3602061751 ();
 extern "C" void GUIStyle_get_name_m2109418832 ();
-extern "C" void GUIStyle_set_name_m704107698 ();
-extern "C" void GUIStyle_GetStyleStatePtr_m751258175 ();
-extern "C" void GUIStyle_INTERNAL_CALL_GetStyleStatePtr_m1559655240 ();
 extern "C" void GUIStyle_GetRectOffsetPtr_m2881421249 ();
 extern "C" void GUIStyle_INTERNAL_CALL_GetRectOffsetPtr_m152975056 ();
 extern "C" void GUIStyle_get_imagePosition_m2258358513 ();
-extern "C" void GUIStyle_set_alignment_m3944619660 ();
 extern "C" void GUIStyle_get_wordWrap_m1603285441 ();
 extern "C" void GUIStyle_get_contentOffset_m3404024487 ();
 extern "C" void GUIStyle_set_contentOffset_m1529148399 ();
@@ -17455,12 +17407,9 @@ extern "C" void GUIStyle_get_fixedHeight_m2868324709 ();
 extern "C" void GUIStyle_get_stretchWidth_m3556443132 ();
 extern "C" void GUIStyle_set_stretchWidth_m2564034386 ();
 extern "C" void GUIStyle_get_stretchHeight_m4172805773 ();
-extern "C" void GUIStyle_set_stretchHeight_m3442828884 ();
 extern "C" void GUIStyle_Internal_GetLineHeight_m4231395871 ();
 extern "C" void GUIStyle_GetFontInternal_m1734480648 ();
 extern "C" void GUIStyle_set_fontSize_m1566850023 ();
-extern "C" void GUIStyle_set_fontStyle_m1497341802 ();
-extern "C" void GUIStyle_Internal_Draw_m2685840060 ();
 extern "C" void GUIStyle_Internal_Draw2_m573548245 ();
 extern "C" void GUIStyle_INTERNAL_CALL_Internal_Draw2_m1418187183 ();
 extern "C" void GUIStyle_Internal_GetCursorFlashOffset_m862474508 ();
@@ -17478,13 +17427,10 @@ extern "C" void GUIStyle_INTERNAL_CALL_Internal_CalcSizeWithConstraints_m2830618
 extern "C" void GUIStyle_Internal_CalcHeight_m446125850 ();
 extern "C" void GUIStyle_Internal_CalcMinMaxWidth_m1461639539 ();
 extern "C" void GUIStyle_Finalize_m1912900812 ();
-extern "C" void GUIStyle_get_normal_m729441812 ();
 extern "C" void GUIStyle_get_margin_m3595798603 ();
 extern "C" void GUIStyle_get_padding_m3526264743 ();
 extern "C" void GUIStyle_get_font_m2893473160 ();
 extern "C" void GUIStyle_get_lineHeight_m3399768780 ();
-extern "C" void GUIStyle_Internal_Draw_m2038284020 ();
-extern "C" void GUIStyle_Draw_m1825314338 ();
 extern "C" void GUIStyle_Draw_m810654952 ();
 extern "C" void GUIStyle_Draw_m3190299676 ();
 extern "C" void GUIStyle_DrawCursor_m2683410016 ();
@@ -17502,21 +17448,12 @@ extern "C" void GUIStyle_CalcMinMaxWidth_m999727240 ();
 extern "C" void GUIStyle_ToString_m3014660435 ();
 extern "C" void GUIStyle__cctor_m3477697449 ();
 extern "C" void GUIStyleState__ctor_m1648430456 ();
-extern "C" void GUIStyleState__ctor_m3422479228 ();
 extern "C" void GUIStyleState_Init_m3047380323 ();
 extern "C" void GUIStyleState_Cleanup_m696329069 ();
-extern "C" void GUIStyleState_SetBackgroundInternal_m3108784403 ();
-extern "C" void GUIStyleState_GetBackgroundInternal_m2058746706 ();
-extern "C" void GUIStyleState_set_textColor_m1105876047 ();
-extern "C" void GUIStyleState_INTERNAL_set_textColor_m762035767 ();
-extern "C" void GUIStyleState_GetGUIStyleState_m74106824 ();
 extern "C" void GUIStyleState_Finalize_m1466589588 ();
-extern "C" void GUIStyleState_set_background_m369476077 ();
 extern "C" void GUITargetAttribute_GetGUITargetAttrValue_m2954410352 ();
 extern "C" void GUIUtility_Internal_GetPixelsPerPoint_m290411053 ();
 extern "C" void GUIUtility_GetControlID_m2479566685 ();
-extern "C" void GUIUtility_Internal_GetNextControlID2_m800052281 ();
-extern "C" void GUIUtility_INTERNAL_CALL_Internal_GetNextControlID2_m3439369849 ();
 extern "C" void GUIUtility_Internal_GetHotControl_m2856765646 ();
 extern "C" void GUIUtility_Internal_SetHotControl_m3891677565 ();
 extern "C" void GUIUtility_Internal_GetKeyboardControl_m2201588114 ();
@@ -17530,7 +17467,6 @@ extern "C" void GUIUtility_set_mouseUsed_m1308175216 ();
 extern "C" void GUIUtility_set_textFieldInput_m4036087722 ();
 extern "C" void GUIUtility_get_pixelsPerPoint_m2369948084 ();
 extern "C" void GUIUtility_GetControlID_m2809062763 ();
-extern "C" void GUIUtility_GetControlID_m1129488225 ();
 extern "C" void GUIUtility_GetStateObject_m1741015855 ();
 extern "C" void GUIUtility_set_guiIsExiting_m1558910088 ();
 extern "C" void GUIUtility_get_hotControl_m226353344 ();
@@ -17554,33 +17490,6 @@ extern "C" void GUIWordWrapSizer__ctor_m3789151557 ();
 extern "C" void GUIWordWrapSizer_CalcWidth_m606896659 ();
 extern "C" void GUIWordWrapSizer_CalcHeight_m2277788216 ();
 extern "C" void ScrollViewState__ctor_m1599613496 ();
-extern "C" void SliderHandler__ctor_m3604917603_AdjustorThunk ();
-extern "C" void SliderHandler_Handle_m3267896861_AdjustorThunk ();
-extern "C" void SliderHandler_OnMouseDown_m2641794745_AdjustorThunk ();
-extern "C" void SliderHandler_OnMouseDrag_m4101818783_AdjustorThunk ();
-extern "C" void SliderHandler_OnMouseUp_m2213928110_AdjustorThunk ();
-extern "C" void SliderHandler_OnRepaint_m3595791619_AdjustorThunk ();
-extern "C" void SliderHandler_CurrentEventType_m878588972_AdjustorThunk ();
-extern "C" void SliderHandler_CurrentScrollTroughSide_m3397964318_AdjustorThunk ();
-extern "C" void SliderHandler_IsEmptySlider_m1807819237_AdjustorThunk ();
-extern "C" void SliderHandler_SupportsPageMovements_m159770300_AdjustorThunk ();
-extern "C" void SliderHandler_PageMovementValue_m2815790958_AdjustorThunk ();
-extern "C" void SliderHandler_PageUpMovementBound_m3637566765_AdjustorThunk ();
-extern "C" void SliderHandler_CurrentEvent_m2039204809_AdjustorThunk ();
-extern "C" void SliderHandler_ValueForCurrentMousePosition_m490861254_AdjustorThunk ();
-extern "C" void SliderHandler_Clamp_m3554279189_AdjustorThunk ();
-extern "C" void SliderHandler_ThumbSelectionRect_m3197292790_AdjustorThunk ();
-extern "C" void SliderHandler_StartDraggingWithValue_m2471315603_AdjustorThunk ();
-extern "C" void SliderHandler_SliderState_m3376329127_AdjustorThunk ();
-extern "C" void SliderHandler_ThumbRect_m2303330165_AdjustorThunk ();
-extern "C" void SliderHandler_VerticalThumbRect_m408727440_AdjustorThunk ();
-extern "C" void SliderHandler_HorizontalThumbRect_m2649482396_AdjustorThunk ();
-extern "C" void SliderHandler_ClampedCurrentValue_m103969054_AdjustorThunk ();
-extern "C" void SliderHandler_MousePosition_m984507596_AdjustorThunk ();
-extern "C" void SliderHandler_ValuesPerPixel_m698349361_AdjustorThunk ();
-extern "C" void SliderHandler_ThumbSize_m1690130243_AdjustorThunk ();
-extern "C" void SliderHandler_MaxValue_m4033114770_AdjustorThunk ();
-extern "C" void SliderHandler_MinValue_m4189250570_AdjustorThunk ();
 extern "C" void SliderState__ctor_m3367986001 ();
 extern "C" void TextEditor__ctor_m242049450 ();
 extern "C" void TextEditor_get_text_m3620786721 ();
@@ -17887,6 +17796,7 @@ extern "C" void Tilemap_RefreshTile_m1116399155 ();
 extern "C" void Tilemap_RefreshTile_Injected_m3594480345 ();
 extern "C" void Canvas__ctor_m2509635467 ();
 extern "C" void Canvas_get_renderMode_m841659411 ();
+extern "C" void Canvas_set_renderMode_m1564704306 ();
 extern "C" void Canvas_get_isRootCanvas_m1263191473 ();
 extern "C" void Canvas_get_worldCamera_m3516267897 ();
 extern "C" void Canvas_set_worldCamera_m1964154654 ();
@@ -43878,15 +43788,32 @@ extern "C" void MobileScreenManager_OnDestroy_m2653332534 ();
 extern "C" void MobileScreenManager_Start_m3747554585 ();
 extern "C" void MobileScreenManager_OnSceneLoaded_m3492888858 ();
 extern "C" void MobileScreenManager_Update_m4254841170 ();
+extern "C" void MobileScreenManager_ToggleHUD_m3217349342 ();
+extern "C" void MobileScreenManager_EnforceFullscreenPerFrame_m1603762658 ();
 extern "C" void MobileScreenManager_ApplyInGameUIScaling_m4004252767 ();
 extern "C" void MobileScreenManager_SetAspectMode_m4064974544 ();
 extern "C" void MobileScreenManager_EnsureClearCamera_m2529242480 ();
 extern "C" void MobileScreenManager_ApplyFullscreenSettings_m1725697124 ();
-extern "C" void MobileScreenManager_MakeSolidTexture_m24044968 ();
-extern "C" void MobileScreenManager_InitStyles_m2437874210 ();
-extern "C" void MobileScreenManager_OnGUI_m41762560 ();
+extern "C" void MobileScreenManager_EnsureLiquidGlassHUD_m3452843240 ();
+extern "C" void MobileScreenManager_BuildModalContent_m2303666760 ();
+extern "C" void MobileScreenManager_UpdateAspectButtonColors_m1999088159 ();
+extern "C" void MobileScreenManager_UpdateHUDTelemetry_m1323223209 ();
+extern "C" void MobileScreenManager_CreateUIButton_m4242935249 ();
 extern "C" void MobileScreenManager_TriggerEsc_m3883136579 ();
 extern "C" void MobileScreenManager_RunCheat_m1197314851 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__0_m258996958 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__1_m2215312094 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__2_m641333982 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__3_m2597649118 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__4_m3789290206 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__5_m1450638046 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__6_m4171627230 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__7_m1832975070 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__8_m3024616158 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__9_m685963998 ();
+extern "C" void MobileScreenManager_U3CBuildModalContentU3Em__A_m3451583198 ();
+extern "C" void U3CCreateUIButtonU3Ec__AnonStorey0__ctor_m2234002684 ();
+extern "C" void U3CCreateUIButtonU3Ec__AnonStorey0_U3CU3Em__0_m3865350907 ();
 extern "C" void MoneyModel__ctor_m2887490024 ();
 extern "C" void MoneyModel_get_instance_m889587587 ();
 extern "C" void MoneyModel_Init_m4109456535 ();
@@ -54280,7 +54207,7 @@ extern "C" void ZoomTutorial__ctor_m3253980221 ();
 extern "C" void ZoomTutorial_StartTutorial_m4043354523 ();
 extern "C" void ZoomTutorial_CompleteTutorial_m736784446 ();
 extern "C" void ZoomTutorial_CheckIfHappening_m4251022969 ();
-extern const Il2CppMethodPointer g_MethodPointers[54262] = 
+extern const Il2CppMethodPointer g_MethodPointers[54189] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -70142,8 +70069,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Mathf_InverseLerp_m4155825980,
 	Mathf__cctor_m1175545152,
 	Matrix4x4__ctor_m53065545_AdjustorThunk,
-	Matrix4x4_TRS_m3801934620,
-	Matrix4x4_INTERNAL_CALL_TRS_m1955463634,
 	Matrix4x4_GetHashCode_m4034747639_AdjustorThunk,
 	Matrix4x4_Equals_m3210071278_AdjustorThunk,
 	Matrix4x4_op_Multiply_m1876492807,
@@ -70374,7 +70299,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Ray_GetPoint_m1852405345_AdjustorThunk,
 	Ray_ToString_m1732834890_AdjustorThunk,
 	Rect__ctor_m2614021312_AdjustorThunk,
-	Rect__ctor_m499992824_AdjustorThunk,
 	Rect_get_zero_m4034156123,
 	Rect_MinMaxRect_m1878824187,
 	Rect_get_x_m3839990490_AdjustorThunk,
@@ -70682,8 +70606,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	StackTraceUtility_PostprocessStacktrace_m1043256299,
 	StackTraceUtility_ExtractFormattedStackTrace_m1281750362,
 	StackTraceUtility__cctor_m1981266436,
-	SystemClock_get_now_m3370142516,
-	SystemClock__cctor_m1862440887,
 	SystemInfo_get_operatingSystemFamily_m4256884728,
 	SystemInfo_get_supportsImageEffects_m2886934848,
 	SystemInfo_get_supports3DTextures_m3262866358,
@@ -70889,6 +70811,8 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Vector2_set_Item_m3557490725_AdjustorThunk,
 	Vector2_Lerp_m854472224,
 	Vector2_Scale_m165605769,
+	Vector2_Normalize_m1906922873_AdjustorThunk,
+	Vector2_get_normalized_m2683665860_AdjustorThunk,
 	Vector2_ToString_m1205609053_AdjustorThunk,
 	Vector2_GetHashCode_m3916089713_AdjustorThunk,
 	Vector2_Equals_m832062989_AdjustorThunk,
@@ -70896,6 +70820,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Vector2_get_magnitude_m2752892833_AdjustorThunk,
 	Vector2_get_sqrMagnitude_m837837635_AdjustorThunk,
 	Vector2_Distance_m3048868881,
+	Vector2_SqrMagnitude_m2507415696_AdjustorThunk,
 	Vector2_op_Addition_m800700293,
 	Vector2_op_Subtraction_m73004381,
 	Vector2_op_Multiply_m2347887432,
@@ -71496,9 +71421,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Event_get_rawType_m2996166859,
 	Event_get_type_m1370041809,
 	Event_set_type_m3901523645,
-	Event_GetTypeForControl_m70254145,
 	Event_Internal_GetMousePosition_m1101229675,
-	Event_Internal_GetMouseDelta_m1376443907,
 	Event_get_modifiers_m995073384,
 	Event_set_modifiers_m1736248727,
 	Event_get_clickCount_m2853192404,
@@ -71513,7 +71436,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Event_PopEvent_m2275423287,
 	Event_Finalize_m2235592665,
 	Event_get_mousePosition_m733809635,
-	Event_get_delta_m4188019461,
 	Event_get_shift_m2390976042,
 	Event_get_alt_m3910191449,
 	Event_get_current_m2393892120,
@@ -71531,40 +71453,23 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUI_INTERNAL_CALL_DoLabel_m2007226197,
 	GUI_DoButton_m3631925833,
 	GUI_INTERNAL_CALL_DoButton_m789917463,
-	GUI_get_usePageScrollbars_m938601778,
-	GUI_InternalRepaintEditorWindow_m3647566631,
-	GUI_get_scrollTroughSide_m947384426,
-	GUI_set_scrollTroughSide_m1819344668,
-	GUI_get_nextScrollStepTime_m2576333102,
 	GUI_set_nextScrollStepTime_m1026410471,
 	GUI_set_skin_m3073574632,
 	GUI_get_skin_m1874615010,
 	GUI_DoSetSkin_m604425702,
-	GUI_get_matrix_m2941988505,
-	GUI_set_matrix_m3965800372,
 	GUI_Label_m3404668030,
-	GUI_Box_m1417531562,
 	GUI_Box_m1178071121,
 	GUI_Button_m1518979886,
-	GUI_Button_m2223708732,
 	GUI_Button_m1546789121,
-	GUI_DoRepeatButton_m3185749623,
 	GUI_PasswordFieldGetStrToShow_m613030658,
 	GUI_DoTextField_m2995045020,
 	GUI_DoTextField_m981649653,
 	GUI_DoTextField_m1332167741,
 	GUI_HandleTextFieldEventForTouchscreen_m1092737262,
 	GUI_HandleTextFieldEventForDesktop_m2685229389,
-	GUI_Slider_m2442020672,
-	GUI_HorizontalScrollbar_m1728204509,
-	GUI_ScrollerRepeatButton_m211796786,
-	GUI_VerticalScrollbar_m4069779343,
-	GUI_Scroller_m311420527,
 	GUI_BeginGroup_m3916957346,
 	GUI_BeginGroup_m614745649,
 	GUI_EndGroup_m2365201131,
-	GUI_BeginScrollView_m1877251175,
-	GUI_EndScrollView_m1403810075,
 	GUI_CallWindowDelegate_m3309453386,
 	WindowFunction__ctor_m2544237635,
 	WindowFunction_Invoke_m3205356586,
@@ -71573,12 +71478,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIClip_Internal_Push_m2522557466,
 	GUIClip_INTERNAL_CALL_Internal_Push_m1987478103,
 	GUIClip_Internal_Pop_m2311481377,
-	GUIClip_GetMatrix_m2318205077,
-	GUIClip_INTERNAL_CALL_GetMatrix_m1709770068,
-	GUIClip_SetMatrix_m1909786704,
-	GUIClip_INTERNAL_CALL_SetMatrix_m1474850923,
 	GUIClip_Push_m1724200065,
-	GUIClip_Pop_m3335776105,
 	GUIContent__ctor_m3360759894,
 	GUIContent__ctor_m890195579,
 	GUIContent__ctor_m2166411317,
@@ -71591,13 +71491,10 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIContent_ClearStaticCache_m1205116045,
 	GUIContent__cctor_m3964999451,
 	GUILayout_Label_m1960000298,
-	GUILayout_Label_m1096010274,
 	GUILayout_DoLabel_m607126153,
 	GUILayout_Button_m1340817034,
-	GUILayout_Button_m3728892478,
 	GUILayout_DoButton_m1587659841,
 	GUILayout_TextField_m3881040103,
-	GUILayout_TextField_m4150770174,
 	GUILayout_DoTextField_m1420261529,
 	GUILayout_Space_m3613068479,
 	GUILayout_FlexibleSpace_m1607797253,
@@ -71607,10 +71504,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUILayout_BeginArea_m3340577749,
 	GUILayout_BeginArea_m1296045995,
 	GUILayout_EndArea_m2046611416,
-	GUILayout_BeginScrollView_m3542895037,
-	GUILayout_BeginScrollView_m3375171120,
-	GUILayout_EndScrollView_m1561653937,
-	GUILayout_EndScrollView_m4250425993,
 	GUILayout_Width_m1777696537,
 	GUILayout_Height_m3349769634,
 	GUILayout_ExpandWidth_m1325694983,
@@ -71677,36 +71570,22 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUISettings_get_selectionColor_m689844895,
 	GUISkin__ctor_m3576427628,
 	GUISkin_get_font_m3937910082,
-	GUISkin_get_box_m1243835431,
 	GUISkin_get_label_m1693050720,
 	GUISkin_get_textField_m1918733755,
 	GUISkin_get_button_m2792560996,
-	GUISkin_get_horizontalScrollbar_m358224077,
-	GUISkin_get_verticalScrollbar_m485236103,
-	GUISkin_get_scrollView_m1326654741,
 	GUISkin_get_settings_m545552441,
-	GUISkin_get_error_m3656702485,
-	GUISkin_BuildStyleCache_m1553793917,
-	GUISkin_GetStyle_m2344315993,
-	GUISkin_FindStyle_m1654492643,
 	GUISkin_MakeCurrent_m3239192349,
 	SkinChangedDelegate__ctor_m1270439727,
 	SkinChangedDelegate_Invoke_m3627689407,
 	SkinChangedDelegate_BeginInvoke_m2963887440,
 	SkinChangedDelegate_EndInvoke_m1346531361,
 	GUIStyle__ctor_m4038363858,
-	GUIStyle__ctor_m2912682974,
 	GUIStyle_Init_m3558067362,
-	GUIStyle_InitCopy_m1059147009,
 	GUIStyle_Cleanup_m3602061751,
 	GUIStyle_get_name_m2109418832,
-	GUIStyle_set_name_m704107698,
-	GUIStyle_GetStyleStatePtr_m751258175,
-	GUIStyle_INTERNAL_CALL_GetStyleStatePtr_m1559655240,
 	GUIStyle_GetRectOffsetPtr_m2881421249,
 	GUIStyle_INTERNAL_CALL_GetRectOffsetPtr_m152975056,
 	GUIStyle_get_imagePosition_m2258358513,
-	GUIStyle_set_alignment_m3944619660,
 	GUIStyle_get_wordWrap_m1603285441,
 	GUIStyle_get_contentOffset_m3404024487,
 	GUIStyle_set_contentOffset_m1529148399,
@@ -71719,12 +71598,9 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIStyle_get_stretchWidth_m3556443132,
 	GUIStyle_set_stretchWidth_m2564034386,
 	GUIStyle_get_stretchHeight_m4172805773,
-	GUIStyle_set_stretchHeight_m3442828884,
 	GUIStyle_Internal_GetLineHeight_m4231395871,
 	GUIStyle_GetFontInternal_m1734480648,
 	GUIStyle_set_fontSize_m1566850023,
-	GUIStyle_set_fontStyle_m1497341802,
-	GUIStyle_Internal_Draw_m2685840060,
 	GUIStyle_Internal_Draw2_m573548245,
 	GUIStyle_INTERNAL_CALL_Internal_Draw2_m1418187183,
 	GUIStyle_Internal_GetCursorFlashOffset_m862474508,
@@ -71742,13 +71618,10 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIStyle_Internal_CalcHeight_m446125850,
 	GUIStyle_Internal_CalcMinMaxWidth_m1461639539,
 	GUIStyle_Finalize_m1912900812,
-	GUIStyle_get_normal_m729441812,
 	GUIStyle_get_margin_m3595798603,
 	GUIStyle_get_padding_m3526264743,
 	GUIStyle_get_font_m2893473160,
 	GUIStyle_get_lineHeight_m3399768780,
-	GUIStyle_Internal_Draw_m2038284020,
-	GUIStyle_Draw_m1825314338,
 	GUIStyle_Draw_m810654952,
 	GUIStyle_Draw_m3190299676,
 	GUIStyle_DrawCursor_m2683410016,
@@ -71766,21 +71639,12 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIStyle_ToString_m3014660435,
 	GUIStyle__cctor_m3477697449,
 	GUIStyleState__ctor_m1648430456,
-	GUIStyleState__ctor_m3422479228,
 	GUIStyleState_Init_m3047380323,
 	GUIStyleState_Cleanup_m696329069,
-	GUIStyleState_SetBackgroundInternal_m3108784403,
-	GUIStyleState_GetBackgroundInternal_m2058746706,
-	GUIStyleState_set_textColor_m1105876047,
-	GUIStyleState_INTERNAL_set_textColor_m762035767,
-	GUIStyleState_GetGUIStyleState_m74106824,
 	GUIStyleState_Finalize_m1466589588,
-	GUIStyleState_set_background_m369476077,
 	GUITargetAttribute_GetGUITargetAttrValue_m2954410352,
 	GUIUtility_Internal_GetPixelsPerPoint_m290411053,
 	GUIUtility_GetControlID_m2479566685,
-	GUIUtility_Internal_GetNextControlID2_m800052281,
-	GUIUtility_INTERNAL_CALL_Internal_GetNextControlID2_m3439369849,
 	GUIUtility_Internal_GetHotControl_m2856765646,
 	GUIUtility_Internal_SetHotControl_m3891677565,
 	GUIUtility_Internal_GetKeyboardControl_m2201588114,
@@ -71794,7 +71658,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIUtility_set_textFieldInput_m4036087722,
 	GUIUtility_get_pixelsPerPoint_m2369948084,
 	GUIUtility_GetControlID_m2809062763,
-	GUIUtility_GetControlID_m1129488225,
 	GUIUtility_GetStateObject_m1741015855,
 	GUIUtility_set_guiIsExiting_m1558910088,
 	GUIUtility_get_hotControl_m226353344,
@@ -71818,33 +71681,6 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	GUIWordWrapSizer_CalcWidth_m606896659,
 	GUIWordWrapSizer_CalcHeight_m2277788216,
 	ScrollViewState__ctor_m1599613496,
-	SliderHandler__ctor_m3604917603_AdjustorThunk,
-	SliderHandler_Handle_m3267896861_AdjustorThunk,
-	SliderHandler_OnMouseDown_m2641794745_AdjustorThunk,
-	SliderHandler_OnMouseDrag_m4101818783_AdjustorThunk,
-	SliderHandler_OnMouseUp_m2213928110_AdjustorThunk,
-	SliderHandler_OnRepaint_m3595791619_AdjustorThunk,
-	SliderHandler_CurrentEventType_m878588972_AdjustorThunk,
-	SliderHandler_CurrentScrollTroughSide_m3397964318_AdjustorThunk,
-	SliderHandler_IsEmptySlider_m1807819237_AdjustorThunk,
-	SliderHandler_SupportsPageMovements_m159770300_AdjustorThunk,
-	SliderHandler_PageMovementValue_m2815790958_AdjustorThunk,
-	SliderHandler_PageUpMovementBound_m3637566765_AdjustorThunk,
-	SliderHandler_CurrentEvent_m2039204809_AdjustorThunk,
-	SliderHandler_ValueForCurrentMousePosition_m490861254_AdjustorThunk,
-	SliderHandler_Clamp_m3554279189_AdjustorThunk,
-	SliderHandler_ThumbSelectionRect_m3197292790_AdjustorThunk,
-	SliderHandler_StartDraggingWithValue_m2471315603_AdjustorThunk,
-	SliderHandler_SliderState_m3376329127_AdjustorThunk,
-	SliderHandler_ThumbRect_m2303330165_AdjustorThunk,
-	SliderHandler_VerticalThumbRect_m408727440_AdjustorThunk,
-	SliderHandler_HorizontalThumbRect_m2649482396_AdjustorThunk,
-	SliderHandler_ClampedCurrentValue_m103969054_AdjustorThunk,
-	SliderHandler_MousePosition_m984507596_AdjustorThunk,
-	SliderHandler_ValuesPerPixel_m698349361_AdjustorThunk,
-	SliderHandler_ThumbSize_m1690130243_AdjustorThunk,
-	SliderHandler_MaxValue_m4033114770_AdjustorThunk,
-	SliderHandler_MinValue_m4189250570_AdjustorThunk,
 	SliderState__ctor_m3367986001,
 	TextEditor__ctor_m242049450,
 	TextEditor_get_text_m3620786721,
@@ -72151,6 +71987,7 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	Tilemap_RefreshTile_Injected_m3594480345,
 	Canvas__ctor_m2509635467,
 	Canvas_get_renderMode_m841659411,
+	Canvas_set_renderMode_m1564704306,
 	Canvas_get_isRootCanvas_m1263191473,
 	Canvas_get_worldCamera_m3516267897,
 	Canvas_set_worldCamera_m1964154654,
@@ -98142,15 +97979,32 @@ extern const Il2CppMethodPointer g_MethodPointers[54262] =
 	MobileScreenManager_Start_m3747554585,
 	MobileScreenManager_OnSceneLoaded_m3492888858,
 	MobileScreenManager_Update_m4254841170,
+	MobileScreenManager_ToggleHUD_m3217349342,
+	MobileScreenManager_EnforceFullscreenPerFrame_m1603762658,
 	MobileScreenManager_ApplyInGameUIScaling_m4004252767,
 	MobileScreenManager_SetAspectMode_m4064974544,
 	MobileScreenManager_EnsureClearCamera_m2529242480,
 	MobileScreenManager_ApplyFullscreenSettings_m1725697124,
-	MobileScreenManager_MakeSolidTexture_m24044968,
-	MobileScreenManager_InitStyles_m2437874210,
-	MobileScreenManager_OnGUI_m41762560,
+	MobileScreenManager_EnsureLiquidGlassHUD_m3452843240,
+	MobileScreenManager_BuildModalContent_m2303666760,
+	MobileScreenManager_UpdateAspectButtonColors_m1999088159,
+	MobileScreenManager_UpdateHUDTelemetry_m1323223209,
+	MobileScreenManager_CreateUIButton_m4242935249,
 	MobileScreenManager_TriggerEsc_m3883136579,
 	MobileScreenManager_RunCheat_m1197314851,
+	MobileScreenManager_U3CBuildModalContentU3Em__0_m258996958,
+	MobileScreenManager_U3CBuildModalContentU3Em__1_m2215312094,
+	MobileScreenManager_U3CBuildModalContentU3Em__2_m641333982,
+	MobileScreenManager_U3CBuildModalContentU3Em__3_m2597649118,
+	MobileScreenManager_U3CBuildModalContentU3Em__4_m3789290206,
+	MobileScreenManager_U3CBuildModalContentU3Em__5_m1450638046,
+	MobileScreenManager_U3CBuildModalContentU3Em__6_m4171627230,
+	MobileScreenManager_U3CBuildModalContentU3Em__7_m1832975070,
+	MobileScreenManager_U3CBuildModalContentU3Em__8_m3024616158,
+	MobileScreenManager_U3CBuildModalContentU3Em__9_m685963998,
+	MobileScreenManager_U3CBuildModalContentU3Em__A_m3451583198,
+	U3CCreateUIButtonU3Ec__AnonStorey0__ctor_m2234002684,
+	U3CCreateUIButtonU3Ec__AnonStorey0_U3CU3Em__0_m3865350907,
 	MoneyModel__ctor_m2887490024,
 	MoneyModel_get_instance_m889587587,
 	MoneyModel_Init_m4109456535,

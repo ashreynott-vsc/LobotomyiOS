@@ -678,6 +678,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
 		Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
 
+		//System.Void UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)
+		void Register_UnityEngine_Canvas_set_renderMode();
+		Register_UnityEngine_Canvas_set_renderMode();
+
 		//System.Void UnityEngine.Canvas::set_scaleFactor(System.Single)
 		void Register_UnityEngine_Canvas_set_scaleFactor();
 		Register_UnityEngine_Canvas_set_scaleFactor();
@@ -1006,10 +1010,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Event_Init();
 		Register_UnityEngine_Event_Init();
 
-		//System.Void UnityEngine.Event::Internal_GetMouseDelta(UnityEngine.Vector2&)
-		void Register_UnityEngine_Event_Internal_GetMouseDelta();
-		Register_UnityEngine_Event_Internal_GetMouseDelta();
-
 		//System.Void UnityEngine.Event::Internal_GetMousePosition(UnityEngine.Vector2&)
 		void Register_UnityEngine_Event_Internal_GetMousePosition();
 		Register_UnityEngine_Event_Internal_GetMousePosition();
@@ -1045,10 +1045,6 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.EventModifiers UnityEngine.Event::get_modifiers()
 		void Register_UnityEngine_Event_get_modifiers();
 		Register_UnityEngine_Event_get_modifiers();
-
-		//UnityEngine.EventType UnityEngine.Event::GetTypeForControl(System.Int32)
-		void Register_UnityEngine_Event_GetTypeForControl();
-		Register_UnityEngine_Event_GetTypeForControl();
 
 		//UnityEngine.EventType UnityEngine.Event::get_rawType()
 		void Register_UnityEngine_Event_get_rawType();
@@ -1234,17 +1230,9 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
 		Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
 
-		//System.Boolean UnityEngine.GUI::get_usePageScrollbars()
-		void Register_UnityEngine_GUI_get_usePageScrollbars();
-		Register_UnityEngine_GUI_get_usePageScrollbars();
-
 		//System.Void UnityEngine.GUI::INTERNAL_CALL_DoLabel(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
 		void Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
 		Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
-
-		//System.Void UnityEngine.GUI::InternalRepaintEditorWindow()
-		void Register_UnityEngine_GUI_InternalRepaintEditorWindow();
-		Register_UnityEngine_GUI_InternalRepaintEditorWindow();
 
 		//System.Void UnityEngine.GUI::set_changed(System.Boolean)
 		void Register_UnityEngine_GUI_set_changed();
@@ -1254,17 +1242,9 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.GUIClip
 
-		//System.Void UnityEngine.GUIClip::INTERNAL_CALL_GetMatrix(UnityEngine.Matrix4x4&)
-		void Register_UnityEngine_GUIClip_INTERNAL_CALL_GetMatrix();
-		Register_UnityEngine_GUIClip_INTERNAL_CALL_GetMatrix();
-
 		//System.Void UnityEngine.GUIClip::INTERNAL_CALL_Internal_Push(UnityEngine.Rect&,UnityEngine.Vector2&,UnityEngine.Vector2&,System.Boolean)
 		void Register_UnityEngine_GUIClip_INTERNAL_CALL_Internal_Push();
 		Register_UnityEngine_GUIClip_INTERNAL_CALL_Internal_Push();
-
-		//System.Void UnityEngine.GUIClip::INTERNAL_CALL_SetMatrix(UnityEngine.Matrix4x4&)
-		void Register_UnityEngine_GUIClip_INTERNAL_CALL_SetMatrix();
-		Register_UnityEngine_GUIClip_INTERNAL_CALL_SetMatrix();
 
 		//System.Void UnityEngine.GUIClip::Internal_Pop()
 		void Register_UnityEngine_GUIClip_Internal_Pop();
@@ -1358,10 +1338,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetRectOffsetPtr();
 		Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetRectOffsetPtr();
 
-		//System.Void UnityEngine.GUIStyle::INTERNAL_CALL_GetStyleStatePtr(UnityEngine.GUIStyle,System.Int32,System.IntPtr&)
-		void Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetStyleStatePtr();
-		Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetStyleStatePtr();
-
 		//System.Void UnityEngine.GUIStyle::INTERNAL_CALL_Internal_CalcSizeWithConstraints(System.IntPtr,UnityEngine.GUIContent,UnityEngine.Vector2&,UnityEngine.Vector2&)
 		void Register_UnityEngine_GUIStyle_INTERNAL_CALL_Internal_CalcSizeWithConstraints();
 		Register_UnityEngine_GUIStyle_INTERNAL_CALL_Internal_CalcSizeWithConstraints();
@@ -1394,10 +1370,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_Init();
 		Register_UnityEngine_GUIStyle_Init();
 
-		//System.Void UnityEngine.GUIStyle::InitCopy(UnityEngine.GUIStyle)
-		void Register_UnityEngine_GUIStyle_InitCopy();
-		Register_UnityEngine_GUIStyle_InitCopy();
-
 		//System.Void UnityEngine.GUIStyle::Internal_CalcMinMaxWidth(System.IntPtr,UnityEngine.GUIContent,System.Single&,System.Single&)
 		void Register_UnityEngine_GUIStyle_Internal_CalcMinMaxWidth();
 		Register_UnityEngine_GUIStyle_Internal_CalcMinMaxWidth();
@@ -1405,10 +1377,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GUIStyle::Internal_CalcSize(System.IntPtr,UnityEngine.GUIContent,UnityEngine.Vector2&)
 		void Register_UnityEngine_GUIStyle_Internal_CalcSize();
 		Register_UnityEngine_GUIStyle_Internal_CalcSize();
-
-		//System.Void UnityEngine.GUIStyle::Internal_Draw(UnityEngine.GUIContent,UnityEngine.Internal_DrawArguments&)
-		void Register_UnityEngine_GUIStyle_Internal_Draw();
-		Register_UnityEngine_GUIStyle_Internal_Draw();
 
 		//System.Void UnityEngine.GUIStyle::Internal_DrawWithTextSelection(UnityEngine.GUIContent,UnityEngine.Internal_DrawWithTextSelectionArguments&)
 		void Register_UnityEngine_GUIStyle_Internal_DrawWithTextSelection();
@@ -1418,25 +1386,9 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_SetDefaultFont();
 		Register_UnityEngine_GUIStyle_SetDefaultFont();
 
-		//System.Void UnityEngine.GUIStyle::set_alignment(UnityEngine.TextAnchor)
-		void Register_UnityEngine_GUIStyle_set_alignment();
-		Register_UnityEngine_GUIStyle_set_alignment();
-
 		//System.Void UnityEngine.GUIStyle::set_fontSize(System.Int32)
 		void Register_UnityEngine_GUIStyle_set_fontSize();
 		Register_UnityEngine_GUIStyle_set_fontSize();
-
-		//System.Void UnityEngine.GUIStyle::set_fontStyle(UnityEngine.FontStyle)
-		void Register_UnityEngine_GUIStyle_set_fontStyle();
-		Register_UnityEngine_GUIStyle_set_fontStyle();
-
-		//System.Void UnityEngine.GUIStyle::set_name(System.String)
-		void Register_UnityEngine_GUIStyle_set_name();
-		Register_UnityEngine_GUIStyle_set_name();
-
-		//System.Void UnityEngine.GUIStyle::set_stretchHeight(System.Boolean)
-		void Register_UnityEngine_GUIStyle_set_stretchHeight();
-		Register_UnityEngine_GUIStyle_set_stretchHeight();
 
 		//System.Void UnityEngine.GUIStyle::set_stretchWidth(System.Boolean)
 		void Register_UnityEngine_GUIStyle_set_stretchWidth();
@@ -1458,21 +1410,9 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyleState_Cleanup();
 		Register_UnityEngine_GUIStyleState_Cleanup();
 
-		//System.Void UnityEngine.GUIStyleState::INTERNAL_set_textColor(UnityEngine.Color&)
-		void Register_UnityEngine_GUIStyleState_INTERNAL_set_textColor();
-		Register_UnityEngine_GUIStyleState_INTERNAL_set_textColor();
-
 		//System.Void UnityEngine.GUIStyleState::Init()
 		void Register_UnityEngine_GUIStyleState_Init();
 		Register_UnityEngine_GUIStyleState_Init();
-
-		//System.Void UnityEngine.GUIStyleState::SetBackgroundInternal(UnityEngine.Texture2D)
-		void Register_UnityEngine_GUIStyleState_SetBackgroundInternal();
-		Register_UnityEngine_GUIStyleState_SetBackgroundInternal();
-
-		//UnityEngine.Texture2D UnityEngine.GUIStyleState::GetBackgroundInternal()
-		void Register_UnityEngine_GUIStyleState_GetBackgroundInternal();
-		Register_UnityEngine_GUIStyleState_GetBackgroundInternal();
 
 	//End Registrations for type : UnityEngine.GUIStyleState
 
@@ -1505,10 +1445,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.GUIUtility::GetControlID(System.Int32,UnityEngine.FocusType)
 		void Register_UnityEngine_GUIUtility_GetControlID();
 		Register_UnityEngine_GUIUtility_GetControlID();
-
-		//System.Int32 UnityEngine.GUIUtility::INTERNAL_CALL_Internal_GetNextControlID2(System.Int32,UnityEngine.FocusType,UnityEngine.Rect&)
-		void Register_UnityEngine_GUIUtility_INTERNAL_CALL_Internal_GetNextControlID2();
-		Register_UnityEngine_GUIUtility_INTERNAL_CALL_Internal_GetNextControlID2();
 
 		//System.Int32 UnityEngine.GUIUtility::Internal_GetGUIDepth()
 		void Register_UnityEngine_GUIUtility_Internal_GetGUIDepth();
@@ -1875,14 +1811,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Mathf_PerlinNoise();
 
 	//End Registrations for type : UnityEngine.Mathf
-
-	//Start Registrations for type : UnityEngine.Matrix4x4
-
-		//System.Void UnityEngine.Matrix4x4::INTERNAL_CALL_TRS(UnityEngine.Vector3&,UnityEngine.Quaternion&,UnityEngine.Vector3&,UnityEngine.Matrix4x4&)
-		void Register_UnityEngine_Matrix4x4_INTERNAL_CALL_TRS();
-		Register_UnityEngine_Matrix4x4_INTERNAL_CALL_TRS();
-
-	//End Registrations for type : UnityEngine.Matrix4x4
 
 	//Start Registrations for type : UnityEngine.Mesh
 
