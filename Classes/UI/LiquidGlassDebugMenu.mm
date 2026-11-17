@@ -32,24 +32,16 @@ static int64_t GetPhysicalMemoryMB(void) {
 }
 
 static void PurgeMemoryNow(void) {
-    @try {
-        GC_Collect_m743975114(NULL, NULL);
-        Resources_UnloadUnusedAssets_m2836736321(NULL, NULL);
-        GC_Collect_m743975114(NULL, NULL);
-        NSLog(@"[LobotomyCorp] Purged unused assets and collected GC");
-    } @catch (NSException *e) {
-        NSLog(@"[LobotomyCorp] Purge error: %@", e);
-    }
+    GC_Collect_m743975114(NULL, NULL);
+    Resources_UnloadUnusedAssets_m2836736321(NULL, NULL);
+    GC_Collect_m743975114(NULL, NULL);
+    NSLog(@"[LobotomyCorp] Purged unused assets and collected GC");
 }
 
 static void SetTextureQualityLevel(int level) {
-    @try {
-        QualitySettings_SetQualityLevel_m2320778053(NULL, level, true, NULL);
-        PurgeMemoryNow();
-        NSLog(@"[LobotomyCorp] SetQualityLevel to %d", level);
-    } @catch (NSException *e) {
-        NSLog(@"[LobotomyCorp] SetTextureQuality error: %@", e);
-    }
+    QualitySettings_SetQualityLevel_m2320778053(NULL, level, true, NULL);
+    PurgeMemoryNow();
+    NSLog(@"[LobotomyCorp] SetQualityLevel to %d", level);
 }
 
 // -------------------------------------------------------------
