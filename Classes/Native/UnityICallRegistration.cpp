@@ -198,6 +198,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_isPlaying();
 		Register_UnityEngine_Application_get_isPlaying();
 
+		//System.Int32 UnityEngine.Application::get_targetFrameRate()
+		void Register_UnityEngine_Application_get_targetFrameRate();
+		Register_UnityEngine_Application_get_targetFrameRate();
+
 		//System.String UnityEngine.Application::get_dataPath()
 		void Register_UnityEngine_Application_get_dataPath();
 		Register_UnityEngine_Application_get_dataPath();
@@ -549,6 +553,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Camera::Render()
 		void Register_UnityEngine_Camera_Render();
 		Register_UnityEngine_Camera_Render();
+
+		//System.Void UnityEngine.Camera::set_aspect(System.Single)
+		void Register_UnityEngine_Camera_set_aspect();
+		Register_UnityEngine_Camera_set_aspect();
 
 		//System.Void UnityEngine.Camera::set_clearFlags(UnityEngine.CameraClearFlags)
 		void Register_UnityEngine_Camera_set_clearFlags();
@@ -1002,6 +1010,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Event_Init();
 		Register_UnityEngine_Event_Init();
 
+		//System.Void UnityEngine.Event::Internal_GetMouseDelta(UnityEngine.Vector2&)
+		void Register_UnityEngine_Event_Internal_GetMouseDelta();
+		Register_UnityEngine_Event_Internal_GetMouseDelta();
+
 		//System.Void UnityEngine.Event::Internal_GetMousePosition(UnityEngine.Vector2&)
 		void Register_UnityEngine_Event_Internal_GetMousePosition();
 		Register_UnityEngine_Event_Internal_GetMousePosition();
@@ -1037,6 +1049,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.EventModifiers UnityEngine.Event::get_modifiers()
 		void Register_UnityEngine_Event_get_modifiers();
 		Register_UnityEngine_Event_get_modifiers();
+
+		//UnityEngine.EventType UnityEngine.Event::GetTypeForControl(System.Int32)
+		void Register_UnityEngine_Event_GetTypeForControl();
+		Register_UnityEngine_Event_GetTypeForControl();
 
 		//UnityEngine.EventType UnityEngine.Event::get_rawType()
 		void Register_UnityEngine_Event_get_rawType();
@@ -1222,9 +1238,21 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
 		Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
 
+		//System.Boolean UnityEngine.GUI::get_usePageScrollbars()
+		void Register_UnityEngine_GUI_get_usePageScrollbars();
+		Register_UnityEngine_GUI_get_usePageScrollbars();
+
 		//System.Void UnityEngine.GUI::INTERNAL_CALL_DoLabel(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
 		void Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
 		Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
+
+		//System.Void UnityEngine.GUI::INTERNAL_set_backgroundColor(UnityEngine.Color&)
+		void Register_UnityEngine_GUI_INTERNAL_set_backgroundColor();
+		Register_UnityEngine_GUI_INTERNAL_set_backgroundColor();
+
+		//System.Void UnityEngine.GUI::InternalRepaintEditorWindow()
+		void Register_UnityEngine_GUI_InternalRepaintEditorWindow();
+		Register_UnityEngine_GUI_InternalRepaintEditorWindow();
 
 		//System.Void UnityEngine.GUI::set_changed(System.Boolean)
 		void Register_UnityEngine_GUI_set_changed();
@@ -1234,9 +1262,17 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.GUIClip
 
+		//System.Void UnityEngine.GUIClip::INTERNAL_CALL_GetMatrix(UnityEngine.Matrix4x4&)
+		void Register_UnityEngine_GUIClip_INTERNAL_CALL_GetMatrix();
+		Register_UnityEngine_GUIClip_INTERNAL_CALL_GetMatrix();
+
 		//System.Void UnityEngine.GUIClip::INTERNAL_CALL_Internal_Push(UnityEngine.Rect&,UnityEngine.Vector2&,UnityEngine.Vector2&,System.Boolean)
 		void Register_UnityEngine_GUIClip_INTERNAL_CALL_Internal_Push();
 		Register_UnityEngine_GUIClip_INTERNAL_CALL_Internal_Push();
+
+		//System.Void UnityEngine.GUIClip::INTERNAL_CALL_SetMatrix(UnityEngine.Matrix4x4&)
+		void Register_UnityEngine_GUIClip_INTERNAL_CALL_SetMatrix();
+		Register_UnityEngine_GUIClip_INTERNAL_CALL_SetMatrix();
 
 		//System.Void UnityEngine.GUIClip::Internal_Pop()
 		void Register_UnityEngine_GUIClip_Internal_Pop();
@@ -1330,6 +1366,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetRectOffsetPtr();
 		Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetRectOffsetPtr();
 
+		//System.Void UnityEngine.GUIStyle::INTERNAL_CALL_GetStyleStatePtr(UnityEngine.GUIStyle,System.Int32,System.IntPtr&)
+		void Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetStyleStatePtr();
+		Register_UnityEngine_GUIStyle_INTERNAL_CALL_GetStyleStatePtr();
+
 		//System.Void UnityEngine.GUIStyle::INTERNAL_CALL_Internal_CalcSizeWithConstraints(System.IntPtr,UnityEngine.GUIContent,UnityEngine.Vector2&,UnityEngine.Vector2&)
 		void Register_UnityEngine_GUIStyle_INTERNAL_CALL_Internal_CalcSizeWithConstraints();
 		Register_UnityEngine_GUIStyle_INTERNAL_CALL_Internal_CalcSizeWithConstraints();
@@ -1370,6 +1410,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_Internal_CalcSize();
 		Register_UnityEngine_GUIStyle_Internal_CalcSize();
 
+		//System.Void UnityEngine.GUIStyle::Internal_Draw(UnityEngine.GUIContent,UnityEngine.Internal_DrawArguments&)
+		void Register_UnityEngine_GUIStyle_Internal_Draw();
+		Register_UnityEngine_GUIStyle_Internal_Draw();
+
 		//System.Void UnityEngine.GUIStyle::Internal_DrawWithTextSelection(UnityEngine.GUIContent,UnityEngine.Internal_DrawWithTextSelectionArguments&)
 		void Register_UnityEngine_GUIStyle_Internal_DrawWithTextSelection();
 		Register_UnityEngine_GUIStyle_Internal_DrawWithTextSelection();
@@ -1381,6 +1425,14 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GUIStyle::set_fontSize(System.Int32)
 		void Register_UnityEngine_GUIStyle_set_fontSize();
 		Register_UnityEngine_GUIStyle_set_fontSize();
+
+		//System.Void UnityEngine.GUIStyle::set_name(System.String)
+		void Register_UnityEngine_GUIStyle_set_name();
+		Register_UnityEngine_GUIStyle_set_name();
+
+		//System.Void UnityEngine.GUIStyle::set_stretchHeight(System.Boolean)
+		void Register_UnityEngine_GUIStyle_set_stretchHeight();
+		Register_UnityEngine_GUIStyle_set_stretchHeight();
 
 		//System.Void UnityEngine.GUIStyle::set_stretchWidth(System.Boolean)
 		void Register_UnityEngine_GUIStyle_set_stretchWidth();
@@ -1402,9 +1454,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyleState_Cleanup();
 		Register_UnityEngine_GUIStyleState_Cleanup();
 
+		//System.Void UnityEngine.GUIStyleState::INTERNAL_set_textColor(UnityEngine.Color&)
+		void Register_UnityEngine_GUIStyleState_INTERNAL_set_textColor();
+		Register_UnityEngine_GUIStyleState_INTERNAL_set_textColor();
+
 		//System.Void UnityEngine.GUIStyleState::Init()
 		void Register_UnityEngine_GUIStyleState_Init();
 		Register_UnityEngine_GUIStyleState_Init();
+
+		//UnityEngine.Texture2D UnityEngine.GUIStyleState::GetBackgroundInternal()
+		void Register_UnityEngine_GUIStyleState_GetBackgroundInternal();
+		Register_UnityEngine_GUIStyleState_GetBackgroundInternal();
 
 	//End Registrations for type : UnityEngine.GUIStyleState
 
@@ -1437,6 +1497,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.GUIUtility::GetControlID(System.Int32,UnityEngine.FocusType)
 		void Register_UnityEngine_GUIUtility_GetControlID();
 		Register_UnityEngine_GUIUtility_GetControlID();
+
+		//System.Int32 UnityEngine.GUIUtility::INTERNAL_CALL_Internal_GetNextControlID2(System.Int32,UnityEngine.FocusType,UnityEngine.Rect&)
+		void Register_UnityEngine_GUIUtility_INTERNAL_CALL_Internal_GetNextControlID2();
+		Register_UnityEngine_GUIUtility_INTERNAL_CALL_Internal_GetNextControlID2();
 
 		//System.Int32 UnityEngine.GUIUtility::Internal_GetGUIDepth()
 		void Register_UnityEngine_GUIUtility_Internal_GetGUIDepth();
@@ -1660,6 +1724,18 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Joint2D
 
+	//Start Registrations for type : UnityEngine.JsonUtility
+
+		//System.Object UnityEngine.JsonUtility::FromJson(System.String,System.Type)
+		void Register_UnityEngine_JsonUtility_FromJson();
+		Register_UnityEngine_JsonUtility_FromJson();
+
+		//System.String UnityEngine.JsonUtility::ToJson(System.Object,System.Boolean)
+		void Register_UnityEngine_JsonUtility_ToJson();
+		Register_UnityEngine_JsonUtility_ToJson();
+
+	//End Registrations for type : UnityEngine.JsonUtility
+
 	//Start Registrations for type : UnityEngine.LayerMask
 
 		//System.Int32 UnityEngine.LayerMask::NameToLayer(System.String)
@@ -1803,6 +1879,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Mathf_PerlinNoise();
 
 	//End Registrations for type : UnityEngine.Mathf
+
+	//Start Registrations for type : UnityEngine.Matrix4x4
+
+		//System.Void UnityEngine.Matrix4x4::INTERNAL_CALL_TRS(UnityEngine.Vector3&,UnityEngine.Quaternion&,UnityEngine.Vector3&,UnityEngine.Matrix4x4&)
+		void Register_UnityEngine_Matrix4x4_INTERNAL_CALL_TRS();
+		Register_UnityEngine_Matrix4x4_INTERNAL_CALL_TRS();
+
+	//End Registrations for type : UnityEngine.Matrix4x4
 
 	//Start Registrations for type : UnityEngine.Mesh
 
@@ -2263,6 +2347,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_PolygonCollider2D_SetPath();
 
 	//End Registrations for type : UnityEngine.PolygonCollider2D
+
+	//Start Registrations for type : UnityEngine.Profiling.Profiler
+
+		//System.Int64 UnityEngine.Profiling.Profiler::GetTotalAllocatedMemoryLong()
+		void Register_UnityEngine_Profiling_Profiler_GetTotalAllocatedMemoryLong();
+		Register_UnityEngine_Profiling_Profiler_GetTotalAllocatedMemoryLong();
+
+	//End Registrations for type : UnityEngine.Profiling.Profiler
 
 	//Start Registrations for type : UnityEngine.PropertyNameUtils
 
@@ -3065,6 +3157,14 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.SystemInfo::get_supportsImageEffects()
 		void Register_UnityEngine_SystemInfo_get_supportsImageEffects();
 		Register_UnityEngine_SystemInfo_get_supportsImageEffects();
+
+		//System.Single UnityEngine.SystemInfo::get_batteryLevel()
+		void Register_UnityEngine_SystemInfo_get_batteryLevel();
+		Register_UnityEngine_SystemInfo_get_batteryLevel();
+
+		//UnityEngine.BatteryStatus UnityEngine.SystemInfo::get_batteryStatus()
+		void Register_UnityEngine_SystemInfo_get_batteryStatus();
+		Register_UnityEngine_SystemInfo_get_batteryStatus();
 
 		//UnityEngine.DeviceType UnityEngine.SystemInfo::get_deviceType()
 		void Register_UnityEngine_SystemInfo_get_deviceType();

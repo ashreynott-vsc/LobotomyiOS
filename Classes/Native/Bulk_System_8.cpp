@@ -871,7 +871,7 @@ extern const RuntimeMethod* List_1_get_Count_m2276455407_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m953835688_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Clear_m3111619026_RuntimeMethod_var;
 extern const uint32_t BaseMachine_RTLReplace_m2219518441_MetadataUsageId;
-extern const uint32_t Capture_get_Value_m538076933_MetadataUsageId;
+extern const uint32_t Capture_get_Value_m3919646039_MetadataUsageId;
 extern RuntimeClass* CaptureU5BU5D_t183267399_il2cpp_TypeInfo_var;
 extern const uint32_t CaptureCollection__ctor_m357483405_MetadataUsageId;
 extern const RuntimeMethod* CaptureCollection_get_Item_m3183527268_RuntimeMethod_var;
@@ -941,7 +941,7 @@ extern const uint32_t Group_Synchronized_m598618013_MetadataUsageId;
 extern RuntimeClass* GroupU5BU5D_t1880820351_il2cpp_TypeInfo_var;
 extern const uint32_t GroupCollection__ctor_m3775662598_MetadataUsageId;
 extern RuntimeClass* Match_t3408321083_il2cpp_TypeInfo_var;
-extern const uint32_t GroupCollection_get_Item_m2465789076_MetadataUsageId;
+extern const uint32_t GroupCollection_get_Item_m723682197_MetadataUsageId;
 extern const uint32_t GroupCollection_get_Item_m3293401907_MetadataUsageId;
 extern RuntimeClass* Int32U5BU5D_t385246372_il2cpp_TypeInfo_var;
 extern const uint32_t Interpreter__ctor_m2134836895_MetadataUsageId;
@@ -1010,7 +1010,7 @@ extern String_t* _stringLiteral2824874167;
 extern String_t* _stringLiteral4149775133;
 extern const uint32_t Match_Result_m526669037_MetadataUsageId;
 extern const uint32_t MatchCollection__ctor_m4138850022_MetadataUsageId;
-extern const uint32_t MatchCollection_get_Count_m1667454419_MetadataUsageId;
+extern const uint32_t MatchCollection_get_Count_m1586545784_MetadataUsageId;
 extern const RuntimeMethod* MatchCollection_get_Item_m3516666721_RuntimeMethod_var;
 extern String_t* _stringLiteral3452614599;
 extern const uint32_t MatchCollection_get_Item_m3516666721_MetadataUsageId;
@@ -9308,21 +9308,21 @@ extern "C" IL2CPP_METHOD_ATTR void Oid__ctor_m911618594 (Oid_t3552120260 * __thi
 // System.Boolean System.Security.Cryptography.X509Certificates.X509Extension::get_Critical()
 extern "C" IL2CPP_METHOD_ATTR bool X509Extension_get_Critical_m1315280133 (X509Extension_t3272255153 * __this, const RuntimeMethod* method);
 // System.Void Mono.Security.ASN1::.ctor(System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR void ASN1__ctor_m1219137533 (ASN1_t2114160833 * __this, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void ASN1__ctor_m1638893325 (ASN1_t2114160833 * __this, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
 // System.Byte Mono.Security.ASN1::get_Tag()
-extern "C" IL2CPP_METHOD_ATTR uint8_t ASN1_get_Tag_m1863840805 (ASN1_t2114160833 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR uint8_t ASN1_get_Tag_m2789147236 (ASN1_t2114160833 * __this, const RuntimeMethod* method);
 // Mono.Security.ASN1 Mono.Security.ASN1::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * ASN1_get_Item_m315148275 (ASN1_t2114160833 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * ASN1_get_Item_m2255075813 (ASN1_t2114160833 * __this, int32_t p0, const RuntimeMethod* method);
 // System.String Mono.Security.ASN1Convert::ToOid(Mono.Security.ASN1)
-extern "C" IL2CPP_METHOD_ATTR String_t* ASN1Convert_ToOid_m4290825381 (RuntimeObject * __this /* static, unused */, ASN1_t2114160833 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* ASN1Convert_ToOid_m3847701408 (RuntimeObject * __this /* static, unused */, ASN1_t2114160833 * p0, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.Oid::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void Oid__ctor_m1869590876 (Oid_t3552120260 * __this, String_t* ___oid0, const RuntimeMethod* method);
 // System.Int32 System.Security.Cryptography.OidCollection::Add(System.Security.Cryptography.Oid)
 extern "C" IL2CPP_METHOD_ATTR int32_t OidCollection_Add_m2569544356 (OidCollection_t4234766844 * __this, Oid_t3552120260 * ___oid0, const RuntimeMethod* method);
 // System.Int32 Mono.Security.ASN1::get_Count()
-extern "C" IL2CPP_METHOD_ATTR int32_t ASN1_get_Count_m3039939183 (ASN1_t2114160833 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t ASN1_get_Count_m1789520042 (ASN1_t2114160833 * __this, const RuntimeMethod* method);
 // System.Void Mono.Security.ASN1::.ctor(System.Byte)
-extern "C" IL2CPP_METHOD_ATTR void ASN1__ctor_m4216617981 (ASN1_t2114160833 * __this, uint8_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void ASN1__ctor_m1239252869 (ASN1_t2114160833 * __this, uint8_t p0, const RuntimeMethod* method);
 // System.Security.Cryptography.OidEnumerator System.Security.Cryptography.OidCollection::GetEnumerator()
 extern "C" IL2CPP_METHOD_ATTR OidEnumerator_t899373898 * OidCollection_GetEnumerator_m1500606045 (OidCollection_t4234766844 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.Oid System.Security.Cryptography.OidEnumerator::get_Current()
@@ -9330,9 +9330,9 @@ extern "C" IL2CPP_METHOD_ATTR Oid_t3552120260 * OidEnumerator_get_Current_m40843
 // System.String System.Security.Cryptography.Oid::get_Value()
 extern "C" IL2CPP_METHOD_ATTR String_t* Oid_get_Value_m743416803 (Oid_t3552120260 * __this, const RuntimeMethod* method);
 // Mono.Security.ASN1 Mono.Security.ASN1Convert::FromOid(System.String)
-extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * ASN1Convert_FromOid_m3844102704 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * ASN1Convert_FromOid_m1517037532 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
 // Mono.Security.ASN1 Mono.Security.ASN1::Add(Mono.Security.ASN1)
-extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * ASN1_Add_m3262603624 (ASN1_t2114160833 * __this, ASN1_t2114160833 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * ASN1_Add_m2431139999 (ASN1_t2114160833 * __this, ASN1_t2114160833 * p0, const RuntimeMethod* method);
 // System.Boolean System.Security.Cryptography.OidEnumerator::MoveNext()
 extern "C" IL2CPP_METHOD_ATTR bool OidEnumerator_MoveNext_m3138911739 (OidEnumerator_t899373898 * __this, const RuntimeMethod* method);
 // System.String System.Security.Cryptography.X509Certificates.X509Extension::FormatUnkownData(System.Byte[])
@@ -9372,7 +9372,7 @@ extern "C" IL2CPP_METHOD_ATTR void AsnEncodedData_CopyFrom_m3929882393 (AsnEncod
 // System.String System.Byte::ToString(System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* Byte_ToString_m3735479648 (uint8_t* __this, String_t* p0, const RuntimeMethod* method);
 // Mono.Security.X509.X509ExtensionCollection Mono.Security.X509.X509Certificate::get_Extensions()
-extern "C" IL2CPP_METHOD_ATTR X509ExtensionCollection_t609554709 * X509Certificate_get_Extensions_m1217872579 (X509Certificate_t489243025 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509ExtensionCollection_t609554709 * X509Certificate_get_Extensions_m2532937142 (X509Certificate_t489243025 * __this, const RuntimeMethod* method);
 // System.Int32 System.Collections.CollectionBase::get_Count()
 extern "C" IL2CPP_METHOD_ATTR int32_t CollectionBase_get_Count_m1708965601 (CollectionBase_t2727926298 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.ArrayList::.ctor(System.Int32)
@@ -9380,11 +9380,11 @@ extern "C" IL2CPP_METHOD_ATTR void ArrayList__ctor_m3828927650 (ArrayList_t27188
 // System.Collections.IEnumerator System.Collections.CollectionBase::GetEnumerator()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* CollectionBase_GetEnumerator_m654829872 (CollectionBase_t2727926298 * __this, const RuntimeMethod* method);
 // System.Boolean Mono.Security.X509.X509Extension::get_Critical()
-extern "C" IL2CPP_METHOD_ATTR bool X509Extension_get_Critical_m171054662 (X509Extension_t3173393653 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool X509Extension_get_Critical_m2974578711 (X509Extension_t3173393653 * __this, const RuntimeMethod* method);
 // System.String Mono.Security.X509.X509Extension::get_Oid()
-extern "C" IL2CPP_METHOD_ATTR String_t* X509Extension_get_Oid_m4107042796 (X509Extension_t3173393653 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* X509Extension_get_Oid_m1003388288 (X509Extension_t3173393653 * __this, const RuntimeMethod* method);
 // Mono.Security.ASN1 Mono.Security.X509.X509Extension::get_Value()
-extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * X509Extension_get_Value_m896831716 (X509Extension_t3173393653 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR ASN1_t2114160833 * X509Extension_get_Value_m3529546267 (X509Extension_t3173393653 * __this, const RuntimeMethod* method);
 // System.Object System.Security.Cryptography.CryptoConfig::CreateFromName(System.String,System.Object[])
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * CryptoConfig_CreateFromName_m2674746512 (RuntimeObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t2843939325* p1, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Extension::.ctor(System.String,System.Byte[],System.Boolean)
@@ -9408,9 +9408,9 @@ extern "C" IL2CPP_METHOD_ATTR int32_t X509KeyUsageExtension_GetValidFlags_m34472
 // System.Byte[] System.Security.Cryptography.X509Certificates.X509KeyUsageExtension::Encode()
 extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* X509KeyUsageExtension_Encode_m2128077825 (X509KeyUsageExtension_t2042101591 * __this, const RuntimeMethod* method);
 // System.Byte[] Mono.Security.ASN1::get_Value()
-extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* ASN1_get_Value_m3619295991 (ASN1_t2114160833 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* ASN1_get_Value_m63296490 (ASN1_t2114160833 * __this, const RuntimeMethod* method);
 // System.Void Mono.Security.ASN1::.ctor(System.Byte,System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR void ASN1__ctor_m3517592395 (ASN1_t2114160833 * __this, uint8_t p0, ByteU5BU5D_t4116647657* p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void ASN1__ctor_m682794872 (ASN1_t2114160833 * __this, uint8_t p0, ByteU5BU5D_t4116647657* p1, const RuntimeMethod* method);
 // System.Int32 System.Text.StringBuilder::get_Length()
 extern "C" IL2CPP_METHOD_ATTR int32_t StringBuilder_get_Length_m3238060835 (StringBuilder_t * __this, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Store::.ctor(System.String,System.Security.Cryptography.X509Certificates.StoreLocation)
@@ -9422,9 +9422,9 @@ extern "C" IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m408849716 (RuntimeObject 
 // System.Void System.Collections.CollectionBase::Clear()
 extern "C" IL2CPP_METHOD_ATTR void CollectionBase_Clear_m1509125218 (CollectionBase_t2727926298 * __this, const RuntimeMethod* method);
 // Mono.Security.X509.X509Stores Mono.Security.X509.X509StoreManager::get_CurrentUser()
-extern "C" IL2CPP_METHOD_ATTR X509Stores_t1373936237 * X509StoreManager_get_CurrentUser_m4040993045 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Stores_t1373936237 * X509StoreManager_get_CurrentUser_m719101392 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // Mono.Security.X509.X509Stores Mono.Security.X509.X509StoreManager::get_LocalMachine()
-extern "C" IL2CPP_METHOD_ATTR X509Stores_t1373936237 * X509StoreManager_get_LocalMachine_m3994689999 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Stores_t1373936237 * X509StoreManager_get_LocalMachine_m269504582 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Boolean System.Environment::get_UnityWebSecurityEnabled()
 extern "C" IL2CPP_METHOD_ATTR bool Environment_get_UnityWebSecurityEnabled_m2115047958 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Boolean System.Security.Cryptography.X509Certificates.X509Store::get_IsOpen()
@@ -9436,9 +9436,9 @@ extern "C" IL2CPP_METHOD_ATTR bool X509Store_Exists_m791198390 (X509Store_t29226
 // System.Byte[] System.Security.Cryptography.X509Certificates.X509Certificate2::get_RawData()
 extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* X509Certificate2_get_RawData_m1496947959 (X509Certificate2_t714049126 * __this, const RuntimeMethod* method);
 // System.Void Mono.Security.X509.X509Certificate::.ctor(System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR void X509Certificate__ctor_m2595927506 (X509Certificate_t489243025 * __this, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509Certificate__ctor_m553243489 (X509Certificate_t489243025 * __this, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
 // System.Void Mono.Security.X509.X509Store::Import(Mono.Security.X509.X509Certificate)
-extern "C" IL2CPP_METHOD_ATTR void X509Store_Import_m319598108 (X509Store_t2777415283 * __this, X509Certificate_t489243025 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509Store_Import_m2542166443 (X509Store_t2777415283 * __this, X509Certificate_t489243025 * p0, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate2Collection System.Security.Cryptography.X509Certificates.X509Store::get_Certificates()
 extern "C" IL2CPP_METHOD_ATTR X509Certificate2Collection_t2111161276 * X509Store_get_Certificates_m2149701265 (X509Store_t2922691911 * __this, const RuntimeMethod* method);
 // System.Int32 System.Security.Cryptography.X509Certificates.X509Certificate2Collection::Add(System.Security.Cryptography.X509Certificates.X509Certificate2)
@@ -9454,21 +9454,21 @@ extern "C" IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m2969720369 (RuntimeObje
 // Mono.Security.X509.X509Stores System.Security.Cryptography.X509Certificates.X509Store::get_Factory()
 extern "C" IL2CPP_METHOD_ATTR X509Stores_t1373936237 * X509Store_get_Factory_m3282910266 (X509Store_t2922691911 * __this, const RuntimeMethod* method);
 // Mono.Security.X509.X509Store Mono.Security.X509.X509Stores::Open(System.String,System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR X509Store_t2777415283 * X509Stores_Open_m1553467177 (X509Stores_t1373936237 * __this, String_t* p0, bool p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Store_t2777415283 * X509Stores_Open_m1037335183 (X509Stores_t1373936237 * __this, String_t* p0, bool p1, const RuntimeMethod* method);
 // System.String Locale::GetText(System.String,System.Object[])
 extern "C" IL2CPP_METHOD_ATTR String_t* Locale_GetText_m2640320736 (RuntimeObject * __this /* static, unused */, String_t* ___fmt0, ObjectU5BU5D_t2843939325* ___args1, const RuntimeMethod* method);
 // Mono.Security.X509.X509CertificateCollection Mono.Security.X509.X509Store::get_Certificates()
-extern "C" IL2CPP_METHOD_ATTR X509CertificateCollection_t1542168550 * X509Store_get_Certificates_m56224934 (X509Store_t2777415283 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509CertificateCollection_t1542168550 * X509Store_get_Certificates_m1092347772 (X509Store_t2777415283 * __this, const RuntimeMethod* method);
 // Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator Mono.Security.X509.X509CertificateCollection::GetEnumerator()
-extern "C" IL2CPP_METHOD_ATTR X509CertificateEnumerator_t3515934698 * X509CertificateCollection_GetEnumerator_m92169144 (X509CertificateCollection_t1542168550 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509CertificateEnumerator_t3515934698 * X509CertificateCollection_GetEnumerator_m1275665495 (X509CertificateCollection_t1542168550 * __this, const RuntimeMethod* method);
 // Mono.Security.X509.X509Certificate Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator::get_Current()
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t489243025 * X509CertificateEnumerator_get_Current_m3079314562 (X509CertificateEnumerator_t3515934698 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t489243025 * X509CertificateEnumerator_get_Current_m1004537031 (X509CertificateEnumerator_t3515934698 * __this, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2::.ctor(System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR void X509Certificate2__ctor_m3336405942 (X509Certificate2_t714049126 * __this, ByteU5BU5D_t4116647657* ___rawData0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509Certificate2__ctor_m2370196240 (X509Certificate2_t714049126 * __this, ByteU5BU5D_t4116647657* ___rawData0, const RuntimeMethod* method);
 // System.Boolean Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator::MoveNext()
-extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_MoveNext_m1342258196 (X509CertificateEnumerator_t3515934698 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_MoveNext_m3925432749 (X509CertificateEnumerator_t3515934698 * __this, const RuntimeMethod* method);
 // System.Void Mono.Security.X509.X509Store::Remove(Mono.Security.X509.X509Certificate)
-extern "C" IL2CPP_METHOD_ATTR void X509Store_Remove_m2429424682 (X509Store_t2777415283 * __this, X509Certificate_t489243025 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509Store_Remove_m3732268634 (X509Store_t2777415283 * __this, X509Certificate_t489243025 * p0, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2Collection::Remove(System.Security.Cryptography.X509Certificates.X509Certificate2)
 extern "C" IL2CPP_METHOD_ATTR void X509Certificate2Collection_Remove_m3739830061 (X509Certificate2Collection_t2111161276 * __this, X509Certificate2_t714049126 * ___certificate0, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2Collection::RemoveRange(System.Security.Cryptography.X509Certificates.X509Certificate2Collection)
@@ -9498,7 +9498,7 @@ extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* CryptoConfig_EncodeOID_m26
 // System.Security.Cryptography.AsnEncodedData System.Security.Cryptography.X509Certificates.PublicKey::get_EncodedParameters()
 extern "C" IL2CPP_METHOD_ATTR AsnEncodedData_t382354011 * PublicKey_get_EncodedParameters_m4197029957 (PublicKey_t3779582684 * __this, const RuntimeMethod* method);
 // System.String Mono.Security.Cryptography.CryptoConvert::ToHex(System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR String_t* CryptoConvert_ToHex_m2210632265 (RuntimeObject * __this /* static, unused */, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* CryptoConvert_ToHex_m4034982758 (RuntimeObject * __this /* static, unused */, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
 // System.Byte System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension::FromHexChar(System.Char)
 extern "C" IL2CPP_METHOD_ATTR uint8_t X509SubjectKeyIdentifierExtension_FromHexChar_m1249358531 (RuntimeObject * __this /* static, unused */, Il2CppChar ___c0, const RuntimeMethod* method);
 // System.Char System.String::get_Chars(System.Int32)
@@ -9530,7 +9530,7 @@ extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Match_NextMatch_m366671308 (Ma
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.Regex::Match(System.String,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Regex_Match_m4145799399 (Regex_t3657309853 * __this, String_t* ___input0, int32_t ___startat1, const RuntimeMethod* method);
 // System.Boolean System.Text.RegularExpressions.Group::get_Success()
-extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m1492300455 (Group_t2468205786 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m3823591889 (Group_t2468205786 * __this, const RuntimeMethod* method);
 // System.Int32 System.Text.RegularExpressions.Capture::get_Index()
 extern "C" IL2CPP_METHOD_ATTR int32_t Capture_get_Index_m745081289 (Capture_t2232016050 * __this, const RuntimeMethod* method);
 // System.Int32 System.Text.RegularExpressions.Capture::get_Length()
@@ -9540,7 +9540,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* String_Substring_m1610150815 (String_t* 
 // System.Int32 System.Text.RegularExpressions.GroupCollection::get_Count()
 extern "C" IL2CPP_METHOD_ATTR int32_t GroupCollection_get_Count_m1328438810 (GroupCollection_t69770484 * __this, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Group System.Text.RegularExpressions.GroupCollection::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m2465789076 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m723682197 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method);
 // System.String System.String::Substring(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Substring_m2848979100 (String_t* __this, int32_t p0, const RuntimeMethod* method);
 // System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
@@ -9572,7 +9572,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* MatchEvaluator_Invoke_m665538659 (MatchE
 // System.Void System.Text.RegularExpressions.Capture::.ctor(System.String,System.Int32,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR void Capture__ctor_m539415522 (Capture_t2232016050 * __this, String_t* ___text0, int32_t ___index1, int32_t ___length2, const RuntimeMethod* method);
 // System.String System.Text.RegularExpressions.Capture::get_Value()
-extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m538076933 (Capture_t2232016050 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m3919646039 (Capture_t2232016050 * __this, const RuntimeMethod* method);
 // System.Int32 System.Text.RegularExpressions.CaptureCollection::get_Count()
 extern "C" IL2CPP_METHOD_ATTR int32_t CaptureCollection_get_Count_m2294375304 (CaptureCollection_t1760593541 * __this, const RuntimeMethod* method);
 // System.Void System.Array::CopyTo(System.Array,System.Int32)
@@ -9936,7 +9936,7 @@ extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Regex_Match_m2255756165 (Regex
 // System.Text.RegularExpressions.MatchCollection System.Text.RegularExpressions.Regex::Matches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
 extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m501193152 (RuntimeObject * __this /* static, unused */, String_t* ___input0, String_t* ___pattern1, int32_t ___options2, const RuntimeMethod* method);
 // System.Text.RegularExpressions.MatchCollection System.Text.RegularExpressions.Regex::Matches(System.String)
-extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m175567660 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m979395559 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method);
 // System.String System.Text.RegularExpressions.Regex::Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)
 extern "C" IL2CPP_METHOD_ATTR String_t* Regex_Replace_m3476186407 (RuntimeObject * __this /* static, unused */, String_t* ___input0, String_t* ___pattern1, MatchEvaluator_t632122704 * ___evaluator2, int32_t ___options3, const RuntimeMethod* method);
 // System.String System.Text.RegularExpressions.Regex::Replace(System.String,System.Text.RegularExpressions.MatchEvaluator)
@@ -11525,11 +11525,11 @@ IL_0032:
 		{
 			ByteU5BU5D_t4116647657* L_7 = ___extension0;
 			ASN1_t2114160833 * L_8 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-			ASN1__ctor_m1219137533(L_8, L_7, /*hidden argument*/NULL);
+			ASN1__ctor_m1638893325(L_8, L_7, /*hidden argument*/NULL);
 			V_0 = L_8;
 			ASN1_t2114160833 * L_9 = V_0;
 			NullCheck(L_9);
-			uint8_t L_10 = ASN1_get_Tag_m1863840805(L_9, /*hidden argument*/NULL);
+			uint8_t L_10 = ASN1_get_Tag_m2789147236(L_9, /*hidden argument*/NULL);
 			if ((((int32_t)L_10) == ((int32_t)((int32_t)48))))
 			{
 				goto IL_0056;
@@ -11556,8 +11556,8 @@ IL_005d:
 			ASN1_t2114160833 * L_14 = V_0;
 			int32_t L_15 = V_1;
 			NullCheck(L_14);
-			ASN1_t2114160833 * L_16 = ASN1_get_Item_m315148275(L_14, L_15, /*hidden argument*/NULL);
-			String_t* L_17 = ASN1Convert_ToOid_m4290825381(NULL /*static, unused*/, L_16, /*hidden argument*/NULL);
+			ASN1_t2114160833 * L_16 = ASN1_get_Item_m2255075813(L_14, L_15, /*hidden argument*/NULL);
+			String_t* L_17 = ASN1Convert_ToOid_m3847701408(NULL /*static, unused*/, L_16, /*hidden argument*/NULL);
 			Oid_t3552120260 * L_18 = (Oid_t3552120260 *)il2cpp_codegen_object_new(Oid_t3552120260_il2cpp_TypeInfo_var);
 			Oid__ctor_m1869590876(L_18, L_17, /*hidden argument*/NULL);
 			NullCheck(L_13);
@@ -11571,7 +11571,7 @@ IL_007e:
 			int32_t L_20 = V_1;
 			ASN1_t2114160833 * L_21 = V_0;
 			NullCheck(L_21);
-			int32_t L_22 = ASN1_get_Count_m3039939183(L_21, /*hidden argument*/NULL);
+			int32_t L_22 = ASN1_get_Count_m1789520042(L_21, /*hidden argument*/NULL);
 			if ((((int32_t)L_20) < ((int32_t)L_22)))
 			{
 				goto IL_005d;
@@ -11629,7 +11629,7 @@ extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* X509EnhancedKeyUsageExtens
 	OidEnumerator_t899373898 * V_2 = NULL;
 	{
 		ASN1_t2114160833 * L_0 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m4216617981(L_0, (uint8_t)((int32_t)48), /*hidden argument*/NULL);
+		ASN1__ctor_m1239252869(L_0, (uint8_t)((int32_t)48), /*hidden argument*/NULL);
 		V_0 = L_0;
 		OidCollection_t4234766844 * L_1 = __this->get__enhKeyUsage_6();
 		NullCheck(L_1);
@@ -11648,9 +11648,9 @@ IL_0019:
 		Oid_t3552120260 * L_6 = V_1;
 		NullCheck(L_6);
 		String_t* L_7 = Oid_get_Value_m743416803(L_6, /*hidden argument*/NULL);
-		ASN1_t2114160833 * L_8 = ASN1Convert_FromOid_m3844102704(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
+		ASN1_t2114160833 * L_8 = ASN1Convert_FromOid_m1517037532(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
 		NullCheck(L_5);
-		ASN1_Add_m3262603624(L_5, L_8, /*hidden argument*/NULL);
+		ASN1_Add_m2431139999(L_5, L_8, /*hidden argument*/NULL);
 	}
 
 IL_0032:
@@ -12212,7 +12212,7 @@ extern "C" IL2CPP_METHOD_ATTR void X509ExtensionCollection__ctor_m1730716172 (X5
 		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
 		X509Certificate_t489243025 * L_0 = ___cert0;
 		NullCheck(L_0);
-		X509ExtensionCollection_t609554709 * L_1 = X509Certificate_get_Extensions_m1217872579(L_0, /*hidden argument*/NULL);
+		X509ExtensionCollection_t609554709 * L_1 = X509Certificate_get_Extensions_m2532937142(L_0, /*hidden argument*/NULL);
 		NullCheck(L_1);
 		int32_t L_2 = CollectionBase_get_Count_m1708965601(L_1, /*hidden argument*/NULL);
 		ArrayList_t2718874744 * L_3 = (ArrayList_t2718874744 *)il2cpp_codegen_object_new(ArrayList_t2718874744_il2cpp_TypeInfo_var);
@@ -12220,7 +12220,7 @@ extern "C" IL2CPP_METHOD_ATTR void X509ExtensionCollection__ctor_m1730716172 (X5
 		__this->set__list_0(L_3);
 		X509Certificate_t489243025 * L_4 = ___cert0;
 		NullCheck(L_4);
-		X509ExtensionCollection_t609554709 * L_5 = X509Certificate_get_Extensions_m1217872579(L_4, /*hidden argument*/NULL);
+		X509ExtensionCollection_t609554709 * L_5 = X509Certificate_get_Extensions_m2532937142(L_4, /*hidden argument*/NULL);
 		NullCheck(L_5);
 		int32_t L_6 = CollectionBase_get_Count_m1708965601(L_5, /*hidden argument*/NULL);
 		if (L_6)
@@ -12237,7 +12237,7 @@ IL_002d:
 		V_0 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)2));
 		X509Certificate_t489243025 * L_7 = ___cert0;
 		NullCheck(L_7);
-		X509ExtensionCollection_t609554709 * L_8 = X509Certificate_get_Extensions_m1217872579(L_7, /*hidden argument*/NULL);
+		X509ExtensionCollection_t609554709 * L_8 = X509Certificate_get_Extensions_m2532937142(L_7, /*hidden argument*/NULL);
 		NullCheck(L_8);
 		RuntimeObject* L_9 = CollectionBase_GetEnumerator_m654829872(L_8, /*hidden argument*/NULL);
 		V_2 = L_9;
@@ -12258,20 +12258,20 @@ IL_0045:
 			V_1 = ((X509Extension_t3173393653 *)CastclassClass((RuntimeObject*)L_11, X509Extension_t3173393653_il2cpp_TypeInfo_var));
 			X509Extension_t3173393653 * L_12 = V_1;
 			NullCheck(L_12);
-			bool L_13 = X509Extension_get_Critical_m171054662(L_12, /*hidden argument*/NULL);
+			bool L_13 = X509Extension_get_Critical_m2974578711(L_12, /*hidden argument*/NULL);
 			V_3 = L_13;
 			X509Extension_t3173393653 * L_14 = V_1;
 			NullCheck(L_14);
-			String_t* L_15 = X509Extension_get_Oid_m4107042796(L_14, /*hidden argument*/NULL);
+			String_t* L_15 = X509Extension_get_Oid_m1003388288(L_14, /*hidden argument*/NULL);
 			V_4 = L_15;
 			V_5 = (ByteU5BU5D_t4116647657*)NULL;
 			X509Extension_t3173393653 * L_16 = V_1;
 			NullCheck(L_16);
-			ASN1_t2114160833 * L_17 = X509Extension_get_Value_m896831716(L_16, /*hidden argument*/NULL);
+			ASN1_t2114160833 * L_17 = X509Extension_get_Value_m3529546267(L_16, /*hidden argument*/NULL);
 			V_6 = L_17;
 			ASN1_t2114160833 * L_18 = V_6;
 			NullCheck(L_18);
-			uint8_t L_19 = ASN1_get_Tag_m1863840805(L_18, /*hidden argument*/NULL);
+			uint8_t L_19 = ASN1_get_Tag_m2789147236(L_18, /*hidden argument*/NULL);
 			if ((!(((uint32_t)L_19) == ((uint32_t)4))))
 			{
 				goto IL_0094;
@@ -12282,7 +12282,7 @@ IL_0078:
 		{
 			ASN1_t2114160833 * L_20 = V_6;
 			NullCheck(L_20);
-			int32_t L_21 = ASN1_get_Count_m3039939183(L_20, /*hidden argument*/NULL);
+			int32_t L_21 = ASN1_get_Count_m1789520042(L_20, /*hidden argument*/NULL);
 			if ((((int32_t)L_21) <= ((int32_t)0)))
 			{
 				goto IL_0094;
@@ -12293,7 +12293,7 @@ IL_0085:
 		{
 			ASN1_t2114160833 * L_22 = V_6;
 			NullCheck(L_22);
-			ASN1_t2114160833 * L_23 = ASN1_get_Item_m315148275(L_22, 0, /*hidden argument*/NULL);
+			ASN1_t2114160833 * L_23 = ASN1_get_Item_m2255075813(L_22, 0, /*hidden argument*/NULL);
 			NullCheck(L_23);
 			ByteU5BU5D_t4116647657* L_24 = VirtFuncInvoker0< ByteU5BU5D_t4116647657* >::Invoke(4 /* System.Byte[] Mono.Security.ASN1::GetBytes() */, L_23);
 			V_5 = L_24;
@@ -13223,7 +13223,7 @@ IL_0031:
 		{
 			ByteU5BU5D_t4116647657* L_7 = ___extension0;
 			ASN1_t2114160833 * L_8 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-			ASN1__ctor_m1219137533(L_8, L_7, /*hidden argument*/NULL);
+			ASN1__ctor_m1638893325(L_8, L_7, /*hidden argument*/NULL);
 			V_0 = L_8;
 			V_1 = 0;
 			V_2 = 1;
@@ -13235,7 +13235,7 @@ IL_0041:
 			int32_t L_9 = V_1;
 			ASN1_t2114160833 * L_10 = V_0;
 			NullCheck(L_10);
-			ByteU5BU5D_t4116647657* L_11 = ASN1_get_Value_m3619295991(L_10, /*hidden argument*/NULL);
+			ByteU5BU5D_t4116647657* L_11 = ASN1_get_Value_m63296490(L_10, /*hidden argument*/NULL);
 			int32_t L_12 = V_2;
 			int32_t L_13 = L_12;
 			V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_13, (int32_t)1));
@@ -13250,7 +13250,7 @@ IL_0052:
 			int32_t L_16 = V_2;
 			ASN1_t2114160833 * L_17 = V_0;
 			NullCheck(L_17);
-			ByteU5BU5D_t4116647657* L_18 = ASN1_get_Value_m3619295991(L_17, /*hidden argument*/NULL);
+			ByteU5BU5D_t4116647657* L_18 = ASN1_get_Value_m63296490(L_17, /*hidden argument*/NULL);
 			NullCheck(L_18);
 			if ((((int32_t)L_16) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_18)->max_length)))))))
 			{
@@ -13329,7 +13329,7 @@ extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* X509KeyUsageExtension_Enco
 		NullCheck(L_2);
 		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (uint8_t)L_3);
 		ASN1_t2114160833 * L_4 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m3517592395(L_4, (uint8_t)3, L_2, /*hidden argument*/NULL);
+		ASN1__ctor_m682794872(L_4, (uint8_t)3, L_2, /*hidden argument*/NULL);
 		V_0 = L_4;
 		goto IL_009c;
 	}
@@ -13402,7 +13402,7 @@ IL_0059:
 		NullCheck(L_15);
 		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(1), (uint8_t)(((int32_t)((uint8_t)L_16))));
 		ASN1_t2114160833 * L_17 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m3517592395(L_17, (uint8_t)3, L_15, /*hidden argument*/NULL);
+		ASN1__ctor_m682794872(L_17, (uint8_t)3, L_15, /*hidden argument*/NULL);
 		V_0 = L_17;
 		goto IL_009c;
 	}
@@ -13422,7 +13422,7 @@ IL_007f:
 		NullCheck(L_22);
 		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(2), (uint8_t)(((int32_t)((uint8_t)((int32_t)((int32_t)L_23>>(int32_t)8))))));
 		ASN1_t2114160833 * L_24 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m3517592395(L_24, (uint8_t)3, L_22, /*hidden argument*/NULL);
+		ASN1__ctor_m682794872(L_24, (uint8_t)3, L_22, /*hidden argument*/NULL);
 		V_0 = L_24;
 	}
 
@@ -14165,13 +14165,13 @@ extern "C" IL2CPP_METHOD_ATTR X509Stores_t1373936237 * X509Store_get_Factory_m32
 		}
 	}
 	{
-		X509Stores_t1373936237 * L_1 = X509StoreManager_get_CurrentUser_m4040993045(NULL /*static, unused*/, /*hidden argument*/NULL);
+		X509Stores_t1373936237 * L_1 = X509StoreManager_get_CurrentUser_m719101392(NULL /*static, unused*/, /*hidden argument*/NULL);
 		return L_1;
 	}
 
 IL_0012:
 	{
-		X509Stores_t1373936237 * L_2 = X509StoreManager_get_LocalMachine_m3994689999(NULL /*static, unused*/, /*hidden argument*/NULL);
+		X509Stores_t1373936237 * L_2 = X509StoreManager_get_LocalMachine_m269504582(NULL /*static, unused*/, /*hidden argument*/NULL);
 		return L_2;
 	}
 }
@@ -14300,9 +14300,9 @@ IL_0053:
 		NullCheck(L_11);
 		ByteU5BU5D_t4116647657* L_12 = X509Certificate2_get_RawData_m1496947959(L_11, /*hidden argument*/NULL);
 		X509Certificate_t489243025 * L_13 = (X509Certificate_t489243025 *)il2cpp_codegen_object_new(X509Certificate_t489243025_il2cpp_TypeInfo_var);
-		X509Certificate__ctor_m2595927506(L_13, L_12, /*hidden argument*/NULL);
+		X509Certificate__ctor_m553243489(L_13, L_12, /*hidden argument*/NULL);
 		NullCheck(L_10);
-		X509Store_Import_m319598108(L_10, L_13, /*hidden argument*/NULL);
+		X509Store_Import_m2542166443(L_10, L_13, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x7C, FINALLY_006e);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -14435,9 +14435,9 @@ IL_0072:
 		NullCheck(L_17);
 		ByteU5BU5D_t4116647657* L_18 = X509Certificate2_get_RawData_m1496947959(L_17, /*hidden argument*/NULL);
 		X509Certificate_t489243025 * L_19 = (X509Certificate_t489243025 *)il2cpp_codegen_object_new(X509Certificate_t489243025_il2cpp_TypeInfo_var);
-		X509Certificate__ctor_m2595927506(L_19, L_18, /*hidden argument*/NULL);
+		X509Certificate__ctor_m553243489(L_19, L_18, /*hidden argument*/NULL);
 		NullCheck(L_16);
-		X509Store_Import_m319598108(L_16, L_19, /*hidden argument*/NULL);
+		X509Store_Import_m2542166443(L_16, L_19, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x9B, FINALLY_008d);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -14606,7 +14606,7 @@ IL_008b:
 		String_t* L_17 = V_0;
 		bool L_18 = V_1;
 		NullCheck(L_16);
-		X509Store_t2777415283 * L_19 = X509Stores_Open_m1553467177(L_16, L_17, L_18, /*hidden argument*/NULL);
+		X509Store_t2777415283 * L_19 = X509Stores_Open_m1037335183(L_16, L_17, L_18, /*hidden argument*/NULL);
 		__this->set_store_4(L_19);
 		X509Store_t2777415283 * L_20 = __this->get_store_4();
 		if (L_20)
@@ -14632,9 +14632,9 @@ IL_00d2:
 		__this->set__flags_3(L_25);
 		X509Store_t2777415283 * L_26 = __this->get_store_4();
 		NullCheck(L_26);
-		X509CertificateCollection_t1542168550 * L_27 = X509Store_get_Certificates_m56224934(L_26, /*hidden argument*/NULL);
+		X509CertificateCollection_t1542168550 * L_27 = X509Store_get_Certificates_m1092347772(L_26, /*hidden argument*/NULL);
 		NullCheck(L_27);
-		X509CertificateEnumerator_t3515934698 * L_28 = X509CertificateCollection_GetEnumerator_m92169144(L_27, /*hidden argument*/NULL);
+		X509CertificateEnumerator_t3515934698 * L_28 = X509CertificateCollection_GetEnumerator_m1275665495(L_27, /*hidden argument*/NULL);
 		V_3 = L_28;
 	}
 
@@ -14649,14 +14649,14 @@ IL_00ef:
 		{
 			X509CertificateEnumerator_t3515934698 * L_29 = V_3;
 			NullCheck(L_29);
-			X509Certificate_t489243025 * L_30 = X509CertificateEnumerator_get_Current_m3079314562(L_29, /*hidden argument*/NULL);
+			X509Certificate_t489243025 * L_30 = X509CertificateEnumerator_get_Current_m1004537031(L_29, /*hidden argument*/NULL);
 			V_2 = L_30;
 			X509Certificate2Collection_t2111161276 * L_31 = X509Store_get_Certificates_m2149701265(__this, /*hidden argument*/NULL);
 			X509Certificate_t489243025 * L_32 = V_2;
 			NullCheck(L_32);
 			ByteU5BU5D_t4116647657* L_33 = VirtFuncInvoker0< ByteU5BU5D_t4116647657* >::Invoke(12 /* System.Byte[] Mono.Security.X509.X509Certificate::get_RawData() */, L_32);
 			X509Certificate2_t714049126 * L_34 = (X509Certificate2_t714049126 *)il2cpp_codegen_object_new(X509Certificate2_t714049126_il2cpp_TypeInfo_var);
-			X509Certificate2__ctor_m3336405942(L_34, L_33, /*hidden argument*/NULL);
+			X509Certificate2__ctor_m2370196240(L_34, L_33, /*hidden argument*/NULL);
 			NullCheck(L_31);
 			X509Certificate2Collection_Add_m3151757943(L_31, L_34, /*hidden argument*/NULL);
 		}
@@ -14665,7 +14665,7 @@ IL_010d:
 		{
 			X509CertificateEnumerator_t3515934698 * L_35 = V_3;
 			NullCheck(L_35);
-			bool L_36 = X509CertificateEnumerator_MoveNext_m1342258196(L_35, /*hidden argument*/NULL);
+			bool L_36 = X509CertificateEnumerator_MoveNext_m3925432749(L_35, /*hidden argument*/NULL);
 			if (L_36)
 			{
 				goto IL_00ef;
@@ -14798,9 +14798,9 @@ IL_0054:
 		NullCheck(L_11);
 		ByteU5BU5D_t4116647657* L_12 = X509Certificate2_get_RawData_m1496947959(L_11, /*hidden argument*/NULL);
 		X509Certificate_t489243025 * L_13 = (X509Certificate_t489243025 *)il2cpp_codegen_object_new(X509Certificate_t489243025_il2cpp_TypeInfo_var);
-		X509Certificate__ctor_m2595927506(L_13, L_12, /*hidden argument*/NULL);
+		X509Certificate__ctor_m553243489(L_13, L_12, /*hidden argument*/NULL);
 		NullCheck(L_10);
-		X509Store_Remove_m2429424682(L_10, L_13, /*hidden argument*/NULL);
+		X509Store_Remove_m3732268634(L_10, L_13, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x7C, FINALLY_006f);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -14975,9 +14975,9 @@ IL_0095:
 			NullCheck(L_24);
 			ByteU5BU5D_t4116647657* L_25 = X509Certificate2_get_RawData_m1496947959(L_24, /*hidden argument*/NULL);
 			X509Certificate_t489243025 * L_26 = (X509Certificate_t489243025 *)il2cpp_codegen_object_new(X509Certificate_t489243025_il2cpp_TypeInfo_var);
-			X509Certificate__ctor_m2595927506(L_26, L_25, /*hidden argument*/NULL);
+			X509Certificate__ctor_m553243489(L_26, L_25, /*hidden argument*/NULL);
 			NullCheck(L_23);
-			X509Store_Remove_m2429424682(L_23, L_26, /*hidden argument*/NULL);
+			X509Store_Remove_m3732268634(L_23, L_26, /*hidden argument*/NULL);
 		}
 
 IL_00b3:
@@ -15358,13 +15358,13 @@ IL_0054:
 IL_0098:
 	{
 		ASN1_t2114160833 * L_19 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m4216617981(L_19, (uint8_t)((int32_t)48), /*hidden argument*/NULL);
+		ASN1__ctor_m1239252869(L_19, (uint8_t)((int32_t)48), /*hidden argument*/NULL);
 		V_2 = L_19;
 		ASN1_t2114160833 * L_20 = V_2;
 		ASN1_t2114160833 * L_21 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m4216617981(L_21, (uint8_t)((int32_t)48), /*hidden argument*/NULL);
+		ASN1__ctor_m1239252869(L_21, (uint8_t)((int32_t)48), /*hidden argument*/NULL);
 		NullCheck(L_20);
-		ASN1_t2114160833 * L_22 = ASN1_Add_m3262603624(L_20, L_21, /*hidden argument*/NULL);
+		ASN1_t2114160833 * L_22 = ASN1_Add_m2431139999(L_20, L_21, /*hidden argument*/NULL);
 		V_3 = L_22;
 		ASN1_t2114160833 * L_23 = V_3;
 		PublicKey_t3779582684 * L_24 = ___key0;
@@ -15375,9 +15375,9 @@ IL_0098:
 		IL2CPP_RUNTIME_CLASS_INIT(CryptoConfig_t4201145714_il2cpp_TypeInfo_var);
 		ByteU5BU5D_t4116647657* L_27 = CryptoConfig_EncodeOID_m2635914623(NULL /*static, unused*/, L_26, /*hidden argument*/NULL);
 		ASN1_t2114160833 * L_28 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m1219137533(L_28, L_27, /*hidden argument*/NULL);
+		ASN1__ctor_m1638893325(L_28, L_27, /*hidden argument*/NULL);
 		NullCheck(L_23);
-		ASN1_Add_m3262603624(L_23, L_28, /*hidden argument*/NULL);
+		ASN1_Add_m2431139999(L_23, L_28, /*hidden argument*/NULL);
 		ASN1_t2114160833 * L_29 = V_3;
 		PublicKey_t3779582684 * L_30 = ___key0;
 		NullCheck(L_30);
@@ -15385,9 +15385,9 @@ IL_0098:
 		NullCheck(L_31);
 		ByteU5BU5D_t4116647657* L_32 = AsnEncodedData_get_RawData_m1706087592(L_31, /*hidden argument*/NULL);
 		ASN1_t2114160833 * L_33 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m1219137533(L_33, L_32, /*hidden argument*/NULL);
+		ASN1__ctor_m1638893325(L_33, L_32, /*hidden argument*/NULL);
 		NullCheck(L_29);
-		ASN1_Add_m3262603624(L_29, L_33, /*hidden argument*/NULL);
+		ASN1_Add_m2431139999(L_29, L_33, /*hidden argument*/NULL);
 		ByteU5BU5D_t4116647657* L_34 = V_0;
 		NullCheck(L_34);
 		V_4 = ((ByteU5BU5D_t4116647657*)SZArrayNew(ByteU5BU5D_t4116647657_il2cpp_TypeInfo_var, (uint32_t)((int32_t)il2cpp_codegen_add((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_34)->max_length)))), (int32_t)1))));
@@ -15399,9 +15399,9 @@ IL_0098:
 		ASN1_t2114160833 * L_38 = V_2;
 		ByteU5BU5D_t4116647657* L_39 = V_4;
 		ASN1_t2114160833 * L_40 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m3517592395(L_40, (uint8_t)3, L_39, /*hidden argument*/NULL);
+		ASN1__ctor_m682794872(L_40, (uint8_t)3, L_39, /*hidden argument*/NULL);
 		NullCheck(L_38);
-		ASN1_Add_m3262603624(L_38, L_40, /*hidden argument*/NULL);
+		ASN1_Add_m2431139999(L_38, L_40, /*hidden argument*/NULL);
 		SHA1_t1803193667 * L_41 = SHA1_Create_m1390871308(NULL /*static, unused*/, /*hidden argument*/NULL);
 		ASN1_t2114160833 * L_42 = V_2;
 		NullCheck(L_42);
@@ -15471,7 +15471,7 @@ IL_0019:
 	}
 	{
 		ByteU5BU5D_t4116647657* L_4 = __this->get__subjectKeyIdentifier_6();
-		String_t* L_5 = CryptoConvert_ToHex_m2210632265(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+		String_t* L_5 = CryptoConvert_ToHex_m4034982758(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
 		__this->set__ski_7(L_5);
 	}
 
@@ -15826,11 +15826,11 @@ IL_003c:
 	{ // begin try (depth: 1)
 		ByteU5BU5D_t4116647657* L_8 = ___extension0;
 		ASN1_t2114160833 * L_9 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m1219137533(L_9, L_8, /*hidden argument*/NULL);
+		ASN1__ctor_m1638893325(L_9, L_8, /*hidden argument*/NULL);
 		V_0 = L_9;
 		ASN1_t2114160833 * L_10 = V_0;
 		NullCheck(L_10);
-		ByteU5BU5D_t4116647657* L_11 = ASN1_get_Value_m3619295991(L_10, /*hidden argument*/NULL);
+		ByteU5BU5D_t4116647657* L_11 = ASN1_get_Value_m63296490(L_10, /*hidden argument*/NULL);
 		__this->set__subjectKeyIdentifier_6(L_11);
 		goto IL_0061;
 	} // end try (depth: 1)
@@ -15879,7 +15879,7 @@ extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* X509SubjectKeyIdentifierEx
 	{
 		ByteU5BU5D_t4116647657* L_0 = __this->get__subjectKeyIdentifier_6();
 		ASN1_t2114160833 * L_1 = (ASN1_t2114160833 *)il2cpp_codegen_object_new(ASN1_t2114160833_il2cpp_TypeInfo_var);
-		ASN1__ctor_m3517592395(L_1, (uint8_t)4, L_0, /*hidden argument*/NULL);
+		ASN1__ctor_m682794872(L_1, (uint8_t)4, L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
 		ASN1_t2114160833 * L_2 = V_0;
 		NullCheck(L_2);
@@ -16238,7 +16238,7 @@ IL_0038:
 	{
 		Match_t3408321083 * L_10 = V_2;
 		NullCheck(L_10);
-		bool L_11 = Group_get_Success_m1492300455(L_10, /*hidden argument*/NULL);
+		bool L_11 = Group_get_Success_m3823591889(L_10, /*hidden argument*/NULL);
 		if (L_11)
 		{
 			goto IL_0048;
@@ -16315,7 +16315,7 @@ IL_00ab:
 		GroupCollection_t69770484 * L_37 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_36);
 		int32_t L_38 = V_4;
 		NullCheck(L_37);
-		Group_t2468205786 * L_39 = GroupCollection_get_Item_m2465789076(L_37, L_38, /*hidden argument*/NULL);
+		Group_t2468205786 * L_39 = GroupCollection_get_Item_m723682197(L_37, L_38, /*hidden argument*/NULL);
 		V_5 = L_39;
 		ArrayList_t2718874744 * L_40 = V_0;
 		String_t* L_41 = ___input1;
@@ -16513,7 +16513,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* BaseMachine_LTRReplace_m4004862561 (Base
 		V_0 = L_6;
 		Match_t3408321083 * L_7 = V_0;
 		NullCheck(L_7);
-		bool L_8 = Group_get_Success_m1492300455(L_7, /*hidden argument*/NULL);
+		bool L_8 = Group_get_Success_m3823591889(L_7, /*hidden argument*/NULL);
 		if (L_8)
 		{
 			goto IL_0026;
@@ -16610,7 +16610,7 @@ IL_0071:
 		V_0 = L_39;
 		Match_t3408321083 * L_40 = V_0;
 		NullCheck(L_40);
-		bool L_41 = Group_get_Success_m1492300455(L_40, /*hidden argument*/NULL);
+		bool L_41 = Group_get_Success_m3823591889(L_40, /*hidden argument*/NULL);
 		if (L_41)
 		{
 			goto IL_0042;
@@ -16660,7 +16660,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* BaseMachine_RTLReplace_m2219518441 (Base
 		V_0 = L_5;
 		Match_t3408321083 * L_6 = V_0;
 		NullCheck(L_6);
-		bool L_7 = Group_get_Success_m1492300455(L_6, /*hidden argument*/NULL);
+		bool L_7 = Group_get_Success_m3823591889(L_6, /*hidden argument*/NULL);
 		if (L_7)
 		{
 			goto IL_001e;
@@ -16768,7 +16768,7 @@ IL_006d:
 		V_0 = L_44;
 		Match_t3408321083 * L_45 = V_0;
 		NullCheck(L_45);
-		bool L_46 = Group_get_Success_m1492300455(L_45, /*hidden argument*/NULL);
+		bool L_46 = Group_get_Success_m3823591889(L_45, /*hidden argument*/NULL);
 		if (L_46)
 		{
 			goto IL_0037;
@@ -16986,12 +16986,12 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Capture_get_Length_m4245536461 (Capture_t2
 	}
 }
 // System.String System.Text.RegularExpressions.Capture::get_Value()
-extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m538076933 (Capture_t2232016050 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m3919646039 (Capture_t2232016050 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (Capture_get_Value_m538076933_MetadataUsageId);
+		il2cpp_codegen_initialize_method (Capture_get_Value_m3919646039_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* G_B3_0 = NULL;
@@ -17028,7 +17028,7 @@ IL_002c:
 extern "C" IL2CPP_METHOD_ATTR String_t* Capture_ToString_m2751919208 (Capture_t2232016050 * __this, const RuntimeMethod* method)
 {
 	{
-		String_t* L_0 = Capture_get_Value_m538076933(__this, /*hidden argument*/NULL);
+		String_t* L_0 = Capture_get_Value_m3919646039(__this, /*hidden argument*/NULL);
 		return L_0;
 	}
 }
@@ -22649,7 +22649,7 @@ extern "C" IL2CPP_METHOD_ATTR CaptureCollection_t1760593541 * Group_get_Captures
 	}
 }
 // System.Boolean System.Text.RegularExpressions.Group::get_Success()
-extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m1492300455 (Group_t2468205786 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m3823591889 (Group_t2468205786 * __this, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = __this->get_success_4();
@@ -22706,12 +22706,12 @@ extern "C" IL2CPP_METHOD_ATTR bool GroupCollection_get_IsSynchronized_m117063361
 	}
 }
 // System.Text.RegularExpressions.Group System.Text.RegularExpressions.GroupCollection::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m2465789076 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m723682197 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (GroupCollection_get_Item_m2465789076_MetadataUsageId);
+		il2cpp_codegen_initialize_method (GroupCollection_get_Item_m723682197_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	Match_t3408321083 * V_0 = NULL;
@@ -22844,7 +22844,7 @@ extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m3293
 	}
 	{
 		int32_t L_10 = V_1;
-		Group_t2468205786 * L_11 = GroupCollection_get_Item_m2465789076(__this, L_10, /*hidden argument*/NULL);
+		Group_t2468205786 * L_11 = GroupCollection_get_Item_m723682197(__this, L_10, /*hidden argument*/NULL);
 		return L_11;
 	}
 
@@ -29896,12 +29896,12 @@ extern "C" IL2CPP_METHOD_ATTR void MatchCollection__ctor_m4138850022 (MatchColle
 	}
 }
 // System.Int32 System.Text.RegularExpressions.MatchCollection::get_Count()
-extern "C" IL2CPP_METHOD_ATTR int32_t MatchCollection_get_Count_m1667454419 (MatchCollection_t1395363720 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR int32_t MatchCollection_get_Count_m1586545784 (MatchCollection_t1395363720 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (MatchCollection_get_Count_m1667454419_MetadataUsageId);
+		il2cpp_codegen_initialize_method (MatchCollection_get_Count_m1586545784_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -30029,7 +30029,7 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject* MatchCollection_GetEnumerator_m3899
 	{
 		Match_t3408321083 * L_0 = __this->get_current_0();
 		NullCheck(L_0);
-		bool L_1 = Group_get_Success_m1492300455(L_0, /*hidden argument*/NULL);
+		bool L_1 = Group_get_Success_m3823591889(L_0, /*hidden argument*/NULL);
 		if (!L_1)
 		{
 			goto IL_001d;
@@ -30091,7 +30091,7 @@ IL_0028:
 	{
 		Match_t3408321083 * L_7 = __this->get_current_0();
 		NullCheck(L_7);
-		bool L_8 = Group_get_Success_m1492300455(L_7, /*hidden argument*/NULL);
+		bool L_8 = Group_get_Success_m3823591889(L_7, /*hidden argument*/NULL);
 		if (L_8)
 		{
 			goto IL_0005;
@@ -30112,7 +30112,7 @@ IL_0049:
 	{
 		Match_t3408321083 * L_12 = __this->get_current_0();
 		NullCheck(L_12);
-		bool L_13 = Group_get_Success_m1492300455(L_12, /*hidden argument*/NULL);
+		bool L_13 = Group_get_Success_m3823591889(L_12, /*hidden argument*/NULL);
 		G_B7_0 = ((int32_t)(L_13));
 		goto IL_0068;
 	}
@@ -30242,7 +30242,7 @@ IL_003d:
 		NullCheck(L_11);
 		Match_t3408321083 * L_12 = L_11->get_current_0();
 		NullCheck(L_12);
-		bool L_13 = Group_get_Success_m1492300455(L_12, /*hidden argument*/NULL);
+		bool L_13 = Group_get_Success_m3823591889(L_12, /*hidden argument*/NULL);
 		if (L_13)
 		{
 			goto IL_0078;
@@ -30337,7 +30337,7 @@ IL_0026:
 		NullCheck(L_9);
 		Match_t3408321083 * L_10 = L_9->get_current_0();
 		NullCheck(L_10);
-		bool L_11 = Group_get_Success_m1492300455(L_10, /*hidden argument*/NULL);
+		bool L_11 = Group_get_Success_m3823591889(L_10, /*hidden argument*/NULL);
 		if (L_11)
 		{
 			goto IL_0058;
@@ -32506,7 +32506,7 @@ extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m1255796137 (Regex_t3657309853 * 
 	}
 }
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m897876424 (Regex_t3657309853 * __this, String_t* ___pattern0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m3948448025 (Regex_t3657309853 * __this, String_t* ___pattern0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___pattern0;
@@ -32841,7 +32841,7 @@ extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m50119
 		Regex_t3657309853 * L_3 = V_0;
 		String_t* L_4 = ___input0;
 		NullCheck(L_3);
-		MatchCollection_t1395363720 * L_5 = Regex_Matches_m175567660(L_3, L_4, /*hidden argument*/NULL);
+		MatchCollection_t1395363720 * L_5 = Regex_Matches_m979395559(L_3, L_4, /*hidden argument*/NULL);
 		return L_5;
 	}
 }
@@ -33470,7 +33470,7 @@ extern "C" IL2CPP_METHOD_ATTR bool Regex_IsMatch_m2113092601 (Regex_t3657309853 
 		int32_t L_1 = ___startat1;
 		Match_t3408321083 * L_2 = Regex_Match_m4145799399(__this, L_0, L_1, /*hidden argument*/NULL);
 		NullCheck(L_2);
-		bool L_3 = Group_get_Success_m1492300455(L_2, /*hidden argument*/NULL);
+		bool L_3 = Group_get_Success_m3823591889(L_2, /*hidden argument*/NULL);
 		return L_3;
 	}
 }
@@ -33634,7 +33634,7 @@ IL_004f:
 	}
 }
 // System.Text.RegularExpressions.MatchCollection System.Text.RegularExpressions.Regex::Matches(System.String)
-extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m175567660 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m979395559 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___input0;
@@ -34619,7 +34619,7 @@ IL_0055:
 		GroupCollection_t69770484 * L_20 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_19);
 		int32_t L_21 = V_1;
 		NullCheck(L_20);
-		Group_t2468205786 * L_22 = GroupCollection_get_Item_m2465789076(L_20, ((-((int32_t)il2cpp_codegen_add((int32_t)L_21, (int32_t)4)))), /*hidden argument*/NULL);
+		Group_t2468205786 * L_22 = GroupCollection_get_Item_m723682197(L_20, ((-((int32_t)il2cpp_codegen_add((int32_t)L_21, (int32_t)4)))), /*hidden argument*/NULL);
 		V_3 = L_22;
 		StringBuilder_t * L_23 = ___sb1;
 		Group_t2468205786 * L_24 = V_3;

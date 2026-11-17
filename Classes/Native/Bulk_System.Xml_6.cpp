@@ -15505,7 +15505,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* StringBuilder_ToString_m3317489284 (Stri
 // System.String System.String::Concat(System.String,System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3755062657 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, String_t* p2, const RuntimeMethod* method);
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m897876424 (Regex_t3657309853 * __this, String_t* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m3948448025 (Regex_t3657309853 * __this, String_t* p0, const RuntimeMethod* method);
 // System.String System.String::Trim()
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Trim_m923598732 (String_t* __this, const RuntimeMethod* method);
 // System.Globalization.CultureInfo System.Globalization.CultureInfo::get_InvariantCulture()
@@ -26205,7 +26205,7 @@ IL_0509:
 			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 			String_t* L_182 = String_Concat_m3755062657(NULL /*static, unused*/, _stringLiteral3452614642, L_181, _stringLiteral3452614524, /*hidden argument*/NULL);
 			Regex_t3657309853 * L_183 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-			Regex__ctor_m897876424(L_183, L_182, /*hidden argument*/NULL);
+			Regex__ctor_m3948448025(L_183, L_182, /*hidden argument*/NULL);
 			V_15 = L_183;
 			RegexU5BU5D_t1561692752* L_184 = __this->get_rexPatterns_23();
 			int32_t L_185 = V_9;

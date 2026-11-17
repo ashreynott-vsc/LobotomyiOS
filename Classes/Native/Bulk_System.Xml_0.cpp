@@ -1524,8 +1524,8 @@ struct XsdIdentityFieldU5BU5D_t881076913;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEOBJECT_H
-#ifndef U3CMODULEU3E_T692745553_H
-#define U3CMODULEU3E_T692745553_H
+#ifndef U3CMODULEU3E_T692745554_H
+#define U3CMODULEU3E_T692745554_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -1533,7 +1533,7 @@ struct XsdIdentityFieldU5BU5D_t881076913;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745553 
+struct  U3CModuleU3E_t692745554 
 {
 public:
 
@@ -1543,7 +1543,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745553_H
+#endif // U3CMODULEU3E_T692745554_H
 #ifndef STACK_T2329662280_H
 #define STACK_T2329662280_H
 #ifdef __clang__

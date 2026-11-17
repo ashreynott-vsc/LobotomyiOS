@@ -8688,7 +8688,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Uri_GetLeftPart_m3979111399 (Uri_t100236
 // System.Int32 System.Uri::GetDefaultPort(System.String)
 extern "C" IL2CPP_METHOD_ATTR int32_t Uri_GetDefaultPort_m2547653357 (RuntimeObject * __this /* static, unused */, String_t* ___scheme0, const RuntimeMethod* method);
 // System.String System.Uri::get_Host()
-extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m255565830 (Uri_t100236324 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m42857288 (Uri_t100236324 * __this, const RuntimeMethod* method);
 // System.UriHostNameType System.Uri::CheckHostName(System.String)
 extern "C" IL2CPP_METHOD_ATTR int32_t Uri_CheckHostName_m2213216182 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method);
 // System.Boolean System.Uri::get_IsFile()
@@ -8872,13 +8872,13 @@ extern "C" IL2CPP_METHOD_ATTR void FormatException__ctor_m3747066592 (FormatExce
 // System.Void System.Exception::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C" IL2CPP_METHOD_ATTR void Exception_GetObjectData_m1103241326 (Exception_t * __this, SerializationInfo_t950877179 * p0, StreamingContext_t3711869237  p1, const RuntimeMethod* method);
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m897876424 (Regex_t3657309853 * __this, String_t* ___pattern0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m3948448025 (Regex_t3657309853 * __this, String_t* ___pattern0, const RuntimeMethod* method);
 // System.String System.Text.RegularExpressions.Capture::get_Value()
-extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m538076933 (Capture_t2232016050 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m3919646039 (Capture_t2232016050 * __this, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.Regex::Match(System.String)
 extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Regex_Match_m2255756165 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Group System.Text.RegularExpressions.GroupCollection::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m2465789076 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m723682197 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method);
 // System.Int32 System.String::Compare(System.String,System.String,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR int32_t String_Compare_m1071830722 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, bool p2, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Match System.UriParser::ParseAuthority(System.Text.RegularExpressions.Group)
@@ -8888,7 +8888,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* UriParser_IgnoreFirstCharIf_m2367766574 
 // System.String System.UriParser::Format(System.String,System.UriFormat)
 extern "C" IL2CPP_METHOD_ATTR String_t* UriParser_Format_m4289074648 (UriParser_t3890150400 * __this, String_t* ___s0, int32_t ___format1, const RuntimeMethod* method);
 // System.Boolean System.Text.RegularExpressions.Group::get_Success()
-extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m1492300455 (Group_t2468205786 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m3823591889 (Group_t2468205786 * __this, const RuntimeMethod* method);
 // System.Text.StringBuilder System.Text.StringBuilder::Append(System.Object)
 extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * StringBuilder_Append_m1640838743 (StringBuilder_t * __this, RuntimeObject * p0, const RuntimeMethod* method);
 // System.Int32 System.Uri::Compare(System.Uri,System.Uri,System.UriComponents,System.UriFormat,System.StringComparison)
@@ -22608,7 +22608,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Fragment_m575158891 (Uri_t100236
 	}
 }
 // System.String System.Uri::get_Host()
-extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m255565830 (Uri_t100236324 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m42857288 (Uri_t100236324 * __this, const RuntimeMethod* method)
 {
 	{
 		Uri_EnsureAbsoluteUri_m2231483494(__this, /*hidden argument*/NULL);
@@ -22632,7 +22632,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Uri_get_HostNameType_m1143766868 (Uri_t100
 	int32_t G_B12_0 = 0;
 	{
 		Uri_EnsureAbsoluteUri_m2231483494(__this, /*hidden argument*/NULL);
-		String_t* L_0 = Uri_get_Host_m255565830(__this, /*hidden argument*/NULL);
+		String_t* L_0 = Uri_get_Host_m42857288(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Uri_t100236324_il2cpp_TypeInfo_var);
 		int32_t L_1 = Uri_CheckHostName_m2213216182(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
@@ -22779,7 +22779,7 @@ extern "C" IL2CPP_METHOD_ATTR bool Uri_get_IsLoopback_m2492530169 (Uri_t10023632
 	IPv6Address_t2709566769 * V_1 = NULL;
 	{
 		Uri_EnsureAbsoluteUri_m2231483494(__this, /*hidden argument*/NULL);
-		String_t* L_0 = Uri_get_Host_m255565830(__this, /*hidden argument*/NULL);
+		String_t* L_0 = Uri_get_Host_m42857288(__this, /*hidden argument*/NULL);
 		NullCheck(L_0);
 		int32_t L_1 = String_get_Length_m3847582255(L_0, /*hidden argument*/NULL);
 		if (L_1)
@@ -23405,7 +23405,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_DnsSafeHost_m3434390226 (Uri_t10
 {
 	{
 		Uri_EnsureAbsoluteUri_m2231483494(__this, /*hidden argument*/NULL);
-		String_t* L_0 = Uri_get_Host_m255565830(__this, /*hidden argument*/NULL);
+		String_t* L_0 = Uri_get_Host_m42857288(__this, /*hidden argument*/NULL);
 		String_t* L_1 = VirtFuncInvoker1< String_t*, String_t* >::Invoke(7 /* System.String System.Uri::Unescape(System.String) */, __this, L_0);
 		return L_1;
 	}
@@ -24983,10 +24983,10 @@ extern "C" IL2CPP_METHOD_ATTR Uri_t100236324 * Uri_MakeRelativeUri_m3468717094 (
 
 IL_0017:
 	{
-		String_t* L_3 = Uri_get_Host_m255565830(__this, /*hidden argument*/NULL);
+		String_t* L_3 = Uri_get_Host_m42857288(__this, /*hidden argument*/NULL);
 		Uri_t100236324 * L_4 = ___uri0;
 		NullCheck(L_4);
-		String_t* L_5 = Uri_get_Host_m255565830(L_4, /*hidden argument*/NULL);
+		String_t* L_5 = Uri_get_Host_m42857288(L_4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_6 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_3, L_5, /*hidden argument*/NULL);
 		if (L_6)
@@ -30886,7 +30886,7 @@ extern "C" IL2CPP_METHOD_ATTR void UriBuilder__ctor_m377291920 (UriBuilder_t5793
 		__this->set_scheme_0(L_1);
 		Uri_t100236324 * L_2 = ___uri0;
 		NullCheck(L_2);
-		String_t* L_3 = Uri_get_Host_m255565830(L_2, /*hidden argument*/NULL);
+		String_t* L_3 = Uri_get_Host_m42857288(L_2, /*hidden argument*/NULL);
 		__this->set_host_1(L_3);
 		Uri_t100236324 * L_4 = ___uri0;
 		NullCheck(L_4);
@@ -31869,10 +31869,10 @@ extern "C" IL2CPP_METHOD_ATTR void UriParser__cctor_m3655686731 (RuntimeObject *
 		Object__ctor_m297566312(L_0, /*hidden argument*/NULL);
 		((UriParser_t3890150400_StaticFields*)il2cpp_codegen_static_fields_for(UriParser_t3890150400_il2cpp_TypeInfo_var))->set_lock_object_0(L_0);
 		Regex_t3657309853 * L_1 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-		Regex__ctor_m897876424(L_1, _stringLiteral528199797, /*hidden argument*/NULL);
+		Regex__ctor_m3948448025(L_1, _stringLiteral528199797, /*hidden argument*/NULL);
 		((UriParser_t3890150400_StaticFields*)il2cpp_codegen_static_fields_for(UriParser_t3890150400_il2cpp_TypeInfo_var))->set_uri_regex_4(L_1);
 		Regex_t3657309853 * L_2 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-		Regex__ctor_m897876424(L_2, _stringLiteral3698381084, /*hidden argument*/NULL);
+		Regex__ctor_m3948448025(L_2, _stringLiteral3698381084, /*hidden argument*/NULL);
 		((UriParser_t3890150400_StaticFields*)il2cpp_codegen_static_fields_for(UriParser_t3890150400_il2cpp_TypeInfo_var))->set_auth_regex_5(L_2);
 		return;
 	}
@@ -31891,7 +31891,7 @@ extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * UriParser_ParseAuthority_m1289
 		Regex_t3657309853 * L_0 = ((UriParser_t3890150400_StaticFields*)il2cpp_codegen_static_fields_for(UriParser_t3890150400_il2cpp_TypeInfo_var))->get_auth_regex_5();
 		Group_t2468205786 * L_1 = ___g0;
 		NullCheck(L_1);
-		String_t* L_2 = Capture_get_Value_m538076933(L_1, /*hidden argument*/NULL);
+		String_t* L_2 = Capture_get_Value_m3919646039(L_1, /*hidden argument*/NULL);
 		NullCheck(L_0);
 		Match_t3408321083 * L_3 = Regex_Match_m2255756165(L_0, L_2, /*hidden argument*/NULL);
 		return L_3;
@@ -31979,9 +31979,9 @@ IL_004e:
 		NullCheck(L_12);
 		GroupCollection_t69770484 * L_13 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_12);
 		NullCheck(L_13);
-		Group_t2468205786 * L_14 = GroupCollection_get_Item_m2465789076(L_13, 2, /*hidden argument*/NULL);
+		Group_t2468205786 * L_14 = GroupCollection_get_Item_m723682197(L_13, 2, /*hidden argument*/NULL);
 		NullCheck(L_14);
-		String_t* L_15 = Capture_get_Value_m538076933(L_14, /*hidden argument*/NULL);
+		String_t* L_15 = Capture_get_Value_m3919646039(L_14, /*hidden argument*/NULL);
 		V_1 = L_15;
 		String_t* L_16 = V_1;
 		IL2CPP_RUNTIME_CLASS_INIT(Uri_t100236324_il2cpp_TypeInfo_var);
@@ -31997,9 +31997,9 @@ IL_006c:
 		NullCheck(L_19);
 		GroupCollection_t69770484 * L_20 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_19);
 		NullCheck(L_20);
-		Group_t2468205786 * L_21 = GroupCollection_get_Item_m2465789076(L_20, 2, /*hidden argument*/NULL);
+		Group_t2468205786 * L_21 = GroupCollection_get_Item_m723682197(L_20, 2, /*hidden argument*/NULL);
 		NullCheck(L_21);
-		String_t* L_22 = Capture_get_Value_m538076933(L_21, /*hidden argument*/NULL);
+		String_t* L_22 = Capture_get_Value_m3919646039(L_21, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		int32_t L_23 = String_Compare_m1071830722(NULL /*static, unused*/, L_18, L_22, (bool)1, /*hidden argument*/NULL);
 		if (!L_23)
@@ -32013,9 +32013,9 @@ IL_006c:
 		NullCheck(L_25);
 		GroupCollection_t69770484 * L_26 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_25);
 		NullCheck(L_26);
-		Group_t2468205786 * L_27 = GroupCollection_get_Item_m2465789076(L_26, 2, /*hidden argument*/NULL);
+		Group_t2468205786 * L_27 = GroupCollection_get_Item_m723682197(L_26, 2, /*hidden argument*/NULL);
 		NullCheck(L_27);
-		String_t* L_28 = Capture_get_Value_m538076933(L_27, /*hidden argument*/NULL);
+		String_t* L_28 = Capture_get_Value_m3919646039(L_27, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_29 = String_Concat_m2163913788(NULL /*static, unused*/, _stringLiteral1430385015, L_24, _stringLiteral1509375777, L_28, /*hidden argument*/NULL);
 		SystemException_t176217640 * L_30 = (SystemException_t176217640 *)il2cpp_codegen_object_new(SystemException_t176217640_il2cpp_TypeInfo_var);
@@ -32117,15 +32117,15 @@ IL_0116:
 		NullCheck(L_39);
 		GroupCollection_t69770484 * L_40 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_39);
 		NullCheck(L_40);
-		Group_t2468205786 * L_41 = GroupCollection_get_Item_m2465789076(L_40, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_41 = GroupCollection_get_Item_m723682197(L_40, 4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(UriParser_t3890150400_il2cpp_TypeInfo_var);
 		Match_t3408321083 * L_42 = UriParser_ParseAuthority_m1289629281(NULL /*static, unused*/, L_41, /*hidden argument*/NULL);
 		NullCheck(L_42);
 		GroupCollection_t69770484 * L_43 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_42);
 		NullCheck(L_43);
-		Group_t2468205786 * L_44 = GroupCollection_get_Item_m2465789076(L_43, 2, /*hidden argument*/NULL);
+		Group_t2468205786 * L_44 = GroupCollection_get_Item_m723682197(L_43, 2, /*hidden argument*/NULL);
 		NullCheck(L_44);
-		String_t* L_45 = Capture_get_Value_m538076933(L_44, /*hidden argument*/NULL);
+		String_t* L_45 = Capture_get_Value_m3919646039(L_44, /*hidden argument*/NULL);
 		return L_45;
 	}
 
@@ -32135,15 +32135,15 @@ IL_0138:
 		NullCheck(L_46);
 		GroupCollection_t69770484 * L_47 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_46);
 		NullCheck(L_47);
-		Group_t2468205786 * L_48 = GroupCollection_get_Item_m2465789076(L_47, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_48 = GroupCollection_get_Item_m723682197(L_47, 4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(UriParser_t3890150400_il2cpp_TypeInfo_var);
 		Match_t3408321083 * L_49 = UriParser_ParseAuthority_m1289629281(NULL /*static, unused*/, L_48, /*hidden argument*/NULL);
 		NullCheck(L_49);
 		GroupCollection_t69770484 * L_50 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_49);
 		NullCheck(L_50);
-		Group_t2468205786 * L_51 = GroupCollection_get_Item_m2465789076(L_50, 3, /*hidden argument*/NULL);
+		Group_t2468205786 * L_51 = GroupCollection_get_Item_m723682197(L_50, 3, /*hidden argument*/NULL);
 		NullCheck(L_51);
-		String_t* L_52 = Capture_get_Value_m538076933(L_51, /*hidden argument*/NULL);
+		String_t* L_52 = Capture_get_Value_m3919646039(L_51, /*hidden argument*/NULL);
 		return L_52;
 	}
 
@@ -32153,15 +32153,15 @@ IL_015a:
 		NullCheck(L_53);
 		GroupCollection_t69770484 * L_54 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_53);
 		NullCheck(L_54);
-		Group_t2468205786 * L_55 = GroupCollection_get_Item_m2465789076(L_54, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_55 = GroupCollection_get_Item_m723682197(L_54, 4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(UriParser_t3890150400_il2cpp_TypeInfo_var);
 		Match_t3408321083 * L_56 = UriParser_ParseAuthority_m1289629281(NULL /*static, unused*/, L_55, /*hidden argument*/NULL);
 		NullCheck(L_56);
 		GroupCollection_t69770484 * L_57 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_56);
 		NullCheck(L_57);
-		Group_t2468205786 * L_58 = GroupCollection_get_Item_m2465789076(L_57, 5, /*hidden argument*/NULL);
+		Group_t2468205786 * L_58 = GroupCollection_get_Item_m723682197(L_57, 5, /*hidden argument*/NULL);
 		NullCheck(L_58);
-		String_t* L_59 = Capture_get_Value_m538076933(L_58, /*hidden argument*/NULL);
+		String_t* L_59 = Capture_get_Value_m3919646039(L_58, /*hidden argument*/NULL);
 		V_3 = L_59;
 		String_t* L_60 = V_3;
 		if (!L_60)
@@ -32207,9 +32207,9 @@ IL_01ac:
 		NullCheck(L_69);
 		GroupCollection_t69770484 * L_70 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_69);
 		NullCheck(L_70);
-		Group_t2468205786 * L_71 = GroupCollection_get_Item_m2465789076(L_70, 5, /*hidden argument*/NULL);
+		Group_t2468205786 * L_71 = GroupCollection_get_Item_m723682197(L_70, 5, /*hidden argument*/NULL);
 		NullCheck(L_71);
-		String_t* L_72 = Capture_get_Value_m538076933(L_71, /*hidden argument*/NULL);
+		String_t* L_72 = Capture_get_Value_m3919646039(L_71, /*hidden argument*/NULL);
 		String_t* L_73 = UriParser_IgnoreFirstCharIf_m2367766574(__this, L_72, ((int32_t)47), /*hidden argument*/NULL);
 		int32_t L_74 = ___format2;
 		String_t* L_75 = UriParser_Format_m4289074648(__this, L_73, L_74, /*hidden argument*/NULL);
@@ -32222,9 +32222,9 @@ IL_01cd:
 		NullCheck(L_76);
 		GroupCollection_t69770484 * L_77 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_76);
 		NullCheck(L_77);
-		Group_t2468205786 * L_78 = GroupCollection_get_Item_m2465789076(L_77, 7, /*hidden argument*/NULL);
+		Group_t2468205786 * L_78 = GroupCollection_get_Item_m723682197(L_77, 7, /*hidden argument*/NULL);
 		NullCheck(L_78);
-		String_t* L_79 = Capture_get_Value_m538076933(L_78, /*hidden argument*/NULL);
+		String_t* L_79 = Capture_get_Value_m3919646039(L_78, /*hidden argument*/NULL);
 		int32_t L_80 = ___format2;
 		String_t* L_81 = UriParser_Format_m4289074648(__this, L_79, L_80, /*hidden argument*/NULL);
 		return L_81;
@@ -32236,9 +32236,9 @@ IL_01e6:
 		NullCheck(L_82);
 		GroupCollection_t69770484 * L_83 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_82);
 		NullCheck(L_83);
-		Group_t2468205786 * L_84 = GroupCollection_get_Item_m2465789076(L_83, ((int32_t)9), /*hidden argument*/NULL);
+		Group_t2468205786 * L_84 = GroupCollection_get_Item_m723682197(L_83, ((int32_t)9), /*hidden argument*/NULL);
 		NullCheck(L_84);
-		String_t* L_85 = Capture_get_Value_m538076933(L_84, /*hidden argument*/NULL);
+		String_t* L_85 = Capture_get_Value_m3919646039(L_84, /*hidden argument*/NULL);
 		int32_t L_86 = ___format2;
 		String_t* L_87 = UriParser_Format_m4289074648(__this, L_85, L_86, /*hidden argument*/NULL);
 		return L_87;
@@ -32250,17 +32250,17 @@ IL_0200:
 		NullCheck(L_88);
 		GroupCollection_t69770484 * L_89 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_88);
 		NullCheck(L_89);
-		Group_t2468205786 * L_90 = GroupCollection_get_Item_m2465789076(L_89, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_90 = GroupCollection_get_Item_m723682197(L_89, 4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(UriParser_t3890150400_il2cpp_TypeInfo_var);
 		Match_t3408321083 * L_91 = UriParser_ParseAuthority_m1289629281(NULL /*static, unused*/, L_90, /*hidden argument*/NULL);
 		NullCheck(L_91);
 		GroupCollection_t69770484 * L_92 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_91);
 		NullCheck(L_92);
-		Group_t2468205786 * L_93 = GroupCollection_get_Item_m2465789076(L_92, 5, /*hidden argument*/NULL);
+		Group_t2468205786 * L_93 = GroupCollection_get_Item_m723682197(L_92, 5, /*hidden argument*/NULL);
 		V_4 = L_93;
 		Group_t2468205786 * L_94 = V_4;
 		NullCheck(L_94);
-		bool L_95 = Group_get_Success_m1492300455(L_94, /*hidden argument*/NULL);
+		bool L_95 = Group_get_Success_m3823591889(L_94, /*hidden argument*/NULL);
 		if (!L_95)
 		{
 			goto IL_0236;
@@ -32269,7 +32269,7 @@ IL_0200:
 	{
 		Group_t2468205786 * L_96 = V_4;
 		NullCheck(L_96);
-		String_t* L_97 = Capture_get_Value_m538076933(L_96, /*hidden argument*/NULL);
+		String_t* L_97 = Capture_get_Value_m3919646039(L_96, /*hidden argument*/NULL);
 		G_B29_0 = L_97;
 		goto IL_023d;
 	}
@@ -32297,7 +32297,7 @@ IL_0247:
 		NullCheck(L_99);
 		GroupCollection_t69770484 * L_100 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_99);
 		NullCheck(L_100);
-		Group_t2468205786 * L_101 = GroupCollection_get_Item_m2465789076(L_100, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_101 = GroupCollection_get_Item_m723682197(L_100, 4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(UriParser_t3890150400_il2cpp_TypeInfo_var);
 		Match_t3408321083 * L_102 = UriParser_ParseAuthority_m1289629281(NULL /*static, unused*/, L_101, /*hidden argument*/NULL);
 		V_5 = L_102;
@@ -32337,9 +32337,9 @@ IL_0280:
 		NullCheck(L_112);
 		GroupCollection_t69770484 * L_113 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_112);
 		NullCheck(L_113);
-		Group_t2468205786 * L_114 = GroupCollection_get_Item_m2465789076(L_113, 1, /*hidden argument*/NULL);
+		Group_t2468205786 * L_114 = GroupCollection_get_Item_m723682197(L_113, 1, /*hidden argument*/NULL);
 		NullCheck(L_114);
-		String_t* L_115 = Capture_get_Value_m538076933(L_114, /*hidden argument*/NULL);
+		String_t* L_115 = Capture_get_Value_m3919646039(L_114, /*hidden argument*/NULL);
 		NullCheck(L_111);
 		StringBuilder_Append_m1965104174(L_111, L_115, /*hidden argument*/NULL);
 	}
@@ -32358,9 +32358,9 @@ IL_02a2:
 		NullCheck(L_118);
 		GroupCollection_t69770484 * L_119 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_118);
 		NullCheck(L_119);
-		Group_t2468205786 * L_120 = GroupCollection_get_Item_m2465789076(L_119, 3, /*hidden argument*/NULL);
+		Group_t2468205786 * L_120 = GroupCollection_get_Item_m723682197(L_119, 3, /*hidden argument*/NULL);
 		NullCheck(L_120);
-		String_t* L_121 = Capture_get_Value_m538076933(L_120, /*hidden argument*/NULL);
+		String_t* L_121 = Capture_get_Value_m3919646039(L_120, /*hidden argument*/NULL);
 		NullCheck(L_117);
 		StringBuilder_Append_m1965104174(L_117, L_121, /*hidden argument*/NULL);
 	}
@@ -32378,12 +32378,12 @@ IL_02c4:
 		NullCheck(L_123);
 		GroupCollection_t69770484 * L_124 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_123);
 		NullCheck(L_124);
-		Group_t2468205786 * L_125 = GroupCollection_get_Item_m2465789076(L_124, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_125 = GroupCollection_get_Item_m723682197(L_124, 4, /*hidden argument*/NULL);
 		V_7 = L_125;
 		StringBuilder_t * L_126 = V_6;
 		Group_t2468205786 * L_127 = V_7;
 		NullCheck(L_127);
-		bool L_128 = Group_get_Success_m1492300455(L_127, /*hidden argument*/NULL);
+		bool L_128 = Group_get_Success_m3823591889(L_127, /*hidden argument*/NULL);
 		G_B39_0 = L_126;
 		if (!L_128)
 		{
@@ -32394,7 +32394,7 @@ IL_02c4:
 	{
 		Group_t2468205786 * L_129 = V_7;
 		NullCheck(L_129);
-		String_t* L_130 = Capture_get_Value_m538076933(L_129, /*hidden argument*/NULL);
+		String_t* L_130 = Capture_get_Value_m3919646039(L_129, /*hidden argument*/NULL);
 		G_B41_0 = L_130;
 		G_B41_1 = G_B39_0;
 		goto IL_0309;
@@ -32430,9 +32430,9 @@ IL_030f:
 		NullCheck(L_136);
 		GroupCollection_t69770484 * L_137 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_136);
 		NullCheck(L_137);
-		Group_t2468205786 * L_138 = GroupCollection_get_Item_m2465789076(L_137, 5, /*hidden argument*/NULL);
+		Group_t2468205786 * L_138 = GroupCollection_get_Item_m723682197(L_137, 5, /*hidden argument*/NULL);
 		NullCheck(L_138);
-		String_t* L_139 = Capture_get_Value_m538076933(L_138, /*hidden argument*/NULL);
+		String_t* L_139 = Capture_get_Value_m3919646039(L_138, /*hidden argument*/NULL);
 		V_8 = L_139;
 		String_t* L_140 = V_8;
 		if (!L_140)
@@ -32466,9 +32466,9 @@ IL_030f:
 		NullCheck(L_148);
 		GroupCollection_t69770484 * L_149 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_148);
 		NullCheck(L_149);
-		Group_t2468205786 * L_150 = GroupCollection_get_Item_m2465789076(L_149, 4, /*hidden argument*/NULL);
+		Group_t2468205786 * L_150 = GroupCollection_get_Item_m723682197(L_149, 4, /*hidden argument*/NULL);
 		NullCheck(L_150);
-		String_t* L_151 = Capture_get_Value_m538076933(L_150, /*hidden argument*/NULL);
+		String_t* L_151 = Capture_get_Value_m3919646039(L_150, /*hidden argument*/NULL);
 		NullCheck(L_147);
 		StringBuilder_Append_m1965104174(L_147, L_151, /*hidden argument*/NULL);
 	}
@@ -32487,7 +32487,7 @@ IL_0370:
 		NullCheck(L_154);
 		GroupCollection_t69770484 * L_155 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_154);
 		NullCheck(L_155);
-		Group_t2468205786 * L_156 = GroupCollection_get_Item_m2465789076(L_155, 5, /*hidden argument*/NULL);
+		Group_t2468205786 * L_156 = GroupCollection_get_Item_m723682197(L_155, 5, /*hidden argument*/NULL);
 		NullCheck(L_153);
 		StringBuilder_Append_m1640838743(L_153, L_156, /*hidden argument*/NULL);
 	}
@@ -32506,7 +32506,7 @@ IL_038d:
 		NullCheck(L_159);
 		GroupCollection_t69770484 * L_160 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_159);
 		NullCheck(L_160);
-		Group_t2468205786 * L_161 = GroupCollection_get_Item_m2465789076(L_160, 6, /*hidden argument*/NULL);
+		Group_t2468205786 * L_161 = GroupCollection_get_Item_m723682197(L_160, 6, /*hidden argument*/NULL);
 		NullCheck(L_158);
 		StringBuilder_Append_m1640838743(L_158, L_161, /*hidden argument*/NULL);
 	}
@@ -32525,7 +32525,7 @@ IL_03aa:
 		NullCheck(L_164);
 		GroupCollection_t69770484 * L_165 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_164);
 		NullCheck(L_165);
-		Group_t2468205786 * L_166 = GroupCollection_get_Item_m2465789076(L_165, 8, /*hidden argument*/NULL);
+		Group_t2468205786 * L_166 = GroupCollection_get_Item_m723682197(L_165, 8, /*hidden argument*/NULL);
 		NullCheck(L_163);
 		StringBuilder_Append_m1640838743(L_163, L_166, /*hidden argument*/NULL);
 	}

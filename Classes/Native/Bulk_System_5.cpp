@@ -1736,9 +1736,9 @@ extern const uint32_t ServicePoint_CallEndPointDelegate_m2947487287_MetadataUsag
 extern RuntimeClass* HybridDictionary_t4070033136_il2cpp_TypeInfo_var;
 extern RuntimeClass* DefaultCertificatePolicy_t3607119947_il2cpp_TypeInfo_var;
 extern const uint32_t ServicePointManager__cctor_m3222177795_MetadataUsageId;
-extern const uint32_t ServicePointManager_get_CertificatePolicy_m475600998_MetadataUsageId;
+extern const uint32_t ServicePointManager_get_CertificatePolicy_m1966679142_MetadataUsageId;
 extern const uint32_t ServicePointManager_set_CertificatePolicy_m2889878572_MetadataUsageId;
-extern const uint32_t ServicePointManager_get_CheckCertificateRevocationList_m1645465614_MetadataUsageId;
+extern const uint32_t ServicePointManager_get_CheckCertificateRevocationList_m1716454075_MetadataUsageId;
 extern const uint32_t ServicePointManager_set_CheckCertificateRevocationList_m390419704_MetadataUsageId;
 extern const uint32_t ServicePointManager_get_DefaultConnectionLimit_m4205643126_MetadataUsageId;
 extern const RuntimeMethod* ServicePointManager_set_DefaultConnectionLimit_m1203273109_RuntimeMethod_var;
@@ -1759,9 +1759,9 @@ extern const uint32_t ServicePointManager_set_MaxServicePointIdleTime_m329661352
 extern const uint32_t ServicePointManager_get_MaxServicePoints_m1807435673_MetadataUsageId;
 extern const RuntimeMethod* ServicePointManager_set_MaxServicePoints_m3306682210_RuntimeMethod_var;
 extern const uint32_t ServicePointManager_set_MaxServicePoints_m3306682210_MetadataUsageId;
-extern const uint32_t ServicePointManager_get_SecurityProtocol_m966397919_MetadataUsageId;
+extern const uint32_t ServicePointManager_get_SecurityProtocol_m4259357356_MetadataUsageId;
 extern const uint32_t ServicePointManager_set_SecurityProtocol_m2298024549_MetadataUsageId;
-extern const uint32_t ServicePointManager_get_ServerCertificateValidationCallback_m2067275303_MetadataUsageId;
+extern const uint32_t ServicePointManager_get_ServerCertificateValidationCallback_m984921647_MetadataUsageId;
 extern const uint32_t ServicePointManager_set_ServerCertificateValidationCallback_m1752789210_MetadataUsageId;
 extern const uint32_t ServicePointManager_get_Expect100Continue_m2549004185_MetadataUsageId;
 extern const uint32_t ServicePointManager_set_Expect100Continue_m1653232539_MetadataUsageId;
@@ -22317,7 +22317,7 @@ extern "C" IL2CPP_METHOD_ATTR void LinuxUnicastIPAddressInformation__ctor_m25422
 // System.Void System.Net.NetworkInformation.IPInterfaceProperties::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void IPInterfaceProperties__ctor_m3384018393 (IPInterfaceProperties_t3964383369 * __this, const RuntimeMethod* method);
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m897876424 (Regex_t3657309853 * __this, String_t* ___pattern0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m3948448025 (Regex_t3657309853 * __this, String_t* ___pattern0, const RuntimeMethod* method);
 // System.Void System.NotImplementedException::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void NotImplementedException__ctor_m3058704252 (NotImplementedException_t3489357830 * __this, const RuntimeMethod* method);
 // System.Void System.Net.NetworkInformation.IPAddressCollection::.ctor()
@@ -22337,11 +22337,11 @@ extern "C" IL2CPP_METHOD_ATTR bool DateTime_op_LessThanOrEqual_m2360948759 (Runt
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.Regex::Match(System.String)
 extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Regex_Match_m2255756165 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method);
 // System.Boolean System.Text.RegularExpressions.Group::get_Success()
-extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m1492300455 (Group_t2468205786 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m3823591889 (Group_t2468205786 * __this, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Group System.Text.RegularExpressions.GroupCollection::get_Item(System.String)
 extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m3293401907 (GroupCollection_t69770484 * __this, String_t* ___groupName0, const RuntimeMethod* method);
 // System.String System.Text.RegularExpressions.Capture::get_Value()
-extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m538076933 (Capture_t2232016050 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m3919646039 (Capture_t2232016050 * __this, const RuntimeMethod* method);
 // System.Net.IPAddress System.Net.IPAddress::Parse(System.String)
 extern "C" IL2CPP_METHOD_ATTR IPAddress_t241777590 * IPAddress_Parse_m2200822423 (RuntimeObject * __this /* static, unused */, String_t* ___ipString0, const RuntimeMethod* method);
 // System.Void System.Net.NetworkInformation.IPAddressCollection::SetReadOnly()
@@ -22625,41 +22625,41 @@ extern "C" IL2CPP_METHOD_ATTR void AuthenticatedStream__ctor_m2546959456 (Authen
 // System.IO.Stream System.Net.Security.AuthenticatedStream::get_InnerStream()
 extern "C" IL2CPP_METHOD_ATTR Stream_t1273022909 * AuthenticatedStream_get_InnerStream_m4066215780 (AuthenticatedStream_t3415418016 * __this, const RuntimeMethod* method);
 // System.Boolean System.Net.Security.RemoteCertificateValidationCallback::Invoke(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)
-extern "C" IL2CPP_METHOD_ATTR bool RemoteCertificateValidationCallback_Invoke_m3086073466 (RemoteCertificateValidationCallback_t3014364904 * __this, RuntimeObject * ___sender0, X509Certificate_t713131622 * ___certificate1, X509Chain_t194917408 * ___chain2, int32_t ___sslPolicyErrors3, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool RemoteCertificateValidationCallback_Invoke_m727898444 (RemoteCertificateValidationCallback_t3014364904 * __this, RuntimeObject * ___sender0, X509Certificate_t713131622 * ___certificate1, X509Chain_t194917408 * ___chain2, int32_t ___sslPolicyErrors3, const RuntimeMethod* method);
 // System.Void System.Net.Security.SslStream::.ctor(System.IO.Stream,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void SslStream__ctor_m3370516085 (SslStream_t2700741536 * __this, Stream_t1273022909 * ___innerStream0, bool ___leaveStreamOpen1, const RuntimeMethod* method);
 // System.Void System.Net.Security.SslStream::.ctor(System.IO.Stream,System.Boolean,System.Net.Security.RemoteCertificateValidationCallback,System.Net.Security.LocalCertificateSelectionCallback)
 extern "C" IL2CPP_METHOD_ATTR void SslStream__ctor_m2028407324 (SslStream_t2700741536 * __this, Stream_t1273022909 * ___innerStream0, bool ___leaveStreamOpen1, RemoteCertificateValidationCallback_t3014364904 * ___certValidationCallback2, LocalCertificateSelectionCallback_t2354453884 * ___certSelectionCallback3, const RuntimeMethod* method);
 // System.Boolean Mono.Security.Protocol.Tls.SslStreamBase::get_CheckCertRevocationStatus()
-extern "C" IL2CPP_METHOD_ATTR bool SslStreamBase_get_CheckCertRevocationStatus_m2739906607 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool SslStreamBase_get_CheckCertRevocationStatus_m381790713 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Void System.Net.Security.SslStream::CheckConnectionAuthenticated()
 extern "C" IL2CPP_METHOD_ATTR void SslStream_CheckConnectionAuthenticated_m3995332768 (SslStream_t2700741536 * __this, const RuntimeMethod* method);
 // Mono.Security.Protocol.Tls.CipherAlgorithmType Mono.Security.Protocol.Tls.SslStreamBase::get_CipherAlgorithm()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_CipherAlgorithm_m2320969781 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_CipherAlgorithm_m3043730578 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Int32 Mono.Security.Protocol.Tls.SslStreamBase::get_CipherStrength()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_CipherStrength_m449292740 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_CipherStrength_m1270345755 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // Mono.Security.Protocol.Tls.HashAlgorithmType Mono.Security.Protocol.Tls.SslStreamBase::get_HashAlgorithm()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_HashAlgorithm_m2687781311 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_HashAlgorithm_m1015575164 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Int32 Mono.Security.Protocol.Tls.SslStreamBase::get_HashStrength()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_HashStrength_m2770482134 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_HashStrength_m3372883601 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // Mono.Security.Protocol.Tls.ExchangeAlgorithmType Mono.Security.Protocol.Tls.SslStreamBase::get_KeyExchangeAlgorithm()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_KeyExchangeAlgorithm_m1073399962 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_KeyExchangeAlgorithm_m4014820972 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Int32 Mono.Security.Protocol.Tls.SslStreamBase::get_KeyExchangeStrength()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_KeyExchangeStrength_m217695965 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_KeyExchangeStrength_m2322308213 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate Mono.Security.Protocol.Tls.SslStreamBase::get_ServerCertificate()
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslStreamBase_get_ServerCertificate_m656316972 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslStreamBase_get_ServerCertificate_m2460159041 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate Mono.Security.Protocol.Tls.SslClientStream::get_SelectedClientCertificate()
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslClientStream_get_SelectedClientCertificate_m2941927287 (SslClientStream_t3914624661 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslClientStream_get_SelectedClientCertificate_m2490331763 (SslClientStream_t3914624661 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate Mono.Security.Protocol.Tls.SslServerStream::get_ClientCertificate()
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslServerStream_get_ClientCertificate_m4082398465 (SslServerStream_t875102504 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslServerStream_get_ClientCertificate_m3292180285 (SslServerStream_t875102504 * __this, const RuntimeMethod* method);
 // Mono.Security.Protocol.Tls.SecurityProtocolType Mono.Security.Protocol.Tls.SslStreamBase::get_SecurityProtocol()
-extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_SecurityProtocol_m596101988 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t SslStreamBase_get_SecurityProtocol_m1200558453 (SslStreamBase_t1667413407 * __this, const RuntimeMethod* method);
 // System.Int32 System.Collections.CollectionBase::get_Count()
 extern "C" IL2CPP_METHOD_ATTR int32_t CollectionBase_get_Count_m1708965601 (CollectionBase_t2727926298 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate System.Security.Cryptography.X509Certificates.X509CertificateCollection::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * X509CertificateCollection_get_Item_m1464788693 (X509CertificateCollection_t3399372417 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * X509CertificateCollection_get_Item_m1177942658 (X509CertificateCollection_t3399372417 * __this, int32_t p0, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509CertificateCollection::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void X509CertificateCollection__ctor_m1784029323 (X509CertificateCollection_t3399372417 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509CertificateCollection__ctor_m147081211 (X509CertificateCollection_t3399372417 * __this, const RuntimeMethod* method);
 // System.Void System.Net.Security.SslStream/<BeginAuthenticateAsClient>c__AnonStorey7::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void U3CBeginAuthenticateAsClientU3Ec__AnonStorey7__ctor_m2382281298 (U3CBeginAuthenticateAsClientU3Ec__AnonStorey7_t1222040293 * __this, const RuntimeMethod* method);
 // System.Boolean System.Net.Security.AuthenticatedStream::get_LeaveInnerStreamOpen()
@@ -22667,55 +22667,55 @@ extern "C" IL2CPP_METHOD_ATTR bool AuthenticatedStream_get_LeaveInnerStreamOpen_
 // Mono.Security.Protocol.Tls.SecurityProtocolType System.Net.Security.SslStream::GetMonoSslProtocol(System.Security.Authentication.SslProtocols)
 extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_GetMonoSslProtocol_m1414881046 (SslStream_t2700741536 * __this, int32_t ___ms0, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslClientStream::.ctor(System.IO.Stream,System.String,System.Boolean,Mono.Security.Protocol.Tls.SecurityProtocolType,System.Security.Cryptography.X509Certificates.X509CertificateCollection)
-extern "C" IL2CPP_METHOD_ATTR void SslClientStream__ctor_m3351906728 (SslClientStream_t3914624661 * __this, Stream_t1273022909 * p0, String_t* p1, bool p2, int32_t p3, X509CertificateCollection_t3399372417 * p4, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslClientStream__ctor_m3779762807 (SslClientStream_t3914624661 * __this, Stream_t1273022909 * p0, String_t* p1, bool p2, int32_t p3, X509CertificateCollection_t3399372417 * p4, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslStreamBase::set_CheckCertRevocationStatus(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void SslStreamBase_set_CheckCertRevocationStatus_m912861213 (SslStreamBase_t1667413407 * __this, bool p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslStreamBase_set_CheckCertRevocationStatus_m2549468395 (SslStreamBase_t1667413407 * __this, bool p0, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.PrivateKeySelectionCallback::.ctor(System.Object,System.IntPtr)
-extern "C" IL2CPP_METHOD_ATTR void PrivateKeySelectionCallback__ctor_m265141085 (PrivateKeySelectionCallback_t3240194217 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void PrivateKeySelectionCallback__ctor_m1640135967 (PrivateKeySelectionCallback_t3240194217 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslClientStream::set_PrivateKeyCertSelectionDelegate(Mono.Security.Protocol.Tls.PrivateKeySelectionCallback)
-extern "C" IL2CPP_METHOD_ATTR void SslClientStream_set_PrivateKeyCertSelectionDelegate_m4100936974 (SslClientStream_t3914624661 * __this, PrivateKeySelectionCallback_t3240194217 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslClientStream_set_PrivateKeyCertSelectionDelegate_m1644187243 (SslClientStream_t3914624661 * __this, PrivateKeySelectionCallback_t3240194217 * p0, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.CertificateValidationCallback::.ctor(System.Object,System.IntPtr)
-extern "C" IL2CPP_METHOD_ATTR void CertificateValidationCallback__ctor_m1962610296 (CertificateValidationCallback_t4091668218 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void CertificateValidationCallback__ctor_m2974639562 (CertificateValidationCallback_t4091668218 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslClientStream::set_ServerCertValidationDelegate(Mono.Security.Protocol.Tls.CertificateValidationCallback)
-extern "C" IL2CPP_METHOD_ATTR void SslClientStream_set_ServerCertValidationDelegate_m466396564 (SslClientStream_t3914624661 * __this, CertificateValidationCallback_t4091668218 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslClientStream_set_ServerCertValidationDelegate_m2755398915 (SslClientStream_t3914624661 * __this, CertificateValidationCallback_t4091668218 * p0, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.CertificateSelectionCallback::.ctor(System.Object,System.IntPtr)
-extern "C" IL2CPP_METHOD_ATTR void CertificateSelectionCallback__ctor_m3437537928 (CertificateSelectionCallback_t3743405224 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void CertificateSelectionCallback__ctor_m2187764585 (CertificateSelectionCallback_t3743405224 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslClientStream::set_ClientCertSelectionDelegate(Mono.Security.Protocol.Tls.CertificateSelectionCallback)
-extern "C" IL2CPP_METHOD_ATTR void SslClientStream_set_ClientCertSelectionDelegate_m1261530976 (SslClientStream_t3914624661 * __this, CertificateSelectionCallback_t3743405224 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslClientStream_set_ClientCertSelectionDelegate_m1540376606 (SslClientStream_t3914624661 * __this, CertificateSelectionCallback_t3743405224 * p0, const RuntimeMethod* method);
 // System.Void System.Net.Security.SslStream/<BeginAuthenticateAsServer>c__AnonStorey8::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void U3CBeginAuthenticateAsServerU3Ec__AnonStorey8__ctor_m1236726312 (U3CBeginAuthenticateAsServerU3Ec__AnonStorey8_t2934725513 * __this, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslServerStream::.ctor(System.IO.Stream,System.Security.Cryptography.X509Certificates.X509Certificate,System.Boolean,System.Boolean,Mono.Security.Protocol.Tls.SecurityProtocolType)
-extern "C" IL2CPP_METHOD_ATTR void SslServerStream__ctor_m2662225958 (SslServerStream_t875102504 * __this, Stream_t1273022909 * p0, X509Certificate_t713131622 * p1, bool p2, bool p3, int32_t p4, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslServerStream__ctor_m3336508846 (SslServerStream_t875102504 * __this, Stream_t1273022909 * p0, X509Certificate_t713131622 * p1, bool p2, bool p3, int32_t p4, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslServerStream::set_PrivateKeyCertSelectionDelegate(Mono.Security.Protocol.Tls.PrivateKeySelectionCallback)
-extern "C" IL2CPP_METHOD_ATTR void SslServerStream_set_PrivateKeyCertSelectionDelegate_m1718869186 (SslServerStream_t875102504 * __this, PrivateKeySelectionCallback_t3240194217 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslServerStream_set_PrivateKeyCertSelectionDelegate_m1168538557 (SslServerStream_t875102504 * __this, PrivateKeySelectionCallback_t3240194217 * p0, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.SslServerStream::set_ClientCertValidationDelegate(Mono.Security.Protocol.Tls.CertificateValidationCallback)
-extern "C" IL2CPP_METHOD_ATTR void SslServerStream_set_ClientCertValidationDelegate_m3915766517 (SslServerStream_t875102504 * __this, CertificateValidationCallback_t4091668218 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SslServerStream_set_ClientCertValidationDelegate_m4121659394 (SslServerStream_t875102504 * __this, CertificateValidationCallback_t4091668218 * p0, const RuntimeMethod* method);
 // System.Void System.IO.Stream::Dispose()
 extern "C" IL2CPP_METHOD_ATTR void Stream_Dispose_m2589290611 (Stream_t1273022909 * __this, const RuntimeMethod* method);
 // System.Void System.Net.Security.AuthenticatedStream::Dispose(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void AuthenticatedStream_Dispose_m2809320002 (AuthenticatedStream_t3415418016 * __this, bool ___disposing0, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509CertificateCollection/X509CertificateEnumerator System.Security.Cryptography.X509Certificates.X509CertificateCollection::GetEnumerator()
-extern "C" IL2CPP_METHOD_ATTR X509CertificateEnumerator_t855273292 * X509CertificateCollection_GetEnumerator_m385726313 (X509CertificateCollection_t3399372417 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509CertificateEnumerator_t855273292 * X509CertificateCollection_GetEnumerator_m1686475779 (X509CertificateCollection_t3399372417 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate System.Security.Cryptography.X509Certificates.X509CertificateCollection/X509CertificateEnumerator::get_Current()
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * X509CertificateEnumerator_get_Current_m1016419 (X509CertificateEnumerator_t855273292 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * X509CertificateEnumerator_get_Current_m364341970 (X509CertificateEnumerator_t855273292 * __this, const RuntimeMethod* method);
 // System.Boolean System.String::op_Inequality(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR bool String_op_Inequality_m215368492 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2::.ctor(System.Security.Cryptography.X509Certificates.X509Certificate)
 extern "C" IL2CPP_METHOD_ATTR void X509Certificate2__ctor_m2802623960 (X509Certificate2_t714049126 * __this, X509Certificate_t713131622 * ___certificate0, const RuntimeMethod* method);
 // System.Security.Cryptography.AsymmetricAlgorithm System.Security.Cryptography.X509Certificates.X509Certificate2::get_PrivateKey()
-extern "C" IL2CPP_METHOD_ATTR AsymmetricAlgorithm_t932037087 * X509Certificate2_get_PrivateKey_m3900779210 (X509Certificate2_t714049126 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR AsymmetricAlgorithm_t932037087 * X509Certificate2_get_PrivateKey_m450647294 (X509Certificate2_t714049126 * __this, const RuntimeMethod* method);
 // System.Boolean System.Security.Cryptography.X509Certificates.X509CertificateCollection/X509CertificateEnumerator::MoveNext()
-extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_MoveNext_m3211955044 (X509CertificateEnumerator_t855273292 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_MoveNext_m1557350766 (X509CertificateEnumerator_t855273292 * __this, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Chain::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void X509Chain__ctor_m2240869275 (X509Chain_t194917408 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509Chain__ctor_m2878811474 (X509Chain_t194917408 * __this, const RuntimeMethod* method);
 // System.Boolean System.Net.ServicePointManager::get_CheckCertificateRevocationList()
-extern "C" IL2CPP_METHOD_ATTR bool ServicePointManager_get_CheckCertificateRevocationList_m1645465614 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool ServicePointManager_get_CheckCertificateRevocationList_m1716454075 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509ChainPolicy System.Security.Cryptography.X509Certificates.X509Chain::get_ChainPolicy()
 extern "C" IL2CPP_METHOD_ATTR X509ChainPolicy_t2426922870 * X509Chain_get_ChainPolicy_m2586552721 (X509Chain_t194917408 * __this, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509ChainPolicy::set_RevocationMode(System.Security.Cryptography.X509Certificates.X509RevocationMode)
 extern "C" IL2CPP_METHOD_ATTR void X509ChainPolicy_set_RevocationMode_m3002768104 (X509ChainPolicy_t2426922870 * __this, int32_t ___value0, const RuntimeMethod* method);
 // System.Boolean System.Security.Cryptography.X509Certificates.X509Chain::Build(System.Security.Cryptography.X509Certificates.X509Certificate2)
-extern "C" IL2CPP_METHOD_ATTR bool X509Chain_Build_m611063989 (X509Chain_t194917408 * __this, X509Certificate2_t714049126 * ___certificate0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool X509Chain_Build_m1705729171 (X509Chain_t194917408 * __this, X509Certificate2_t714049126 * ___certificate0, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509ChainStatus[] System.Security.Cryptography.X509Certificates.X509Chain::get_ChainStatus()
 extern "C" IL2CPP_METHOD_ATTR X509ChainStatusU5BU5D_t2685945535* X509Chain_get_ChainStatus_m3613658095 (X509Chain_t194917408 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509ChainStatusFlags System.Security.Cryptography.X509Certificates.X509ChainStatus::get_Status()
@@ -22749,7 +22749,7 @@ extern "C" IL2CPP_METHOD_ATTR bool DateTime_op_GreaterThanOrEqual_m674703316 (Ru
 // System.Void System.Collections.Hashtable::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Hashtable__ctor_m1815022027 (Hashtable_t1853889766 * __this, const RuntimeMethod* method);
 // System.String System.Uri::get_Host()
-extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m255565830 (Uri_t100236324 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m42857288 (Uri_t100236324 * __this, const RuntimeMethod* method);
 // System.UriHostNameType System.Uri::get_HostNameType()
 extern "C" IL2CPP_METHOD_ATTR int32_t Uri_get_HostNameType_m1143766868 (Uri_t100236324 * __this, const RuntimeMethod* method);
 // System.Void System.Net.IPHostEntry::.ctor()
@@ -22827,19 +22827,19 @@ extern "C" IL2CPP_METHOD_ATTR void ServicePoint_set_IdleSince_m608781505 (Servic
 // System.Uri System.Net.ServicePoint::get_Address()
 extern "C" IL2CPP_METHOD_ATTR Uri_t100236324 * ServicePoint_get_Address_m4189969258 (ServicePoint_t2786966844 * __this, const RuntimeMethod* method);
 // System.Uri System.Net.HttpWebRequest::get_Address()
-extern "C" IL2CPP_METHOD_ATTR Uri_t100236324 * HttpWebRequest_get_Address_m2672661563 (HttpWebRequest_t1669436515 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Uri_t100236324 * HttpWebRequest_get_Address_m1609525404 (HttpWebRequest_t1669436515 * __this, const RuntimeMethod* method);
 // System.Net.ICertificatePolicy System.Net.ServicePointManager::get_CertificatePolicy()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject* ServicePointManager_get_CertificatePolicy_m475600998 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* ServicePointManager_get_CertificatePolicy_m1966679142 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Net.Security.RemoteCertificateValidationCallback System.Net.ServicePointManager::get_ServerCertificateValidationCallback()
-extern "C" IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t3014364904 * ServicePointManager_get_ServerCertificateValidationCallback_m2067275303 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t3014364904 * ServicePointManager_get_ServerCertificateValidationCallback_m984921647 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509ChainPolicy::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void X509ChainPolicy__ctor_m852124469 (X509ChainPolicy_t2426922870 * __this, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Chain::set_ChainPolicy(System.Security.Cryptography.X509Certificates.X509ChainPolicy)
 extern "C" IL2CPP_METHOD_ATTR void X509Chain_set_ChainPolicy_m2787395122 (X509Chain_t194917408 * __this, X509ChainPolicy_t2426922870 * ___value0, const RuntimeMethod* method);
 // Mono.Security.X509.X509Certificate Mono.Security.X509.X509CertificateCollection::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR X509Certificate_t489243025 * X509CertificateCollection_get_Item_m1033426577 (X509CertificateCollection_t1542168550 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Certificate_t489243025 * X509CertificateCollection_get_Item_m3285563224 (X509CertificateCollection_t1542168550 * __this, int32_t p0, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509Certificate2::.ctor(System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR void X509Certificate2__ctor_m3336405942 (X509Certificate2_t714049126 * __this, ByteU5BU5D_t4116647657* ___rawData0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509Certificate2__ctor_m2370196240 (X509Certificate2_t714049126 * __this, ByteU5BU5D_t4116647657* ___rawData0, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509Certificate2Collection System.Security.Cryptography.X509Certificates.X509ChainPolicy::get_ExtraStore()
 extern "C" IL2CPP_METHOD_ATTR X509Certificate2Collection_t2111161276 * X509ChainPolicy_get_ExtraStore_m4191377387 (X509ChainPolicy_t2426922870 * __this, const RuntimeMethod* method);
 // System.Int32 System.Security.Cryptography.X509Certificates.X509Certificate2Collection::Add(System.Security.Cryptography.X509Certificates.X509Certificate2)
@@ -22857,11 +22857,11 @@ extern "C" IL2CPP_METHOD_ATTR bool ChainValidationHelper_CheckServerIdentity_m26
 // Mono.Security.X509.OSX509Certificates/SecTrustResult Mono.Security.X509.OSX509Certificates::TrustEvaluateSsl(Mono.Security.X509.X509CertificateCollection)
 extern "C" IL2CPP_METHOD_ATTR int32_t OSX509Certificates_TrustEvaluateSsl_m272221360 (RuntimeObject * __this /* static, unused */, X509CertificateCollection_t1542168550 * ___certificates0, const RuntimeMethod* method);
 // System.Net.ServicePoint System.Net.HttpWebRequest::get_ServicePoint()
-extern "C" IL2CPP_METHOD_ATTR ServicePoint_t2786966844 * HttpWebRequest_get_ServicePoint_m3916606901 (HttpWebRequest_t1669436515 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR ServicePoint_t2786966844 * HttpWebRequest_get_ServicePoint_m1080482337 (HttpWebRequest_t1669436515 * __this, const RuntimeMethod* method);
 // System.Int32 System.Net.ServicePointManager/ChainValidationHelper::GetStatusFromChain(System.Security.Cryptography.X509Certificates.X509Chain)
 extern "C" IL2CPP_METHOD_ATTR int32_t ChainValidationHelper_GetStatusFromChain_m788162461 (RuntimeObject * __this /* static, unused */, X509Chain_t194917408 * ___chain0, const RuntimeMethod* method);
 // System.Void Mono.Security.Protocol.Tls.ValidationResult::.ctor(System.Boolean,System.Boolean,System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void ValidationResult__ctor_m295084008 (ValidationResult_t3834298736 * __this, bool p0, bool p1, int32_t p2, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void ValidationResult__ctor_m2192367725 (ValidationResult_t3834298736 * __this, bool p0, bool p1, int32_t p2, const RuntimeMethod* method);
 // System.Int32 System.Security.Cryptography.X509Certificates.X509Certificate2::get_Version()
 extern "C" IL2CPP_METHOD_ATTR int32_t X509Certificate2_get_Version_m2534012675 (X509Certificate2_t714049126 * __this, const RuntimeMethod* method);
 // System.Security.Cryptography.X509Certificates.X509ExtensionCollection System.Security.Cryptography.X509Certificates.X509Certificate2::get_Extensions()
@@ -22879,25 +22879,25 @@ extern "C" IL2CPP_METHOD_ATTR String_t* AsnEncodedData_NetscapeCertType_m2976595
 // System.Int32 System.String::IndexOf(System.String)
 extern "C" IL2CPP_METHOD_ATTR int32_t String_IndexOf_m1977622757 (String_t* __this, String_t* p0, const RuntimeMethod* method);
 // Mono.Security.X509.X509ExtensionCollection Mono.Security.X509.X509Certificate::get_Extensions()
-extern "C" IL2CPP_METHOD_ATTR X509ExtensionCollection_t609554709 * X509Certificate_get_Extensions_m1217872579 (X509Certificate_t489243025 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509ExtensionCollection_t609554709 * X509Certificate_get_Extensions_m2532937142 (X509Certificate_t489243025 * __this, const RuntimeMethod* method);
 // Mono.Security.X509.X509Extension Mono.Security.X509.X509ExtensionCollection::get_Item(System.String)
-extern "C" IL2CPP_METHOD_ATTR X509Extension_t3173393653 * X509ExtensionCollection_get_Item_m2761897938 (X509ExtensionCollection_t609554709 * __this, String_t* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR X509Extension_t3173393653 * X509ExtensionCollection_get_Item_m4249795832 (X509ExtensionCollection_t609554709 * __this, String_t* p0, const RuntimeMethod* method);
 // System.Void Mono.Security.X509.Extensions.SubjectAltNameExtension::.ctor(Mono.Security.X509.X509Extension)
-extern "C" IL2CPP_METHOD_ATTR void SubjectAltNameExtension__ctor_m1991362362 (SubjectAltNameExtension_t1536937677 * __this, X509Extension_t3173393653 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void SubjectAltNameExtension__ctor_m1988187120 (SubjectAltNameExtension_t1536937677 * __this, X509Extension_t3173393653 * p0, const RuntimeMethod* method);
 // System.String[] Mono.Security.X509.Extensions.SubjectAltNameExtension::get_DNSNames()
-extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* SubjectAltNameExtension_get_DNSNames_m2346000460 (SubjectAltNameExtension_t1536937677 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* SubjectAltNameExtension_get_DNSNames_m1496591094 (SubjectAltNameExtension_t1536937677 * __this, const RuntimeMethod* method);
 // System.Boolean System.Net.ServicePointManager/ChainValidationHelper::Match(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR bool ChainValidationHelper_Match_m3752991024 (RuntimeObject * __this /* static, unused */, String_t* ___hostname0, String_t* ___pattern1, const RuntimeMethod* method);
 // System.String[] Mono.Security.X509.Extensions.SubjectAltNameExtension::get_IPAddresses()
-extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* SubjectAltNameExtension_get_IPAddresses_m1641002124 (SubjectAltNameExtension_t1536937677 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* SubjectAltNameExtension_get_IPAddresses_m1000991872 (SubjectAltNameExtension_t1536937677 * __this, const RuntimeMethod* method);
 // System.Boolean System.Net.ServicePointManager/ChainValidationHelper::CheckDomainName(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR bool ChainValidationHelper_CheckDomainName_m85292850 (RuntimeObject * __this /* static, unused */, String_t* ___subjectName0, String_t* ___targetHost1, const RuntimeMethod* method);
 // System.Text.RegularExpressions.MatchCollection System.Text.RegularExpressions.Regex::Matches(System.String)
-extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m175567660 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR MatchCollection_t1395363720 * Regex_Matches_m979395559 (Regex_t3657309853 * __this, String_t* ___input0, const RuntimeMethod* method);
 // System.Int32 System.Text.RegularExpressions.MatchCollection::get_Count()
-extern "C" IL2CPP_METHOD_ATTR int32_t MatchCollection_get_Count_m1667454419 (MatchCollection_t1395363720 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t MatchCollection_get_Count_m1586545784 (MatchCollection_t1395363720 * __this, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Group System.Text.RegularExpressions.GroupCollection::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m2465789076 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Group_t2468205786 * GroupCollection_get_Item_m723682197 (GroupCollection_t69770484 * __this, int32_t ___i0, const RuntimeMethod* method);
 // System.Int32 System.String::Compare(System.String,System.String,System.Boolean,System.Globalization.CultureInfo)
 extern "C" IL2CPP_METHOD_ATTR int32_t String_Compare_m1293271421 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, bool p2, CultureInfo_t4157843068 * p3, const RuntimeMethod* method);
 // System.Int32 System.String::IndexOf(System.Char,System.Int32)
@@ -30443,10 +30443,10 @@ extern "C" IL2CPP_METHOD_ATTR void UnixIPInterfaceProperties__cctor_m2971563289 
 	}
 	{
 		Regex_t3657309853 * L_0 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-		Regex__ctor_m897876424(L_0, _stringLiteral1422690951, /*hidden argument*/NULL);
+		Regex__ctor_m3948448025(L_0, _stringLiteral1422690951, /*hidden argument*/NULL);
 		((UnixIPInterfaceProperties_t1296234392_StaticFields*)il2cpp_codegen_static_fields_for(UnixIPInterfaceProperties_t1296234392_il2cpp_TypeInfo_var))->set_ns_7(L_0);
 		Regex_t3657309853 * L_1 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-		Regex__ctor_m897876424(L_1, _stringLiteral3068199316, /*hidden argument*/NULL);
+		Regex__ctor_m3948448025(L_1, _stringLiteral3068199316, /*hidden argument*/NULL);
 		((UnixIPInterfaceProperties_t1296234392_StaticFields*)il2cpp_codegen_static_fields_for(UnixIPInterfaceProperties_t1296234392_il2cpp_TypeInfo_var))->set_search_8(L_1);
 		return;
 	}
@@ -30839,7 +30839,7 @@ IL_0073:
 					V_4 = L_16;
 					Match_t3408321083 * L_17 = V_4;
 					NullCheck(L_17);
-					bool L_18 = Group_get_Success_m1492300455(L_17, /*hidden argument*/NULL);
+					bool L_18 = Group_get_Success_m3823591889(L_17, /*hidden argument*/NULL);
 					if (!L_18)
 					{
 						goto IL_00cb;
@@ -30855,7 +30855,7 @@ IL_008c:
 					NullCheck(L_20);
 					Group_t2468205786 * L_21 = GroupCollection_get_Item_m3293401907(L_20, _stringLiteral2350156779, /*hidden argument*/NULL);
 					NullCheck(L_21);
-					String_t* L_22 = Capture_get_Value_m538076933(L_21, /*hidden argument*/NULL);
+					String_t* L_22 = Capture_get_Value_m3919646039(L_21, /*hidden argument*/NULL);
 					V_2 = L_22;
 					String_t* L_23 = V_2;
 					NullCheck(L_23);
@@ -30897,7 +30897,7 @@ IL_00cb:
 					V_4 = L_30;
 					Match_t3408321083 * L_31 = V_4;
 					NullCheck(L_31);
-					bool L_32 = Group_get_Success_m1492300455(L_31, /*hidden argument*/NULL);
+					bool L_32 = Group_get_Success_m3823591889(L_31, /*hidden argument*/NULL);
 					if (!L_32)
 					{
 						goto IL_011d;
@@ -30912,7 +30912,7 @@ IL_00e4:
 					NullCheck(L_34);
 					Group_t2468205786 * L_35 = GroupCollection_get_Item_m3293401907(L_34, _stringLiteral3929789730, /*hidden argument*/NULL);
 					NullCheck(L_35);
-					String_t* L_36 = Capture_get_Value_m538076933(L_35, /*hidden argument*/NULL);
+					String_t* L_36 = Capture_get_Value_m3919646039(L_35, /*hidden argument*/NULL);
 					V_2 = L_36;
 					String_t* L_37 = V_2;
 					CharU5BU5D_t3528271667* L_38 = ((CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)1));
@@ -41275,12 +41275,12 @@ extern "C" IL2CPP_METHOD_ATTR void RemoteCertificateValidationCallback__ctor_m12
 	__this->set_m_target_2(___object0);
 }
 // System.Boolean System.Net.Security.RemoteCertificateValidationCallback::Invoke(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)
-extern "C" IL2CPP_METHOD_ATTR bool RemoteCertificateValidationCallback_Invoke_m3086073466 (RemoteCertificateValidationCallback_t3014364904 * __this, RuntimeObject * ___sender0, X509Certificate_t713131622 * ___certificate1, X509Chain_t194917408 * ___chain2, int32_t ___sslPolicyErrors3, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR bool RemoteCertificateValidationCallback_Invoke_m727898444 (RemoteCertificateValidationCallback_t3014364904 * __this, RuntimeObject * ___sender0, X509Certificate_t713131622 * ___certificate1, X509Chain_t194917408 * ___chain2, int32_t ___sslPolicyErrors3, const RuntimeMethod* method)
 {
 	bool result = false;
 	if(__this->get_prev_9() != NULL)
 	{
-		RemoteCertificateValidationCallback_Invoke_m3086073466((RemoteCertificateValidationCallback_t3014364904 *)__this->get_prev_9(), ___sender0, ___certificate1, ___chain2, ___sslPolicyErrors3, method);
+		RemoteCertificateValidationCallback_Invoke_m727898444((RemoteCertificateValidationCallback_t3014364904 *)__this->get_prev_9(), ___sender0, ___certificate1, ___chain2, ___sslPolicyErrors3, method);
 	}
 	Il2CppMethodPointer targetMethodPointer = __this->get_method_ptr_0();
 	RuntimeMethod* targetMethod = (RuntimeMethod*)(__this->get_method_3());
@@ -41665,7 +41665,7 @@ IL_000d:
 	{
 		SslStreamBase_t1667413407 * L_1 = __this->get_ssl_stream_3();
 		NullCheck(L_1);
-		bool L_2 = SslStreamBase_get_CheckCertRevocationStatus_m2739906607(L_1, /*hidden argument*/NULL);
+		bool L_2 = SslStreamBase_get_CheckCertRevocationStatus_m381790713(L_1, /*hidden argument*/NULL);
 		return L_2;
 	}
 }
@@ -41684,7 +41684,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_CipherAlgorithm_m3120380269 
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_CipherAlgorithm_m2320969781(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_CipherAlgorithm_m3043730578(L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
 		int32_t L_2 = V_0;
 		switch (L_2)
@@ -41757,7 +41757,7 @@ IL_0058:
 	{
 		SslStreamBase_t1667413407 * L_3 = __this->get_ssl_stream_3();
 		NullCheck(L_3);
-		int32_t L_4 = SslStreamBase_get_CipherStrength_m449292740(L_3, /*hidden argument*/NULL);
+		int32_t L_4 = SslStreamBase_get_CipherStrength_m1270345755(L_3, /*hidden argument*/NULL);
 		V_1 = L_4;
 		int32_t L_5 = V_1;
 		if ((((int32_t)L_5) == ((int32_t)((int32_t)128))))
@@ -41817,7 +41817,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_CipherStrength_m1582261256 (
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_CipherStrength_m449292740(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_CipherStrength_m1270345755(L_0, /*hidden argument*/NULL);
 		return L_1;
 	}
 }
@@ -41835,7 +41835,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_HashAlgorithm_m2084867375 (S
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_HashAlgorithm_m2687781311(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_HashAlgorithm_m1015575164(L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
 		int32_t L_2 = V_0;
 		switch (L_2)
@@ -41887,7 +41887,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_HashStrength_m801173434 (Ssl
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_HashStrength_m2770482134(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_HashStrength_m3372883601(L_0, /*hidden argument*/NULL);
 		return L_1;
 	}
 }
@@ -41905,7 +41905,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_KeyExchangeAlgorithm_m418268
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_KeyExchangeAlgorithm_m1073399962(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_KeyExchangeAlgorithm_m4014820972(L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
 		int32_t L_2 = V_0;
 		switch (L_2)
@@ -41975,7 +41975,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_KeyExchangeStrength_m4016758
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_KeyExchangeStrength_m217695965(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_KeyExchangeStrength_m2322308213(L_0, /*hidden argument*/NULL);
 		return L_1;
 	}
 }
@@ -42000,7 +42000,7 @@ extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslStream_get_LocalCe
 	{
 		SslStreamBase_t1667413407 * L_1 = __this->get_ssl_stream_3();
 		NullCheck(L_1);
-		X509Certificate_t713131622 * L_2 = SslStreamBase_get_ServerCertificate_m656316972(L_1, /*hidden argument*/NULL);
+		X509Certificate_t713131622 * L_2 = SslStreamBase_get_ServerCertificate_m2460159041(L_1, /*hidden argument*/NULL);
 		G_B3_0 = L_2;
 		goto IL_0031;
 	}
@@ -42009,7 +42009,7 @@ IL_0021:
 	{
 		SslStreamBase_t1667413407 * L_3 = __this->get_ssl_stream_3();
 		NullCheck(((SslClientStream_t3914624661 *)CastclassClass((RuntimeObject*)L_3, SslClientStream_t3914624661_il2cpp_TypeInfo_var)));
-		X509Certificate_t713131622 * L_4 = SslClientStream_get_SelectedClientCertificate_m2941927287(((SslClientStream_t3914624661 *)CastclassClass((RuntimeObject*)L_3, SslClientStream_t3914624661_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		X509Certificate_t713131622 * L_4 = SslClientStream_get_SelectedClientCertificate_m2490331763(((SslClientStream_t3914624661 *)CastclassClass((RuntimeObject*)L_3, SslClientStream_t3914624661_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
 		G_B3_0 = L_4;
 	}
 
@@ -42039,7 +42039,7 @@ extern "C" IL2CPP_METHOD_ATTR X509Certificate_t713131622 * SslStream_get_RemoteC
 	{
 		SslStreamBase_t1667413407 * L_1 = __this->get_ssl_stream_3();
 		NullCheck(L_1);
-		X509Certificate_t713131622 * L_2 = SslStreamBase_get_ServerCertificate_m656316972(L_1, /*hidden argument*/NULL);
+		X509Certificate_t713131622 * L_2 = SslStreamBase_get_ServerCertificate_m2460159041(L_1, /*hidden argument*/NULL);
 		G_B3_0 = L_2;
 		goto IL_0031;
 	}
@@ -42048,7 +42048,7 @@ IL_0021:
 	{
 		SslStreamBase_t1667413407 * L_3 = __this->get_ssl_stream_3();
 		NullCheck(((SslServerStream_t875102504 *)CastclassClass((RuntimeObject*)L_3, SslServerStream_t875102504_il2cpp_TypeInfo_var)));
-		X509Certificate_t713131622 * L_4 = SslServerStream_get_ClientCertificate_m4082398465(((SslServerStream_t875102504 *)CastclassClass((RuntimeObject*)L_3, SslServerStream_t875102504_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		X509Certificate_t713131622 * L_4 = SslServerStream_get_ClientCertificate_m3292180285(((SslServerStream_t875102504 *)CastclassClass((RuntimeObject*)L_3, SslServerStream_t875102504_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
 		G_B3_0 = L_4;
 	}
 
@@ -42071,7 +42071,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SslStream_get_SslProtocol_m2179688712 (Ssl
 		SslStream_CheckConnectionAuthenticated_m3995332768(__this, /*hidden argument*/NULL);
 		SslStreamBase_t1667413407 * L_0 = __this->get_ssl_stream_3();
 		NullCheck(L_0);
-		int32_t L_1 = SslStreamBase_get_SecurityProtocol_m596101988(L_0, /*hidden argument*/NULL);
+		int32_t L_1 = SslStreamBase_get_SecurityProtocol_m1200558453(L_0, /*hidden argument*/NULL);
 		V_0 = L_1;
 		int32_t L_2 = V_0;
 		if ((((int32_t)L_2) == ((int32_t)((int32_t)-1073741824))))
@@ -42177,7 +42177,7 @@ IL_0021:
 		X509CertificateCollection_t3399372417 * L_5 = ___serverRequestedCerts3;
 		int32_t L_6 = V_1;
 		NullCheck(L_5);
-		X509Certificate_t713131622 * L_7 = X509CertificateCollection_get_Item_m1464788693(L_5, L_6, /*hidden argument*/NULL);
+		X509Certificate_t713131622 * L_7 = X509CertificateCollection_get_Item_m1177942658(L_5, L_6, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		String_t* L_8 = VirtFuncInvoker0< String_t* >::Invoke(11 /* System.String System.Security.Cryptography.X509Certificates.X509Certificate::GetIssuerName() */, L_7);
 		NullCheck(L_3);
@@ -42220,7 +42220,7 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject* SslStream_BeginAuthenticateAsClient
 	{
 		String_t* L_0 = ___targetHost0;
 		X509CertificateCollection_t3399372417 * L_1 = (X509CertificateCollection_t3399372417 *)il2cpp_codegen_object_new(X509CertificateCollection_t3399372417_il2cpp_TypeInfo_var);
-		X509CertificateCollection__ctor_m1784029323(L_1, /*hidden argument*/NULL);
+		X509CertificateCollection__ctor_m147081211(L_1, /*hidden argument*/NULL);
 		AsyncCallback_t3962456242 * L_2 = ___asyncCallback1;
 		RuntimeObject * L_3 = ___asyncState2;
 		RuntimeObject* L_4 = VirtFuncInvoker6< RuntimeObject*, String_t*, X509CertificateCollection_t3399372417 *, int32_t, bool, AsyncCallback_t3962456242 *, RuntimeObject * >::Invoke(45 /* System.IAsyncResult System.Net.Security.SslStream::BeginAuthenticateAsClient(System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Authentication.SslProtocols,System.Boolean,System.AsyncCallback,System.Object) */, __this, L_0, L_1, ((int32_t)192), (bool)0, L_2, L_3);
@@ -42272,19 +42272,19 @@ IL_002a:
 		NullCheck(L_11);
 		X509CertificateCollection_t3399372417 * L_12 = L_11->get_clientCertificates_0();
 		SslClientStream_t3914624661 * L_13 = (SslClientStream_t3914624661 *)il2cpp_codegen_object_new(SslClientStream_t3914624661_il2cpp_TypeInfo_var);
-		SslClientStream__ctor_m3351906728(L_13, L_6, L_7, (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0), L_10, L_12, /*hidden argument*/NULL);
+		SslClientStream__ctor_m3779762807(L_13, L_6, L_7, (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0), L_10, L_12, /*hidden argument*/NULL);
 		V_0 = L_13;
 		SslClientStream_t3914624661 * L_14 = V_0;
 		bool L_15 = ___checkCertificateRevocation3;
 		NullCheck(L_14);
-		SslStreamBase_set_CheckCertRevocationStatus_m912861213(L_14, L_15, /*hidden argument*/NULL);
+		SslStreamBase_set_CheckCertRevocationStatus_m2549468395(L_14, L_15, /*hidden argument*/NULL);
 		SslClientStream_t3914624661 * L_16 = V_0;
 		U3CBeginAuthenticateAsClientU3Ec__AnonStorey7_t1222040293 * L_17 = V_1;
 		intptr_t L_18 = (intptr_t)U3CBeginAuthenticateAsClientU3Ec__AnonStorey7_U3CU3Em__7_m1298834188_RuntimeMethod_var;
 		PrivateKeySelectionCallback_t3240194217 * L_19 = (PrivateKeySelectionCallback_t3240194217 *)il2cpp_codegen_object_new(PrivateKeySelectionCallback_t3240194217_il2cpp_TypeInfo_var);
-		PrivateKeySelectionCallback__ctor_m265141085(L_19, L_17, L_18, /*hidden argument*/NULL);
+		PrivateKeySelectionCallback__ctor_m1640135967(L_19, L_17, L_18, /*hidden argument*/NULL);
 		NullCheck(L_16);
-		SslClientStream_set_PrivateKeyCertSelectionDelegate_m4100936974(L_16, L_19, /*hidden argument*/NULL);
+		SslClientStream_set_PrivateKeyCertSelectionDelegate_m1644187243(L_16, L_19, /*hidden argument*/NULL);
 		RemoteCertificateValidationCallback_t3014364904 * L_20 = __this->get_validation_callback_4();
 		if (!L_20)
 		{
@@ -42296,9 +42296,9 @@ IL_002a:
 		U3CBeginAuthenticateAsClientU3Ec__AnonStorey7_t1222040293 * L_22 = V_1;
 		intptr_t L_23 = (intptr_t)U3CBeginAuthenticateAsClientU3Ec__AnonStorey7_U3CU3Em__8_m3748334000_RuntimeMethod_var;
 		CertificateValidationCallback_t4091668218 * L_24 = (CertificateValidationCallback_t4091668218 *)il2cpp_codegen_object_new(CertificateValidationCallback_t4091668218_il2cpp_TypeInfo_var);
-		CertificateValidationCallback__ctor_m1962610296(L_24, L_22, L_23, /*hidden argument*/NULL);
+		CertificateValidationCallback__ctor_m2974639562(L_24, L_22, L_23, /*hidden argument*/NULL);
 		NullCheck(L_21);
-		SslClientStream_set_ServerCertValidationDelegate_m466396564(L_21, L_24, /*hidden argument*/NULL);
+		SslClientStream_set_ServerCertValidationDelegate_m2755398915(L_21, L_24, /*hidden argument*/NULL);
 	}
 
 IL_0084:
@@ -42313,9 +42313,9 @@ IL_0084:
 		SslClientStream_t3914624661 * L_26 = V_0;
 		intptr_t L_27 = (intptr_t)SslStream_OnCertificateSelection_m2780604417_RuntimeMethod_var;
 		CertificateSelectionCallback_t3743405224 * L_28 = (CertificateSelectionCallback_t3743405224 *)il2cpp_codegen_object_new(CertificateSelectionCallback_t3743405224_il2cpp_TypeInfo_var);
-		CertificateSelectionCallback__ctor_m3437537928(L_28, __this, L_27, /*hidden argument*/NULL);
+		CertificateSelectionCallback__ctor_m2187764585(L_28, __this, L_27, /*hidden argument*/NULL);
 		NullCheck(L_26);
-		SslClientStream_set_ClientCertSelectionDelegate_m1261530976(L_26, L_28, /*hidden argument*/NULL);
+		SslClientStream_set_ClientCertSelectionDelegate_m1540376606(L_26, L_28, /*hidden argument*/NULL);
 	}
 
 IL_00a1:
@@ -42400,19 +42400,19 @@ IL_002a:
 		int32_t L_11 = ___sslProtocolType2;
 		int32_t L_12 = SslStream_GetMonoSslProtocol_m1414881046(__this, L_11, /*hidden argument*/NULL);
 		SslServerStream_t875102504 * L_13 = (SslServerStream_t875102504 *)il2cpp_codegen_object_new(SslServerStream_t875102504_il2cpp_TypeInfo_var);
-		SslServerStream__ctor_m2662225958(L_13, L_6, L_8, L_9, (bool)((((int32_t)L_10) == ((int32_t)0))? 1 : 0), L_12, /*hidden argument*/NULL);
+		SslServerStream__ctor_m3336508846(L_13, L_6, L_8, L_9, (bool)((((int32_t)L_10) == ((int32_t)0))? 1 : 0), L_12, /*hidden argument*/NULL);
 		V_0 = L_13;
 		SslServerStream_t875102504 * L_14 = V_0;
 		bool L_15 = ___checkCertificateRevocation3;
 		NullCheck(L_14);
-		SslStreamBase_set_CheckCertRevocationStatus_m912861213(L_14, L_15, /*hidden argument*/NULL);
+		SslStreamBase_set_CheckCertRevocationStatus_m2549468395(L_14, L_15, /*hidden argument*/NULL);
 		SslServerStream_t875102504 * L_16 = V_0;
 		U3CBeginAuthenticateAsServerU3Ec__AnonStorey8_t2934725513 * L_17 = V_1;
 		intptr_t L_18 = (intptr_t)U3CBeginAuthenticateAsServerU3Ec__AnonStorey8_U3CU3Em__9_m3506506130_RuntimeMethod_var;
 		PrivateKeySelectionCallback_t3240194217 * L_19 = (PrivateKeySelectionCallback_t3240194217 *)il2cpp_codegen_object_new(PrivateKeySelectionCallback_t3240194217_il2cpp_TypeInfo_var);
-		PrivateKeySelectionCallback__ctor_m265141085(L_19, L_17, L_18, /*hidden argument*/NULL);
+		PrivateKeySelectionCallback__ctor_m1640135967(L_19, L_17, L_18, /*hidden argument*/NULL);
 		NullCheck(L_16);
-		SslServerStream_set_PrivateKeyCertSelectionDelegate_m1718869186(L_16, L_19, /*hidden argument*/NULL);
+		SslServerStream_set_PrivateKeyCertSelectionDelegate_m1168538557(L_16, L_19, /*hidden argument*/NULL);
 		RemoteCertificateValidationCallback_t3014364904 * L_20 = __this->get_validation_callback_4();
 		if (!L_20)
 		{
@@ -42424,9 +42424,9 @@ IL_002a:
 		U3CBeginAuthenticateAsServerU3Ec__AnonStorey8_t2934725513 * L_22 = V_1;
 		intptr_t L_23 = (intptr_t)U3CBeginAuthenticateAsServerU3Ec__AnonStorey8_U3CU3Em__A_m2739142532_RuntimeMethod_var;
 		CertificateValidationCallback_t4091668218 * L_24 = (CertificateValidationCallback_t4091668218 *)il2cpp_codegen_object_new(CertificateValidationCallback_t4091668218_il2cpp_TypeInfo_var);
-		CertificateValidationCallback__ctor_m1962610296(L_24, L_22, L_23, /*hidden argument*/NULL);
+		CertificateValidationCallback__ctor_m2974639562(L_24, L_22, L_23, /*hidden argument*/NULL);
 		NullCheck(L_21);
-		SslServerStream_set_ClientCertValidationDelegate_m3915766517(L_21, L_24, /*hidden argument*/NULL);
+		SslServerStream_set_ClientCertValidationDelegate_m4121659394(L_21, L_24, /*hidden argument*/NULL);
 	}
 
 IL_0084:
@@ -42518,7 +42518,7 @@ extern "C" IL2CPP_METHOD_ATTR void SslStream_AuthenticateAsClient_m3722350921 (S
 	{
 		String_t* L_0 = ___targetHost0;
 		X509CertificateCollection_t3399372417 * L_1 = (X509CertificateCollection_t3399372417 *)il2cpp_codegen_object_new(X509CertificateCollection_t3399372417_il2cpp_TypeInfo_var);
-		X509CertificateCollection__ctor_m1784029323(L_1, /*hidden argument*/NULL);
+		X509CertificateCollection__ctor_m147081211(L_1, /*hidden argument*/NULL);
 		VirtActionInvoker4< String_t*, X509CertificateCollection_t3399372417 *, int32_t, bool >::Invoke(49 /* System.Void System.Net.Security.SslStream::AuthenticateAsClient(System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Authentication.SslProtocols,System.Boolean) */, __this, L_0, L_1, ((int32_t)192), (bool)0);
 		return;
 	}
@@ -42826,7 +42826,7 @@ extern "C" IL2CPP_METHOD_ATTR AsymmetricAlgorithm_t932037087 * U3CBeginAuthentic
 		V_0 = L_1;
 		X509CertificateCollection_t3399372417 * L_2 = __this->get_clientCertificates_0();
 		NullCheck(L_2);
-		X509CertificateEnumerator_t855273292 * L_3 = X509CertificateCollection_GetEnumerator_m385726313(L_2, /*hidden argument*/NULL);
+		X509CertificateEnumerator_t855273292 * L_3 = X509CertificateCollection_GetEnumerator_m1686475779(L_2, /*hidden argument*/NULL);
 		V_2 = L_3;
 	}
 
@@ -42841,7 +42841,7 @@ IL_0018:
 		{
 			X509CertificateEnumerator_t855273292 * L_4 = V_2;
 			NullCheck(L_4);
-			X509Certificate_t713131622 * L_5 = X509CertificateEnumerator_get_Current_m1016419(L_4, /*hidden argument*/NULL);
+			X509Certificate_t713131622 * L_5 = X509CertificateEnumerator_get_Current_m364341970(L_4, /*hidden argument*/NULL);
 			V_1 = L_5;
 			X509Certificate_t713131622 * L_6 = V_1;
 			NullCheck(L_6);
@@ -42887,7 +42887,7 @@ IL_004a:
 			V_3 = G_B6_0;
 			X509Certificate2_t714049126 * L_15 = V_3;
 			NullCheck(L_15);
-			AsymmetricAlgorithm_t932037087 * L_16 = X509Certificate2_get_PrivateKey_m3900779210(L_15, /*hidden argument*/NULL);
+			AsymmetricAlgorithm_t932037087 * L_16 = X509Certificate2_get_PrivateKey_m450647294(L_15, /*hidden argument*/NULL);
 			V_4 = L_16;
 			IL2CPP_LEAVE(0x7F, FINALLY_0068);
 		}
@@ -42896,7 +42896,7 @@ IL_0058:
 		{
 			X509CertificateEnumerator_t855273292 * L_17 = V_2;
 			NullCheck(L_17);
-			bool L_18 = X509CertificateEnumerator_MoveNext_m3211955044(L_17, /*hidden argument*/NULL);
+			bool L_18 = X509CertificateEnumerator_MoveNext_m1557350766(L_17, /*hidden argument*/NULL);
 			if (L_18)
 			{
 				goto IL_0018;
@@ -42979,7 +42979,7 @@ extern "C" IL2CPP_METHOD_ATTR bool U3CBeginAuthenticateAsClientU3Ec__AnonStorey7
 	int32_t V_9 = 0;
 	{
 		X509Chain_t194917408 * L_0 = (X509Chain_t194917408 *)il2cpp_codegen_object_new(X509Chain_t194917408_il2cpp_TypeInfo_var);
-		X509Chain__ctor_m2240869275(L_0, /*hidden argument*/NULL);
+		X509Chain__ctor_m2878811474(L_0, /*hidden argument*/NULL);
 		V_0 = L_0;
 		X509Certificate_t713131622 * L_1 = ___cert0;
 		V_1 = ((X509Certificate2_t714049126 *)IsInstClass((RuntimeObject*)L_1, X509Certificate2_t714049126_il2cpp_TypeInfo_var));
@@ -42999,7 +42999,7 @@ extern "C" IL2CPP_METHOD_ATTR bool U3CBeginAuthenticateAsClientU3Ec__AnonStorey7
 IL_001a:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ServicePointManager_t170559685_il2cpp_TypeInfo_var);
-		bool L_5 = ServicePointManager_get_CheckCertificateRevocationList_m1645465614(NULL /*static, unused*/, /*hidden argument*/NULL);
+		bool L_5 = ServicePointManager_get_CheckCertificateRevocationList_m1716454075(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (L_5)
 		{
 			goto IL_0030;
@@ -43090,7 +43090,7 @@ IL_0084:
 		X509Chain_t194917408 * L_22 = V_0;
 		X509Certificate2_t714049126 * L_23 = V_1;
 		NullCheck(L_22);
-		X509Chain_Build_m611063989(L_22, L_23, /*hidden argument*/NULL);
+		X509Chain_Build_m1705729171(L_22, L_23, /*hidden argument*/NULL);
 		X509Chain_t194917408 * L_24 = V_0;
 		NullCheck(L_24);
 		X509ChainStatusU5BU5D_t2685945535* L_25 = X509Chain_get_ChainStatus_m3613658095(L_24, /*hidden argument*/NULL);
@@ -43160,7 +43160,7 @@ IL_00ed:
 		X509Chain_t194917408 * L_39 = V_0;
 		int32_t L_40 = V_2;
 		NullCheck(L_36);
-		bool L_41 = RemoteCertificateValidationCallback_Invoke_m3086073466(L_36, L_37, L_38, L_39, L_40, /*hidden argument*/NULL);
+		bool L_41 = RemoteCertificateValidationCallback_Invoke_m727898444(L_36, L_37, L_38, L_39, L_40, /*hidden argument*/NULL);
 		return L_41;
 	}
 }
@@ -43222,7 +43222,7 @@ IL_001d:
 	{
 		X509Certificate2_t714049126 * L_5 = V_0;
 		NullCheck(L_5);
-		AsymmetricAlgorithm_t932037087 * L_6 = X509Certificate2_get_PrivateKey_m3900779210(L_5, /*hidden argument*/NULL);
+		AsymmetricAlgorithm_t932037087 * L_6 = X509Certificate2_get_PrivateKey_m450647294(L_5, /*hidden argument*/NULL);
 		G_B5_0 = L_6;
 		goto IL_0030;
 	}
@@ -43259,12 +43259,12 @@ extern "C" IL2CPP_METHOD_ATTR bool U3CBeginAuthenticateAsServerU3Ec__AnonStorey8
 	}
 	{
 		X509Chain_t194917408 * L_1 = (X509Chain_t194917408 *)il2cpp_codegen_object_new(X509Chain_t194917408_il2cpp_TypeInfo_var);
-		X509Chain__ctor_m2240869275(L_1, /*hidden argument*/NULL);
+		X509Chain__ctor_m2878811474(L_1, /*hidden argument*/NULL);
 		V_0 = L_1;
 		X509Chain_t194917408 * L_2 = V_0;
 		X509Certificate_t713131622 * L_3 = ___cert0;
 		NullCheck(L_2);
-		X509Chain_Build_m611063989(L_2, ((X509Certificate2_t714049126 *)CastclassClass((RuntimeObject*)L_3, X509Certificate2_t714049126_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		X509Chain_Build_m1705729171(L_2, ((X509Certificate2_t714049126 *)CastclassClass((RuntimeObject*)L_3, X509Certificate2_t714049126_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
 	}
 
 IL_0020:
@@ -43297,7 +43297,7 @@ IL_0030:
 		X509Chain_t194917408 * L_9 = V_0;
 		int32_t L_10 = V_1;
 		NullCheck(L_6);
-		bool L_11 = RemoteCertificateValidationCallback_Invoke_m3086073466(L_6, L_7, L_8, L_9, L_10, /*hidden argument*/NULL);
+		bool L_11 = RemoteCertificateValidationCallback_Invoke_m727898444(L_6, L_7, L_8, L_9, L_10, /*hidden argument*/NULL);
 		return L_11;
 	}
 }
@@ -43898,7 +43898,7 @@ IL_0024:
 		{
 			Uri_t100236324 * L_4 = __this->get_uri_0();
 			NullCheck(L_4);
-			String_t* L_5 = Uri_get_Host_m255565830(L_4, /*hidden argument*/NULL);
+			String_t* L_5 = Uri_get_Host_m42857288(L_4, /*hidden argument*/NULL);
 			V_1 = L_5;
 			Uri_t100236324 * L_6 = __this->get_uri_0();
 			NullCheck(L_6);
@@ -44546,12 +44546,12 @@ extern "C" IL2CPP_METHOD_ATTR void ServicePointManager__cctor_m3222177795 (Runti
 	}
 }
 // System.Net.ICertificatePolicy System.Net.ServicePointManager::get_CertificatePolicy()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject* ServicePointManager_get_CertificatePolicy_m475600998 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* ServicePointManager_get_CertificatePolicy_m1966679142 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (ServicePointManager_get_CertificatePolicy_m475600998_MetadataUsageId);
+		il2cpp_codegen_initialize_method (ServicePointManager_get_CertificatePolicy_m1966679142_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -44577,12 +44577,12 @@ extern "C" IL2CPP_METHOD_ATTR void ServicePointManager_set_CertificatePolicy_m28
 	}
 }
 // System.Boolean System.Net.ServicePointManager::get_CheckCertificateRevocationList()
-extern "C" IL2CPP_METHOD_ATTR bool ServicePointManager_get_CheckCertificateRevocationList_m1645465614 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR bool ServicePointManager_get_CheckCertificateRevocationList_m1716454075 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (ServicePointManager_get_CheckCertificateRevocationList_m1645465614_MetadataUsageId);
+		il2cpp_codegen_initialize_method (ServicePointManager_get_CheckCertificateRevocationList_m1716454075_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -44827,12 +44827,12 @@ IL_0012:
 	}
 }
 // System.Net.SecurityProtocolType System.Net.ServicePointManager::get_SecurityProtocol()
-extern "C" IL2CPP_METHOD_ATTR int32_t ServicePointManager_get_SecurityProtocol_m966397919 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR int32_t ServicePointManager_get_SecurityProtocol_m4259357356 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (ServicePointManager_get_SecurityProtocol_m966397919_MetadataUsageId);
+		il2cpp_codegen_initialize_method (ServicePointManager_get_SecurityProtocol_m4259357356_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -44858,12 +44858,12 @@ extern "C" IL2CPP_METHOD_ATTR void ServicePointManager_set_SecurityProtocol_m229
 	}
 }
 // System.Net.Security.RemoteCertificateValidationCallback System.Net.ServicePointManager::get_ServerCertificateValidationCallback()
-extern "C" IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t3014364904 * ServicePointManager_get_ServerCertificateValidationCallback_m2067275303 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t3014364904 * ServicePointManager_get_ServerCertificateValidationCallback_m984921647 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (ServicePointManager_get_ServerCertificateValidationCallback_m2067275303_MetadataUsageId);
+		il2cpp_codegen_initialize_method (ServicePointManager_get_ServerCertificateValidationCallback_m984921647_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -45622,9 +45622,9 @@ extern "C" IL2CPP_METHOD_ATTR String_t* ChainValidationHelper_get_Host_m14422575
 	{
 		RuntimeObject * L_2 = __this->get_sender_0();
 		NullCheck(((HttpWebRequest_t1669436515 *)CastclassClass((RuntimeObject*)L_2, HttpWebRequest_t1669436515_il2cpp_TypeInfo_var)));
-		Uri_t100236324 * L_3 = HttpWebRequest_get_Address_m2672661563(((HttpWebRequest_t1669436515 *)CastclassClass((RuntimeObject*)L_2, HttpWebRequest_t1669436515_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
+		Uri_t100236324 * L_3 = HttpWebRequest_get_Address_m1609525404(((HttpWebRequest_t1669436515 *)CastclassClass((RuntimeObject*)L_2, HttpWebRequest_t1669436515_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
 		NullCheck(L_3);
-		String_t* L_4 = Uri_get_Host_m255565830(L_3, /*hidden argument*/NULL);
+		String_t* L_4 = Uri_get_Host_m42857288(L_3, /*hidden argument*/NULL);
 		__this->set_host_1(L_4);
 	}
 
@@ -45700,12 +45700,12 @@ IL_0013:
 IL_0015:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ServicePointManager_t170559685_il2cpp_TypeInfo_var);
-		RuntimeObject* L_3 = ServicePointManager_get_CertificatePolicy_m475600998(NULL /*static, unused*/, /*hidden argument*/NULL);
+		RuntimeObject* L_3 = ServicePointManager_get_CertificatePolicy_m1966679142(NULL /*static, unused*/, /*hidden argument*/NULL);
 		V_1 = L_3;
-		RemoteCertificateValidationCallback_t3014364904 * L_4 = ServicePointManager_get_ServerCertificateValidationCallback_m2067275303(NULL /*static, unused*/, /*hidden argument*/NULL);
+		RemoteCertificateValidationCallback_t3014364904 * L_4 = ServicePointManager_get_ServerCertificateValidationCallback_m984921647(NULL /*static, unused*/, /*hidden argument*/NULL);
 		V_2 = L_4;
 		X509Chain_t194917408 * L_5 = (X509Chain_t194917408 *)il2cpp_codegen_object_new(X509Chain_t194917408_il2cpp_TypeInfo_var);
-		X509Chain__ctor_m2240869275(L_5, /*hidden argument*/NULL);
+		X509Chain__ctor_m2878811474(L_5, /*hidden argument*/NULL);
 		V_3 = L_5;
 		X509Chain_t194917408 * L_6 = V_3;
 		X509ChainPolicy_t2426922870 * L_7 = (X509ChainPolicy_t2426922870 *)il2cpp_codegen_object_new(X509ChainPolicy_t2426922870_il2cpp_TypeInfo_var);
@@ -45721,11 +45721,11 @@ IL_003a:
 		X509CertificateCollection_t1542168550 * L_8 = ___certs0;
 		int32_t L_9 = V_4;
 		NullCheck(L_8);
-		X509Certificate_t489243025 * L_10 = X509CertificateCollection_get_Item_m1033426577(L_8, L_9, /*hidden argument*/NULL);
+		X509Certificate_t489243025 * L_10 = X509CertificateCollection_get_Item_m3285563224(L_8, L_9, /*hidden argument*/NULL);
 		NullCheck(L_10);
 		ByteU5BU5D_t4116647657* L_11 = VirtFuncInvoker0< ByteU5BU5D_t4116647657* >::Invoke(12 /* System.Byte[] Mono.Security.X509.X509Certificate::get_RawData() */, L_10);
 		X509Certificate2_t714049126 * L_12 = (X509Certificate2_t714049126 *)il2cpp_codegen_object_new(X509Certificate2_t714049126_il2cpp_TypeInfo_var);
-		X509Certificate2__ctor_m3336405942(L_12, L_11, /*hidden argument*/NULL);
+		X509Certificate2__ctor_m2370196240(L_12, L_11, /*hidden argument*/NULL);
 		V_5 = L_12;
 		X509Chain_t194917408 * L_13 = V_3;
 		NullCheck(L_13);
@@ -45753,11 +45753,11 @@ IL_0067:
 	{
 		X509CertificateCollection_t1542168550 * L_21 = ___certs0;
 		NullCheck(L_21);
-		X509Certificate_t489243025 * L_22 = X509CertificateCollection_get_Item_m1033426577(L_21, 0, /*hidden argument*/NULL);
+		X509Certificate_t489243025 * L_22 = X509CertificateCollection_get_Item_m3285563224(L_21, 0, /*hidden argument*/NULL);
 		NullCheck(L_22);
 		ByteU5BU5D_t4116647657* L_23 = VirtFuncInvoker0< ByteU5BU5D_t4116647657* >::Invoke(12 /* System.Byte[] Mono.Security.X509.X509Certificate::get_RawData() */, L_22);
 		X509Certificate2_t714049126 * L_24 = (X509Certificate2_t714049126 *)il2cpp_codegen_object_new(X509Certificate2_t714049126_il2cpp_TypeInfo_var);
-		X509Certificate2__ctor_m3336405942(L_24, L_23, /*hidden argument*/NULL);
+		X509Certificate2__ctor_m2370196240(L_24, L_23, /*hidden argument*/NULL);
 		V_6 = L_24;
 		V_7 = 0;
 		V_8 = 0;
@@ -45770,7 +45770,7 @@ IL_008d:
 			X509Chain_t194917408 * L_25 = V_3;
 			X509Certificate2_t714049126 * L_26 = V_6;
 			NullCheck(L_25);
-			bool L_27 = X509Chain_Build_m611063989(L_25, L_26, /*hidden argument*/NULL);
+			bool L_27 = X509Chain_Build_m1705729171(L_25, L_26, /*hidden argument*/NULL);
 			if (L_27)
 			{
 				goto IL_00a5;
@@ -45835,7 +45835,7 @@ IL_00f0:
 	{
 		X509CertificateCollection_t1542168550 * L_38 = ___certs0;
 		NullCheck(L_38);
-		X509Certificate_t489243025 * L_39 = X509CertificateCollection_get_Item_m1033426577(L_38, 0, /*hidden argument*/NULL);
+		X509Certificate_t489243025 * L_39 = X509CertificateCollection_get_Item_m3285563224(L_38, 0, /*hidden argument*/NULL);
 		String_t* L_40 = ChainValidationHelper_get_Host_m1442257577(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(ChainValidationHelper_t320539540_il2cpp_TypeInfo_var);
 		bool L_41 = ChainValidationHelper_CheckServerIdentity_m2649452138(NULL /*static, unused*/, L_39, L_40, /*hidden argument*/NULL);
@@ -45951,7 +45951,7 @@ IL_0160:
 	{
 		HttpWebRequest_t1669436515 * L_53 = V_13;
 		NullCheck(L_53);
-		ServicePoint_t2786966844 * L_54 = HttpWebRequest_get_ServicePoint_m3916606901(L_53, /*hidden argument*/NULL);
+		ServicePoint_t2786966844 * L_54 = HttpWebRequest_get_ServicePoint_m1080482337(L_53, /*hidden argument*/NULL);
 		V_12 = L_54;
 	}
 
@@ -46024,7 +46024,7 @@ IL_01bd:
 		X509Chain_t194917408 * L_71 = V_3;
 		int32_t L_72 = V_8;
 		NullCheck(L_68);
-		bool L_73 = RemoteCertificateValidationCallback_Invoke_m3086073466(L_68, L_69, L_70, L_71, L_72, /*hidden argument*/NULL);
+		bool L_73 = RemoteCertificateValidationCallback_Invoke_m727898444(L_68, L_69, L_70, L_71, L_72, /*hidden argument*/NULL);
 		V_10 = L_73;
 		bool L_74 = V_10;
 		V_0 = (bool)((((int32_t)L_74) == ((int32_t)0))? 1 : 0);
@@ -46036,7 +46036,7 @@ IL_01dc:
 		bool L_76 = V_0;
 		int32_t L_77 = V_7;
 		ValidationResult_t3834298736 * L_78 = (ValidationResult_t3834298736 *)il2cpp_codegen_object_new(ValidationResult_t3834298736_il2cpp_TypeInfo_var);
-		ValidationResult__ctor_m295084008(L_78, L_75, L_76, L_77, /*hidden argument*/NULL);
+		ValidationResult__ctor_m2192367725(L_78, L_75, L_76, L_77, /*hidden argument*/NULL);
 		return L_78;
 	}
 }
@@ -46758,9 +46758,9 @@ IL_0000:
 		{
 			X509Certificate_t489243025 * L_0 = ___cert0;
 			NullCheck(L_0);
-			X509ExtensionCollection_t609554709 * L_1 = X509Certificate_get_Extensions_m1217872579(L_0, /*hidden argument*/NULL);
+			X509ExtensionCollection_t609554709 * L_1 = X509Certificate_get_Extensions_m2532937142(L_0, /*hidden argument*/NULL);
 			NullCheck(L_1);
-			X509Extension_t3173393653 * L_2 = X509ExtensionCollection_get_Item_m2761897938(L_1, _stringLiteral1004423984, /*hidden argument*/NULL);
+			X509Extension_t3173393653 * L_2 = X509ExtensionCollection_get_Item_m4249795832(L_1, _stringLiteral1004423984, /*hidden argument*/NULL);
 			V_0 = L_2;
 			X509Extension_t3173393653 * L_3 = V_0;
 			if (!L_3)
@@ -46773,11 +46773,11 @@ IL_0017:
 		{
 			X509Extension_t3173393653 * L_4 = V_0;
 			SubjectAltNameExtension_t1536937677 * L_5 = (SubjectAltNameExtension_t1536937677 *)il2cpp_codegen_object_new(SubjectAltNameExtension_t1536937677_il2cpp_TypeInfo_var);
-			SubjectAltNameExtension__ctor_m1991362362(L_5, L_4, /*hidden argument*/NULL);
+			SubjectAltNameExtension__ctor_m1988187120(L_5, L_4, /*hidden argument*/NULL);
 			V_1 = L_5;
 			SubjectAltNameExtension_t1536937677 * L_6 = V_1;
 			NullCheck(L_6);
-			StringU5BU5D_t1281789340* L_7 = SubjectAltNameExtension_get_DNSNames_m2346000460(L_6, /*hidden argument*/NULL);
+			StringU5BU5D_t1281789340* L_7 = SubjectAltNameExtension_get_DNSNames_m1496591094(L_6, /*hidden argument*/NULL);
 			V_3 = L_7;
 			V_4 = 0;
 			goto IL_004c;
@@ -46828,7 +46828,7 @@ IL_0056:
 		{
 			SubjectAltNameExtension_t1536937677 * L_18 = V_1;
 			NullCheck(L_18);
-			StringU5BU5D_t1281789340* L_19 = SubjectAltNameExtension_get_IPAddresses_m1641002124(L_18, /*hidden argument*/NULL);
+			StringU5BU5D_t1281789340* L_19 = SubjectAltNameExtension_get_IPAddresses_m1000991872(L_18, /*hidden argument*/NULL);
 			V_6 = L_19;
 			V_7 = 0;
 			goto IL_0088;
@@ -46945,16 +46945,16 @@ extern "C" IL2CPP_METHOD_ATTR bool ChainValidationHelper_CheckDomainName_m852928
 		String_t* L_0 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
 		V_0 = L_0;
 		Regex_t3657309853 * L_1 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-		Regex__ctor_m897876424(L_1, _stringLiteral4107337270, /*hidden argument*/NULL);
+		Regex__ctor_m3948448025(L_1, _stringLiteral4107337270, /*hidden argument*/NULL);
 		V_1 = L_1;
 		Regex_t3657309853 * L_2 = V_1;
 		String_t* L_3 = ___subjectName0;
 		NullCheck(L_2);
-		MatchCollection_t1395363720 * L_4 = Regex_Matches_m175567660(L_2, L_3, /*hidden argument*/NULL);
+		MatchCollection_t1395363720 * L_4 = Regex_Matches_m979395559(L_2, L_3, /*hidden argument*/NULL);
 		V_2 = L_4;
 		MatchCollection_t1395363720 * L_5 = V_2;
 		NullCheck(L_5);
-		int32_t L_6 = MatchCollection_get_Count_m1667454419(L_5, /*hidden argument*/NULL);
+		int32_t L_6 = MatchCollection_get_Count_m1586545784(L_5, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_6) == ((uint32_t)1))))
 		{
 			goto IL_0053;
@@ -46965,7 +46965,7 @@ extern "C" IL2CPP_METHOD_ATTR bool ChainValidationHelper_CheckDomainName_m852928
 		NullCheck(L_7);
 		Match_t3408321083 * L_8 = VirtFuncInvoker1< Match_t3408321083 *, int32_t >::Invoke(9 /* System.Text.RegularExpressions.Match System.Text.RegularExpressions.MatchCollection::get_Item(System.Int32) */, L_7, 0);
 		NullCheck(L_8);
-		bool L_9 = Group_get_Success_m1492300455(L_8, /*hidden argument*/NULL);
+		bool L_9 = Group_get_Success_m3823591889(L_8, /*hidden argument*/NULL);
 		if (!L_9)
 		{
 			goto IL_0053;
@@ -46978,9 +46978,9 @@ extern "C" IL2CPP_METHOD_ATTR bool ChainValidationHelper_CheckDomainName_m852928
 		NullCheck(L_11);
 		GroupCollection_t69770484 * L_12 = VirtFuncInvoker0< GroupCollection_t69770484 * >::Invoke(4 /* System.Text.RegularExpressions.GroupCollection System.Text.RegularExpressions.Match::get_Groups() */, L_11);
 		NullCheck(L_12);
-		Group_t2468205786 * L_13 = GroupCollection_get_Item_m2465789076(L_12, 1, /*hidden argument*/NULL);
+		Group_t2468205786 * L_13 = GroupCollection_get_Item_m723682197(L_12, 1, /*hidden argument*/NULL);
 		NullCheck(L_13);
-		String_t* L_14 = Capture_get_Value_m538076933(L_13, /*hidden argument*/NULL);
+		String_t* L_14 = Capture_get_Value_m3919646039(L_13, /*hidden argument*/NULL);
 		NullCheck(L_14);
 		String_t* L_15 = String_ToString_m838249115(L_14, /*hidden argument*/NULL);
 		V_0 = L_15;

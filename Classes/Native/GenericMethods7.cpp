@@ -76,6 +76,8 @@ struct GenericInterfaceFuncInvoker1
 
 // System.Collections.Generic.IEnumerable`1<System.Object>
 struct IEnumerable_1_t2059959053;
+// System.Func`3<System.Nullable`1<System.Int32>,System.Object,System.Nullable`1<System.Int32>>
+struct Func_3_t4137217499;
 // System.Func`3<System.Nullable`1<System.Int64>,System.Object,System.Nullable`1<System.Int64>>
 struct Func_3_t1794333537;
 // System.Func`3<System.Nullable`1<System.Single>,System.Object,System.Nullable`1<System.Single>>
@@ -265,6 +267,7 @@ struct ReadOnlyCollection_1_t2330998371;
 
 extern RuntimeClass* IEnumerator_t1853284238_il2cpp_TypeInfo_var;
 extern RuntimeClass* IDisposable_t3640265483_il2cpp_TypeInfo_var;
+extern const uint32_t Enumerable_SumNullable_TisRuntimeObject_TisNullable_1_t378540539_m3106858442_MetadataUsageId;
 extern const uint32_t Enumerable_SumNullable_TisRuntimeObject_TisNullable_1_t1164162090_m3330937784_MetadataUsageId;
 extern const uint32_t Enumerable_SumNullable_TisRuntimeObject_TisNullable_1_t3119828856_m2803470048_MetadataUsageId;
 extern const uint32_t Enumerable_SumNullable_TisRuntimeObject_TisRuntimeObject_m447531663_MetadataUsageId;
@@ -411,6 +414,36 @@ struct ObjectU5BU5D_t2843939325;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEOBJECT_H
+#ifndef U3CMAXU3EC__ANONSTOREY28_1_T1231863791_H
+#define U3CMAXU3EC__ANONSTOREY28_1_T1231863791_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Enumerable/<Max>c__AnonStorey28`1<System.Object>
+struct  U3CMaxU3Ec__AnonStorey28_1_t1231863791  : public RuntimeObject
+{
+public:
+	// System.Collections.Generic.Comparer`1<TSource> System.Linq.Enumerable/<Max>c__AnonStorey28`1::comparer
+	Comparer_1_t284893750 * ___comparer_0;
+
+public:
+	inline static int32_t get_offset_of_comparer_0() { return static_cast<int32_t>(offsetof(U3CMaxU3Ec__AnonStorey28_1_t1231863791, ___comparer_0)); }
+	inline Comparer_1_t284893750 * get_comparer_0() const { return ___comparer_0; }
+	inline Comparer_1_t284893750 ** get_address_of_comparer_0() { return &___comparer_0; }
+	inline void set_comparer_0(Comparer_1_t284893750 * value)
+	{
+		___comparer_0 = value;
+		Il2CppCodeGenWriteBarrier((&___comparer_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CMAXU3EC__ANONSTOREY28_1_T1231863791_H
 #ifndef COMPARER_1_T284893750_H
 #define COMPARER_1_T284893750_H
 #ifdef __clang__
@@ -478,73 +511,47 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // U3CMINU3EC__ANONSTOREY2E_1_T2343074724_H
-#ifndef LIST_1_T2319452671_H
-#define LIST_1_T2319452671_H
+#ifndef QUERYABLEENUMERABLE_1_T2952042478_H
+#define QUERYABLEENUMERABLE_1_T2952042478_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Single>>
-struct  List_1_t2319452671  : public RuntimeObject
+// System.Linq.QueryableEnumerable`1<System.Object>
+struct  QueryableEnumerable_1_t2952042478  : public RuntimeObject
 {
 public:
-	// T[] System.Collections.Generic.List`1::_items
-	KeyValuePair_2U5BU5D_t3014208436* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
+	// System.Linq.Expressions.Expression System.Linq.QueryableEnumerable`1::expression
+	Expression_t1588164026 * ___expression_0;
+	// System.Collections.Generic.IEnumerable`1<TElement> System.Linq.QueryableEnumerable`1::enumerable
+	RuntimeObject* ___enumerable_1;
 
 public:
-	inline static int32_t get_offset_of__items_1() { return static_cast<int32_t>(offsetof(List_1_t2319452671, ____items_1)); }
-	inline KeyValuePair_2U5BU5D_t3014208436* get__items_1() const { return ____items_1; }
-	inline KeyValuePair_2U5BU5D_t3014208436** get_address_of__items_1() { return &____items_1; }
-	inline void set__items_1(KeyValuePair_2U5BU5D_t3014208436* value)
+	inline static int32_t get_offset_of_expression_0() { return static_cast<int32_t>(offsetof(QueryableEnumerable_1_t2952042478, ___expression_0)); }
+	inline Expression_t1588164026 * get_expression_0() const { return ___expression_0; }
+	inline Expression_t1588164026 ** get_address_of_expression_0() { return &___expression_0; }
+	inline void set_expression_0(Expression_t1588164026 * value)
 	{
-		____items_1 = value;
-		Il2CppCodeGenWriteBarrier((&____items_1), value);
+		___expression_0 = value;
+		Il2CppCodeGenWriteBarrier((&___expression_0), value);
 	}
 
-	inline static int32_t get_offset_of__size_2() { return static_cast<int32_t>(offsetof(List_1_t2319452671, ____size_2)); }
-	inline int32_t get__size_2() const { return ____size_2; }
-	inline int32_t* get_address_of__size_2() { return &____size_2; }
-	inline void set__size_2(int32_t value)
+	inline static int32_t get_offset_of_enumerable_1() { return static_cast<int32_t>(offsetof(QueryableEnumerable_1_t2952042478, ___enumerable_1)); }
+	inline RuntimeObject* get_enumerable_1() const { return ___enumerable_1; }
+	inline RuntimeObject** get_address_of_enumerable_1() { return &___enumerable_1; }
+	inline void set_enumerable_1(RuntimeObject* value)
 	{
-		____size_2 = value;
-	}
-
-	inline static int32_t get_offset_of__version_3() { return static_cast<int32_t>(offsetof(List_1_t2319452671, ____version_3)); }
-	inline int32_t get__version_3() const { return ____version_3; }
-	inline int32_t* get_address_of__version_3() { return &____version_3; }
-	inline void set__version_3(int32_t value)
-	{
-		____version_3 = value;
-	}
-};
-
-struct List_1_t2319452671_StaticFields
-{
-public:
-	// T[] System.Collections.Generic.List`1::EmptyArray
-	KeyValuePair_2U5BU5D_t3014208436* ___EmptyArray_4;
-
-public:
-	inline static int32_t get_offset_of_EmptyArray_4() { return static_cast<int32_t>(offsetof(List_1_t2319452671_StaticFields, ___EmptyArray_4)); }
-	inline KeyValuePair_2U5BU5D_t3014208436* get_EmptyArray_4() const { return ___EmptyArray_4; }
-	inline KeyValuePair_2U5BU5D_t3014208436** get_address_of_EmptyArray_4() { return &___EmptyArray_4; }
-	inline void set_EmptyArray_4(KeyValuePair_2U5BU5D_t3014208436* value)
-	{
-		___EmptyArray_4 = value;
-		Il2CppCodeGenWriteBarrier((&___EmptyArray_4), value);
+		___enumerable_1 = value;
+		Il2CppCodeGenWriteBarrier((&___enumerable_1), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // LIST_1_T2319452671_H
+#endif // QUERYABLEENUMERABLE_1_T2952042478_H
 #ifndef EXCEPTION_T_H
 #define EXCEPTION_T_H
 #ifdef __clang__
@@ -683,77 +690,93 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXCEPTION_T_H
-#ifndef U3CMAXU3EC__ANONSTOREY28_1_T1231863791_H
-#define U3CMAXU3EC__ANONSTOREY28_1_T1231863791_H
+#ifndef QUERYABLE_T614340421_H
+#define QUERYABLE_T614340421_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Linq.Enumerable/<Max>c__AnonStorey28`1<System.Object>
-struct  U3CMaxU3Ec__AnonStorey28_1_t1231863791  : public RuntimeObject
+// System.Linq.Queryable
+struct  Queryable_t614340421  : public RuntimeObject
 {
 public:
-	// System.Collections.Generic.Comparer`1<TSource> System.Linq.Enumerable/<Max>c__AnonStorey28`1::comparer
-	Comparer_1_t284893750 * ___comparer_0;
 
 public:
-	inline static int32_t get_offset_of_comparer_0() { return static_cast<int32_t>(offsetof(U3CMaxU3Ec__AnonStorey28_1_t1231863791, ___comparer_0)); }
-	inline Comparer_1_t284893750 * get_comparer_0() const { return ___comparer_0; }
-	inline Comparer_1_t284893750 ** get_address_of_comparer_0() { return &___comparer_0; }
-	inline void set_comparer_0(Comparer_1_t284893750 * value)
-	{
-		___comparer_0 = value;
-		Il2CppCodeGenWriteBarrier((&___comparer_0), value);
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMAXU3EC__ANONSTOREY28_1_T1231863791_H
-#ifndef QUERYABLEENUMERABLE_1_T2952042478_H
-#define QUERYABLEENUMERABLE_1_T2952042478_H
+#endif // QUERYABLE_T614340421_H
+#ifndef LIST_1_T2319452671_H
+#define LIST_1_T2319452671_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Linq.QueryableEnumerable`1<System.Object>
-struct  QueryableEnumerable_1_t2952042478  : public RuntimeObject
+// System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Object,System.Single>>
+struct  List_1_t2319452671  : public RuntimeObject
 {
 public:
-	// System.Linq.Expressions.Expression System.Linq.QueryableEnumerable`1::expression
-	Expression_t1588164026 * ___expression_0;
-	// System.Collections.Generic.IEnumerable`1<TElement> System.Linq.QueryableEnumerable`1::enumerable
-	RuntimeObject* ___enumerable_1;
+	// T[] System.Collections.Generic.List`1::_items
+	KeyValuePair_2U5BU5D_t3014208436* ____items_1;
+	// System.Int32 System.Collections.Generic.List`1::_size
+	int32_t ____size_2;
+	// System.Int32 System.Collections.Generic.List`1::_version
+	int32_t ____version_3;
 
 public:
-	inline static int32_t get_offset_of_expression_0() { return static_cast<int32_t>(offsetof(QueryableEnumerable_1_t2952042478, ___expression_0)); }
-	inline Expression_t1588164026 * get_expression_0() const { return ___expression_0; }
-	inline Expression_t1588164026 ** get_address_of_expression_0() { return &___expression_0; }
-	inline void set_expression_0(Expression_t1588164026 * value)
+	inline static int32_t get_offset_of__items_1() { return static_cast<int32_t>(offsetof(List_1_t2319452671, ____items_1)); }
+	inline KeyValuePair_2U5BU5D_t3014208436* get__items_1() const { return ____items_1; }
+	inline KeyValuePair_2U5BU5D_t3014208436** get_address_of__items_1() { return &____items_1; }
+	inline void set__items_1(KeyValuePair_2U5BU5D_t3014208436* value)
 	{
-		___expression_0 = value;
-		Il2CppCodeGenWriteBarrier((&___expression_0), value);
+		____items_1 = value;
+		Il2CppCodeGenWriteBarrier((&____items_1), value);
 	}
 
-	inline static int32_t get_offset_of_enumerable_1() { return static_cast<int32_t>(offsetof(QueryableEnumerable_1_t2952042478, ___enumerable_1)); }
-	inline RuntimeObject* get_enumerable_1() const { return ___enumerable_1; }
-	inline RuntimeObject** get_address_of_enumerable_1() { return &___enumerable_1; }
-	inline void set_enumerable_1(RuntimeObject* value)
+	inline static int32_t get_offset_of__size_2() { return static_cast<int32_t>(offsetof(List_1_t2319452671, ____size_2)); }
+	inline int32_t get__size_2() const { return ____size_2; }
+	inline int32_t* get_address_of__size_2() { return &____size_2; }
+	inline void set__size_2(int32_t value)
 	{
-		___enumerable_1 = value;
-		Il2CppCodeGenWriteBarrier((&___enumerable_1), value);
+		____size_2 = value;
+	}
+
+	inline static int32_t get_offset_of__version_3() { return static_cast<int32_t>(offsetof(List_1_t2319452671, ____version_3)); }
+	inline int32_t get__version_3() const { return ____version_3; }
+	inline int32_t* get_address_of__version_3() { return &____version_3; }
+	inline void set__version_3(int32_t value)
+	{
+		____version_3 = value;
+	}
+};
+
+struct List_1_t2319452671_StaticFields
+{
+public:
+	// T[] System.Collections.Generic.List`1::EmptyArray
+	KeyValuePair_2U5BU5D_t3014208436* ___EmptyArray_4;
+
+public:
+	inline static int32_t get_offset_of_EmptyArray_4() { return static_cast<int32_t>(offsetof(List_1_t2319452671_StaticFields, ___EmptyArray_4)); }
+	inline KeyValuePair_2U5BU5D_t3014208436* get_EmptyArray_4() const { return ___EmptyArray_4; }
+	inline KeyValuePair_2U5BU5D_t3014208436** get_address_of_EmptyArray_4() { return &___EmptyArray_4; }
+	inline void set_EmptyArray_4(KeyValuePair_2U5BU5D_t3014208436* value)
+	{
+		___EmptyArray_4 = value;
+		Il2CppCodeGenWriteBarrier((&___EmptyArray_4), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // QUERYABLEENUMERABLE_1_T2952042478_H
+#endif // LIST_1_T2319452671_H
 #ifndef VALUETYPE_T3640485471_H
 #define VALUETYPE_T3640485471_H
 #ifdef __clang__
@@ -1743,26 +1766,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ENUMERABLE_T538148348_H
-#ifndef QUERYABLE_T614340421_H
-#define QUERYABLE_T614340421_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Queryable
-struct  Queryable_t614340421  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // QUERYABLE_T614340421_H
 #ifndef STRING_T_H
 #define STRING_T_H
 #ifdef __clang__
@@ -1830,26 +1833,250 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STRING_T_H
-#ifndef SYSTEMEXCEPTION_T176217640_H
-#define SYSTEMEXCEPTION_T176217640_H
+#ifndef INT64_T3736567304_H
+#define INT64_T3736567304_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.SystemException
-struct  SystemException_t176217640  : public Exception_t
+// System.Int64
+struct  Int64_t3736567304 
 {
 public:
+	// System.Int64 System.Int64::m_value
+	int64_t ___m_value_2;
 
 public:
+	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Int64_t3736567304, ___m_value_2)); }
+	inline int64_t get_m_value_2() const { return ___m_value_2; }
+	inline int64_t* get_address_of_m_value_2() { return &___m_value_2; }
+	inline void set_m_value_2(int64_t value)
+	{
+		___m_value_2 = value;
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // SYSTEMEXCEPTION_T176217640_H
+#endif // INT64_T3736567304_H
+#ifndef NULLABLE_1_T3119828856_H
+#define NULLABLE_1_T3119828856_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Nullable`1<System.Single>
+struct  Nullable_1_t3119828856 
+{
+public:
+	// T System.Nullable`1::value
+	float ___value_0;
+	// System.Boolean System.Nullable`1::has_value
+	bool ___has_value_1;
+
+public:
+	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t3119828856, ___value_0)); }
+	inline float get_value_0() const { return ___value_0; }
+	inline float* get_address_of_value_0() { return &___value_0; }
+	inline void set_value_0(float value)
+	{
+		___value_0 = value;
+	}
+
+	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t3119828856, ___has_value_1)); }
+	inline bool get_has_value_1() const { return ___has_value_1; }
+	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
+	inline void set_has_value_1(bool value)
+	{
+		___has_value_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NULLABLE_1_T3119828856_H
+#ifndef DOUBLE_T594665363_H
+#define DOUBLE_T594665363_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Double
+struct  Double_t594665363 
+{
+public:
+	// System.Double System.Double::m_value
+	double ___m_value_13;
+
+public:
+	inline static int32_t get_offset_of_m_value_13() { return static_cast<int32_t>(offsetof(Double_t594665363, ___m_value_13)); }
+	inline double get_m_value_13() const { return ___m_value_13; }
+	inline double* get_address_of_m_value_13() { return &___m_value_13; }
+	inline void set_m_value_13(double value)
+	{
+		___m_value_13 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // DOUBLE_T594665363_H
+#ifndef INT32_T2950945753_H
+#define INT32_T2950945753_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Int32
+struct  Int32_t2950945753 
+{
+public:
+	// System.Int32 System.Int32::m_value
+	int32_t ___m_value_2;
+
+public:
+	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Int32_t2950945753, ___m_value_2)); }
+	inline int32_t get_m_value_2() const { return ___m_value_2; }
+	inline int32_t* get_address_of_m_value_2() { return &___m_value_2; }
+	inline void set_m_value_2(int32_t value)
+	{
+		___m_value_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // INT32_T2950945753_H
+#ifndef NULLABLE_1_T378540539_H
+#define NULLABLE_1_T378540539_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Nullable`1<System.Int32>
+struct  Nullable_1_t378540539 
+{
+public:
+	// T System.Nullable`1::value
+	int32_t ___value_0;
+	// System.Boolean System.Nullable`1::has_value
+	bool ___has_value_1;
+
+public:
+	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t378540539, ___value_0)); }
+	inline int32_t get_value_0() const { return ___value_0; }
+	inline int32_t* get_address_of_value_0() { return &___value_0; }
+	inline void set_value_0(int32_t value)
+	{
+		___value_0 = value;
+	}
+
+	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t378540539, ___has_value_1)); }
+	inline bool get_has_value_1() const { return ___has_value_1; }
+	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
+	inline void set_has_value_1(bool value)
+	{
+		___has_value_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NULLABLE_1_T378540539_H
+#ifndef NULLABLE_1_T1164162090_H
+#define NULLABLE_1_T1164162090_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Nullable`1<System.Int64>
+struct  Nullable_1_t1164162090 
+{
+public:
+	// T System.Nullable`1::value
+	int64_t ___value_0;
+	// System.Boolean System.Nullable`1::has_value
+	bool ___has_value_1;
+
+public:
+	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t1164162090, ___value_0)); }
+	inline int64_t get_value_0() const { return ___value_0; }
+	inline int64_t* get_address_of_value_0() { return &___value_0; }
+	inline void set_value_0(int64_t value)
+	{
+		___value_0 = value;
+	}
+
+	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t1164162090, ___has_value_1)); }
+	inline bool get_has_value_1() const { return ___has_value_1; }
+	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
+	inline void set_has_value_1(bool value)
+	{
+		___has_value_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NULLABLE_1_T1164162090_H
+#ifndef KEYVALUEPAIR_2_T847377929_H
+#define KEYVALUEPAIR_2_T847377929_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Collections.Generic.KeyValuePair`2<System.Object,System.Single>
+struct  KeyValuePair_2_t847377929 
+{
+public:
+	// TKey System.Collections.Generic.KeyValuePair`2::key
+	RuntimeObject * ___key_0;
+	// TValue System.Collections.Generic.KeyValuePair`2::value
+	float ___value_1;
+
+public:
+	inline static int32_t get_offset_of_key_0() { return static_cast<int32_t>(offsetof(KeyValuePair_2_t847377929, ___key_0)); }
+	inline RuntimeObject * get_key_0() const { return ___key_0; }
+	inline RuntimeObject ** get_address_of_key_0() { return &___key_0; }
+	inline void set_key_0(RuntimeObject * value)
+	{
+		___key_0 = value;
+		Il2CppCodeGenWriteBarrier((&___key_0), value);
+	}
+
+	inline static int32_t get_offset_of_value_1() { return static_cast<int32_t>(offsetof(KeyValuePair_2_t847377929, ___value_1)); }
+	inline float get_value_1() const { return ___value_1; }
+	inline float* get_address_of_value_1() { return &___value_1; }
+	inline void set_value_1(float value)
+	{
+		___value_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // KEYVALUEPAIR_2_T847377929_H
 #ifndef INTPTR_T_H
 #define INTPTR_T_H
 #ifdef __clang__
@@ -1895,177 +2122,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // INTPTR_T_H
-#ifndef INT32_T2950945753_H
-#define INT32_T2950945753_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Int32
-struct  Int32_t2950945753 
-{
-public:
-	// System.Int32 System.Int32::m_value
-	int32_t ___m_value_2;
-
-public:
-	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Int32_t2950945753, ___m_value_2)); }
-	inline int32_t get_m_value_2() const { return ___m_value_2; }
-	inline int32_t* get_address_of_m_value_2() { return &___m_value_2; }
-	inline void set_m_value_2(int32_t value)
-	{
-		___m_value_2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // INT32_T2950945753_H
-#ifndef DOUBLE_T594665363_H
-#define DOUBLE_T594665363_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Double
-struct  Double_t594665363 
-{
-public:
-	// System.Double System.Double::m_value
-	double ___m_value_13;
-
-public:
-	inline static int32_t get_offset_of_m_value_13() { return static_cast<int32_t>(offsetof(Double_t594665363, ___m_value_13)); }
-	inline double get_m_value_13() const { return ___m_value_13; }
-	inline double* get_address_of_m_value_13() { return &___m_value_13; }
-	inline void set_m_value_13(double value)
-	{
-		___m_value_13 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DOUBLE_T594665363_H
-#ifndef ENUM_T4135868527_H
-#define ENUM_T4135868527_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Enum
-struct  Enum_t4135868527  : public ValueType_t3640485471
-{
-public:
-
-public:
-};
-
-struct Enum_t4135868527_StaticFields
-{
-public:
-	// System.Char[] System.Enum::split_char
-	CharU5BU5D_t3528271667* ___split_char_0;
-
-public:
-	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
-	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
-	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
-	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
-	{
-		___split_char_0 = value;
-		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.Enum
-struct Enum_t4135868527_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.Enum
-struct Enum_t4135868527_marshaled_com
-{
-};
-#endif // ENUM_T4135868527_H
-#ifndef INT64_T3736567304_H
-#define INT64_T3736567304_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Int64
-struct  Int64_t3736567304 
-{
-public:
-	// System.Int64 System.Int64::m_value
-	int64_t ___m_value_2;
-
-public:
-	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Int64_t3736567304, ___m_value_2)); }
-	inline int64_t get_m_value_2() const { return ___m_value_2; }
-	inline int64_t* get_address_of_m_value_2() { return &___m_value_2; }
-	inline void set_m_value_2(int64_t value)
-	{
-		___m_value_2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // INT64_T3736567304_H
-#ifndef NULLABLE_1_T378540539_H
-#define NULLABLE_1_T378540539_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Nullable`1<System.Int32>
-struct  Nullable_1_t378540539 
-{
-public:
-	// T System.Nullable`1::value
-	int32_t ___value_0;
-	// System.Boolean System.Nullable`1::has_value
-	bool ___has_value_1;
-
-public:
-	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t378540539, ___value_0)); }
-	inline int32_t get_value_0() const { return ___value_0; }
-	inline int32_t* get_address_of_value_0() { return &___value_0; }
-	inline void set_value_0(int32_t value)
-	{
-		___value_0 = value;
-	}
-
-	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t378540539, ___has_value_1)); }
-	inline bool get_has_value_1() const { return ___has_value_1; }
-	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
-	inline void set_has_value_1(bool value)
-	{
-		___has_value_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NULLABLE_1_T378540539_H
 #ifndef SINGLE_T1397266774_H
 #define SINGLE_T1397266774_H
 #ifdef __clang__
@@ -2095,85 +2151,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SINGLE_T1397266774_H
-#ifndef NULLABLE_1_T3119828856_H
-#define NULLABLE_1_T3119828856_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Nullable`1<System.Single>
-struct  Nullable_1_t3119828856 
-{
-public:
-	// T System.Nullable`1::value
-	float ___value_0;
-	// System.Boolean System.Nullable`1::has_value
-	bool ___has_value_1;
-
-public:
-	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t3119828856, ___value_0)); }
-	inline float get_value_0() const { return ___value_0; }
-	inline float* get_address_of_value_0() { return &___value_0; }
-	inline void set_value_0(float value)
-	{
-		___value_0 = value;
-	}
-
-	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t3119828856, ___has_value_1)); }
-	inline bool get_has_value_1() const { return ___has_value_1; }
-	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
-	inline void set_has_value_1(bool value)
-	{
-		___has_value_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NULLABLE_1_T3119828856_H
-#ifndef KEYVALUEPAIR_2_T847377929_H
-#define KEYVALUEPAIR_2_T847377929_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Collections.Generic.KeyValuePair`2<System.Object,System.Single>
-struct  KeyValuePair_2_t847377929 
-{
-public:
-	// TKey System.Collections.Generic.KeyValuePair`2::key
-	RuntimeObject * ___key_0;
-	// TValue System.Collections.Generic.KeyValuePair`2::value
-	float ___value_1;
-
-public:
-	inline static int32_t get_offset_of_key_0() { return static_cast<int32_t>(offsetof(KeyValuePair_2_t847377929, ___key_0)); }
-	inline RuntimeObject * get_key_0() const { return ___key_0; }
-	inline RuntimeObject ** get_address_of_key_0() { return &___key_0; }
-	inline void set_key_0(RuntimeObject * value)
-	{
-		___key_0 = value;
-		Il2CppCodeGenWriteBarrier((&___key_0), value);
-	}
-
-	inline static int32_t get_offset_of_value_1() { return static_cast<int32_t>(offsetof(KeyValuePair_2_t847377929, ___value_1)); }
-	inline float get_value_1() const { return ___value_1; }
-	inline float* get_address_of_value_1() { return &___value_1; }
-	inline void set_value_1(float value)
-	{
-		___value_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // KEYVALUEPAIR_2_T847377929_H
 #ifndef NULLABLE_1_T2317227445_H
 #define NULLABLE_1_T2317227445_H
 #ifdef __clang__
@@ -2213,65 +2190,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // NULLABLE_1_T2317227445_H
-#ifndef NULLABLE_1_T1164162090_H
-#define NULLABLE_1_T1164162090_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Nullable`1<System.Int64>
-struct  Nullable_1_t1164162090 
-{
-public:
-	// T System.Nullable`1::value
-	int64_t ___value_0;
-	// System.Boolean System.Nullable`1::has_value
-	bool ___has_value_1;
-
-public:
-	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t1164162090, ___value_0)); }
-	inline int64_t get_value_0() const { return ___value_0; }
-	inline int64_t* get_address_of_value_0() { return &___value_0; }
-	inline void set_value_0(int64_t value)
-	{
-		___value_0 = value;
-	}
-
-	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t1164162090, ___has_value_1)); }
-	inline bool get_has_value_1() const { return ___has_value_1; }
-	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
-	inline void set_has_value_1(bool value)
-	{
-		___has_value_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NULLABLE_1_T1164162090_H
-#ifndef VOID_T1185182177_H
-#define VOID_T1185182177_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Void
-struct  Void_t1185182177 
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // VOID_T1185182177_H
 #ifndef BASEEVENTDATA_T3903027533_H
 #define BASEEVENTDATA_T3903027533_H
 #ifdef __clang__
@@ -2302,16 +2220,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BASEEVENTDATA_T3903027533_H
-#ifndef METHODBASE_T_H
-#define METHODBASE_T_H
+#ifndef VOID_T1185182177_H
+#define VOID_T1185182177_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Reflection.MethodBase
-struct  MethodBase_t  : public MemberInfo_t
+// System.Void
+struct  Void_t1185182177 
 {
 public:
 
@@ -2321,64 +2239,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // METHODBASE_T_H
-#ifndef BOOLEAN_T97287965_H
-#define BOOLEAN_T97287965_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Boolean
-struct  Boolean_t97287965 
-{
-public:
-	// System.Boolean System.Boolean::m_value
-	bool ___m_value_2;
-
-public:
-	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Boolean_t97287965, ___m_value_2)); }
-	inline bool get_m_value_2() const { return ___m_value_2; }
-	inline bool* get_address_of_m_value_2() { return &___m_value_2; }
-	inline void set_m_value_2(bool value)
-	{
-		___m_value_2 = value;
-	}
-};
-
-struct Boolean_t97287965_StaticFields
-{
-public:
-	// System.String System.Boolean::FalseString
-	String_t* ___FalseString_0;
-	// System.String System.Boolean::TrueString
-	String_t* ___TrueString_1;
-
-public:
-	inline static int32_t get_offset_of_FalseString_0() { return static_cast<int32_t>(offsetof(Boolean_t97287965_StaticFields, ___FalseString_0)); }
-	inline String_t* get_FalseString_0() const { return ___FalseString_0; }
-	inline String_t** get_address_of_FalseString_0() { return &___FalseString_0; }
-	inline void set_FalseString_0(String_t* value)
-	{
-		___FalseString_0 = value;
-		Il2CppCodeGenWriteBarrier((&___FalseString_0), value);
-	}
-
-	inline static int32_t get_offset_of_TrueString_1() { return static_cast<int32_t>(offsetof(Boolean_t97287965_StaticFields, ___TrueString_1)); }
-	inline String_t* get_TrueString_1() const { return ___TrueString_1; }
-	inline String_t** get_address_of_TrueString_1() { return &___TrueString_1; }
-	inline void set_TrueString_1(String_t* value)
-	{
-		___TrueString_1 = value;
-		Il2CppCodeGenWriteBarrier((&___TrueString_1), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BOOLEAN_T97287965_H
+#endif // VOID_T1185182177_H
 #ifndef DECIMAL_T2948259380_H
 #define DECIMAL_T2948259380_H
 #ifdef __clang__
@@ -2494,56 +2355,197 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DECIMAL_T2948259380_H
-#ifndef METHODINFO_T_H
-#define METHODINFO_T_H
+#ifndef ENUM_T4135868527_H
+#define ENUM_T4135868527_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Reflection.MethodInfo
-struct  MethodInfo_t  : public MethodBase_t
+// System.Enum
+struct  Enum_t4135868527  : public ValueType_t3640485471
 {
 public:
 
 public:
 };
 
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // METHODINFO_T_H
-#ifndef ARGUMENTEXCEPTION_T132251570_H
-#define ARGUMENTEXCEPTION_T132251570_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.ArgumentException
-struct  ArgumentException_t132251570  : public SystemException_t176217640
+struct Enum_t4135868527_StaticFields
 {
 public:
-	// System.String System.ArgumentException::param_name
-	String_t* ___param_name_12;
+	// System.Char[] System.Enum::split_char
+	CharU5BU5D_t3528271667* ___split_char_0;
 
 public:
-	inline static int32_t get_offset_of_param_name_12() { return static_cast<int32_t>(offsetof(ArgumentException_t132251570, ___param_name_12)); }
-	inline String_t* get_param_name_12() const { return ___param_name_12; }
-	inline String_t** get_address_of_param_name_12() { return &___param_name_12; }
-	inline void set_param_name_12(String_t* value)
+	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
+	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
+	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
+	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
 	{
-		___param_name_12 = value;
-		Il2CppCodeGenWriteBarrier((&___param_name_12), value);
+		___split_char_0 = value;
+		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // ARGUMENTEXCEPTION_T132251570_H
+// Native definition for P/Invoke marshalling of System.Enum
+struct Enum_t4135868527_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.Enum
+struct Enum_t4135868527_marshaled_com
+{
+};
+#endif // ENUM_T4135868527_H
+#ifndef SYSTEMEXCEPTION_T176217640_H
+#define SYSTEMEXCEPTION_T176217640_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.SystemException
+struct  SystemException_t176217640  : public Exception_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SYSTEMEXCEPTION_T176217640_H
+#ifndef BOOLEAN_T97287965_H
+#define BOOLEAN_T97287965_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Boolean
+struct  Boolean_t97287965 
+{
+public:
+	// System.Boolean System.Boolean::m_value
+	bool ___m_value_2;
+
+public:
+	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Boolean_t97287965, ___m_value_2)); }
+	inline bool get_m_value_2() const { return ___m_value_2; }
+	inline bool* get_address_of_m_value_2() { return &___m_value_2; }
+	inline void set_m_value_2(bool value)
+	{
+		___m_value_2 = value;
+	}
+};
+
+struct Boolean_t97287965_StaticFields
+{
+public:
+	// System.String System.Boolean::FalseString
+	String_t* ___FalseString_0;
+	// System.String System.Boolean::TrueString
+	String_t* ___TrueString_1;
+
+public:
+	inline static int32_t get_offset_of_FalseString_0() { return static_cast<int32_t>(offsetof(Boolean_t97287965_StaticFields, ___FalseString_0)); }
+	inline String_t* get_FalseString_0() const { return ___FalseString_0; }
+	inline String_t** get_address_of_FalseString_0() { return &___FalseString_0; }
+	inline void set_FalseString_0(String_t* value)
+	{
+		___FalseString_0 = value;
+		Il2CppCodeGenWriteBarrier((&___FalseString_0), value);
+	}
+
+	inline static int32_t get_offset_of_TrueString_1() { return static_cast<int32_t>(offsetof(Boolean_t97287965_StaticFields, ___TrueString_1)); }
+	inline String_t* get_TrueString_1() const { return ___TrueString_1; }
+	inline String_t** get_address_of_TrueString_1() { return &___TrueString_1; }
+	inline void set_TrueString_1(String_t* value)
+	{
+		___TrueString_1 = value;
+		Il2CppCodeGenWriteBarrier((&___TrueString_1), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BOOLEAN_T97287965_H
+#ifndef METHODBASE_T_H
+#define METHODBASE_T_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Reflection.MethodBase
+struct  MethodBase_t  : public MemberInfo_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // METHODBASE_T_H
+#ifndef INVALIDOPERATIONEXCEPTION_T56020091_H
+#define INVALIDOPERATIONEXCEPTION_T56020091_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.InvalidOperationException
+struct  InvalidOperationException_t56020091  : public SystemException_t176217640
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // INVALIDOPERATIONEXCEPTION_T56020091_H
+#ifndef RUNTIMETYPEHANDLE_T3027515415_H
+#define RUNTIMETYPEHANDLE_T3027515415_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.RuntimeTypeHandle
+struct  RuntimeTypeHandle_t3027515415 
+{
+public:
+	// System.IntPtr System.RuntimeTypeHandle::value
+	intptr_t ___value_0;
+
+public:
+	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(RuntimeTypeHandle_t3027515415, ___value_0)); }
+	inline intptr_t get_value_0() const { return ___value_0; }
+	inline intptr_t* get_address_of_value_0() { return &___value_0; }
+	inline void set_value_0(intptr_t value)
+	{
+		___value_0 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // RUNTIMETYPEHANDLE_T3027515415_H
 #ifndef NULLABLE_1_T375854166_H
 #define NULLABLE_1_T375854166_H
 #ifdef __clang__
@@ -2583,16 +2585,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // NULLABLE_1_T375854166_H
-#ifndef INVALIDOPERATIONEXCEPTION_T56020091_H
-#define INVALIDOPERATIONEXCEPTION_T56020091_H
+#ifndef METHODINFO_T_H
+#define METHODINFO_T_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.InvalidOperationException
-struct  InvalidOperationException_t56020091  : public SystemException_t176217640
+// System.Reflection.MethodInfo
+struct  MethodInfo_t  : public MethodBase_t
 {
 public:
 
@@ -2602,24 +2604,24 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // INVALIDOPERATIONEXCEPTION_T56020091_H
-#ifndef FALLBACK_T3495999270_H
-#define FALLBACK_T3495999270_H
+#endif // METHODINFO_T_H
+#ifndef BINDINGFLAGS_T2721792723_H
+#define BINDINGFLAGS_T2721792723_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Linq.Enumerable/Fallback
-struct  Fallback_t3495999270 
+// System.Reflection.BindingFlags
+struct  BindingFlags_t2721792723 
 {
 public:
-	// System.Int32 System.Linq.Enumerable/Fallback::value__
+	// System.Int32 System.Reflection.BindingFlags::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(Fallback_t3495999270, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BindingFlags_t2721792723, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -2631,91 +2633,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FALLBACK_T3495999270_H
-#ifndef RUNTIMETYPEHANDLE_T3027515415_H
-#define RUNTIMETYPEHANDLE_T3027515415_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.RuntimeTypeHandle
-struct  RuntimeTypeHandle_t3027515415 
-{
-public:
-	// System.IntPtr System.RuntimeTypeHandle::value
-	intptr_t ___value_0;
-
-public:
-	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(RuntimeTypeHandle_t3027515415, ___value_0)); }
-	inline intptr_t get_value_0() const { return ___value_0; }
-	inline intptr_t* get_address_of_value_0() { return &___value_0; }
-	inline void set_value_0(intptr_t value)
-	{
-		___value_0 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // RUNTIMETYPEHANDLE_T3027515415_H
-#ifndef OBJECT_T631007953_H
-#define OBJECT_T631007953_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Object
-struct  Object_t631007953  : public RuntimeObject
-{
-public:
-	// System.IntPtr UnityEngine.Object::m_CachedPtr
-	intptr_t ___m_CachedPtr_0;
-
-public:
-	inline static int32_t get_offset_of_m_CachedPtr_0() { return static_cast<int32_t>(offsetof(Object_t631007953, ___m_CachedPtr_0)); }
-	inline intptr_t get_m_CachedPtr_0() const { return ___m_CachedPtr_0; }
-	inline intptr_t* get_address_of_m_CachedPtr_0() { return &___m_CachedPtr_0; }
-	inline void set_m_CachedPtr_0(intptr_t value)
-	{
-		___m_CachedPtr_0 = value;
-	}
-};
-
-struct Object_t631007953_StaticFields
-{
-public:
-	// System.Int32 UnityEngine.Object::OffsetOfInstanceIDInCPlusPlusObject
-	int32_t ___OffsetOfInstanceIDInCPlusPlusObject_1;
-
-public:
-	inline static int32_t get_offset_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return static_cast<int32_t>(offsetof(Object_t631007953_StaticFields, ___OffsetOfInstanceIDInCPlusPlusObject_1)); }
-	inline int32_t get_OffsetOfInstanceIDInCPlusPlusObject_1() const { return ___OffsetOfInstanceIDInCPlusPlusObject_1; }
-	inline int32_t* get_address_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return &___OffsetOfInstanceIDInCPlusPlusObject_1; }
-	inline void set_OffsetOfInstanceIDInCPlusPlusObject_1(int32_t value)
-	{
-		___OffsetOfInstanceIDInCPlusPlusObject_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of UnityEngine.Object
-struct Object_t631007953_marshaled_pinvoke
-{
-	intptr_t ___m_CachedPtr_0;
-};
-// Native definition for COM marshalling of UnityEngine.Object
-struct Object_t631007953_marshaled_com
-{
-	intptr_t ___m_CachedPtr_0;
-};
-#endif // OBJECT_T631007953_H
+#endif // BINDINGFLAGS_T2721792723_H
 #ifndef EXPRESSIONTYPE_T2886294549_H
 #define EXPRESSIONTYPE_T2886294549_H
 #ifdef __clang__
@@ -2745,6 +2663,65 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXPRESSIONTYPE_T2886294549_H
+#ifndef ARGUMENTEXCEPTION_T132251570_H
+#define ARGUMENTEXCEPTION_T132251570_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.ArgumentException
+struct  ArgumentException_t132251570  : public SystemException_t176217640
+{
+public:
+	// System.String System.ArgumentException::param_name
+	String_t* ___param_name_12;
+
+public:
+	inline static int32_t get_offset_of_param_name_12() { return static_cast<int32_t>(offsetof(ArgumentException_t132251570, ___param_name_12)); }
+	inline String_t* get_param_name_12() const { return ___param_name_12; }
+	inline String_t** get_address_of_param_name_12() { return &___param_name_12; }
+	inline void set_param_name_12(String_t* value)
+	{
+		___param_name_12 = value;
+		Il2CppCodeGenWriteBarrier((&___param_name_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ARGUMENTEXCEPTION_T132251570_H
+#ifndef FALLBACK_T3495999270_H
+#define FALLBACK_T3495999270_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Enumerable/Fallback
+struct  Fallback_t3495999270 
+{
+public:
+	// System.Int32 System.Linq.Enumerable/Fallback::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(Fallback_t3495999270, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FALLBACK_T3495999270_H
 #ifndef DELEGATE_T1188392813_H
 #define DELEGATE_T1188392813_H
 #ifdef __clang__
@@ -2858,75 +2835,61 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DELEGATE_T1188392813_H
-#ifndef BINDINGFLAGS_T2721792723_H
-#define BINDINGFLAGS_T2721792723_H
+#ifndef OBJECT_T631007953_H
+#define OBJECT_T631007953_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Reflection.BindingFlags
-struct  BindingFlags_t2721792723 
+// UnityEngine.Object
+struct  Object_t631007953  : public RuntimeObject
 {
 public:
-	// System.Int32 System.Reflection.BindingFlags::value__
-	int32_t ___value___1;
+	// System.IntPtr UnityEngine.Object::m_CachedPtr
+	intptr_t ___m_CachedPtr_0;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BindingFlags_t2721792723, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
+	inline static int32_t get_offset_of_m_CachedPtr_0() { return static_cast<int32_t>(offsetof(Object_t631007953, ___m_CachedPtr_0)); }
+	inline intptr_t get_m_CachedPtr_0() const { return ___m_CachedPtr_0; }
+	inline intptr_t* get_address_of_m_CachedPtr_0() { return &___m_CachedPtr_0; }
+	inline void set_m_CachedPtr_0(intptr_t value)
 	{
-		___value___1 = value;
+		___m_CachedPtr_0 = value;
+	}
+};
+
+struct Object_t631007953_StaticFields
+{
+public:
+	// System.Int32 UnityEngine.Object::OffsetOfInstanceIDInCPlusPlusObject
+	int32_t ___OffsetOfInstanceIDInCPlusPlusObject_1;
+
+public:
+	inline static int32_t get_offset_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return static_cast<int32_t>(offsetof(Object_t631007953_StaticFields, ___OffsetOfInstanceIDInCPlusPlusObject_1)); }
+	inline int32_t get_OffsetOfInstanceIDInCPlusPlusObject_1() const { return ___OffsetOfInstanceIDInCPlusPlusObject_1; }
+	inline int32_t* get_address_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return &___OffsetOfInstanceIDInCPlusPlusObject_1; }
+	inline void set_OffsetOfInstanceIDInCPlusPlusObject_1(int32_t value)
+	{
+		___OffsetOfInstanceIDInCPlusPlusObject_1 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINDINGFLAGS_T2721792723_H
-#ifndef GAMEOBJECT_T1113636619_H
-#define GAMEOBJECT_T1113636619_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.GameObject
-struct  GameObject_t1113636619  : public Object_t631007953
+// Native definition for P/Invoke marshalling of UnityEngine.Object
+struct Object_t631007953_marshaled_pinvoke
 {
-public:
-
-public:
+	intptr_t ___m_CachedPtr_0;
 };
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GAMEOBJECT_T1113636619_H
-#ifndef ARGUMENTNULLEXCEPTION_T1615371798_H
-#define ARGUMENTNULLEXCEPTION_T1615371798_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.ArgumentNullException
-struct  ArgumentNullException_t1615371798  : public ArgumentException_t132251570
+// Native definition for COM marshalling of UnityEngine.Object
+struct Object_t631007953_marshaled_com
 {
-public:
-
-public:
+	intptr_t ___m_CachedPtr_0;
 };
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ARGUMENTNULLEXCEPTION_T1615371798_H
+#endif // OBJECT_T631007953_H
 #ifndef ARGUMENTOUTOFRANGEEXCEPTION_T777629997_H
 #define ARGUMENTOUTOFRANGEEXCEPTION_T777629997_H
 #ifdef __clang__
@@ -2957,47 +2920,46 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ARGUMENTOUTOFRANGEEXCEPTION_T777629997_H
-#ifndef MULTICASTDELEGATE_T_H
-#define MULTICASTDELEGATE_T_H
+#ifndef ARGUMENTNULLEXCEPTION_T1615371798_H
+#define ARGUMENTNULLEXCEPTION_T1615371798_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t1188392813
+// System.ArgumentNullException
+struct  ArgumentNullException_t1615371798  : public ArgumentException_t132251570
 {
 public:
-	// System.MulticastDelegate System.MulticastDelegate::prev
-	MulticastDelegate_t * ___prev_9;
-	// System.MulticastDelegate System.MulticastDelegate::kpm_next
-	MulticastDelegate_t * ___kpm_next_10;
 
 public:
-	inline static int32_t get_offset_of_prev_9() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___prev_9)); }
-	inline MulticastDelegate_t * get_prev_9() const { return ___prev_9; }
-	inline MulticastDelegate_t ** get_address_of_prev_9() { return &___prev_9; }
-	inline void set_prev_9(MulticastDelegate_t * value)
-	{
-		___prev_9 = value;
-		Il2CppCodeGenWriteBarrier((&___prev_9), value);
-	}
-
-	inline static int32_t get_offset_of_kpm_next_10() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___kpm_next_10)); }
-	inline MulticastDelegate_t * get_kpm_next_10() const { return ___kpm_next_10; }
-	inline MulticastDelegate_t ** get_address_of_kpm_next_10() { return &___kpm_next_10; }
-	inline void set_kpm_next_10(MulticastDelegate_t * value)
-	{
-		___kpm_next_10 = value;
-		Il2CppCodeGenWriteBarrier((&___kpm_next_10), value);
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // MULTICASTDELEGATE_T_H
+#endif // ARGUMENTNULLEXCEPTION_T1615371798_H
+#ifndef GAMEOBJECT_T1113636619_H
+#define GAMEOBJECT_T1113636619_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.GameObject
+struct  GameObject_t1113636619  : public Object_t631007953
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // GAMEOBJECT_T1113636619_H
 #ifndef TYPE_T_H
 #define TYPE_T_H
 #ifdef __clang__
@@ -3098,6 +3060,47 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TYPE_T_H
+#ifndef MULTICASTDELEGATE_T_H
+#define MULTICASTDELEGATE_T_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.MulticastDelegate
+struct  MulticastDelegate_t  : public Delegate_t1188392813
+{
+public:
+	// System.MulticastDelegate System.MulticastDelegate::prev
+	MulticastDelegate_t * ___prev_9;
+	// System.MulticastDelegate System.MulticastDelegate::kpm_next
+	MulticastDelegate_t * ___kpm_next_10;
+
+public:
+	inline static int32_t get_offset_of_prev_9() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___prev_9)); }
+	inline MulticastDelegate_t * get_prev_9() const { return ___prev_9; }
+	inline MulticastDelegate_t ** get_address_of_prev_9() { return &___prev_9; }
+	inline void set_prev_9(MulticastDelegate_t * value)
+	{
+		___prev_9 = value;
+		Il2CppCodeGenWriteBarrier((&___prev_9), value);
+	}
+
+	inline static int32_t get_offset_of_kpm_next_10() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___kpm_next_10)); }
+	inline MulticastDelegate_t * get_kpm_next_10() const { return ___kpm_next_10; }
+	inline MulticastDelegate_t ** get_address_of_kpm_next_10() { return &___kpm_next_10; }
+	inline void set_kpm_next_10(MulticastDelegate_t * value)
+	{
+		___kpm_next_10 = value;
+		Il2CppCodeGenWriteBarrier((&___kpm_next_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MULTICASTDELEGATE_T_H
 #ifndef COMPONENT_T1923634451_H
 #define COMPONENT_T1923634451_H
 #ifdef __clang__
@@ -3274,16 +3277,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXPRESSION_T1588164026_H
-#ifndef FUNC_3_T316741917_H
-#define FUNC_3_T316741917_H
+#ifndef FUNC_3_T4137217499_H
+#define FUNC_3_T4137217499_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`3<System.Object,System.Single,System.Single>
-struct  Func_3_t316741917  : public MulticastDelegate_t
+// System.Func`3<System.Nullable`1<System.Int32>,System.Object,System.Nullable`1<System.Int32>>
+struct  Func_3_t4137217499  : public MulticastDelegate_t
 {
 public:
 
@@ -3293,17 +3296,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_3_T316741917_H
-#ifndef FUNC_1_T827013421_H
-#define FUNC_1_T827013421_H
+#endif // FUNC_3_T4137217499_H
+#ifndef FUNC_3_T1794333537_H
+#define FUNC_3_T1794333537_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Single>
-struct  Func_1_t827013421  : public MulticastDelegate_t
+// System.Func`3<System.Nullable`1<System.Int64>,System.Object,System.Nullable`1<System.Int64>>
+struct  Func_3_t1794333537  : public MulticastDelegate_t
 {
 public:
 
@@ -3313,167 +3316,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T827013421_H
-#ifndef FUNC_3_T3175904329_H
-#define FUNC_3_T3175904329_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Int64,System.Int64,System.Int64>
-struct  Func_3_t3175904329  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T3175904329_H
-#ifndef FUNC_3_T2691639151_H
-#define FUNC_3_T2691639151_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Single,System.Single,System.Single>
-struct  Func_3_t2691639151  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T2691639151_H
-#ifndef FUNC_3_T2424329933_H
-#define FUNC_3_T2424329933_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Nullable`1<System.Single>,System.Object,System.Nullable`1<System.Single>>
-struct  Func_3_t2424329933  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T2424329933_H
-#ifndef TRANSFORM_T3600365921_H
-#define TRANSFORM_T3600365921_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Transform
-struct  Transform_t3600365921  : public Component_t1923634451
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // TRANSFORM_T3600365921_H
-#ifndef FUNC_3_T3770304021_H
-#define FUNC_3_T3770304021_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Object,System.Int64,System.Int64>
-struct  Func_3_t3770304021  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T3770304021_H
-#ifndef FUNC_3_T1482559369_H
-#define FUNC_3_T1482559369_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Object,System.Double,System.Double>
-struct  Func_3_t1482559369  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T1482559369_H
-#ifndef FUNC_3_T1567933413_H
-#define FUNC_3_T1567933413_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Object,System.Decimal,System.Decimal>
-struct  Func_3_t1567933413  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T1567933413_H
-#ifndef FUNC_3_T3344861838_H
-#define FUNC_3_T3344861838_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Int32,System.Int32,System.Int32>
-struct  Func_3_t3344861838  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T3344861838_H
+#endif // FUNC_3_T1794333537_H
 #ifndef FUNC_3_T3801552229_H
 #define FUNC_3_T3801552229_H
 #ifdef __clang__
@@ -3494,16 +3337,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // FUNC_3_T3801552229_H
-#ifndef EVENTFUNCTION_1_T1764640198_H
-#define EVENTFUNCTION_1_T1764640198_H
+#ifndef FUNC_1_T593908737_H
+#define FUNC_1_T593908737_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<System.Object>
-struct  EventFunction_1_t1764640198  : public MulticastDelegate_t
+// System.Func`1<System.Nullable`1<System.Int64>>
+struct  Func_1_t593908737  : public MulticastDelegate_t
 {
 public:
 
@@ -3513,7 +3356,68 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // EVENTFUNCTION_1_T1764640198_H
+#endif // FUNC_1_T593908737_H
+#ifndef LAMBDAEXPRESSION_T3131094331_H
+#define LAMBDAEXPRESSION_T3131094331_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.LambdaExpression
+struct  LambdaExpression_t3131094331  : public Expression_t1588164026
+{
+public:
+	// System.Linq.Expressions.Expression System.Linq.Expressions.LambdaExpression::body
+	Expression_t1588164026 * ___body_18;
+	// System.Collections.ObjectModel.ReadOnlyCollection`1<System.Linq.Expressions.ParameterExpression> System.Linq.Expressions.LambdaExpression::parameters
+	ReadOnlyCollection_1_t2330998371 * ___parameters_19;
+
+public:
+	inline static int32_t get_offset_of_body_18() { return static_cast<int32_t>(offsetof(LambdaExpression_t3131094331, ___body_18)); }
+	inline Expression_t1588164026 * get_body_18() const { return ___body_18; }
+	inline Expression_t1588164026 ** get_address_of_body_18() { return &___body_18; }
+	inline void set_body_18(Expression_t1588164026 * value)
+	{
+		___body_18 = value;
+		Il2CppCodeGenWriteBarrier((&___body_18), value);
+	}
+
+	inline static int32_t get_offset_of_parameters_19() { return static_cast<int32_t>(offsetof(LambdaExpression_t3131094331, ___parameters_19)); }
+	inline ReadOnlyCollection_1_t2330998371 * get_parameters_19() const { return ___parameters_19; }
+	inline ReadOnlyCollection_1_t2330998371 ** get_address_of_parameters_19() { return &___parameters_19; }
+	inline void set_parameters_19(ReadOnlyCollection_1_t2330998371 * value)
+	{
+		___parameters_19 = value;
+		Il2CppCodeGenWriteBarrier((&___parameters_19), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // LAMBDAEXPRESSION_T3131094331_H
+#ifndef FUNC_3_T2691639151_H
+#define FUNC_3_T2691639151_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`3<System.Single,System.Single,System.Single>
+struct  Func_3_t2691639151  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_3_T2691639151_H
 #ifndef FUNC_3_T1810338832_H
 #define FUNC_3_T1810338832_H
 #ifdef __clang__
@@ -3534,6 +3438,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // FUNC_3_T1810338832_H
+#ifndef FUNC_3_T3770304021_H
+#define FUNC_3_T3770304021_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`3<System.Object,System.Int64,System.Int64>
+struct  Func_3_t3770304021  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_3_T3770304021_H
 #ifndef FUNC_3_T810756017_H
 #define FUNC_3_T810756017_H
 #ifdef __clang__
@@ -3554,16 +3478,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // FUNC_3_T810756017_H
-#ifndef FUNC_3_T3398609381_H
-#define FUNC_3_T3398609381_H
+#ifndef EVENTFUNCTION_1_T1764640198_H
+#define EVENTFUNCTION_1_T1764640198_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`3<System.Object,System.Object,System.Object>
-struct  Func_3_t3398609381  : public MulticastDelegate_t
+// UnityEngine.EventSystems.ExecuteEvents/EventFunction`1<System.Object>
+struct  EventFunction_1_t1764640198  : public MulticastDelegate_t
 {
 public:
 
@@ -3573,17 +3497,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_3_T3398609381_H
-#ifndef FUNC_1_T2380692400_H
-#define FUNC_1_T2380692400_H
+#endif // EVENTFUNCTION_1_T1764640198_H
+#ifndef FUNC_3_T316741917_H
+#define FUNC_3_T316741917_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Int32>
-struct  Func_1_t2380692400  : public MulticastDelegate_t
+// System.Func`3<System.Object,System.Single,System.Single>
+struct  Func_3_t316741917  : public MulticastDelegate_t
 {
 public:
 
@@ -3593,17 +3517,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T2380692400_H
-#ifndef FUNC_1_T24412010_H
-#define FUNC_1_T24412010_H
+#endif // FUNC_3_T316741917_H
+#ifndef FUNC_3_T1482559369_H
+#define FUNC_3_T1482559369_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Double>
-struct  Func_1_t24412010  : public MulticastDelegate_t
+// System.Func`3<System.Object,System.Double,System.Double>
+struct  Func_3_t1482559369  : public MulticastDelegate_t
 {
 public:
 
@@ -3613,17 +3537,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T24412010_H
-#ifndef FUNC_1_T4100568109_H
-#define FUNC_1_T4100568109_H
+#endif // FUNC_3_T1482559369_H
+#ifndef TRANSFORM_T3600365921_H
+#define TRANSFORM_T3600365921_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Nullable`1<System.Decimal>>
-struct  Func_1_t4100568109  : public MulticastDelegate_t
+// UnityEngine.Transform
+struct  Transform_t3600365921  : public Component_t1923634451
 {
 public:
 
@@ -3633,17 +3557,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T4100568109_H
-#ifndef FUNC_1_T3166313951_H
-#define FUNC_1_T3166313951_H
+#endif // TRANSFORM_T3600365921_H
+#ifndef FUNC_3_T3344861838_H
+#define FUNC_3_T3344861838_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Int64>
-struct  Func_1_t3166313951  : public MulticastDelegate_t
+// System.Func`3<System.Int32,System.Int32,System.Int32>
+struct  Func_3_t3344861838  : public MulticastDelegate_t
 {
 public:
 
@@ -3653,17 +3577,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T3166313951_H
-#ifndef FUNC_1_T2378006027_H
-#define FUNC_1_T2378006027_H
+#endif // FUNC_3_T3344861838_H
+#ifndef FUNC_3_T1567933413_H
+#define FUNC_3_T1567933413_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Decimal>
-struct  Func_1_t2378006027  : public MulticastDelegate_t
+// System.Func`3<System.Object,System.Decimal,System.Decimal>
+struct  Func_3_t1567933413  : public MulticastDelegate_t
 {
 public:
 
@@ -3673,7 +3597,97 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T2378006027_H
+#endif // FUNC_3_T1567933413_H
+#ifndef FUNC_3_T3175904329_H
+#define FUNC_3_T3175904329_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`3<System.Int64,System.Int64,System.Int64>
+struct  Func_3_t3175904329  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_3_T3175904329_H
+#ifndef PARAMETEREXPRESSION_T1118422084_H
+#define PARAMETEREXPRESSION_T1118422084_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.ParameterExpression
+struct  ParameterExpression_t1118422084  : public Expression_t1588164026
+{
+public:
+	// System.String System.Linq.Expressions.ParameterExpression::name
+	String_t* ___name_18;
+
+public:
+	inline static int32_t get_offset_of_name_18() { return static_cast<int32_t>(offsetof(ParameterExpression_t1118422084, ___name_18)); }
+	inline String_t* get_name_18() const { return ___name_18; }
+	inline String_t** get_address_of_name_18() { return &___name_18; }
+	inline void set_name_18(String_t* value)
+	{
+		___name_18 = value;
+		Il2CppCodeGenWriteBarrier((&___name_18), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PARAMETEREXPRESSION_T1118422084_H
+#ifndef FUNC_1_T1746974092_H
+#define FUNC_1_T1746974092_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Nullable`1<System.Double>>
+struct  Func_1_t1746974092  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T1746974092_H
+#ifndef FUNC_1_T4103254482_H
+#define FUNC_1_T4103254482_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Nullable`1<System.Int32>>
+struct  Func_1_t4103254482  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T4103254482_H
 #ifndef UNARYEXPRESSION_T3914580921_H
 #define UNARYEXPRESSION_T3914580921_H
 #ifdef __clang__
@@ -3725,6 +3739,286 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNARYEXPRESSION_T3914580921_H
+#ifndef FUNC_1_T24412010_H
+#define FUNC_1_T24412010_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Double>
+struct  Func_1_t24412010  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T24412010_H
+#ifndef FUNC_1_T2378006027_H
+#define FUNC_1_T2378006027_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Decimal>
+struct  Func_1_t2378006027  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T2378006027_H
+#ifndef FUNC_1_T2380692400_H
+#define FUNC_1_T2380692400_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Int32>
+struct  Func_1_t2380692400  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T2380692400_H
+#ifndef FUNC_1_T3166313951_H
+#define FUNC_1_T3166313951_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Int64>
+struct  Func_1_t3166313951  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T3166313951_H
+#ifndef FUNC_1_T3822001908_H
+#define FUNC_1_T3822001908_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Boolean>
+struct  Func_1_t3822001908  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T3822001908_H
+#ifndef FUNC_1_T4100568109_H
+#define FUNC_1_T4100568109_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Nullable`1<System.Decimal>>
+struct  Func_1_t4100568109  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T4100568109_H
+#ifndef FUNC_3_T415791182_H
+#define FUNC_3_T415791182_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`3<System.Object,System.Object,System.Boolean>
+struct  Func_3_t415791182  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_3_T415791182_H
+#ifndef FUNC_2_T3759279471_H
+#define FUNC_2_T3759279471_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`2<System.Object,System.Boolean>
+struct  Func_2_t3759279471  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_2_T3759279471_H
+#ifndef FUNC_3_T3398609381_H
+#define FUNC_3_T3398609381_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`3<System.Object,System.Object,System.Object>
+struct  Func_3_t3398609381  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_3_T3398609381_H
+#ifndef FUNC_2_T2447130374_H
+#define FUNC_2_T2447130374_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`2<System.Object,System.Object>
+struct  Func_2_t2447130374  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_2_T2447130374_H
+#ifndef FUNC_3_T2424329933_H
+#define FUNC_3_T2424329933_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`3<System.Nullable`1<System.Single>,System.Object,System.Nullable`1<System.Single>>
+struct  Func_3_t2424329933  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_3_T2424329933_H
+#ifndef FUNC_1_T827013421_H
+#define FUNC_1_T827013421_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Single>
+struct  Func_1_t827013421  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T827013421_H
+#ifndef FUNC_1_T2549575503_H
+#define FUNC_1_T2549575503_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Nullable`1<System.Single>>
+struct  Func_1_t2549575503  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T2549575503_H
+#ifndef FUNC_1_T2509852811_H
+#define FUNC_1_T2509852811_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`1<System.Object>
+struct  Func_1_t2509852811  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_1_T2509852811_H
 #ifndef CONSTANTEXPRESSION_T3613654278_H
 #define CONSTANTEXPRESSION_T3613654278_H
 #ifdef __clang__
@@ -3755,16 +4049,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CONSTANTEXPRESSION_T3613654278_H
-#ifndef FUNC_1_T3822001908_H
-#define FUNC_1_T3822001908_H
+#ifndef EXPRESSION_1_T3384637588_H
+#define EXPRESSION_1_T3384637588_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Func`1<System.Boolean>
-struct  Func_1_t3822001908  : public MulticastDelegate_t
+// System.Linq.Expressions.Expression`1<System.Func`3<System.Object,System.Object,System.Object>>
+struct  Expression_1_t3384637588  : public LambdaExpression_t3131094331
 {
 public:
 
@@ -3774,338 +4068,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FUNC_1_T3822001908_H
-#ifndef PARAMETEREXPRESSION_T1118422084_H
-#define PARAMETEREXPRESSION_T1118422084_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.ParameterExpression
-struct  ParameterExpression_t1118422084  : public Expression_t1588164026
-{
-public:
-	// System.String System.Linq.Expressions.ParameterExpression::name
-	String_t* ___name_18;
-
-public:
-	inline static int32_t get_offset_of_name_18() { return static_cast<int32_t>(offsetof(ParameterExpression_t1118422084, ___name_18)); }
-	inline String_t* get_name_18() const { return ___name_18; }
-	inline String_t** get_address_of_name_18() { return &___name_18; }
-	inline void set_name_18(String_t* value)
-	{
-		___name_18 = value;
-		Il2CppCodeGenWriteBarrier((&___name_18), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PARAMETEREXPRESSION_T1118422084_H
-#ifndef FUNC_1_T1746974092_H
-#define FUNC_1_T1746974092_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`1<System.Nullable`1<System.Double>>
-struct  Func_1_t1746974092  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_1_T1746974092_H
-#ifndef FUNC_2_T3759279471_H
-#define FUNC_2_T3759279471_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`2<System.Object,System.Boolean>
-struct  Func_2_t3759279471  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_2_T3759279471_H
-#ifndef FUNC_3_T1794333537_H
-#define FUNC_3_T1794333537_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Nullable`1<System.Int64>,System.Object,System.Nullable`1<System.Int64>>
-struct  Func_3_t1794333537  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T1794333537_H
-#ifndef FUNC_2_T2447130374_H
-#define FUNC_2_T2447130374_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`2<System.Object,System.Object>
-struct  Func_2_t2447130374  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_2_T2447130374_H
-#ifndef FUNC_3_T415791182_H
-#define FUNC_3_T415791182_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`3<System.Object,System.Object,System.Boolean>
-struct  Func_3_t415791182  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_3_T415791182_H
-#ifndef FUNC_1_T2509852811_H
-#define FUNC_1_T2509852811_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`1<System.Object>
-struct  Func_1_t2509852811  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_1_T2509852811_H
-#ifndef FUNC_1_T4103254482_H
-#define FUNC_1_T4103254482_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`1<System.Nullable`1<System.Int32>>
-struct  Func_1_t4103254482  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_1_T4103254482_H
-#ifndef LAMBDAEXPRESSION_T3131094331_H
-#define LAMBDAEXPRESSION_T3131094331_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.LambdaExpression
-struct  LambdaExpression_t3131094331  : public Expression_t1588164026
-{
-public:
-	// System.Linq.Expressions.Expression System.Linq.Expressions.LambdaExpression::body
-	Expression_t1588164026 * ___body_18;
-	// System.Collections.ObjectModel.ReadOnlyCollection`1<System.Linq.Expressions.ParameterExpression> System.Linq.Expressions.LambdaExpression::parameters
-	ReadOnlyCollection_1_t2330998371 * ___parameters_19;
-
-public:
-	inline static int32_t get_offset_of_body_18() { return static_cast<int32_t>(offsetof(LambdaExpression_t3131094331, ___body_18)); }
-	inline Expression_t1588164026 * get_body_18() const { return ___body_18; }
-	inline Expression_t1588164026 ** get_address_of_body_18() { return &___body_18; }
-	inline void set_body_18(Expression_t1588164026 * value)
-	{
-		___body_18 = value;
-		Il2CppCodeGenWriteBarrier((&___body_18), value);
-	}
-
-	inline static int32_t get_offset_of_parameters_19() { return static_cast<int32_t>(offsetof(LambdaExpression_t3131094331, ___parameters_19)); }
-	inline ReadOnlyCollection_1_t2330998371 * get_parameters_19() const { return ___parameters_19; }
-	inline ReadOnlyCollection_1_t2330998371 ** get_address_of_parameters_19() { return &___parameters_19; }
-	inline void set_parameters_19(ReadOnlyCollection_1_t2330998371 * value)
-	{
-		___parameters_19 = value;
-		Il2CppCodeGenWriteBarrier((&___parameters_19), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LAMBDAEXPRESSION_T3131094331_H
-#ifndef FUNC_1_T2549575503_H
-#define FUNC_1_T2549575503_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`1<System.Nullable`1<System.Single>>
-struct  Func_1_t2549575503  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_1_T2549575503_H
-#ifndef FUNC_1_T593908737_H
-#define FUNC_1_T593908737_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Func`1<System.Nullable`1<System.Int64>>
-struct  Func_1_t593908737  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FUNC_1_T593908737_H
-#ifndef EXPRESSION_1_T2535603710_H
-#define EXPRESSION_1_T2535603710_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Single>>>
-struct  Expression_1_t2535603710  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T2535603710_H
-#ifndef EXPRESSION_1_T2366720607_H
-#define EXPRESSION_1_T2366720607_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Int32>>
-struct  Expression_1_t2366720607  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T2366720607_H
-#ifndef EXPRESSION_1_T3152342158_H
-#define EXPRESSION_1_T3152342158_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Int64>>
-struct  Expression_1_t3152342158  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T3152342158_H
-#ifndef EXPRESSION_1_T4086596316_H
-#define EXPRESSION_1_T4086596316_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Decimal>>>
-struct  Expression_1_t4086596316  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T4086596316_H
+#endif // EXPRESSION_1_T3384637588_H
 #ifndef EXPRESSION_1_T10440217_H
 #define EXPRESSION_1_T10440217_H
 #ifdef __clang__
@@ -4146,26 +4109,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXPRESSION_1_T2433158581_H
-#ifndef EXPRESSION_1_T3808030115_H
-#define EXPRESSION_1_T3808030115_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Boolean>>
-struct  Expression_1_t3808030115  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T3808030115_H
 #ifndef EXPRESSION_1_T2364034234_H
 #define EXPRESSION_1_T2364034234_H
 #ifdef __clang__
@@ -4186,16 +4129,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXPRESSION_1_T2364034234_H
-#ifndef EXPRESSION_1_T813041628_H
-#define EXPRESSION_1_T813041628_H
+#ifndef EXPRESSION_1_T3808030115_H
+#define EXPRESSION_1_T3808030115_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Single>>
-struct  Expression_1_t813041628  : public LambdaExpression_t3131094331
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Boolean>>
+struct  Expression_1_t3808030115  : public LambdaExpression_t3131094331
 {
 public:
 
@@ -4205,17 +4148,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // EXPRESSION_1_T813041628_H
-#ifndef EXPRESSION_1_T3384637588_H
-#define EXPRESSION_1_T3384637588_H
+#endif // EXPRESSION_1_T3808030115_H
+#ifndef EXPRESSION_1_T2535603710_H
+#define EXPRESSION_1_T2535603710_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Linq.Expressions.Expression`1<System.Func`3<System.Object,System.Object,System.Object>>
-struct  Expression_1_t3384637588  : public LambdaExpression_t3131094331
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Single>>>
+struct  Expression_1_t2535603710  : public LambdaExpression_t3131094331
 {
 public:
 
@@ -4225,87 +4168,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // EXPRESSION_1_T3384637588_H
-#ifndef EXPRESSION_1_T3745307678_H
-#define EXPRESSION_1_T3745307678_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`2<System.Object,System.Boolean>>
-struct  Expression_1_t3745307678  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T3745307678_H
-#ifndef EXPRESSION_1_T2495881018_H
-#define EXPRESSION_1_T2495881018_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Object>>
-struct  Expression_1_t2495881018  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T2495881018_H
-#ifndef EXPRESSION_1_T1733002299_H
-#define EXPRESSION_1_T1733002299_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Double>>>
-struct  Expression_1_t1733002299  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T1733002299_H
-#ifndef EXPRESSION_1_T4089282689_H
-#define EXPRESSION_1_T4089282689_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Int32>>>
-struct  Expression_1_t4089282689  : public LambdaExpression_t3131094331
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EXPRESSION_1_T4089282689_H
+#endif // EXPRESSION_1_T2535603710_H
 #ifndef EXPRESSION_1_T579936944_H
 #define EXPRESSION_1_T579936944_H
 #ifdef __clang__
@@ -4326,6 +4189,166 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXPRESSION_1_T579936944_H
+#ifndef EXPRESSION_1_T2495881018_H
+#define EXPRESSION_1_T2495881018_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Object>>
+struct  Expression_1_t2495881018  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T2495881018_H
+#ifndef EXPRESSION_1_T3745307678_H
+#define EXPRESSION_1_T3745307678_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`2<System.Object,System.Boolean>>
+struct  Expression_1_t3745307678  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T3745307678_H
+#ifndef EXPRESSION_1_T813041628_H
+#define EXPRESSION_1_T813041628_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Single>>
+struct  Expression_1_t813041628  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T813041628_H
+#ifndef EXPRESSION_1_T3152342158_H
+#define EXPRESSION_1_T3152342158_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Int64>>
+struct  Expression_1_t3152342158  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T3152342158_H
+#ifndef EXPRESSION_1_T2366720607_H
+#define EXPRESSION_1_T2366720607_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Int32>>
+struct  Expression_1_t2366720607  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T2366720607_H
+#ifndef EXPRESSION_1_T4086596316_H
+#define EXPRESSION_1_T4086596316_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Decimal>>>
+struct  Expression_1_t4086596316  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T4086596316_H
+#ifndef EXPRESSION_1_T4089282689_H
+#define EXPRESSION_1_T4089282689_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Int32>>>
+struct  Expression_1_t4089282689  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T4089282689_H
+#ifndef EXPRESSION_1_T1733002299_H
+#define EXPRESSION_1_T1733002299_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Linq.Expressions.Expression`1<System.Func`1<System.Nullable`1<System.Double>>>
+struct  Expression_1_t1733002299  : public LambdaExpression_t3131094331
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXPRESSION_1_T1733002299_H
 // System.Type[]
 struct TypeU5BU5D_t3940880105  : public RuntimeArray
 {
@@ -4560,6 +4583,112 @@ extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m
 extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_get_parent_m835071599 (Transform_t3600365921 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
 extern "C" IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4071470834 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, Object_t631007953 * p1, const RuntimeMethod* method);
+// TR System.Linq.Enumerable::SumNullable<System.Object,System.Nullable`1<System.Int32>>(System.Collections.Generic.IEnumerable`1<TA>,TR,System.Func`3<TR,TA,TR>)
+extern "C" IL2CPP_METHOD_ATTR Nullable_1_t378540539  Enumerable_SumNullable_TisRuntimeObject_TisNullable_1_t378540539_m3106858442_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject* ___source0, Nullable_1_t378540539  ___zero1, Func_3_t4137217499 * ___selector2, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Enumerable_SumNullable_TisRuntimeObject_TisNullable_1_t378540539_m3106858442_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Nullable_1_t378540539  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	RuntimeObject * V_1 = NULL;
+	RuntimeObject* V_2 = NULL;
+	Exception_t * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		Nullable_1_t378540539  L_0 = ___zero1;
+		V_0 = (Nullable_1_t378540539 )L_0;
+		RuntimeObject* L_1 = ___source0;
+		NullCheck((RuntimeObject*)L_1);
+		RuntimeObject* L_2 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.Generic.IEnumerable`1<System.Object>::GetEnumerator() */, IL2CPP_RGCTX_DATA(method->rgctx_data, 0), (RuntimeObject*)L_1);
+		V_2 = (RuntimeObject*)L_2;
+	}
+
+IL_0009:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_001e;
+		}
+
+IL_000e:
+		{
+			RuntimeObject* L_3 = V_2;
+			NullCheck((RuntimeObject*)L_3);
+			RuntimeObject * L_4 = InterfaceFuncInvoker0< RuntimeObject * >::Invoke(0 /* !0 System.Collections.Generic.IEnumerator`1<System.Object>::get_Current() */, IL2CPP_RGCTX_DATA(method->rgctx_data, 1), (RuntimeObject*)L_3);
+			V_1 = (RuntimeObject *)L_4;
+			Func_3_t4137217499 * L_5 = ___selector2;
+			Nullable_1_t378540539  L_6 = V_0;
+			RuntimeObject * L_7 = V_1;
+			NullCheck((Func_3_t4137217499 *)L_5);
+			Nullable_1_t378540539  L_8 = ((  Nullable_1_t378540539  (*) (Func_3_t4137217499 *, Nullable_1_t378540539 , RuntimeObject *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2)->methodPointer)((Func_3_t4137217499 *)L_5, (Nullable_1_t378540539 )L_6, (RuntimeObject *)L_7, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
+			V_0 = (Nullable_1_t378540539 )L_8;
+		}
+
+IL_001e:
+		{
+			RuntimeObject* L_9 = V_2;
+			NullCheck((RuntimeObject*)L_9);
+			bool L_10 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, (RuntimeObject*)L_9);
+			if (L_10)
+			{
+				goto IL_000e;
+			}
+		}
+
+IL_0029:
+		{
+			IL2CPP_LEAVE(0x39, FINALLY_002e);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t *)e.ex;
+		goto FINALLY_002e;
+	}
+
+FINALLY_002e:
+	{ // begin finally (depth: 1)
+		{
+			RuntimeObject* L_11 = V_2;
+			if (L_11)
+			{
+				goto IL_0032;
+			}
+		}
+
+IL_0031:
+		{
+			IL2CPP_END_FINALLY(46)
+		}
+
+IL_0032:
+		{
+			RuntimeObject* L_12 = V_2;
+			NullCheck((RuntimeObject*)L_12);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, (RuntimeObject*)L_12);
+			IL2CPP_END_FINALLY(46)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(46)
+	{
+		IL2CPP_JUMP_TBL(0x39, IL_0039)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+	}
+
+IL_0039:
+	{
+		Nullable_1_t378540539  L_13 = V_0;
+		return L_13;
+	}
+}
 // TR System.Linq.Enumerable::SumNullable<System.Object,System.Nullable`1<System.Int64>>(System.Collections.Generic.IEnumerable`1<TA>,TR,System.Func`3<TR,TA,TR>)
 extern "C" IL2CPP_METHOD_ATTR Nullable_1_t1164162090  Enumerable_SumNullable_TisRuntimeObject_TisNullable_1_t1164162090_m3330937784_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject* ___source0, Nullable_1_t1164162090  ___zero1, Func_3_t1794333537 * ___selector2, const RuntimeMethod* method)
 {
