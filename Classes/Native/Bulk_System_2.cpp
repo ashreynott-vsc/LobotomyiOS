@@ -1516,7 +1516,7 @@ extern const RuntimeMethod* ChunkStream_ThrowProtocolViolation_m3071920344_Runti
 extern const uint32_t ChunkStream_ThrowProtocolViolation_m3071920344_MetadataUsageId;
 extern const uint32_t Cookie__ctor_m130314892_MetadataUsageId;
 extern RuntimeClass* Cookie_t993873397_il2cpp_TypeInfo_var;
-extern RuntimeField* U3CPrivateImplementationDetailsU3E_t3057255362____U24U24fieldU2D1_1_FieldInfo_var;
+extern RuntimeField* U3CPrivateImplementationDetailsU3E_t3057255363____U24U24fieldU2D1_1_FieldInfo_var;
 extern String_t* _stringLiteral1652767638;
 extern const uint32_t Cookie__cctor_m3648156207_MetadataUsageId;
 extern const uint32_t Cookie_set_Comment_m3273060062_MetadataUsageId;
@@ -6492,8 +6492,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TIMESPAN_T881159249_H
-#ifndef U24ARRAYTYPEU2416_T3254766645_H
-#define U24ARRAYTYPEU2416_T3254766645_H
+#ifndef U24ARRAYTYPEU2416_T3254766646_H
+#define U24ARRAYTYPEU2416_T3254766646_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -6501,7 +6501,7 @@ public:
 #endif
 
 // <PrivateImplementationDetails>/$ArrayType$16
-struct  U24ArrayTypeU2416_t3254766645 
+struct  U24ArrayTypeU2416_t3254766646 
 {
 public:
 	union
@@ -6512,7 +6512,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2416_t3254766645__padding[16];
+		uint8_t U24ArrayTypeU2416_t3254766646__padding[16];
 	};
 
 public:
@@ -6521,7 +6521,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U24ARRAYTYPEU2416_T3254766645_H
+#endif // U24ARRAYTYPEU2416_T3254766646_H
 #ifndef REQUESTSTREAM_T762880582_H
 #define REQUESTSTREAM_T762880582_H
 #ifdef __clang__
@@ -6663,8 +6663,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // GZIPSTREAM_T3417139389_H
-#ifndef U24ARRAYTYPEU2432_T3652892011_H
-#define U24ARRAYTYPEU2432_T3652892011_H
+#ifndef U24ARRAYTYPEU2432_T3652892012_H
+#define U24ARRAYTYPEU2432_T3652892012_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -6672,7 +6672,7 @@ public:
 #endif
 
 // <PrivateImplementationDetails>/$ArrayType$32
-struct  U24ArrayTypeU2432_t3652892011 
+struct  U24ArrayTypeU2432_t3652892012 
 {
 public:
 	union
@@ -6683,7 +6683,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2432_t3652892011__padding[32];
+		uint8_t U24ArrayTypeU2432_t3652892012__padding[32];
 	};
 
 public:
@@ -6692,7 +6692,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U24ARRAYTYPEU2432_T3652892011_H
+#endif // U24ARRAYTYPEU2432_T3652892012_H
 #ifndef U24ARRAYTYPEU24128_T4289081660_H
 #define U24ARRAYTYPEU24128_T4289081660_H
 #ifdef __clang__
@@ -7199,8 +7199,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // FAMREQUEST_T3578860103_H
-#ifndef U24ARRAYTYPEU2412_T2490092597_H
-#define U24ARRAYTYPEU2412_T2490092597_H
+#ifndef U24ARRAYTYPEU2412_T2490092598_H
+#define U24ARRAYTYPEU2412_T2490092598_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -7208,7 +7208,7 @@ public:
 #endif
 
 // <PrivateImplementationDetails>/$ArrayType$12
-struct  U24ArrayTypeU2412_t2490092597 
+struct  U24ArrayTypeU2412_t2490092598 
 {
 public:
 	union
@@ -7219,7 +7219,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2412_t2490092597__padding[12];
+		uint8_t U24ArrayTypeU2412_t2490092598__padding[12];
 	};
 
 public:
@@ -7228,7 +7228,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U24ARRAYTYPEU2412_T2490092597_H
+#endif // U24ARRAYTYPEU2412_T2490092598_H
 #ifndef TIMESPEC_T893749660_H
 #define TIMESPEC_T893749660_H
 #ifdef __clang__
@@ -9560,8 +9560,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // HTTPLISTENERREQUEST_T630699488_H
-#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255362_H
-#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255362_H
+#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
+#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -9569,45 +9569,45 @@ public:
 #endif
 
 // <PrivateImplementationDetails>
-struct  U3CPrivateImplementationDetailsU3E_t3057255362  : public RuntimeObject
+struct  U3CPrivateImplementationDetailsU3E_t3057255363  : public RuntimeObject
 {
 public:
 
 public:
 };
 
-struct U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields
+struct U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields
 {
 public:
 	// <PrivateImplementationDetails>/$ArrayType$32 <PrivateImplementationDetails>::$$field-0
-	U24ArrayTypeU2432_t3652892011  ___U24U24fieldU2D0_0;
+	U24ArrayTypeU2432_t3652892012  ___U24U24fieldU2D0_0;
 	// <PrivateImplementationDetails>/$ArrayType$16 <PrivateImplementationDetails>::$$field-1
-	U24ArrayTypeU2416_t3254766645  ___U24U24fieldU2D1_1;
+	U24ArrayTypeU2416_t3254766646  ___U24U24fieldU2D1_1;
 	// <PrivateImplementationDetails>/$ArrayType$128 <PrivateImplementationDetails>::$$field-2
 	U24ArrayTypeU24128_t4289081660  ___U24U24fieldU2D2_2;
 	// <PrivateImplementationDetails>/$ArrayType$12 <PrivateImplementationDetails>::$$field-3
-	U24ArrayTypeU2412_t2490092597  ___U24U24fieldU2D3_3;
+	U24ArrayTypeU2412_t2490092598  ___U24U24fieldU2D3_3;
 	// <PrivateImplementationDetails>/$ArrayType$12 <PrivateImplementationDetails>::$$field-4
-	U24ArrayTypeU2412_t2490092597  ___U24U24fieldU2D4_4;
+	U24ArrayTypeU2412_t2490092598  ___U24U24fieldU2D4_4;
 
 public:
-	inline static int32_t get_offset_of_U24U24fieldU2D0_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D0_0)); }
-	inline U24ArrayTypeU2432_t3652892011  get_U24U24fieldU2D0_0() const { return ___U24U24fieldU2D0_0; }
-	inline U24ArrayTypeU2432_t3652892011 * get_address_of_U24U24fieldU2D0_0() { return &___U24U24fieldU2D0_0; }
-	inline void set_U24U24fieldU2D0_0(U24ArrayTypeU2432_t3652892011  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D0_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D0_0)); }
+	inline U24ArrayTypeU2432_t3652892012  get_U24U24fieldU2D0_0() const { return ___U24U24fieldU2D0_0; }
+	inline U24ArrayTypeU2432_t3652892012 * get_address_of_U24U24fieldU2D0_0() { return &___U24U24fieldU2D0_0; }
+	inline void set_U24U24fieldU2D0_0(U24ArrayTypeU2432_t3652892012  value)
 	{
 		___U24U24fieldU2D0_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D1_1() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D1_1)); }
-	inline U24ArrayTypeU2416_t3254766645  get_U24U24fieldU2D1_1() const { return ___U24U24fieldU2D1_1; }
-	inline U24ArrayTypeU2416_t3254766645 * get_address_of_U24U24fieldU2D1_1() { return &___U24U24fieldU2D1_1; }
-	inline void set_U24U24fieldU2D1_1(U24ArrayTypeU2416_t3254766645  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D1_1() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D1_1)); }
+	inline U24ArrayTypeU2416_t3254766646  get_U24U24fieldU2D1_1() const { return ___U24U24fieldU2D1_1; }
+	inline U24ArrayTypeU2416_t3254766646 * get_address_of_U24U24fieldU2D1_1() { return &___U24U24fieldU2D1_1; }
+	inline void set_U24U24fieldU2D1_1(U24ArrayTypeU2416_t3254766646  value)
 	{
 		___U24U24fieldU2D1_1 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D2_2() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D2_2)); }
+	inline static int32_t get_offset_of_U24U24fieldU2D2_2() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D2_2)); }
 	inline U24ArrayTypeU24128_t4289081660  get_U24U24fieldU2D2_2() const { return ___U24U24fieldU2D2_2; }
 	inline U24ArrayTypeU24128_t4289081660 * get_address_of_U24U24fieldU2D2_2() { return &___U24U24fieldU2D2_2; }
 	inline void set_U24U24fieldU2D2_2(U24ArrayTypeU24128_t4289081660  value)
@@ -9615,18 +9615,18 @@ public:
 		___U24U24fieldU2D2_2 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D3_3() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D3_3)); }
-	inline U24ArrayTypeU2412_t2490092597  get_U24U24fieldU2D3_3() const { return ___U24U24fieldU2D3_3; }
-	inline U24ArrayTypeU2412_t2490092597 * get_address_of_U24U24fieldU2D3_3() { return &___U24U24fieldU2D3_3; }
-	inline void set_U24U24fieldU2D3_3(U24ArrayTypeU2412_t2490092597  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D3_3() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D3_3)); }
+	inline U24ArrayTypeU2412_t2490092598  get_U24U24fieldU2D3_3() const { return ___U24U24fieldU2D3_3; }
+	inline U24ArrayTypeU2412_t2490092598 * get_address_of_U24U24fieldU2D3_3() { return &___U24U24fieldU2D3_3; }
+	inline void set_U24U24fieldU2D3_3(U24ArrayTypeU2412_t2490092598  value)
 	{
 		___U24U24fieldU2D3_3 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D4_4() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D4_4)); }
-	inline U24ArrayTypeU2412_t2490092597  get_U24U24fieldU2D4_4() const { return ___U24U24fieldU2D4_4; }
-	inline U24ArrayTypeU2412_t2490092597 * get_address_of_U24U24fieldU2D4_4() { return &___U24U24fieldU2D4_4; }
-	inline void set_U24U24fieldU2D4_4(U24ArrayTypeU2412_t2490092597  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D4_4() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D4_4)); }
+	inline U24ArrayTypeU2412_t2490092598  get_U24U24fieldU2D4_4() const { return ___U24U24fieldU2D4_4; }
+	inline U24ArrayTypeU2412_t2490092598 * get_address_of_U24U24fieldU2D4_4() { return &___U24U24fieldU2D4_4; }
+	inline void set_U24U24fieldU2D4_4(U24ArrayTypeU2412_t2490092598  value)
 	{
 		___U24U24fieldU2D4_4 = value;
 	}
@@ -9635,7 +9635,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255362_H
+#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
 #ifndef FAMCONNECTION_T1678998633_H
 #define FAMCONNECTION_T1678998633_H
 #ifdef __clang__
@@ -17851,7 +17851,7 @@ extern "C" IL2CPP_METHOD_ATTR bool Uri_op_Inequality_m839253362 (RuntimeObject *
 // System.Boolean System.Uri::op_Equality(System.Uri,System.Uri)
 extern "C" IL2CPP_METHOD_ATTR bool Uri_op_Equality_m685520154 (RuntimeObject * __this /* static, unused */, Uri_t100236324 * ___u10, Uri_t100236324 * ___u21, const RuntimeMethod* method);
 // System.String System.Uri::get_Host()
-extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m42857288 (Uri_t100236324 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m255565830 (Uri_t100236324 * __this, const RuntimeMethod* method);
 // System.String System.Net.Cookie::QuotedString(System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* Cookie_QuotedString_m140220106 (Cookie_t993873397 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Boolean System.Net.Cookie::IsToken(System.String)
@@ -46404,7 +46404,7 @@ extern "C" IL2CPP_METHOD_ATTR void Cookie__cctor_m3648156207 (RuntimeObject * __
 	}
 	{
 		CharU5BU5D_t3528271667* L_0 = ((CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)7));
-		RuntimeFieldHandle_t1871169219  L_1 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t3057255362____U24U24fieldU2D1_1_FieldInfo_var) };
+		RuntimeFieldHandle_t1871169219  L_1 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t3057255363____U24U24fieldU2D1_1_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m3117905507(NULL /*static, unused*/, (RuntimeArray *)(RuntimeArray *)L_0, L_1, /*hidden argument*/NULL);
 		((Cookie_t993873397_StaticFields*)il2cpp_codegen_static_fields_for(Cookie_t993873397_il2cpp_TypeInfo_var))->set_reservedCharsName_14(L_0);
 		CharU5BU5D_t3528271667* L_2 = ((CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)2));
@@ -47391,7 +47391,7 @@ IL_00ce:
 	{
 		Uri_t100236324 * L_29 = ___uri0;
 		NullCheck(L_29);
-		String_t* L_30 = Uri_get_Host_m42857288(L_29, /*hidden argument*/NULL);
+		String_t* L_30 = Uri_get_Host_m255565830(L_29, /*hidden argument*/NULL);
 		String_t* L_31 = __this->get_domain_3();
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_32 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);

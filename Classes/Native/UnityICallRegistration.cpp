@@ -198,10 +198,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_isPlaying();
 		Register_UnityEngine_Application_get_isPlaying();
 
-		//System.Int32 UnityEngine.Application::get_targetFrameRate()
-		void Register_UnityEngine_Application_get_targetFrameRate();
-		Register_UnityEngine_Application_get_targetFrameRate();
-
 		//System.String UnityEngine.Application::get_dataPath()
 		void Register_UnityEngine_Application_get_dataPath();
 		Register_UnityEngine_Application_get_dataPath();
@@ -1246,10 +1242,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
 		Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
 
-		//System.Void UnityEngine.GUI::INTERNAL_set_backgroundColor(UnityEngine.Color&)
-		void Register_UnityEngine_GUI_INTERNAL_set_backgroundColor();
-		Register_UnityEngine_GUI_INTERNAL_set_backgroundColor();
-
 		//System.Void UnityEngine.GUI::InternalRepaintEditorWindow()
 		void Register_UnityEngine_GUI_InternalRepaintEditorWindow();
 		Register_UnityEngine_GUI_InternalRepaintEditorWindow();
@@ -1402,6 +1394,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_Init();
 		Register_UnityEngine_GUIStyle_Init();
 
+		//System.Void UnityEngine.GUIStyle::InitCopy(UnityEngine.GUIStyle)
+		void Register_UnityEngine_GUIStyle_InitCopy();
+		Register_UnityEngine_GUIStyle_InitCopy();
+
 		//System.Void UnityEngine.GUIStyle::Internal_CalcMinMaxWidth(System.IntPtr,UnityEngine.GUIContent,System.Single&,System.Single&)
 		void Register_UnityEngine_GUIStyle_Internal_CalcMinMaxWidth();
 		Register_UnityEngine_GUIStyle_Internal_CalcMinMaxWidth();
@@ -1421,6 +1417,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GUIStyle::SetDefaultFont(UnityEngine.Font)
 		void Register_UnityEngine_GUIStyle_SetDefaultFont();
 		Register_UnityEngine_GUIStyle_SetDefaultFont();
+
+		//System.Void UnityEngine.GUIStyle::set_alignment(UnityEngine.TextAnchor)
+		void Register_UnityEngine_GUIStyle_set_alignment();
+		Register_UnityEngine_GUIStyle_set_alignment();
 
 		//System.Void UnityEngine.GUIStyle::set_fontSize(System.Int32)
 		void Register_UnityEngine_GUIStyle_set_fontSize();
@@ -1461,6 +1461,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GUIStyleState::Init()
 		void Register_UnityEngine_GUIStyleState_Init();
 		Register_UnityEngine_GUIStyleState_Init();
+
+		//System.Void UnityEngine.GUIStyleState::SetBackgroundInternal(UnityEngine.Texture2D)
+		void Register_UnityEngine_GUIStyleState_SetBackgroundInternal();
+		Register_UnityEngine_GUIStyleState_SetBackgroundInternal();
 
 		//UnityEngine.Texture2D UnityEngine.GUIStyleState::GetBackgroundInternal()
 		void Register_UnityEngine_GUIStyleState_GetBackgroundInternal();
@@ -1723,18 +1727,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Joint2D_get_connectedBody();
 
 	//End Registrations for type : UnityEngine.Joint2D
-
-	//Start Registrations for type : UnityEngine.JsonUtility
-
-		//System.Object UnityEngine.JsonUtility::FromJson(System.String,System.Type)
-		void Register_UnityEngine_JsonUtility_FromJson();
-		Register_UnityEngine_JsonUtility_FromJson();
-
-		//System.String UnityEngine.JsonUtility::ToJson(System.Object,System.Boolean)
-		void Register_UnityEngine_JsonUtility_ToJson();
-		Register_UnityEngine_JsonUtility_ToJson();
-
-	//End Registrations for type : UnityEngine.JsonUtility
 
 	//Start Registrations for type : UnityEngine.LayerMask
 
@@ -2347,14 +2339,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_PolygonCollider2D_SetPath();
 
 	//End Registrations for type : UnityEngine.PolygonCollider2D
-
-	//Start Registrations for type : UnityEngine.Profiling.Profiler
-
-		//System.Int64 UnityEngine.Profiling.Profiler::GetTotalAllocatedMemoryLong()
-		void Register_UnityEngine_Profiling_Profiler_GetTotalAllocatedMemoryLong();
-		Register_UnityEngine_Profiling_Profiler_GetTotalAllocatedMemoryLong();
-
-	//End Registrations for type : UnityEngine.Profiling.Profiler
 
 	//Start Registrations for type : UnityEngine.PropertyNameUtils
 
@@ -3157,14 +3141,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.SystemInfo::get_supportsImageEffects()
 		void Register_UnityEngine_SystemInfo_get_supportsImageEffects();
 		Register_UnityEngine_SystemInfo_get_supportsImageEffects();
-
-		//System.Single UnityEngine.SystemInfo::get_batteryLevel()
-		void Register_UnityEngine_SystemInfo_get_batteryLevel();
-		Register_UnityEngine_SystemInfo_get_batteryLevel();
-
-		//UnityEngine.BatteryStatus UnityEngine.SystemInfo::get_batteryStatus()
-		void Register_UnityEngine_SystemInfo_get_batteryStatus();
-		Register_UnityEngine_SystemInfo_get_batteryStatus();
 
 		//UnityEngine.DeviceType UnityEngine.SystemInfo::get_deviceType()
 		void Register_UnityEngine_SystemInfo_get_deviceType();

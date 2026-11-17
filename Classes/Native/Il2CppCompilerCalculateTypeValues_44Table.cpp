@@ -19,8 +19,6 @@
 #include "il2cpp-object-internals.h"
 
 
-// CreatureModel
-struct CreatureModel_t680682136;
 // System.String
 struct String_t;
 // BinahCoreScript
@@ -35,6 +33,10 @@ struct MinMax_t1680324056;
 struct DamageInfo_t1138602084;
 // System.Int32[]
 struct Int32U5BU5D_t385246372;
+// EquipmentModel
+struct EquipmentModel_t591425993;
+// CreatureModel
+struct CreatureModel_t680682136;
 // CreatureSpecialSkill
 struct CreatureSpecialSkill_t3961327528;
 // CreatureBase/KitEquipEventListener
@@ -47,8 +49,8 @@ struct List_1_t3319525431;
 struct List_1_t3994350908;
 // SkillTriggerCheck
 struct SkillTriggerCheck_t394281182;
-// EquipmentModel
-struct EquipmentModel_t591425993;
+// WorkerModel
+struct WorkerModel_t68002457;
 // Sefira
 struct Sefira_t955407239;
 // MapNode
@@ -57,24 +59,18 @@ struct MapNode_t547811713;
 struct PinkCorps_t3912763059;
 // BlackCorpsAnim
 struct BlackCorpsAnim_t2565058798;
-// WorkerModel
-struct WorkerModel_t68002457;
-// System.Char[]
-struct CharU5BU5D_t3528271667;
-// System.Security.Cryptography.RandomNumberGenerator
-struct RandomNumberGenerator_t386037858;
-// BlueStarAnim
-struct BlueStarAnim_t328616281;
-// System.Collections.Generic.List`1<WorkerModel>
-struct List_1_t1540077199;
-// BlueStarBuf
-struct BlueStarBuf_t3238403697;
-// SoundEffectPlayer
-struct SoundEffectPlayer_t3998987779;
+// System.Collections.Generic.List`1<System.Int32>
+struct List_1_t128053199;
+// ChildCreatureModel
+struct ChildCreatureModel_t1247069626;
+// BlackSwanAnim
+struct BlackSwanAnim_t1899114408;
 // System.Collections.Generic.List`1<BlackSwanSister/AnnoyedNeighbor>
 struct List_1_t1863592447;
 // BlackSwan
 struct BlackSwan_t2528739092;
+// SoundEffectPlayer
+struct SoundEffectPlayer_t3998987779;
 // ChildCreatureUnit
 struct ChildCreatureUnit_t3911137892;
 // PassageObjectModel
@@ -85,24 +81,56 @@ struct List_1_t2019886455;
 struct BlackSwanSisterAnim_t113036806;
 // CreatureCameraUtil.CreatureCameraUtil
 struct CreatureCameraUtil_t2896771070;
-// System.Void
-struct Void_t1185182177;
+// BlueStarAnim
+struct BlueStarAnim_t328616281;
+// System.Collections.Generic.List`1<WorkerModel>
+struct List_1_t1540077199;
+// BlueStarBuf
+struct BlueStarBuf_t3238403697;
 // KitEquipCreatureAnim
 struct KitEquipCreatureAnim_t4110671874;
-// System.Collections.Generic.List`1<System.Int32>
-struct List_1_t128053199;
-// ChildCreatureModel
-struct ChildCreatureModel_t1247069626;
-// BlackSwanAnim
-struct BlackSwanAnim_t1899114408;
-// BlackLoveBuf
-struct BlackLoveBuf_t2230612843;
+// System.Void
+struct Void_t1185182177;
+// System.Char[]
+struct CharU5BU5D_t3528271667;
+// UnitModel
+struct UnitModel_t1924672552;
 // System.Reflection.MethodInfo
 struct MethodInfo_t;
 // System.DelegateData
 struct DelegateData_t1677132599;
-// UnitModel
-struct UnitModel_t1924672552;
+// BlackLoveBuf
+struct BlackLoveBuf_t2230612843;
+// System.Collections.Generic.Queue`1<IBirdControl>
+struct Queue_1_t516806264;
+// System.Collections.Generic.List`1<IBirdControl>
+struct List_1_t2142621512;
+// System.Collections.Generic.List`1<CreatureBase>
+struct List_1_t4278670770;
+// SmallBird
+struct SmallBird_t969879882;
+// BigBird
+struct BigBird_t3712234294;
+// LongBird
+struct LongBird_t1140159374;
+// BossBirdEvent
+struct BossBirdEvent_t3423880984;
+// BossGateWay
+struct BossGateWay_t225259025;
+// BossEggBase
+struct BossEggBase_t3378102186;
+// System.Collections.Generic.List`1<BossEggBase>
+struct List_1_t555209632;
+// System.Comparison`1<MapNode>
+struct Comparison_1_t322742892;
+// System.Collections.Generic.Dictionary`2<System.String,System.Int32>
+struct Dictionary_2_t2736202052;
+// StandingItemModel
+struct StandingItemModel_t3016837067;
+// StandingItemAnim
+struct StandingItemAnim_t570508136;
+// MapObjectTypeInfo
+struct MapObjectTypeInfo_t2391563397;
 // UnityEngine.Animator
 struct Animator_t434523843;
 // System.Collections.Generic.List`1<UnityEngine.Sprite>
@@ -115,6 +143,12 @@ struct Image_t2670269651;
 struct AutoTimer_t3927337410;
 // AutoTimer/TargetMethod
 struct TargetMethod_t3455692687;
+// System.Collections.Generic.List`1<SefiraEnum>
+struct List_1_t360641322;
+// System.Collections.Generic.Queue`1<SefiraEnum>
+struct Queue_1_t3029793370;
+// BinahBoss.BinahVoidAction
+struct BinahVoidAction_t3527048283;
 // RandomEventInfo
 struct RandomEventInfo_t1816176491;
 // UnityEngine.GameObject
@@ -123,8 +157,6 @@ struct GameObject_t1113636619;
 struct RandomEventRoot_t2079572189;
 // System.Collections.Generic.List`1<RandomEventBase/Condition>
 struct List_1_t958112269;
-// MapObjectTypeInfo
-struct MapObjectTypeInfo_t2391563397;
 // System.Collections.Generic.List`1<System.Object>
 struct List_1_t257213610;
 // System.Collections.Generic.List`1<SefiraBossCreatureModel>
@@ -137,26 +169,10 @@ struct UnscaledTimer_t2981502462;
 struct CloseEffect_t3061199185;
 // System.Collections.Generic.List`1<SefiraBossDescUI>
 struct List_1_t2085090444;
-// StandingItemModel
-struct StandingItemModel_t3016837067;
-// StandingItemAnim
-struct StandingItemAnim_t570508136;
-// System.Collections.Generic.Queue`1<WorkerModel>
-struct Queue_1_t4209229247;
-// System.Collections.Generic.List`1<OfficerModel>
-struct List_1_t4229800440;
-// CreatureBase/SensingModule
-struct SensingModule_t3736160013;
-// BossBird
-struct BossBird_t769689499;
-// BigBirdAnim
-struct BigBirdAnim_t2245120220;
-// System.Collections.Generic.List`1<SefiraEnum>
-struct List_1_t360641322;
-// System.Collections.Generic.Queue`1<SefiraEnum>
-struct Queue_1_t3029793370;
-// BinahBoss.BinahVoidAction
-struct BinahVoidAction_t3527048283;
+// BinahBoss.BinahAction
+struct BinahAction_t2190854253;
+// System.Collections.Generic.List`1<CreatureModel>
+struct List_1_t2152756878;
 // BinahBossBase
 struct BinahBossBase_t2872858907;
 // BinahBoss.BinahMovementModule
@@ -165,8 +181,6 @@ struct BinahMovementModule_t384025908;
 struct BinahPhaseExecution_t3488992083;
 // System.Collections.Generic.Queue`1<BinahBoss.BinahAction>
 struct Queue_1_t2037113747;
-// BinahBoss.BinahAction
-struct BinahAction_t2190854253;
 // System.Collections.Generic.List`1<ProjectileModel>
 struct List_1_t550832326;
 // BinahBoss.BinahIntegerAction
@@ -177,30 +191,20 @@ struct BinahOverload_t388366501;
 struct Dictionary_2_t1041744960;
 // BloodBathAnim
 struct BloodBathAnim_t4021178804;
-// System.Collections.Generic.List`1<CreatureModel>
-struct List_1_t2152756878;
-// BoomerCircusEvent
-struct BoomerCircusEvent_t3140860894;
-// System.IAsyncResult
-struct IAsyncResult_t767004451;
-// System.AsyncCallback
-struct AsyncCallback_t3962456242;
 // System.Collections.Generic.List`1<BinahBoss.BinahOverload>
 struct List_1_t1860441243;
 // BinahBoss.BinahBlackFogBuf
 struct BinahBlackFogBuf_t861777909;
-// BinahBoss.EightColumn
-struct EightColumn_t2767995227;
-// BinahBoss.BinahProjectile
-struct BinahProjectile_t1425247713;
 // WorkerPrimaryStatBonus
 struct WorkerPrimaryStatBonus_t4156477253;
-// BinahBoss.ColumnOverload
-struct ColumnOverload_t4253983356;
-// UnityEngine.Transform[]
-struct TransformU5BU5D_t807237628;
-// System.Collections.Generic.Dictionary`2<BinahBoss.BinahProjectile,UnityEngine.Vector3>
-struct Dictionary_2_t2055698499;
+// System.IAsyncResult
+struct IAsyncResult_t767004451;
+// System.AsyncCallback
+struct AsyncCallback_t3962456242;
+// BinahBoss.EightColumn
+struct EightColumn_t2767995227;
+// UnityEngine.SpriteRenderer
+struct SpriteRenderer_t3235626157;
 // System.Collections.Generic.Dictionary`2<System.Int64,ProjectileModel>
 struct Dictionary_2_t141397368;
 // SefiraBossCreatureModel
@@ -215,18 +219,32 @@ struct CameraFilterPack_TV_Vignetting_t677884018;
 struct CameraFilterPack_Blizzard_t1227476889;
 // CameraFilterPack_TV_Old_Movie_2
 struct CameraFilterPack_TV_Old_Movie_2_t1270871946;
-// System.Collections.Generic.List`1<BinahBoss.BinahProjectile>
-struct List_1_t2897322455;
-// BigBird
-struct BigBird_t3712234294;
-// UnityEngine.SpriteRenderer
-struct SpriteRenderer_t3235626157;
+// BoomerCircusEvent
+struct BoomerCircusEvent_t3140860894;
 // System.Collections.Generic.List`1<CircusTent>
 struct List_1_t3702501773;
 // System.Collections.Generic.List`1<CircusBoomer>
 struct List_1_t1748312530;
+// BinahBoss.ColumnOverload
+struct ColumnOverload_t4253983356;
+// UnityEngine.Transform[]
+struct TransformU5BU5D_t807237628;
+// System.Collections.Generic.Dictionary`2<BinahBoss.BinahProjectile,UnityEngine.Vector3>
+struct Dictionary_2_t2055698499;
 // BlueStar
 struct BlueStar_t1520383455;
+// System.Collections.Generic.List`1<BinahBoss.BinahProjectile>
+struct List_1_t2897322455;
+// BinahBoss.BinahProjectile
+struct BinahProjectile_t1425247713;
+// UnityEngine.BoxCollider2D
+struct BoxCollider2D_t3581341831;
+// BlockSlider/OnClickEvent
+struct OnClickEvent_t2558831098;
+// System.Collections.Generic.List`1<UnityEngine.GameObject>
+struct List_1_t2585711361;
+// System.Collections.Generic.List`1<BlockSliderUnit>
+struct List_1_t245155760;
 // UnityEngine.Transform
 struct Transform_t3600365921;
 // UnityEngine.Material
@@ -235,64 +253,58 @@ struct Material_t340375123;
 struct AnimationCurve_t3046754366;
 // BlueStarAttackCollider
 struct BlueStarAttackCollider_t2250808119;
+// UnityEngine.UI.Image[]
+struct ImageU5BU5D_t2439009922;
 // WorkerUnit
 struct WorkerUnit_t3080928601;
-// CameraFilterPack_Blur_Blurry
-struct CameraFilterPack_Blur_Blurry_t3287805908;
-// CameraFilterPack_Blur_Bloom
-struct CameraFilterPack_Blur_Bloom_t3356986519;
-// BlockSlider/OnClickEvent
-struct OnClickEvent_t2558831098;
-// System.Collections.Generic.List`1<UnityEngine.GameObject>
-struct List_1_t2585711361;
-// System.Collections.Generic.List`1<BlockSliderUnit>
-struct List_1_t245155760;
-// BlockSlider
-struct BlockSlider_t3258073796;
-// BloodMapObjectModel
-struct BloodMapObjectModel_t1680656327;
-// UnityEngine.Sprite[]
-struct SpriteU5BU5D_t2581906349;
-// UnityEngine.BoxCollider2D
-struct BoxCollider2D_t3581341831;
-// CameraFilterPack_Blur_Focus
-struct CameraFilterPack_Blur_Focus_t1993753717;
 // UnityEngine.UI.Text
 struct Text_t1901882714;
 // System.Collections.Generic.List`1<UnityEngine.UI.Image>
 struct List_1_t4142344393;
-// StandingItemScriptBase
-struct StandingItemScriptBase_t3970342999;
-// StandingItemUnit
-struct StandingItemUnit_t997475196;
-// ProjectileModel
-struct ProjectileModel_t3373724880;
-// ProjectileUnit
-struct ProjectileUnit_t50201782;
+// BloodMapObjectModel
+struct BloodMapObjectModel_t1680656327;
+// UnityEngine.Sprite[]
+struct SpriteU5BU5D_t2581906349;
 // AnimatorEventHandler
 struct AnimatorEventHandler_t1637064700;
 // System.Collections.Generic.List`1<UnitModel>
 struct List_1_t3396747294;
-// UnityEngine.UI.Image[]
-struct ImageU5BU5D_t2439009922;
+// ProjectileModel
+struct ProjectileModel_t3373724880;
+// ProjectileUnit
+struct ProjectileUnit_t50201782;
+// CameraFilterPack_Blur_Blurry
+struct CameraFilterPack_Blur_Blurry_t3287805908;
+// CameraFilterPack_Blur_Bloom
+struct CameraFilterPack_Blur_Bloom_t3356986519;
+// BlockSlider
+struct BlockSlider_t3258073796;
+// StandingItemScriptBase
+struct StandingItemScriptBase_t3970342999;
+// StandingItemUnit
+struct StandingItemUnit_t997475196;
+// CameraFilterPack_Blur_Focus
+struct CameraFilterPack_Blur_Focus_t1993753717;
 // SuperArmorEffect
 struct SuperArmorEffect_t129670311;
 // System.Collections.Generic.Stack`1<CreatureAnimScript/ParameterInfo>
 struct Stack_1_t1128456932;
-// UnityEngine.GameObject[]
-struct GameObjectU5BU5D_t3328599146;
-// System.Collections.Generic.List`1<SpineOptimizerModule>
-struct List_1_t1915437467;
 // BlackSwanSister
 struct BlackSwanSister_t1068429612;
 // SpineOptimizerModule
 struct SpineOptimizerModule_t443362725;
+// UnityEngine.GameObject[]
+struct GameObjectU5BU5D_t3328599146;
+// System.Collections.Generic.List`1<SpineOptimizerModule>
+struct List_1_t1915437467;
+// BlackCorps
+struct BlackCorps_t1038473782;
 // AgentUnit
 struct AgentUnit_t3059606777;
 // BloodBath
 struct BloodBath_t1769009321;
-// BlackCorps
-struct BlackCorps_t1038473782;
+// BlueStarAttackEffect
+struct BlueStarAttackEffect_t1833845078;
 // UnityEngine.Canvas
 struct Canvas_t3310196443;
 // UnityEngine.ParticleSystem
@@ -303,8 +315,6 @@ struct CreatureCameraUtil_Inspector_t4035444196;
 struct List_1_t2396322211;
 // BloodyTree
 struct BloodyTree_t2328292869;
-// BlueStarAttackEffect
-struct BlueStarAttackEffect_t1833845078;
 
 
 
@@ -323,66 +333,65 @@ struct BlueStarAttackEffect_t1833845078;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEOBJECT_H
-#ifndef ANNOYEDNEIGHBOR_T391517705_H
-#define ANNOYEDNEIGHBOR_T391517705_H
+#ifndef BLIZZARDVALUE_T527079509_H
+#define BLIZZARDVALUE_T527079509_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlackSwanSister/AnnoyedNeighbor
-struct  AnnoyedNeighbor_t391517705  : public RuntimeObject
+// BinahBossBase/BlizzardValue
+struct  BlizzardValue_t527079509  : public RuntimeObject
 {
 public:
-	// System.Boolean BlackSwanSister/AnnoyedNeighbor::enable
-	bool ___enable_0;
-	// CreatureModel BlackSwanSister/AnnoyedNeighbor::creature
-	CreatureModel_t680682136 * ___creature_1;
-	// System.Single BlackSwanSister/AnnoyedNeighbor::coolTime
-	float ___coolTime_2;
+	// System.Single BinahBossBase/BlizzardValue::speed
+	float ___speed_0;
+	// System.Single BinahBossBase/BlizzardValue::size
+	float ___size_1;
+	// System.Single BinahBossBase/BlizzardValue::fade
+	float ___fade_2;
 
 public:
-	inline static int32_t get_offset_of_enable_0() { return static_cast<int32_t>(offsetof(AnnoyedNeighbor_t391517705, ___enable_0)); }
-	inline bool get_enable_0() const { return ___enable_0; }
-	inline bool* get_address_of_enable_0() { return &___enable_0; }
-	inline void set_enable_0(bool value)
+	inline static int32_t get_offset_of_speed_0() { return static_cast<int32_t>(offsetof(BlizzardValue_t527079509, ___speed_0)); }
+	inline float get_speed_0() const { return ___speed_0; }
+	inline float* get_address_of_speed_0() { return &___speed_0; }
+	inline void set_speed_0(float value)
 	{
-		___enable_0 = value;
+		___speed_0 = value;
 	}
 
-	inline static int32_t get_offset_of_creature_1() { return static_cast<int32_t>(offsetof(AnnoyedNeighbor_t391517705, ___creature_1)); }
-	inline CreatureModel_t680682136 * get_creature_1() const { return ___creature_1; }
-	inline CreatureModel_t680682136 ** get_address_of_creature_1() { return &___creature_1; }
-	inline void set_creature_1(CreatureModel_t680682136 * value)
+	inline static int32_t get_offset_of_size_1() { return static_cast<int32_t>(offsetof(BlizzardValue_t527079509, ___size_1)); }
+	inline float get_size_1() const { return ___size_1; }
+	inline float* get_address_of_size_1() { return &___size_1; }
+	inline void set_size_1(float value)
 	{
-		___creature_1 = value;
-		Il2CppCodeGenWriteBarrier((&___creature_1), value);
+		___size_1 = value;
 	}
 
-	inline static int32_t get_offset_of_coolTime_2() { return static_cast<int32_t>(offsetof(AnnoyedNeighbor_t391517705, ___coolTime_2)); }
-	inline float get_coolTime_2() const { return ___coolTime_2; }
-	inline float* get_address_of_coolTime_2() { return &___coolTime_2; }
-	inline void set_coolTime_2(float value)
+	inline static int32_t get_offset_of_fade_2() { return static_cast<int32_t>(offsetof(BlizzardValue_t527079509, ___fade_2)); }
+	inline float get_fade_2() const { return ___fade_2; }
+	inline float* get_address_of_fade_2() { return &___fade_2; }
+	inline void set_fade_2(float value)
 	{
-		___coolTime_2 = value;
+		___fade_2 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // ANNOYEDNEIGHBOR_T391517705_H
-#ifndef PANICACTION_T991841215_H
-#define PANICACTION_T991841215_H
+#endif // BLIZZARDVALUE_T527079509_H
+#ifndef NARRATIONKEY_T1457788304_H
+#define NARRATIONKEY_T1457788304_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// PanicAction
-struct  PanicAction_t991841215  : public RuntimeObject
+// BossBird/NarrationKey
+struct  NarrationKey_t1457788304  : public RuntimeObject
 {
 public:
 
@@ -392,37 +401,146 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // PANICACTION_T991841215_H
-#ifndef U3CONFIXEDUPDATEU3EC__ANONSTOREY0_T1366123234_H
-#define U3CONFIXEDUPDATEU3EC__ANONSTOREY0_T1366123234_H
+#endif // NARRATIONKEY_T1457788304_H
+#ifndef VALUETYPE_T3640485471_H
+#define VALUETYPE_T3640485471_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlackSwanSister/<OnFixedUpdate>c__AnonStorey0
-struct  U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234  : public RuntimeObject
+// System.ValueType
+struct  ValueType_t3640485471  : public RuntimeObject
 {
 public:
-	// CreatureModel BlackSwanSister/<OnFixedUpdate>c__AnonStorey0::neighbor
-	CreatureModel_t680682136 * ___neighbor_0;
 
 public:
-	inline static int32_t get_offset_of_neighbor_0() { return static_cast<int32_t>(offsetof(U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234, ___neighbor_0)); }
-	inline CreatureModel_t680682136 * get_neighbor_0() const { return ___neighbor_0; }
-	inline CreatureModel_t680682136 ** get_address_of_neighbor_0() { return &___neighbor_0; }
-	inline void set_neighbor_0(CreatureModel_t680682136 * value)
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_com
+{
+};
+#endif // VALUETYPE_T3640485471_H
+#ifndef MOVIEVALUE_T4147784727_H
+#define MOVIEVALUE_T4147784727_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBossBase/MovieValue
+struct  MovieValue_t4147784727  : public RuntimeObject
+{
+public:
+	// System.Single BinahBossBase/MovieValue::fps
+	float ___fps_0;
+	// System.Single BinahBossBase/MovieValue::contrast
+	float ___contrast_1;
+	// System.Single BinahBossBase/MovieValue::burn
+	float ___burn_2;
+
+public:
+	inline static int32_t get_offset_of_fps_0() { return static_cast<int32_t>(offsetof(MovieValue_t4147784727, ___fps_0)); }
+	inline float get_fps_0() const { return ___fps_0; }
+	inline float* get_address_of_fps_0() { return &___fps_0; }
+	inline void set_fps_0(float value)
 	{
-		___neighbor_0 = value;
-		Il2CppCodeGenWriteBarrier((&___neighbor_0), value);
+		___fps_0 = value;
+	}
+
+	inline static int32_t get_offset_of_contrast_1() { return static_cast<int32_t>(offsetof(MovieValue_t4147784727, ___contrast_1)); }
+	inline float get_contrast_1() const { return ___contrast_1; }
+	inline float* get_address_of_contrast_1() { return &___contrast_1; }
+	inline void set_contrast_1(float value)
+	{
+		___contrast_1 = value;
+	}
+
+	inline static int32_t get_offset_of_burn_2() { return static_cast<int32_t>(offsetof(MovieValue_t4147784727, ___burn_2)); }
+	inline float get_burn_2() const { return ___burn_2; }
+	inline float* get_address_of_burn_2() { return &___burn_2; }
+	inline void set_burn_2(float value)
+	{
+		___burn_2 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CONFIXEDUPDATEU3EC__ANONSTOREY0_T1366123234_H
+#endif // MOVIEVALUE_T4147784727_H
+#ifndef BINAHPHASEEXECUTION_T3488992083_H
+#define BINAHPHASEEXECUTION_T3488992083_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahPhaseExecution
+struct  BinahPhaseExecution_t3488992083  : public RuntimeObject
+{
+public:
+	// BinahCoreScript BinahBoss.BinahPhaseExecution::binah
+	BinahCoreScript_t303627652 * ___binah_0;
+	// System.Boolean BinahBoss.BinahPhaseExecution::overloadActivated
+	bool ___overloadActivated_1;
+	// Timer BinahBoss.BinahPhaseExecution::overloadTimer
+	Timer_t4185932343 * ___overloadTimer_2;
+	// System.Collections.Generic.List`1<OverloadType> BinahBoss.BinahPhaseExecution::overloadTypeList
+	List_1_t2290518471 * ___overloadTypeList_3;
+
+public:
+	inline static int32_t get_offset_of_binah_0() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___binah_0)); }
+	inline BinahCoreScript_t303627652 * get_binah_0() const { return ___binah_0; }
+	inline BinahCoreScript_t303627652 ** get_address_of_binah_0() { return &___binah_0; }
+	inline void set_binah_0(BinahCoreScript_t303627652 * value)
+	{
+		___binah_0 = value;
+		Il2CppCodeGenWriteBarrier((&___binah_0), value);
+	}
+
+	inline static int32_t get_offset_of_overloadActivated_1() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___overloadActivated_1)); }
+	inline bool get_overloadActivated_1() const { return ___overloadActivated_1; }
+	inline bool* get_address_of_overloadActivated_1() { return &___overloadActivated_1; }
+	inline void set_overloadActivated_1(bool value)
+	{
+		___overloadActivated_1 = value;
+	}
+
+	inline static int32_t get_offset_of_overloadTimer_2() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___overloadTimer_2)); }
+	inline Timer_t4185932343 * get_overloadTimer_2() const { return ___overloadTimer_2; }
+	inline Timer_t4185932343 ** get_address_of_overloadTimer_2() { return &___overloadTimer_2; }
+	inline void set_overloadTimer_2(Timer_t4185932343 * value)
+	{
+		___overloadTimer_2 = value;
+		Il2CppCodeGenWriteBarrier((&___overloadTimer_2), value);
+	}
+
+	inline static int32_t get_offset_of_overloadTypeList_3() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___overloadTypeList_3)); }
+	inline List_1_t2290518471 * get_overloadTypeList_3() const { return ___overloadTypeList_3; }
+	inline List_1_t2290518471 ** get_address_of_overloadTypeList_3() { return &___overloadTypeList_3; }
+	inline void set_overloadTypeList_3(List_1_t2290518471 * value)
+	{
+		___overloadTypeList_3 = value;
+		Il2CppCodeGenWriteBarrier((&___overloadTypeList_3), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHPHASEEXECUTION_T3488992083_H
 #ifndef BINAHSOUNDINFO_T2596872778_H
 #define BINAHSOUNDINFO_T2596872778_H
 #ifdef __clang__
@@ -625,68 +743,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHSOUNDINFO_T2596872778_H
-#ifndef BINAHPHASEEXECUTION_T3488992083_H
-#define BINAHPHASEEXECUTION_T3488992083_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahPhaseExecution
-struct  BinahPhaseExecution_t3488992083  : public RuntimeObject
-{
-public:
-	// BinahCoreScript BinahBoss.BinahPhaseExecution::binah
-	BinahCoreScript_t303627652 * ___binah_0;
-	// System.Boolean BinahBoss.BinahPhaseExecution::overloadActivated
-	bool ___overloadActivated_1;
-	// Timer BinahBoss.BinahPhaseExecution::overloadTimer
-	Timer_t4185932343 * ___overloadTimer_2;
-	// System.Collections.Generic.List`1<OverloadType> BinahBoss.BinahPhaseExecution::overloadTypeList
-	List_1_t2290518471 * ___overloadTypeList_3;
-
-public:
-	inline static int32_t get_offset_of_binah_0() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___binah_0)); }
-	inline BinahCoreScript_t303627652 * get_binah_0() const { return ___binah_0; }
-	inline BinahCoreScript_t303627652 ** get_address_of_binah_0() { return &___binah_0; }
-	inline void set_binah_0(BinahCoreScript_t303627652 * value)
-	{
-		___binah_0 = value;
-		Il2CppCodeGenWriteBarrier((&___binah_0), value);
-	}
-
-	inline static int32_t get_offset_of_overloadActivated_1() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___overloadActivated_1)); }
-	inline bool get_overloadActivated_1() const { return ___overloadActivated_1; }
-	inline bool* get_address_of_overloadActivated_1() { return &___overloadActivated_1; }
-	inline void set_overloadActivated_1(bool value)
-	{
-		___overloadActivated_1 = value;
-	}
-
-	inline static int32_t get_offset_of_overloadTimer_2() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___overloadTimer_2)); }
-	inline Timer_t4185932343 * get_overloadTimer_2() const { return ___overloadTimer_2; }
-	inline Timer_t4185932343 ** get_address_of_overloadTimer_2() { return &___overloadTimer_2; }
-	inline void set_overloadTimer_2(Timer_t4185932343 * value)
-	{
-		___overloadTimer_2 = value;
-		Il2CppCodeGenWriteBarrier((&___overloadTimer_2), value);
-	}
-
-	inline static int32_t get_offset_of_overloadTypeList_3() { return static_cast<int32_t>(offsetof(BinahPhaseExecution_t3488992083, ___overloadTypeList_3)); }
-	inline List_1_t2290518471 * get_overloadTypeList_3() const { return ___overloadTypeList_3; }
-	inline List_1_t2290518471 ** get_address_of_overloadTypeList_3() { return &___overloadTypeList_3; }
-	inline void set_overloadTypeList_3(List_1_t2290518471 * value)
-	{
-		___overloadTypeList_3 = value;
-		Il2CppCodeGenWriteBarrier((&___overloadTypeList_3), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHPHASEEXECUTION_T3488992083_H
 #ifndef BINAHSTATICDATA_T3521844169_H
 #define BINAHSTATICDATA_T3521844169_H
 #ifdef __clang__
@@ -1022,34 +1078,46 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHSTATICDATA_T3521844169_H
-#ifndef VALUETYPE_T3640485471_H
-#define VALUETYPE_T3640485471_H
+#ifndef EQUIPMENTSCRIPTBASE_T138799995_H
+#define EQUIPMENTSCRIPTBASE_T138799995_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.ValueType
-struct  ValueType_t3640485471  : public RuntimeObject
+// EquipmentScriptBase
+struct  EquipmentScriptBase_t138799995  : public RuntimeObject
 {
 public:
+	// EquipmentModel EquipmentScriptBase::_model
+	EquipmentModel_t591425993 * ____model_0;
+	// System.Int32 EquipmentScriptBase::_reinforcementLevel
+	int32_t ____reinforcementLevel_1;
 
 public:
+	inline static int32_t get_offset_of__model_0() { return static_cast<int32_t>(offsetof(EquipmentScriptBase_t138799995, ____model_0)); }
+	inline EquipmentModel_t591425993 * get__model_0() const { return ____model_0; }
+	inline EquipmentModel_t591425993 ** get_address_of__model_0() { return &____model_0; }
+	inline void set__model_0(EquipmentModel_t591425993 * value)
+	{
+		____model_0 = value;
+		Il2CppCodeGenWriteBarrier((&____model_0), value);
+	}
+
+	inline static int32_t get_offset_of__reinforcementLevel_1() { return static_cast<int32_t>(offsetof(EquipmentScriptBase_t138799995, ____reinforcementLevel_1)); }
+	inline int32_t get__reinforcementLevel_1() const { return ____reinforcementLevel_1; }
+	inline int32_t* get_address_of__reinforcementLevel_1() { return &____reinforcementLevel_1; }
+	inline void set__reinforcementLevel_1(int32_t value)
+	{
+		____reinforcementLevel_1 = value;
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Native definition for P/Invoke marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_com
-{
-};
-#endif // VALUETYPE_T3640485471_H
+#endif // EQUIPMENTSCRIPTBASE_T138799995_H
 #ifndef CREATUREBASE_T2806596028_H
 #define CREATUREBASE_T2806596028_H
 #ifdef __clang__
@@ -1176,244 +1244,156 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CREATUREBASE_T2806596028_H
-#ifndef MOVIEVALUE_T4147784727_H
-#define MOVIEVALUE_T4147784727_H
+#ifndef U3CONFIXEDUPDATEU3EC__ANONSTOREY0_T1366123234_H
+#define U3CONFIXEDUPDATEU3EC__ANONSTOREY0_T1366123234_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBossBase/MovieValue
-struct  MovieValue_t4147784727  : public RuntimeObject
+// BlackSwanSister/<OnFixedUpdate>c__AnonStorey0
+struct  U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234  : public RuntimeObject
 {
 public:
-	// System.Single BinahBossBase/MovieValue::fps
-	float ___fps_0;
-	// System.Single BinahBossBase/MovieValue::contrast
-	float ___contrast_1;
-	// System.Single BinahBossBase/MovieValue::burn
-	float ___burn_2;
+	// CreatureModel BlackSwanSister/<OnFixedUpdate>c__AnonStorey0::neighbor
+	CreatureModel_t680682136 * ___neighbor_0;
 
 public:
-	inline static int32_t get_offset_of_fps_0() { return static_cast<int32_t>(offsetof(MovieValue_t4147784727, ___fps_0)); }
-	inline float get_fps_0() const { return ___fps_0; }
-	inline float* get_address_of_fps_0() { return &___fps_0; }
-	inline void set_fps_0(float value)
+	inline static int32_t get_offset_of_neighbor_0() { return static_cast<int32_t>(offsetof(U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234, ___neighbor_0)); }
+	inline CreatureModel_t680682136 * get_neighbor_0() const { return ___neighbor_0; }
+	inline CreatureModel_t680682136 ** get_address_of_neighbor_0() { return &___neighbor_0; }
+	inline void set_neighbor_0(CreatureModel_t680682136 * value)
 	{
-		___fps_0 = value;
-	}
-
-	inline static int32_t get_offset_of_contrast_1() { return static_cast<int32_t>(offsetof(MovieValue_t4147784727, ___contrast_1)); }
-	inline float get_contrast_1() const { return ___contrast_1; }
-	inline float* get_address_of_contrast_1() { return &___contrast_1; }
-	inline void set_contrast_1(float value)
-	{
-		___contrast_1 = value;
-	}
-
-	inline static int32_t get_offset_of_burn_2() { return static_cast<int32_t>(offsetof(MovieValue_t4147784727, ___burn_2)); }
-	inline float get_burn_2() const { return ___burn_2; }
-	inline float* get_address_of_burn_2() { return &___burn_2; }
-	inline void set_burn_2(float value)
-	{
-		___burn_2 = value;
+		___neighbor_0 = value;
+		Il2CppCodeGenWriteBarrier((&___neighbor_0), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // MOVIEVALUE_T4147784727_H
-#ifndef BLIZZARDVALUE_T527079509_H
-#define BLIZZARDVALUE_T527079509_H
+#endif // U3CONFIXEDUPDATEU3EC__ANONSTOREY0_T1366123234_H
+#ifndef PANICACTION_T991841215_H
+#define PANICACTION_T991841215_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBossBase/BlizzardValue
-struct  BlizzardValue_t527079509  : public RuntimeObject
+// PanicAction
+struct  PanicAction_t991841215  : public RuntimeObject
 {
 public:
-	// System.Single BinahBossBase/BlizzardValue::speed
-	float ___speed_0;
-	// System.Single BinahBossBase/BlizzardValue::size
-	float ___size_1;
-	// System.Single BinahBossBase/BlizzardValue::fade
-	float ___fade_2;
 
 public:
-	inline static int32_t get_offset_of_speed_0() { return static_cast<int32_t>(offsetof(BlizzardValue_t527079509, ___speed_0)); }
-	inline float get_speed_0() const { return ___speed_0; }
-	inline float* get_address_of_speed_0() { return &___speed_0; }
-	inline void set_speed_0(float value)
-	{
-		___speed_0 = value;
-	}
-
-	inline static int32_t get_offset_of_size_1() { return static_cast<int32_t>(offsetof(BlizzardValue_t527079509, ___size_1)); }
-	inline float get_size_1() const { return ___size_1; }
-	inline float* get_address_of_size_1() { return &___size_1; }
-	inline void set_size_1(float value)
-	{
-		___size_1 = value;
-	}
-
-	inline static int32_t get_offset_of_fade_2() { return static_cast<int32_t>(offsetof(BlizzardValue_t527079509, ___fade_2)); }
-	inline float get_fade_2() const { return ___fade_2; }
-	inline float* get_address_of_fade_2() { return &___fade_2; }
-	inline void set_fade_2(float value)
-	{
-		___fade_2 = value;
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLIZZARDVALUE_T527079509_H
-#ifndef EQUIPMENTSCRIPTBASE_T138799995_H
-#define EQUIPMENTSCRIPTBASE_T138799995_H
+#endif // PANICACTION_T991841215_H
+#ifndef ANNOYEDNEIGHBOR_T391517705_H
+#define ANNOYEDNEIGHBOR_T391517705_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// EquipmentScriptBase
-struct  EquipmentScriptBase_t138799995  : public RuntimeObject
+// BlackSwanSister/AnnoyedNeighbor
+struct  AnnoyedNeighbor_t391517705  : public RuntimeObject
 {
 public:
-	// EquipmentModel EquipmentScriptBase::_model
-	EquipmentModel_t591425993 * ____model_0;
-	// System.Int32 EquipmentScriptBase::_reinforcementLevel
-	int32_t ____reinforcementLevel_1;
+	// System.Boolean BlackSwanSister/AnnoyedNeighbor::enable
+	bool ___enable_0;
+	// CreatureModel BlackSwanSister/AnnoyedNeighbor::creature
+	CreatureModel_t680682136 * ___creature_1;
+	// System.Single BlackSwanSister/AnnoyedNeighbor::coolTime
+	float ___coolTime_2;
 
 public:
-	inline static int32_t get_offset_of__model_0() { return static_cast<int32_t>(offsetof(EquipmentScriptBase_t138799995, ____model_0)); }
-	inline EquipmentModel_t591425993 * get__model_0() const { return ____model_0; }
-	inline EquipmentModel_t591425993 ** get_address_of__model_0() { return &____model_0; }
-	inline void set__model_0(EquipmentModel_t591425993 * value)
+	inline static int32_t get_offset_of_enable_0() { return static_cast<int32_t>(offsetof(AnnoyedNeighbor_t391517705, ___enable_0)); }
+	inline bool get_enable_0() const { return ___enable_0; }
+	inline bool* get_address_of_enable_0() { return &___enable_0; }
+	inline void set_enable_0(bool value)
 	{
-		____model_0 = value;
-		Il2CppCodeGenWriteBarrier((&____model_0), value);
+		___enable_0 = value;
 	}
 
-	inline static int32_t get_offset_of__reinforcementLevel_1() { return static_cast<int32_t>(offsetof(EquipmentScriptBase_t138799995, ____reinforcementLevel_1)); }
-	inline int32_t get__reinforcementLevel_1() const { return ____reinforcementLevel_1; }
-	inline int32_t* get_address_of__reinforcementLevel_1() { return &____reinforcementLevel_1; }
-	inline void set__reinforcementLevel_1(int32_t value)
+	inline static int32_t get_offset_of_creature_1() { return static_cast<int32_t>(offsetof(AnnoyedNeighbor_t391517705, ___creature_1)); }
+	inline CreatureModel_t680682136 * get_creature_1() const { return ___creature_1; }
+	inline CreatureModel_t680682136 ** get_address_of_creature_1() { return &___creature_1; }
+	inline void set_creature_1(CreatureModel_t680682136 * value)
 	{
-		____reinforcementLevel_1 = value;
+		___creature_1 = value;
+		Il2CppCodeGenWriteBarrier((&___creature_1), value);
+	}
+
+	inline static int32_t get_offset_of_coolTime_2() { return static_cast<int32_t>(offsetof(AnnoyedNeighbor_t391517705, ___coolTime_2)); }
+	inline float get_coolTime_2() const { return ___coolTime_2; }
+	inline float* get_address_of_coolTime_2() { return &___coolTime_2; }
+	inline void set_coolTime_2(float value)
+	{
+		___coolTime_2 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // EQUIPMENTSCRIPTBASE_T138799995_H
-#ifndef THIRDPHASE_T992721048_H
-#define THIRDPHASE_T992721048_H
+#endif // ANNOYEDNEIGHBOR_T391517705_H
+#ifndef BLUESTARWEAPON_T4161198720_H
+#define BLUESTARWEAPON_T4161198720_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.ThirdPhase
-struct  ThirdPhase_t992721048  : public BinahPhaseExecution_t3488992083
+// BlueStarWeapon
+struct  BlueStarWeapon_t4161198720  : public EquipmentScriptBase_t138799995
 {
 public:
-	// Timer BinahBoss.ThirdPhase::columnTimer
-	Timer_t4185932343 * ___columnTimer_5;
-	// Timer BinahBoss.ThirdPhase::forcelyTimer
-	Timer_t4185932343 * ___forcelyTimer_6;
+	// WorkerModel BlueStarWeapon::_worker
+	WorkerModel_t68002457 * ____worker_8;
 
 public:
-	inline static int32_t get_offset_of_columnTimer_5() { return static_cast<int32_t>(offsetof(ThirdPhase_t992721048, ___columnTimer_5)); }
-	inline Timer_t4185932343 * get_columnTimer_5() const { return ___columnTimer_5; }
-	inline Timer_t4185932343 ** get_address_of_columnTimer_5() { return &___columnTimer_5; }
-	inline void set_columnTimer_5(Timer_t4185932343 * value)
+	inline static int32_t get_offset_of__worker_8() { return static_cast<int32_t>(offsetof(BlueStarWeapon_t4161198720, ____worker_8)); }
+	inline WorkerModel_t68002457 * get__worker_8() const { return ____worker_8; }
+	inline WorkerModel_t68002457 ** get_address_of__worker_8() { return &____worker_8; }
+	inline void set__worker_8(WorkerModel_t68002457 * value)
 	{
-		___columnTimer_5 = value;
-		Il2CppCodeGenWriteBarrier((&___columnTimer_5), value);
-	}
-
-	inline static int32_t get_offset_of_forcelyTimer_6() { return static_cast<int32_t>(offsetof(ThirdPhase_t992721048, ___forcelyTimer_6)); }
-	inline Timer_t4185932343 * get_forcelyTimer_6() const { return ___forcelyTimer_6; }
-	inline Timer_t4185932343 ** get_address_of_forcelyTimer_6() { return &___forcelyTimer_6; }
-	inline void set_forcelyTimer_6(Timer_t4185932343 * value)
-	{
-		___forcelyTimer_6 = value;
-		Il2CppCodeGenWriteBarrier((&___forcelyTimer_6), value);
+		____worker_8 = value;
+		Il2CppCodeGenWriteBarrier((&____worker_8), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // THIRDPHASE_T992721048_H
-#ifndef COLOR_T2555686324_H
-#define COLOR_T2555686324_H
+#endif // BLUESTARWEAPON_T4161198720_H
+#ifndef FIRSTPHASE_T2286380295_H
+#define FIRSTPHASE_T2286380295_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Color
-struct  Color_t2555686324 
+// BinahBoss.FirstPhase
+struct  FirstPhase_t2286380295  : public BinahPhaseExecution_t3488992083
 {
 public:
-	// System.Single UnityEngine.Color::r
-	float ___r_0;
-	// System.Single UnityEngine.Color::g
-	float ___g_1;
-	// System.Single UnityEngine.Color::b
-	float ___b_2;
-	// System.Single UnityEngine.Color::a
-	float ___a_3;
 
 public:
-	inline static int32_t get_offset_of_r_0() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___r_0)); }
-	inline float get_r_0() const { return ___r_0; }
-	inline float* get_address_of_r_0() { return &___r_0; }
-	inline void set_r_0(float value)
-	{
-		___r_0 = value;
-	}
-
-	inline static int32_t get_offset_of_g_1() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___g_1)); }
-	inline float get_g_1() const { return ___g_1; }
-	inline float* get_address_of_g_1() { return &___g_1; }
-	inline void set_g_1(float value)
-	{
-		___g_1 = value;
-	}
-
-	inline static int32_t get_offset_of_b_2() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___b_2)); }
-	inline float get_b_2() const { return ___b_2; }
-	inline float* get_address_of_b_2() { return &___b_2; }
-	inline void set_b_2(float value)
-	{
-		___b_2 = value;
-	}
-
-	inline static int32_t get_offset_of_a_3() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___a_3)); }
-	inline float get_a_3() const { return ___a_3; }
-	inline float* get_address_of_a_3() { return &___a_3; }
-	inline void set_a_3(float value)
-	{
-		___a_3 = value;
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // COLOR_T2555686324_H
+#endif // FIRSTPHASE_T2286380295_H
 #ifndef BLACKCORPS_T1038473782_H
 #define BLACKCORPS_T1038473782_H
 #ifdef __clang__
@@ -1589,318 +1569,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLACKCORPS_T1038473782_H
-#ifndef PANICREADY_T3879345867_H
-#define PANICREADY_T3879345867_H
+#ifndef BIGBIRDWEAPON_T1283521219_H
+#define BIGBIRDWEAPON_T1283521219_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// PanicReady
-struct  PanicReady_t3879345867  : public PanicAction_t991841215
-{
-public:
-	// WorkerModel PanicReady::actor
-	WorkerModel_t68002457 * ___actor_0;
-	// System.Single PanicReady::elapsedTime
-	float ___elapsedTime_1;
-	// System.Single PanicReady::waitTime
-	float ___waitTime_2;
-
-public:
-	inline static int32_t get_offset_of_actor_0() { return static_cast<int32_t>(offsetof(PanicReady_t3879345867, ___actor_0)); }
-	inline WorkerModel_t68002457 * get_actor_0() const { return ___actor_0; }
-	inline WorkerModel_t68002457 ** get_address_of_actor_0() { return &___actor_0; }
-	inline void set_actor_0(WorkerModel_t68002457 * value)
-	{
-		___actor_0 = value;
-		Il2CppCodeGenWriteBarrier((&___actor_0), value);
-	}
-
-	inline static int32_t get_offset_of_elapsedTime_1() { return static_cast<int32_t>(offsetof(PanicReady_t3879345867, ___elapsedTime_1)); }
-	inline float get_elapsedTime_1() const { return ___elapsedTime_1; }
-	inline float* get_address_of_elapsedTime_1() { return &___elapsedTime_1; }
-	inline void set_elapsedTime_1(float value)
-	{
-		___elapsedTime_1 = value;
-	}
-
-	inline static int32_t get_offset_of_waitTime_2() { return static_cast<int32_t>(offsetof(PanicReady_t3879345867, ___waitTime_2)); }
-	inline float get_waitTime_2() const { return ___waitTime_2; }
-	inline float* get_address_of_waitTime_2() { return &___waitTime_2; }
-	inline void set_waitTime_2(float value)
-	{
-		___waitTime_2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PANICREADY_T3879345867_H
-#ifndef SINGLE_T1397266774_H
-#define SINGLE_T1397266774_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Single
-struct  Single_t1397266774 
-{
-public:
-	// System.Single System.Single::m_value
-	float ___m_value_7;
-
-public:
-	inline static int32_t get_offset_of_m_value_7() { return static_cast<int32_t>(offsetof(Single_t1397266774, ___m_value_7)); }
-	inline float get_m_value_7() const { return ___m_value_7; }
-	inline float* get_address_of_m_value_7() { return &___m_value_7; }
-	inline void set_m_value_7(float value)
-	{
-		___m_value_7 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SINGLE_T1397266774_H
-#ifndef ENUM_T4135868527_H
-#define ENUM_T4135868527_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Enum
-struct  Enum_t4135868527  : public ValueType_t3640485471
-{
-public:
-
-public:
-};
-
-struct Enum_t4135868527_StaticFields
-{
-public:
-	// System.Char[] System.Enum::split_char
-	CharU5BU5D_t3528271667* ___split_char_0;
-
-public:
-	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
-	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
-	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
-	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
-	{
-		___split_char_0 = value;
-		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.Enum
-struct Enum_t4135868527_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.Enum
-struct Enum_t4135868527_marshaled_com
-{
-};
-#endif // ENUM_T4135868527_H
-#ifndef GUID_T_H
-#define GUID_T_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Guid
-struct  Guid_t 
-{
-public:
-	// System.Int32 System.Guid::_a
-	int32_t ____a_0;
-	// System.Int16 System.Guid::_b
-	int16_t ____b_1;
-	// System.Int16 System.Guid::_c
-	int16_t ____c_2;
-	// System.Byte System.Guid::_d
-	uint8_t ____d_3;
-	// System.Byte System.Guid::_e
-	uint8_t ____e_4;
-	// System.Byte System.Guid::_f
-	uint8_t ____f_5;
-	// System.Byte System.Guid::_g
-	uint8_t ____g_6;
-	// System.Byte System.Guid::_h
-	uint8_t ____h_7;
-	// System.Byte System.Guid::_i
-	uint8_t ____i_8;
-	// System.Byte System.Guid::_j
-	uint8_t ____j_9;
-	// System.Byte System.Guid::_k
-	uint8_t ____k_10;
-
-public:
-	inline static int32_t get_offset_of__a_0() { return static_cast<int32_t>(offsetof(Guid_t, ____a_0)); }
-	inline int32_t get__a_0() const { return ____a_0; }
-	inline int32_t* get_address_of__a_0() { return &____a_0; }
-	inline void set__a_0(int32_t value)
-	{
-		____a_0 = value;
-	}
-
-	inline static int32_t get_offset_of__b_1() { return static_cast<int32_t>(offsetof(Guid_t, ____b_1)); }
-	inline int16_t get__b_1() const { return ____b_1; }
-	inline int16_t* get_address_of__b_1() { return &____b_1; }
-	inline void set__b_1(int16_t value)
-	{
-		____b_1 = value;
-	}
-
-	inline static int32_t get_offset_of__c_2() { return static_cast<int32_t>(offsetof(Guid_t, ____c_2)); }
-	inline int16_t get__c_2() const { return ____c_2; }
-	inline int16_t* get_address_of__c_2() { return &____c_2; }
-	inline void set__c_2(int16_t value)
-	{
-		____c_2 = value;
-	}
-
-	inline static int32_t get_offset_of__d_3() { return static_cast<int32_t>(offsetof(Guid_t, ____d_3)); }
-	inline uint8_t get__d_3() const { return ____d_3; }
-	inline uint8_t* get_address_of__d_3() { return &____d_3; }
-	inline void set__d_3(uint8_t value)
-	{
-		____d_3 = value;
-	}
-
-	inline static int32_t get_offset_of__e_4() { return static_cast<int32_t>(offsetof(Guid_t, ____e_4)); }
-	inline uint8_t get__e_4() const { return ____e_4; }
-	inline uint8_t* get_address_of__e_4() { return &____e_4; }
-	inline void set__e_4(uint8_t value)
-	{
-		____e_4 = value;
-	}
-
-	inline static int32_t get_offset_of__f_5() { return static_cast<int32_t>(offsetof(Guid_t, ____f_5)); }
-	inline uint8_t get__f_5() const { return ____f_5; }
-	inline uint8_t* get_address_of__f_5() { return &____f_5; }
-	inline void set__f_5(uint8_t value)
-	{
-		____f_5 = value;
-	}
-
-	inline static int32_t get_offset_of__g_6() { return static_cast<int32_t>(offsetof(Guid_t, ____g_6)); }
-	inline uint8_t get__g_6() const { return ____g_6; }
-	inline uint8_t* get_address_of__g_6() { return &____g_6; }
-	inline void set__g_6(uint8_t value)
-	{
-		____g_6 = value;
-	}
-
-	inline static int32_t get_offset_of__h_7() { return static_cast<int32_t>(offsetof(Guid_t, ____h_7)); }
-	inline uint8_t get__h_7() const { return ____h_7; }
-	inline uint8_t* get_address_of__h_7() { return &____h_7; }
-	inline void set__h_7(uint8_t value)
-	{
-		____h_7 = value;
-	}
-
-	inline static int32_t get_offset_of__i_8() { return static_cast<int32_t>(offsetof(Guid_t, ____i_8)); }
-	inline uint8_t get__i_8() const { return ____i_8; }
-	inline uint8_t* get_address_of__i_8() { return &____i_8; }
-	inline void set__i_8(uint8_t value)
-	{
-		____i_8 = value;
-	}
-
-	inline static int32_t get_offset_of__j_9() { return static_cast<int32_t>(offsetof(Guid_t, ____j_9)); }
-	inline uint8_t get__j_9() const { return ____j_9; }
-	inline uint8_t* get_address_of__j_9() { return &____j_9; }
-	inline void set__j_9(uint8_t value)
-	{
-		____j_9 = value;
-	}
-
-	inline static int32_t get_offset_of__k_10() { return static_cast<int32_t>(offsetof(Guid_t, ____k_10)); }
-	inline uint8_t get__k_10() const { return ____k_10; }
-	inline uint8_t* get_address_of__k_10() { return &____k_10; }
-	inline void set__k_10(uint8_t value)
-	{
-		____k_10 = value;
-	}
-};
-
-struct Guid_t_StaticFields
-{
-public:
-	// System.Guid System.Guid::Empty
-	Guid_t  ___Empty_11;
-	// System.Object System.Guid::_rngAccess
-	RuntimeObject * ____rngAccess_12;
-	// System.Security.Cryptography.RandomNumberGenerator System.Guid::_rng
-	RandomNumberGenerator_t386037858 * ____rng_13;
-	// System.Security.Cryptography.RandomNumberGenerator System.Guid::_fastRng
-	RandomNumberGenerator_t386037858 * ____fastRng_14;
-
-public:
-	inline static int32_t get_offset_of_Empty_11() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ___Empty_11)); }
-	inline Guid_t  get_Empty_11() const { return ___Empty_11; }
-	inline Guid_t * get_address_of_Empty_11() { return &___Empty_11; }
-	inline void set_Empty_11(Guid_t  value)
-	{
-		___Empty_11 = value;
-	}
-
-	inline static int32_t get_offset_of__rngAccess_12() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ____rngAccess_12)); }
-	inline RuntimeObject * get__rngAccess_12() const { return ____rngAccess_12; }
-	inline RuntimeObject ** get_address_of__rngAccess_12() { return &____rngAccess_12; }
-	inline void set__rngAccess_12(RuntimeObject * value)
-	{
-		____rngAccess_12 = value;
-		Il2CppCodeGenWriteBarrier((&____rngAccess_12), value);
-	}
-
-	inline static int32_t get_offset_of__rng_13() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ____rng_13)); }
-	inline RandomNumberGenerator_t386037858 * get__rng_13() const { return ____rng_13; }
-	inline RandomNumberGenerator_t386037858 ** get_address_of__rng_13() { return &____rng_13; }
-	inline void set__rng_13(RandomNumberGenerator_t386037858 * value)
-	{
-		____rng_13 = value;
-		Il2CppCodeGenWriteBarrier((&____rng_13), value);
-	}
-
-	inline static int32_t get_offset_of__fastRng_14() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ____fastRng_14)); }
-	inline RandomNumberGenerator_t386037858 * get__fastRng_14() const { return ____fastRng_14; }
-	inline RandomNumberGenerator_t386037858 ** get_address_of__fastRng_14() { return &____fastRng_14; }
-	inline void set__fastRng_14(RandomNumberGenerator_t386037858 * value)
-	{
-		____fastRng_14 = value;
-		Il2CppCodeGenWriteBarrier((&____fastRng_14), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GUID_T_H
-#ifndef VOID_T1185182177_H
-#define VOID_T1185182177_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Void
-struct  Void_t1185182177 
+// BigBirdWeapon
+struct  BigBirdWeapon_t1283521219  : public EquipmentScriptBase_t138799995
 {
 public:
 
@@ -1910,383 +1588,145 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // VOID_T1185182177_H
-#ifndef INT32_T2950945753_H
-#define INT32_T2950945753_H
+#endif // BIGBIRDWEAPON_T1283521219_H
+#ifndef BLACKSWAN_T2528739092_H
+#define BLACKSWAN_T2528739092_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Int32
-struct  Int32_t2950945753 
+// BlackSwan
+struct  BlackSwan_t2528739092  : public CreatureBase_t2806596028
 {
 public:
-	// System.Int32 System.Int32::m_value
-	int32_t ___m_value_2;
+	// System.Collections.Generic.List`1<System.Int32> BlackSwan::brothersCurrent
+	List_1_t128053199 * ___brothersCurrent_16;
+	// ChildCreatureModel BlackSwan::sister
+	ChildCreatureModel_t1247069626 * ___sister_17;
+	// System.Int32 BlackSwan::transformTarget
+	int32_t ___transformTarget_18;
+	// System.Int32 BlackSwan::workerDieCurrent
+	int32_t ___workerDieCurrent_19;
+	// System.Int32 BlackSwan::workerPanicCurrent
+	int32_t ___workerPanicCurrent_20;
+	// System.Int32 BlackSwan::creatureEscapeCurrent
+	int32_t ___creatureEscapeCurrent_21;
+	// BlackSwanAnim BlackSwan::_animScript
+	BlackSwanAnim_t1899114408 * ____animScript_22;
 
 public:
-	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Int32_t2950945753, ___m_value_2)); }
-	inline int32_t get_m_value_2() const { return ___m_value_2; }
-	inline int32_t* get_address_of_m_value_2() { return &___m_value_2; }
-	inline void set_m_value_2(int32_t value)
+	inline static int32_t get_offset_of_brothersCurrent_16() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___brothersCurrent_16)); }
+	inline List_1_t128053199 * get_brothersCurrent_16() const { return ___brothersCurrent_16; }
+	inline List_1_t128053199 ** get_address_of_brothersCurrent_16() { return &___brothersCurrent_16; }
+	inline void set_brothersCurrent_16(List_1_t128053199 * value)
 	{
-		___m_value_2 = value;
+		___brothersCurrent_16 = value;
+		Il2CppCodeGenWriteBarrier((&___brothersCurrent_16), value);
+	}
+
+	inline static int32_t get_offset_of_sister_17() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___sister_17)); }
+	inline ChildCreatureModel_t1247069626 * get_sister_17() const { return ___sister_17; }
+	inline ChildCreatureModel_t1247069626 ** get_address_of_sister_17() { return &___sister_17; }
+	inline void set_sister_17(ChildCreatureModel_t1247069626 * value)
+	{
+		___sister_17 = value;
+		Il2CppCodeGenWriteBarrier((&___sister_17), value);
+	}
+
+	inline static int32_t get_offset_of_transformTarget_18() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___transformTarget_18)); }
+	inline int32_t get_transformTarget_18() const { return ___transformTarget_18; }
+	inline int32_t* get_address_of_transformTarget_18() { return &___transformTarget_18; }
+	inline void set_transformTarget_18(int32_t value)
+	{
+		___transformTarget_18 = value;
+	}
+
+	inline static int32_t get_offset_of_workerDieCurrent_19() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___workerDieCurrent_19)); }
+	inline int32_t get_workerDieCurrent_19() const { return ___workerDieCurrent_19; }
+	inline int32_t* get_address_of_workerDieCurrent_19() { return &___workerDieCurrent_19; }
+	inline void set_workerDieCurrent_19(int32_t value)
+	{
+		___workerDieCurrent_19 = value;
+	}
+
+	inline static int32_t get_offset_of_workerPanicCurrent_20() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___workerPanicCurrent_20)); }
+	inline int32_t get_workerPanicCurrent_20() const { return ___workerPanicCurrent_20; }
+	inline int32_t* get_address_of_workerPanicCurrent_20() { return &___workerPanicCurrent_20; }
+	inline void set_workerPanicCurrent_20(int32_t value)
+	{
+		___workerPanicCurrent_20 = value;
+	}
+
+	inline static int32_t get_offset_of_creatureEscapeCurrent_21() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___creatureEscapeCurrent_21)); }
+	inline int32_t get_creatureEscapeCurrent_21() const { return ___creatureEscapeCurrent_21; }
+	inline int32_t* get_address_of_creatureEscapeCurrent_21() { return &___creatureEscapeCurrent_21; }
+	inline void set_creatureEscapeCurrent_21(int32_t value)
+	{
+		___creatureEscapeCurrent_21 = value;
+	}
+
+	inline static int32_t get_offset_of__animScript_22() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ____animScript_22)); }
+	inline BlackSwanAnim_t1899114408 * get__animScript_22() const { return ____animScript_22; }
+	inline BlackSwanAnim_t1899114408 ** get_address_of__animScript_22() { return &____animScript_22; }
+	inline void set__animScript_22(BlackSwanAnim_t1899114408 * value)
+	{
+		____animScript_22 = value;
+		Il2CppCodeGenWriteBarrier((&____animScript_22), value);
+	}
+};
+
+struct BlackSwan_t2528739092_StaticFields
+{
+public:
+	// System.Int32[] BlackSwan::brothersDefault
+	Int32U5BU5D_t385246372* ___brothersDefault_11;
+
+public:
+	inline static int32_t get_offset_of_brothersDefault_11() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092_StaticFields, ___brothersDefault_11)); }
+	inline Int32U5BU5D_t385246372* get_brothersDefault_11() const { return ___brothersDefault_11; }
+	inline Int32U5BU5D_t385246372** get_address_of_brothersDefault_11() { return &___brothersDefault_11; }
+	inline void set_brothersDefault_11(Int32U5BU5D_t385246372* value)
+	{
+		___brothersDefault_11 = value;
+		Il2CppCodeGenWriteBarrier((&___brothersDefault_11), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // INT32_T2950945753_H
-#ifndef VECTOR3_T3722313464_H
-#define VECTOR3_T3722313464_H
+#endif // BLACKSWAN_T2528739092_H
+#ifndef BLACKSWANARMOR_T1047635694_H
+#define BLACKSWANARMOR_T1047635694_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Vector3
-struct  Vector3_t3722313464 
+// BlackSwanArmor
+struct  BlackSwanArmor_t1047635694  : public EquipmentScriptBase_t138799995
 {
 public:
-	// System.Single UnityEngine.Vector3::x
-	float ___x_1;
-	// System.Single UnityEngine.Vector3::y
-	float ___y_2;
-	// System.Single UnityEngine.Vector3::z
-	float ___z_3;
+	// System.Boolean BlackSwanArmor::_LOG_STATE
+	bool ____LOG_STATE_3;
 
 public:
-	inline static int32_t get_offset_of_x_1() { return static_cast<int32_t>(offsetof(Vector3_t3722313464, ___x_1)); }
-	inline float get_x_1() const { return ___x_1; }
-	inline float* get_address_of_x_1() { return &___x_1; }
-	inline void set_x_1(float value)
+	inline static int32_t get_offset_of__LOG_STATE_3() { return static_cast<int32_t>(offsetof(BlackSwanArmor_t1047635694, ____LOG_STATE_3)); }
+	inline bool get__LOG_STATE_3() const { return ____LOG_STATE_3; }
+	inline bool* get_address_of__LOG_STATE_3() { return &____LOG_STATE_3; }
+	inline void set__LOG_STATE_3(bool value)
 	{
-		___x_1 = value;
-	}
-
-	inline static int32_t get_offset_of_y_2() { return static_cast<int32_t>(offsetof(Vector3_t3722313464, ___y_2)); }
-	inline float get_y_2() const { return ___y_2; }
-	inline float* get_address_of_y_2() { return &___y_2; }
-	inline void set_y_2(float value)
-	{
-		___y_2 = value;
-	}
-
-	inline static int32_t get_offset_of_z_3() { return static_cast<int32_t>(offsetof(Vector3_t3722313464, ___z_3)); }
-	inline float get_z_3() const { return ___z_3; }
-	inline float* get_address_of_z_3() { return &___z_3; }
-	inline void set_z_3(float value)
-	{
-		___z_3 = value;
-	}
-};
-
-struct Vector3_t3722313464_StaticFields
-{
-public:
-	// UnityEngine.Vector3 UnityEngine.Vector3::zeroVector
-	Vector3_t3722313464  ___zeroVector_4;
-	// UnityEngine.Vector3 UnityEngine.Vector3::oneVector
-	Vector3_t3722313464  ___oneVector_5;
-	// UnityEngine.Vector3 UnityEngine.Vector3::upVector
-	Vector3_t3722313464  ___upVector_6;
-	// UnityEngine.Vector3 UnityEngine.Vector3::downVector
-	Vector3_t3722313464  ___downVector_7;
-	// UnityEngine.Vector3 UnityEngine.Vector3::leftVector
-	Vector3_t3722313464  ___leftVector_8;
-	// UnityEngine.Vector3 UnityEngine.Vector3::rightVector
-	Vector3_t3722313464  ___rightVector_9;
-	// UnityEngine.Vector3 UnityEngine.Vector3::forwardVector
-	Vector3_t3722313464  ___forwardVector_10;
-	// UnityEngine.Vector3 UnityEngine.Vector3::backVector
-	Vector3_t3722313464  ___backVector_11;
-	// UnityEngine.Vector3 UnityEngine.Vector3::positiveInfinityVector
-	Vector3_t3722313464  ___positiveInfinityVector_12;
-	// UnityEngine.Vector3 UnityEngine.Vector3::negativeInfinityVector
-	Vector3_t3722313464  ___negativeInfinityVector_13;
-
-public:
-	inline static int32_t get_offset_of_zeroVector_4() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___zeroVector_4)); }
-	inline Vector3_t3722313464  get_zeroVector_4() const { return ___zeroVector_4; }
-	inline Vector3_t3722313464 * get_address_of_zeroVector_4() { return &___zeroVector_4; }
-	inline void set_zeroVector_4(Vector3_t3722313464  value)
-	{
-		___zeroVector_4 = value;
-	}
-
-	inline static int32_t get_offset_of_oneVector_5() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___oneVector_5)); }
-	inline Vector3_t3722313464  get_oneVector_5() const { return ___oneVector_5; }
-	inline Vector3_t3722313464 * get_address_of_oneVector_5() { return &___oneVector_5; }
-	inline void set_oneVector_5(Vector3_t3722313464  value)
-	{
-		___oneVector_5 = value;
-	}
-
-	inline static int32_t get_offset_of_upVector_6() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___upVector_6)); }
-	inline Vector3_t3722313464  get_upVector_6() const { return ___upVector_6; }
-	inline Vector3_t3722313464 * get_address_of_upVector_6() { return &___upVector_6; }
-	inline void set_upVector_6(Vector3_t3722313464  value)
-	{
-		___upVector_6 = value;
-	}
-
-	inline static int32_t get_offset_of_downVector_7() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___downVector_7)); }
-	inline Vector3_t3722313464  get_downVector_7() const { return ___downVector_7; }
-	inline Vector3_t3722313464 * get_address_of_downVector_7() { return &___downVector_7; }
-	inline void set_downVector_7(Vector3_t3722313464  value)
-	{
-		___downVector_7 = value;
-	}
-
-	inline static int32_t get_offset_of_leftVector_8() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___leftVector_8)); }
-	inline Vector3_t3722313464  get_leftVector_8() const { return ___leftVector_8; }
-	inline Vector3_t3722313464 * get_address_of_leftVector_8() { return &___leftVector_8; }
-	inline void set_leftVector_8(Vector3_t3722313464  value)
-	{
-		___leftVector_8 = value;
-	}
-
-	inline static int32_t get_offset_of_rightVector_9() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___rightVector_9)); }
-	inline Vector3_t3722313464  get_rightVector_9() const { return ___rightVector_9; }
-	inline Vector3_t3722313464 * get_address_of_rightVector_9() { return &___rightVector_9; }
-	inline void set_rightVector_9(Vector3_t3722313464  value)
-	{
-		___rightVector_9 = value;
-	}
-
-	inline static int32_t get_offset_of_forwardVector_10() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___forwardVector_10)); }
-	inline Vector3_t3722313464  get_forwardVector_10() const { return ___forwardVector_10; }
-	inline Vector3_t3722313464 * get_address_of_forwardVector_10() { return &___forwardVector_10; }
-	inline void set_forwardVector_10(Vector3_t3722313464  value)
-	{
-		___forwardVector_10 = value;
-	}
-
-	inline static int32_t get_offset_of_backVector_11() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___backVector_11)); }
-	inline Vector3_t3722313464  get_backVector_11() const { return ___backVector_11; }
-	inline Vector3_t3722313464 * get_address_of_backVector_11() { return &___backVector_11; }
-	inline void set_backVector_11(Vector3_t3722313464  value)
-	{
-		___backVector_11 = value;
-	}
-
-	inline static int32_t get_offset_of_positiveInfinityVector_12() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___positiveInfinityVector_12)); }
-	inline Vector3_t3722313464  get_positiveInfinityVector_12() const { return ___positiveInfinityVector_12; }
-	inline Vector3_t3722313464 * get_address_of_positiveInfinityVector_12() { return &___positiveInfinityVector_12; }
-	inline void set_positiveInfinityVector_12(Vector3_t3722313464  value)
-	{
-		___positiveInfinityVector_12 = value;
-	}
-
-	inline static int32_t get_offset_of_negativeInfinityVector_13() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___negativeInfinityVector_13)); }
-	inline Vector3_t3722313464  get_negativeInfinityVector_13() const { return ___negativeInfinityVector_13; }
-	inline Vector3_t3722313464 * get_address_of_negativeInfinityVector_13() { return &___negativeInfinityVector_13; }
-	inline void set_negativeInfinityVector_13(Vector3_t3722313464  value)
-	{
-		___negativeInfinityVector_13 = value;
+		____LOG_STATE_3 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // VECTOR3_T3722313464_H
-#ifndef BIRDCREATUREBASE_T1539999157_H
-#define BIRDCREATUREBASE_T1539999157_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BirdCreatureBase
-struct  BirdCreatureBase_t1539999157  : public CreatureBase_t2806596028
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BIRDCREATUREBASE_T1539999157_H
-#ifndef FIRSTPHASE_T2286380295_H
-#define FIRSTPHASE_T2286380295_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.FirstPhase
-struct  FirstPhase_t2286380295  : public BinahPhaseExecution_t3488992083
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FIRSTPHASE_T2286380295_H
-#ifndef SECONDPHASE_T2116464132_H
-#define SECONDPHASE_T2116464132_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.SecondPhase
-struct  SecondPhase_t2116464132  : public BinahPhaseExecution_t3488992083
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SECONDPHASE_T2116464132_H
-#ifndef BLUESTAR_T1520383455_H
-#define BLUESTAR_T1520383455_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlueStar
-struct  BlueStar_t1520383455  : public CreatureBase_t2806596028
-{
-public:
-	// BlueStarAnim BlueStar::_animScript
-	BlueStarAnim_t328616281 * ____animScript_28;
-	// Timer BlueStar::_workTimeEstimate
-	Timer_t4185932343 * ____workTimeEstimate_29;
-	// Timer BlueStar::_attackTimer
-	Timer_t4185932343 * ____attackTimer_30;
-	// System.Collections.Generic.List`1<WorkerModel> BlueStar::deadSceneList
-	List_1_t1540077199 * ___deadSceneList_32;
-	// BlueStarBuf BlueStar::_currentDeadSceneBuf
-	BlueStarBuf_t3238403697 * ____currentDeadSceneBuf_33;
-	// System.Boolean BlueStar::_readyForEscape
-	bool ____readyForEscape_34;
-	// SoundEffectPlayer BlueStar::_backGroundLoop
-	SoundEffectPlayer_t3998987779 * ____backGroundLoop_35;
-
-public:
-	inline static int32_t get_offset_of__animScript_28() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____animScript_28)); }
-	inline BlueStarAnim_t328616281 * get__animScript_28() const { return ____animScript_28; }
-	inline BlueStarAnim_t328616281 ** get_address_of__animScript_28() { return &____animScript_28; }
-	inline void set__animScript_28(BlueStarAnim_t328616281 * value)
-	{
-		____animScript_28 = value;
-		Il2CppCodeGenWriteBarrier((&____animScript_28), value);
-	}
-
-	inline static int32_t get_offset_of__workTimeEstimate_29() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____workTimeEstimate_29)); }
-	inline Timer_t4185932343 * get__workTimeEstimate_29() const { return ____workTimeEstimate_29; }
-	inline Timer_t4185932343 ** get_address_of__workTimeEstimate_29() { return &____workTimeEstimate_29; }
-	inline void set__workTimeEstimate_29(Timer_t4185932343 * value)
-	{
-		____workTimeEstimate_29 = value;
-		Il2CppCodeGenWriteBarrier((&____workTimeEstimate_29), value);
-	}
-
-	inline static int32_t get_offset_of__attackTimer_30() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____attackTimer_30)); }
-	inline Timer_t4185932343 * get__attackTimer_30() const { return ____attackTimer_30; }
-	inline Timer_t4185932343 ** get_address_of__attackTimer_30() { return &____attackTimer_30; }
-	inline void set__attackTimer_30(Timer_t4185932343 * value)
-	{
-		____attackTimer_30 = value;
-		Il2CppCodeGenWriteBarrier((&____attackTimer_30), value);
-	}
-
-	inline static int32_t get_offset_of_deadSceneList_32() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ___deadSceneList_32)); }
-	inline List_1_t1540077199 * get_deadSceneList_32() const { return ___deadSceneList_32; }
-	inline List_1_t1540077199 ** get_address_of_deadSceneList_32() { return &___deadSceneList_32; }
-	inline void set_deadSceneList_32(List_1_t1540077199 * value)
-	{
-		___deadSceneList_32 = value;
-		Il2CppCodeGenWriteBarrier((&___deadSceneList_32), value);
-	}
-
-	inline static int32_t get_offset_of__currentDeadSceneBuf_33() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____currentDeadSceneBuf_33)); }
-	inline BlueStarBuf_t3238403697 * get__currentDeadSceneBuf_33() const { return ____currentDeadSceneBuf_33; }
-	inline BlueStarBuf_t3238403697 ** get_address_of__currentDeadSceneBuf_33() { return &____currentDeadSceneBuf_33; }
-	inline void set__currentDeadSceneBuf_33(BlueStarBuf_t3238403697 * value)
-	{
-		____currentDeadSceneBuf_33 = value;
-		Il2CppCodeGenWriteBarrier((&____currentDeadSceneBuf_33), value);
-	}
-
-	inline static int32_t get_offset_of__readyForEscape_34() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____readyForEscape_34)); }
-	inline bool get__readyForEscape_34() const { return ____readyForEscape_34; }
-	inline bool* get_address_of__readyForEscape_34() { return &____readyForEscape_34; }
-	inline void set__readyForEscape_34(bool value)
-	{
-		____readyForEscape_34 = value;
-	}
-
-	inline static int32_t get_offset_of__backGroundLoop_35() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____backGroundLoop_35)); }
-	inline SoundEffectPlayer_t3998987779 * get__backGroundLoop_35() const { return ____backGroundLoop_35; }
-	inline SoundEffectPlayer_t3998987779 ** get_address_of__backGroundLoop_35() { return &____backGroundLoop_35; }
-	inline void set__backGroundLoop_35(SoundEffectPlayer_t3998987779 * value)
-	{
-		____backGroundLoop_35 = value;
-		Il2CppCodeGenWriteBarrier((&____backGroundLoop_35), value);
-	}
-};
-
-struct BlueStar_t1520383455_StaticFields
-{
-public:
-	// DamageInfo BlueStar::_damageInfo
-	DamageInfo_t1138602084 * ____damageInfo_31;
-
-public:
-	inline static int32_t get_offset_of__damageInfo_31() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455_StaticFields, ____damageInfo_31)); }
-	inline DamageInfo_t1138602084 * get__damageInfo_31() const { return ____damageInfo_31; }
-	inline DamageInfo_t1138602084 ** get_address_of__damageInfo_31() { return &____damageInfo_31; }
-	inline void set__damageInfo_31(DamageInfo_t1138602084 * value)
-	{
-		____damageInfo_31 = value;
-		Il2CppCodeGenWriteBarrier((&____damageInfo_31), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUESTAR_T1520383455_H
-#ifndef BLOODYTREEWEAPON_T1466823423_H
-#define BLOODYTREEWEAPON_T1466823423_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BloodyTreeWeapon
-struct  BloodyTreeWeapon_t1466823423  : public EquipmentScriptBase_t138799995
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOODYTREEWEAPON_T1466823423_H
+#endif // BLACKSWANARMOR_T1047635694_H
 #ifndef BLACKSWANSISTER_T1068429612_H
 #define BLACKSWANSISTER_T1068429612_H
 #ifdef __clang__
@@ -2459,47 +1899,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLACKSWANSISTER_T1068429612_H
-#ifndef BLUESTARARMOR_T2212563421_H
-#define BLUESTARARMOR_T2212563421_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlueStarArmor
-struct  BlueStarArmor_t2212563421  : public EquipmentScriptBase_t138799995
-{
-public:
-	// Timer BlueStarArmor::mpHealTimer
-	Timer_t4185932343 * ___mpHealTimer_3;
-	// WorkerModel BlueStarArmor::worker
-	WorkerModel_t68002457 * ___worker_6;
-
-public:
-	inline static int32_t get_offset_of_mpHealTimer_3() { return static_cast<int32_t>(offsetof(BlueStarArmor_t2212563421, ___mpHealTimer_3)); }
-	inline Timer_t4185932343 * get_mpHealTimer_3() const { return ___mpHealTimer_3; }
-	inline Timer_t4185932343 ** get_address_of_mpHealTimer_3() { return &___mpHealTimer_3; }
-	inline void set_mpHealTimer_3(Timer_t4185932343 * value)
-	{
-		___mpHealTimer_3 = value;
-		Il2CppCodeGenWriteBarrier((&___mpHealTimer_3), value);
-	}
-
-	inline static int32_t get_offset_of_worker_6() { return static_cast<int32_t>(offsetof(BlueStarArmor_t2212563421, ___worker_6)); }
-	inline WorkerModel_t68002457 * get_worker_6() const { return ___worker_6; }
-	inline WorkerModel_t68002457 ** get_address_of_worker_6() { return &___worker_6; }
-	inline void set_worker_6(WorkerModel_t68002457 * value)
-	{
-		___worker_6 = value;
-		Il2CppCodeGenWriteBarrier((&___worker_6), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUESTARARMOR_T2212563421_H
 #ifndef BLOODYTREE_T2328292869_H
 #define BLOODYTREE_T2328292869_H
 #ifdef __clang__
@@ -2604,16 +2003,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLOODYTREE_T2328292869_H
-#ifndef BIGBIRDWEAPON_T1283521219_H
-#define BIGBIRDWEAPON_T1283521219_H
+#ifndef BLOODYTREEWEAPON_T1466823423_H
+#define BLOODYTREEWEAPON_T1466823423_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BigBirdWeapon
-struct  BigBirdWeapon_t1283521219  : public EquipmentScriptBase_t138799995
+// BloodyTreeWeapon
+struct  BloodyTreeWeapon_t1466823423  : public EquipmentScriptBase_t138799995
 {
 public:
 
@@ -2623,52 +2022,583 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BIGBIRDWEAPON_T1283521219_H
-#ifndef INTPTR_T_H
-#define INTPTR_T_H
+#endif // BLOODYTREEWEAPON_T1466823423_H
+#ifndef BLOODBATHWEAPON_T2540479810_H
+#define BLOODBATHWEAPON_T2540479810_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.IntPtr
-struct  IntPtr_t 
+// BloodBathWeapon
+struct  BloodBathWeapon_t2540479810  : public EquipmentScriptBase_t138799995
 {
 public:
-	// System.Void* System.IntPtr::m_value
-	void* ___m_value_0;
 
 public:
-	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(IntPtr_t, ___m_value_0)); }
-	inline void* get_m_value_0() const { return ___m_value_0; }
-	inline void** get_address_of_m_value_0() { return &___m_value_0; }
-	inline void set_m_value_0(void* value)
-	{
-		___m_value_0 = value;
-	}
 };
 
-struct IntPtr_t_StaticFields
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLOODBATHWEAPON_T2540479810_H
+#ifndef BLOODBATHARMOR_T1390383298_H
+#define BLOODBATHARMOR_T1390383298_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BloodBathArmor
+struct  BloodBathArmor_t1390383298  : public EquipmentScriptBase_t138799995
 {
 public:
-	// System.IntPtr System.IntPtr::Zero
-	intptr_t ___Zero_1;
+	// System.Boolean BloodBathArmor::_LOG_STATE
+	bool ____LOG_STATE_3;
 
 public:
-	inline static int32_t get_offset_of_Zero_1() { return static_cast<int32_t>(offsetof(IntPtr_t_StaticFields, ___Zero_1)); }
-	inline intptr_t get_Zero_1() const { return ___Zero_1; }
-	inline intptr_t* get_address_of_Zero_1() { return &___Zero_1; }
-	inline void set_Zero_1(intptr_t value)
+	inline static int32_t get_offset_of__LOG_STATE_3() { return static_cast<int32_t>(offsetof(BloodBathArmor_t1390383298, ____LOG_STATE_3)); }
+	inline bool get__LOG_STATE_3() const { return ____LOG_STATE_3; }
+	inline bool* get_address_of__LOG_STATE_3() { return &____LOG_STATE_3; }
+	inline void set__LOG_STATE_3(bool value)
 	{
-		___Zero_1 = value;
+		____LOG_STATE_3 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // INTPTR_T_H
+#endif // BLOODBATHARMOR_T1390383298_H
+#ifndef BIRDCREATUREBASE_T1539999157_H
+#define BIRDCREATUREBASE_T1539999157_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BirdCreatureBase
+struct  BirdCreatureBase_t1539999157  : public CreatureBase_t2806596028
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BIRDCREATUREBASE_T1539999157_H
+#ifndef THIRDPHASE_T992721048_H
+#define THIRDPHASE_T992721048_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.ThirdPhase
+struct  ThirdPhase_t992721048  : public BinahPhaseExecution_t3488992083
+{
+public:
+	// Timer BinahBoss.ThirdPhase::columnTimer
+	Timer_t4185932343 * ___columnTimer_5;
+	// Timer BinahBoss.ThirdPhase::forcelyTimer
+	Timer_t4185932343 * ___forcelyTimer_6;
+
+public:
+	inline static int32_t get_offset_of_columnTimer_5() { return static_cast<int32_t>(offsetof(ThirdPhase_t992721048, ___columnTimer_5)); }
+	inline Timer_t4185932343 * get_columnTimer_5() const { return ___columnTimer_5; }
+	inline Timer_t4185932343 ** get_address_of_columnTimer_5() { return &___columnTimer_5; }
+	inline void set_columnTimer_5(Timer_t4185932343 * value)
+	{
+		___columnTimer_5 = value;
+		Il2CppCodeGenWriteBarrier((&___columnTimer_5), value);
+	}
+
+	inline static int32_t get_offset_of_forcelyTimer_6() { return static_cast<int32_t>(offsetof(ThirdPhase_t992721048, ___forcelyTimer_6)); }
+	inline Timer_t4185932343 * get_forcelyTimer_6() const { return ___forcelyTimer_6; }
+	inline Timer_t4185932343 ** get_address_of_forcelyTimer_6() { return &___forcelyTimer_6; }
+	inline void set_forcelyTimer_6(Timer_t4185932343 * value)
+	{
+		___forcelyTimer_6 = value;
+		Il2CppCodeGenWriteBarrier((&___forcelyTimer_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // THIRDPHASE_T992721048_H
+#ifndef SECONDPHASE_T2116464132_H
+#define SECONDPHASE_T2116464132_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.SecondPhase
+struct  SecondPhase_t2116464132  : public BinahPhaseExecution_t3488992083
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SECONDPHASE_T2116464132_H
+#ifndef BLUESTAR_T1520383455_H
+#define BLUESTAR_T1520383455_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlueStar
+struct  BlueStar_t1520383455  : public CreatureBase_t2806596028
+{
+public:
+	// BlueStarAnim BlueStar::_animScript
+	BlueStarAnim_t328616281 * ____animScript_28;
+	// Timer BlueStar::_workTimeEstimate
+	Timer_t4185932343 * ____workTimeEstimate_29;
+	// Timer BlueStar::_attackTimer
+	Timer_t4185932343 * ____attackTimer_30;
+	// System.Collections.Generic.List`1<WorkerModel> BlueStar::deadSceneList
+	List_1_t1540077199 * ___deadSceneList_32;
+	// BlueStarBuf BlueStar::_currentDeadSceneBuf
+	BlueStarBuf_t3238403697 * ____currentDeadSceneBuf_33;
+	// System.Boolean BlueStar::_readyForEscape
+	bool ____readyForEscape_34;
+	// SoundEffectPlayer BlueStar::_backGroundLoop
+	SoundEffectPlayer_t3998987779 * ____backGroundLoop_35;
+
+public:
+	inline static int32_t get_offset_of__animScript_28() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____animScript_28)); }
+	inline BlueStarAnim_t328616281 * get__animScript_28() const { return ____animScript_28; }
+	inline BlueStarAnim_t328616281 ** get_address_of__animScript_28() { return &____animScript_28; }
+	inline void set__animScript_28(BlueStarAnim_t328616281 * value)
+	{
+		____animScript_28 = value;
+		Il2CppCodeGenWriteBarrier((&____animScript_28), value);
+	}
+
+	inline static int32_t get_offset_of__workTimeEstimate_29() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____workTimeEstimate_29)); }
+	inline Timer_t4185932343 * get__workTimeEstimate_29() const { return ____workTimeEstimate_29; }
+	inline Timer_t4185932343 ** get_address_of__workTimeEstimate_29() { return &____workTimeEstimate_29; }
+	inline void set__workTimeEstimate_29(Timer_t4185932343 * value)
+	{
+		____workTimeEstimate_29 = value;
+		Il2CppCodeGenWriteBarrier((&____workTimeEstimate_29), value);
+	}
+
+	inline static int32_t get_offset_of__attackTimer_30() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____attackTimer_30)); }
+	inline Timer_t4185932343 * get__attackTimer_30() const { return ____attackTimer_30; }
+	inline Timer_t4185932343 ** get_address_of__attackTimer_30() { return &____attackTimer_30; }
+	inline void set__attackTimer_30(Timer_t4185932343 * value)
+	{
+		____attackTimer_30 = value;
+		Il2CppCodeGenWriteBarrier((&____attackTimer_30), value);
+	}
+
+	inline static int32_t get_offset_of_deadSceneList_32() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ___deadSceneList_32)); }
+	inline List_1_t1540077199 * get_deadSceneList_32() const { return ___deadSceneList_32; }
+	inline List_1_t1540077199 ** get_address_of_deadSceneList_32() { return &___deadSceneList_32; }
+	inline void set_deadSceneList_32(List_1_t1540077199 * value)
+	{
+		___deadSceneList_32 = value;
+		Il2CppCodeGenWriteBarrier((&___deadSceneList_32), value);
+	}
+
+	inline static int32_t get_offset_of__currentDeadSceneBuf_33() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____currentDeadSceneBuf_33)); }
+	inline BlueStarBuf_t3238403697 * get__currentDeadSceneBuf_33() const { return ____currentDeadSceneBuf_33; }
+	inline BlueStarBuf_t3238403697 ** get_address_of__currentDeadSceneBuf_33() { return &____currentDeadSceneBuf_33; }
+	inline void set__currentDeadSceneBuf_33(BlueStarBuf_t3238403697 * value)
+	{
+		____currentDeadSceneBuf_33 = value;
+		Il2CppCodeGenWriteBarrier((&____currentDeadSceneBuf_33), value);
+	}
+
+	inline static int32_t get_offset_of__readyForEscape_34() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____readyForEscape_34)); }
+	inline bool get__readyForEscape_34() const { return ____readyForEscape_34; }
+	inline bool* get_address_of__readyForEscape_34() { return &____readyForEscape_34; }
+	inline void set__readyForEscape_34(bool value)
+	{
+		____readyForEscape_34 = value;
+	}
+
+	inline static int32_t get_offset_of__backGroundLoop_35() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455, ____backGroundLoop_35)); }
+	inline SoundEffectPlayer_t3998987779 * get__backGroundLoop_35() const { return ____backGroundLoop_35; }
+	inline SoundEffectPlayer_t3998987779 ** get_address_of__backGroundLoop_35() { return &____backGroundLoop_35; }
+	inline void set__backGroundLoop_35(SoundEffectPlayer_t3998987779 * value)
+	{
+		____backGroundLoop_35 = value;
+		Il2CppCodeGenWriteBarrier((&____backGroundLoop_35), value);
+	}
+};
+
+struct BlueStar_t1520383455_StaticFields
+{
+public:
+	// DamageInfo BlueStar::_damageInfo
+	DamageInfo_t1138602084 * ____damageInfo_31;
+
+public:
+	inline static int32_t get_offset_of__damageInfo_31() { return static_cast<int32_t>(offsetof(BlueStar_t1520383455_StaticFields, ____damageInfo_31)); }
+	inline DamageInfo_t1138602084 * get__damageInfo_31() const { return ____damageInfo_31; }
+	inline DamageInfo_t1138602084 ** get_address_of__damageInfo_31() { return &____damageInfo_31; }
+	inline void set__damageInfo_31(DamageInfo_t1138602084 * value)
+	{
+		____damageInfo_31 = value;
+		Il2CppCodeGenWriteBarrier((&____damageInfo_31), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLUESTAR_T1520383455_H
+#ifndef BLUESTARARMOR_T2212563421_H
+#define BLUESTARARMOR_T2212563421_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlueStarArmor
+struct  BlueStarArmor_t2212563421  : public EquipmentScriptBase_t138799995
+{
+public:
+	// Timer BlueStarArmor::mpHealTimer
+	Timer_t4185932343 * ___mpHealTimer_3;
+	// WorkerModel BlueStarArmor::worker
+	WorkerModel_t68002457 * ___worker_6;
+
+public:
+	inline static int32_t get_offset_of_mpHealTimer_3() { return static_cast<int32_t>(offsetof(BlueStarArmor_t2212563421, ___mpHealTimer_3)); }
+	inline Timer_t4185932343 * get_mpHealTimer_3() const { return ___mpHealTimer_3; }
+	inline Timer_t4185932343 ** get_address_of_mpHealTimer_3() { return &___mpHealTimer_3; }
+	inline void set_mpHealTimer_3(Timer_t4185932343 * value)
+	{
+		___mpHealTimer_3 = value;
+		Il2CppCodeGenWriteBarrier((&___mpHealTimer_3), value);
+	}
+
+	inline static int32_t get_offset_of_worker_6() { return static_cast<int32_t>(offsetof(BlueStarArmor_t2212563421, ___worker_6)); }
+	inline WorkerModel_t68002457 * get_worker_6() const { return ___worker_6; }
+	inline WorkerModel_t68002457 ** get_address_of_worker_6() { return &___worker_6; }
+	inline void set_worker_6(WorkerModel_t68002457 * value)
+	{
+		___worker_6 = value;
+		Il2CppCodeGenWriteBarrier((&___worker_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLUESTARARMOR_T2212563421_H
+#ifndef PANICREADY_T3879345867_H
+#define PANICREADY_T3879345867_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PanicReady
+struct  PanicReady_t3879345867  : public PanicAction_t991841215
+{
+public:
+	// WorkerModel PanicReady::actor
+	WorkerModel_t68002457 * ___actor_0;
+	// System.Single PanicReady::elapsedTime
+	float ___elapsedTime_1;
+	// System.Single PanicReady::waitTime
+	float ___waitTime_2;
+
+public:
+	inline static int32_t get_offset_of_actor_0() { return static_cast<int32_t>(offsetof(PanicReady_t3879345867, ___actor_0)); }
+	inline WorkerModel_t68002457 * get_actor_0() const { return ___actor_0; }
+	inline WorkerModel_t68002457 ** get_address_of_actor_0() { return &___actor_0; }
+	inline void set_actor_0(WorkerModel_t68002457 * value)
+	{
+		___actor_0 = value;
+		Il2CppCodeGenWriteBarrier((&___actor_0), value);
+	}
+
+	inline static int32_t get_offset_of_elapsedTime_1() { return static_cast<int32_t>(offsetof(PanicReady_t3879345867, ___elapsedTime_1)); }
+	inline float get_elapsedTime_1() const { return ___elapsedTime_1; }
+	inline float* get_address_of_elapsedTime_1() { return &___elapsedTime_1; }
+	inline void set_elapsedTime_1(float value)
+	{
+		___elapsedTime_1 = value;
+	}
+
+	inline static int32_t get_offset_of_waitTime_2() { return static_cast<int32_t>(offsetof(PanicReady_t3879345867, ___waitTime_2)); }
+	inline float get_waitTime_2() const { return ___waitTime_2; }
+	inline float* get_address_of_waitTime_2() { return &___waitTime_2; }
+	inline void set_waitTime_2(float value)
+	{
+		___waitTime_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PANICREADY_T3879345867_H
+#ifndef COLOR_T2555686324_H
+#define COLOR_T2555686324_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Color
+struct  Color_t2555686324 
+{
+public:
+	// System.Single UnityEngine.Color::r
+	float ___r_0;
+	// System.Single UnityEngine.Color::g
+	float ___g_1;
+	// System.Single UnityEngine.Color::b
+	float ___b_2;
+	// System.Single UnityEngine.Color::a
+	float ___a_3;
+
+public:
+	inline static int32_t get_offset_of_r_0() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___r_0)); }
+	inline float get_r_0() const { return ___r_0; }
+	inline float* get_address_of_r_0() { return &___r_0; }
+	inline void set_r_0(float value)
+	{
+		___r_0 = value;
+	}
+
+	inline static int32_t get_offset_of_g_1() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___g_1)); }
+	inline float get_g_1() const { return ___g_1; }
+	inline float* get_address_of_g_1() { return &___g_1; }
+	inline void set_g_1(float value)
+	{
+		___g_1 = value;
+	}
+
+	inline static int32_t get_offset_of_b_2() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___b_2)); }
+	inline float get_b_2() const { return ___b_2; }
+	inline float* get_address_of_b_2() { return &___b_2; }
+	inline void set_b_2(float value)
+	{
+		___b_2 = value;
+	}
+
+	inline static int32_t get_offset_of_a_3() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___a_3)); }
+	inline float get_a_3() const { return ___a_3; }
+	inline float* get_address_of_a_3() { return &___a_3; }
+	inline void set_a_3(float value)
+	{
+		___a_3 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLOR_T2555686324_H
+#ifndef VECTOR3_T3722313464_H
+#define VECTOR3_T3722313464_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Vector3
+struct  Vector3_t3722313464 
+{
+public:
+	// System.Single UnityEngine.Vector3::x
+	float ___x_1;
+	// System.Single UnityEngine.Vector3::y
+	float ___y_2;
+	// System.Single UnityEngine.Vector3::z
+	float ___z_3;
+
+public:
+	inline static int32_t get_offset_of_x_1() { return static_cast<int32_t>(offsetof(Vector3_t3722313464, ___x_1)); }
+	inline float get_x_1() const { return ___x_1; }
+	inline float* get_address_of_x_1() { return &___x_1; }
+	inline void set_x_1(float value)
+	{
+		___x_1 = value;
+	}
+
+	inline static int32_t get_offset_of_y_2() { return static_cast<int32_t>(offsetof(Vector3_t3722313464, ___y_2)); }
+	inline float get_y_2() const { return ___y_2; }
+	inline float* get_address_of_y_2() { return &___y_2; }
+	inline void set_y_2(float value)
+	{
+		___y_2 = value;
+	}
+
+	inline static int32_t get_offset_of_z_3() { return static_cast<int32_t>(offsetof(Vector3_t3722313464, ___z_3)); }
+	inline float get_z_3() const { return ___z_3; }
+	inline float* get_address_of_z_3() { return &___z_3; }
+	inline void set_z_3(float value)
+	{
+		___z_3 = value;
+	}
+};
+
+struct Vector3_t3722313464_StaticFields
+{
+public:
+	// UnityEngine.Vector3 UnityEngine.Vector3::zeroVector
+	Vector3_t3722313464  ___zeroVector_4;
+	// UnityEngine.Vector3 UnityEngine.Vector3::oneVector
+	Vector3_t3722313464  ___oneVector_5;
+	// UnityEngine.Vector3 UnityEngine.Vector3::upVector
+	Vector3_t3722313464  ___upVector_6;
+	// UnityEngine.Vector3 UnityEngine.Vector3::downVector
+	Vector3_t3722313464  ___downVector_7;
+	// UnityEngine.Vector3 UnityEngine.Vector3::leftVector
+	Vector3_t3722313464  ___leftVector_8;
+	// UnityEngine.Vector3 UnityEngine.Vector3::rightVector
+	Vector3_t3722313464  ___rightVector_9;
+	// UnityEngine.Vector3 UnityEngine.Vector3::forwardVector
+	Vector3_t3722313464  ___forwardVector_10;
+	// UnityEngine.Vector3 UnityEngine.Vector3::backVector
+	Vector3_t3722313464  ___backVector_11;
+	// UnityEngine.Vector3 UnityEngine.Vector3::positiveInfinityVector
+	Vector3_t3722313464  ___positiveInfinityVector_12;
+	// UnityEngine.Vector3 UnityEngine.Vector3::negativeInfinityVector
+	Vector3_t3722313464  ___negativeInfinityVector_13;
+
+public:
+	inline static int32_t get_offset_of_zeroVector_4() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___zeroVector_4)); }
+	inline Vector3_t3722313464  get_zeroVector_4() const { return ___zeroVector_4; }
+	inline Vector3_t3722313464 * get_address_of_zeroVector_4() { return &___zeroVector_4; }
+	inline void set_zeroVector_4(Vector3_t3722313464  value)
+	{
+		___zeroVector_4 = value;
+	}
+
+	inline static int32_t get_offset_of_oneVector_5() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___oneVector_5)); }
+	inline Vector3_t3722313464  get_oneVector_5() const { return ___oneVector_5; }
+	inline Vector3_t3722313464 * get_address_of_oneVector_5() { return &___oneVector_5; }
+	inline void set_oneVector_5(Vector3_t3722313464  value)
+	{
+		___oneVector_5 = value;
+	}
+
+	inline static int32_t get_offset_of_upVector_6() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___upVector_6)); }
+	inline Vector3_t3722313464  get_upVector_6() const { return ___upVector_6; }
+	inline Vector3_t3722313464 * get_address_of_upVector_6() { return &___upVector_6; }
+	inline void set_upVector_6(Vector3_t3722313464  value)
+	{
+		___upVector_6 = value;
+	}
+
+	inline static int32_t get_offset_of_downVector_7() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___downVector_7)); }
+	inline Vector3_t3722313464  get_downVector_7() const { return ___downVector_7; }
+	inline Vector3_t3722313464 * get_address_of_downVector_7() { return &___downVector_7; }
+	inline void set_downVector_7(Vector3_t3722313464  value)
+	{
+		___downVector_7 = value;
+	}
+
+	inline static int32_t get_offset_of_leftVector_8() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___leftVector_8)); }
+	inline Vector3_t3722313464  get_leftVector_8() const { return ___leftVector_8; }
+	inline Vector3_t3722313464 * get_address_of_leftVector_8() { return &___leftVector_8; }
+	inline void set_leftVector_8(Vector3_t3722313464  value)
+	{
+		___leftVector_8 = value;
+	}
+
+	inline static int32_t get_offset_of_rightVector_9() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___rightVector_9)); }
+	inline Vector3_t3722313464  get_rightVector_9() const { return ___rightVector_9; }
+	inline Vector3_t3722313464 * get_address_of_rightVector_9() { return &___rightVector_9; }
+	inline void set_rightVector_9(Vector3_t3722313464  value)
+	{
+		___rightVector_9 = value;
+	}
+
+	inline static int32_t get_offset_of_forwardVector_10() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___forwardVector_10)); }
+	inline Vector3_t3722313464  get_forwardVector_10() const { return ___forwardVector_10; }
+	inline Vector3_t3722313464 * get_address_of_forwardVector_10() { return &___forwardVector_10; }
+	inline void set_forwardVector_10(Vector3_t3722313464  value)
+	{
+		___forwardVector_10 = value;
+	}
+
+	inline static int32_t get_offset_of_backVector_11() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___backVector_11)); }
+	inline Vector3_t3722313464  get_backVector_11() const { return ___backVector_11; }
+	inline Vector3_t3722313464 * get_address_of_backVector_11() { return &___backVector_11; }
+	inline void set_backVector_11(Vector3_t3722313464  value)
+	{
+		___backVector_11 = value;
+	}
+
+	inline static int32_t get_offset_of_positiveInfinityVector_12() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___positiveInfinityVector_12)); }
+	inline Vector3_t3722313464  get_positiveInfinityVector_12() const { return ___positiveInfinityVector_12; }
+	inline Vector3_t3722313464 * get_address_of_positiveInfinityVector_12() { return &___positiveInfinityVector_12; }
+	inline void set_positiveInfinityVector_12(Vector3_t3722313464  value)
+	{
+		___positiveInfinityVector_12 = value;
+	}
+
+	inline static int32_t get_offset_of_negativeInfinityVector_13() { return static_cast<int32_t>(offsetof(Vector3_t3722313464_StaticFields, ___negativeInfinityVector_13)); }
+	inline Vector3_t3722313464  get_negativeInfinityVector_13() const { return ___negativeInfinityVector_13; }
+	inline Vector3_t3722313464 * get_address_of_negativeInfinityVector_13() { return &___negativeInfinityVector_13; }
+	inline void set_negativeInfinityVector_13(Vector3_t3722313464  value)
+	{
+		___negativeInfinityVector_13 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VECTOR3_T3722313464_H
+#ifndef SINGLE_T1397266774_H
+#define SINGLE_T1397266774_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Single
+struct  Single_t1397266774 
+{
+public:
+	// System.Single System.Single::m_value
+	float ___m_value_7;
+
+public:
+	inline static int32_t get_offset_of_m_value_7() { return static_cast<int32_t>(offsetof(Single_t1397266774, ___m_value_7)); }
+	inline float get_m_value_7() const { return ___m_value_7; }
+	inline float* get_address_of_m_value_7() { return &___m_value_7; }
+	inline void set_m_value_7(float value)
+	{
+		___m_value_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SINGLE_T1397266774_H
 #ifndef BIGTREESAP_T343212000_H
 #define BIGTREESAP_T343212000_H
 #ifdef __clang__
@@ -2719,114 +2649,51 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BIGTREESAP_T343212000_H
-#ifndef BLOODBATHWEAPON_T2540479810_H
-#define BLOODBATHWEAPON_T2540479810_H
+#ifndef INTPTR_T_H
+#define INTPTR_T_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BloodBathWeapon
-struct  BloodBathWeapon_t2540479810  : public EquipmentScriptBase_t138799995
+// System.IntPtr
+struct  IntPtr_t 
 {
 public:
+	// System.Void* System.IntPtr::m_value
+	void* ___m_value_0;
 
 public:
+	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(IntPtr_t, ___m_value_0)); }
+	inline void* get_m_value_0() const { return ___m_value_0; }
+	inline void** get_address_of_m_value_0() { return &___m_value_0; }
+	inline void set_m_value_0(void* value)
+	{
+		___m_value_0 = value;
+	}
 };
 
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOODBATHWEAPON_T2540479810_H
-#ifndef BLACKSWANARMOR_T1047635694_H
-#define BLACKSWANARMOR_T1047635694_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlackSwanArmor
-struct  BlackSwanArmor_t1047635694  : public EquipmentScriptBase_t138799995
+struct IntPtr_t_StaticFields
 {
 public:
-	// System.Boolean BlackSwanArmor::_LOG_STATE
-	bool ____LOG_STATE_3;
+	// System.IntPtr System.IntPtr::Zero
+	intptr_t ___Zero_1;
 
 public:
-	inline static int32_t get_offset_of__LOG_STATE_3() { return static_cast<int32_t>(offsetof(BlackSwanArmor_t1047635694, ____LOG_STATE_3)); }
-	inline bool get__LOG_STATE_3() const { return ____LOG_STATE_3; }
-	inline bool* get_address_of__LOG_STATE_3() { return &____LOG_STATE_3; }
-	inline void set__LOG_STATE_3(bool value)
+	inline static int32_t get_offset_of_Zero_1() { return static_cast<int32_t>(offsetof(IntPtr_t_StaticFields, ___Zero_1)); }
+	inline intptr_t get_Zero_1() const { return ___Zero_1; }
+	inline intptr_t* get_address_of_Zero_1() { return &___Zero_1; }
+	inline void set_Zero_1(intptr_t value)
 	{
-		____LOG_STATE_3 = value;
+		___Zero_1 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLACKSWANARMOR_T1047635694_H
-#ifndef BLUESTARWEAPON_T4161198720_H
-#define BLUESTARWEAPON_T4161198720_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlueStarWeapon
-struct  BlueStarWeapon_t4161198720  : public EquipmentScriptBase_t138799995
-{
-public:
-	// WorkerModel BlueStarWeapon::_worker
-	WorkerModel_t68002457 * ____worker_8;
-
-public:
-	inline static int32_t get_offset_of__worker_8() { return static_cast<int32_t>(offsetof(BlueStarWeapon_t4161198720, ____worker_8)); }
-	inline WorkerModel_t68002457 * get__worker_8() const { return ____worker_8; }
-	inline WorkerModel_t68002457 ** get_address_of__worker_8() { return &____worker_8; }
-	inline void set__worker_8(WorkerModel_t68002457 * value)
-	{
-		____worker_8 = value;
-		Il2CppCodeGenWriteBarrier((&____worker_8), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUESTARWEAPON_T4161198720_H
-#ifndef BLOODBATHARMOR_T1390383298_H
-#define BLOODBATHARMOR_T1390383298_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BloodBathArmor
-struct  BloodBathArmor_t1390383298  : public EquipmentScriptBase_t138799995
-{
-public:
-	// System.Boolean BloodBathArmor::_LOG_STATE
-	bool ____LOG_STATE_3;
-
-public:
-	inline static int32_t get_offset_of__LOG_STATE_3() { return static_cast<int32_t>(offsetof(BloodBathArmor_t1390383298, ____LOG_STATE_3)); }
-	inline bool get__LOG_STATE_3() const { return ____LOG_STATE_3; }
-	inline bool* get_address_of__LOG_STATE_3() { return &____LOG_STATE_3; }
-	inline void set__LOG_STATE_3(bool value)
-	{
-		____LOG_STATE_3 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOODBATHARMOR_T1390383298_H
+#endif // INTPTR_T_H
 #ifndef VECTOR2_T2156229523_H
 #define VECTOR2_T2156229523_H
 #ifdef __clang__
@@ -2952,132 +2819,117 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VECTOR2_T2156229523_H
-#ifndef BLACKSWAN_T2528739092_H
-#define BLACKSWAN_T2528739092_H
+#ifndef VOID_T1185182177_H
+#define VOID_T1185182177_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlackSwan
-struct  BlackSwan_t2528739092  : public CreatureBase_t2806596028
+// System.Void
+struct  Void_t1185182177 
 {
 public:
-	// System.Collections.Generic.List`1<System.Int32> BlackSwan::brothersCurrent
-	List_1_t128053199 * ___brothersCurrent_16;
-	// ChildCreatureModel BlackSwan::sister
-	ChildCreatureModel_t1247069626 * ___sister_17;
-	// System.Int32 BlackSwan::transformTarget
-	int32_t ___transformTarget_18;
-	// System.Int32 BlackSwan::workerDieCurrent
-	int32_t ___workerDieCurrent_19;
-	// System.Int32 BlackSwan::workerPanicCurrent
-	int32_t ___workerPanicCurrent_20;
-	// System.Int32 BlackSwan::creatureEscapeCurrent
-	int32_t ___creatureEscapeCurrent_21;
-	// BlackSwanAnim BlackSwan::_animScript
-	BlackSwanAnim_t1899114408 * ____animScript_22;
 
 public:
-	inline static int32_t get_offset_of_brothersCurrent_16() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___brothersCurrent_16)); }
-	inline List_1_t128053199 * get_brothersCurrent_16() const { return ___brothersCurrent_16; }
-	inline List_1_t128053199 ** get_address_of_brothersCurrent_16() { return &___brothersCurrent_16; }
-	inline void set_brothersCurrent_16(List_1_t128053199 * value)
-	{
-		___brothersCurrent_16 = value;
-		Il2CppCodeGenWriteBarrier((&___brothersCurrent_16), value);
-	}
-
-	inline static int32_t get_offset_of_sister_17() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___sister_17)); }
-	inline ChildCreatureModel_t1247069626 * get_sister_17() const { return ___sister_17; }
-	inline ChildCreatureModel_t1247069626 ** get_address_of_sister_17() { return &___sister_17; }
-	inline void set_sister_17(ChildCreatureModel_t1247069626 * value)
-	{
-		___sister_17 = value;
-		Il2CppCodeGenWriteBarrier((&___sister_17), value);
-	}
-
-	inline static int32_t get_offset_of_transformTarget_18() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___transformTarget_18)); }
-	inline int32_t get_transformTarget_18() const { return ___transformTarget_18; }
-	inline int32_t* get_address_of_transformTarget_18() { return &___transformTarget_18; }
-	inline void set_transformTarget_18(int32_t value)
-	{
-		___transformTarget_18 = value;
-	}
-
-	inline static int32_t get_offset_of_workerDieCurrent_19() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___workerDieCurrent_19)); }
-	inline int32_t get_workerDieCurrent_19() const { return ___workerDieCurrent_19; }
-	inline int32_t* get_address_of_workerDieCurrent_19() { return &___workerDieCurrent_19; }
-	inline void set_workerDieCurrent_19(int32_t value)
-	{
-		___workerDieCurrent_19 = value;
-	}
-
-	inline static int32_t get_offset_of_workerPanicCurrent_20() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___workerPanicCurrent_20)); }
-	inline int32_t get_workerPanicCurrent_20() const { return ___workerPanicCurrent_20; }
-	inline int32_t* get_address_of_workerPanicCurrent_20() { return &___workerPanicCurrent_20; }
-	inline void set_workerPanicCurrent_20(int32_t value)
-	{
-		___workerPanicCurrent_20 = value;
-	}
-
-	inline static int32_t get_offset_of_creatureEscapeCurrent_21() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ___creatureEscapeCurrent_21)); }
-	inline int32_t get_creatureEscapeCurrent_21() const { return ___creatureEscapeCurrent_21; }
-	inline int32_t* get_address_of_creatureEscapeCurrent_21() { return &___creatureEscapeCurrent_21; }
-	inline void set_creatureEscapeCurrent_21(int32_t value)
-	{
-		___creatureEscapeCurrent_21 = value;
-	}
-
-	inline static int32_t get_offset_of__animScript_22() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092, ____animScript_22)); }
-	inline BlackSwanAnim_t1899114408 * get__animScript_22() const { return ____animScript_22; }
-	inline BlackSwanAnim_t1899114408 ** get_address_of__animScript_22() { return &____animScript_22; }
-	inline void set__animScript_22(BlackSwanAnim_t1899114408 * value)
-	{
-		____animScript_22 = value;
-		Il2CppCodeGenWriteBarrier((&____animScript_22), value);
-	}
 };
 
-struct BlackSwan_t2528739092_StaticFields
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VOID_T1185182177_H
+#ifndef ENUM_T4135868527_H
+#define ENUM_T4135868527_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Enum
+struct  Enum_t4135868527  : public ValueType_t3640485471
 {
 public:
-	// System.Int32[] BlackSwan::brothersDefault
-	Int32U5BU5D_t385246372* ___brothersDefault_11;
 
 public:
-	inline static int32_t get_offset_of_brothersDefault_11() { return static_cast<int32_t>(offsetof(BlackSwan_t2528739092_StaticFields, ___brothersDefault_11)); }
-	inline Int32U5BU5D_t385246372* get_brothersDefault_11() const { return ___brothersDefault_11; }
-	inline Int32U5BU5D_t385246372** get_address_of_brothersDefault_11() { return &___brothersDefault_11; }
-	inline void set_brothersDefault_11(Int32U5BU5D_t385246372* value)
+};
+
+struct Enum_t4135868527_StaticFields
+{
+public:
+	// System.Char[] System.Enum::split_char
+	CharU5BU5D_t3528271667* ___split_char_0;
+
+public:
+	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
+	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
+	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
+	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
 	{
-		___brothersDefault_11 = value;
-		Il2CppCodeGenWriteBarrier((&___brothersDefault_11), value);
+		___split_char_0 = value;
+		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLACKSWAN_T2528739092_H
-#ifndef BLACKCORPANIMKEY_T1764443065_H
-#define BLACKCORPANIMKEY_T1764443065_H
+// Native definition for P/Invoke marshalling of System.Enum
+struct Enum_t4135868527_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.Enum
+struct Enum_t4135868527_marshaled_com
+{
+};
+#endif // ENUM_T4135868527_H
+#ifndef INT32_T2950945753_H
+#define INT32_T2950945753_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlackCorpsAnim/BlackCorpAnimKey
-struct  BlackCorpAnimKey_t1764443065 
+// System.Int32
+struct  Int32_t2950945753 
 {
 public:
-	// System.Int32 BlackCorpsAnim/BlackCorpAnimKey::value__
+	// System.Int32 System.Int32::m_value
+	int32_t ___m_value_2;
+
+public:
+	inline static int32_t get_offset_of_m_value_2() { return static_cast<int32_t>(offsetof(Int32_t2950945753, ___m_value_2)); }
+	inline int32_t get_m_value_2() const { return ___m_value_2; }
+	inline int32_t* get_address_of_m_value_2() { return &___m_value_2; }
+	inline void set_m_value_2(int32_t value)
+	{
+		___m_value_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // INT32_T2950945753_H
+#ifndef BLOODHANDSTATE_T1645516697_H
+#define BLOODHANDSTATE_T1645516697_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BloodBath/BloodHandState
+struct  BloodHandState_t1645516697 
+{
+public:
+	// System.Int32 BloodBath/BloodHandState::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BlackCorpAnimKey_t1764443065, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BloodHandState_t1645516697, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -3089,7 +2941,65 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLACKCORPANIMKEY_T1764443065_H
+#endif // BLOODHANDSTATE_T1645516697_H
+#ifndef STANDINGITEMSTATE_T2914310941_H
+#define STANDINGITEMSTATE_T2914310941_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// StandingItemScriptBase/StandingItemState
+struct  StandingItemState_t2914310941 
+{
+public:
+	// System.Int32 StandingItemScriptBase/StandingItemState::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(StandingItemState_t2914310941, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // STANDINGITEMSTATE_T2914310941_H
+#ifndef SEFIRABOSSCLOSEEFFECTTYPE_T4115439613_H
+#define SEFIRABOSSCLOSEEFFECTTYPE_T4115439613_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// SefiraBossCloseEffectType
+struct  SefiraBossCloseEffectType_t4115439613 
+{
+public:
+	// System.Int32 SefiraBossCloseEffectType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(SefiraBossCloseEffectType_t4115439613, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SEFIRABOSSCLOSEEFFECTTYPE_T4115439613_H
 #ifndef OBJECT_T631007953_H
 #define OBJECT_T631007953_H
 #ifdef __clang__
@@ -3145,23 +3055,52 @@ struct Object_t631007953_marshaled_com
 	intptr_t ___m_CachedPtr_0;
 };
 #endif // OBJECT_T631007953_H
-#ifndef BLOODHANDSTATE_T1645516697_H
-#define BLOODHANDSTATE_T1645516697_H
+#ifndef OBJECTMODELBASE_T2326874531_H
+#define OBJECTMODELBASE_T2326874531_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BloodBath/BloodHandState
-struct  BloodHandState_t1645516697 
+// ObjectModelBase
+struct  ObjectModelBase_t2326874531  : public RuntimeObject
 {
 public:
-	// System.Int32 BloodBath/BloodHandState::value__
+	// UnityEngine.Vector3 ObjectModelBase::position
+	Vector3_t3722313464  ___position_0;
+
+public:
+	inline static int32_t get_offset_of_position_0() { return static_cast<int32_t>(offsetof(ObjectModelBase_t2326874531, ___position_0)); }
+	inline Vector3_t3722313464  get_position_0() const { return ___position_0; }
+	inline Vector3_t3722313464 * get_address_of_position_0() { return &___position_0; }
+	inline void set_position_0(Vector3_t3722313464  value)
+	{
+		___position_0 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // OBJECTMODELBASE_T2326874531_H
+#ifndef RANDOMEVENTTYPE_T3291016122_H
+#define RANDOMEVENTTYPE_T3291016122_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// RandomEventType
+struct  RandomEventType_t3291016122 
+{
+public:
+	// System.Int32 RandomEventType::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BloodHandState_t1645516697, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(RandomEventType_t3291016122, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -3173,37 +3112,94 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLOODHANDSTATE_T1645516697_H
-#ifndef BLACKLOVEPANICREADY_T942319231_H
-#define BLACKLOVEPANICREADY_T942319231_H
+#endif // RANDOMEVENTTYPE_T3291016122_H
+#ifndef RANDOMEVENTRANK_T1320122848_H
+#define RANDOMEVENTRANK_T1320122848_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlackLovePanicReady
-struct  BlackLovePanicReady_t942319231  : public PanicReady_t3879345867
+// RandomEventRank
+struct  RandomEventRank_t1320122848 
 {
 public:
-	// BlackLoveBuf BlackLovePanicReady::buf
-	BlackLoveBuf_t2230612843 * ___buf_3;
+	// System.Int32 RandomEventRank::value__
+	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_buf_3() { return static_cast<int32_t>(offsetof(BlackLovePanicReady_t942319231, ___buf_3)); }
-	inline BlackLoveBuf_t2230612843 * get_buf_3() const { return ___buf_3; }
-	inline BlackLoveBuf_t2230612843 ** get_address_of_buf_3() { return &___buf_3; }
-	inline void set_buf_3(BlackLoveBuf_t2230612843 * value)
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(RandomEventRank_t1320122848, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
 	{
-		___buf_3 = value;
-		Il2CppCodeGenWriteBarrier((&___buf_3), value);
+		___value___1 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLACKLOVEPANICREADY_T942319231_H
+#endif // RANDOMEVENTRANK_T1320122848_H
+#ifndef UIEFFECTTYPE_T3011595914_H
+#define UIEFFECTTYPE_T3011595914_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UIEffectType
+struct  UIEffectType_t3011595914 
+{
+public:
+	// System.Int32 UIEffectType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(UIEffectType_t3011595914, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // UIEFFECTTYPE_T3011595914_H
+#ifndef ATTACKTYPE_T2105357378_H
+#define ATTACKTYPE_T2105357378_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BossBird/AttackType
+struct  AttackType_t2105357378 
+{
+public:
+	// System.Int32 BossBird/AttackType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(AttackType_t2105357378, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ATTACKTYPE_T2105357378_H
 #ifndef BLACKSWANWEAPON_T310572856_H
 #define BLACKSWANWEAPON_T310572856_H
 #ifdef __clang__
@@ -3233,23 +3229,73 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLACKSWANWEAPON_T310572856_H
-#ifndef STATE_T3441236063_H
-#define STATE_T3441236063_H
+#ifndef LASERATTACKTARGETDATA_T1450381514_H
+#define LASERATTACKTARGETDATA_T1450381514_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlueStarAttackEffect/State
-struct  State_t3441236063 
+// BossBird/LaserAttackTargetData
+struct  LaserAttackTargetData_t1450381514  : public RuntimeObject
 {
 public:
-	// System.Int32 BlueStarAttackEffect/State::value__
+	// UnitModel BossBird/LaserAttackTargetData::unit
+	UnitModel_t1924672552 * ___unit_0;
+	// System.Int32 BossBird/LaserAttackTargetData::DamageCount
+	int32_t ___DamageCount_1;
+	// UnityEngine.Vector2 BossBird/LaserAttackTargetData::savedPosition
+	Vector2_t2156229523  ___savedPosition_2;
+
+public:
+	inline static int32_t get_offset_of_unit_0() { return static_cast<int32_t>(offsetof(LaserAttackTargetData_t1450381514, ___unit_0)); }
+	inline UnitModel_t1924672552 * get_unit_0() const { return ___unit_0; }
+	inline UnitModel_t1924672552 ** get_address_of_unit_0() { return &___unit_0; }
+	inline void set_unit_0(UnitModel_t1924672552 * value)
+	{
+		___unit_0 = value;
+		Il2CppCodeGenWriteBarrier((&___unit_0), value);
+	}
+
+	inline static int32_t get_offset_of_DamageCount_1() { return static_cast<int32_t>(offsetof(LaserAttackTargetData_t1450381514, ___DamageCount_1)); }
+	inline int32_t get_DamageCount_1() const { return ___DamageCount_1; }
+	inline int32_t* get_address_of_DamageCount_1() { return &___DamageCount_1; }
+	inline void set_DamageCount_1(int32_t value)
+	{
+		___DamageCount_1 = value;
+	}
+
+	inline static int32_t get_offset_of_savedPosition_2() { return static_cast<int32_t>(offsetof(LaserAttackTargetData_t1450381514, ___savedPosition_2)); }
+	inline Vector2_t2156229523  get_savedPosition_2() const { return ___savedPosition_2; }
+	inline Vector2_t2156229523 * get_address_of_savedPosition_2() { return &___savedPosition_2; }
+	inline void set_savedPosition_2(Vector2_t2156229523  value)
+	{
+		___savedPosition_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // LASERATTACKTARGETDATA_T1450381514_H
+#ifndef SEFIRAENUM_T3183533876_H
+#define SEFIRAENUM_T3183533876_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// SefiraEnum
+struct  SefiraEnum_t3183533876 
+{
+public:
+	// System.Int32 SefiraEnum::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(State_t3441236063, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(SefiraEnum_t3183533876, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -3261,7 +3307,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // STATE_T3441236063_H
+#endif // SEFIRAENUM_T3183533876_H
 #ifndef TRANSTYPE_T1918598211_H
 #define TRANSTYPE_T1918598211_H
 #ifdef __clang__
@@ -3291,6 +3337,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TRANSTYPE_T1918598211_H
+#ifndef OVERLOADTYPE_T818443729_H
+#define OVERLOADTYPE_T818443729_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// OverloadType
+struct  OverloadType_t818443729 
+{
+public:
+	// System.Int32 OverloadType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(OverloadType_t818443729, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // OVERLOADTYPE_T818443729_H
 #ifndef CIRCUSTYPE_T2448010458_H
 #define CIRCUSTYPE_T2448010458_H
 #ifdef __clang__
@@ -3320,23 +3395,23 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CIRCUSTYPE_T2448010458_H
-#ifndef OTHERBIRDSTATE_T1183347057_H
-#define OTHERBIRDSTATE_T1183347057_H
+#ifndef STATE_T3441236063_H
+#define STATE_T3441236063_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BossBird/OtherBirdState
-struct  OtherBirdState_t1183347057 
+// BlueStarAttackEffect/State
+struct  State_t3441236063 
 {
 public:
-	// System.Int32 BossBird/OtherBirdState::value__
+	// System.Int32 BlueStarAttackEffect/State::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(OtherBirdState_t1183347057, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(State_t3441236063, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -3348,152 +3423,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // OTHERBIRDSTATE_T1183347057_H
-#ifndef BLIZZARDEFFECT_T4192872888_H
-#define BLIZZARDEFFECT_T4192872888_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBossBase/BlizzardEffect
-struct  BlizzardEffect_t4192872888 
-{
-public:
-	// System.Int32 BinahBossBase/BlizzardEffect::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BlizzardEffect_t4192872888, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLIZZARDEFFECT_T4192872888_H
-#ifndef SEFIRABOSSCLOSEEFFECTTYPE_T4115439613_H
-#define SEFIRABOSSCLOSEEFFECTTYPE_T4115439613_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// SefiraBossCloseEffectType
-struct  SefiraBossCloseEffectType_t4115439613 
-{
-public:
-	// System.Int32 SefiraBossCloseEffectType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(SefiraBossCloseEffectType_t4115439613, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SEFIRABOSSCLOSEEFFECTTYPE_T4115439613_H
-#ifndef BINAHDEFENSETYPE_T736151217_H
-#define BINAHDEFENSETYPE_T736151217_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahDefenseType
-struct  BinahDefenseType_t736151217 
-{
-public:
-	// System.Int32 BinahBoss.BinahDefenseType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahDefenseType_t736151217, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHDEFENSETYPE_T736151217_H
-#ifndef STANDINGITEMSTATE_T2914310941_H
-#define STANDINGITEMSTATE_T2914310941_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// StandingItemScriptBase/StandingItemState
-struct  StandingItemState_t2914310941 
-{
-public:
-	// System.Int32 StandingItemScriptBase/StandingItemState::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(StandingItemState_t2914310941, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // STANDINGITEMSTATE_T2914310941_H
-#ifndef UNITBUFTYPE_T3548990881_H
-#define UNITBUFTYPE_T3548990881_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnitBufType
-struct  UnitBufType_t3548990881 
-{
-public:
-	// System.Int32 UnitBufType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(UnitBufType_t3548990881, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UNITBUFTYPE_T3548990881_H
+#endif // STATE_T3441236063_H
 #ifndef BUFDUPLICATETYPE_T1028883288_H
 #define BUFDUPLICATETYPE_T1028883288_H
 #ifdef __clang__
@@ -3636,23 +3566,23 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DELEGATE_T1188392813_H
-#ifndef BINAHATTACKTYPE_T4230434193_H
-#define BINAHATTACKTYPE_T4230434193_H
+#ifndef UNITBUFTYPE_T3548990881_H
+#define UNITBUFTYPE_T3548990881_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.BinahAttackType
-struct  BinahAttackType_t4230434193 
+// UnitBufType
+struct  UnitBufType_t3548990881 
 {
 public:
-	// System.Int32 BinahBoss.BinahAttackType::value__
+	// System.Int32 UnitBufType::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahAttackType_t4230434193, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(UnitBufType_t3548990881, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -3664,297 +3594,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINAHATTACKTYPE_T4230434193_H
-#ifndef RANDOMEVENTTYPE_T3291016122_H
-#define RANDOMEVENTTYPE_T3291016122_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// RandomEventType
-struct  RandomEventType_t3291016122 
-{
-public:
-	// System.Int32 RandomEventType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(RandomEventType_t3291016122, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // RANDOMEVENTTYPE_T3291016122_H
-#ifndef RANDOMEVENTRANK_T1320122848_H
-#define RANDOMEVENTRANK_T1320122848_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// RandomEventRank
-struct  RandomEventRank_t1320122848 
-{
-public:
-	// System.Int32 RandomEventRank::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(RandomEventRank_t1320122848, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // RANDOMEVENTRANK_T1320122848_H
-#ifndef PHASE_T169838157_H
-#define PHASE_T169838157_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BigBirdAttractBuf/Phase
-struct  Phase_t169838157 
-{
-public:
-	// System.Int32 BigBirdAttractBuf/Phase::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(Phase_t169838157, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PHASE_T169838157_H
-#ifndef BINAHACTIONSTATE_T2598806875_H
-#define BINAHACTIONSTATE_T2598806875_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahActionState
-struct  BinahActionState_t2598806875 
-{
-public:
-	// System.Int32 BinahBoss.BinahActionState::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahActionState_t2598806875, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHACTIONSTATE_T2598806875_H
-#ifndef OBJECTMODELBASE_T2326874531_H
-#define OBJECTMODELBASE_T2326874531_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// ObjectModelBase
-struct  ObjectModelBase_t2326874531  : public RuntimeObject
-{
-public:
-	// UnityEngine.Vector3 ObjectModelBase::position
-	Vector3_t3722313464  ___position_0;
-
-public:
-	inline static int32_t get_offset_of_position_0() { return static_cast<int32_t>(offsetof(ObjectModelBase_t2326874531, ___position_0)); }
-	inline Vector3_t3722313464  get_position_0() const { return ___position_0; }
-	inline Vector3_t3722313464 * get_address_of_position_0() { return &___position_0; }
-	inline void set_position_0(Vector3_t3722313464  value)
-	{
-		___position_0 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // OBJECTMODELBASE_T2326874531_H
-#ifndef UIEFFECTTYPE_T3011595914_H
-#define UIEFFECTTYPE_T3011595914_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UIEffectType
-struct  UIEffectType_t3011595914 
-{
-public:
-	// System.Int32 UIEffectType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(UIEffectType_t3011595914, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UIEFFECTTYPE_T3011595914_H
-#ifndef BINAHPROJECTILETYPE_T4294231154_H
-#define BINAHPROJECTILETYPE_T4294231154_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahProjectileType
-struct  BinahProjectileType_t4294231154 
-{
-public:
-	// System.Int32 BinahBoss.BinahProjectileType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahProjectileType_t4294231154, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHPROJECTILETYPE_T4294231154_H
-#ifndef BINAHPHASE_T2331766339_H
-#define BINAHPHASE_T2331766339_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahPhase
-struct  BinahPhase_t2331766339 
-{
-public:
-	// System.Int32 BinahBoss.BinahPhase::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahPhase_t2331766339, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHPHASE_T2331766339_H
-#ifndef OVERLOADTYPE_T818443729_H
-#define OVERLOADTYPE_T818443729_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// OverloadType
-struct  OverloadType_t818443729 
-{
-public:
-	// System.Int32 OverloadType::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(OverloadType_t818443729, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // OVERLOADTYPE_T818443729_H
-#ifndef SEFIRAENUM_T3183533876_H
-#define SEFIRAENUM_T3183533876_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// SefiraEnum
-struct  SefiraEnum_t3183533876 
-{
-public:
-	// System.Int32 SefiraEnum::value__
-	int32_t ___value___1;
-
-public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(SefiraEnum_t3183533876, ___value___1)); }
-	inline int32_t get_value___1() const { return ___value___1; }
-	inline int32_t* get_address_of_value___1() { return &___value___1; }
-	inline void set_value___1(int32_t value)
-	{
-		___value___1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SEFIRAENUM_T3183533876_H
+#endif // UNITBUFTYPE_T3548990881_H
 #ifndef RWBPTYPE_T2982063136_H
 #define RWBPTYPE_T2982063136_H
 #ifdef __clang__
@@ -3984,6 +3624,64 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RWBPTYPE_T2982063136_H
+#ifndef PHASE_T2972993650_H
+#define PHASE_T2972993650_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BossBird/Phase
+struct  Phase_t2972993650 
+{
+public:
+	// System.Int32 BossBird/Phase::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(Phase_t2972993650, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PHASE_T2972993650_H
+#ifndef BLIZZARDEFFECT_T4192872888_H
+#define BLIZZARDEFFECT_T4192872888_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBossBase/BlizzardEffect
+struct  BlizzardEffect_t4192872888 
+{
+public:
+	// System.Int32 BinahBossBase/BlizzardEffect::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BlizzardEffect_t4192872888, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLIZZARDEFFECT_T4192872888_H
 #ifndef BINAHMOVESTATE_T431957044_H
 #define BINAHMOVESTATE_T431957044_H
 #ifdef __clang__
@@ -4013,47 +3711,249 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHMOVESTATE_T431957044_H
-#ifndef MULTICASTDELEGATE_T_H
-#define MULTICASTDELEGATE_T_H
+#ifndef BINAHPHASE_T2331766339_H
+#define BINAHPHASE_T2331766339_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t1188392813
+// BinahBoss.BinahPhase
+struct  BinahPhase_t2331766339 
 {
 public:
-	// System.MulticastDelegate System.MulticastDelegate::prev
-	MulticastDelegate_t * ___prev_9;
-	// System.MulticastDelegate System.MulticastDelegate::kpm_next
-	MulticastDelegate_t * ___kpm_next_10;
+	// System.Int32 BinahBoss.BinahPhase::value__
+	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_prev_9() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___prev_9)); }
-	inline MulticastDelegate_t * get_prev_9() const { return ___prev_9; }
-	inline MulticastDelegate_t ** get_address_of_prev_9() { return &___prev_9; }
-	inline void set_prev_9(MulticastDelegate_t * value)
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahPhase_t2331766339, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
 	{
-		___prev_9 = value;
-		Il2CppCodeGenWriteBarrier((&___prev_9), value);
-	}
-
-	inline static int32_t get_offset_of_kpm_next_10() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___kpm_next_10)); }
-	inline MulticastDelegate_t * get_kpm_next_10() const { return ___kpm_next_10; }
-	inline MulticastDelegate_t ** get_address_of_kpm_next_10() { return &___kpm_next_10; }
-	inline void set_kpm_next_10(MulticastDelegate_t * value)
-	{
-		___kpm_next_10 = value;
-		Il2CppCodeGenWriteBarrier((&___kpm_next_10), value);
+		___value___1 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // MULTICASTDELEGATE_T_H
+#endif // BINAHPHASE_T2331766339_H
+#ifndef BINAHACTIONSTATE_T2598806875_H
+#define BINAHACTIONSTATE_T2598806875_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahActionState
+struct  BinahActionState_t2598806875 
+{
+public:
+	// System.Int32 BinahBoss.BinahActionState::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahActionState_t2598806875, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHACTIONSTATE_T2598806875_H
+#ifndef BINAHPROJECTILETYPE_T4294231154_H
+#define BINAHPROJECTILETYPE_T4294231154_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahProjectileType
+struct  BinahProjectileType_t4294231154 
+{
+public:
+	// System.Int32 BinahBoss.BinahProjectileType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahProjectileType_t4294231154, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHPROJECTILETYPE_T4294231154_H
+#ifndef BLACKLOVEPANICREADY_T942319231_H
+#define BLACKLOVEPANICREADY_T942319231_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlackLovePanicReady
+struct  BlackLovePanicReady_t942319231  : public PanicReady_t3879345867
+{
+public:
+	// BlackLoveBuf BlackLovePanicReady::buf
+	BlackLoveBuf_t2230612843 * ___buf_3;
+
+public:
+	inline static int32_t get_offset_of_buf_3() { return static_cast<int32_t>(offsetof(BlackLovePanicReady_t942319231, ___buf_3)); }
+	inline BlackLoveBuf_t2230612843 * get_buf_3() const { return ___buf_3; }
+	inline BlackLoveBuf_t2230612843 ** get_address_of_buf_3() { return &___buf_3; }
+	inline void set_buf_3(BlackLoveBuf_t2230612843 * value)
+	{
+		___buf_3 = value;
+		Il2CppCodeGenWriteBarrier((&___buf_3), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLACKLOVEPANICREADY_T942319231_H
+#ifndef BLACKCORPANIMKEY_T1764443065_H
+#define BLACKCORPANIMKEY_T1764443065_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlackCorpsAnim/BlackCorpAnimKey
+struct  BlackCorpAnimKey_t1764443065 
+{
+public:
+	// System.Int32 BlackCorpsAnim/BlackCorpAnimKey::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BlackCorpAnimKey_t1764443065, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLACKCORPANIMKEY_T1764443065_H
+#ifndef BINAHATTACKTYPE_T4230434193_H
+#define BINAHATTACKTYPE_T4230434193_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahAttackType
+struct  BinahAttackType_t4230434193 
+{
+public:
+	// System.Int32 BinahBoss.BinahAttackType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahAttackType_t4230434193, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHATTACKTYPE_T4230434193_H
+#ifndef BINAHDEFENSETYPE_T736151217_H
+#define BINAHDEFENSETYPE_T736151217_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahDefenseType
+struct  BinahDefenseType_t736151217 
+{
+public:
+	// System.Int32 BinahBoss.BinahDefenseType::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(BinahDefenseType_t736151217, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHDEFENSETYPE_T736151217_H
+#ifndef ATTACKTYPEDATA_T3985351840_H
+#define ATTACKTYPEDATA_T3985351840_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BossBird/AttackTypeData
+struct  AttackTypeData_t3985351840  : public RuntimeObject
+{
+public:
+	// BossBird/AttackType BossBird/AttackTypeData::type
+	int32_t ___type_0;
+	// System.Int32 BossBird/AttackTypeData::prob
+	int32_t ___prob_1;
+
+public:
+	inline static int32_t get_offset_of_type_0() { return static_cast<int32_t>(offsetof(AttackTypeData_t3985351840, ___type_0)); }
+	inline int32_t get_type_0() const { return ___type_0; }
+	inline int32_t* get_address_of_type_0() { return &___type_0; }
+	inline void set_type_0(int32_t value)
+	{
+		___type_0 = value;
+	}
+
+	inline static int32_t get_offset_of_prob_1() { return static_cast<int32_t>(offsetof(AttackTypeData_t3985351840, ___prob_1)); }
+	inline int32_t get_prob_1() const { return ___prob_1; }
+	inline int32_t* get_address_of_prob_1() { return &___prob_1; }
+	inline void set_prob_1(int32_t value)
+	{
+		___prob_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ATTACKTYPEDATA_T3985351840_H
 #ifndef UNITBUF_T4079465950_H
 #define UNITBUF_T4079465950_H
 #ifdef __clang__
@@ -4125,26 +4025,734 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNITBUF_T4079465950_H
-#ifndef COMPONENT_T1923634451_H
-#define COMPONENT_T1923634451_H
+#ifndef BOSSBIRD_T769689499_H
+#define BOSSBIRD_T769689499_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Component
-struct  Component_t1923634451  : public Object_t631007953
+// BossBird
+struct  BossBird_t769689499  : public BirdCreatureBase_t1539999157
 {
 public:
+	// RwbpType BossBird::laserType
+	int32_t ___laserType_29;
+	// RwbpType BossBird::scaleType
+	int32_t ___scaleType_32;
+	// RwbpType BossBird::biteType
+	int32_t ___biteType_35;
+	// RwbpType BossBird::attackType
+	int32_t ___attackType_38;
+	// Timer BossBird::forcelyTeleportTimer
+	Timer_t4185932343 * ___forcelyTeleportTimer_56;
+	// Timer BossBird::teleportTimer
+	Timer_t4185932343 * ___teleportTimer_57;
+	// Timer BossBird::normalAttackTimer
+	Timer_t4185932343 * ___normalAttackTimer_58;
+	// Timer BossBird::specialPatternTimer
+	Timer_t4185932343 * ___specialPatternTimer_59;
+	// Timer BossBird::uniquePattern
+	Timer_t4185932343 * ___uniquePattern_60;
+	// System.Boolean BossBird::forcelyTeleportReady
+	bool ___forcelyTeleportReady_61;
+	// System.Boolean BossBird::teleportReady
+	bool ___teleportReady_62;
+	// System.Boolean BossBird::normalAttackReady
+	bool ___normalAttackReady_63;
+	// System.Boolean BossBird::patternReady
+	bool ___patternReady_64;
+	// System.Boolean BossBird::forcelyTeleport
+	bool ___forcelyTeleport_65;
+	// System.Boolean BossBird::activateState
+	bool ___activateState_66;
+	// System.Boolean BossBird::isEscaped
+	bool ___isEscaped_67;
+	// System.Boolean BossBird::isTeleporting
+	bool ___isTeleporting_68;
+	// System.Boolean BossBird::isNarration
+	bool ___isNarration_69;
+	// System.Boolean BossBird::ultShooted
+	bool ___ultShooted_70;
+	// System.Boolean BossBird::laserArriveSoundPlayed
+	bool ___laserArriveSoundPlayed_71;
+	// System.Collections.Generic.Queue`1<IBirdControl> BossBird::waitQueue
+	Queue_1_t516806264 * ___waitQueue_72;
+	// System.Collections.Generic.List`1<IBirdControl> BossBird::birdControl
+	List_1_t2142621512 * ___birdControl_73;
+	// System.Collections.Generic.List`1<IBirdControl> BossBird::notArrived
+	List_1_t2142621512 * ___notArrived_74;
+	// System.Collections.Generic.List`1<WorkerModel> BossBird::attracted
+	List_1_t1540077199 * ___attracted_75;
+	// System.Collections.Generic.List`1<CreatureBase> BossBird::escapedCreatures
+	List_1_t4278670770 * ___escapedCreatures_76;
+	// MapNode BossBird::currentTeleportDest
+	MapNode_t547811713 * ___currentTeleportDest_77;
+	// SmallBird BossBird::smallBird
+	SmallBird_t969879882 * ___smallBird_78;
+	// BigBird BossBird::bigBird
+	BigBird_t3712234294 * ___bigBird_79;
+	// LongBird BossBird::longBird
+	LongBird_t1140159374 * ___longBird_80;
+	// ChildCreatureUnit BossBird::_unit
+	ChildCreatureUnit_t3911137892 * ____unit_81;
+	// MapNode BossBird::gatewayNode
+	MapNode_t547811713 * ___gatewayNode_82;
+	// BossBird/AttackType BossBird::currentAttackType
+	int32_t ___currentAttackType_83;
+	// BossBird/Phase BossBird::_currentPhase
+	int32_t ____currentPhase_84;
+	// BossBirdEvent BossBird::eventScript
+	BossBirdEvent_t3423880984 * ___eventScript_85;
+	// BossGateWay BossBird::gateWay
+	BossGateWay_t225259025 * ___gateWay_86;
+	// BossEggBase BossBird::bigEgg
+	BossEggBase_t3378102186 * ___bigEgg_87;
+	// BossEggBase BossBird::longEgg
+	BossEggBase_t3378102186 * ___longEgg_88;
+	// BossEggBase BossBird::smallEgg
+	BossEggBase_t3378102186 * ___smallEgg_89;
+	// BossEggBase BossBird::currentForcelyTeleportTarget
+	BossEggBase_t3378102186 * ___currentForcelyTeleportTarget_90;
+	// System.Collections.Generic.List`1<BossEggBase> BossBird::aliveEggs
+	List_1_t555209632 * ___aliveEggs_91;
+	// SoundEffectPlayer BossBird::defaultAmbience
+	SoundEffectPlayer_t3998987779 * ___defaultAmbience_92;
 
 public:
+	inline static int32_t get_offset_of_laserType_29() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___laserType_29)); }
+	inline int32_t get_laserType_29() const { return ___laserType_29; }
+	inline int32_t* get_address_of_laserType_29() { return &___laserType_29; }
+	inline void set_laserType_29(int32_t value)
+	{
+		___laserType_29 = value;
+	}
+
+	inline static int32_t get_offset_of_scaleType_32() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___scaleType_32)); }
+	inline int32_t get_scaleType_32() const { return ___scaleType_32; }
+	inline int32_t* get_address_of_scaleType_32() { return &___scaleType_32; }
+	inline void set_scaleType_32(int32_t value)
+	{
+		___scaleType_32 = value;
+	}
+
+	inline static int32_t get_offset_of_biteType_35() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___biteType_35)); }
+	inline int32_t get_biteType_35() const { return ___biteType_35; }
+	inline int32_t* get_address_of_biteType_35() { return &___biteType_35; }
+	inline void set_biteType_35(int32_t value)
+	{
+		___biteType_35 = value;
+	}
+
+	inline static int32_t get_offset_of_attackType_38() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___attackType_38)); }
+	inline int32_t get_attackType_38() const { return ___attackType_38; }
+	inline int32_t* get_address_of_attackType_38() { return &___attackType_38; }
+	inline void set_attackType_38(int32_t value)
+	{
+		___attackType_38 = value;
+	}
+
+	inline static int32_t get_offset_of_forcelyTeleportTimer_56() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___forcelyTeleportTimer_56)); }
+	inline Timer_t4185932343 * get_forcelyTeleportTimer_56() const { return ___forcelyTeleportTimer_56; }
+	inline Timer_t4185932343 ** get_address_of_forcelyTeleportTimer_56() { return &___forcelyTeleportTimer_56; }
+	inline void set_forcelyTeleportTimer_56(Timer_t4185932343 * value)
+	{
+		___forcelyTeleportTimer_56 = value;
+		Il2CppCodeGenWriteBarrier((&___forcelyTeleportTimer_56), value);
+	}
+
+	inline static int32_t get_offset_of_teleportTimer_57() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___teleportTimer_57)); }
+	inline Timer_t4185932343 * get_teleportTimer_57() const { return ___teleportTimer_57; }
+	inline Timer_t4185932343 ** get_address_of_teleportTimer_57() { return &___teleportTimer_57; }
+	inline void set_teleportTimer_57(Timer_t4185932343 * value)
+	{
+		___teleportTimer_57 = value;
+		Il2CppCodeGenWriteBarrier((&___teleportTimer_57), value);
+	}
+
+	inline static int32_t get_offset_of_normalAttackTimer_58() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___normalAttackTimer_58)); }
+	inline Timer_t4185932343 * get_normalAttackTimer_58() const { return ___normalAttackTimer_58; }
+	inline Timer_t4185932343 ** get_address_of_normalAttackTimer_58() { return &___normalAttackTimer_58; }
+	inline void set_normalAttackTimer_58(Timer_t4185932343 * value)
+	{
+		___normalAttackTimer_58 = value;
+		Il2CppCodeGenWriteBarrier((&___normalAttackTimer_58), value);
+	}
+
+	inline static int32_t get_offset_of_specialPatternTimer_59() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___specialPatternTimer_59)); }
+	inline Timer_t4185932343 * get_specialPatternTimer_59() const { return ___specialPatternTimer_59; }
+	inline Timer_t4185932343 ** get_address_of_specialPatternTimer_59() { return &___specialPatternTimer_59; }
+	inline void set_specialPatternTimer_59(Timer_t4185932343 * value)
+	{
+		___specialPatternTimer_59 = value;
+		Il2CppCodeGenWriteBarrier((&___specialPatternTimer_59), value);
+	}
+
+	inline static int32_t get_offset_of_uniquePattern_60() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___uniquePattern_60)); }
+	inline Timer_t4185932343 * get_uniquePattern_60() const { return ___uniquePattern_60; }
+	inline Timer_t4185932343 ** get_address_of_uniquePattern_60() { return &___uniquePattern_60; }
+	inline void set_uniquePattern_60(Timer_t4185932343 * value)
+	{
+		___uniquePattern_60 = value;
+		Il2CppCodeGenWriteBarrier((&___uniquePattern_60), value);
+	}
+
+	inline static int32_t get_offset_of_forcelyTeleportReady_61() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___forcelyTeleportReady_61)); }
+	inline bool get_forcelyTeleportReady_61() const { return ___forcelyTeleportReady_61; }
+	inline bool* get_address_of_forcelyTeleportReady_61() { return &___forcelyTeleportReady_61; }
+	inline void set_forcelyTeleportReady_61(bool value)
+	{
+		___forcelyTeleportReady_61 = value;
+	}
+
+	inline static int32_t get_offset_of_teleportReady_62() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___teleportReady_62)); }
+	inline bool get_teleportReady_62() const { return ___teleportReady_62; }
+	inline bool* get_address_of_teleportReady_62() { return &___teleportReady_62; }
+	inline void set_teleportReady_62(bool value)
+	{
+		___teleportReady_62 = value;
+	}
+
+	inline static int32_t get_offset_of_normalAttackReady_63() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___normalAttackReady_63)); }
+	inline bool get_normalAttackReady_63() const { return ___normalAttackReady_63; }
+	inline bool* get_address_of_normalAttackReady_63() { return &___normalAttackReady_63; }
+	inline void set_normalAttackReady_63(bool value)
+	{
+		___normalAttackReady_63 = value;
+	}
+
+	inline static int32_t get_offset_of_patternReady_64() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___patternReady_64)); }
+	inline bool get_patternReady_64() const { return ___patternReady_64; }
+	inline bool* get_address_of_patternReady_64() { return &___patternReady_64; }
+	inline void set_patternReady_64(bool value)
+	{
+		___patternReady_64 = value;
+	}
+
+	inline static int32_t get_offset_of_forcelyTeleport_65() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___forcelyTeleport_65)); }
+	inline bool get_forcelyTeleport_65() const { return ___forcelyTeleport_65; }
+	inline bool* get_address_of_forcelyTeleport_65() { return &___forcelyTeleport_65; }
+	inline void set_forcelyTeleport_65(bool value)
+	{
+		___forcelyTeleport_65 = value;
+	}
+
+	inline static int32_t get_offset_of_activateState_66() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___activateState_66)); }
+	inline bool get_activateState_66() const { return ___activateState_66; }
+	inline bool* get_address_of_activateState_66() { return &___activateState_66; }
+	inline void set_activateState_66(bool value)
+	{
+		___activateState_66 = value;
+	}
+
+	inline static int32_t get_offset_of_isEscaped_67() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___isEscaped_67)); }
+	inline bool get_isEscaped_67() const { return ___isEscaped_67; }
+	inline bool* get_address_of_isEscaped_67() { return &___isEscaped_67; }
+	inline void set_isEscaped_67(bool value)
+	{
+		___isEscaped_67 = value;
+	}
+
+	inline static int32_t get_offset_of_isTeleporting_68() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___isTeleporting_68)); }
+	inline bool get_isTeleporting_68() const { return ___isTeleporting_68; }
+	inline bool* get_address_of_isTeleporting_68() { return &___isTeleporting_68; }
+	inline void set_isTeleporting_68(bool value)
+	{
+		___isTeleporting_68 = value;
+	}
+
+	inline static int32_t get_offset_of_isNarration_69() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___isNarration_69)); }
+	inline bool get_isNarration_69() const { return ___isNarration_69; }
+	inline bool* get_address_of_isNarration_69() { return &___isNarration_69; }
+	inline void set_isNarration_69(bool value)
+	{
+		___isNarration_69 = value;
+	}
+
+	inline static int32_t get_offset_of_ultShooted_70() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___ultShooted_70)); }
+	inline bool get_ultShooted_70() const { return ___ultShooted_70; }
+	inline bool* get_address_of_ultShooted_70() { return &___ultShooted_70; }
+	inline void set_ultShooted_70(bool value)
+	{
+		___ultShooted_70 = value;
+	}
+
+	inline static int32_t get_offset_of_laserArriveSoundPlayed_71() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___laserArriveSoundPlayed_71)); }
+	inline bool get_laserArriveSoundPlayed_71() const { return ___laserArriveSoundPlayed_71; }
+	inline bool* get_address_of_laserArriveSoundPlayed_71() { return &___laserArriveSoundPlayed_71; }
+	inline void set_laserArriveSoundPlayed_71(bool value)
+	{
+		___laserArriveSoundPlayed_71 = value;
+	}
+
+	inline static int32_t get_offset_of_waitQueue_72() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___waitQueue_72)); }
+	inline Queue_1_t516806264 * get_waitQueue_72() const { return ___waitQueue_72; }
+	inline Queue_1_t516806264 ** get_address_of_waitQueue_72() { return &___waitQueue_72; }
+	inline void set_waitQueue_72(Queue_1_t516806264 * value)
+	{
+		___waitQueue_72 = value;
+		Il2CppCodeGenWriteBarrier((&___waitQueue_72), value);
+	}
+
+	inline static int32_t get_offset_of_birdControl_73() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___birdControl_73)); }
+	inline List_1_t2142621512 * get_birdControl_73() const { return ___birdControl_73; }
+	inline List_1_t2142621512 ** get_address_of_birdControl_73() { return &___birdControl_73; }
+	inline void set_birdControl_73(List_1_t2142621512 * value)
+	{
+		___birdControl_73 = value;
+		Il2CppCodeGenWriteBarrier((&___birdControl_73), value);
+	}
+
+	inline static int32_t get_offset_of_notArrived_74() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___notArrived_74)); }
+	inline List_1_t2142621512 * get_notArrived_74() const { return ___notArrived_74; }
+	inline List_1_t2142621512 ** get_address_of_notArrived_74() { return &___notArrived_74; }
+	inline void set_notArrived_74(List_1_t2142621512 * value)
+	{
+		___notArrived_74 = value;
+		Il2CppCodeGenWriteBarrier((&___notArrived_74), value);
+	}
+
+	inline static int32_t get_offset_of_attracted_75() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___attracted_75)); }
+	inline List_1_t1540077199 * get_attracted_75() const { return ___attracted_75; }
+	inline List_1_t1540077199 ** get_address_of_attracted_75() { return &___attracted_75; }
+	inline void set_attracted_75(List_1_t1540077199 * value)
+	{
+		___attracted_75 = value;
+		Il2CppCodeGenWriteBarrier((&___attracted_75), value);
+	}
+
+	inline static int32_t get_offset_of_escapedCreatures_76() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___escapedCreatures_76)); }
+	inline List_1_t4278670770 * get_escapedCreatures_76() const { return ___escapedCreatures_76; }
+	inline List_1_t4278670770 ** get_address_of_escapedCreatures_76() { return &___escapedCreatures_76; }
+	inline void set_escapedCreatures_76(List_1_t4278670770 * value)
+	{
+		___escapedCreatures_76 = value;
+		Il2CppCodeGenWriteBarrier((&___escapedCreatures_76), value);
+	}
+
+	inline static int32_t get_offset_of_currentTeleportDest_77() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___currentTeleportDest_77)); }
+	inline MapNode_t547811713 * get_currentTeleportDest_77() const { return ___currentTeleportDest_77; }
+	inline MapNode_t547811713 ** get_address_of_currentTeleportDest_77() { return &___currentTeleportDest_77; }
+	inline void set_currentTeleportDest_77(MapNode_t547811713 * value)
+	{
+		___currentTeleportDest_77 = value;
+		Il2CppCodeGenWriteBarrier((&___currentTeleportDest_77), value);
+	}
+
+	inline static int32_t get_offset_of_smallBird_78() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___smallBird_78)); }
+	inline SmallBird_t969879882 * get_smallBird_78() const { return ___smallBird_78; }
+	inline SmallBird_t969879882 ** get_address_of_smallBird_78() { return &___smallBird_78; }
+	inline void set_smallBird_78(SmallBird_t969879882 * value)
+	{
+		___smallBird_78 = value;
+		Il2CppCodeGenWriteBarrier((&___smallBird_78), value);
+	}
+
+	inline static int32_t get_offset_of_bigBird_79() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___bigBird_79)); }
+	inline BigBird_t3712234294 * get_bigBird_79() const { return ___bigBird_79; }
+	inline BigBird_t3712234294 ** get_address_of_bigBird_79() { return &___bigBird_79; }
+	inline void set_bigBird_79(BigBird_t3712234294 * value)
+	{
+		___bigBird_79 = value;
+		Il2CppCodeGenWriteBarrier((&___bigBird_79), value);
+	}
+
+	inline static int32_t get_offset_of_longBird_80() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___longBird_80)); }
+	inline LongBird_t1140159374 * get_longBird_80() const { return ___longBird_80; }
+	inline LongBird_t1140159374 ** get_address_of_longBird_80() { return &___longBird_80; }
+	inline void set_longBird_80(LongBird_t1140159374 * value)
+	{
+		___longBird_80 = value;
+		Il2CppCodeGenWriteBarrier((&___longBird_80), value);
+	}
+
+	inline static int32_t get_offset_of__unit_81() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ____unit_81)); }
+	inline ChildCreatureUnit_t3911137892 * get__unit_81() const { return ____unit_81; }
+	inline ChildCreatureUnit_t3911137892 ** get_address_of__unit_81() { return &____unit_81; }
+	inline void set__unit_81(ChildCreatureUnit_t3911137892 * value)
+	{
+		____unit_81 = value;
+		Il2CppCodeGenWriteBarrier((&____unit_81), value);
+	}
+
+	inline static int32_t get_offset_of_gatewayNode_82() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___gatewayNode_82)); }
+	inline MapNode_t547811713 * get_gatewayNode_82() const { return ___gatewayNode_82; }
+	inline MapNode_t547811713 ** get_address_of_gatewayNode_82() { return &___gatewayNode_82; }
+	inline void set_gatewayNode_82(MapNode_t547811713 * value)
+	{
+		___gatewayNode_82 = value;
+		Il2CppCodeGenWriteBarrier((&___gatewayNode_82), value);
+	}
+
+	inline static int32_t get_offset_of_currentAttackType_83() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___currentAttackType_83)); }
+	inline int32_t get_currentAttackType_83() const { return ___currentAttackType_83; }
+	inline int32_t* get_address_of_currentAttackType_83() { return &___currentAttackType_83; }
+	inline void set_currentAttackType_83(int32_t value)
+	{
+		___currentAttackType_83 = value;
+	}
+
+	inline static int32_t get_offset_of__currentPhase_84() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ____currentPhase_84)); }
+	inline int32_t get__currentPhase_84() const { return ____currentPhase_84; }
+	inline int32_t* get_address_of__currentPhase_84() { return &____currentPhase_84; }
+	inline void set__currentPhase_84(int32_t value)
+	{
+		____currentPhase_84 = value;
+	}
+
+	inline static int32_t get_offset_of_eventScript_85() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___eventScript_85)); }
+	inline BossBirdEvent_t3423880984 * get_eventScript_85() const { return ___eventScript_85; }
+	inline BossBirdEvent_t3423880984 ** get_address_of_eventScript_85() { return &___eventScript_85; }
+	inline void set_eventScript_85(BossBirdEvent_t3423880984 * value)
+	{
+		___eventScript_85 = value;
+		Il2CppCodeGenWriteBarrier((&___eventScript_85), value);
+	}
+
+	inline static int32_t get_offset_of_gateWay_86() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___gateWay_86)); }
+	inline BossGateWay_t225259025 * get_gateWay_86() const { return ___gateWay_86; }
+	inline BossGateWay_t225259025 ** get_address_of_gateWay_86() { return &___gateWay_86; }
+	inline void set_gateWay_86(BossGateWay_t225259025 * value)
+	{
+		___gateWay_86 = value;
+		Il2CppCodeGenWriteBarrier((&___gateWay_86), value);
+	}
+
+	inline static int32_t get_offset_of_bigEgg_87() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___bigEgg_87)); }
+	inline BossEggBase_t3378102186 * get_bigEgg_87() const { return ___bigEgg_87; }
+	inline BossEggBase_t3378102186 ** get_address_of_bigEgg_87() { return &___bigEgg_87; }
+	inline void set_bigEgg_87(BossEggBase_t3378102186 * value)
+	{
+		___bigEgg_87 = value;
+		Il2CppCodeGenWriteBarrier((&___bigEgg_87), value);
+	}
+
+	inline static int32_t get_offset_of_longEgg_88() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___longEgg_88)); }
+	inline BossEggBase_t3378102186 * get_longEgg_88() const { return ___longEgg_88; }
+	inline BossEggBase_t3378102186 ** get_address_of_longEgg_88() { return &___longEgg_88; }
+	inline void set_longEgg_88(BossEggBase_t3378102186 * value)
+	{
+		___longEgg_88 = value;
+		Il2CppCodeGenWriteBarrier((&___longEgg_88), value);
+	}
+
+	inline static int32_t get_offset_of_smallEgg_89() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___smallEgg_89)); }
+	inline BossEggBase_t3378102186 * get_smallEgg_89() const { return ___smallEgg_89; }
+	inline BossEggBase_t3378102186 ** get_address_of_smallEgg_89() { return &___smallEgg_89; }
+	inline void set_smallEgg_89(BossEggBase_t3378102186 * value)
+	{
+		___smallEgg_89 = value;
+		Il2CppCodeGenWriteBarrier((&___smallEgg_89), value);
+	}
+
+	inline static int32_t get_offset_of_currentForcelyTeleportTarget_90() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___currentForcelyTeleportTarget_90)); }
+	inline BossEggBase_t3378102186 * get_currentForcelyTeleportTarget_90() const { return ___currentForcelyTeleportTarget_90; }
+	inline BossEggBase_t3378102186 ** get_address_of_currentForcelyTeleportTarget_90() { return &___currentForcelyTeleportTarget_90; }
+	inline void set_currentForcelyTeleportTarget_90(BossEggBase_t3378102186 * value)
+	{
+		___currentForcelyTeleportTarget_90 = value;
+		Il2CppCodeGenWriteBarrier((&___currentForcelyTeleportTarget_90), value);
+	}
+
+	inline static int32_t get_offset_of_aliveEggs_91() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___aliveEggs_91)); }
+	inline List_1_t555209632 * get_aliveEggs_91() const { return ___aliveEggs_91; }
+	inline List_1_t555209632 ** get_address_of_aliveEggs_91() { return &___aliveEggs_91; }
+	inline void set_aliveEggs_91(List_1_t555209632 * value)
+	{
+		___aliveEggs_91 = value;
+		Il2CppCodeGenWriteBarrier((&___aliveEggs_91), value);
+	}
+
+	inline static int32_t get_offset_of_defaultAmbience_92() { return static_cast<int32_t>(offsetof(BossBird_t769689499, ___defaultAmbience_92)); }
+	inline SoundEffectPlayer_t3998987779 * get_defaultAmbience_92() const { return ___defaultAmbience_92; }
+	inline SoundEffectPlayer_t3998987779 ** get_address_of_defaultAmbience_92() { return &___defaultAmbience_92; }
+	inline void set_defaultAmbience_92(SoundEffectPlayer_t3998987779 * value)
+	{
+		___defaultAmbience_92 = value;
+		Il2CppCodeGenWriteBarrier((&___defaultAmbience_92), value);
+	}
+};
+
+struct BossBird_t769689499_StaticFields
+{
+public:
+	// System.Comparison`1<MapNode> BossBird::<>f__mg$cache0
+	Comparison_1_t322742892 * ___U3CU3Ef__mgU24cache0_93;
+	// System.Comparison`1<MapNode> BossBird::<>f__mg$cache1
+	Comparison_1_t322742892 * ___U3CU3Ef__mgU24cache1_94;
+	// System.Comparison`1<MapNode> BossBird::<>f__mg$cache2
+	Comparison_1_t322742892 * ___U3CU3Ef__mgU24cache2_95;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Int32> BossBird::<>f__switch$map1
+	Dictionary_2_t2736202052 * ___U3CU3Ef__switchU24map1_96;
+
+public:
+	inline static int32_t get_offset_of_U3CU3Ef__mgU24cache0_93() { return static_cast<int32_t>(offsetof(BossBird_t769689499_StaticFields, ___U3CU3Ef__mgU24cache0_93)); }
+	inline Comparison_1_t322742892 * get_U3CU3Ef__mgU24cache0_93() const { return ___U3CU3Ef__mgU24cache0_93; }
+	inline Comparison_1_t322742892 ** get_address_of_U3CU3Ef__mgU24cache0_93() { return &___U3CU3Ef__mgU24cache0_93; }
+	inline void set_U3CU3Ef__mgU24cache0_93(Comparison_1_t322742892 * value)
+	{
+		___U3CU3Ef__mgU24cache0_93 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CU3Ef__mgU24cache0_93), value);
+	}
+
+	inline static int32_t get_offset_of_U3CU3Ef__mgU24cache1_94() { return static_cast<int32_t>(offsetof(BossBird_t769689499_StaticFields, ___U3CU3Ef__mgU24cache1_94)); }
+	inline Comparison_1_t322742892 * get_U3CU3Ef__mgU24cache1_94() const { return ___U3CU3Ef__mgU24cache1_94; }
+	inline Comparison_1_t322742892 ** get_address_of_U3CU3Ef__mgU24cache1_94() { return &___U3CU3Ef__mgU24cache1_94; }
+	inline void set_U3CU3Ef__mgU24cache1_94(Comparison_1_t322742892 * value)
+	{
+		___U3CU3Ef__mgU24cache1_94 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CU3Ef__mgU24cache1_94), value);
+	}
+
+	inline static int32_t get_offset_of_U3CU3Ef__mgU24cache2_95() { return static_cast<int32_t>(offsetof(BossBird_t769689499_StaticFields, ___U3CU3Ef__mgU24cache2_95)); }
+	inline Comparison_1_t322742892 * get_U3CU3Ef__mgU24cache2_95() const { return ___U3CU3Ef__mgU24cache2_95; }
+	inline Comparison_1_t322742892 ** get_address_of_U3CU3Ef__mgU24cache2_95() { return &___U3CU3Ef__mgU24cache2_95; }
+	inline void set_U3CU3Ef__mgU24cache2_95(Comparison_1_t322742892 * value)
+	{
+		___U3CU3Ef__mgU24cache2_95 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CU3Ef__mgU24cache2_95), value);
+	}
+
+	inline static int32_t get_offset_of_U3CU3Ef__switchU24map1_96() { return static_cast<int32_t>(offsetof(BossBird_t769689499_StaticFields, ___U3CU3Ef__switchU24map1_96)); }
+	inline Dictionary_2_t2736202052 * get_U3CU3Ef__switchU24map1_96() const { return ___U3CU3Ef__switchU24map1_96; }
+	inline Dictionary_2_t2736202052 ** get_address_of_U3CU3Ef__switchU24map1_96() { return &___U3CU3Ef__switchU24map1_96; }
+	inline void set_U3CU3Ef__switchU24map1_96(Dictionary_2_t2736202052 * value)
+	{
+		___U3CU3Ef__switchU24map1_96 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CU3Ef__switchU24map1_96), value);
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // COMPONENT_T1923634451_H
+#endif // BOSSBIRD_T769689499_H
+#ifndef BINAHACTION_T2190854253_H
+#define BINAHACTION_T2190854253_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahAction
+struct  BinahAction_t2190854253  : public RuntimeObject
+{
+public:
+	// BinahCoreScript BinahBoss.BinahAction::binah
+	BinahCoreScript_t303627652 * ___binah_0;
+	// BinahBoss.BinahActionState BinahBoss.BinahAction::actionState
+	int32_t ___actionState_1;
+	// BinahBoss.BinahAction BinahBoss.BinahAction::_interrupt
+	BinahAction_t2190854253 * ____interrupt_2;
+
+public:
+	inline static int32_t get_offset_of_binah_0() { return static_cast<int32_t>(offsetof(BinahAction_t2190854253, ___binah_0)); }
+	inline BinahCoreScript_t303627652 * get_binah_0() const { return ___binah_0; }
+	inline BinahCoreScript_t303627652 ** get_address_of_binah_0() { return &___binah_0; }
+	inline void set_binah_0(BinahCoreScript_t303627652 * value)
+	{
+		___binah_0 = value;
+		Il2CppCodeGenWriteBarrier((&___binah_0), value);
+	}
+
+	inline static int32_t get_offset_of_actionState_1() { return static_cast<int32_t>(offsetof(BinahAction_t2190854253, ___actionState_1)); }
+	inline int32_t get_actionState_1() const { return ___actionState_1; }
+	inline int32_t* get_address_of_actionState_1() { return &___actionState_1; }
+	inline void set_actionState_1(int32_t value)
+	{
+		___actionState_1 = value;
+	}
+
+	inline static int32_t get_offset_of__interrupt_2() { return static_cast<int32_t>(offsetof(BinahAction_t2190854253, ____interrupt_2)); }
+	inline BinahAction_t2190854253 * get__interrupt_2() const { return ____interrupt_2; }
+	inline BinahAction_t2190854253 ** get_address_of__interrupt_2() { return &____interrupt_2; }
+	inline void set__interrupt_2(BinahAction_t2190854253 * value)
+	{
+		____interrupt_2 = value;
+		Il2CppCodeGenWriteBarrier((&____interrupt_2), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHACTION_T2190854253_H
+#ifndef STANDINGITEMSCRIPTBASE_T3970342999_H
+#define STANDINGITEMSCRIPTBASE_T3970342999_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// StandingItemScriptBase
+struct  StandingItemScriptBase_t3970342999  : public RuntimeObject
+{
+public:
+	// StandingItemModel StandingItemScriptBase::model
+	StandingItemModel_t3016837067 * ___model_1;
+	// StandingItemAnim StandingItemScriptBase::_animScript
+	StandingItemAnim_t570508136 * ____animScript_2;
+	// StandingItemScriptBase/StandingItemState StandingItemScriptBase::_state
+	int32_t ____state_3;
+	// System.String StandingItemScriptBase::name
+	String_t* ___name_4;
+	// System.Int32 StandingItemScriptBase::_maxHp
+	int32_t ____maxHp_5;
+	// System.Single StandingItemScriptBase::_defense
+	float ____defense_6;
+
+public:
+	inline static int32_t get_offset_of_model_1() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ___model_1)); }
+	inline StandingItemModel_t3016837067 * get_model_1() const { return ___model_1; }
+	inline StandingItemModel_t3016837067 ** get_address_of_model_1() { return &___model_1; }
+	inline void set_model_1(StandingItemModel_t3016837067 * value)
+	{
+		___model_1 = value;
+		Il2CppCodeGenWriteBarrier((&___model_1), value);
+	}
+
+	inline static int32_t get_offset_of__animScript_2() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____animScript_2)); }
+	inline StandingItemAnim_t570508136 * get__animScript_2() const { return ____animScript_2; }
+	inline StandingItemAnim_t570508136 ** get_address_of__animScript_2() { return &____animScript_2; }
+	inline void set__animScript_2(StandingItemAnim_t570508136 * value)
+	{
+		____animScript_2 = value;
+		Il2CppCodeGenWriteBarrier((&____animScript_2), value);
+	}
+
+	inline static int32_t get_offset_of__state_3() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____state_3)); }
+	inline int32_t get__state_3() const { return ____state_3; }
+	inline int32_t* get_address_of__state_3() { return &____state_3; }
+	inline void set__state_3(int32_t value)
+	{
+		____state_3 = value;
+	}
+
+	inline static int32_t get_offset_of_name_4() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ___name_4)); }
+	inline String_t* get_name_4() const { return ___name_4; }
+	inline String_t** get_address_of_name_4() { return &___name_4; }
+	inline void set_name_4(String_t* value)
+	{
+		___name_4 = value;
+		Il2CppCodeGenWriteBarrier((&___name_4), value);
+	}
+
+	inline static int32_t get_offset_of__maxHp_5() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____maxHp_5)); }
+	inline int32_t get__maxHp_5() const { return ____maxHp_5; }
+	inline int32_t* get_address_of__maxHp_5() { return &____maxHp_5; }
+	inline void set__maxHp_5(int32_t value)
+	{
+		____maxHp_5 = value;
+	}
+
+	inline static int32_t get_offset_of__defense_6() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____defense_6)); }
+	inline float get__defense_6() const { return ____defense_6; }
+	inline float* get_address_of__defense_6() { return &____defense_6; }
+	inline void set__defense_6(float value)
+	{
+		____defense_6 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // STANDINGITEMSCRIPTBASE_T3970342999_H
+#ifndef MULTICASTDELEGATE_T_H
+#define MULTICASTDELEGATE_T_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.MulticastDelegate
+struct  MulticastDelegate_t  : public Delegate_t1188392813
+{
+public:
+	// System.MulticastDelegate System.MulticastDelegate::prev
+	MulticastDelegate_t * ___prev_9;
+	// System.MulticastDelegate System.MulticastDelegate::kpm_next
+	MulticastDelegate_t * ___kpm_next_10;
+
+public:
+	inline static int32_t get_offset_of_prev_9() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___prev_9)); }
+	inline MulticastDelegate_t * get_prev_9() const { return ___prev_9; }
+	inline MulticastDelegate_t ** get_address_of_prev_9() { return &___prev_9; }
+	inline void set_prev_9(MulticastDelegate_t * value)
+	{
+		___prev_9 = value;
+		Il2CppCodeGenWriteBarrier((&___prev_9), value);
+	}
+
+	inline static int32_t get_offset_of_kpm_next_10() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___kpm_next_10)); }
+	inline MulticastDelegate_t * get_kpm_next_10() const { return ___kpm_next_10; }
+	inline MulticastDelegate_t ** get_address_of_kpm_next_10() { return &___kpm_next_10; }
+	inline void set_kpm_next_10(MulticastDelegate_t * value)
+	{
+		___kpm_next_10 = value;
+		Il2CppCodeGenWriteBarrier((&___kpm_next_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MULTICASTDELEGATE_T_H
+#ifndef MAPOBJECTMODEL_T2900921160_H
+#define MAPOBJECTMODEL_T2900921160_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// MapObjectModel
+struct  MapObjectModel_t2900921160  : public ObjectModelBase_t2326874531
+{
+public:
+	// MapObjectTypeInfo MapObjectModel::metaInfo
+	MapObjectTypeInfo_t2391563397 * ___metaInfo_1;
+	// PassageObjectModel MapObjectModel::passage
+	PassageObjectModel_t3642329870 * ___passage_2;
+	// System.Int32 MapObjectModel::horrorPoint
+	int32_t ___horrorPoint_3;
+
+public:
+	inline static int32_t get_offset_of_metaInfo_1() { return static_cast<int32_t>(offsetof(MapObjectModel_t2900921160, ___metaInfo_1)); }
+	inline MapObjectTypeInfo_t2391563397 * get_metaInfo_1() const { return ___metaInfo_1; }
+	inline MapObjectTypeInfo_t2391563397 ** get_address_of_metaInfo_1() { return &___metaInfo_1; }
+	inline void set_metaInfo_1(MapObjectTypeInfo_t2391563397 * value)
+	{
+		___metaInfo_1 = value;
+		Il2CppCodeGenWriteBarrier((&___metaInfo_1), value);
+	}
+
+	inline static int32_t get_offset_of_passage_2() { return static_cast<int32_t>(offsetof(MapObjectModel_t2900921160, ___passage_2)); }
+	inline PassageObjectModel_t3642329870 * get_passage_2() const { return ___passage_2; }
+	inline PassageObjectModel_t3642329870 ** get_address_of_passage_2() { return &___passage_2; }
+	inline void set_passage_2(PassageObjectModel_t3642329870 * value)
+	{
+		___passage_2 = value;
+		Il2CppCodeGenWriteBarrier((&___passage_2), value);
+	}
+
+	inline static int32_t get_offset_of_horrorPoint_3() { return static_cast<int32_t>(offsetof(MapObjectModel_t2900921160, ___horrorPoint_3)); }
+	inline int32_t get_horrorPoint_3() const { return ___horrorPoint_3; }
+	inline int32_t* get_address_of_horrorPoint_3() { return &___horrorPoint_3; }
+	inline void set_horrorPoint_3(int32_t value)
+	{
+		___horrorPoint_3 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MAPOBJECTMODEL_T2900921160_H
 #ifndef SCREENEFFECTMODULE_T2580060538_H
 #define SCREENEFFECTMODULE_T2580060538_H
 #ifdef __clang__
@@ -4384,6 +4992,110 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SCREENEFFECTMODULE_T2580060538_H
+#ifndef BINAHMOVEMENTMODULE_T384025908_H
+#define BINAHMOVEMENTMODULE_T384025908_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahMovementModule
+struct  BinahMovementModule_t384025908  : public RuntimeObject
+{
+public:
+	// BinahBoss.BinahMoveState BinahBoss.BinahMovementModule::_currentMoveState
+	int32_t ____currentMoveState_0;
+	// System.Collections.Generic.List`1<SefiraEnum> BinahBoss.BinahMovementModule::movableSefira
+	List_1_t360641322 * ___movableSefira_1;
+	// System.Collections.Generic.Queue`1<SefiraEnum> BinahBoss.BinahMovementModule::movementQueue
+	Queue_1_t3029793370 * ___movementQueue_2;
+	// SefiraEnum BinahBoss.BinahMovementModule::currentDestSefira
+	int32_t ___currentDestSefira_3;
+	// BinahCoreScript BinahBoss.BinahMovementModule::_coreScript
+	BinahCoreScript_t303627652 * ____coreScript_4;
+	// BinahBoss.BinahVoidAction BinahBoss.BinahMovementModule::_arrivedAction
+	BinahVoidAction_t3527048283 * ____arrivedAction_5;
+	// Timer BinahBoss.BinahMovementModule::_stopMovetimer
+	Timer_t4185932343 * ____stopMovetimer_6;
+	// System.Boolean BinahBoss.BinahMovementModule::_actionBlocked
+	bool ____actionBlocked_7;
+
+public:
+	inline static int32_t get_offset_of__currentMoveState_0() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____currentMoveState_0)); }
+	inline int32_t get__currentMoveState_0() const { return ____currentMoveState_0; }
+	inline int32_t* get_address_of__currentMoveState_0() { return &____currentMoveState_0; }
+	inline void set__currentMoveState_0(int32_t value)
+	{
+		____currentMoveState_0 = value;
+	}
+
+	inline static int32_t get_offset_of_movableSefira_1() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ___movableSefira_1)); }
+	inline List_1_t360641322 * get_movableSefira_1() const { return ___movableSefira_1; }
+	inline List_1_t360641322 ** get_address_of_movableSefira_1() { return &___movableSefira_1; }
+	inline void set_movableSefira_1(List_1_t360641322 * value)
+	{
+		___movableSefira_1 = value;
+		Il2CppCodeGenWriteBarrier((&___movableSefira_1), value);
+	}
+
+	inline static int32_t get_offset_of_movementQueue_2() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ___movementQueue_2)); }
+	inline Queue_1_t3029793370 * get_movementQueue_2() const { return ___movementQueue_2; }
+	inline Queue_1_t3029793370 ** get_address_of_movementQueue_2() { return &___movementQueue_2; }
+	inline void set_movementQueue_2(Queue_1_t3029793370 * value)
+	{
+		___movementQueue_2 = value;
+		Il2CppCodeGenWriteBarrier((&___movementQueue_2), value);
+	}
+
+	inline static int32_t get_offset_of_currentDestSefira_3() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ___currentDestSefira_3)); }
+	inline int32_t get_currentDestSefira_3() const { return ___currentDestSefira_3; }
+	inline int32_t* get_address_of_currentDestSefira_3() { return &___currentDestSefira_3; }
+	inline void set_currentDestSefira_3(int32_t value)
+	{
+		___currentDestSefira_3 = value;
+	}
+
+	inline static int32_t get_offset_of__coreScript_4() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____coreScript_4)); }
+	inline BinahCoreScript_t303627652 * get__coreScript_4() const { return ____coreScript_4; }
+	inline BinahCoreScript_t303627652 ** get_address_of__coreScript_4() { return &____coreScript_4; }
+	inline void set__coreScript_4(BinahCoreScript_t303627652 * value)
+	{
+		____coreScript_4 = value;
+		Il2CppCodeGenWriteBarrier((&____coreScript_4), value);
+	}
+
+	inline static int32_t get_offset_of__arrivedAction_5() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____arrivedAction_5)); }
+	inline BinahVoidAction_t3527048283 * get__arrivedAction_5() const { return ____arrivedAction_5; }
+	inline BinahVoidAction_t3527048283 ** get_address_of__arrivedAction_5() { return &____arrivedAction_5; }
+	inline void set__arrivedAction_5(BinahVoidAction_t3527048283 * value)
+	{
+		____arrivedAction_5 = value;
+		Il2CppCodeGenWriteBarrier((&____arrivedAction_5), value);
+	}
+
+	inline static int32_t get_offset_of__stopMovetimer_6() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____stopMovetimer_6)); }
+	inline Timer_t4185932343 * get__stopMovetimer_6() const { return ____stopMovetimer_6; }
+	inline Timer_t4185932343 ** get_address_of__stopMovetimer_6() { return &____stopMovetimer_6; }
+	inline void set__stopMovetimer_6(Timer_t4185932343 * value)
+	{
+		____stopMovetimer_6 = value;
+		Il2CppCodeGenWriteBarrier((&____stopMovetimer_6), value);
+	}
+
+	inline static int32_t get_offset_of__actionBlocked_7() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____actionBlocked_7)); }
+	inline bool get__actionBlocked_7() const { return ____actionBlocked_7; }
+	inline bool* get_address_of__actionBlocked_7() { return &____actionBlocked_7; }
+	inline void set__actionBlocked_7(bool value)
+	{
+		____actionBlocked_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHMOVEMENTMODULE_T384025908_H
 #ifndef RANDOMEVENTBASE_T1951919058_H
 #define RANDOMEVENTBASE_T1951919058_H
 #ifdef __clang__
@@ -4487,57 +5199,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RANDOMEVENTBASE_T1951919058_H
-#ifndef MAPOBJECTMODEL_T2900921160_H
-#define MAPOBJECTMODEL_T2900921160_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// MapObjectModel
-struct  MapObjectModel_t2900921160  : public ObjectModelBase_t2326874531
-{
-public:
-	// MapObjectTypeInfo MapObjectModel::metaInfo
-	MapObjectTypeInfo_t2391563397 * ___metaInfo_1;
-	// PassageObjectModel MapObjectModel::passage
-	PassageObjectModel_t3642329870 * ___passage_2;
-	// System.Int32 MapObjectModel::horrorPoint
-	int32_t ___horrorPoint_3;
-
-public:
-	inline static int32_t get_offset_of_metaInfo_1() { return static_cast<int32_t>(offsetof(MapObjectModel_t2900921160, ___metaInfo_1)); }
-	inline MapObjectTypeInfo_t2391563397 * get_metaInfo_1() const { return ___metaInfo_1; }
-	inline MapObjectTypeInfo_t2391563397 ** get_address_of_metaInfo_1() { return &___metaInfo_1; }
-	inline void set_metaInfo_1(MapObjectTypeInfo_t2391563397 * value)
-	{
-		___metaInfo_1 = value;
-		Il2CppCodeGenWriteBarrier((&___metaInfo_1), value);
-	}
-
-	inline static int32_t get_offset_of_passage_2() { return static_cast<int32_t>(offsetof(MapObjectModel_t2900921160, ___passage_2)); }
-	inline PassageObjectModel_t3642329870 * get_passage_2() const { return ___passage_2; }
-	inline PassageObjectModel_t3642329870 ** get_address_of_passage_2() { return &___passage_2; }
-	inline void set_passage_2(PassageObjectModel_t3642329870 * value)
-	{
-		___passage_2 = value;
-		Il2CppCodeGenWriteBarrier((&___passage_2), value);
-	}
-
-	inline static int32_t get_offset_of_horrorPoint_3() { return static_cast<int32_t>(offsetof(MapObjectModel_t2900921160, ___horrorPoint_3)); }
-	inline int32_t get_horrorPoint_3() const { return ___horrorPoint_3; }
-	inline int32_t* get_address_of_horrorPoint_3() { return &___horrorPoint_3; }
-	inline void set_horrorPoint_3(int32_t value)
-	{
-		___horrorPoint_3 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // MAPOBJECTMODEL_T2900921160_H
 #ifndef SEFIRABOSSBASE_T2581588408_H
 #define SEFIRABOSSBASE_T2581588408_H
 #ifdef __clang__
@@ -4671,476 +5332,151 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SEFIRABOSSBASE_T2581588408_H
-#ifndef STANDINGITEMSCRIPTBASE_T3970342999_H
-#define STANDINGITEMSCRIPTBASE_T3970342999_H
+#ifndef BINAHOVERLOAD_T388366501_H
+#define BINAHOVERLOAD_T388366501_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// StandingItemScriptBase
-struct  StandingItemScriptBase_t3970342999  : public RuntimeObject
+// BinahBoss.BinahOverload
+struct  BinahOverload_t388366501  : public RuntimeObject
 {
 public:
-	// StandingItemModel StandingItemScriptBase::model
-	StandingItemModel_t3016837067 * ___model_1;
-	// StandingItemAnim StandingItemScriptBase::_animScript
-	StandingItemAnim_t570508136 * ____animScript_2;
-	// StandingItemScriptBase/StandingItemState StandingItemScriptBase::_state
-	int32_t ____state_3;
-	// System.String StandingItemScriptBase::name
-	String_t* ___name_4;
-	// System.Int32 StandingItemScriptBase::_maxHp
-	int32_t ____maxHp_5;
-	// System.Single StandingItemScriptBase::_defense
-	float ____defense_6;
+	// System.Int32 BinahBoss.BinahOverload::ProbReductionValue
+	int32_t ___ProbReductionValue_0;
+	// System.Single BinahBoss.BinahOverload::TimeLimit
+	float ___TimeLimit_1;
+	// UnityEngine.GameObject BinahBoss.BinahOverload::BinahAttachedEffect
+	GameObject_t1113636619 * ___BinahAttachedEffect_2;
+	// System.Single BinahBoss.BinahOverload::IsolatePercent
+	float ___IsolatePercent_3;
+	// BinahBoss.BinahAction BinahBoss.BinahOverload::SuccessAction
+	BinahAction_t2190854253 * ___SuccessAction_4;
+	// BinahBoss.BinahAction BinahBoss.BinahOverload::FailureAction
+	BinahAction_t2190854253 * ___FailureAction_5;
+	// OverloadType BinahBoss.BinahOverload::overloadType
+	int32_t ___overloadType_6;
+	// System.Collections.Generic.List`1<CreatureModel> BinahBoss.BinahOverload::overloadedCreatures
+	List_1_t2152756878 * ___overloadedCreatures_7;
+	// BinahCoreScript BinahBoss.BinahOverload::binah
+	BinahCoreScript_t303627652 * ___binah_8;
+	// DefenseInfo BinahBoss.BinahOverload::_defenseInfo
+	DefenseInfo_t1538677828 * ____defenseInfo_9;
 
 public:
-	inline static int32_t get_offset_of_model_1() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ___model_1)); }
-	inline StandingItemModel_t3016837067 * get_model_1() const { return ___model_1; }
-	inline StandingItemModel_t3016837067 ** get_address_of_model_1() { return &___model_1; }
-	inline void set_model_1(StandingItemModel_t3016837067 * value)
+	inline static int32_t get_offset_of_ProbReductionValue_0() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___ProbReductionValue_0)); }
+	inline int32_t get_ProbReductionValue_0() const { return ___ProbReductionValue_0; }
+	inline int32_t* get_address_of_ProbReductionValue_0() { return &___ProbReductionValue_0; }
+	inline void set_ProbReductionValue_0(int32_t value)
 	{
-		___model_1 = value;
-		Il2CppCodeGenWriteBarrier((&___model_1), value);
+		___ProbReductionValue_0 = value;
 	}
 
-	inline static int32_t get_offset_of__animScript_2() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____animScript_2)); }
-	inline StandingItemAnim_t570508136 * get__animScript_2() const { return ____animScript_2; }
-	inline StandingItemAnim_t570508136 ** get_address_of__animScript_2() { return &____animScript_2; }
-	inline void set__animScript_2(StandingItemAnim_t570508136 * value)
+	inline static int32_t get_offset_of_TimeLimit_1() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___TimeLimit_1)); }
+	inline float get_TimeLimit_1() const { return ___TimeLimit_1; }
+	inline float* get_address_of_TimeLimit_1() { return &___TimeLimit_1; }
+	inline void set_TimeLimit_1(float value)
 	{
-		____animScript_2 = value;
-		Il2CppCodeGenWriteBarrier((&____animScript_2), value);
+		___TimeLimit_1 = value;
 	}
 
-	inline static int32_t get_offset_of__state_3() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____state_3)); }
-	inline int32_t get__state_3() const { return ____state_3; }
-	inline int32_t* get_address_of__state_3() { return &____state_3; }
-	inline void set__state_3(int32_t value)
+	inline static int32_t get_offset_of_BinahAttachedEffect_2() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___BinahAttachedEffect_2)); }
+	inline GameObject_t1113636619 * get_BinahAttachedEffect_2() const { return ___BinahAttachedEffect_2; }
+	inline GameObject_t1113636619 ** get_address_of_BinahAttachedEffect_2() { return &___BinahAttachedEffect_2; }
+	inline void set_BinahAttachedEffect_2(GameObject_t1113636619 * value)
 	{
-		____state_3 = value;
+		___BinahAttachedEffect_2 = value;
+		Il2CppCodeGenWriteBarrier((&___BinahAttachedEffect_2), value);
 	}
 
-	inline static int32_t get_offset_of_name_4() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ___name_4)); }
-	inline String_t* get_name_4() const { return ___name_4; }
-	inline String_t** get_address_of_name_4() { return &___name_4; }
-	inline void set_name_4(String_t* value)
+	inline static int32_t get_offset_of_IsolatePercent_3() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___IsolatePercent_3)); }
+	inline float get_IsolatePercent_3() const { return ___IsolatePercent_3; }
+	inline float* get_address_of_IsolatePercent_3() { return &___IsolatePercent_3; }
+	inline void set_IsolatePercent_3(float value)
 	{
-		___name_4 = value;
-		Il2CppCodeGenWriteBarrier((&___name_4), value);
+		___IsolatePercent_3 = value;
 	}
 
-	inline static int32_t get_offset_of__maxHp_5() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____maxHp_5)); }
-	inline int32_t get__maxHp_5() const { return ____maxHp_5; }
-	inline int32_t* get_address_of__maxHp_5() { return &____maxHp_5; }
-	inline void set__maxHp_5(int32_t value)
+	inline static int32_t get_offset_of_SuccessAction_4() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___SuccessAction_4)); }
+	inline BinahAction_t2190854253 * get_SuccessAction_4() const { return ___SuccessAction_4; }
+	inline BinahAction_t2190854253 ** get_address_of_SuccessAction_4() { return &___SuccessAction_4; }
+	inline void set_SuccessAction_4(BinahAction_t2190854253 * value)
 	{
-		____maxHp_5 = value;
+		___SuccessAction_4 = value;
+		Il2CppCodeGenWriteBarrier((&___SuccessAction_4), value);
 	}
 
-	inline static int32_t get_offset_of__defense_6() { return static_cast<int32_t>(offsetof(StandingItemScriptBase_t3970342999, ____defense_6)); }
-	inline float get__defense_6() const { return ____defense_6; }
-	inline float* get_address_of__defense_6() { return &____defense_6; }
-	inline void set__defense_6(float value)
+	inline static int32_t get_offset_of_FailureAction_5() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___FailureAction_5)); }
+	inline BinahAction_t2190854253 * get_FailureAction_5() const { return ___FailureAction_5; }
+	inline BinahAction_t2190854253 ** get_address_of_FailureAction_5() { return &___FailureAction_5; }
+	inline void set_FailureAction_5(BinahAction_t2190854253 * value)
 	{
-		____defense_6 = value;
+		___FailureAction_5 = value;
+		Il2CppCodeGenWriteBarrier((&___FailureAction_5), value);
+	}
+
+	inline static int32_t get_offset_of_overloadType_6() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___overloadType_6)); }
+	inline int32_t get_overloadType_6() const { return ___overloadType_6; }
+	inline int32_t* get_address_of_overloadType_6() { return &___overloadType_6; }
+	inline void set_overloadType_6(int32_t value)
+	{
+		___overloadType_6 = value;
+	}
+
+	inline static int32_t get_offset_of_overloadedCreatures_7() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___overloadedCreatures_7)); }
+	inline List_1_t2152756878 * get_overloadedCreatures_7() const { return ___overloadedCreatures_7; }
+	inline List_1_t2152756878 ** get_address_of_overloadedCreatures_7() { return &___overloadedCreatures_7; }
+	inline void set_overloadedCreatures_7(List_1_t2152756878 * value)
+	{
+		___overloadedCreatures_7 = value;
+		Il2CppCodeGenWriteBarrier((&___overloadedCreatures_7), value);
+	}
+
+	inline static int32_t get_offset_of_binah_8() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___binah_8)); }
+	inline BinahCoreScript_t303627652 * get_binah_8() const { return ___binah_8; }
+	inline BinahCoreScript_t303627652 ** get_address_of_binah_8() { return &___binah_8; }
+	inline void set_binah_8(BinahCoreScript_t303627652 * value)
+	{
+		___binah_8 = value;
+		Il2CppCodeGenWriteBarrier((&___binah_8), value);
+	}
+
+	inline static int32_t get_offset_of__defenseInfo_9() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ____defenseInfo_9)); }
+	inline DefenseInfo_t1538677828 * get__defenseInfo_9() const { return ____defenseInfo_9; }
+	inline DefenseInfo_t1538677828 ** get_address_of__defenseInfo_9() { return &____defenseInfo_9; }
+	inline void set__defenseInfo_9(DefenseInfo_t1538677828 * value)
+	{
+		____defenseInfo_9 = value;
+		Il2CppCodeGenWriteBarrier((&____defenseInfo_9), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // STANDINGITEMSCRIPTBASE_T3970342999_H
-#ifndef BIGBIRD_T3712234294_H
-#define BIGBIRD_T3712234294_H
+#endif // BINAHOVERLOAD_T388366501_H
+#ifndef COMPONENT_T1923634451_H
+#define COMPONENT_T1923634451_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BigBird
-struct  BigBird_t3712234294  : public BirdCreatureBase_t1539999157
+// UnityEngine.Component
+struct  Component_t1923634451  : public Object_t631007953
 {
 public:
-	// Timer BigBird::escapeCoolTimer
-	Timer_t4185932343 * ___escapeCoolTimer_13;
-	// Timer BigBird::attractCoolTimer
-	Timer_t4185932343 * ___attractCoolTimer_16;
-	// Timer BigBird::motionDelayTimer
-	Timer_t4185932343 * ___motionDelayTimer_21;
-	// Timer BigBird::attractTimer
-	Timer_t4185932343 * ___attractTimer_24;
-	// System.Collections.Generic.Queue`1<WorkerModel> BigBird::deadScene
-	Queue_1_t4209229247 * ___deadScene_41;
-	// System.Collections.Generic.List`1<WorkerModel> BigBird::attracted
-	List_1_t1540077199 * ___attracted_42;
-	// System.Collections.Generic.List`1<OfficerModel> BigBird::alive
-	List_1_t4229800440 * ___alive_43;
-	// System.Collections.Generic.List`1<WorkerModel> BigBird::dead
-	List_1_t1540077199 * ___dead_44;
-	// WorkerModel BigBird::moveTarget
-	WorkerModel_t68002457 * ___moveTarget_45;
-	// Sefira BigBird::prevSefira
-	Sefira_t955407239 * ___prevSefira_46;
-	// PassageObjectModel BigBird::oldPassage
-	PassageObjectModel_t3642329870 * ___oldPassage_47;
-	// CreatureBase/SensingModule BigBird::sensing
-	SensingModule_t3736160013 * ___sensing_48;
-	// System.Boolean BigBird::cameraSensored
-	bool ___cameraSensored_49;
-	// System.Int32 BigBird::deadCnt
-	int32_t ___deadCnt_50;
-	// System.Boolean BigBird::observingDanger
-	bool ___observingDanger_51;
-	// System.Boolean BigBird::boss_activated
-	bool ___boss_activated_52;
-	// BossBird BigBird::boss
-	BossBird_t769689499 * ___boss_53;
-	// BossBird/OtherBirdState BigBird::_otherBirdState
-	int32_t ____otherBirdState_54;
-	// BigBirdAnim BigBird::_animScript
-	BigBirdAnim_t2245120220 * ____animScript_55;
-	// System.Guid BigBird::<InstanceID>k__BackingField
-	Guid_t  ___U3CInstanceIDU3Ek__BackingField_56;
 
 public:
-	inline static int32_t get_offset_of_escapeCoolTimer_13() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___escapeCoolTimer_13)); }
-	inline Timer_t4185932343 * get_escapeCoolTimer_13() const { return ___escapeCoolTimer_13; }
-	inline Timer_t4185932343 ** get_address_of_escapeCoolTimer_13() { return &___escapeCoolTimer_13; }
-	inline void set_escapeCoolTimer_13(Timer_t4185932343 * value)
-	{
-		___escapeCoolTimer_13 = value;
-		Il2CppCodeGenWriteBarrier((&___escapeCoolTimer_13), value);
-	}
-
-	inline static int32_t get_offset_of_attractCoolTimer_16() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___attractCoolTimer_16)); }
-	inline Timer_t4185932343 * get_attractCoolTimer_16() const { return ___attractCoolTimer_16; }
-	inline Timer_t4185932343 ** get_address_of_attractCoolTimer_16() { return &___attractCoolTimer_16; }
-	inline void set_attractCoolTimer_16(Timer_t4185932343 * value)
-	{
-		___attractCoolTimer_16 = value;
-		Il2CppCodeGenWriteBarrier((&___attractCoolTimer_16), value);
-	}
-
-	inline static int32_t get_offset_of_motionDelayTimer_21() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___motionDelayTimer_21)); }
-	inline Timer_t4185932343 * get_motionDelayTimer_21() const { return ___motionDelayTimer_21; }
-	inline Timer_t4185932343 ** get_address_of_motionDelayTimer_21() { return &___motionDelayTimer_21; }
-	inline void set_motionDelayTimer_21(Timer_t4185932343 * value)
-	{
-		___motionDelayTimer_21 = value;
-		Il2CppCodeGenWriteBarrier((&___motionDelayTimer_21), value);
-	}
-
-	inline static int32_t get_offset_of_attractTimer_24() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___attractTimer_24)); }
-	inline Timer_t4185932343 * get_attractTimer_24() const { return ___attractTimer_24; }
-	inline Timer_t4185932343 ** get_address_of_attractTimer_24() { return &___attractTimer_24; }
-	inline void set_attractTimer_24(Timer_t4185932343 * value)
-	{
-		___attractTimer_24 = value;
-		Il2CppCodeGenWriteBarrier((&___attractTimer_24), value);
-	}
-
-	inline static int32_t get_offset_of_deadScene_41() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___deadScene_41)); }
-	inline Queue_1_t4209229247 * get_deadScene_41() const { return ___deadScene_41; }
-	inline Queue_1_t4209229247 ** get_address_of_deadScene_41() { return &___deadScene_41; }
-	inline void set_deadScene_41(Queue_1_t4209229247 * value)
-	{
-		___deadScene_41 = value;
-		Il2CppCodeGenWriteBarrier((&___deadScene_41), value);
-	}
-
-	inline static int32_t get_offset_of_attracted_42() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___attracted_42)); }
-	inline List_1_t1540077199 * get_attracted_42() const { return ___attracted_42; }
-	inline List_1_t1540077199 ** get_address_of_attracted_42() { return &___attracted_42; }
-	inline void set_attracted_42(List_1_t1540077199 * value)
-	{
-		___attracted_42 = value;
-		Il2CppCodeGenWriteBarrier((&___attracted_42), value);
-	}
-
-	inline static int32_t get_offset_of_alive_43() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___alive_43)); }
-	inline List_1_t4229800440 * get_alive_43() const { return ___alive_43; }
-	inline List_1_t4229800440 ** get_address_of_alive_43() { return &___alive_43; }
-	inline void set_alive_43(List_1_t4229800440 * value)
-	{
-		___alive_43 = value;
-		Il2CppCodeGenWriteBarrier((&___alive_43), value);
-	}
-
-	inline static int32_t get_offset_of_dead_44() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___dead_44)); }
-	inline List_1_t1540077199 * get_dead_44() const { return ___dead_44; }
-	inline List_1_t1540077199 ** get_address_of_dead_44() { return &___dead_44; }
-	inline void set_dead_44(List_1_t1540077199 * value)
-	{
-		___dead_44 = value;
-		Il2CppCodeGenWriteBarrier((&___dead_44), value);
-	}
-
-	inline static int32_t get_offset_of_moveTarget_45() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___moveTarget_45)); }
-	inline WorkerModel_t68002457 * get_moveTarget_45() const { return ___moveTarget_45; }
-	inline WorkerModel_t68002457 ** get_address_of_moveTarget_45() { return &___moveTarget_45; }
-	inline void set_moveTarget_45(WorkerModel_t68002457 * value)
-	{
-		___moveTarget_45 = value;
-		Il2CppCodeGenWriteBarrier((&___moveTarget_45), value);
-	}
-
-	inline static int32_t get_offset_of_prevSefira_46() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___prevSefira_46)); }
-	inline Sefira_t955407239 * get_prevSefira_46() const { return ___prevSefira_46; }
-	inline Sefira_t955407239 ** get_address_of_prevSefira_46() { return &___prevSefira_46; }
-	inline void set_prevSefira_46(Sefira_t955407239 * value)
-	{
-		___prevSefira_46 = value;
-		Il2CppCodeGenWriteBarrier((&___prevSefira_46), value);
-	}
-
-	inline static int32_t get_offset_of_oldPassage_47() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___oldPassage_47)); }
-	inline PassageObjectModel_t3642329870 * get_oldPassage_47() const { return ___oldPassage_47; }
-	inline PassageObjectModel_t3642329870 ** get_address_of_oldPassage_47() { return &___oldPassage_47; }
-	inline void set_oldPassage_47(PassageObjectModel_t3642329870 * value)
-	{
-		___oldPassage_47 = value;
-		Il2CppCodeGenWriteBarrier((&___oldPassage_47), value);
-	}
-
-	inline static int32_t get_offset_of_sensing_48() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___sensing_48)); }
-	inline SensingModule_t3736160013 * get_sensing_48() const { return ___sensing_48; }
-	inline SensingModule_t3736160013 ** get_address_of_sensing_48() { return &___sensing_48; }
-	inline void set_sensing_48(SensingModule_t3736160013 * value)
-	{
-		___sensing_48 = value;
-		Il2CppCodeGenWriteBarrier((&___sensing_48), value);
-	}
-
-	inline static int32_t get_offset_of_cameraSensored_49() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___cameraSensored_49)); }
-	inline bool get_cameraSensored_49() const { return ___cameraSensored_49; }
-	inline bool* get_address_of_cameraSensored_49() { return &___cameraSensored_49; }
-	inline void set_cameraSensored_49(bool value)
-	{
-		___cameraSensored_49 = value;
-	}
-
-	inline static int32_t get_offset_of_deadCnt_50() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___deadCnt_50)); }
-	inline int32_t get_deadCnt_50() const { return ___deadCnt_50; }
-	inline int32_t* get_address_of_deadCnt_50() { return &___deadCnt_50; }
-	inline void set_deadCnt_50(int32_t value)
-	{
-		___deadCnt_50 = value;
-	}
-
-	inline static int32_t get_offset_of_observingDanger_51() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___observingDanger_51)); }
-	inline bool get_observingDanger_51() const { return ___observingDanger_51; }
-	inline bool* get_address_of_observingDanger_51() { return &___observingDanger_51; }
-	inline void set_observingDanger_51(bool value)
-	{
-		___observingDanger_51 = value;
-	}
-
-	inline static int32_t get_offset_of_boss_activated_52() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___boss_activated_52)); }
-	inline bool get_boss_activated_52() const { return ___boss_activated_52; }
-	inline bool* get_address_of_boss_activated_52() { return &___boss_activated_52; }
-	inline void set_boss_activated_52(bool value)
-	{
-		___boss_activated_52 = value;
-	}
-
-	inline static int32_t get_offset_of_boss_53() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___boss_53)); }
-	inline BossBird_t769689499 * get_boss_53() const { return ___boss_53; }
-	inline BossBird_t769689499 ** get_address_of_boss_53() { return &___boss_53; }
-	inline void set_boss_53(BossBird_t769689499 * value)
-	{
-		___boss_53 = value;
-		Il2CppCodeGenWriteBarrier((&___boss_53), value);
-	}
-
-	inline static int32_t get_offset_of__otherBirdState_54() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ____otherBirdState_54)); }
-	inline int32_t get__otherBirdState_54() const { return ____otherBirdState_54; }
-	inline int32_t* get_address_of__otherBirdState_54() { return &____otherBirdState_54; }
-	inline void set__otherBirdState_54(int32_t value)
-	{
-		____otherBirdState_54 = value;
-	}
-
-	inline static int32_t get_offset_of__animScript_55() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ____animScript_55)); }
-	inline BigBirdAnim_t2245120220 * get__animScript_55() const { return ____animScript_55; }
-	inline BigBirdAnim_t2245120220 ** get_address_of__animScript_55() { return &____animScript_55; }
-	inline void set__animScript_55(BigBirdAnim_t2245120220 * value)
-	{
-		____animScript_55 = value;
-		Il2CppCodeGenWriteBarrier((&____animScript_55), value);
-	}
-
-	inline static int32_t get_offset_of_U3CInstanceIDU3Ek__BackingField_56() { return static_cast<int32_t>(offsetof(BigBird_t3712234294, ___U3CInstanceIDU3Ek__BackingField_56)); }
-	inline Guid_t  get_U3CInstanceIDU3Ek__BackingField_56() const { return ___U3CInstanceIDU3Ek__BackingField_56; }
-	inline Guid_t * get_address_of_U3CInstanceIDU3Ek__BackingField_56() { return &___U3CInstanceIDU3Ek__BackingField_56; }
-	inline void set_U3CInstanceIDU3Ek__BackingField_56(Guid_t  value)
-	{
-		___U3CInstanceIDU3Ek__BackingField_56 = value;
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BIGBIRD_T3712234294_H
-#ifndef BINAHMOVEMENTMODULE_T384025908_H
-#define BINAHMOVEMENTMODULE_T384025908_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahMovementModule
-struct  BinahMovementModule_t384025908  : public RuntimeObject
-{
-public:
-	// BinahBoss.BinahMoveState BinahBoss.BinahMovementModule::_currentMoveState
-	int32_t ____currentMoveState_0;
-	// System.Collections.Generic.List`1<SefiraEnum> BinahBoss.BinahMovementModule::movableSefira
-	List_1_t360641322 * ___movableSefira_1;
-	// System.Collections.Generic.Queue`1<SefiraEnum> BinahBoss.BinahMovementModule::movementQueue
-	Queue_1_t3029793370 * ___movementQueue_2;
-	// SefiraEnum BinahBoss.BinahMovementModule::currentDestSefira
-	int32_t ___currentDestSefira_3;
-	// BinahCoreScript BinahBoss.BinahMovementModule::_coreScript
-	BinahCoreScript_t303627652 * ____coreScript_4;
-	// BinahBoss.BinahVoidAction BinahBoss.BinahMovementModule::_arrivedAction
-	BinahVoidAction_t3527048283 * ____arrivedAction_5;
-	// Timer BinahBoss.BinahMovementModule::_stopMovetimer
-	Timer_t4185932343 * ____stopMovetimer_6;
-	// System.Boolean BinahBoss.BinahMovementModule::_actionBlocked
-	bool ____actionBlocked_7;
-
-public:
-	inline static int32_t get_offset_of__currentMoveState_0() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____currentMoveState_0)); }
-	inline int32_t get__currentMoveState_0() const { return ____currentMoveState_0; }
-	inline int32_t* get_address_of__currentMoveState_0() { return &____currentMoveState_0; }
-	inline void set__currentMoveState_0(int32_t value)
-	{
-		____currentMoveState_0 = value;
-	}
-
-	inline static int32_t get_offset_of_movableSefira_1() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ___movableSefira_1)); }
-	inline List_1_t360641322 * get_movableSefira_1() const { return ___movableSefira_1; }
-	inline List_1_t360641322 ** get_address_of_movableSefira_1() { return &___movableSefira_1; }
-	inline void set_movableSefira_1(List_1_t360641322 * value)
-	{
-		___movableSefira_1 = value;
-		Il2CppCodeGenWriteBarrier((&___movableSefira_1), value);
-	}
-
-	inline static int32_t get_offset_of_movementQueue_2() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ___movementQueue_2)); }
-	inline Queue_1_t3029793370 * get_movementQueue_2() const { return ___movementQueue_2; }
-	inline Queue_1_t3029793370 ** get_address_of_movementQueue_2() { return &___movementQueue_2; }
-	inline void set_movementQueue_2(Queue_1_t3029793370 * value)
-	{
-		___movementQueue_2 = value;
-		Il2CppCodeGenWriteBarrier((&___movementQueue_2), value);
-	}
-
-	inline static int32_t get_offset_of_currentDestSefira_3() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ___currentDestSefira_3)); }
-	inline int32_t get_currentDestSefira_3() const { return ___currentDestSefira_3; }
-	inline int32_t* get_address_of_currentDestSefira_3() { return &___currentDestSefira_3; }
-	inline void set_currentDestSefira_3(int32_t value)
-	{
-		___currentDestSefira_3 = value;
-	}
-
-	inline static int32_t get_offset_of__coreScript_4() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____coreScript_4)); }
-	inline BinahCoreScript_t303627652 * get__coreScript_4() const { return ____coreScript_4; }
-	inline BinahCoreScript_t303627652 ** get_address_of__coreScript_4() { return &____coreScript_4; }
-	inline void set__coreScript_4(BinahCoreScript_t303627652 * value)
-	{
-		____coreScript_4 = value;
-		Il2CppCodeGenWriteBarrier((&____coreScript_4), value);
-	}
-
-	inline static int32_t get_offset_of__arrivedAction_5() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____arrivedAction_5)); }
-	inline BinahVoidAction_t3527048283 * get__arrivedAction_5() const { return ____arrivedAction_5; }
-	inline BinahVoidAction_t3527048283 ** get_address_of__arrivedAction_5() { return &____arrivedAction_5; }
-	inline void set__arrivedAction_5(BinahVoidAction_t3527048283 * value)
-	{
-		____arrivedAction_5 = value;
-		Il2CppCodeGenWriteBarrier((&____arrivedAction_5), value);
-	}
-
-	inline static int32_t get_offset_of__stopMovetimer_6() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____stopMovetimer_6)); }
-	inline Timer_t4185932343 * get__stopMovetimer_6() const { return ____stopMovetimer_6; }
-	inline Timer_t4185932343 ** get_address_of__stopMovetimer_6() { return &____stopMovetimer_6; }
-	inline void set__stopMovetimer_6(Timer_t4185932343 * value)
-	{
-		____stopMovetimer_6 = value;
-		Il2CppCodeGenWriteBarrier((&____stopMovetimer_6), value);
-	}
-
-	inline static int32_t get_offset_of__actionBlocked_7() { return static_cast<int32_t>(offsetof(BinahMovementModule_t384025908, ____actionBlocked_7)); }
-	inline bool get__actionBlocked_7() const { return ____actionBlocked_7; }
-	inline bool* get_address_of__actionBlocked_7() { return &____actionBlocked_7; }
-	inline void set__actionBlocked_7(bool value)
-	{
-		____actionBlocked_7 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHMOVEMENTMODULE_T384025908_H
-#ifndef BINAHACTION_T2190854253_H
-#define BINAHACTION_T2190854253_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahAction
-struct  BinahAction_t2190854253  : public RuntimeObject
-{
-public:
-	// BinahCoreScript BinahBoss.BinahAction::binah
-	BinahCoreScript_t303627652 * ___binah_0;
-	// BinahBoss.BinahActionState BinahBoss.BinahAction::actionState
-	int32_t ___actionState_1;
-	// BinahBoss.BinahAction BinahBoss.BinahAction::_interrupt
-	BinahAction_t2190854253 * ____interrupt_2;
-
-public:
-	inline static int32_t get_offset_of_binah_0() { return static_cast<int32_t>(offsetof(BinahAction_t2190854253, ___binah_0)); }
-	inline BinahCoreScript_t303627652 * get_binah_0() const { return ___binah_0; }
-	inline BinahCoreScript_t303627652 ** get_address_of_binah_0() { return &___binah_0; }
-	inline void set_binah_0(BinahCoreScript_t303627652 * value)
-	{
-		___binah_0 = value;
-		Il2CppCodeGenWriteBarrier((&___binah_0), value);
-	}
-
-	inline static int32_t get_offset_of_actionState_1() { return static_cast<int32_t>(offsetof(BinahAction_t2190854253, ___actionState_1)); }
-	inline int32_t get_actionState_1() const { return ___actionState_1; }
-	inline int32_t* get_address_of_actionState_1() { return &___actionState_1; }
-	inline void set_actionState_1(int32_t value)
-	{
-		___actionState_1 = value;
-	}
-
-	inline static int32_t get_offset_of__interrupt_2() { return static_cast<int32_t>(offsetof(BinahAction_t2190854253, ____interrupt_2)); }
-	inline BinahAction_t2190854253 * get__interrupt_2() const { return ____interrupt_2; }
-	inline BinahAction_t2190854253 ** get_address_of__interrupt_2() { return &____interrupt_2; }
-	inline void set__interrupt_2(BinahAction_t2190854253 * value)
-	{
-		____interrupt_2 = value;
-		Il2CppCodeGenWriteBarrier((&____interrupt_2), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHACTION_T2190854253_H
+#endif // COMPONENT_T1923634451_H
 #ifndef BINAHCORESCRIPT_T303627652_H
 #define BINAHCORESCRIPT_T303627652_H
 #ifdef __clang__
@@ -5420,210 +5756,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLOODBATH_T1769009321_H
-#ifndef BINAHOVERLOAD_T388366501_H
-#define BINAHOVERLOAD_T388366501_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahOverload
-struct  BinahOverload_t388366501  : public RuntimeObject
-{
-public:
-	// System.Int32 BinahBoss.BinahOverload::ProbReductionValue
-	int32_t ___ProbReductionValue_0;
-	// System.Single BinahBoss.BinahOverload::TimeLimit
-	float ___TimeLimit_1;
-	// UnityEngine.GameObject BinahBoss.BinahOverload::BinahAttachedEffect
-	GameObject_t1113636619 * ___BinahAttachedEffect_2;
-	// System.Single BinahBoss.BinahOverload::IsolatePercent
-	float ___IsolatePercent_3;
-	// BinahBoss.BinahAction BinahBoss.BinahOverload::SuccessAction
-	BinahAction_t2190854253 * ___SuccessAction_4;
-	// BinahBoss.BinahAction BinahBoss.BinahOverload::FailureAction
-	BinahAction_t2190854253 * ___FailureAction_5;
-	// OverloadType BinahBoss.BinahOverload::overloadType
-	int32_t ___overloadType_6;
-	// System.Collections.Generic.List`1<CreatureModel> BinahBoss.BinahOverload::overloadedCreatures
-	List_1_t2152756878 * ___overloadedCreatures_7;
-	// BinahCoreScript BinahBoss.BinahOverload::binah
-	BinahCoreScript_t303627652 * ___binah_8;
-	// DefenseInfo BinahBoss.BinahOverload::_defenseInfo
-	DefenseInfo_t1538677828 * ____defenseInfo_9;
-
-public:
-	inline static int32_t get_offset_of_ProbReductionValue_0() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___ProbReductionValue_0)); }
-	inline int32_t get_ProbReductionValue_0() const { return ___ProbReductionValue_0; }
-	inline int32_t* get_address_of_ProbReductionValue_0() { return &___ProbReductionValue_0; }
-	inline void set_ProbReductionValue_0(int32_t value)
-	{
-		___ProbReductionValue_0 = value;
-	}
-
-	inline static int32_t get_offset_of_TimeLimit_1() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___TimeLimit_1)); }
-	inline float get_TimeLimit_1() const { return ___TimeLimit_1; }
-	inline float* get_address_of_TimeLimit_1() { return &___TimeLimit_1; }
-	inline void set_TimeLimit_1(float value)
-	{
-		___TimeLimit_1 = value;
-	}
-
-	inline static int32_t get_offset_of_BinahAttachedEffect_2() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___BinahAttachedEffect_2)); }
-	inline GameObject_t1113636619 * get_BinahAttachedEffect_2() const { return ___BinahAttachedEffect_2; }
-	inline GameObject_t1113636619 ** get_address_of_BinahAttachedEffect_2() { return &___BinahAttachedEffect_2; }
-	inline void set_BinahAttachedEffect_2(GameObject_t1113636619 * value)
-	{
-		___BinahAttachedEffect_2 = value;
-		Il2CppCodeGenWriteBarrier((&___BinahAttachedEffect_2), value);
-	}
-
-	inline static int32_t get_offset_of_IsolatePercent_3() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___IsolatePercent_3)); }
-	inline float get_IsolatePercent_3() const { return ___IsolatePercent_3; }
-	inline float* get_address_of_IsolatePercent_3() { return &___IsolatePercent_3; }
-	inline void set_IsolatePercent_3(float value)
-	{
-		___IsolatePercent_3 = value;
-	}
-
-	inline static int32_t get_offset_of_SuccessAction_4() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___SuccessAction_4)); }
-	inline BinahAction_t2190854253 * get_SuccessAction_4() const { return ___SuccessAction_4; }
-	inline BinahAction_t2190854253 ** get_address_of_SuccessAction_4() { return &___SuccessAction_4; }
-	inline void set_SuccessAction_4(BinahAction_t2190854253 * value)
-	{
-		___SuccessAction_4 = value;
-		Il2CppCodeGenWriteBarrier((&___SuccessAction_4), value);
-	}
-
-	inline static int32_t get_offset_of_FailureAction_5() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___FailureAction_5)); }
-	inline BinahAction_t2190854253 * get_FailureAction_5() const { return ___FailureAction_5; }
-	inline BinahAction_t2190854253 ** get_address_of_FailureAction_5() { return &___FailureAction_5; }
-	inline void set_FailureAction_5(BinahAction_t2190854253 * value)
-	{
-		___FailureAction_5 = value;
-		Il2CppCodeGenWriteBarrier((&___FailureAction_5), value);
-	}
-
-	inline static int32_t get_offset_of_overloadType_6() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___overloadType_6)); }
-	inline int32_t get_overloadType_6() const { return ___overloadType_6; }
-	inline int32_t* get_address_of_overloadType_6() { return &___overloadType_6; }
-	inline void set_overloadType_6(int32_t value)
-	{
-		___overloadType_6 = value;
-	}
-
-	inline static int32_t get_offset_of_overloadedCreatures_7() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___overloadedCreatures_7)); }
-	inline List_1_t2152756878 * get_overloadedCreatures_7() const { return ___overloadedCreatures_7; }
-	inline List_1_t2152756878 ** get_address_of_overloadedCreatures_7() { return &___overloadedCreatures_7; }
-	inline void set_overloadedCreatures_7(List_1_t2152756878 * value)
-	{
-		___overloadedCreatures_7 = value;
-		Il2CppCodeGenWriteBarrier((&___overloadedCreatures_7), value);
-	}
-
-	inline static int32_t get_offset_of_binah_8() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ___binah_8)); }
-	inline BinahCoreScript_t303627652 * get_binah_8() const { return ___binah_8; }
-	inline BinahCoreScript_t303627652 ** get_address_of_binah_8() { return &___binah_8; }
-	inline void set_binah_8(BinahCoreScript_t303627652 * value)
-	{
-		___binah_8 = value;
-		Il2CppCodeGenWriteBarrier((&___binah_8), value);
-	}
-
-	inline static int32_t get_offset_of__defenseInfo_9() { return static_cast<int32_t>(offsetof(BinahOverload_t388366501, ____defenseInfo_9)); }
-	inline DefenseInfo_t1538677828 * get__defenseInfo_9() const { return ____defenseInfo_9; }
-	inline DefenseInfo_t1538677828 ** get_address_of__defenseInfo_9() { return &____defenseInfo_9; }
-	inline void set__defenseInfo_9(DefenseInfo_t1538677828 * value)
-	{
-		____defenseInfo_9 = value;
-		Il2CppCodeGenWriteBarrier((&____defenseInfo_9), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHOVERLOAD_T388366501_H
-#ifndef BOOMERCIRCUSSCRIPT_T3132269725_H
-#define BOOMERCIRCUSSCRIPT_T3132269725_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BoomerCircusScript
-struct  BoomerCircusScript_t3132269725  : public StandingItemScriptBase_t3970342999
-{
-public:
-	// BoomerCircusEvent BoomerCircusScript::randomEvent
-	BoomerCircusEvent_t3140860894 * ___randomEvent_7;
-
-public:
-	inline static int32_t get_offset_of_randomEvent_7() { return static_cast<int32_t>(offsetof(BoomerCircusScript_t3132269725, ___randomEvent_7)); }
-	inline BoomerCircusEvent_t3140860894 * get_randomEvent_7() const { return ___randomEvent_7; }
-	inline BoomerCircusEvent_t3140860894 ** get_address_of_randomEvent_7() { return &___randomEvent_7; }
-	inline void set_randomEvent_7(BoomerCircusEvent_t3140860894 * value)
-	{
-		___randomEvent_7 = value;
-		Il2CppCodeGenWriteBarrier((&___randomEvent_7), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BOOMERCIRCUSSCRIPT_T3132269725_H
-#ifndef BINAHWAVEDEBUF_T3864703214_H
-#define BINAHWAVEDEBUF_T3864703214_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahWaveDebuf
-struct  BinahWaveDebuf_t3864703214  : public UnitBuf_t4079465950
-{
-public:
-	// System.Single BinahBoss.BinahWaveDebuf::speedMult
-	float ___speedMult_5;
-
-public:
-	inline static int32_t get_offset_of_speedMult_5() { return static_cast<int32_t>(offsetof(BinahWaveDebuf_t3864703214, ___speedMult_5)); }
-	inline float get_speedMult_5() const { return ___speedMult_5; }
-	inline float* get_address_of_speedMult_5() { return &___speedMult_5; }
-	inline void set_speedMult_5(float value)
-	{
-		___speedMult_5 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHWAVEDEBUF_T3864703214_H
-#ifndef BINAHVOIDACTION_T3527048283_H
-#define BINAHVOIDACTION_T3527048283_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahVoidAction
-struct  BinahVoidAction_t3527048283  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHVOIDACTION_T3527048283_H
 #ifndef BIRDEGGOBJECT_T2527542168_H
 #define BIRDEGGOBJECT_T2527542168_H
 #ifdef __clang__
@@ -5704,47 +5836,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHOVERLOADACTIVATION_T3568940964_H
-#ifndef BINAHRECOVERBUF_T412608197_H
-#define BINAHRECOVERBUF_T412608197_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahRecoverBuf
-struct  BinahRecoverBuf_t412608197  : public UnitBuf_t4079465950
-{
-public:
-	// BinahCoreScript BinahBoss.BinahRecoverBuf::binah
-	BinahCoreScript_t303627652 * ___binah_7;
-	// Timer BinahBoss.BinahRecoverBuf::_recoverTimer
-	Timer_t4185932343 * ____recoverTimer_8;
-
-public:
-	inline static int32_t get_offset_of_binah_7() { return static_cast<int32_t>(offsetof(BinahRecoverBuf_t412608197, ___binah_7)); }
-	inline BinahCoreScript_t303627652 * get_binah_7() const { return ___binah_7; }
-	inline BinahCoreScript_t303627652 ** get_address_of_binah_7() { return &___binah_7; }
-	inline void set_binah_7(BinahCoreScript_t303627652 * value)
-	{
-		___binah_7 = value;
-		Il2CppCodeGenWriteBarrier((&___binah_7), value);
-	}
-
-	inline static int32_t get_offset_of__recoverTimer_8() { return static_cast<int32_t>(offsetof(BinahRecoverBuf_t412608197, ____recoverTimer_8)); }
-	inline Timer_t4185932343 * get__recoverTimer_8() const { return ____recoverTimer_8; }
-	inline Timer_t4185932343 ** get_address_of__recoverTimer_8() { return &____recoverTimer_8; }
-	inline void set__recoverTimer_8(Timer_t4185932343 * value)
-	{
-		____recoverTimer_8 = value;
-		Il2CppCodeGenWriteBarrier((&____recoverTimer_8), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHRECOVERBUF_T412608197_H
 #ifndef BLACKFOGOVERLOAD_T1151750831_H
 #define BLACKFOGOVERLOAD_T1151750831_H
 #ifdef __clang__
@@ -5775,137 +5866,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLACKFOGOVERLOAD_T1151750831_H
-#ifndef COLUMNOVERLOAD_T4253983356_H
-#define COLUMNOVERLOAD_T4253983356_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.ColumnOverload
-struct  ColumnOverload_t4253983356  : public BinahOverload_t388366501
-{
-public:
-	// BinahBoss.EightColumn BinahBoss.ColumnOverload::action
-	EightColumn_t2767995227 * ___action_10;
-
-public:
-	inline static int32_t get_offset_of_action_10() { return static_cast<int32_t>(offsetof(ColumnOverload_t4253983356, ___action_10)); }
-	inline EightColumn_t2767995227 * get_action_10() const { return ___action_10; }
-	inline EightColumn_t2767995227 ** get_address_of_action_10() { return &___action_10; }
-	inline void set_action_10(EightColumn_t2767995227 * value)
-	{
-		___action_10 = value;
-		Il2CppCodeGenWriteBarrier((&___action_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLUMNOVERLOAD_T4253983356_H
-#ifndef COLUMNTHROW_T3880709554_H
-#define COLUMNTHROW_T3880709554_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.ColumnThrow
-struct  ColumnThrow_t3880709554  : public BinahAction_t2190854253
-{
-public:
-	// BinahBoss.BinahProjectile BinahBoss.ColumnThrow::Column
-	BinahProjectile_t1425247713 * ___Column_3;
-	// UnityEngine.Vector3 BinahBoss.ColumnThrow::columnGenPos
-	Vector3_t3722313464  ___columnGenPos_4;
-	// RwbpType BinahBoss.ColumnThrow::type
-	int32_t ___type_5;
-	// DamageInfo BinahBoss.ColumnThrow::damageInfo
-	DamageInfo_t1138602084 * ___damageInfo_6;
-
-public:
-	inline static int32_t get_offset_of_Column_3() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___Column_3)); }
-	inline BinahProjectile_t1425247713 * get_Column_3() const { return ___Column_3; }
-	inline BinahProjectile_t1425247713 ** get_address_of_Column_3() { return &___Column_3; }
-	inline void set_Column_3(BinahProjectile_t1425247713 * value)
-	{
-		___Column_3 = value;
-		Il2CppCodeGenWriteBarrier((&___Column_3), value);
-	}
-
-	inline static int32_t get_offset_of_columnGenPos_4() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___columnGenPos_4)); }
-	inline Vector3_t3722313464  get_columnGenPos_4() const { return ___columnGenPos_4; }
-	inline Vector3_t3722313464 * get_address_of_columnGenPos_4() { return &___columnGenPos_4; }
-	inline void set_columnGenPos_4(Vector3_t3722313464  value)
-	{
-		___columnGenPos_4 = value;
-	}
-
-	inline static int32_t get_offset_of_type_5() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___type_5)); }
-	inline int32_t get_type_5() const { return ___type_5; }
-	inline int32_t* get_address_of_type_5() { return &___type_5; }
-	inline void set_type_5(int32_t value)
-	{
-		___type_5 = value;
-	}
-
-	inline static int32_t get_offset_of_damageInfo_6() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___damageInfo_6)); }
-	inline DamageInfo_t1138602084 * get_damageInfo_6() const { return ___damageInfo_6; }
-	inline DamageInfo_t1138602084 ** get_address_of_damageInfo_6() { return &___damageInfo_6; }
-	inline void set_damageInfo_6(DamageInfo_t1138602084 * value)
-	{
-		___damageInfo_6 = value;
-		Il2CppCodeGenWriteBarrier((&___damageInfo_6), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLUMNTHROW_T3880709554_H
-#ifndef BLADEWAVETHROW_T2530535817_H
-#define BLADEWAVETHROW_T2530535817_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BladeWaveThrow
-struct  BladeWaveThrow_t2530535817  : public BinahAction_t2190854253
-{
-public:
-	// RwbpType BinahBoss.BladeWaveThrow::type
-	int32_t ___type_3;
-	// DamageInfo BinahBoss.BladeWaveThrow::DamageInfo
-	DamageInfo_t1138602084 * ___DamageInfo_4;
-
-public:
-	inline static int32_t get_offset_of_type_3() { return static_cast<int32_t>(offsetof(BladeWaveThrow_t2530535817, ___type_3)); }
-	inline int32_t get_type_3() const { return ___type_3; }
-	inline int32_t* get_address_of_type_3() { return &___type_3; }
-	inline void set_type_3(int32_t value)
-	{
-		___type_3 = value;
-	}
-
-	inline static int32_t get_offset_of_DamageInfo_4() { return static_cast<int32_t>(offsetof(BladeWaveThrow_t2530535817, ___DamageInfo_4)); }
-	inline DamageInfo_t1138602084 * get_DamageInfo_4() const { return ___DamageInfo_4; }
-	inline DamageInfo_t1138602084 ** get_address_of_DamageInfo_4() { return &___DamageInfo_4; }
-	inline void set_DamageInfo_4(DamageInfo_t1138602084 * value)
-	{
-		___DamageInfo_4 = value;
-		Il2CppCodeGenWriteBarrier((&___DamageInfo_4), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLADEWAVETHROW_T2530535817_H
 #ifndef UNITSTATBUF_T732065437_H
 #define UNITSTATBUF_T732065437_H
 #ifdef __clang__
@@ -5996,111 +5956,447 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNITSTATBUF_T732065437_H
-#ifndef EIGHTCOLUMN_T2767995227_H
-#define EIGHTCOLUMN_T2767995227_H
+#ifndef BINAHVOIDACTION_T3527048283_H
+#define BINAHVOIDACTION_T3527048283_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.EightColumn
-struct  EightColumn_t2767995227  : public BinahAction_t2190854253
+// BinahBoss.BinahVoidAction
+struct  BinahVoidAction_t3527048283  : public MulticastDelegate_t
 {
 public:
-	// BinahBoss.ColumnOverload BinahBoss.EightColumn::columnOverload
-	ColumnOverload_t4253983356 * ___columnOverload_3;
-	// Timer BinahBoss.EightColumn::generationTimer
-	Timer_t4185932343 * ___generationTimer_4;
-	// Timer BinahBoss.EightColumn::timeLimitTimer
-	Timer_t4185932343 * ___timeLimitTimer_5;
-	// UnityEngine.Transform[] BinahBoss.EightColumn::Pivots
-	TransformU5BU5D_t807237628* ___Pivots_7;
-	// System.Int32 BinahBoss.EightColumn::genCount
-	int32_t ___genCount_8;
-	// System.Single BinahBoss.EightColumn::genFreq
-	float ___genFreq_9;
-	// SoundEffectPlayer BinahBoss.EightColumn::Loop
-	SoundEffectPlayer_t3998987779 * ___Loop_10;
-	// System.Collections.Generic.Dictionary`2<BinahBoss.BinahProjectile,UnityEngine.Vector3> BinahBoss.EightColumn::columns
-	Dictionary_2_t2055698499 * ___columns_11;
 
 public:
-	inline static int32_t get_offset_of_columnOverload_3() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___columnOverload_3)); }
-	inline ColumnOverload_t4253983356 * get_columnOverload_3() const { return ___columnOverload_3; }
-	inline ColumnOverload_t4253983356 ** get_address_of_columnOverload_3() { return &___columnOverload_3; }
-	inline void set_columnOverload_3(ColumnOverload_t4253983356 * value)
-	{
-		___columnOverload_3 = value;
-		Il2CppCodeGenWriteBarrier((&___columnOverload_3), value);
-	}
+};
 
-	inline static int32_t get_offset_of_generationTimer_4() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___generationTimer_4)); }
-	inline Timer_t4185932343 * get_generationTimer_4() const { return ___generationTimer_4; }
-	inline Timer_t4185932343 ** get_address_of_generationTimer_4() { return &___generationTimer_4; }
-	inline void set_generationTimer_4(Timer_t4185932343 * value)
-	{
-		___generationTimer_4 = value;
-		Il2CppCodeGenWriteBarrier((&___generationTimer_4), value);
-	}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHVOIDACTION_T3527048283_H
+#ifndef BINAHWAVEDEBUF_T3864703214_H
+#define BINAHWAVEDEBUF_T3864703214_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 
-	inline static int32_t get_offset_of_timeLimitTimer_5() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___timeLimitTimer_5)); }
-	inline Timer_t4185932343 * get_timeLimitTimer_5() const { return ___timeLimitTimer_5; }
-	inline Timer_t4185932343 ** get_address_of_timeLimitTimer_5() { return &___timeLimitTimer_5; }
-	inline void set_timeLimitTimer_5(Timer_t4185932343 * value)
-	{
-		___timeLimitTimer_5 = value;
-		Il2CppCodeGenWriteBarrier((&___timeLimitTimer_5), value);
-	}
+// BinahBoss.BinahWaveDebuf
+struct  BinahWaveDebuf_t3864703214  : public UnitBuf_t4079465950
+{
+public:
+	// System.Single BinahBoss.BinahWaveDebuf::speedMult
+	float ___speedMult_5;
 
-	inline static int32_t get_offset_of_Pivots_7() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___Pivots_7)); }
-	inline TransformU5BU5D_t807237628* get_Pivots_7() const { return ___Pivots_7; }
-	inline TransformU5BU5D_t807237628** get_address_of_Pivots_7() { return &___Pivots_7; }
-	inline void set_Pivots_7(TransformU5BU5D_t807237628* value)
+public:
+	inline static int32_t get_offset_of_speedMult_5() { return static_cast<int32_t>(offsetof(BinahWaveDebuf_t3864703214, ___speedMult_5)); }
+	inline float get_speedMult_5() const { return ___speedMult_5; }
+	inline float* get_address_of_speedMult_5() { return &___speedMult_5; }
+	inline void set_speedMult_5(float value)
 	{
-		___Pivots_7 = value;
-		Il2CppCodeGenWriteBarrier((&___Pivots_7), value);
-	}
-
-	inline static int32_t get_offset_of_genCount_8() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___genCount_8)); }
-	inline int32_t get_genCount_8() const { return ___genCount_8; }
-	inline int32_t* get_address_of_genCount_8() { return &___genCount_8; }
-	inline void set_genCount_8(int32_t value)
-	{
-		___genCount_8 = value;
-	}
-
-	inline static int32_t get_offset_of_genFreq_9() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___genFreq_9)); }
-	inline float get_genFreq_9() const { return ___genFreq_9; }
-	inline float* get_address_of_genFreq_9() { return &___genFreq_9; }
-	inline void set_genFreq_9(float value)
-	{
-		___genFreq_9 = value;
-	}
-
-	inline static int32_t get_offset_of_Loop_10() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___Loop_10)); }
-	inline SoundEffectPlayer_t3998987779 * get_Loop_10() const { return ___Loop_10; }
-	inline SoundEffectPlayer_t3998987779 ** get_address_of_Loop_10() { return &___Loop_10; }
-	inline void set_Loop_10(SoundEffectPlayer_t3998987779 * value)
-	{
-		___Loop_10 = value;
-		Il2CppCodeGenWriteBarrier((&___Loop_10), value);
-	}
-
-	inline static int32_t get_offset_of_columns_11() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___columns_11)); }
-	inline Dictionary_2_t2055698499 * get_columns_11() const { return ___columns_11; }
-	inline Dictionary_2_t2055698499 ** get_address_of_columns_11() { return &___columns_11; }
-	inline void set_columns_11(Dictionary_2_t2055698499 * value)
-	{
-		___columns_11 = value;
-		Il2CppCodeGenWriteBarrier((&___columns_11), value);
+		___speedMult_5 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // EIGHTCOLUMN_T2767995227_H
+#endif // BINAHWAVEDEBUF_T3864703214_H
+#ifndef COLUMNOVERLOAD_T4253983356_H
+#define COLUMNOVERLOAD_T4253983356_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.ColumnOverload
+struct  ColumnOverload_t4253983356  : public BinahOverload_t388366501
+{
+public:
+	// BinahBoss.EightColumn BinahBoss.ColumnOverload::action
+	EightColumn_t2767995227 * ___action_10;
+
+public:
+	inline static int32_t get_offset_of_action_10() { return static_cast<int32_t>(offsetof(ColumnOverload_t4253983356, ___action_10)); }
+	inline EightColumn_t2767995227 * get_action_10() const { return ___action_10; }
+	inline EightColumn_t2767995227 ** get_address_of_action_10() { return &___action_10; }
+	inline void set_action_10(EightColumn_t2767995227 * value)
+	{
+		___action_10 = value;
+		Il2CppCodeGenWriteBarrier((&___action_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLUMNOVERLOAD_T4253983356_H
+#ifndef BINAHRECOVERBUF_T412608197_H
+#define BINAHRECOVERBUF_T412608197_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahRecoverBuf
+struct  BinahRecoverBuf_t412608197  : public UnitBuf_t4079465950
+{
+public:
+	// BinahCoreScript BinahBoss.BinahRecoverBuf::binah
+	BinahCoreScript_t303627652 * ___binah_7;
+	// Timer BinahBoss.BinahRecoverBuf::_recoverTimer
+	Timer_t4185932343 * ____recoverTimer_8;
+
+public:
+	inline static int32_t get_offset_of_binah_7() { return static_cast<int32_t>(offsetof(BinahRecoverBuf_t412608197, ___binah_7)); }
+	inline BinahCoreScript_t303627652 * get_binah_7() const { return ___binah_7; }
+	inline BinahCoreScript_t303627652 ** get_address_of_binah_7() { return &___binah_7; }
+	inline void set_binah_7(BinahCoreScript_t303627652 * value)
+	{
+		___binah_7 = value;
+		Il2CppCodeGenWriteBarrier((&___binah_7), value);
+	}
+
+	inline static int32_t get_offset_of__recoverTimer_8() { return static_cast<int32_t>(offsetof(BinahRecoverBuf_t412608197, ____recoverTimer_8)); }
+	inline Timer_t4185932343 * get__recoverTimer_8() const { return ____recoverTimer_8; }
+	inline Timer_t4185932343 ** get_address_of__recoverTimer_8() { return &____recoverTimer_8; }
+	inline void set__recoverTimer_8(Timer_t4185932343 * value)
+	{
+		____recoverTimer_8 = value;
+		Il2CppCodeGenWriteBarrier((&____recoverTimer_8), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHRECOVERBUF_T412608197_H
+#ifndef BEHAVIOUR_T1437897464_H
+#define BEHAVIOUR_T1437897464_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Behaviour
+struct  Behaviour_t1437897464  : public Component_t1923634451
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BEHAVIOUR_T1437897464_H
+#ifndef BINAHIDLE_T2238734393_H
+#define BINAHIDLE_T2238734393_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahIdle
+struct  BinahIdle_t2238734393  : public BinahAction_t2190854253
+{
+public:
+	// Timer BinahBoss.BinahIdle::_dutrationTimer
+	Timer_t4185932343 * ____dutrationTimer_3;
+	// System.Single BinahBoss.BinahIdle::time
+	float ___time_4;
+	// System.Boolean BinahBoss.BinahIdle::isGroggy
+	bool ___isGroggy_5;
+
+public:
+	inline static int32_t get_offset_of__dutrationTimer_3() { return static_cast<int32_t>(offsetof(BinahIdle_t2238734393, ____dutrationTimer_3)); }
+	inline Timer_t4185932343 * get__dutrationTimer_3() const { return ____dutrationTimer_3; }
+	inline Timer_t4185932343 ** get_address_of__dutrationTimer_3() { return &____dutrationTimer_3; }
+	inline void set__dutrationTimer_3(Timer_t4185932343 * value)
+	{
+		____dutrationTimer_3 = value;
+		Il2CppCodeGenWriteBarrier((&____dutrationTimer_3), value);
+	}
+
+	inline static int32_t get_offset_of_time_4() { return static_cast<int32_t>(offsetof(BinahIdle_t2238734393, ___time_4)); }
+	inline float get_time_4() const { return ___time_4; }
+	inline float* get_address_of_time_4() { return &___time_4; }
+	inline void set_time_4(float value)
+	{
+		___time_4 = value;
+	}
+
+	inline static int32_t get_offset_of_isGroggy_5() { return static_cast<int32_t>(offsetof(BinahIdle_t2238734393, ___isGroggy_5)); }
+	inline bool get_isGroggy_5() const { return ___isGroggy_5; }
+	inline bool* get_address_of_isGroggy_5() { return &___isGroggy_5; }
+	inline void set_isGroggy_5(bool value)
+	{
+		___isGroggy_5 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHIDLE_T2238734393_H
+#ifndef BINAHBLACKFOGBUF_T861777909_H
+#define BINAHBLACKFOGBUF_T861777909_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahBlackFogBuf
+struct  BinahBlackFogBuf_t861777909  : public UnitBuf_t4079465950
+{
+public:
+	// BinahCoreScript BinahBoss.BinahBlackFogBuf::binah
+	BinahCoreScript_t303627652 * ___binah_5;
+	// Timer BinahBoss.BinahBlackFogBuf::timer
+	Timer_t4185932343 * ___timer_6;
+
+public:
+	inline static int32_t get_offset_of_binah_5() { return static_cast<int32_t>(offsetof(BinahBlackFogBuf_t861777909, ___binah_5)); }
+	inline BinahCoreScript_t303627652 * get_binah_5() const { return ___binah_5; }
+	inline BinahCoreScript_t303627652 ** get_address_of_binah_5() { return &___binah_5; }
+	inline void set_binah_5(BinahCoreScript_t303627652 * value)
+	{
+		___binah_5 = value;
+		Il2CppCodeGenWriteBarrier((&___binah_5), value);
+	}
+
+	inline static int32_t get_offset_of_timer_6() { return static_cast<int32_t>(offsetof(BinahBlackFogBuf_t861777909, ___timer_6)); }
+	inline Timer_t4185932343 * get_timer_6() const { return ___timer_6; }
+	inline Timer_t4185932343 ** get_address_of_timer_6() { return &___timer_6; }
+	inline void set_timer_6(Timer_t4185932343 * value)
+	{
+		___timer_6 = value;
+		Il2CppCodeGenWriteBarrier((&___timer_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHBLACKFOGBUF_T861777909_H
+#ifndef BLACKLOVEBUF_T2230612843_H
+#define BLACKLOVEBUF_T2230612843_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlackLoveBuf
+struct  BlackLoveBuf_t2230612843  : public UnitBuf_t4079465950
+{
+public:
+	// UnityEngine.SpriteRenderer BlackLoveBuf::renderer
+	SpriteRenderer_t3235626157 * ___renderer_5;
+	// WorkerModel BlackLoveBuf::actor
+	WorkerModel_t68002457 * ___actor_6;
+
+public:
+	inline static int32_t get_offset_of_renderer_5() { return static_cast<int32_t>(offsetof(BlackLoveBuf_t2230612843, ___renderer_5)); }
+	inline SpriteRenderer_t3235626157 * get_renderer_5() const { return ___renderer_5; }
+	inline SpriteRenderer_t3235626157 ** get_address_of_renderer_5() { return &___renderer_5; }
+	inline void set_renderer_5(SpriteRenderer_t3235626157 * value)
+	{
+		___renderer_5 = value;
+		Il2CppCodeGenWriteBarrier((&___renderer_5), value);
+	}
+
+	inline static int32_t get_offset_of_actor_6() { return static_cast<int32_t>(offsetof(BlackLoveBuf_t2230612843, ___actor_6)); }
+	inline WorkerModel_t68002457 * get_actor_6() const { return ___actor_6; }
+	inline WorkerModel_t68002457 ** get_address_of_actor_6() { return &___actor_6; }
+	inline void set_actor_6(WorkerModel_t68002457 * value)
+	{
+		___actor_6 = value;
+		Il2CppCodeGenWriteBarrier((&___actor_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLACKLOVEBUF_T2230612843_H
+#ifndef BINAHINTEGERACTION_T1073983297_H
+#define BINAHINTEGERACTION_T1073983297_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahIntegerAction
+struct  BinahIntegerAction_t1073983297  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHINTEGERACTION_T1073983297_H
+#ifndef ONCLICKEVENT_T2558831098_H
+#define ONCLICKEVENT_T2558831098_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlockSlider/OnClickEvent
+struct  OnClickEvent_t2558831098  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ONCLICKEVENT_T2558831098_H
+#ifndef BINAHNEARSLOWBUF_T1306806773_H
+#define BINAHNEARSLOWBUF_T1306806773_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahNearSlowBuf
+struct  BinahNearSlowBuf_t1306806773  : public UnitBuf_t4079465950
+{
+public:
+	// System.Single BinahBoss.BinahNearSlowBuf::speedDownValue
+	float ___speedDownValue_5;
+	// System.Single BinahBoss.BinahNearSlowBuf::defaultMax
+	float ___defaultMax_6;
+
+public:
+	inline static int32_t get_offset_of_speedDownValue_5() { return static_cast<int32_t>(offsetof(BinahNearSlowBuf_t1306806773, ___speedDownValue_5)); }
+	inline float get_speedDownValue_5() const { return ___speedDownValue_5; }
+	inline float* get_address_of_speedDownValue_5() { return &___speedDownValue_5; }
+	inline void set_speedDownValue_5(float value)
+	{
+		___speedDownValue_5 = value;
+	}
+
+	inline static int32_t get_offset_of_defaultMax_6() { return static_cast<int32_t>(offsetof(BinahNearSlowBuf_t1306806773, ___defaultMax_6)); }
+	inline float get_defaultMax_6() const { return ___defaultMax_6; }
+	inline float* get_address_of_defaultMax_6() { return &___defaultMax_6; }
+	inline void set_defaultMax_6(float value)
+	{
+		___defaultMax_6 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHNEARSLOWBUF_T1306806773_H
+#ifndef BINAHMOVEMENT_T4058063939_H
+#define BINAHMOVEMENT_T4058063939_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BinahMovement
+struct  BinahMovement_t4058063939  : public BinahAction_t2190854253
+{
+public:
+	// Timer BinahBoss.BinahMovement::_durationTimer
+	Timer_t4185932343 * ____durationTimer_3;
+
+public:
+	inline static int32_t get_offset_of__durationTimer_3() { return static_cast<int32_t>(offsetof(BinahMovement_t4058063939, ____durationTimer_3)); }
+	inline Timer_t4185932343 * get__durationTimer_3() const { return ____durationTimer_3; }
+	inline Timer_t4185932343 ** get_address_of__durationTimer_3() { return &____durationTimer_3; }
+	inline void set__durationTimer_3(Timer_t4185932343 * value)
+	{
+		____durationTimer_3 = value;
+		Il2CppCodeGenWriteBarrier((&____durationTimer_3), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BINAHMOVEMENT_T4058063939_H
+#ifndef BIGBIRDWEAPONDEBUF_T1997787163_H
+#define BIGBIRDWEAPONDEBUF_T1997787163_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BigBirdWeaponDebuf
+struct  BigBirdWeaponDebuf_t1997787163  : public UnitBuf_t4079465950
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BIGBIRDWEAPONDEBUF_T1997787163_H
+#ifndef BLOODMAPOBJECTMODEL_T1680656327_H
+#define BLOODMAPOBJECTMODEL_T1680656327_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BloodMapObjectModel
+struct  BloodMapObjectModel_t1680656327  : public MapObjectModel_t2900921160
+{
+public:
+	// UnityEngine.Sprite BloodMapObjectModel::bloodSprite
+	Sprite_t280657092 * ___bloodSprite_4;
+	// UnityEngine.Color BloodMapObjectModel::color
+	Color_t2555686324  ___color_5;
+
+public:
+	inline static int32_t get_offset_of_bloodSprite_4() { return static_cast<int32_t>(offsetof(BloodMapObjectModel_t1680656327, ___bloodSprite_4)); }
+	inline Sprite_t280657092 * get_bloodSprite_4() const { return ___bloodSprite_4; }
+	inline Sprite_t280657092 ** get_address_of_bloodSprite_4() { return &___bloodSprite_4; }
+	inline void set_bloodSprite_4(Sprite_t280657092 * value)
+	{
+		___bloodSprite_4 = value;
+		Il2CppCodeGenWriteBarrier((&___bloodSprite_4), value);
+	}
+
+	inline static int32_t get_offset_of_color_5() { return static_cast<int32_t>(offsetof(BloodMapObjectModel_t1680656327, ___color_5)); }
+	inline Color_t2555686324  get_color_5() const { return ___color_5; }
+	inline Color_t2555686324 * get_address_of_color_5() { return &___color_5; }
+	inline void set_color_5(Color_t2555686324  value)
+	{
+		___color_5 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLOODMAPOBJECTMODEL_T1680656327_H
 #ifndef WAVEOVERLOAD_T1964715260_H
 #define WAVEOVERLOAD_T1964715260_H
 #ifdef __clang__
@@ -6392,540 +6688,36 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHBOSSBASE_T2872858907_H
-#ifndef BLACKTHRON_T661690219_H
-#define BLACKTHRON_T661690219_H
+#ifndef BOOMERCIRCUSSCRIPT_T3132269725_H
+#define BOOMERCIRCUSSCRIPT_T3132269725_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.BlackThron
-struct  BlackThron_t661690219  : public BinahAction_t2190854253
+// BoomerCircusScript
+struct  BoomerCircusScript_t3132269725  : public StandingItemScriptBase_t3970342999
 {
 public:
-	// System.Int32 BinahBoss.BlackThron::maxCount
-	int32_t ___maxCount_3;
-	// System.Collections.Generic.List`1<BinahBoss.BinahProjectile> BinahBoss.BlackThron::blackThorn
-	List_1_t2897322455 * ___blackThorn_4;
-	// System.Boolean BinahBoss.BlackThron::invokeOverload
-	bool ___invokeOverload_5;
+	// BoomerCircusEvent BoomerCircusScript::randomEvent
+	BoomerCircusEvent_t3140860894 * ___randomEvent_7;
 
 public:
-	inline static int32_t get_offset_of_maxCount_3() { return static_cast<int32_t>(offsetof(BlackThron_t661690219, ___maxCount_3)); }
-	inline int32_t get_maxCount_3() const { return ___maxCount_3; }
-	inline int32_t* get_address_of_maxCount_3() { return &___maxCount_3; }
-	inline void set_maxCount_3(int32_t value)
+	inline static int32_t get_offset_of_randomEvent_7() { return static_cast<int32_t>(offsetof(BoomerCircusScript_t3132269725, ___randomEvent_7)); }
+	inline BoomerCircusEvent_t3140860894 * get_randomEvent_7() const { return ___randomEvent_7; }
+	inline BoomerCircusEvent_t3140860894 ** get_address_of_randomEvent_7() { return &___randomEvent_7; }
+	inline void set_randomEvent_7(BoomerCircusEvent_t3140860894 * value)
 	{
-		___maxCount_3 = value;
-	}
-
-	inline static int32_t get_offset_of_blackThorn_4() { return static_cast<int32_t>(offsetof(BlackThron_t661690219, ___blackThorn_4)); }
-	inline List_1_t2897322455 * get_blackThorn_4() const { return ___blackThorn_4; }
-	inline List_1_t2897322455 ** get_address_of_blackThorn_4() { return &___blackThorn_4; }
-	inline void set_blackThorn_4(List_1_t2897322455 * value)
-	{
-		___blackThorn_4 = value;
-		Il2CppCodeGenWriteBarrier((&___blackThorn_4), value);
-	}
-
-	inline static int32_t get_offset_of_invokeOverload_5() { return static_cast<int32_t>(offsetof(BlackThron_t661690219, ___invokeOverload_5)); }
-	inline bool get_invokeOverload_5() const { return ___invokeOverload_5; }
-	inline bool* get_address_of_invokeOverload_5() { return &___invokeOverload_5; }
-	inline void set_invokeOverload_5(bool value)
-	{
-		___invokeOverload_5 = value;
+		___randomEvent_7 = value;
+		Il2CppCodeGenWriteBarrier((&___randomEvent_7), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLACKTHRON_T661690219_H
-#ifndef GOLDENOVERLOAD_T59528272_H
-#define GOLDENOVERLOAD_T59528272_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.GoldenOverload
-struct  GoldenOverload_t59528272  : public BinahOverload_t388366501
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GOLDENOVERLOAD_T59528272_H
-#ifndef BIGTREESAPBUF_T1566896030_H
-#define BIGTREESAPBUF_T1566896030_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BigTreeSapBuf
-struct  BigTreeSapBuf_t1566896030  : public UnitBuf_t4079465950
-{
-public:
-	// System.Single BigTreeSapBuf::_remainExplodeTime
-	float ____remainExplodeTime_5;
-	// System.Single BigTreeSapBuf::_range
-	float ____range_7;
-	// Timer BigTreeSapBuf::_explosionTimer
-	Timer_t4185932343 * ____explosionTimer_8;
-
-public:
-	inline static int32_t get_offset_of__remainExplodeTime_5() { return static_cast<int32_t>(offsetof(BigTreeSapBuf_t1566896030, ____remainExplodeTime_5)); }
-	inline float get__remainExplodeTime_5() const { return ____remainExplodeTime_5; }
-	inline float* get_address_of__remainExplodeTime_5() { return &____remainExplodeTime_5; }
-	inline void set__remainExplodeTime_5(float value)
-	{
-		____remainExplodeTime_5 = value;
-	}
-
-	inline static int32_t get_offset_of__range_7() { return static_cast<int32_t>(offsetof(BigTreeSapBuf_t1566896030, ____range_7)); }
-	inline float get__range_7() const { return ____range_7; }
-	inline float* get_address_of__range_7() { return &____range_7; }
-	inline void set__range_7(float value)
-	{
-		____range_7 = value;
-	}
-
-	inline static int32_t get_offset_of__explosionTimer_8() { return static_cast<int32_t>(offsetof(BigTreeSapBuf_t1566896030, ____explosionTimer_8)); }
-	inline Timer_t4185932343 * get__explosionTimer_8() const { return ____explosionTimer_8; }
-	inline Timer_t4185932343 ** get_address_of__explosionTimer_8() { return &____explosionTimer_8; }
-	inline void set__explosionTimer_8(Timer_t4185932343 * value)
-	{
-		____explosionTimer_8 = value;
-		Il2CppCodeGenWriteBarrier((&____explosionTimer_8), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BIGTREESAPBUF_T1566896030_H
-#ifndef BIGBIRDWEAPONDEBUF_T1997787163_H
-#define BIGBIRDWEAPONDEBUF_T1997787163_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BigBirdWeaponDebuf
-struct  BigBirdWeaponDebuf_t1997787163  : public UnitBuf_t4079465950
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BIGBIRDWEAPONDEBUF_T1997787163_H
-#ifndef BINAHBLACKFOGBUF_T861777909_H
-#define BINAHBLACKFOGBUF_T861777909_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahBlackFogBuf
-struct  BinahBlackFogBuf_t861777909  : public UnitBuf_t4079465950
-{
-public:
-	// BinahCoreScript BinahBoss.BinahBlackFogBuf::binah
-	BinahCoreScript_t303627652 * ___binah_5;
-	// Timer BinahBoss.BinahBlackFogBuf::timer
-	Timer_t4185932343 * ___timer_6;
-
-public:
-	inline static int32_t get_offset_of_binah_5() { return static_cast<int32_t>(offsetof(BinahBlackFogBuf_t861777909, ___binah_5)); }
-	inline BinahCoreScript_t303627652 * get_binah_5() const { return ___binah_5; }
-	inline BinahCoreScript_t303627652 ** get_address_of_binah_5() { return &___binah_5; }
-	inline void set_binah_5(BinahCoreScript_t303627652 * value)
-	{
-		___binah_5 = value;
-		Il2CppCodeGenWriteBarrier((&___binah_5), value);
-	}
-
-	inline static int32_t get_offset_of_timer_6() { return static_cast<int32_t>(offsetof(BinahBlackFogBuf_t861777909, ___timer_6)); }
-	inline Timer_t4185932343 * get_timer_6() const { return ___timer_6; }
-	inline Timer_t4185932343 ** get_address_of_timer_6() { return &___timer_6; }
-	inline void set_timer_6(Timer_t4185932343 * value)
-	{
-		___timer_6 = value;
-		Il2CppCodeGenWriteBarrier((&___timer_6), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHBLACKFOGBUF_T861777909_H
-#ifndef BIGTREESAPHEAL_T3616289785_H
-#define BIGTREESAPHEAL_T3616289785_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BigTreeSapHeal
-struct  BigTreeSapHeal_t3616289785  : public UnitBuf_t4079465950
-{
-public:
-	// Timer BigTreeSapHeal::healTickTimer
-	Timer_t4185932343 * ___healTickTimer_5;
-	// WorkerModel BigTreeSapHeal::worker
-	WorkerModel_t68002457 * ___worker_10;
-
-public:
-	inline static int32_t get_offset_of_healTickTimer_5() { return static_cast<int32_t>(offsetof(BigTreeSapHeal_t3616289785, ___healTickTimer_5)); }
-	inline Timer_t4185932343 * get_healTickTimer_5() const { return ___healTickTimer_5; }
-	inline Timer_t4185932343 ** get_address_of_healTickTimer_5() { return &___healTickTimer_5; }
-	inline void set_healTickTimer_5(Timer_t4185932343 * value)
-	{
-		___healTickTimer_5 = value;
-		Il2CppCodeGenWriteBarrier((&___healTickTimer_5), value);
-	}
-
-	inline static int32_t get_offset_of_worker_10() { return static_cast<int32_t>(offsetof(BigTreeSapHeal_t3616289785, ___worker_10)); }
-	inline WorkerModel_t68002457 * get_worker_10() const { return ___worker_10; }
-	inline WorkerModel_t68002457 ** get_address_of_worker_10() { return &___worker_10; }
-	inline void set_worker_10(WorkerModel_t68002457 * value)
-	{
-		___worker_10 = value;
-		Il2CppCodeGenWriteBarrier((&___worker_10), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BIGTREESAPHEAL_T3616289785_H
-#ifndef BIGBIRDATTRACTBUF_T2202602700_H
-#define BIGBIRDATTRACTBUF_T2202602700_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BigBirdAttractBuf
-struct  BigBirdAttractBuf_t2202602700  : public UnitBuf_t4079465950
-{
-public:
-	// System.Single BigBirdAttractBuf::elapsedTime
-	float ___elapsedTime_12;
-	// BigBirdAttractBuf/Phase BigBirdAttractBuf::_phase
-	int32_t ____phase_13;
-	// WorkerModel BigBirdAttractBuf::worker
-	WorkerModel_t68002457 * ___worker_14;
-	// BigBird BigBirdAttractBuf::script
-	BigBird_t3712234294 * ___script_15;
-	// UnityEngine.GameObject BigBirdAttractBuf::effect
-	GameObject_t1113636619 * ___effect_16;
-
-public:
-	inline static int32_t get_offset_of_elapsedTime_12() { return static_cast<int32_t>(offsetof(BigBirdAttractBuf_t2202602700, ___elapsedTime_12)); }
-	inline float get_elapsedTime_12() const { return ___elapsedTime_12; }
-	inline float* get_address_of_elapsedTime_12() { return &___elapsedTime_12; }
-	inline void set_elapsedTime_12(float value)
-	{
-		___elapsedTime_12 = value;
-	}
-
-	inline static int32_t get_offset_of__phase_13() { return static_cast<int32_t>(offsetof(BigBirdAttractBuf_t2202602700, ____phase_13)); }
-	inline int32_t get__phase_13() const { return ____phase_13; }
-	inline int32_t* get_address_of__phase_13() { return &____phase_13; }
-	inline void set__phase_13(int32_t value)
-	{
-		____phase_13 = value;
-	}
-
-	inline static int32_t get_offset_of_worker_14() { return static_cast<int32_t>(offsetof(BigBirdAttractBuf_t2202602700, ___worker_14)); }
-	inline WorkerModel_t68002457 * get_worker_14() const { return ___worker_14; }
-	inline WorkerModel_t68002457 ** get_address_of_worker_14() { return &___worker_14; }
-	inline void set_worker_14(WorkerModel_t68002457 * value)
-	{
-		___worker_14 = value;
-		Il2CppCodeGenWriteBarrier((&___worker_14), value);
-	}
-
-	inline static int32_t get_offset_of_script_15() { return static_cast<int32_t>(offsetof(BigBirdAttractBuf_t2202602700, ___script_15)); }
-	inline BigBird_t3712234294 * get_script_15() const { return ___script_15; }
-	inline BigBird_t3712234294 ** get_address_of_script_15() { return &___script_15; }
-	inline void set_script_15(BigBird_t3712234294 * value)
-	{
-		___script_15 = value;
-		Il2CppCodeGenWriteBarrier((&___script_15), value);
-	}
-
-	inline static int32_t get_offset_of_effect_16() { return static_cast<int32_t>(offsetof(BigBirdAttractBuf_t2202602700, ___effect_16)); }
-	inline GameObject_t1113636619 * get_effect_16() const { return ___effect_16; }
-	inline GameObject_t1113636619 ** get_address_of_effect_16() { return &___effect_16; }
-	inline void set_effect_16(GameObject_t1113636619 * value)
-	{
-		___effect_16 = value;
-		Il2CppCodeGenWriteBarrier((&___effect_16), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BIGBIRDATTRACTBUF_T2202602700_H
-#ifndef ONCLICKEVENT_T2558831098_H
-#define ONCLICKEVENT_T2558831098_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlockSlider/OnClickEvent
-struct  OnClickEvent_t2558831098  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ONCLICKEVENT_T2558831098_H
-#ifndef BLOODYEFFECT_T3556172043_H
-#define BLOODYEFFECT_T3556172043_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BloodyEffect
-struct  BloodyEffect_t3556172043  : public ScreenEffectModule_t2580060538
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOODYEFFECT_T3556172043_H
-#ifndef BLOODMAPOBJECTMODEL_T1680656327_H
-#define BLOODMAPOBJECTMODEL_T1680656327_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BloodMapObjectModel
-struct  BloodMapObjectModel_t1680656327  : public MapObjectModel_t2900921160
-{
-public:
-	// UnityEngine.Sprite BloodMapObjectModel::bloodSprite
-	Sprite_t280657092 * ___bloodSprite_4;
-	// UnityEngine.Color BloodMapObjectModel::color
-	Color_t2555686324  ___color_5;
-
-public:
-	inline static int32_t get_offset_of_bloodSprite_4() { return static_cast<int32_t>(offsetof(BloodMapObjectModel_t1680656327, ___bloodSprite_4)); }
-	inline Sprite_t280657092 * get_bloodSprite_4() const { return ___bloodSprite_4; }
-	inline Sprite_t280657092 ** get_address_of_bloodSprite_4() { return &___bloodSprite_4; }
-	inline void set_bloodSprite_4(Sprite_t280657092 * value)
-	{
-		___bloodSprite_4 = value;
-		Il2CppCodeGenWriteBarrier((&___bloodSprite_4), value);
-	}
-
-	inline static int32_t get_offset_of_color_5() { return static_cast<int32_t>(offsetof(BloodMapObjectModel_t1680656327, ___color_5)); }
-	inline Color_t2555686324  get_color_5() const { return ___color_5; }
-	inline Color_t2555686324 * get_address_of_color_5() { return &___color_5; }
-	inline void set_color_5(Color_t2555686324  value)
-	{
-		___color_5 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOODMAPOBJECTMODEL_T1680656327_H
-#ifndef BINAHIDLE_T2238734393_H
-#define BINAHIDLE_T2238734393_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahIdle
-struct  BinahIdle_t2238734393  : public BinahAction_t2190854253
-{
-public:
-	// Timer BinahBoss.BinahIdle::_dutrationTimer
-	Timer_t4185932343 * ____dutrationTimer_3;
-	// System.Single BinahBoss.BinahIdle::time
-	float ___time_4;
-	// System.Boolean BinahBoss.BinahIdle::isGroggy
-	bool ___isGroggy_5;
-
-public:
-	inline static int32_t get_offset_of__dutrationTimer_3() { return static_cast<int32_t>(offsetof(BinahIdle_t2238734393, ____dutrationTimer_3)); }
-	inline Timer_t4185932343 * get__dutrationTimer_3() const { return ____dutrationTimer_3; }
-	inline Timer_t4185932343 ** get_address_of__dutrationTimer_3() { return &____dutrationTimer_3; }
-	inline void set__dutrationTimer_3(Timer_t4185932343 * value)
-	{
-		____dutrationTimer_3 = value;
-		Il2CppCodeGenWriteBarrier((&____dutrationTimer_3), value);
-	}
-
-	inline static int32_t get_offset_of_time_4() { return static_cast<int32_t>(offsetof(BinahIdle_t2238734393, ___time_4)); }
-	inline float get_time_4() const { return ___time_4; }
-	inline float* get_address_of_time_4() { return &___time_4; }
-	inline void set_time_4(float value)
-	{
-		___time_4 = value;
-	}
-
-	inline static int32_t get_offset_of_isGroggy_5() { return static_cast<int32_t>(offsetof(BinahIdle_t2238734393, ___isGroggy_5)); }
-	inline bool get_isGroggy_5() const { return ___isGroggy_5; }
-	inline bool* get_address_of_isGroggy_5() { return &___isGroggy_5; }
-	inline void set_isGroggy_5(bool value)
-	{
-		___isGroggy_5 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHIDLE_T2238734393_H
-#ifndef BLACKLOVEBUF_T2230612843_H
-#define BLACKLOVEBUF_T2230612843_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlackLoveBuf
-struct  BlackLoveBuf_t2230612843  : public UnitBuf_t4079465950
-{
-public:
-	// UnityEngine.SpriteRenderer BlackLoveBuf::renderer
-	SpriteRenderer_t3235626157 * ___renderer_5;
-	// WorkerModel BlackLoveBuf::actor
-	WorkerModel_t68002457 * ___actor_6;
-
-public:
-	inline static int32_t get_offset_of_renderer_5() { return static_cast<int32_t>(offsetof(BlackLoveBuf_t2230612843, ___renderer_5)); }
-	inline SpriteRenderer_t3235626157 * get_renderer_5() const { return ___renderer_5; }
-	inline SpriteRenderer_t3235626157 ** get_address_of_renderer_5() { return &___renderer_5; }
-	inline void set_renderer_5(SpriteRenderer_t3235626157 * value)
-	{
-		___renderer_5 = value;
-		Il2CppCodeGenWriteBarrier((&___renderer_5), value);
-	}
-
-	inline static int32_t get_offset_of_actor_6() { return static_cast<int32_t>(offsetof(BlackLoveBuf_t2230612843, ___actor_6)); }
-	inline WorkerModel_t68002457 * get_actor_6() const { return ___actor_6; }
-	inline WorkerModel_t68002457 ** get_address_of_actor_6() { return &___actor_6; }
-	inline void set_actor_6(WorkerModel_t68002457 * value)
-	{
-		___actor_6 = value;
-		Il2CppCodeGenWriteBarrier((&___actor_6), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLACKLOVEBUF_T2230612843_H
-#ifndef BINAHMOVEMENT_T4058063939_H
-#define BINAHMOVEMENT_T4058063939_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahMovement
-struct  BinahMovement_t4058063939  : public BinahAction_t2190854253
-{
-public:
-	// Timer BinahBoss.BinahMovement::_durationTimer
-	Timer_t4185932343 * ____durationTimer_3;
-
-public:
-	inline static int32_t get_offset_of__durationTimer_3() { return static_cast<int32_t>(offsetof(BinahMovement_t4058063939, ____durationTimer_3)); }
-	inline Timer_t4185932343 * get__durationTimer_3() const { return ____durationTimer_3; }
-	inline Timer_t4185932343 ** get_address_of__durationTimer_3() { return &____durationTimer_3; }
-	inline void set__durationTimer_3(Timer_t4185932343 * value)
-	{
-		____durationTimer_3 = value;
-		Il2CppCodeGenWriteBarrier((&____durationTimer_3), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHMOVEMENT_T4058063939_H
-#ifndef BINAHNEARSLOWBUF_T1306806773_H
-#define BINAHNEARSLOWBUF_T1306806773_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BinahBoss.BinahNearSlowBuf
-struct  BinahNearSlowBuf_t1306806773  : public UnitBuf_t4079465950
-{
-public:
-	// System.Single BinahBoss.BinahNearSlowBuf::speedDownValue
-	float ___speedDownValue_5;
-	// System.Single BinahBoss.BinahNearSlowBuf::defaultMax
-	float ___defaultMax_6;
-
-public:
-	inline static int32_t get_offset_of_speedDownValue_5() { return static_cast<int32_t>(offsetof(BinahNearSlowBuf_t1306806773, ___speedDownValue_5)); }
-	inline float get_speedDownValue_5() const { return ___speedDownValue_5; }
-	inline float* get_address_of_speedDownValue_5() { return &___speedDownValue_5; }
-	inline void set_speedDownValue_5(float value)
-	{
-		___speedDownValue_5 = value;
-	}
-
-	inline static int32_t get_offset_of_defaultMax_6() { return static_cast<int32_t>(offsetof(BinahNearSlowBuf_t1306806773, ___defaultMax_6)); }
-	inline float get_defaultMax_6() const { return ___defaultMax_6; }
-	inline float* get_address_of_defaultMax_6() { return &___defaultMax_6; }
-	inline void set_defaultMax_6(float value)
-	{
-		___defaultMax_6 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BINAHNEARSLOWBUF_T1306806773_H
+#endif // BOOMERCIRCUSSCRIPT_T3132269725_H
 #ifndef BOOMERCIRCUSEVENT_T3140860894_H
 #define BOOMERCIRCUSEVENT_T3140860894_H
 #ifdef __clang__
@@ -7013,16 +6805,121 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BOOMERCIRCUSEVENT_T3140860894_H
-#ifndef BINAHINTEGERACTION_T1073983297_H
-#define BINAHINTEGERACTION_T1073983297_H
+#ifndef EIGHTCOLUMN_T2767995227_H
+#define EIGHTCOLUMN_T2767995227_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.BinahIntegerAction
-struct  BinahIntegerAction_t1073983297  : public MulticastDelegate_t
+// BinahBoss.EightColumn
+struct  EightColumn_t2767995227  : public BinahAction_t2190854253
+{
+public:
+	// BinahBoss.ColumnOverload BinahBoss.EightColumn::columnOverload
+	ColumnOverload_t4253983356 * ___columnOverload_3;
+	// Timer BinahBoss.EightColumn::generationTimer
+	Timer_t4185932343 * ___generationTimer_4;
+	// Timer BinahBoss.EightColumn::timeLimitTimer
+	Timer_t4185932343 * ___timeLimitTimer_5;
+	// UnityEngine.Transform[] BinahBoss.EightColumn::Pivots
+	TransformU5BU5D_t807237628* ___Pivots_7;
+	// System.Int32 BinahBoss.EightColumn::genCount
+	int32_t ___genCount_8;
+	// System.Single BinahBoss.EightColumn::genFreq
+	float ___genFreq_9;
+	// SoundEffectPlayer BinahBoss.EightColumn::Loop
+	SoundEffectPlayer_t3998987779 * ___Loop_10;
+	// System.Collections.Generic.Dictionary`2<BinahBoss.BinahProjectile,UnityEngine.Vector3> BinahBoss.EightColumn::columns
+	Dictionary_2_t2055698499 * ___columns_11;
+
+public:
+	inline static int32_t get_offset_of_columnOverload_3() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___columnOverload_3)); }
+	inline ColumnOverload_t4253983356 * get_columnOverload_3() const { return ___columnOverload_3; }
+	inline ColumnOverload_t4253983356 ** get_address_of_columnOverload_3() { return &___columnOverload_3; }
+	inline void set_columnOverload_3(ColumnOverload_t4253983356 * value)
+	{
+		___columnOverload_3 = value;
+		Il2CppCodeGenWriteBarrier((&___columnOverload_3), value);
+	}
+
+	inline static int32_t get_offset_of_generationTimer_4() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___generationTimer_4)); }
+	inline Timer_t4185932343 * get_generationTimer_4() const { return ___generationTimer_4; }
+	inline Timer_t4185932343 ** get_address_of_generationTimer_4() { return &___generationTimer_4; }
+	inline void set_generationTimer_4(Timer_t4185932343 * value)
+	{
+		___generationTimer_4 = value;
+		Il2CppCodeGenWriteBarrier((&___generationTimer_4), value);
+	}
+
+	inline static int32_t get_offset_of_timeLimitTimer_5() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___timeLimitTimer_5)); }
+	inline Timer_t4185932343 * get_timeLimitTimer_5() const { return ___timeLimitTimer_5; }
+	inline Timer_t4185932343 ** get_address_of_timeLimitTimer_5() { return &___timeLimitTimer_5; }
+	inline void set_timeLimitTimer_5(Timer_t4185932343 * value)
+	{
+		___timeLimitTimer_5 = value;
+		Il2CppCodeGenWriteBarrier((&___timeLimitTimer_5), value);
+	}
+
+	inline static int32_t get_offset_of_Pivots_7() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___Pivots_7)); }
+	inline TransformU5BU5D_t807237628* get_Pivots_7() const { return ___Pivots_7; }
+	inline TransformU5BU5D_t807237628** get_address_of_Pivots_7() { return &___Pivots_7; }
+	inline void set_Pivots_7(TransformU5BU5D_t807237628* value)
+	{
+		___Pivots_7 = value;
+		Il2CppCodeGenWriteBarrier((&___Pivots_7), value);
+	}
+
+	inline static int32_t get_offset_of_genCount_8() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___genCount_8)); }
+	inline int32_t get_genCount_8() const { return ___genCount_8; }
+	inline int32_t* get_address_of_genCount_8() { return &___genCount_8; }
+	inline void set_genCount_8(int32_t value)
+	{
+		___genCount_8 = value;
+	}
+
+	inline static int32_t get_offset_of_genFreq_9() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___genFreq_9)); }
+	inline float get_genFreq_9() const { return ___genFreq_9; }
+	inline float* get_address_of_genFreq_9() { return &___genFreq_9; }
+	inline void set_genFreq_9(float value)
+	{
+		___genFreq_9 = value;
+	}
+
+	inline static int32_t get_offset_of_Loop_10() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___Loop_10)); }
+	inline SoundEffectPlayer_t3998987779 * get_Loop_10() const { return ___Loop_10; }
+	inline SoundEffectPlayer_t3998987779 ** get_address_of_Loop_10() { return &___Loop_10; }
+	inline void set_Loop_10(SoundEffectPlayer_t3998987779 * value)
+	{
+		___Loop_10 = value;
+		Il2CppCodeGenWriteBarrier((&___Loop_10), value);
+	}
+
+	inline static int32_t get_offset_of_columns_11() { return static_cast<int32_t>(offsetof(EightColumn_t2767995227, ___columns_11)); }
+	inline Dictionary_2_t2055698499 * get_columns_11() const { return ___columns_11; }
+	inline Dictionary_2_t2055698499 ** get_address_of_columns_11() { return &___columns_11; }
+	inline void set_columns_11(Dictionary_2_t2055698499 * value)
+	{
+		___columns_11 = value;
+		Il2CppCodeGenWriteBarrier((&___columns_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EIGHTCOLUMN_T2767995227_H
+#ifndef GOLDENOVERLOAD_T59528272_H
+#define GOLDENOVERLOAD_T59528272_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.GoldenOverload
+struct  GoldenOverload_t59528272  : public BinahOverload_t388366501
 {
 public:
 
@@ -7032,27 +6929,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINAHINTEGERACTION_T1073983297_H
-#ifndef BEHAVIOUR_T1437897464_H
-#define BEHAVIOUR_T1437897464_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Behaviour
-struct  Behaviour_t1437897464  : public Component_t1923634451
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BEHAVIOUR_T1437897464_H
+#endif // GOLDENOVERLOAD_T59528272_H
 #ifndef BLUESTARBUF_T3238403697_H
 #define BLUESTARBUF_T3238403697_H
 #ifdef __clang__
@@ -7104,6 +6981,268 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLUESTARBUF_T3238403697_H
+#ifndef BIGTREESAPHEAL_T3616289785_H
+#define BIGTREESAPHEAL_T3616289785_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BigTreeSapHeal
+struct  BigTreeSapHeal_t3616289785  : public UnitBuf_t4079465950
+{
+public:
+	// Timer BigTreeSapHeal::healTickTimer
+	Timer_t4185932343 * ___healTickTimer_5;
+	// WorkerModel BigTreeSapHeal::worker
+	WorkerModel_t68002457 * ___worker_10;
+
+public:
+	inline static int32_t get_offset_of_healTickTimer_5() { return static_cast<int32_t>(offsetof(BigTreeSapHeal_t3616289785, ___healTickTimer_5)); }
+	inline Timer_t4185932343 * get_healTickTimer_5() const { return ___healTickTimer_5; }
+	inline Timer_t4185932343 ** get_address_of_healTickTimer_5() { return &___healTickTimer_5; }
+	inline void set_healTickTimer_5(Timer_t4185932343 * value)
+	{
+		___healTickTimer_5 = value;
+		Il2CppCodeGenWriteBarrier((&___healTickTimer_5), value);
+	}
+
+	inline static int32_t get_offset_of_worker_10() { return static_cast<int32_t>(offsetof(BigTreeSapHeal_t3616289785, ___worker_10)); }
+	inline WorkerModel_t68002457 * get_worker_10() const { return ___worker_10; }
+	inline WorkerModel_t68002457 ** get_address_of_worker_10() { return &___worker_10; }
+	inline void set_worker_10(WorkerModel_t68002457 * value)
+	{
+		___worker_10 = value;
+		Il2CppCodeGenWriteBarrier((&___worker_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BIGTREESAPHEAL_T3616289785_H
+#ifndef BLOODYEFFECT_T3556172043_H
+#define BLOODYEFFECT_T3556172043_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BloodyEffect
+struct  BloodyEffect_t3556172043  : public ScreenEffectModule_t2580060538
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLOODYEFFECT_T3556172043_H
+#ifndef BIGTREESAPBUF_T1566896030_H
+#define BIGTREESAPBUF_T1566896030_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BigTreeSapBuf
+struct  BigTreeSapBuf_t1566896030  : public UnitBuf_t4079465950
+{
+public:
+	// System.Single BigTreeSapBuf::_remainExplodeTime
+	float ____remainExplodeTime_5;
+	// System.Single BigTreeSapBuf::_range
+	float ____range_7;
+	// Timer BigTreeSapBuf::_explosionTimer
+	Timer_t4185932343 * ____explosionTimer_8;
+
+public:
+	inline static int32_t get_offset_of__remainExplodeTime_5() { return static_cast<int32_t>(offsetof(BigTreeSapBuf_t1566896030, ____remainExplodeTime_5)); }
+	inline float get__remainExplodeTime_5() const { return ____remainExplodeTime_5; }
+	inline float* get_address_of__remainExplodeTime_5() { return &____remainExplodeTime_5; }
+	inline void set__remainExplodeTime_5(float value)
+	{
+		____remainExplodeTime_5 = value;
+	}
+
+	inline static int32_t get_offset_of__range_7() { return static_cast<int32_t>(offsetof(BigTreeSapBuf_t1566896030, ____range_7)); }
+	inline float get__range_7() const { return ____range_7; }
+	inline float* get_address_of__range_7() { return &____range_7; }
+	inline void set__range_7(float value)
+	{
+		____range_7 = value;
+	}
+
+	inline static int32_t get_offset_of__explosionTimer_8() { return static_cast<int32_t>(offsetof(BigTreeSapBuf_t1566896030, ____explosionTimer_8)); }
+	inline Timer_t4185932343 * get__explosionTimer_8() const { return ____explosionTimer_8; }
+	inline Timer_t4185932343 ** get_address_of__explosionTimer_8() { return &____explosionTimer_8; }
+	inline void set__explosionTimer_8(Timer_t4185932343 * value)
+	{
+		____explosionTimer_8 = value;
+		Il2CppCodeGenWriteBarrier((&____explosionTimer_8), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BIGTREESAPBUF_T1566896030_H
+#ifndef BLACKTHRON_T661690219_H
+#define BLACKTHRON_T661690219_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BlackThron
+struct  BlackThron_t661690219  : public BinahAction_t2190854253
+{
+public:
+	// System.Int32 BinahBoss.BlackThron::maxCount
+	int32_t ___maxCount_3;
+	// System.Collections.Generic.List`1<BinahBoss.BinahProjectile> BinahBoss.BlackThron::blackThorn
+	List_1_t2897322455 * ___blackThorn_4;
+	// System.Boolean BinahBoss.BlackThron::invokeOverload
+	bool ___invokeOverload_5;
+
+public:
+	inline static int32_t get_offset_of_maxCount_3() { return static_cast<int32_t>(offsetof(BlackThron_t661690219, ___maxCount_3)); }
+	inline int32_t get_maxCount_3() const { return ___maxCount_3; }
+	inline int32_t* get_address_of_maxCount_3() { return &___maxCount_3; }
+	inline void set_maxCount_3(int32_t value)
+	{
+		___maxCount_3 = value;
+	}
+
+	inline static int32_t get_offset_of_blackThorn_4() { return static_cast<int32_t>(offsetof(BlackThron_t661690219, ___blackThorn_4)); }
+	inline List_1_t2897322455 * get_blackThorn_4() const { return ___blackThorn_4; }
+	inline List_1_t2897322455 ** get_address_of_blackThorn_4() { return &___blackThorn_4; }
+	inline void set_blackThorn_4(List_1_t2897322455 * value)
+	{
+		___blackThorn_4 = value;
+		Il2CppCodeGenWriteBarrier((&___blackThorn_4), value);
+	}
+
+	inline static int32_t get_offset_of_invokeOverload_5() { return static_cast<int32_t>(offsetof(BlackThron_t661690219, ___invokeOverload_5)); }
+	inline bool get_invokeOverload_5() const { return ___invokeOverload_5; }
+	inline bool* get_address_of_invokeOverload_5() { return &___invokeOverload_5; }
+	inline void set_invokeOverload_5(bool value)
+	{
+		___invokeOverload_5 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLACKTHRON_T661690219_H
+#ifndef BLADEWAVETHROW_T2530535817_H
+#define BLADEWAVETHROW_T2530535817_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.BladeWaveThrow
+struct  BladeWaveThrow_t2530535817  : public BinahAction_t2190854253
+{
+public:
+	// RwbpType BinahBoss.BladeWaveThrow::type
+	int32_t ___type_3;
+	// DamageInfo BinahBoss.BladeWaveThrow::DamageInfo
+	DamageInfo_t1138602084 * ___DamageInfo_4;
+
+public:
+	inline static int32_t get_offset_of_type_3() { return static_cast<int32_t>(offsetof(BladeWaveThrow_t2530535817, ___type_3)); }
+	inline int32_t get_type_3() const { return ___type_3; }
+	inline int32_t* get_address_of_type_3() { return &___type_3; }
+	inline void set_type_3(int32_t value)
+	{
+		___type_3 = value;
+	}
+
+	inline static int32_t get_offset_of_DamageInfo_4() { return static_cast<int32_t>(offsetof(BladeWaveThrow_t2530535817, ___DamageInfo_4)); }
+	inline DamageInfo_t1138602084 * get_DamageInfo_4() const { return ___DamageInfo_4; }
+	inline DamageInfo_t1138602084 ** get_address_of_DamageInfo_4() { return &___DamageInfo_4; }
+	inline void set_DamageInfo_4(DamageInfo_t1138602084 * value)
+	{
+		___DamageInfo_4 = value;
+		Il2CppCodeGenWriteBarrier((&___DamageInfo_4), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLADEWAVETHROW_T2530535817_H
+#ifndef COLUMNTHROW_T3880709554_H
+#define COLUMNTHROW_T3880709554_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BinahBoss.ColumnThrow
+struct  ColumnThrow_t3880709554  : public BinahAction_t2190854253
+{
+public:
+	// BinahBoss.BinahProjectile BinahBoss.ColumnThrow::Column
+	BinahProjectile_t1425247713 * ___Column_3;
+	// UnityEngine.Vector3 BinahBoss.ColumnThrow::columnGenPos
+	Vector3_t3722313464  ___columnGenPos_4;
+	// RwbpType BinahBoss.ColumnThrow::type
+	int32_t ___type_5;
+	// DamageInfo BinahBoss.ColumnThrow::damageInfo
+	DamageInfo_t1138602084 * ___damageInfo_6;
+
+public:
+	inline static int32_t get_offset_of_Column_3() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___Column_3)); }
+	inline BinahProjectile_t1425247713 * get_Column_3() const { return ___Column_3; }
+	inline BinahProjectile_t1425247713 ** get_address_of_Column_3() { return &___Column_3; }
+	inline void set_Column_3(BinahProjectile_t1425247713 * value)
+	{
+		___Column_3 = value;
+		Il2CppCodeGenWriteBarrier((&___Column_3), value);
+	}
+
+	inline static int32_t get_offset_of_columnGenPos_4() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___columnGenPos_4)); }
+	inline Vector3_t3722313464  get_columnGenPos_4() const { return ___columnGenPos_4; }
+	inline Vector3_t3722313464 * get_address_of_columnGenPos_4() { return &___columnGenPos_4; }
+	inline void set_columnGenPos_4(Vector3_t3722313464  value)
+	{
+		___columnGenPos_4 = value;
+	}
+
+	inline static int32_t get_offset_of_type_5() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___type_5)); }
+	inline int32_t get_type_5() const { return ___type_5; }
+	inline int32_t* get_address_of_type_5() { return &___type_5; }
+	inline void set_type_5(int32_t value)
+	{
+		___type_5 = value;
+	}
+
+	inline static int32_t get_offset_of_damageInfo_6() { return static_cast<int32_t>(offsetof(ColumnThrow_t3880709554, ___damageInfo_6)); }
+	inline DamageInfo_t1138602084 * get_damageInfo_6() const { return ___damageInfo_6; }
+	inline DamageInfo_t1138602084 ** get_address_of_damageInfo_6() { return &___damageInfo_6; }
+	inline void set_damageInfo_6(DamageInfo_t1138602084 * value)
+	{
+		___damageInfo_6 = value;
+		Il2CppCodeGenWriteBarrier((&___damageInfo_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLUMNTHROW_T3880709554_H
 #ifndef BINAHJUSTICEDEBUF_T1454140826_H
 #define BINAHJUSTICEDEBUF_T1454140826_H
 #ifdef __clang__
@@ -7185,467 +7324,68 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // MONOBEHAVIOUR_T3962482529_H
-#ifndef BLUESTARATTACKEFFECT_T1833845078_H
-#define BLUESTARATTACKEFFECT_T1833845078_H
+#ifndef BINAHCOLLISION_T4078709713_H
+#define BINAHCOLLISION_T4078709713_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlueStarAttackEffect
-struct  BlueStarAttackEffect_t1833845078  : public MonoBehaviour_t3962482529
+// BinahBoss.BinahCollision
+struct  BinahCollision_t4078709713  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Transform BlueStarAttackEffect::ExplosionQuad
-	Transform_t3600365921 * ___ExplosionQuad_2;
-	// UnityEngine.Transform BlueStarAttackEffect::DamageQuad
-	Transform_t3600365921 * ___DamageQuad_3;
-	// UnityEngine.Material BlueStarAttackEffect::ExplosionMat
-	Material_t340375123 * ___ExplosionMat_4;
-	// UnityEngine.AnimationCurve BlueStarAttackEffect::ScaleCurve
-	AnimationCurve_t3046754366 * ___ScaleCurve_5;
-	// UnityEngine.AnimationCurve BlueStarAttackEffect::DamageScaleCurve
-	AnimationCurve_t3046754366 * ___DamageScaleCurve_6;
-	// UnityEngine.AnimationCurve BlueStarAttackEffect::DistortionCurve
-	AnimationCurve_t3046754366 * ___DistortionCurve_7;
-	// BlueStarAnim BlueStarAttackEffect::_blueStarAnim
-	BlueStarAnim_t328616281 * ____blueStarAnim_8;
-	// BlueStarAttackCollider BlueStarAttackEffect::attackCollider
-	BlueStarAttackCollider_t2250808119 * ___attackCollider_9;
-	// System.Single BlueStarAttackEffect::PauseDuration
-	float ___PauseDuration_10;
-	// System.Single BlueStarAttackEffect::ImplosionDuration
-	float ___ImplosionDuration_11;
-	// System.Single BlueStarAttackEffect::ExplosionDuration
-	float ___ExplosionDuration_12;
-	// BlueStarAttackEffect/State BlueStarAttackEffect::currentState
-	int32_t ___currentState_13;
-	// System.Single BlueStarAttackEffect::currentTime
-	float ___currentTime_14;
+	// UnityEngine.BoxCollider2D BinahBoss.BinahCollision::collider
+	BoxCollider2D_t3581341831 * ___collider_2;
+	// CreatureModel BinahBoss.BinahCollision::targetCreature
+	CreatureModel_t680682136 * ___targetCreature_3;
+	// BinahCoreScript BinahBoss.BinahCollision::_binah
+	BinahCoreScript_t303627652 * ____binah_4;
+	// System.Boolean BinahBoss.BinahCollision::_isActivated
+	bool ____isActivated_5;
 
 public:
-	inline static int32_t get_offset_of_ExplosionQuad_2() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ExplosionQuad_2)); }
-	inline Transform_t3600365921 * get_ExplosionQuad_2() const { return ___ExplosionQuad_2; }
-	inline Transform_t3600365921 ** get_address_of_ExplosionQuad_2() { return &___ExplosionQuad_2; }
-	inline void set_ExplosionQuad_2(Transform_t3600365921 * value)
+	inline static int32_t get_offset_of_collider_2() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ___collider_2)); }
+	inline BoxCollider2D_t3581341831 * get_collider_2() const { return ___collider_2; }
+	inline BoxCollider2D_t3581341831 ** get_address_of_collider_2() { return &___collider_2; }
+	inline void set_collider_2(BoxCollider2D_t3581341831 * value)
 	{
-		___ExplosionQuad_2 = value;
-		Il2CppCodeGenWriteBarrier((&___ExplosionQuad_2), value);
+		___collider_2 = value;
+		Il2CppCodeGenWriteBarrier((&___collider_2), value);
 	}
 
-	inline static int32_t get_offset_of_DamageQuad_3() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___DamageQuad_3)); }
-	inline Transform_t3600365921 * get_DamageQuad_3() const { return ___DamageQuad_3; }
-	inline Transform_t3600365921 ** get_address_of_DamageQuad_3() { return &___DamageQuad_3; }
-	inline void set_DamageQuad_3(Transform_t3600365921 * value)
+	inline static int32_t get_offset_of_targetCreature_3() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ___targetCreature_3)); }
+	inline CreatureModel_t680682136 * get_targetCreature_3() const { return ___targetCreature_3; }
+	inline CreatureModel_t680682136 ** get_address_of_targetCreature_3() { return &___targetCreature_3; }
+	inline void set_targetCreature_3(CreatureModel_t680682136 * value)
 	{
-		___DamageQuad_3 = value;
-		Il2CppCodeGenWriteBarrier((&___DamageQuad_3), value);
+		___targetCreature_3 = value;
+		Il2CppCodeGenWriteBarrier((&___targetCreature_3), value);
 	}
 
-	inline static int32_t get_offset_of_ExplosionMat_4() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ExplosionMat_4)); }
-	inline Material_t340375123 * get_ExplosionMat_4() const { return ___ExplosionMat_4; }
-	inline Material_t340375123 ** get_address_of_ExplosionMat_4() { return &___ExplosionMat_4; }
-	inline void set_ExplosionMat_4(Material_t340375123 * value)
+	inline static int32_t get_offset_of__binah_4() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ____binah_4)); }
+	inline BinahCoreScript_t303627652 * get__binah_4() const { return ____binah_4; }
+	inline BinahCoreScript_t303627652 ** get_address_of__binah_4() { return &____binah_4; }
+	inline void set__binah_4(BinahCoreScript_t303627652 * value)
 	{
-		___ExplosionMat_4 = value;
-		Il2CppCodeGenWriteBarrier((&___ExplosionMat_4), value);
+		____binah_4 = value;
+		Il2CppCodeGenWriteBarrier((&____binah_4), value);
 	}
 
-	inline static int32_t get_offset_of_ScaleCurve_5() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ScaleCurve_5)); }
-	inline AnimationCurve_t3046754366 * get_ScaleCurve_5() const { return ___ScaleCurve_5; }
-	inline AnimationCurve_t3046754366 ** get_address_of_ScaleCurve_5() { return &___ScaleCurve_5; }
-	inline void set_ScaleCurve_5(AnimationCurve_t3046754366 * value)
+	inline static int32_t get_offset_of__isActivated_5() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ____isActivated_5)); }
+	inline bool get__isActivated_5() const { return ____isActivated_5; }
+	inline bool* get_address_of__isActivated_5() { return &____isActivated_5; }
+	inline void set__isActivated_5(bool value)
 	{
-		___ScaleCurve_5 = value;
-		Il2CppCodeGenWriteBarrier((&___ScaleCurve_5), value);
-	}
-
-	inline static int32_t get_offset_of_DamageScaleCurve_6() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___DamageScaleCurve_6)); }
-	inline AnimationCurve_t3046754366 * get_DamageScaleCurve_6() const { return ___DamageScaleCurve_6; }
-	inline AnimationCurve_t3046754366 ** get_address_of_DamageScaleCurve_6() { return &___DamageScaleCurve_6; }
-	inline void set_DamageScaleCurve_6(AnimationCurve_t3046754366 * value)
-	{
-		___DamageScaleCurve_6 = value;
-		Il2CppCodeGenWriteBarrier((&___DamageScaleCurve_6), value);
-	}
-
-	inline static int32_t get_offset_of_DistortionCurve_7() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___DistortionCurve_7)); }
-	inline AnimationCurve_t3046754366 * get_DistortionCurve_7() const { return ___DistortionCurve_7; }
-	inline AnimationCurve_t3046754366 ** get_address_of_DistortionCurve_7() { return &___DistortionCurve_7; }
-	inline void set_DistortionCurve_7(AnimationCurve_t3046754366 * value)
-	{
-		___DistortionCurve_7 = value;
-		Il2CppCodeGenWriteBarrier((&___DistortionCurve_7), value);
-	}
-
-	inline static int32_t get_offset_of__blueStarAnim_8() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ____blueStarAnim_8)); }
-	inline BlueStarAnim_t328616281 * get__blueStarAnim_8() const { return ____blueStarAnim_8; }
-	inline BlueStarAnim_t328616281 ** get_address_of__blueStarAnim_8() { return &____blueStarAnim_8; }
-	inline void set__blueStarAnim_8(BlueStarAnim_t328616281 * value)
-	{
-		____blueStarAnim_8 = value;
-		Il2CppCodeGenWriteBarrier((&____blueStarAnim_8), value);
-	}
-
-	inline static int32_t get_offset_of_attackCollider_9() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___attackCollider_9)); }
-	inline BlueStarAttackCollider_t2250808119 * get_attackCollider_9() const { return ___attackCollider_9; }
-	inline BlueStarAttackCollider_t2250808119 ** get_address_of_attackCollider_9() { return &___attackCollider_9; }
-	inline void set_attackCollider_9(BlueStarAttackCollider_t2250808119 * value)
-	{
-		___attackCollider_9 = value;
-		Il2CppCodeGenWriteBarrier((&___attackCollider_9), value);
-	}
-
-	inline static int32_t get_offset_of_PauseDuration_10() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___PauseDuration_10)); }
-	inline float get_PauseDuration_10() const { return ___PauseDuration_10; }
-	inline float* get_address_of_PauseDuration_10() { return &___PauseDuration_10; }
-	inline void set_PauseDuration_10(float value)
-	{
-		___PauseDuration_10 = value;
-	}
-
-	inline static int32_t get_offset_of_ImplosionDuration_11() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ImplosionDuration_11)); }
-	inline float get_ImplosionDuration_11() const { return ___ImplosionDuration_11; }
-	inline float* get_address_of_ImplosionDuration_11() { return &___ImplosionDuration_11; }
-	inline void set_ImplosionDuration_11(float value)
-	{
-		___ImplosionDuration_11 = value;
-	}
-
-	inline static int32_t get_offset_of_ExplosionDuration_12() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ExplosionDuration_12)); }
-	inline float get_ExplosionDuration_12() const { return ___ExplosionDuration_12; }
-	inline float* get_address_of_ExplosionDuration_12() { return &___ExplosionDuration_12; }
-	inline void set_ExplosionDuration_12(float value)
-	{
-		___ExplosionDuration_12 = value;
-	}
-
-	inline static int32_t get_offset_of_currentState_13() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___currentState_13)); }
-	inline int32_t get_currentState_13() const { return ___currentState_13; }
-	inline int32_t* get_address_of_currentState_13() { return &___currentState_13; }
-	inline void set_currentState_13(int32_t value)
-	{
-		___currentState_13 = value;
-	}
-
-	inline static int32_t get_offset_of_currentTime_14() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___currentTime_14)); }
-	inline float get_currentTime_14() const { return ___currentTime_14; }
-	inline float* get_address_of_currentTime_14() { return &___currentTime_14; }
-	inline void set_currentTime_14(float value)
-	{
-		___currentTime_14 = value;
+		____isActivated_5 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLUESTARATTACKEFFECT_T1833845078_H
-#ifndef BLUESTARATTACKCOLLIDER_T2250808119_H
-#define BLUESTARATTACKCOLLIDER_T2250808119_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlueStarAttackCollider
-struct  BlueStarAttackCollider_t2250808119  : public MonoBehaviour_t3962482529
-{
-public:
-	// BlueStar BlueStarAttackCollider::_script
-	BlueStar_t1520383455 * ____script_2;
-
-public:
-	inline static int32_t get_offset_of__script_2() { return static_cast<int32_t>(offsetof(BlueStarAttackCollider_t2250808119, ____script_2)); }
-	inline BlueStar_t1520383455 * get__script_2() const { return ____script_2; }
-	inline BlueStar_t1520383455 ** get_address_of__script_2() { return &____script_2; }
-	inline void set__script_2(BlueStar_t1520383455 * value)
-	{
-		____script_2 = value;
-		Il2CppCodeGenWriteBarrier((&____script_2), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUESTARATTACKCOLLIDER_T2250808119_H
-#ifndef BLUESTARDEADEFFECT_T2432935331_H
-#define BLUESTARDEADEFFECT_T2432935331_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlueStarDeadEffect
-struct  BlueStarDeadEffect_t2432935331  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.AnimationCurve BlueStarDeadEffect::_defaultCurve
-	AnimationCurve_t3046754366 * ____defaultCurve_3;
-	// BlueStarDeadEffect/TransType BlueStarDeadEffect::type
-	int32_t ___type_4;
-	// System.Single BlueStarDeadEffect::deltaX
-	float ___deltaX_5;
-	// System.Single BlueStarDeadEffect::deltaY
-	float ___deltaY_6;
-	// System.Single BlueStarDeadEffect::sin
-	float ___sin_7;
-	// System.Single BlueStarDeadEffect::cos
-	float ___cos_8;
-	// BlueStar BlueStarDeadEffect::star
-	BlueStar_t1520383455 * ___star_9;
-	// WorkerModel BlueStarDeadEffect::model
-	WorkerModel_t68002457 * ___model_10;
-	// WorkerUnit BlueStarDeadEffect::unit
-	WorkerUnit_t3080928601 * ___unit_11;
-	// System.Single BlueStarDeadEffect::moveTime
-	float ___moveTime_12;
-	// System.Single BlueStarDeadEffect::rotation
-	float ___rotation_13;
-	// Timer BlueStarDeadEffect::_effectTimer
-	Timer_t4185932343 * ____effectTimer_14;
-	// UnityEngine.Vector2 BlueStarDeadEffect::start
-	Vector2_t2156229523  ___start_15;
-	// UnityEngine.Vector2 BlueStarDeadEffect::end
-	Vector2_t2156229523  ___end_16;
-	// UnityEngine.Vector3 BlueStarDeadEffect::startScale
-	Vector3_t3722313464  ___startScale_17;
-	// System.Boolean BlueStarDeadEffect::_isInit
-	bool ____isInit_18;
-
-public:
-	inline static int32_t get_offset_of__defaultCurve_3() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ____defaultCurve_3)); }
-	inline AnimationCurve_t3046754366 * get__defaultCurve_3() const { return ____defaultCurve_3; }
-	inline AnimationCurve_t3046754366 ** get_address_of__defaultCurve_3() { return &____defaultCurve_3; }
-	inline void set__defaultCurve_3(AnimationCurve_t3046754366 * value)
-	{
-		____defaultCurve_3 = value;
-		Il2CppCodeGenWriteBarrier((&____defaultCurve_3), value);
-	}
-
-	inline static int32_t get_offset_of_type_4() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___type_4)); }
-	inline int32_t get_type_4() const { return ___type_4; }
-	inline int32_t* get_address_of_type_4() { return &___type_4; }
-	inline void set_type_4(int32_t value)
-	{
-		___type_4 = value;
-	}
-
-	inline static int32_t get_offset_of_deltaX_5() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___deltaX_5)); }
-	inline float get_deltaX_5() const { return ___deltaX_5; }
-	inline float* get_address_of_deltaX_5() { return &___deltaX_5; }
-	inline void set_deltaX_5(float value)
-	{
-		___deltaX_5 = value;
-	}
-
-	inline static int32_t get_offset_of_deltaY_6() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___deltaY_6)); }
-	inline float get_deltaY_6() const { return ___deltaY_6; }
-	inline float* get_address_of_deltaY_6() { return &___deltaY_6; }
-	inline void set_deltaY_6(float value)
-	{
-		___deltaY_6 = value;
-	}
-
-	inline static int32_t get_offset_of_sin_7() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___sin_7)); }
-	inline float get_sin_7() const { return ___sin_7; }
-	inline float* get_address_of_sin_7() { return &___sin_7; }
-	inline void set_sin_7(float value)
-	{
-		___sin_7 = value;
-	}
-
-	inline static int32_t get_offset_of_cos_8() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___cos_8)); }
-	inline float get_cos_8() const { return ___cos_8; }
-	inline float* get_address_of_cos_8() { return &___cos_8; }
-	inline void set_cos_8(float value)
-	{
-		___cos_8 = value;
-	}
-
-	inline static int32_t get_offset_of_star_9() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___star_9)); }
-	inline BlueStar_t1520383455 * get_star_9() const { return ___star_9; }
-	inline BlueStar_t1520383455 ** get_address_of_star_9() { return &___star_9; }
-	inline void set_star_9(BlueStar_t1520383455 * value)
-	{
-		___star_9 = value;
-		Il2CppCodeGenWriteBarrier((&___star_9), value);
-	}
-
-	inline static int32_t get_offset_of_model_10() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___model_10)); }
-	inline WorkerModel_t68002457 * get_model_10() const { return ___model_10; }
-	inline WorkerModel_t68002457 ** get_address_of_model_10() { return &___model_10; }
-	inline void set_model_10(WorkerModel_t68002457 * value)
-	{
-		___model_10 = value;
-		Il2CppCodeGenWriteBarrier((&___model_10), value);
-	}
-
-	inline static int32_t get_offset_of_unit_11() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___unit_11)); }
-	inline WorkerUnit_t3080928601 * get_unit_11() const { return ___unit_11; }
-	inline WorkerUnit_t3080928601 ** get_address_of_unit_11() { return &___unit_11; }
-	inline void set_unit_11(WorkerUnit_t3080928601 * value)
-	{
-		___unit_11 = value;
-		Il2CppCodeGenWriteBarrier((&___unit_11), value);
-	}
-
-	inline static int32_t get_offset_of_moveTime_12() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___moveTime_12)); }
-	inline float get_moveTime_12() const { return ___moveTime_12; }
-	inline float* get_address_of_moveTime_12() { return &___moveTime_12; }
-	inline void set_moveTime_12(float value)
-	{
-		___moveTime_12 = value;
-	}
-
-	inline static int32_t get_offset_of_rotation_13() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___rotation_13)); }
-	inline float get_rotation_13() const { return ___rotation_13; }
-	inline float* get_address_of_rotation_13() { return &___rotation_13; }
-	inline void set_rotation_13(float value)
-	{
-		___rotation_13 = value;
-	}
-
-	inline static int32_t get_offset_of__effectTimer_14() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ____effectTimer_14)); }
-	inline Timer_t4185932343 * get__effectTimer_14() const { return ____effectTimer_14; }
-	inline Timer_t4185932343 ** get_address_of__effectTimer_14() { return &____effectTimer_14; }
-	inline void set__effectTimer_14(Timer_t4185932343 * value)
-	{
-		____effectTimer_14 = value;
-		Il2CppCodeGenWriteBarrier((&____effectTimer_14), value);
-	}
-
-	inline static int32_t get_offset_of_start_15() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___start_15)); }
-	inline Vector2_t2156229523  get_start_15() const { return ___start_15; }
-	inline Vector2_t2156229523 * get_address_of_start_15() { return &___start_15; }
-	inline void set_start_15(Vector2_t2156229523  value)
-	{
-		___start_15 = value;
-	}
-
-	inline static int32_t get_offset_of_end_16() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___end_16)); }
-	inline Vector2_t2156229523  get_end_16() const { return ___end_16; }
-	inline Vector2_t2156229523 * get_address_of_end_16() { return &___end_16; }
-	inline void set_end_16(Vector2_t2156229523  value)
-	{
-		___end_16 = value;
-	}
-
-	inline static int32_t get_offset_of_startScale_17() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___startScale_17)); }
-	inline Vector3_t3722313464  get_startScale_17() const { return ___startScale_17; }
-	inline Vector3_t3722313464 * get_address_of_startScale_17() { return &___startScale_17; }
-	inline void set_startScale_17(Vector3_t3722313464  value)
-	{
-		___startScale_17 = value;
-	}
-
-	inline static int32_t get_offset_of__isInit_18() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ____isInit_18)); }
-	inline bool get__isInit_18() const { return ____isInit_18; }
-	inline bool* get_address_of__isInit_18() { return &____isInit_18; }
-	inline void set__isInit_18(bool value)
-	{
-		____isInit_18 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUESTARDEADEFFECT_T2432935331_H
-#ifndef BLURBLURRYEFFECTER_T3276817226_H
-#define BLURBLURRYEFFECTER_T3276817226_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlurBlurryEffecter
-struct  BlurBlurryEffecter_t3276817226  : public MonoBehaviour_t3962482529
-{
-public:
-	// CameraFilterPack_Blur_Blurry BlurBlurryEffecter::target
-	CameraFilterPack_Blur_Blurry_t3287805908 * ___target_2;
-	// System.Single BlurBlurryEffecter::_elapsedTime
-	float ____elapsedTime_3;
-	// System.Single BlurBlurryEffecter::_lifetime
-	float ____lifetime_4;
-
-public:
-	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(BlurBlurryEffecter_t3276817226, ___target_2)); }
-	inline CameraFilterPack_Blur_Blurry_t3287805908 * get_target_2() const { return ___target_2; }
-	inline CameraFilterPack_Blur_Blurry_t3287805908 ** get_address_of_target_2() { return &___target_2; }
-	inline void set_target_2(CameraFilterPack_Blur_Blurry_t3287805908 * value)
-	{
-		___target_2 = value;
-		Il2CppCodeGenWriteBarrier((&___target_2), value);
-	}
-
-	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(BlurBlurryEffecter_t3276817226, ____elapsedTime_3)); }
-	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
-	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
-	inline void set__elapsedTime_3(float value)
-	{
-		____elapsedTime_3 = value;
-	}
-
-	inline static int32_t get_offset_of__lifetime_4() { return static_cast<int32_t>(offsetof(BlurBlurryEffecter_t3276817226, ____lifetime_4)); }
-	inline float get__lifetime_4() const { return ____lifetime_4; }
-	inline float* get_address_of__lifetime_4() { return &____lifetime_4; }
-	inline void set__lifetime_4(float value)
-	{
-		____lifetime_4 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURBLURRYEFFECTER_T3276817226_H
-#ifndef BLURBLOOMEFFECTER_T2886664569_H
-#define BLURBLOOMEFFECTER_T2886664569_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlurBloomEffecter
-struct  BlurBloomEffecter_t2886664569  : public MonoBehaviour_t3962482529
-{
-public:
-	// CameraFilterPack_Blur_Bloom BlurBloomEffecter::target
-	CameraFilterPack_Blur_Bloom_t3356986519 * ___target_2;
-	// System.Single BlurBloomEffecter::_elapsedTime
-	float ____elapsedTime_3;
-
-public:
-	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(BlurBloomEffecter_t2886664569, ___target_2)); }
-	inline CameraFilterPack_Blur_Bloom_t3356986519 * get_target_2() const { return ___target_2; }
-	inline CameraFilterPack_Blur_Bloom_t3356986519 ** get_address_of_target_2() { return &___target_2; }
-	inline void set_target_2(CameraFilterPack_Blur_Bloom_t3356986519 * value)
-	{
-		___target_2 = value;
-		Il2CppCodeGenWriteBarrier((&___target_2), value);
-	}
-
-	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(BlurBloomEffecter_t2886664569, ____elapsedTime_3)); }
-	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
-	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
-	inline void set__elapsedTime_3(float value)
-	{
-		____elapsedTime_3 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURBLOOMEFFECTER_T2886664569_H
+#endif // BINAHCOLLISION_T4078709713_H
 #ifndef BLOCKSLIDER_T3258073796_H
 #define BLOCKSLIDER_T3258073796_H
 #ifdef __clang__
@@ -7841,292 +7581,407 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLOCKSLIDER_T3258073796_H
-#ifndef BLOCKSLIDERUNIT_T3068048314_H
-#define BLOCKSLIDERUNIT_T3068048314_H
+#ifndef BLUESTARATTACKEFFECT_T1833845078_H
+#define BLUESTARATTACKEFFECT_T1833845078_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlockSliderUnit
-struct  BlockSliderUnit_t3068048314  : public MonoBehaviour_t3962482529
+// BlueStarAttackEffect
+struct  BlueStarAttackEffect_t1833845078  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.UI.Image BlockSliderUnit::display
-	Image_t2670269651 * ___display_2;
-	// UnityEngine.UI.Image BlockSliderUnit::disable
-	Image_t2670269651 * ___disable_3;
-	// BlockSlider BlockSliderUnit::slider
-	BlockSlider_t3258073796 * ___slider_4;
-	// System.Int32 BlockSliderUnit::index
-	int32_t ___index_5;
+	// UnityEngine.Transform BlueStarAttackEffect::ExplosionQuad
+	Transform_t3600365921 * ___ExplosionQuad_2;
+	// UnityEngine.Transform BlueStarAttackEffect::DamageQuad
+	Transform_t3600365921 * ___DamageQuad_3;
+	// UnityEngine.Material BlueStarAttackEffect::ExplosionMat
+	Material_t340375123 * ___ExplosionMat_4;
+	// UnityEngine.AnimationCurve BlueStarAttackEffect::ScaleCurve
+	AnimationCurve_t3046754366 * ___ScaleCurve_5;
+	// UnityEngine.AnimationCurve BlueStarAttackEffect::DamageScaleCurve
+	AnimationCurve_t3046754366 * ___DamageScaleCurve_6;
+	// UnityEngine.AnimationCurve BlueStarAttackEffect::DistortionCurve
+	AnimationCurve_t3046754366 * ___DistortionCurve_7;
+	// BlueStarAnim BlueStarAttackEffect::_blueStarAnim
+	BlueStarAnim_t328616281 * ____blueStarAnim_8;
+	// BlueStarAttackCollider BlueStarAttackEffect::attackCollider
+	BlueStarAttackCollider_t2250808119 * ___attackCollider_9;
+	// System.Single BlueStarAttackEffect::PauseDuration
+	float ___PauseDuration_10;
+	// System.Single BlueStarAttackEffect::ImplosionDuration
+	float ___ImplosionDuration_11;
+	// System.Single BlueStarAttackEffect::ExplosionDuration
+	float ___ExplosionDuration_12;
+	// BlueStarAttackEffect/State BlueStarAttackEffect::currentState
+	int32_t ___currentState_13;
+	// System.Single BlueStarAttackEffect::currentTime
+	float ___currentTime_14;
 
 public:
-	inline static int32_t get_offset_of_display_2() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___display_2)); }
-	inline Image_t2670269651 * get_display_2() const { return ___display_2; }
-	inline Image_t2670269651 ** get_address_of_display_2() { return &___display_2; }
-	inline void set_display_2(Image_t2670269651 * value)
+	inline static int32_t get_offset_of_ExplosionQuad_2() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ExplosionQuad_2)); }
+	inline Transform_t3600365921 * get_ExplosionQuad_2() const { return ___ExplosionQuad_2; }
+	inline Transform_t3600365921 ** get_address_of_ExplosionQuad_2() { return &___ExplosionQuad_2; }
+	inline void set_ExplosionQuad_2(Transform_t3600365921 * value)
 	{
-		___display_2 = value;
-		Il2CppCodeGenWriteBarrier((&___display_2), value);
+		___ExplosionQuad_2 = value;
+		Il2CppCodeGenWriteBarrier((&___ExplosionQuad_2), value);
 	}
 
-	inline static int32_t get_offset_of_disable_3() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___disable_3)); }
-	inline Image_t2670269651 * get_disable_3() const { return ___disable_3; }
-	inline Image_t2670269651 ** get_address_of_disable_3() { return &___disable_3; }
-	inline void set_disable_3(Image_t2670269651 * value)
+	inline static int32_t get_offset_of_DamageQuad_3() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___DamageQuad_3)); }
+	inline Transform_t3600365921 * get_DamageQuad_3() const { return ___DamageQuad_3; }
+	inline Transform_t3600365921 ** get_address_of_DamageQuad_3() { return &___DamageQuad_3; }
+	inline void set_DamageQuad_3(Transform_t3600365921 * value)
 	{
-		___disable_3 = value;
-		Il2CppCodeGenWriteBarrier((&___disable_3), value);
+		___DamageQuad_3 = value;
+		Il2CppCodeGenWriteBarrier((&___DamageQuad_3), value);
 	}
 
-	inline static int32_t get_offset_of_slider_4() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___slider_4)); }
-	inline BlockSlider_t3258073796 * get_slider_4() const { return ___slider_4; }
-	inline BlockSlider_t3258073796 ** get_address_of_slider_4() { return &___slider_4; }
-	inline void set_slider_4(BlockSlider_t3258073796 * value)
+	inline static int32_t get_offset_of_ExplosionMat_4() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ExplosionMat_4)); }
+	inline Material_t340375123 * get_ExplosionMat_4() const { return ___ExplosionMat_4; }
+	inline Material_t340375123 ** get_address_of_ExplosionMat_4() { return &___ExplosionMat_4; }
+	inline void set_ExplosionMat_4(Material_t340375123 * value)
 	{
-		___slider_4 = value;
-		Il2CppCodeGenWriteBarrier((&___slider_4), value);
+		___ExplosionMat_4 = value;
+		Il2CppCodeGenWriteBarrier((&___ExplosionMat_4), value);
 	}
 
-	inline static int32_t get_offset_of_index_5() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___index_5)); }
-	inline int32_t get_index_5() const { return ___index_5; }
-	inline int32_t* get_address_of_index_5() { return &___index_5; }
-	inline void set_index_5(int32_t value)
+	inline static int32_t get_offset_of_ScaleCurve_5() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ScaleCurve_5)); }
+	inline AnimationCurve_t3046754366 * get_ScaleCurve_5() const { return ___ScaleCurve_5; }
+	inline AnimationCurve_t3046754366 ** get_address_of_ScaleCurve_5() { return &___ScaleCurve_5; }
+	inline void set_ScaleCurve_5(AnimationCurve_t3046754366 * value)
 	{
-		___index_5 = value;
+		___ScaleCurve_5 = value;
+		Il2CppCodeGenWriteBarrier((&___ScaleCurve_5), value);
+	}
+
+	inline static int32_t get_offset_of_DamageScaleCurve_6() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___DamageScaleCurve_6)); }
+	inline AnimationCurve_t3046754366 * get_DamageScaleCurve_6() const { return ___DamageScaleCurve_6; }
+	inline AnimationCurve_t3046754366 ** get_address_of_DamageScaleCurve_6() { return &___DamageScaleCurve_6; }
+	inline void set_DamageScaleCurve_6(AnimationCurve_t3046754366 * value)
+	{
+		___DamageScaleCurve_6 = value;
+		Il2CppCodeGenWriteBarrier((&___DamageScaleCurve_6), value);
+	}
+
+	inline static int32_t get_offset_of_DistortionCurve_7() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___DistortionCurve_7)); }
+	inline AnimationCurve_t3046754366 * get_DistortionCurve_7() const { return ___DistortionCurve_7; }
+	inline AnimationCurve_t3046754366 ** get_address_of_DistortionCurve_7() { return &___DistortionCurve_7; }
+	inline void set_DistortionCurve_7(AnimationCurve_t3046754366 * value)
+	{
+		___DistortionCurve_7 = value;
+		Il2CppCodeGenWriteBarrier((&___DistortionCurve_7), value);
+	}
+
+	inline static int32_t get_offset_of__blueStarAnim_8() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ____blueStarAnim_8)); }
+	inline BlueStarAnim_t328616281 * get__blueStarAnim_8() const { return ____blueStarAnim_8; }
+	inline BlueStarAnim_t328616281 ** get_address_of__blueStarAnim_8() { return &____blueStarAnim_8; }
+	inline void set__blueStarAnim_8(BlueStarAnim_t328616281 * value)
+	{
+		____blueStarAnim_8 = value;
+		Il2CppCodeGenWriteBarrier((&____blueStarAnim_8), value);
+	}
+
+	inline static int32_t get_offset_of_attackCollider_9() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___attackCollider_9)); }
+	inline BlueStarAttackCollider_t2250808119 * get_attackCollider_9() const { return ___attackCollider_9; }
+	inline BlueStarAttackCollider_t2250808119 ** get_address_of_attackCollider_9() { return &___attackCollider_9; }
+	inline void set_attackCollider_9(BlueStarAttackCollider_t2250808119 * value)
+	{
+		___attackCollider_9 = value;
+		Il2CppCodeGenWriteBarrier((&___attackCollider_9), value);
+	}
+
+	inline static int32_t get_offset_of_PauseDuration_10() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___PauseDuration_10)); }
+	inline float get_PauseDuration_10() const { return ___PauseDuration_10; }
+	inline float* get_address_of_PauseDuration_10() { return &___PauseDuration_10; }
+	inline void set_PauseDuration_10(float value)
+	{
+		___PauseDuration_10 = value;
+	}
+
+	inline static int32_t get_offset_of_ImplosionDuration_11() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ImplosionDuration_11)); }
+	inline float get_ImplosionDuration_11() const { return ___ImplosionDuration_11; }
+	inline float* get_address_of_ImplosionDuration_11() { return &___ImplosionDuration_11; }
+	inline void set_ImplosionDuration_11(float value)
+	{
+		___ImplosionDuration_11 = value;
+	}
+
+	inline static int32_t get_offset_of_ExplosionDuration_12() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___ExplosionDuration_12)); }
+	inline float get_ExplosionDuration_12() const { return ___ExplosionDuration_12; }
+	inline float* get_address_of_ExplosionDuration_12() { return &___ExplosionDuration_12; }
+	inline void set_ExplosionDuration_12(float value)
+	{
+		___ExplosionDuration_12 = value;
+	}
+
+	inline static int32_t get_offset_of_currentState_13() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___currentState_13)); }
+	inline int32_t get_currentState_13() const { return ___currentState_13; }
+	inline int32_t* get_address_of_currentState_13() { return &___currentState_13; }
+	inline void set_currentState_13(int32_t value)
+	{
+		___currentState_13 = value;
+	}
+
+	inline static int32_t get_offset_of_currentTime_14() { return static_cast<int32_t>(offsetof(BlueStarAttackEffect_t1833845078, ___currentTime_14)); }
+	inline float get_currentTime_14() const { return ___currentTime_14; }
+	inline float* get_address_of_currentTime_14() { return &___currentTime_14; }
+	inline void set_currentTime_14(float value)
+	{
+		___currentTime_14 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLOCKSLIDERUNIT_T3068048314_H
-#ifndef BLOODMAPOBJECT_T2656336790_H
-#define BLOODMAPOBJECT_T2656336790_H
+#endif // BLUESTARATTACKEFFECT_T1833845078_H
+#ifndef BLUESTARATTACKCOLLIDER_T2250808119_H
+#define BLUESTARATTACKCOLLIDER_T2250808119_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BloodMapObject
-struct  BloodMapObject_t2656336790  : public MonoBehaviour_t3962482529
+// BlueStarAttackCollider
+struct  BlueStarAttackCollider_t2250808119  : public MonoBehaviour_t3962482529
 {
 public:
-	// BloodMapObjectModel BloodMapObject::model
-	BloodMapObjectModel_t1680656327 * ___model_2;
-	// UnityEngine.Sprite[] BloodMapObject::bloodImgs
-	SpriteU5BU5D_t2581906349* ___bloodImgs_3;
-	// UnityEngine.SpriteRenderer BloodMapObject::renderer
-	SpriteRenderer_t3235626157 * ___renderer_4;
+	// BlueStar BlueStarAttackCollider::_script
+	BlueStar_t1520383455 * ____script_2;
 
 public:
-	inline static int32_t get_offset_of_model_2() { return static_cast<int32_t>(offsetof(BloodMapObject_t2656336790, ___model_2)); }
-	inline BloodMapObjectModel_t1680656327 * get_model_2() const { return ___model_2; }
-	inline BloodMapObjectModel_t1680656327 ** get_address_of_model_2() { return &___model_2; }
-	inline void set_model_2(BloodMapObjectModel_t1680656327 * value)
+	inline static int32_t get_offset_of__script_2() { return static_cast<int32_t>(offsetof(BlueStarAttackCollider_t2250808119, ____script_2)); }
+	inline BlueStar_t1520383455 * get__script_2() const { return ____script_2; }
+	inline BlueStar_t1520383455 ** get_address_of__script_2() { return &____script_2; }
+	inline void set__script_2(BlueStar_t1520383455 * value)
 	{
-		___model_2 = value;
-		Il2CppCodeGenWriteBarrier((&___model_2), value);
-	}
-
-	inline static int32_t get_offset_of_bloodImgs_3() { return static_cast<int32_t>(offsetof(BloodMapObject_t2656336790, ___bloodImgs_3)); }
-	inline SpriteU5BU5D_t2581906349* get_bloodImgs_3() const { return ___bloodImgs_3; }
-	inline SpriteU5BU5D_t2581906349** get_address_of_bloodImgs_3() { return &___bloodImgs_3; }
-	inline void set_bloodImgs_3(SpriteU5BU5D_t2581906349* value)
-	{
-		___bloodImgs_3 = value;
-		Il2CppCodeGenWriteBarrier((&___bloodImgs_3), value);
-	}
-
-	inline static int32_t get_offset_of_renderer_4() { return static_cast<int32_t>(offsetof(BloodMapObject_t2656336790, ___renderer_4)); }
-	inline SpriteRenderer_t3235626157 * get_renderer_4() const { return ___renderer_4; }
-	inline SpriteRenderer_t3235626157 ** get_address_of_renderer_4() { return &___renderer_4; }
-	inline void set_renderer_4(SpriteRenderer_t3235626157 * value)
-	{
-		___renderer_4 = value;
-		Il2CppCodeGenWriteBarrier((&___renderer_4), value);
+		____script_2 = value;
+		Il2CppCodeGenWriteBarrier((&____script_2), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLOODMAPOBJECT_T2656336790_H
-#ifndef BINAHCOLLISION_T4078709713_H
-#define BINAHCOLLISION_T4078709713_H
+#endif // BLUESTARATTACKCOLLIDER_T2250808119_H
+#ifndef BINAHOVERLOADALARM_T403233311_H
+#define BINAHOVERLOADALARM_T403233311_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.BinahCollision
-struct  BinahCollision_t4078709713  : public MonoBehaviour_t3962482529
+// BinahOverloadAlarm
+struct  BinahOverloadAlarm_t403233311  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.BoxCollider2D BinahBoss.BinahCollision::collider
-	BoxCollider2D_t3581341831 * ___collider_2;
-	// CreatureModel BinahBoss.BinahCollision::targetCreature
-	CreatureModel_t680682136 * ___targetCreature_3;
-	// BinahCoreScript BinahBoss.BinahCollision::_binah
-	BinahCoreScript_t303627652 * ____binah_4;
-	// System.Boolean BinahBoss.BinahCollision::_isActivated
-	bool ____isActivated_5;
+	// UnityEngine.UI.Image[] BinahOverloadAlarm::imgs
+	ImageU5BU5D_t2439009922* ___imgs_2;
 
 public:
-	inline static int32_t get_offset_of_collider_2() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ___collider_2)); }
-	inline BoxCollider2D_t3581341831 * get_collider_2() const { return ___collider_2; }
-	inline BoxCollider2D_t3581341831 ** get_address_of_collider_2() { return &___collider_2; }
-	inline void set_collider_2(BoxCollider2D_t3581341831 * value)
+	inline static int32_t get_offset_of_imgs_2() { return static_cast<int32_t>(offsetof(BinahOverloadAlarm_t403233311, ___imgs_2)); }
+	inline ImageU5BU5D_t2439009922* get_imgs_2() const { return ___imgs_2; }
+	inline ImageU5BU5D_t2439009922** get_address_of_imgs_2() { return &___imgs_2; }
+	inline void set_imgs_2(ImageU5BU5D_t2439009922* value)
 	{
-		___collider_2 = value;
-		Il2CppCodeGenWriteBarrier((&___collider_2), value);
-	}
-
-	inline static int32_t get_offset_of_targetCreature_3() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ___targetCreature_3)); }
-	inline CreatureModel_t680682136 * get_targetCreature_3() const { return ___targetCreature_3; }
-	inline CreatureModel_t680682136 ** get_address_of_targetCreature_3() { return &___targetCreature_3; }
-	inline void set_targetCreature_3(CreatureModel_t680682136 * value)
-	{
-		___targetCreature_3 = value;
-		Il2CppCodeGenWriteBarrier((&___targetCreature_3), value);
-	}
-
-	inline static int32_t get_offset_of__binah_4() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ____binah_4)); }
-	inline BinahCoreScript_t303627652 * get__binah_4() const { return ____binah_4; }
-	inline BinahCoreScript_t303627652 ** get_address_of__binah_4() { return &____binah_4; }
-	inline void set__binah_4(BinahCoreScript_t303627652 * value)
-	{
-		____binah_4 = value;
-		Il2CppCodeGenWriteBarrier((&____binah_4), value);
-	}
-
-	inline static int32_t get_offset_of__isActivated_5() { return static_cast<int32_t>(offsetof(BinahCollision_t4078709713, ____isActivated_5)); }
-	inline bool get__isActivated_5() const { return ____isActivated_5; }
-	inline bool* get_address_of__isActivated_5() { return &____isActivated_5; }
-	inline void set__isActivated_5(bool value)
-	{
-		____isActivated_5 = value;
+		___imgs_2 = value;
+		Il2CppCodeGenWriteBarrier((&___imgs_2), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINAHCOLLISION_T4078709713_H
-#ifndef ANIMSCRIPT_T2927161892_H
-#define ANIMSCRIPT_T2927161892_H
+#endif // BINAHOVERLOADALARM_T403233311_H
+#ifndef BLUESTARDEADEFFECT_T2432935331_H
+#define BLUESTARDEADEFFECT_T2432935331_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// AnimScript
-struct  AnimScript_t2927161892  : public MonoBehaviour_t3962482529
+// BlueStarDeadEffect
+struct  BlueStarDeadEffect_t2432935331  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.Animator AnimScript::animator
-	Animator_t434523843 * ___animator_2;
-	// System.Single AnimScript::motionDelay
-	float ___motionDelay_3;
-	// System.Single AnimScript::defaultSpeed
-	float ___defaultSpeed_4;
+	// UnityEngine.AnimationCurve BlueStarDeadEffect::_defaultCurve
+	AnimationCurve_t3046754366 * ____defaultCurve_3;
+	// BlueStarDeadEffect/TransType BlueStarDeadEffect::type
+	int32_t ___type_4;
+	// System.Single BlueStarDeadEffect::deltaX
+	float ___deltaX_5;
+	// System.Single BlueStarDeadEffect::deltaY
+	float ___deltaY_6;
+	// System.Single BlueStarDeadEffect::sin
+	float ___sin_7;
+	// System.Single BlueStarDeadEffect::cos
+	float ___cos_8;
+	// BlueStar BlueStarDeadEffect::star
+	BlueStar_t1520383455 * ___star_9;
+	// WorkerModel BlueStarDeadEffect::model
+	WorkerModel_t68002457 * ___model_10;
+	// WorkerUnit BlueStarDeadEffect::unit
+	WorkerUnit_t3080928601 * ___unit_11;
+	// System.Single BlueStarDeadEffect::moveTime
+	float ___moveTime_12;
+	// System.Single BlueStarDeadEffect::rotation
+	float ___rotation_13;
+	// Timer BlueStarDeadEffect::_effectTimer
+	Timer_t4185932343 * ____effectTimer_14;
+	// UnityEngine.Vector2 BlueStarDeadEffect::start
+	Vector2_t2156229523  ___start_15;
+	// UnityEngine.Vector2 BlueStarDeadEffect::end
+	Vector2_t2156229523  ___end_16;
+	// UnityEngine.Vector3 BlueStarDeadEffect::startScale
+	Vector3_t3722313464  ___startScale_17;
+	// System.Boolean BlueStarDeadEffect::_isInit
+	bool ____isInit_18;
 
 public:
-	inline static int32_t get_offset_of_animator_2() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___animator_2)); }
-	inline Animator_t434523843 * get_animator_2() const { return ___animator_2; }
-	inline Animator_t434523843 ** get_address_of_animator_2() { return &___animator_2; }
-	inline void set_animator_2(Animator_t434523843 * value)
+	inline static int32_t get_offset_of__defaultCurve_3() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ____defaultCurve_3)); }
+	inline AnimationCurve_t3046754366 * get__defaultCurve_3() const { return ____defaultCurve_3; }
+	inline AnimationCurve_t3046754366 ** get_address_of__defaultCurve_3() { return &____defaultCurve_3; }
+	inline void set__defaultCurve_3(AnimationCurve_t3046754366 * value)
 	{
-		___animator_2 = value;
-		Il2CppCodeGenWriteBarrier((&___animator_2), value);
+		____defaultCurve_3 = value;
+		Il2CppCodeGenWriteBarrier((&____defaultCurve_3), value);
 	}
 
-	inline static int32_t get_offset_of_motionDelay_3() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___motionDelay_3)); }
-	inline float get_motionDelay_3() const { return ___motionDelay_3; }
-	inline float* get_address_of_motionDelay_3() { return &___motionDelay_3; }
-	inline void set_motionDelay_3(float value)
+	inline static int32_t get_offset_of_type_4() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___type_4)); }
+	inline int32_t get_type_4() const { return ___type_4; }
+	inline int32_t* get_address_of_type_4() { return &___type_4; }
+	inline void set_type_4(int32_t value)
 	{
-		___motionDelay_3 = value;
+		___type_4 = value;
 	}
 
-	inline static int32_t get_offset_of_defaultSpeed_4() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___defaultSpeed_4)); }
-	inline float get_defaultSpeed_4() const { return ___defaultSpeed_4; }
-	inline float* get_address_of_defaultSpeed_4() { return &___defaultSpeed_4; }
-	inline void set_defaultSpeed_4(float value)
+	inline static int32_t get_offset_of_deltaX_5() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___deltaX_5)); }
+	inline float get_deltaX_5() const { return ___deltaX_5; }
+	inline float* get_address_of_deltaX_5() { return &___deltaX_5; }
+	inline void set_deltaX_5(float value)
 	{
-		___defaultSpeed_4 = value;
+		___deltaX_5 = value;
+	}
+
+	inline static int32_t get_offset_of_deltaY_6() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___deltaY_6)); }
+	inline float get_deltaY_6() const { return ___deltaY_6; }
+	inline float* get_address_of_deltaY_6() { return &___deltaY_6; }
+	inline void set_deltaY_6(float value)
+	{
+		___deltaY_6 = value;
+	}
+
+	inline static int32_t get_offset_of_sin_7() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___sin_7)); }
+	inline float get_sin_7() const { return ___sin_7; }
+	inline float* get_address_of_sin_7() { return &___sin_7; }
+	inline void set_sin_7(float value)
+	{
+		___sin_7 = value;
+	}
+
+	inline static int32_t get_offset_of_cos_8() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___cos_8)); }
+	inline float get_cos_8() const { return ___cos_8; }
+	inline float* get_address_of_cos_8() { return &___cos_8; }
+	inline void set_cos_8(float value)
+	{
+		___cos_8 = value;
+	}
+
+	inline static int32_t get_offset_of_star_9() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___star_9)); }
+	inline BlueStar_t1520383455 * get_star_9() const { return ___star_9; }
+	inline BlueStar_t1520383455 ** get_address_of_star_9() { return &___star_9; }
+	inline void set_star_9(BlueStar_t1520383455 * value)
+	{
+		___star_9 = value;
+		Il2CppCodeGenWriteBarrier((&___star_9), value);
+	}
+
+	inline static int32_t get_offset_of_model_10() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___model_10)); }
+	inline WorkerModel_t68002457 * get_model_10() const { return ___model_10; }
+	inline WorkerModel_t68002457 ** get_address_of_model_10() { return &___model_10; }
+	inline void set_model_10(WorkerModel_t68002457 * value)
+	{
+		___model_10 = value;
+		Il2CppCodeGenWriteBarrier((&___model_10), value);
+	}
+
+	inline static int32_t get_offset_of_unit_11() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___unit_11)); }
+	inline WorkerUnit_t3080928601 * get_unit_11() const { return ___unit_11; }
+	inline WorkerUnit_t3080928601 ** get_address_of_unit_11() { return &___unit_11; }
+	inline void set_unit_11(WorkerUnit_t3080928601 * value)
+	{
+		___unit_11 = value;
+		Il2CppCodeGenWriteBarrier((&___unit_11), value);
+	}
+
+	inline static int32_t get_offset_of_moveTime_12() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___moveTime_12)); }
+	inline float get_moveTime_12() const { return ___moveTime_12; }
+	inline float* get_address_of_moveTime_12() { return &___moveTime_12; }
+	inline void set_moveTime_12(float value)
+	{
+		___moveTime_12 = value;
+	}
+
+	inline static int32_t get_offset_of_rotation_13() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___rotation_13)); }
+	inline float get_rotation_13() const { return ___rotation_13; }
+	inline float* get_address_of_rotation_13() { return &___rotation_13; }
+	inline void set_rotation_13(float value)
+	{
+		___rotation_13 = value;
+	}
+
+	inline static int32_t get_offset_of__effectTimer_14() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ____effectTimer_14)); }
+	inline Timer_t4185932343 * get__effectTimer_14() const { return ____effectTimer_14; }
+	inline Timer_t4185932343 ** get_address_of__effectTimer_14() { return &____effectTimer_14; }
+	inline void set__effectTimer_14(Timer_t4185932343 * value)
+	{
+		____effectTimer_14 = value;
+		Il2CppCodeGenWriteBarrier((&____effectTimer_14), value);
+	}
+
+	inline static int32_t get_offset_of_start_15() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___start_15)); }
+	inline Vector2_t2156229523  get_start_15() const { return ___start_15; }
+	inline Vector2_t2156229523 * get_address_of_start_15() { return &___start_15; }
+	inline void set_start_15(Vector2_t2156229523  value)
+	{
+		___start_15 = value;
+	}
+
+	inline static int32_t get_offset_of_end_16() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___end_16)); }
+	inline Vector2_t2156229523  get_end_16() const { return ___end_16; }
+	inline Vector2_t2156229523 * get_address_of_end_16() { return &___end_16; }
+	inline void set_end_16(Vector2_t2156229523  value)
+	{
+		___end_16 = value;
+	}
+
+	inline static int32_t get_offset_of_startScale_17() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ___startScale_17)); }
+	inline Vector3_t3722313464  get_startScale_17() const { return ___startScale_17; }
+	inline Vector3_t3722313464 * get_address_of_startScale_17() { return &___startScale_17; }
+	inline void set_startScale_17(Vector3_t3722313464  value)
+	{
+		___startScale_17 = value;
+	}
+
+	inline static int32_t get_offset_of__isInit_18() { return static_cast<int32_t>(offsetof(BlueStarDeadEffect_t2432935331, ____isInit_18)); }
+	inline bool get__isInit_18() const { return ____isInit_18; }
+	inline bool* get_address_of__isInit_18() { return &____isInit_18; }
+	inline void set__isInit_18(bool value)
+	{
+		____isInit_18 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // ANIMSCRIPT_T2927161892_H
-#ifndef BLURFOCUSEFFECTER_T3620569780_H
-#define BLURFOCUSEFFECTER_T3620569780_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlurFocusEffecter
-struct  BlurFocusEffecter_t3620569780  : public MonoBehaviour_t3962482529
-{
-public:
-	// CameraFilterPack_Blur_Focus BlurFocusEffecter::target
-	CameraFilterPack_Blur_Focus_t1993753717 * ___target_2;
-	// System.Single BlurFocusEffecter::_elapsedTime
-	float ____elapsedTime_3;
-	// System.Single BlurFocusEffecter::_lifetime
-	float ____lifetime_4;
-	// System.Single BlurFocusEffecter::_value
-	float ____value_5;
-
-public:
-	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ___target_2)); }
-	inline CameraFilterPack_Blur_Focus_t1993753717 * get_target_2() const { return ___target_2; }
-	inline CameraFilterPack_Blur_Focus_t1993753717 ** get_address_of_target_2() { return &___target_2; }
-	inline void set_target_2(CameraFilterPack_Blur_Focus_t1993753717 * value)
-	{
-		___target_2 = value;
-		Il2CppCodeGenWriteBarrier((&___target_2), value);
-	}
-
-	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ____elapsedTime_3)); }
-	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
-	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
-	inline void set__elapsedTime_3(float value)
-	{
-		____elapsedTime_3 = value;
-	}
-
-	inline static int32_t get_offset_of__lifetime_4() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ____lifetime_4)); }
-	inline float get__lifetime_4() const { return ____lifetime_4; }
-	inline float* get_address_of__lifetime_4() { return &____lifetime_4; }
-	inline void set__lifetime_4(float value)
-	{
-		____lifetime_4 = value;
-	}
-
-	inline static int32_t get_offset_of__value_5() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ____value_5)); }
-	inline float get__value_5() const { return ____value_5; }
-	inline float* get_address_of__value_5() { return &____value_5; }
-	inline void set__value_5(float value)
-	{
-		____value_5 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURFOCUSEFFECTER_T3620569780_H
+#endif // BLUESTARDEADEFFECT_T2432935331_H
 #ifndef BINAHOVERLOADUI_T1401844998_H
 #define BINAHOVERLOADUI_T1401844998_H
 #ifdef __clang__
@@ -8251,153 +8106,201 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHOVERLOADUI_T1401844998_H
-#ifndef STANDINGITEMANIM_T570508136_H
-#define STANDINGITEMANIM_T570508136_H
+#ifndef BINAHOVERLOADCLEARPARTICLE_T1085989716_H
+#define BINAHOVERLOADCLEARPARTICLE_T1085989716_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// StandingItemAnim
-struct  StandingItemAnim_t570508136  : public MonoBehaviour_t3962482529
+// BinahBoss.BinahOverloadClearParticle
+struct  BinahOverloadClearParticle_t1085989716  : public MonoBehaviour_t3962482529
 {
 public:
-	// StandingItemScriptBase StandingItemAnim::scriptBase
-	StandingItemScriptBase_t3970342999 * ___scriptBase_2;
-	// StandingItemUnit StandingItemAnim::_unit
-	StandingItemUnit_t997475196 * ____unit_3;
+	// BinahCoreScript BinahBoss.BinahOverloadClearParticle::binah
+	BinahCoreScript_t303627652 * ___binah_2;
+	// UnityEngine.Vector3 BinahBoss.BinahOverloadClearParticle::startPosition
+	Vector3_t3722313464  ___startPosition_3;
+	// System.Single BinahBoss.BinahOverloadClearParticle::arriveTime
+	float ___arriveTime_4;
+	// UnityEngine.AnimationCurve BinahBoss.BinahOverloadClearParticle::curve
+	AnimationCurve_t3046754366 * ___curve_5;
+	// CreatureModel BinahBoss.BinahOverloadClearParticle::invokedCreature
+	CreatureModel_t680682136 * ___invokedCreature_6;
+	// UnscaledTimer BinahBoss.BinahOverloadClearParticle::_lifeTime
+	UnscaledTimer_t2981502462 * ____lifeTime_7;
+	// OverloadType BinahBoss.BinahOverloadClearParticle::overloadType
+	int32_t ___overloadType_8;
 
 public:
-	inline static int32_t get_offset_of_scriptBase_2() { return static_cast<int32_t>(offsetof(StandingItemAnim_t570508136, ___scriptBase_2)); }
-	inline StandingItemScriptBase_t3970342999 * get_scriptBase_2() const { return ___scriptBase_2; }
-	inline StandingItemScriptBase_t3970342999 ** get_address_of_scriptBase_2() { return &___scriptBase_2; }
-	inline void set_scriptBase_2(StandingItemScriptBase_t3970342999 * value)
+	inline static int32_t get_offset_of_binah_2() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___binah_2)); }
+	inline BinahCoreScript_t303627652 * get_binah_2() const { return ___binah_2; }
+	inline BinahCoreScript_t303627652 ** get_address_of_binah_2() { return &___binah_2; }
+	inline void set_binah_2(BinahCoreScript_t303627652 * value)
 	{
-		___scriptBase_2 = value;
-		Il2CppCodeGenWriteBarrier((&___scriptBase_2), value);
+		___binah_2 = value;
+		Il2CppCodeGenWriteBarrier((&___binah_2), value);
 	}
 
-	inline static int32_t get_offset_of__unit_3() { return static_cast<int32_t>(offsetof(StandingItemAnim_t570508136, ____unit_3)); }
-	inline StandingItemUnit_t997475196 * get__unit_3() const { return ____unit_3; }
-	inline StandingItemUnit_t997475196 ** get_address_of__unit_3() { return &____unit_3; }
-	inline void set__unit_3(StandingItemUnit_t997475196 * value)
+	inline static int32_t get_offset_of_startPosition_3() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___startPosition_3)); }
+	inline Vector3_t3722313464  get_startPosition_3() const { return ___startPosition_3; }
+	inline Vector3_t3722313464 * get_address_of_startPosition_3() { return &___startPosition_3; }
+	inline void set_startPosition_3(Vector3_t3722313464  value)
 	{
-		____unit_3 = value;
-		Il2CppCodeGenWriteBarrier((&____unit_3), value);
+		___startPosition_3 = value;
+	}
+
+	inline static int32_t get_offset_of_arriveTime_4() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___arriveTime_4)); }
+	inline float get_arriveTime_4() const { return ___arriveTime_4; }
+	inline float* get_address_of_arriveTime_4() { return &___arriveTime_4; }
+	inline void set_arriveTime_4(float value)
+	{
+		___arriveTime_4 = value;
+	}
+
+	inline static int32_t get_offset_of_curve_5() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___curve_5)); }
+	inline AnimationCurve_t3046754366 * get_curve_5() const { return ___curve_5; }
+	inline AnimationCurve_t3046754366 ** get_address_of_curve_5() { return &___curve_5; }
+	inline void set_curve_5(AnimationCurve_t3046754366 * value)
+	{
+		___curve_5 = value;
+		Il2CppCodeGenWriteBarrier((&___curve_5), value);
+	}
+
+	inline static int32_t get_offset_of_invokedCreature_6() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___invokedCreature_6)); }
+	inline CreatureModel_t680682136 * get_invokedCreature_6() const { return ___invokedCreature_6; }
+	inline CreatureModel_t680682136 ** get_address_of_invokedCreature_6() { return &___invokedCreature_6; }
+	inline void set_invokedCreature_6(CreatureModel_t680682136 * value)
+	{
+		___invokedCreature_6 = value;
+		Il2CppCodeGenWriteBarrier((&___invokedCreature_6), value);
+	}
+
+	inline static int32_t get_offset_of__lifeTime_7() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ____lifeTime_7)); }
+	inline UnscaledTimer_t2981502462 * get__lifeTime_7() const { return ____lifeTime_7; }
+	inline UnscaledTimer_t2981502462 ** get_address_of__lifeTime_7() { return &____lifeTime_7; }
+	inline void set__lifeTime_7(UnscaledTimer_t2981502462 * value)
+	{
+		____lifeTime_7 = value;
+		Il2CppCodeGenWriteBarrier((&____lifeTime_7), value);
+	}
+
+	inline static int32_t get_offset_of_overloadType_8() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___overloadType_8)); }
+	inline int32_t get_overloadType_8() const { return ___overloadType_8; }
+	inline int32_t* get_address_of_overloadType_8() { return &___overloadType_8; }
+	inline void set_overloadType_8(int32_t value)
+	{
+		___overloadType_8 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // STANDINGITEMANIM_T570508136_H
-#ifndef BINAHWAVE_T1501099813_H
-#define BINAHWAVE_T1501099813_H
+#endif // BINAHOVERLOADCLEARPARTICLE_T1085989716_H
+#ifndef ANIMSCRIPT_T2927161892_H
+#define ANIMSCRIPT_T2927161892_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahWave
-struct  BinahWave_t1501099813  : public MonoBehaviour_t3962482529
+// AnimScript
+struct  AnimScript_t2927161892  : public MonoBehaviour_t3962482529
 {
 public:
-	// ProjectileModel BinahWave::model
-	ProjectileModel_t3373724880 * ___model_2;
-	// ProjectileUnit BinahWave::unit
-	ProjectileUnit_t50201782 * ___unit_3;
-	// BinahBoss.BinahProjectile BinahWave::binahProjectile
-	BinahProjectile_t1425247713 * ___binahProjectile_4;
-	// AnimatorEventHandler BinahWave::eventHandler
-	AnimatorEventHandler_t1637064700 * ___eventHandler_5;
-	// System.Boolean BinahWave::_isDestroied
-	bool ____isDestroied_6;
-	// UnityEngine.Animator BinahWave::animator
-	Animator_t434523843 * ___animator_7;
-	// Timer BinahWave::_timer
-	Timer_t4185932343 * ____timer_8;
-	// MinMax BinahWave::MinMax
-	MinMax_t1680324056 * ___MinMax_9;
+	// UnityEngine.Animator AnimScript::animator
+	Animator_t434523843 * ___animator_2;
+	// System.Single AnimScript::motionDelay
+	float ___motionDelay_3;
+	// System.Single AnimScript::defaultSpeed
+	float ___defaultSpeed_4;
 
 public:
-	inline static int32_t get_offset_of_model_2() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___model_2)); }
-	inline ProjectileModel_t3373724880 * get_model_2() const { return ___model_2; }
-	inline ProjectileModel_t3373724880 ** get_address_of_model_2() { return &___model_2; }
-	inline void set_model_2(ProjectileModel_t3373724880 * value)
+	inline static int32_t get_offset_of_animator_2() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___animator_2)); }
+	inline Animator_t434523843 * get_animator_2() const { return ___animator_2; }
+	inline Animator_t434523843 ** get_address_of_animator_2() { return &___animator_2; }
+	inline void set_animator_2(Animator_t434523843 * value)
+	{
+		___animator_2 = value;
+		Il2CppCodeGenWriteBarrier((&___animator_2), value);
+	}
+
+	inline static int32_t get_offset_of_motionDelay_3() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___motionDelay_3)); }
+	inline float get_motionDelay_3() const { return ___motionDelay_3; }
+	inline float* get_address_of_motionDelay_3() { return &___motionDelay_3; }
+	inline void set_motionDelay_3(float value)
+	{
+		___motionDelay_3 = value;
+	}
+
+	inline static int32_t get_offset_of_defaultSpeed_4() { return static_cast<int32_t>(offsetof(AnimScript_t2927161892, ___defaultSpeed_4)); }
+	inline float get_defaultSpeed_4() const { return ___defaultSpeed_4; }
+	inline float* get_address_of_defaultSpeed_4() { return &___defaultSpeed_4; }
+	inline void set_defaultSpeed_4(float value)
+	{
+		___defaultSpeed_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ANIMSCRIPT_T2927161892_H
+#ifndef BLOODMAPOBJECT_T2656336790_H
+#define BLOODMAPOBJECT_T2656336790_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BloodMapObject
+struct  BloodMapObject_t2656336790  : public MonoBehaviour_t3962482529
+{
+public:
+	// BloodMapObjectModel BloodMapObject::model
+	BloodMapObjectModel_t1680656327 * ___model_2;
+	// UnityEngine.Sprite[] BloodMapObject::bloodImgs
+	SpriteU5BU5D_t2581906349* ___bloodImgs_3;
+	// UnityEngine.SpriteRenderer BloodMapObject::renderer
+	SpriteRenderer_t3235626157 * ___renderer_4;
+
+public:
+	inline static int32_t get_offset_of_model_2() { return static_cast<int32_t>(offsetof(BloodMapObject_t2656336790, ___model_2)); }
+	inline BloodMapObjectModel_t1680656327 * get_model_2() const { return ___model_2; }
+	inline BloodMapObjectModel_t1680656327 ** get_address_of_model_2() { return &___model_2; }
+	inline void set_model_2(BloodMapObjectModel_t1680656327 * value)
 	{
 		___model_2 = value;
 		Il2CppCodeGenWriteBarrier((&___model_2), value);
 	}
 
-	inline static int32_t get_offset_of_unit_3() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___unit_3)); }
-	inline ProjectileUnit_t50201782 * get_unit_3() const { return ___unit_3; }
-	inline ProjectileUnit_t50201782 ** get_address_of_unit_3() { return &___unit_3; }
-	inline void set_unit_3(ProjectileUnit_t50201782 * value)
+	inline static int32_t get_offset_of_bloodImgs_3() { return static_cast<int32_t>(offsetof(BloodMapObject_t2656336790, ___bloodImgs_3)); }
+	inline SpriteU5BU5D_t2581906349* get_bloodImgs_3() const { return ___bloodImgs_3; }
+	inline SpriteU5BU5D_t2581906349** get_address_of_bloodImgs_3() { return &___bloodImgs_3; }
+	inline void set_bloodImgs_3(SpriteU5BU5D_t2581906349* value)
 	{
-		___unit_3 = value;
-		Il2CppCodeGenWriteBarrier((&___unit_3), value);
+		___bloodImgs_3 = value;
+		Il2CppCodeGenWriteBarrier((&___bloodImgs_3), value);
 	}
 
-	inline static int32_t get_offset_of_binahProjectile_4() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___binahProjectile_4)); }
-	inline BinahProjectile_t1425247713 * get_binahProjectile_4() const { return ___binahProjectile_4; }
-	inline BinahProjectile_t1425247713 ** get_address_of_binahProjectile_4() { return &___binahProjectile_4; }
-	inline void set_binahProjectile_4(BinahProjectile_t1425247713 * value)
+	inline static int32_t get_offset_of_renderer_4() { return static_cast<int32_t>(offsetof(BloodMapObject_t2656336790, ___renderer_4)); }
+	inline SpriteRenderer_t3235626157 * get_renderer_4() const { return ___renderer_4; }
+	inline SpriteRenderer_t3235626157 ** get_address_of_renderer_4() { return &___renderer_4; }
+	inline void set_renderer_4(SpriteRenderer_t3235626157 * value)
 	{
-		___binahProjectile_4 = value;
-		Il2CppCodeGenWriteBarrier((&___binahProjectile_4), value);
-	}
-
-	inline static int32_t get_offset_of_eventHandler_5() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___eventHandler_5)); }
-	inline AnimatorEventHandler_t1637064700 * get_eventHandler_5() const { return ___eventHandler_5; }
-	inline AnimatorEventHandler_t1637064700 ** get_address_of_eventHandler_5() { return &___eventHandler_5; }
-	inline void set_eventHandler_5(AnimatorEventHandler_t1637064700 * value)
-	{
-		___eventHandler_5 = value;
-		Il2CppCodeGenWriteBarrier((&___eventHandler_5), value);
-	}
-
-	inline static int32_t get_offset_of__isDestroied_6() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ____isDestroied_6)); }
-	inline bool get__isDestroied_6() const { return ____isDestroied_6; }
-	inline bool* get_address_of__isDestroied_6() { return &____isDestroied_6; }
-	inline void set__isDestroied_6(bool value)
-	{
-		____isDestroied_6 = value;
-	}
-
-	inline static int32_t get_offset_of_animator_7() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___animator_7)); }
-	inline Animator_t434523843 * get_animator_7() const { return ___animator_7; }
-	inline Animator_t434523843 ** get_address_of_animator_7() { return &___animator_7; }
-	inline void set_animator_7(Animator_t434523843 * value)
-	{
-		___animator_7 = value;
-		Il2CppCodeGenWriteBarrier((&___animator_7), value);
-	}
-
-	inline static int32_t get_offset_of__timer_8() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ____timer_8)); }
-	inline Timer_t4185932343 * get__timer_8() const { return ____timer_8; }
-	inline Timer_t4185932343 ** get_address_of__timer_8() { return &____timer_8; }
-	inline void set__timer_8(Timer_t4185932343 * value)
-	{
-		____timer_8 = value;
-		Il2CppCodeGenWriteBarrier((&____timer_8), value);
-	}
-
-	inline static int32_t get_offset_of_MinMax_9() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___MinMax_9)); }
-	inline MinMax_t1680324056 * get_MinMax_9() const { return ___MinMax_9; }
-	inline MinMax_t1680324056 ** get_address_of_MinMax_9() { return &___MinMax_9; }
-	inline void set_MinMax_9(MinMax_t1680324056 * value)
-	{
-		___MinMax_9 = value;
-		Il2CppCodeGenWriteBarrier((&___MinMax_9), value);
+		___renderer_4 = value;
+		Il2CppCodeGenWriteBarrier((&___renderer_4), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINAHWAVE_T1501099813_H
+#endif // BLOODMAPOBJECT_T2656336790_H
 #ifndef BINAHPROJECTILE_T1425247713_H
 #define BINAHPROJECTILE_T1425247713_H
 #ifdef __clang__
@@ -8605,149 +8508,365 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BINAHPROJECTILE_T1425247713_H
-#ifndef BINAHOVERLOADCLEARPARTICLE_T1085989716_H
-#define BINAHOVERLOADCLEARPARTICLE_T1085989716_H
+#ifndef BINAHWAVE_T1501099813_H
+#define BINAHWAVE_T1501099813_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahBoss.BinahOverloadClearParticle
-struct  BinahOverloadClearParticle_t1085989716  : public MonoBehaviour_t3962482529
+// BinahWave
+struct  BinahWave_t1501099813  : public MonoBehaviour_t3962482529
 {
 public:
-	// BinahCoreScript BinahBoss.BinahOverloadClearParticle::binah
-	BinahCoreScript_t303627652 * ___binah_2;
-	// UnityEngine.Vector3 BinahBoss.BinahOverloadClearParticle::startPosition
-	Vector3_t3722313464  ___startPosition_3;
-	// System.Single BinahBoss.BinahOverloadClearParticle::arriveTime
-	float ___arriveTime_4;
-	// UnityEngine.AnimationCurve BinahBoss.BinahOverloadClearParticle::curve
-	AnimationCurve_t3046754366 * ___curve_5;
-	// CreatureModel BinahBoss.BinahOverloadClearParticle::invokedCreature
-	CreatureModel_t680682136 * ___invokedCreature_6;
-	// UnscaledTimer BinahBoss.BinahOverloadClearParticle::_lifeTime
-	UnscaledTimer_t2981502462 * ____lifeTime_7;
-	// OverloadType BinahBoss.BinahOverloadClearParticle::overloadType
-	int32_t ___overloadType_8;
+	// ProjectileModel BinahWave::model
+	ProjectileModel_t3373724880 * ___model_2;
+	// ProjectileUnit BinahWave::unit
+	ProjectileUnit_t50201782 * ___unit_3;
+	// BinahBoss.BinahProjectile BinahWave::binahProjectile
+	BinahProjectile_t1425247713 * ___binahProjectile_4;
+	// AnimatorEventHandler BinahWave::eventHandler
+	AnimatorEventHandler_t1637064700 * ___eventHandler_5;
+	// System.Boolean BinahWave::_isDestroied
+	bool ____isDestroied_6;
+	// UnityEngine.Animator BinahWave::animator
+	Animator_t434523843 * ___animator_7;
+	// Timer BinahWave::_timer
+	Timer_t4185932343 * ____timer_8;
+	// MinMax BinahWave::MinMax
+	MinMax_t1680324056 * ___MinMax_9;
 
 public:
-	inline static int32_t get_offset_of_binah_2() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___binah_2)); }
-	inline BinahCoreScript_t303627652 * get_binah_2() const { return ___binah_2; }
-	inline BinahCoreScript_t303627652 ** get_address_of_binah_2() { return &___binah_2; }
-	inline void set_binah_2(BinahCoreScript_t303627652 * value)
+	inline static int32_t get_offset_of_model_2() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___model_2)); }
+	inline ProjectileModel_t3373724880 * get_model_2() const { return ___model_2; }
+	inline ProjectileModel_t3373724880 ** get_address_of_model_2() { return &___model_2; }
+	inline void set_model_2(ProjectileModel_t3373724880 * value)
 	{
-		___binah_2 = value;
-		Il2CppCodeGenWriteBarrier((&___binah_2), value);
+		___model_2 = value;
+		Il2CppCodeGenWriteBarrier((&___model_2), value);
 	}
 
-	inline static int32_t get_offset_of_startPosition_3() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___startPosition_3)); }
-	inline Vector3_t3722313464  get_startPosition_3() const { return ___startPosition_3; }
-	inline Vector3_t3722313464 * get_address_of_startPosition_3() { return &___startPosition_3; }
-	inline void set_startPosition_3(Vector3_t3722313464  value)
+	inline static int32_t get_offset_of_unit_3() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___unit_3)); }
+	inline ProjectileUnit_t50201782 * get_unit_3() const { return ___unit_3; }
+	inline ProjectileUnit_t50201782 ** get_address_of_unit_3() { return &___unit_3; }
+	inline void set_unit_3(ProjectileUnit_t50201782 * value)
 	{
-		___startPosition_3 = value;
+		___unit_3 = value;
+		Il2CppCodeGenWriteBarrier((&___unit_3), value);
 	}
 
-	inline static int32_t get_offset_of_arriveTime_4() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___arriveTime_4)); }
-	inline float get_arriveTime_4() const { return ___arriveTime_4; }
-	inline float* get_address_of_arriveTime_4() { return &___arriveTime_4; }
-	inline void set_arriveTime_4(float value)
+	inline static int32_t get_offset_of_binahProjectile_4() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___binahProjectile_4)); }
+	inline BinahProjectile_t1425247713 * get_binahProjectile_4() const { return ___binahProjectile_4; }
+	inline BinahProjectile_t1425247713 ** get_address_of_binahProjectile_4() { return &___binahProjectile_4; }
+	inline void set_binahProjectile_4(BinahProjectile_t1425247713 * value)
 	{
-		___arriveTime_4 = value;
+		___binahProjectile_4 = value;
+		Il2CppCodeGenWriteBarrier((&___binahProjectile_4), value);
 	}
 
-	inline static int32_t get_offset_of_curve_5() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___curve_5)); }
-	inline AnimationCurve_t3046754366 * get_curve_5() const { return ___curve_5; }
-	inline AnimationCurve_t3046754366 ** get_address_of_curve_5() { return &___curve_5; }
-	inline void set_curve_5(AnimationCurve_t3046754366 * value)
+	inline static int32_t get_offset_of_eventHandler_5() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___eventHandler_5)); }
+	inline AnimatorEventHandler_t1637064700 * get_eventHandler_5() const { return ___eventHandler_5; }
+	inline AnimatorEventHandler_t1637064700 ** get_address_of_eventHandler_5() { return &___eventHandler_5; }
+	inline void set_eventHandler_5(AnimatorEventHandler_t1637064700 * value)
 	{
-		___curve_5 = value;
-		Il2CppCodeGenWriteBarrier((&___curve_5), value);
+		___eventHandler_5 = value;
+		Il2CppCodeGenWriteBarrier((&___eventHandler_5), value);
 	}
 
-	inline static int32_t get_offset_of_invokedCreature_6() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___invokedCreature_6)); }
-	inline CreatureModel_t680682136 * get_invokedCreature_6() const { return ___invokedCreature_6; }
-	inline CreatureModel_t680682136 ** get_address_of_invokedCreature_6() { return &___invokedCreature_6; }
-	inline void set_invokedCreature_6(CreatureModel_t680682136 * value)
+	inline static int32_t get_offset_of__isDestroied_6() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ____isDestroied_6)); }
+	inline bool get__isDestroied_6() const { return ____isDestroied_6; }
+	inline bool* get_address_of__isDestroied_6() { return &____isDestroied_6; }
+	inline void set__isDestroied_6(bool value)
 	{
-		___invokedCreature_6 = value;
-		Il2CppCodeGenWriteBarrier((&___invokedCreature_6), value);
+		____isDestroied_6 = value;
 	}
 
-	inline static int32_t get_offset_of__lifeTime_7() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ____lifeTime_7)); }
-	inline UnscaledTimer_t2981502462 * get__lifeTime_7() const { return ____lifeTime_7; }
-	inline UnscaledTimer_t2981502462 ** get_address_of__lifeTime_7() { return &____lifeTime_7; }
-	inline void set__lifeTime_7(UnscaledTimer_t2981502462 * value)
+	inline static int32_t get_offset_of_animator_7() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___animator_7)); }
+	inline Animator_t434523843 * get_animator_7() const { return ___animator_7; }
+	inline Animator_t434523843 ** get_address_of_animator_7() { return &___animator_7; }
+	inline void set_animator_7(Animator_t434523843 * value)
 	{
-		____lifeTime_7 = value;
-		Il2CppCodeGenWriteBarrier((&____lifeTime_7), value);
+		___animator_7 = value;
+		Il2CppCodeGenWriteBarrier((&___animator_7), value);
 	}
 
-	inline static int32_t get_offset_of_overloadType_8() { return static_cast<int32_t>(offsetof(BinahOverloadClearParticle_t1085989716, ___overloadType_8)); }
-	inline int32_t get_overloadType_8() const { return ___overloadType_8; }
-	inline int32_t* get_address_of_overloadType_8() { return &___overloadType_8; }
-	inline void set_overloadType_8(int32_t value)
+	inline static int32_t get_offset_of__timer_8() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ____timer_8)); }
+	inline Timer_t4185932343 * get__timer_8() const { return ____timer_8; }
+	inline Timer_t4185932343 ** get_address_of__timer_8() { return &____timer_8; }
+	inline void set__timer_8(Timer_t4185932343 * value)
 	{
-		___overloadType_8 = value;
+		____timer_8 = value;
+		Il2CppCodeGenWriteBarrier((&____timer_8), value);
+	}
+
+	inline static int32_t get_offset_of_MinMax_9() { return static_cast<int32_t>(offsetof(BinahWave_t1501099813, ___MinMax_9)); }
+	inline MinMax_t1680324056 * get_MinMax_9() const { return ___MinMax_9; }
+	inline MinMax_t1680324056 ** get_address_of_MinMax_9() { return &___MinMax_9; }
+	inline void set_MinMax_9(MinMax_t1680324056 * value)
+	{
+		___MinMax_9 = value;
+		Il2CppCodeGenWriteBarrier((&___MinMax_9), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINAHOVERLOADCLEARPARTICLE_T1085989716_H
-#ifndef BINAHOVERLOADALARM_T403233311_H
-#define BINAHOVERLOADALARM_T403233311_H
+#endif // BINAHWAVE_T1501099813_H
+#ifndef BLURBLURRYEFFECTER_T3276817226_H
+#define BLURBLURRYEFFECTER_T3276817226_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BinahOverloadAlarm
-struct  BinahOverloadAlarm_t403233311  : public MonoBehaviour_t3962482529
+// BlurBlurryEffecter
+struct  BlurBlurryEffecter_t3276817226  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.UI.Image[] BinahOverloadAlarm::imgs
-	ImageU5BU5D_t2439009922* ___imgs_2;
+	// CameraFilterPack_Blur_Blurry BlurBlurryEffecter::target
+	CameraFilterPack_Blur_Blurry_t3287805908 * ___target_2;
+	// System.Single BlurBlurryEffecter::_elapsedTime
+	float ____elapsedTime_3;
+	// System.Single BlurBlurryEffecter::_lifetime
+	float ____lifetime_4;
 
 public:
-	inline static int32_t get_offset_of_imgs_2() { return static_cast<int32_t>(offsetof(BinahOverloadAlarm_t403233311, ___imgs_2)); }
-	inline ImageU5BU5D_t2439009922* get_imgs_2() const { return ___imgs_2; }
-	inline ImageU5BU5D_t2439009922** get_address_of_imgs_2() { return &___imgs_2; }
-	inline void set_imgs_2(ImageU5BU5D_t2439009922* value)
+	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(BlurBlurryEffecter_t3276817226, ___target_2)); }
+	inline CameraFilterPack_Blur_Blurry_t3287805908 * get_target_2() const { return ___target_2; }
+	inline CameraFilterPack_Blur_Blurry_t3287805908 ** get_address_of_target_2() { return &___target_2; }
+	inline void set_target_2(CameraFilterPack_Blur_Blurry_t3287805908 * value)
 	{
-		___imgs_2 = value;
-		Il2CppCodeGenWriteBarrier((&___imgs_2), value);
+		___target_2 = value;
+		Il2CppCodeGenWriteBarrier((&___target_2), value);
+	}
+
+	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(BlurBlurryEffecter_t3276817226, ____elapsedTime_3)); }
+	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
+	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
+	inline void set__elapsedTime_3(float value)
+	{
+		____elapsedTime_3 = value;
+	}
+
+	inline static int32_t get_offset_of__lifetime_4() { return static_cast<int32_t>(offsetof(BlurBlurryEffecter_t3276817226, ____lifetime_4)); }
+	inline float get__lifetime_4() const { return ____lifetime_4; }
+	inline float* get_address_of__lifetime_4() { return &____lifetime_4; }
+	inline void set__lifetime_4(float value)
+	{
+		____lifetime_4 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BINAHOVERLOADALARM_T403233311_H
-#ifndef BIRDEGGANIM_T2721551091_H
-#define BIRDEGGANIM_T2721551091_H
+#endif // BLURBLURRYEFFECTER_T3276817226_H
+#ifndef BLURBLOOMEFFECTER_T2886664569_H
+#define BLURBLOOMEFFECTER_T2886664569_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BirdEggAnim
-struct  BirdEggAnim_t2721551091  : public StandingItemAnim_t570508136
+// BlurBloomEffecter
+struct  BlurBloomEffecter_t2886664569  : public MonoBehaviour_t3962482529
 {
 public:
+	// CameraFilterPack_Blur_Bloom BlurBloomEffecter::target
+	CameraFilterPack_Blur_Bloom_t3356986519 * ___target_2;
+	// System.Single BlurBloomEffecter::_elapsedTime
+	float ____elapsedTime_3;
 
 public:
+	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(BlurBloomEffecter_t2886664569, ___target_2)); }
+	inline CameraFilterPack_Blur_Bloom_t3356986519 * get_target_2() const { return ___target_2; }
+	inline CameraFilterPack_Blur_Bloom_t3356986519 ** get_address_of_target_2() { return &___target_2; }
+	inline void set_target_2(CameraFilterPack_Blur_Bloom_t3356986519 * value)
+	{
+		___target_2 = value;
+		Il2CppCodeGenWriteBarrier((&___target_2), value);
+	}
+
+	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(BlurBloomEffecter_t2886664569, ____elapsedTime_3)); }
+	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
+	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
+	inline void set__elapsedTime_3(float value)
+	{
+		____elapsedTime_3 = value;
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BIRDEGGANIM_T2721551091_H
+#endif // BLURBLOOMEFFECTER_T2886664569_H
+#ifndef BLOCKSLIDERUNIT_T3068048314_H
+#define BLOCKSLIDERUNIT_T3068048314_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlockSliderUnit
+struct  BlockSliderUnit_t3068048314  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.UI.Image BlockSliderUnit::display
+	Image_t2670269651 * ___display_2;
+	// UnityEngine.UI.Image BlockSliderUnit::disable
+	Image_t2670269651 * ___disable_3;
+	// BlockSlider BlockSliderUnit::slider
+	BlockSlider_t3258073796 * ___slider_4;
+	// System.Int32 BlockSliderUnit::index
+	int32_t ___index_5;
+
+public:
+	inline static int32_t get_offset_of_display_2() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___display_2)); }
+	inline Image_t2670269651 * get_display_2() const { return ___display_2; }
+	inline Image_t2670269651 ** get_address_of_display_2() { return &___display_2; }
+	inline void set_display_2(Image_t2670269651 * value)
+	{
+		___display_2 = value;
+		Il2CppCodeGenWriteBarrier((&___display_2), value);
+	}
+
+	inline static int32_t get_offset_of_disable_3() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___disable_3)); }
+	inline Image_t2670269651 * get_disable_3() const { return ___disable_3; }
+	inline Image_t2670269651 ** get_address_of_disable_3() { return &___disable_3; }
+	inline void set_disable_3(Image_t2670269651 * value)
+	{
+		___disable_3 = value;
+		Il2CppCodeGenWriteBarrier((&___disable_3), value);
+	}
+
+	inline static int32_t get_offset_of_slider_4() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___slider_4)); }
+	inline BlockSlider_t3258073796 * get_slider_4() const { return ___slider_4; }
+	inline BlockSlider_t3258073796 ** get_address_of_slider_4() { return &___slider_4; }
+	inline void set_slider_4(BlockSlider_t3258073796 * value)
+	{
+		___slider_4 = value;
+		Il2CppCodeGenWriteBarrier((&___slider_4), value);
+	}
+
+	inline static int32_t get_offset_of_index_5() { return static_cast<int32_t>(offsetof(BlockSliderUnit_t3068048314, ___index_5)); }
+	inline int32_t get_index_5() const { return ___index_5; }
+	inline int32_t* get_address_of_index_5() { return &___index_5; }
+	inline void set_index_5(int32_t value)
+	{
+		___index_5 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLOCKSLIDERUNIT_T3068048314_H
+#ifndef STANDINGITEMANIM_T570508136_H
+#define STANDINGITEMANIM_T570508136_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// StandingItemAnim
+struct  StandingItemAnim_t570508136  : public MonoBehaviour_t3962482529
+{
+public:
+	// StandingItemScriptBase StandingItemAnim::scriptBase
+	StandingItemScriptBase_t3970342999 * ___scriptBase_2;
+	// StandingItemUnit StandingItemAnim::_unit
+	StandingItemUnit_t997475196 * ____unit_3;
+
+public:
+	inline static int32_t get_offset_of_scriptBase_2() { return static_cast<int32_t>(offsetof(StandingItemAnim_t570508136, ___scriptBase_2)); }
+	inline StandingItemScriptBase_t3970342999 * get_scriptBase_2() const { return ___scriptBase_2; }
+	inline StandingItemScriptBase_t3970342999 ** get_address_of_scriptBase_2() { return &___scriptBase_2; }
+	inline void set_scriptBase_2(StandingItemScriptBase_t3970342999 * value)
+	{
+		___scriptBase_2 = value;
+		Il2CppCodeGenWriteBarrier((&___scriptBase_2), value);
+	}
+
+	inline static int32_t get_offset_of__unit_3() { return static_cast<int32_t>(offsetof(StandingItemAnim_t570508136, ____unit_3)); }
+	inline StandingItemUnit_t997475196 * get__unit_3() const { return ____unit_3; }
+	inline StandingItemUnit_t997475196 ** get_address_of__unit_3() { return &____unit_3; }
+	inline void set__unit_3(StandingItemUnit_t997475196 * value)
+	{
+		____unit_3 = value;
+		Il2CppCodeGenWriteBarrier((&____unit_3), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // STANDINGITEMANIM_T570508136_H
+#ifndef BLURFOCUSEFFECTER_T3620569780_H
+#define BLURFOCUSEFFECTER_T3620569780_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlurFocusEffecter
+struct  BlurFocusEffecter_t3620569780  : public MonoBehaviour_t3962482529
+{
+public:
+	// CameraFilterPack_Blur_Focus BlurFocusEffecter::target
+	CameraFilterPack_Blur_Focus_t1993753717 * ___target_2;
+	// System.Single BlurFocusEffecter::_elapsedTime
+	float ____elapsedTime_3;
+	// System.Single BlurFocusEffecter::_lifetime
+	float ____lifetime_4;
+	// System.Single BlurFocusEffecter::_value
+	float ____value_5;
+
+public:
+	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ___target_2)); }
+	inline CameraFilterPack_Blur_Focus_t1993753717 * get_target_2() const { return ___target_2; }
+	inline CameraFilterPack_Blur_Focus_t1993753717 ** get_address_of_target_2() { return &___target_2; }
+	inline void set_target_2(CameraFilterPack_Blur_Focus_t1993753717 * value)
+	{
+		___target_2 = value;
+		Il2CppCodeGenWriteBarrier((&___target_2), value);
+	}
+
+	inline static int32_t get_offset_of__elapsedTime_3() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ____elapsedTime_3)); }
+	inline float get__elapsedTime_3() const { return ____elapsedTime_3; }
+	inline float* get_address_of__elapsedTime_3() { return &____elapsedTime_3; }
+	inline void set__elapsedTime_3(float value)
+	{
+		____elapsedTime_3 = value;
+	}
+
+	inline static int32_t get_offset_of__lifetime_4() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ____lifetime_4)); }
+	inline float get__lifetime_4() const { return ____lifetime_4; }
+	inline float* get_address_of__lifetime_4() { return &____lifetime_4; }
+	inline void set__lifetime_4(float value)
+	{
+		____lifetime_4 = value;
+	}
+
+	inline static int32_t get_offset_of__value_5() { return static_cast<int32_t>(offsetof(BlurFocusEffecter_t3620569780, ____value_5)); }
+	inline float get__value_5() const { return ____value_5; }
+	inline float* get_address_of__value_5() { return &____value_5; }
+	inline void set__value_5(float value)
+	{
+		____value_5 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLURFOCUSEFFECTER_T3620569780_H
 #ifndef CREATUREANIMSCRIPT_T329609202_H
 #define CREATUREANIMSCRIPT_T329609202_H
 #ifdef __clang__
@@ -8800,16 +8919,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CREATUREANIMSCRIPT_T329609202_H
-#ifndef CREATUREANIMEVENTCALLED_T2935559367_H
-#define CREATUREANIMEVENTCALLED_T2935559367_H
+#ifndef BIRDEGGANIM_T2721551091_H
+#define BIRDEGGANIM_T2721551091_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// CreatureAnimEventCalled
-struct  CreatureAnimEventCalled_t2935559367  : public CreatureAnimScript_t329609202
+// BirdEggAnim
+struct  BirdEggAnim_t2721551091  : public StandingItemAnim_t570508136
 {
 public:
 
@@ -8819,7 +8938,48 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // CREATUREANIMEVENTCALLED_T2935559367_H
+#endif // BIRDEGGANIM_T2721551091_H
+#ifndef BLACKSWANSISTERANIM_T113036806_H
+#define BLACKSWANSISTERANIM_T113036806_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlackSwanSisterAnim
+struct  BlackSwanSisterAnim_t113036806  : public CreatureAnimScript_t329609202
+{
+public:
+	// BlackSwanSister BlackSwanSisterAnim::script
+	BlackSwanSister_t1068429612 * ___script_9;
+	// SpineOptimizerModule BlackSwanSisterAnim::_module
+	SpineOptimizerModule_t443362725 * ____module_10;
+
+public:
+	inline static int32_t get_offset_of_script_9() { return static_cast<int32_t>(offsetof(BlackSwanSisterAnim_t113036806, ___script_9)); }
+	inline BlackSwanSister_t1068429612 * get_script_9() const { return ___script_9; }
+	inline BlackSwanSister_t1068429612 ** get_address_of_script_9() { return &___script_9; }
+	inline void set_script_9(BlackSwanSister_t1068429612 * value)
+	{
+		___script_9 = value;
+		Il2CppCodeGenWriteBarrier((&___script_9), value);
+	}
+
+	inline static int32_t get_offset_of__module_10() { return static_cast<int32_t>(offsetof(BlackSwanSisterAnim_t113036806, ____module_10)); }
+	inline SpineOptimizerModule_t443362725 * get__module_10() const { return ____module_10; }
+	inline SpineOptimizerModule_t443362725 ** get_address_of__module_10() { return &____module_10; }
+	inline void set__module_10(SpineOptimizerModule_t443362725 * value)
+	{
+		____module_10 = value;
+		Il2CppCodeGenWriteBarrier((&____module_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BLACKSWANSISTERANIM_T113036806_H
 #ifndef BLACKSWANANIM_T1899114408_H
 #define BLACKSWANANIM_T1899114408_H
 #ifdef __clang__
@@ -8883,47 +9043,88 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLACKSWANANIM_T1899114408_H
-#ifndef BLACKSWANSISTERANIM_T113036806_H
-#define BLACKSWANSISTERANIM_T113036806_H
+#ifndef CREATUREANIMEVENTCALLED_T2935559367_H
+#define CREATUREANIMEVENTCALLED_T2935559367_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BlackSwanSisterAnim
-struct  BlackSwanSisterAnim_t113036806  : public CreatureAnimScript_t329609202
+// CreatureAnimEventCalled
+struct  CreatureAnimEventCalled_t2935559367  : public CreatureAnimScript_t329609202
 {
 public:
-	// BlackSwanSister BlackSwanSisterAnim::script
-	BlackSwanSister_t1068429612 * ___script_9;
-	// SpineOptimizerModule BlackSwanSisterAnim::_module
-	SpineOptimizerModule_t443362725 * ____module_10;
 
 public:
-	inline static int32_t get_offset_of_script_9() { return static_cast<int32_t>(offsetof(BlackSwanSisterAnim_t113036806, ___script_9)); }
-	inline BlackSwanSister_t1068429612 * get_script_9() const { return ___script_9; }
-	inline BlackSwanSister_t1068429612 ** get_address_of_script_9() { return &___script_9; }
-	inline void set_script_9(BlackSwanSister_t1068429612 * value)
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CREATUREANIMEVENTCALLED_T2935559367_H
+#ifndef BLACKCORPSANIM_T2565058798_H
+#define BLACKCORPSANIM_T2565058798_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// BlackCorpsAnim
+struct  BlackCorpsAnim_t2565058798  : public CreatureAnimEventCalled_t2935559367
+{
+public:
+	// SpineOptimizerModule BlackCorpsAnim::_module
+	SpineOptimizerModule_t443362725 * ____module_9;
+	// AnimatorEventHandler BlackCorpsAnim::_eventHandler
+	AnimatorEventHandler_t1637064700 * ____eventHandler_10;
+	// BlackCorps BlackCorpsAnim::<Script>k__BackingField
+	BlackCorps_t1038473782 * ___U3CScriptU3Ek__BackingField_11;
+	// System.Int32 BlackCorpsAnim::<CurrentAttackType>k__BackingField
+	int32_t ___U3CCurrentAttackTypeU3Ek__BackingField_12;
+
+public:
+	inline static int32_t get_offset_of__module_9() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ____module_9)); }
+	inline SpineOptimizerModule_t443362725 * get__module_9() const { return ____module_9; }
+	inline SpineOptimizerModule_t443362725 ** get_address_of__module_9() { return &____module_9; }
+	inline void set__module_9(SpineOptimizerModule_t443362725 * value)
 	{
-		___script_9 = value;
-		Il2CppCodeGenWriteBarrier((&___script_9), value);
+		____module_9 = value;
+		Il2CppCodeGenWriteBarrier((&____module_9), value);
 	}
 
-	inline static int32_t get_offset_of__module_10() { return static_cast<int32_t>(offsetof(BlackSwanSisterAnim_t113036806, ____module_10)); }
-	inline SpineOptimizerModule_t443362725 * get__module_10() const { return ____module_10; }
-	inline SpineOptimizerModule_t443362725 ** get_address_of__module_10() { return &____module_10; }
-	inline void set__module_10(SpineOptimizerModule_t443362725 * value)
+	inline static int32_t get_offset_of__eventHandler_10() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ____eventHandler_10)); }
+	inline AnimatorEventHandler_t1637064700 * get__eventHandler_10() const { return ____eventHandler_10; }
+	inline AnimatorEventHandler_t1637064700 ** get_address_of__eventHandler_10() { return &____eventHandler_10; }
+	inline void set__eventHandler_10(AnimatorEventHandler_t1637064700 * value)
 	{
-		____module_10 = value;
-		Il2CppCodeGenWriteBarrier((&____module_10), value);
+		____eventHandler_10 = value;
+		Il2CppCodeGenWriteBarrier((&____eventHandler_10), value);
+	}
+
+	inline static int32_t get_offset_of_U3CScriptU3Ek__BackingField_11() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ___U3CScriptU3Ek__BackingField_11)); }
+	inline BlackCorps_t1038473782 * get_U3CScriptU3Ek__BackingField_11() const { return ___U3CScriptU3Ek__BackingField_11; }
+	inline BlackCorps_t1038473782 ** get_address_of_U3CScriptU3Ek__BackingField_11() { return &___U3CScriptU3Ek__BackingField_11; }
+	inline void set_U3CScriptU3Ek__BackingField_11(BlackCorps_t1038473782 * value)
+	{
+		___U3CScriptU3Ek__BackingField_11 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CScriptU3Ek__BackingField_11), value);
+	}
+
+	inline static int32_t get_offset_of_U3CCurrentAttackTypeU3Ek__BackingField_12() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ___U3CCurrentAttackTypeU3Ek__BackingField_12)); }
+	inline int32_t get_U3CCurrentAttackTypeU3Ek__BackingField_12() const { return ___U3CCurrentAttackTypeU3Ek__BackingField_12; }
+	inline int32_t* get_address_of_U3CCurrentAttackTypeU3Ek__BackingField_12() { return &___U3CCurrentAttackTypeU3Ek__BackingField_12; }
+	inline void set_U3CCurrentAttackTypeU3Ek__BackingField_12(int32_t value)
+	{
+		___U3CCurrentAttackTypeU3Ek__BackingField_12 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BLACKSWANSISTERANIM_T113036806_H
+#endif // BLACKCORPSANIM_T2565058798_H
 #ifndef BLOODBATHANIM_T4021178804_H
 #define BLOODBATHANIM_T4021178804_H
 #ifdef __clang__
@@ -9020,98 +9221,79 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLOODBATHANIM_T4021178804_H
-#ifndef BIGBIRDANIM_T2245120220_H
-#define BIGBIRDANIM_T2245120220_H
+#ifndef BLUESTARANIM_T328616281_H
+#define BLUESTARANIM_T328616281_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// BigBirdAnim
-struct  BigBirdAnim_t2245120220  : public CreatureAnimEventCalled_t2935559367
+// BlueStarAnim
+struct  BlueStarAnim_t328616281  : public CreatureAnimEventCalled_t2935559367
 {
 public:
-	// BigBird BigBirdAnim::script
-	BigBird_t3712234294 * ___script_9;
+	// UnityEngine.Vector3 BlueStarAnim::initialScale
+	Vector3_t3722313464  ___initialScale_10;
+	// BlueStar BlueStarAnim::_script
+	BlueStar_t1520383455 * ____script_11;
+	// AnimatorEventHandler BlueStarAnim::_eventHandler
+	AnimatorEventHandler_t1637064700 * ____eventHandler_12;
+	// BlueStarAttackEffect BlueStarAnim::_effectScript
+	BlueStarAttackEffect_t1833845078 * ____effectScript_13;
+	// SpineOptimizerModule BlueStarAnim::_module
+	SpineOptimizerModule_t443362725 * ____module_14;
 
 public:
-	inline static int32_t get_offset_of_script_9() { return static_cast<int32_t>(offsetof(BigBirdAnim_t2245120220, ___script_9)); }
-	inline BigBird_t3712234294 * get_script_9() const { return ___script_9; }
-	inline BigBird_t3712234294 ** get_address_of_script_9() { return &___script_9; }
-	inline void set_script_9(BigBird_t3712234294 * value)
+	inline static int32_t get_offset_of_initialScale_10() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ___initialScale_10)); }
+	inline Vector3_t3722313464  get_initialScale_10() const { return ___initialScale_10; }
+	inline Vector3_t3722313464 * get_address_of_initialScale_10() { return &___initialScale_10; }
+	inline void set_initialScale_10(Vector3_t3722313464  value)
 	{
-		___script_9 = value;
-		Il2CppCodeGenWriteBarrier((&___script_9), value);
+		___initialScale_10 = value;
+	}
+
+	inline static int32_t get_offset_of__script_11() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____script_11)); }
+	inline BlueStar_t1520383455 * get__script_11() const { return ____script_11; }
+	inline BlueStar_t1520383455 ** get_address_of__script_11() { return &____script_11; }
+	inline void set__script_11(BlueStar_t1520383455 * value)
+	{
+		____script_11 = value;
+		Il2CppCodeGenWriteBarrier((&____script_11), value);
+	}
+
+	inline static int32_t get_offset_of__eventHandler_12() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____eventHandler_12)); }
+	inline AnimatorEventHandler_t1637064700 * get__eventHandler_12() const { return ____eventHandler_12; }
+	inline AnimatorEventHandler_t1637064700 ** get_address_of__eventHandler_12() { return &____eventHandler_12; }
+	inline void set__eventHandler_12(AnimatorEventHandler_t1637064700 * value)
+	{
+		____eventHandler_12 = value;
+		Il2CppCodeGenWriteBarrier((&____eventHandler_12), value);
+	}
+
+	inline static int32_t get_offset_of__effectScript_13() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____effectScript_13)); }
+	inline BlueStarAttackEffect_t1833845078 * get__effectScript_13() const { return ____effectScript_13; }
+	inline BlueStarAttackEffect_t1833845078 ** get_address_of__effectScript_13() { return &____effectScript_13; }
+	inline void set__effectScript_13(BlueStarAttackEffect_t1833845078 * value)
+	{
+		____effectScript_13 = value;
+		Il2CppCodeGenWriteBarrier((&____effectScript_13), value);
+	}
+
+	inline static int32_t get_offset_of__module_14() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____module_14)); }
+	inline SpineOptimizerModule_t443362725 * get__module_14() const { return ____module_14; }
+	inline SpineOptimizerModule_t443362725 ** get_address_of__module_14() { return &____module_14; }
+	inline void set__module_14(SpineOptimizerModule_t443362725 * value)
+	{
+		____module_14 = value;
+		Il2CppCodeGenWriteBarrier((&____module_14), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // BIGBIRDANIM_T2245120220_H
-#ifndef BLACKCORPSANIM_T2565058798_H
-#define BLACKCORPSANIM_T2565058798_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlackCorpsAnim
-struct  BlackCorpsAnim_t2565058798  : public CreatureAnimEventCalled_t2935559367
-{
-public:
-	// SpineOptimizerModule BlackCorpsAnim::_module
-	SpineOptimizerModule_t443362725 * ____module_9;
-	// AnimatorEventHandler BlackCorpsAnim::_eventHandler
-	AnimatorEventHandler_t1637064700 * ____eventHandler_10;
-	// BlackCorps BlackCorpsAnim::<Script>k__BackingField
-	BlackCorps_t1038473782 * ___U3CScriptU3Ek__BackingField_11;
-	// System.Int32 BlackCorpsAnim::<CurrentAttackType>k__BackingField
-	int32_t ___U3CCurrentAttackTypeU3Ek__BackingField_12;
-
-public:
-	inline static int32_t get_offset_of__module_9() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ____module_9)); }
-	inline SpineOptimizerModule_t443362725 * get__module_9() const { return ____module_9; }
-	inline SpineOptimizerModule_t443362725 ** get_address_of__module_9() { return &____module_9; }
-	inline void set__module_9(SpineOptimizerModule_t443362725 * value)
-	{
-		____module_9 = value;
-		Il2CppCodeGenWriteBarrier((&____module_9), value);
-	}
-
-	inline static int32_t get_offset_of__eventHandler_10() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ____eventHandler_10)); }
-	inline AnimatorEventHandler_t1637064700 * get__eventHandler_10() const { return ____eventHandler_10; }
-	inline AnimatorEventHandler_t1637064700 ** get_address_of__eventHandler_10() { return &____eventHandler_10; }
-	inline void set__eventHandler_10(AnimatorEventHandler_t1637064700 * value)
-	{
-		____eventHandler_10 = value;
-		Il2CppCodeGenWriteBarrier((&____eventHandler_10), value);
-	}
-
-	inline static int32_t get_offset_of_U3CScriptU3Ek__BackingField_11() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ___U3CScriptU3Ek__BackingField_11)); }
-	inline BlackCorps_t1038473782 * get_U3CScriptU3Ek__BackingField_11() const { return ___U3CScriptU3Ek__BackingField_11; }
-	inline BlackCorps_t1038473782 ** get_address_of_U3CScriptU3Ek__BackingField_11() { return &___U3CScriptU3Ek__BackingField_11; }
-	inline void set_U3CScriptU3Ek__BackingField_11(BlackCorps_t1038473782 * value)
-	{
-		___U3CScriptU3Ek__BackingField_11 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CScriptU3Ek__BackingField_11), value);
-	}
-
-	inline static int32_t get_offset_of_U3CCurrentAttackTypeU3Ek__BackingField_12() { return static_cast<int32_t>(offsetof(BlackCorpsAnim_t2565058798, ___U3CCurrentAttackTypeU3Ek__BackingField_12)); }
-	inline int32_t get_U3CCurrentAttackTypeU3Ek__BackingField_12() const { return ___U3CCurrentAttackTypeU3Ek__BackingField_12; }
-	inline int32_t* get_address_of_U3CCurrentAttackTypeU3Ek__BackingField_12() { return &___U3CCurrentAttackTypeU3Ek__BackingField_12; }
-	inline void set_U3CCurrentAttackTypeU3Ek__BackingField_12(int32_t value)
-	{
-		___U3CCurrentAttackTypeU3Ek__BackingField_12 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLACKCORPSANIM_T2565058798_H
+#endif // BLUESTARANIM_T328616281_H
 #ifndef BINAHCOREANIM_T3147198856_H
 #define BINAHCOREANIM_T3147198856_H
 #ifdef __clang__
@@ -9547,79 +9729,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLOODYTREEANIM_T1812867026_H
-#ifndef BLUESTARANIM_T328616281_H
-#define BLUESTARANIM_T328616281_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// BlueStarAnim
-struct  BlueStarAnim_t328616281  : public CreatureAnimEventCalled_t2935559367
-{
-public:
-	// UnityEngine.Vector3 BlueStarAnim::initialScale
-	Vector3_t3722313464  ___initialScale_10;
-	// BlueStar BlueStarAnim::_script
-	BlueStar_t1520383455 * ____script_11;
-	// AnimatorEventHandler BlueStarAnim::_eventHandler
-	AnimatorEventHandler_t1637064700 * ____eventHandler_12;
-	// BlueStarAttackEffect BlueStarAnim::_effectScript
-	BlueStarAttackEffect_t1833845078 * ____effectScript_13;
-	// SpineOptimizerModule BlueStarAnim::_module
-	SpineOptimizerModule_t443362725 * ____module_14;
-
-public:
-	inline static int32_t get_offset_of_initialScale_10() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ___initialScale_10)); }
-	inline Vector3_t3722313464  get_initialScale_10() const { return ___initialScale_10; }
-	inline Vector3_t3722313464 * get_address_of_initialScale_10() { return &___initialScale_10; }
-	inline void set_initialScale_10(Vector3_t3722313464  value)
-	{
-		___initialScale_10 = value;
-	}
-
-	inline static int32_t get_offset_of__script_11() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____script_11)); }
-	inline BlueStar_t1520383455 * get__script_11() const { return ____script_11; }
-	inline BlueStar_t1520383455 ** get_address_of__script_11() { return &____script_11; }
-	inline void set__script_11(BlueStar_t1520383455 * value)
-	{
-		____script_11 = value;
-		Il2CppCodeGenWriteBarrier((&____script_11), value);
-	}
-
-	inline static int32_t get_offset_of__eventHandler_12() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____eventHandler_12)); }
-	inline AnimatorEventHandler_t1637064700 * get__eventHandler_12() const { return ____eventHandler_12; }
-	inline AnimatorEventHandler_t1637064700 ** get_address_of__eventHandler_12() { return &____eventHandler_12; }
-	inline void set__eventHandler_12(AnimatorEventHandler_t1637064700 * value)
-	{
-		____eventHandler_12 = value;
-		Il2CppCodeGenWriteBarrier((&____eventHandler_12), value);
-	}
-
-	inline static int32_t get_offset_of__effectScript_13() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____effectScript_13)); }
-	inline BlueStarAttackEffect_t1833845078 * get__effectScript_13() const { return ____effectScript_13; }
-	inline BlueStarAttackEffect_t1833845078 ** get_address_of__effectScript_13() { return &____effectScript_13; }
-	inline void set__effectScript_13(BlueStarAttackEffect_t1833845078 * value)
-	{
-		____effectScript_13 = value;
-		Il2CppCodeGenWriteBarrier((&____effectScript_13), value);
-	}
-
-	inline static int32_t get_offset_of__module_14() { return static_cast<int32_t>(offsetof(BlueStarAnim_t328616281, ____module_14)); }
-	inline SpineOptimizerModule_t443362725 * get__module_14() const { return ____module_14; }
-	inline SpineOptimizerModule_t443362725 ** get_address_of__module_14() { return &____module_14; }
-	inline void set__module_14(SpineOptimizerModule_t443362725 * value)
-	{
-		____module_14 = value;
-		Il2CppCodeGenWriteBarrier((&____module_14), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUESTARANIM_T328616281_H
 
 
 
@@ -9630,114 +9739,35 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4400 = { sizeof (BigBird_t3712234294), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4400[46] = 
-{
-	0,
-	0,
-	BigBird_t3712234294::get_offset_of_escapeCoolTimer_13(),
-	0,
-	0,
-	BigBird_t3712234294::get_offset_of_attractCoolTimer_16(),
-	0,
-	0,
-	0,
-	0,
-	BigBird_t3712234294::get_offset_of_motionDelayTimer_21(),
-	0,
-	0,
-	BigBird_t3712234294::get_offset_of_attractTimer_24(),
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	BigBird_t3712234294::get_offset_of_deadScene_41(),
-	BigBird_t3712234294::get_offset_of_attracted_42(),
-	BigBird_t3712234294::get_offset_of_alive_43(),
-	BigBird_t3712234294::get_offset_of_dead_44(),
-	BigBird_t3712234294::get_offset_of_moveTarget_45(),
-	BigBird_t3712234294::get_offset_of_prevSefira_46(),
-	BigBird_t3712234294::get_offset_of_oldPassage_47(),
-	BigBird_t3712234294::get_offset_of_sensing_48(),
-	BigBird_t3712234294::get_offset_of_cameraSensored_49(),
-	BigBird_t3712234294::get_offset_of_deadCnt_50(),
-	BigBird_t3712234294::get_offset_of_observingDanger_51(),
-	BigBird_t3712234294::get_offset_of_boss_activated_52(),
-	BigBird_t3712234294::get_offset_of_boss_53(),
-	BigBird_t3712234294::get_offset_of__otherBirdState_54(),
-	BigBird_t3712234294::get_offset_of__animScript_55(),
-	BigBird_t3712234294::get_offset_of_U3CInstanceIDU3Ek__BackingField_56(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4401 = { sizeof (BigBirdAnim_t2245120220), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4401[1] = 
-{
-	BigBirdAnim_t2245120220::get_offset_of_script_9(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4402 = { sizeof (BigBirdAttractBuf_t2202602700), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4402[12] = 
-{
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	BigBirdAttractBuf_t2202602700::get_offset_of_elapsedTime_12(),
-	BigBirdAttractBuf_t2202602700::get_offset_of__phase_13(),
-	BigBirdAttractBuf_t2202602700::get_offset_of_worker_14(),
-	BigBirdAttractBuf_t2202602700::get_offset_of_script_15(),
-	BigBirdAttractBuf_t2202602700::get_offset_of_effect_16(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4403 = { sizeof (Phase_t169838157)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4403[4] = 
-{
-	Phase_t169838157::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4404 = { sizeof (BigBirdWeapon_t1283521219), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4404[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4400 = { sizeof (BigBirdWeapon_t1283521219), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4400[1] = 
 {
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4405 = { sizeof (BigBirdWeaponDebuf_t1997787163), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4405[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4401 = { sizeof (BigBirdWeaponDebuf_t1997787163), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4401[3] = 
 {
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4406 = { sizeof (BigTreeSap_t343212000), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4406[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4402 = { sizeof (BigTreeSap_t343212000), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4402[3] = 
 {
 	BigTreeSap_t343212000::get_offset_of_explodeProb_11(),
 	BigTreeSap_t343212000::get_offset_of_explodeLevel_12(),
 	BigTreeSap_t343212000::get_offset_of_anim_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4407 = { sizeof (BigTreeSapBuf_t1566896030), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4407[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4403 = { sizeof (BigTreeSapBuf_t1566896030), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4403[4] = 
 {
 	BigTreeSapBuf_t1566896030::get_offset_of__remainExplodeTime_5(),
 	0,
 	BigTreeSapBuf_t1566896030::get_offset_of__range_7(),
 	BigTreeSapBuf_t1566896030::get_offset_of__explosionTimer_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4408 = { sizeof (BigTreeSapHeal_t3616289785), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4408[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4404 = { sizeof (BigTreeSapHeal_t3616289785), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4404[6] = 
 {
 	BigTreeSapHeal_t3616289785::get_offset_of_healTickTimer_5(),
 	0,
@@ -9746,23 +9776,23 @@ extern const int32_t g_FieldOffsetTable4408[6] =
 	0,
 	BigTreeSapHeal_t3616289785::get_offset_of_worker_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4409 = { sizeof (BinahAction_t2190854253), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4409[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4405 = { sizeof (BinahAction_t2190854253), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4405[3] = 
 {
 	BinahAction_t2190854253::get_offset_of_binah_0(),
 	BinahAction_t2190854253::get_offset_of_actionState_1(),
 	BinahAction_t2190854253::get_offset_of__interrupt_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4410 = { sizeof (BinahActionState_t2598806875)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4410[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4406 = { sizeof (BinahActionState_t2598806875)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4406[4] = 
 {
 	BinahActionState_t2598806875::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4411 = { sizeof (BinahAttackType_t4230434193)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4411[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4407 = { sizeof (BinahAttackType_t4230434193)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4407[5] = 
 {
 	BinahAttackType_t4230434193::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9770,22 +9800,22 @@ extern const int32_t g_FieldOffsetTable4411[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4412 = { sizeof (BinahBlackFogBuf_t861777909), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4412[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4408 = { sizeof (BinahBlackFogBuf_t861777909), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4408[2] = 
 {
 	BinahBlackFogBuf_t861777909::get_offset_of_binah_5(),
 	BinahBlackFogBuf_t861777909::get_offset_of_timer_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4413 = { sizeof (BinahCollision_t4078709713), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4413[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4409 = { sizeof (BinahCollision_t4078709713), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4409[4] = 
 {
 	BinahCollision_t4078709713::get_offset_of_collider_2(),
 	BinahCollision_t4078709713::get_offset_of_targetCreature_3(),
 	BinahCollision_t4078709713::get_offset_of__binah_4(),
 	BinahCollision_t4078709713::get_offset_of__isActivated_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4414 = { sizeof (BinahDefenseType_t736151217)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4414[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4410 = { sizeof (BinahDefenseType_t736151217)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4410[5] = 
 {
 	BinahDefenseType_t736151217::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9793,16 +9823,16 @@ extern const int32_t g_FieldOffsetTable4414[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4415 = { sizeof (BinahIdle_t2238734393), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4415[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4411 = { sizeof (BinahIdle_t2238734393), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4411[3] = 
 {
 	BinahIdle_t2238734393::get_offset_of__dutrationTimer_3(),
 	BinahIdle_t2238734393::get_offset_of_time_4(),
 	BinahIdle_t2238734393::get_offset_of_isGroggy_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4416 = { sizeof (BinahIntegerAction_t1073983297), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4417 = { sizeof (BinahJusticeDebuf_t1454140826), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4417[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4412 = { sizeof (BinahIntegerAction_t1073983297), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4413 = { sizeof (BinahJusticeDebuf_t1454140826), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4413[6] = 
 {
 	0,
 	BinahJusticeDebuf_t1454140826::get_offset_of__reduceVal_13(),
@@ -9811,13 +9841,13 @@ extern const int32_t g_FieldOffsetTable4417[6] =
 	0,
 	BinahJusticeDebuf_t1454140826::get_offset_of_attach_17(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4418 = { sizeof (BinahMovement_t4058063939), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4418[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4414 = { sizeof (BinahMovement_t4058063939), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4414[1] = 
 {
 	BinahMovement_t4058063939::get_offset_of__durationTimer_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4419 = { sizeof (BinahMovementModule_t384025908), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4419[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4415 = { sizeof (BinahMovementModule_t384025908), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4415[8] = 
 {
 	BinahMovementModule_t384025908::get_offset_of__currentMoveState_0(),
 	BinahMovementModule_t384025908::get_offset_of_movableSefira_1(),
@@ -9828,22 +9858,22 @@ extern const int32_t g_FieldOffsetTable4419[8] =
 	BinahMovementModule_t384025908::get_offset_of__stopMovetimer_6(),
 	BinahMovementModule_t384025908::get_offset_of__actionBlocked_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4420 = { sizeof (BinahMoveState_t431957044)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4420[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4416 = { sizeof (BinahMoveState_t431957044)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4416[4] = 
 {
 	BinahMoveState_t431957044::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4421 = { sizeof (BinahNearSlowBuf_t1306806773), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4421[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4417 = { sizeof (BinahNearSlowBuf_t1306806773), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4417[2] = 
 {
 	BinahNearSlowBuf_t1306806773::get_offset_of_speedDownValue_5(),
 	BinahNearSlowBuf_t1306806773::get_offset_of_defaultMax_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4422 = { sizeof (BinahOverload_t388366501), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4422[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4418 = { sizeof (BinahOverload_t388366501), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4418[10] = 
 {
 	BinahOverload_t388366501::get_offset_of_ProbReductionValue_0(),
 	BinahOverload_t388366501::get_offset_of_TimeLimit_1(),
@@ -9856,13 +9886,13 @@ extern const int32_t g_FieldOffsetTable4422[10] =
 	BinahOverload_t388366501::get_offset_of_binah_8(),
 	BinahOverload_t388366501::get_offset_of__defenseInfo_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4423 = { sizeof (BinahOverloadActivation_t3568940964), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4423[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4419 = { sizeof (BinahOverloadActivation_t3568940964), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4419[1] = 
 {
 	BinahOverloadActivation_t3568940964::get_offset_of_overloads_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4424 = { sizeof (BinahOverloadClearParticle_t1085989716), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4424[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4420 = { sizeof (BinahOverloadClearParticle_t1085989716), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4420[7] = 
 {
 	BinahOverloadClearParticle_t1085989716::get_offset_of_binah_2(),
 	BinahOverloadClearParticle_t1085989716::get_offset_of_startPosition_3(),
@@ -9872,8 +9902,8 @@ extern const int32_t g_FieldOffsetTable4424[7] =
 	BinahOverloadClearParticle_t1085989716::get_offset_of__lifeTime_7(),
 	BinahOverloadClearParticle_t1085989716::get_offset_of_overloadType_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4425 = { sizeof (BinahOverloadUI_t1401844998), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4425[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4421 = { sizeof (BinahOverloadUI_t1401844998), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4421[10] = 
 {
 	BinahOverloadUI_t1401844998::get_offset_of__isActivated_2(),
 	BinahOverloadUI_t1401844998::get_offset_of_timerBar_3(),
@@ -9886,8 +9916,8 @@ extern const int32_t g_FieldOffsetTable4425[10] =
 	BinahOverloadUI_t1401844998::get_offset_of_originPositionY_10(),
 	BinahOverloadUI_t1401844998::get_offset_of_yAdder_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4426 = { sizeof (BinahPhase_t2331766339)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4426[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4422 = { sizeof (BinahPhase_t2331766339)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4422[6] = 
 {
 	BinahPhase_t2331766339::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9896,16 +9926,16 @@ extern const int32_t g_FieldOffsetTable4426[6] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4427 = { sizeof (BinahPhaseExecution_t3488992083), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4427[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4423 = { sizeof (BinahPhaseExecution_t3488992083), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4423[4] = 
 {
 	BinahPhaseExecution_t3488992083::get_offset_of_binah_0(),
 	BinahPhaseExecution_t3488992083::get_offset_of_overloadActivated_1(),
 	BinahPhaseExecution_t3488992083::get_offset_of_overloadTimer_2(),
 	BinahPhaseExecution_t3488992083::get_offset_of_overloadTypeList_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4428 = { sizeof (BinahProjectile_t1425247713), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4428[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4424 = { sizeof (BinahProjectile_t1425247713), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4424[19] = 
 {
 	BinahProjectile_t1425247713::get_offset_of_collider_2(),
 	BinahProjectile_t1425247713::get_offset_of_speed_3(),
@@ -9927,24 +9957,24 @@ extern const int32_t g_FieldOffsetTable4428[19] =
 	BinahProjectile_t1425247713::get_offset_of_entered_19(),
 	BinahProjectile_t1425247713::get_offset_of__speedCruve_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4429 = { sizeof (BinahProjectileType_t4294231154)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4429[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4425 = { sizeof (BinahProjectileType_t4294231154)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4425[4] = 
 {
 	BinahProjectileType_t4294231154::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4430 = { sizeof (BinahRecoverBuf_t412608197), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4430[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4426 = { sizeof (BinahRecoverBuf_t412608197), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4426[4] = 
 {
 	0,
 	0,
 	BinahRecoverBuf_t412608197::get_offset_of_binah_7(),
 	BinahRecoverBuf_t412608197::get_offset_of__recoverTimer_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4431 = { sizeof (BinahSoundInfo_t2596872778), -1, sizeof(BinahSoundInfo_t2596872778_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4431[16] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4427 = { sizeof (BinahSoundInfo_t2596872778), -1, sizeof(BinahSoundInfo_t2596872778_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4427[16] = 
 {
 	BinahSoundInfo_t2596872778_StaticFields::get_offset_of_BinahSoundFolder_0(),
 	BinahSoundInfo_t2596872778_StaticFields::get_offset_of_DefaultOverload_1(),
@@ -9963,8 +9993,8 @@ extern const int32_t g_FieldOffsetTable4431[16] =
 	BinahSoundInfo_t2596872778_StaticFields::get_offset_of_Attack4_LastColumn_14(),
 	BinahSoundInfo_t2596872778_StaticFields::get_offset_of_Attack4_CastEnd_15(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4432 = { sizeof (BinahStaticData_t3521844169), -1, sizeof(BinahStaticData_t3521844169_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4432[29] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4428 = { sizeof (BinahStaticData_t3521844169), -1, sizeof(BinahStaticData_t3521844169_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4428[29] = 
 {
 	BinahStaticData_t3521844169_StaticFields::get_offset_of_RwbpRange_0(),
 	BinahStaticData_t3521844169_StaticFields::get_offset_of_First_Blade_R_1(),
@@ -9996,45 +10026,45 @@ extern const int32_t g_FieldOffsetTable4432[29] =
 	BinahStaticData_t3521844169_StaticFields::get_offset_of_ID_ColumnOverload_Success_27(),
 	BinahStaticData_t3521844169_StaticFields::get_offset_of_ID_ColumnOverload_Failure_28(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4433 = { sizeof (BinahVoidAction_t3527048283), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4434 = { sizeof (BinahWaveDebuf_t3864703214), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4434[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4429 = { sizeof (BinahVoidAction_t3527048283), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4430 = { sizeof (BinahWaveDebuf_t3864703214), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4430[1] = 
 {
 	BinahWaveDebuf_t3864703214::get_offset_of_speedMult_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4435 = { sizeof (BlackFogOverload_t1151750831), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4435[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4431 = { sizeof (BlackFogOverload_t1151750831), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4431[1] = 
 {
 	BlackFogOverload_t1151750831::get_offset_of_blackFogBuf_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4436 = { sizeof (BlackThron_t661690219), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4436[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4432 = { sizeof (BlackThron_t661690219), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4432[3] = 
 {
 	BlackThron_t661690219::get_offset_of_maxCount_3(),
 	BlackThron_t661690219::get_offset_of_blackThorn_4(),
 	BlackThron_t661690219::get_offset_of_invokeOverload_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4437 = { sizeof (BladeWaveThrow_t2530535817), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4437[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4433 = { sizeof (BladeWaveThrow_t2530535817), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4433[2] = 
 {
 	BladeWaveThrow_t2530535817::get_offset_of_type_3(),
 	BladeWaveThrow_t2530535817::get_offset_of_DamageInfo_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4438 = { sizeof (ColumnOverload_t4253983356), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4438[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4434 = { sizeof (ColumnOverload_t4253983356), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4434[1] = 
 {
 	ColumnOverload_t4253983356::get_offset_of_action_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4439 = { sizeof (ColumnThrow_t3880709554), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4439[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4435 = { sizeof (ColumnThrow_t3880709554), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4435[4] = 
 {
 	ColumnThrow_t3880709554::get_offset_of_Column_3(),
 	ColumnThrow_t3880709554::get_offset_of_columnGenPos_4(),
 	ColumnThrow_t3880709554::get_offset_of_type_5(),
 	ColumnThrow_t3880709554::get_offset_of_damageInfo_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4440 = { sizeof (EightColumn_t2767995227), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4440[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4436 = { sizeof (EightColumn_t2767995227), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4436[9] = 
 {
 	EightColumn_t2767995227::get_offset_of_columnOverload_3(),
 	EightColumn_t2767995227::get_offset_of_generationTimer_4(),
@@ -10046,23 +10076,23 @@ extern const int32_t g_FieldOffsetTable4440[9] =
 	EightColumn_t2767995227::get_offset_of_Loop_10(),
 	EightColumn_t2767995227::get_offset_of_columns_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4441 = { sizeof (FirstPhase_t2286380295), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4442 = { sizeof (GoldenOverload_t59528272), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4443 = { sizeof (SecondPhase_t2116464132), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4444 = { sizeof (ThirdPhase_t992721048), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4444[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4437 = { sizeof (FirstPhase_t2286380295), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4438 = { sizeof (GoldenOverload_t59528272), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4439 = { sizeof (SecondPhase_t2116464132), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4440 = { sizeof (ThirdPhase_t992721048), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4440[3] = 
 {
 	0,
 	ThirdPhase_t992721048::get_offset_of_columnTimer_5(),
 	ThirdPhase_t992721048::get_offset_of_forcelyTimer_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4445 = { sizeof (WaveOverload_t1964715260), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4445[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4441 = { sizeof (WaveOverload_t1964715260), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4441[1] = 
 {
 	WaveOverload_t1964715260::get_offset_of_dictionary_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4446 = { sizeof (BinahBossBase_t2872858907), -1, sizeof(BinahBossBase_t2872858907_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4446[28] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4442 = { sizeof (BinahBossBase_t2872858907), -1, sizeof(BinahBossBase_t2872858907_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4442[28] = 
 {
 	0,
 	0,
@@ -10093,30 +10123,30 @@ extern const int32_t g_FieldOffsetTable4446[28] =
 	BinahBossBase_t2872858907::get_offset_of__effect_start_42(),
 	BinahBossBase_t2872858907::get_offset_of__effect_end_43(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4447 = { sizeof (BlizzardValue_t527079509), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4447[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4443 = { sizeof (BlizzardValue_t527079509), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4443[3] = 
 {
 	BlizzardValue_t527079509::get_offset_of_speed_0(),
 	BlizzardValue_t527079509::get_offset_of_size_1(),
 	BlizzardValue_t527079509::get_offset_of_fade_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4448 = { sizeof (BlizzardEffect_t4192872888)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4448[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4444 = { sizeof (BlizzardEffect_t4192872888)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4444[4] = 
 {
 	BlizzardEffect_t4192872888::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4449 = { sizeof (MovieValue_t4147784727), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4449[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4445 = { sizeof (MovieValue_t4147784727), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4445[3] = 
 {
 	MovieValue_t4147784727::get_offset_of_fps_0(),
 	MovieValue_t4147784727::get_offset_of_contrast_1(),
 	MovieValue_t4147784727::get_offset_of_burn_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4450 = { sizeof (BinahCoreAnim_t3147198856), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4450[32] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4446 = { sizeof (BinahCoreAnim_t3147198856), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4446[32] = 
 {
 	BinahCoreAnim_t3147198856::get_offset_of__script_9(),
 	BinahCoreAnim_t3147198856::get_offset_of_debugText_10(),
@@ -10151,8 +10181,8 @@ extern const int32_t g_FieldOffsetTable4450[32] =
 	BinahCoreAnim_t3147198856::get_offset_of_ColumnCurve_39(),
 	BinahCoreAnim_t3147198856::get_offset_of_effectInitLossy_40(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4451 = { sizeof (BinahCoreScript_t303627652), -1, sizeof(BinahCoreScript_t303627652_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4451[21] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4447 = { sizeof (BinahCoreScript_t303627652), -1, sizeof(BinahCoreScript_t303627652_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4447[21] = 
 {
 	BinahCoreScript_t303627652_StaticFields::get_offset_of_ArriveStopTime_11(),
 	0,
@@ -10176,13 +10206,13 @@ extern const int32_t g_FieldOffsetTable4451[21] =
 	BinahCoreScript_t303627652::get_offset_of_overloads_30(),
 	BinahCoreScript_t303627652::get_offset_of__isHalted_31(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4452 = { sizeof (BinahOverloadAlarm_t403233311), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4452[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4448 = { sizeof (BinahOverloadAlarm_t403233311), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4448[1] = 
 {
 	BinahOverloadAlarm_t403233311::get_offset_of_imgs_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4453 = { sizeof (BinahWave_t1501099813), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4453[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4449 = { sizeof (BinahWave_t1501099813), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4449[8] = 
 {
 	BinahWave_t1501099813::get_offset_of_model_2(),
 	BinahWave_t1501099813::get_offset_of_unit_3(),
@@ -10193,17 +10223,17 @@ extern const int32_t g_FieldOffsetTable4453[8] =
 	BinahWave_t1501099813::get_offset_of__timer_8(),
 	BinahWave_t1501099813::get_offset_of_MinMax_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4454 = { sizeof (BirdCreatureBase_t1539999157), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4455 = { sizeof (BirdEggAnim_t2721551091), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4456 = { sizeof (BirdEggObject_t2527542168), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4456[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4450 = { sizeof (BirdCreatureBase_t1539999157), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4451 = { sizeof (BirdEggAnim_t2721551091), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4452 = { sizeof (BirdEggObject_t2527542168), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4452[3] = 
 {
 	BirdEggObject_t2527542168::get_offset_of_halfActivated_7(),
 	BirdEggObject_t2527542168::get_offset_of_breakDown_8(),
 	BirdEggObject_t2527542168::get_offset_of_sep_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4457 = { sizeof (BlackCorps_t1038473782), -1, sizeof(BlackCorps_t1038473782_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4457[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4453 = { sizeof (BlackCorps_t1038473782), -1, sizeof(BlackCorps_t1038473782_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4453[15] = 
 {
 	0,
 	BlackCorps_t1038473782_StaticFields::get_offset_of__attackCooltime_12(),
@@ -10221,16 +10251,16 @@ extern const int32_t g_FieldOffsetTable4457[15] =
 	BlackCorps_t1038473782::get_offset_of_U3CPinkCorpsU3Ek__BackingField_24(),
 	BlackCorps_t1038473782::get_offset_of_U3CAnimScriptU3Ek__BackingField_25(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4458 = { sizeof (BlackCorpsAnim_t2565058798), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4458[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4454 = { sizeof (BlackCorpsAnim_t2565058798), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4454[4] = 
 {
 	BlackCorpsAnim_t2565058798::get_offset_of__module_9(),
 	BlackCorpsAnim_t2565058798::get_offset_of__eventHandler_10(),
 	BlackCorpsAnim_t2565058798::get_offset_of_U3CScriptU3Ek__BackingField_11(),
 	BlackCorpsAnim_t2565058798::get_offset_of_U3CCurrentAttackTypeU3Ek__BackingField_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4459 = { sizeof (BlackCorpAnimKey_t1764443065)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4459[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4455 = { sizeof (BlackCorpAnimKey_t1764443065)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4455[8] = 
 {
 	BlackCorpAnimKey_t1764443065::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -10241,19 +10271,19 @@ extern const int32_t g_FieldOffsetTable4459[8] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4460 = { sizeof (BlackLoveBuf_t2230612843), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4460[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4456 = { sizeof (BlackLoveBuf_t2230612843), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4456[2] = 
 {
 	BlackLoveBuf_t2230612843::get_offset_of_renderer_5(),
 	BlackLoveBuf_t2230612843::get_offset_of_actor_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4461 = { sizeof (BlackLovePanicReady_t942319231), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4461[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4457 = { sizeof (BlackLovePanicReady_t942319231), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4457[1] = 
 {
 	BlackLovePanicReady_t942319231::get_offset_of_buf_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4462 = { sizeof (BlackSwan_t2528739092), -1, sizeof(BlackSwan_t2528739092_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4462[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4458 = { sizeof (BlackSwan_t2528739092), -1, sizeof(BlackSwan_t2528739092_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4458[12] = 
 {
 	BlackSwan_t2528739092_StaticFields::get_offset_of_brothersDefault_11(),
 	0,
@@ -10268,8 +10298,8 @@ extern const int32_t g_FieldOffsetTable4462[12] =
 	BlackSwan_t2528739092::get_offset_of_creatureEscapeCurrent_21(),
 	BlackSwan_t2528739092::get_offset_of__animScript_22(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4463 = { sizeof (BlackSwanAnim_t1899114408), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4463[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4459 = { sizeof (BlackSwanAnim_t1899114408), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4459[5] = 
 {
 	BlackSwanAnim_t1899114408::get_offset_of_brothers_9(),
 	BlackSwanAnim_t1899114408::get_offset_of_script_10(),
@@ -10277,13 +10307,13 @@ extern const int32_t g_FieldOffsetTable4463[5] =
 	0,
 	BlackSwanAnim_t1899114408::get_offset_of__modules_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4464 = { sizeof (BlackSwanArmor_t1047635694), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4464[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4460 = { sizeof (BlackSwanArmor_t1047635694), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4460[1] = 
 {
 	BlackSwanArmor_t1047635694::get_offset_of__LOG_STATE_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4465 = { sizeof (BlackSwanSister_t1068429612), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4465[51] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4461 = { sizeof (BlackSwanSister_t1068429612), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4461[51] = 
 {
 	BlackSwanSister_t1068429612::get_offset_of_initTimer_11(),
 	0,
@@ -10337,33 +10367,33 @@ extern const int32_t g_FieldOffsetTable4465[51] =
 	BlackSwanSister_t1068429612::get_offset_of_neighborDoors_60(),
 	BlackSwanSister_t1068429612::get_offset_of__animScript_61(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4466 = { sizeof (AnnoyedNeighbor_t391517705), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4466[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4462 = { sizeof (AnnoyedNeighbor_t391517705), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4462[3] = 
 {
 	AnnoyedNeighbor_t391517705::get_offset_of_enable_0(),
 	AnnoyedNeighbor_t391517705::get_offset_of_creature_1(),
 	AnnoyedNeighbor_t391517705::get_offset_of_coolTime_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4467 = { sizeof (U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4467[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4463 = { sizeof (U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4463[1] = 
 {
 	U3COnFixedUpdateU3Ec__AnonStorey0_t1366123234::get_offset_of_neighbor_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4468 = { sizeof (BlackSwanSisterAnim_t113036806), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4468[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4464 = { sizeof (BlackSwanSisterAnim_t113036806), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4464[2] = 
 {
 	BlackSwanSisterAnim_t113036806::get_offset_of_script_9(),
 	BlackSwanSisterAnim_t113036806::get_offset_of__module_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4469 = { sizeof (BlackSwanWeapon_t310572856), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4469[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4465 = { sizeof (BlackSwanWeapon_t310572856), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4465[3] = 
 {
 	0,
 	0,
 	BlackSwanWeapon_t310572856::get_offset_of_fixedPosition_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4470 = { sizeof (BlockSlider_t3258073796), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4470[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4466 = { sizeof (BlockSlider_t3258073796), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4466[17] = 
 {
 	BlockSlider_t3258073796::get_offset_of_clickEvent_2(),
 	BlockSlider_t3258073796::get_offset_of_Horizontal_3(),
@@ -10383,25 +10413,25 @@ extern const int32_t g_FieldOffsetTable4470[17] =
 	BlockSlider_t3258073796::get_offset_of_disableSprite_17(),
 	BlockSlider_t3258073796::get_offset_of_init_18(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4471 = { sizeof (OnClickEvent_t2558831098), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4472 = { sizeof (BlockSliderUnit_t3068048314), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4472[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4467 = { sizeof (OnClickEvent_t2558831098), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4468 = { sizeof (BlockSliderUnit_t3068048314), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4468[4] = 
 {
 	BlockSliderUnit_t3068048314::get_offset_of_display_2(),
 	BlockSliderUnit_t3068048314::get_offset_of_disable_3(),
 	BlockSliderUnit_t3068048314::get_offset_of_slider_4(),
 	BlockSliderUnit_t3068048314::get_offset_of_index_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4473 = { sizeof (BloodBath_t1769009321), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4473[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4469 = { sizeof (BloodBath_t1769009321), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4469[4] = 
 {
 	BloodBath_t1769009321::get_offset_of__CONDITION_FORTITUDE_LEVEL_11(),
 	BloodBath_t1769009321::get_offset_of__CONDITION_TEMPARENCE_LEVEL_12(),
 	BloodBath_t1769009321::get_offset_of_bathAnim_13(),
 	BloodBath_t1769009321::get_offset_of_currentHandState_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4474 = { sizeof (BloodHandState_t1645516697)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4474[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4470 = { sizeof (BloodHandState_t1645516697)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4470[5] = 
 {
 	BloodHandState_t1645516697::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -10409,8 +10439,8 @@ extern const int32_t g_FieldOffsetTable4474[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4475 = { sizeof (BloodBathAnim_t4021178804), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4475[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4471 = { sizeof (BloodBathAnim_t4021178804), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4471[7] = 
 {
 	BloodBathAnim_t4021178804::get_offset_of_hand1_9(),
 	BloodBathAnim_t4021178804::get_offset_of_hand2_10(),
@@ -10420,28 +10450,28 @@ extern const int32_t g_FieldOffsetTable4475[7] =
 	BloodBathAnim_t4021178804::get_offset_of_bloodBath_14(),
 	BloodBathAnim_t4021178804::get_offset_of_old_15(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4476 = { sizeof (BloodBathArmor_t1390383298), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4476[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4472 = { sizeof (BloodBathArmor_t1390383298), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4472[1] = 
 {
 	BloodBathArmor_t1390383298::get_offset_of__LOG_STATE_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4477 = { sizeof (BloodBathWeapon_t2540479810), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4478 = { sizeof (BloodMapObject_t2656336790), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4478[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4473 = { sizeof (BloodBathWeapon_t2540479810), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4474 = { sizeof (BloodMapObject_t2656336790), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4474[3] = 
 {
 	BloodMapObject_t2656336790::get_offset_of_model_2(),
 	BloodMapObject_t2656336790::get_offset_of_bloodImgs_3(),
 	BloodMapObject_t2656336790::get_offset_of_renderer_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4479 = { sizeof (BloodMapObjectModel_t1680656327), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4479[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4475 = { sizeof (BloodMapObjectModel_t1680656327), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4475[2] = 
 {
 	BloodMapObjectModel_t1680656327::get_offset_of_bloodSprite_4(),
 	BloodMapObjectModel_t1680656327::get_offset_of_color_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4480 = { sizeof (BloodyEffect_t3556172043), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4481 = { sizeof (BloodyTree_t2328292869), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4481[14] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4476 = { sizeof (BloodyEffect_t3556172043), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4477 = { sizeof (BloodyTree_t2328292869), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4477[14] = 
 {
 	0,
 	0,
@@ -10458,8 +10488,8 @@ extern const int32_t g_FieldOffsetTable4481[14] =
 	BloodyTree_t2328292869::get_offset_of__prevCameraState_NonEscaped_23(),
 	BloodyTree_t2328292869::get_offset_of__shouldMove_24(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4482 = { sizeof (BloodyTreeAnim_t1812867026), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4482[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4478 = { sizeof (BloodyTreeAnim_t1812867026), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4478[6] = 
 {
 	0,
 	BloodyTreeAnim_t1812867026::get_offset_of_nonEscapedUtil_10(),
@@ -10468,9 +10498,9 @@ extern const int32_t g_FieldOffsetTable4482[6] =
 	BloodyTreeAnim_t1812867026::get_offset_of_script_13(),
 	BloodyTreeAnim_t1812867026::get_offset_of__module_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4483 = { sizeof (BloodyTreeWeapon_t1466823423), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4484 = { sizeof (BlueStar_t1520383455), -1, sizeof(BlueStar_t1520383455_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4484[25] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4479 = { sizeof (BloodyTreeWeapon_t1466823423), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4480 = { sizeof (BlueStar_t1520383455), -1, sizeof(BlueStar_t1520383455_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4480[25] = 
 {
 	0,
 	0,
@@ -10498,8 +10528,8 @@ extern const int32_t g_FieldOffsetTable4484[25] =
 	BlueStar_t1520383455::get_offset_of__readyForEscape_34(),
 	BlueStar_t1520383455::get_offset_of__backGroundLoop_35(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4485 = { sizeof (BlueStarAnim_t328616281), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4485[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4481 = { sizeof (BlueStarAnim_t328616281), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4481[6] = 
 {
 	0,
 	BlueStarAnim_t328616281::get_offset_of_initialScale_10(),
@@ -10508,21 +10538,21 @@ extern const int32_t g_FieldOffsetTable4485[6] =
 	BlueStarAnim_t328616281::get_offset_of__effectScript_13(),
 	BlueStarAnim_t328616281::get_offset_of__module_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4486 = { sizeof (BlueStarArmor_t2212563421), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4486[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4482 = { sizeof (BlueStarArmor_t2212563421), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4482[4] = 
 {
 	BlueStarArmor_t2212563421::get_offset_of_mpHealTimer_3(),
 	0,
 	0,
 	BlueStarArmor_t2212563421::get_offset_of_worker_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4487 = { sizeof (BlueStarAttackCollider_t2250808119), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4487[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4483 = { sizeof (BlueStarAttackCollider_t2250808119), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4483[1] = 
 {
 	BlueStarAttackCollider_t2250808119::get_offset_of__script_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4488 = { sizeof (BlueStarAttackEffect_t1833845078), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4488[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4484 = { sizeof (BlueStarAttackEffect_t1833845078), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4484[13] = 
 {
 	BlueStarAttackEffect_t1833845078::get_offset_of_ExplosionQuad_2(),
 	BlueStarAttackEffect_t1833845078::get_offset_of_DamageQuad_3(),
@@ -10538,23 +10568,23 @@ extern const int32_t g_FieldOffsetTable4488[13] =
 	BlueStarAttackEffect_t1833845078::get_offset_of_currentState_13(),
 	BlueStarAttackEffect_t1833845078::get_offset_of_currentTime_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4489 = { sizeof (State_t3441236063)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4489[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4485 = { sizeof (State_t3441236063)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4485[4] = 
 {
 	State_t3441236063::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4490 = { sizeof (BlueStarBuf_t3238403697), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4490[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4486 = { sizeof (BlueStarBuf_t3238403697), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4486[3] = 
 {
 	BlueStarBuf_t3238403697::get_offset_of_blueStar_5(),
 	BlueStarBuf_t3238403697::get_offset_of_worker_6(),
 	BlueStarBuf_t3238403697::get_offset_of_lazyStart_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4491 = { sizeof (BlueStarDeadEffect_t2432935331), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4491[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4487 = { sizeof (BlueStarDeadEffect_t2432935331), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4487[17] = 
 {
 	0,
 	BlueStarDeadEffect_t2432935331::get_offset_of__defaultCurve_3(),
@@ -10574,16 +10604,16 @@ extern const int32_t g_FieldOffsetTable4491[17] =
 	BlueStarDeadEffect_t2432935331::get_offset_of_startScale_17(),
 	BlueStarDeadEffect_t2432935331::get_offset_of__isInit_18(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4492 = { sizeof (TransType_t1918598211)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4492[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4488 = { sizeof (TransType_t1918598211)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4488[4] = 
 {
 	TransType_t1918598211::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4493 = { sizeof (BlueStarWeapon_t4161198720), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4493[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4489 = { sizeof (BlueStarWeapon_t4161198720), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4489[6] = 
 {
 	0,
 	0,
@@ -10592,29 +10622,29 @@ extern const int32_t g_FieldOffsetTable4493[6] =
 	0,
 	BlueStarWeapon_t4161198720::get_offset_of__worker_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4494 = { sizeof (BlurBloomEffecter_t2886664569), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4494[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4490 = { sizeof (BlurBloomEffecter_t2886664569), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4490[2] = 
 {
 	BlurBloomEffecter_t2886664569::get_offset_of_target_2(),
 	BlurBloomEffecter_t2886664569::get_offset_of__elapsedTime_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4495 = { sizeof (BlurBlurryEffecter_t3276817226), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4495[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4491 = { sizeof (BlurBlurryEffecter_t3276817226), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4491[3] = 
 {
 	BlurBlurryEffecter_t3276817226::get_offset_of_target_2(),
 	BlurBlurryEffecter_t3276817226::get_offset_of__elapsedTime_3(),
 	BlurBlurryEffecter_t3276817226::get_offset_of__lifetime_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4496 = { sizeof (BlurFocusEffecter_t3620569780), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4496[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4492 = { sizeof (BlurFocusEffecter_t3620569780), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4492[4] = 
 {
 	BlurFocusEffecter_t3620569780::get_offset_of_target_2(),
 	BlurFocusEffecter_t3620569780::get_offset_of__elapsedTime_3(),
 	BlurFocusEffecter_t3620569780::get_offset_of__lifetime_4(),
 	BlurFocusEffecter_t3620569780::get_offset_of__value_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4497 = { sizeof (BoomerCircusEvent_t3140860894), -1, sizeof(BoomerCircusEvent_t3140860894_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable4497[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4493 = { sizeof (BoomerCircusEvent_t3140860894), -1, sizeof(BoomerCircusEvent_t3140860894_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4493[11] = 
 {
 	0,
 	0,
@@ -10628,15 +10658,134 @@ extern const int32_t g_FieldOffsetTable4497[11] =
 	BoomerCircusEvent_t3140860894::get_offset_of_tents_19(),
 	BoomerCircusEvent_t3140860894::get_offset_of_boomers_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4498 = { sizeof (BoomerCircusScript_t3132269725), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable4498[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4494 = { sizeof (BoomerCircusScript_t3132269725), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4494[1] = 
 {
 	BoomerCircusScript_t3132269725::get_offset_of_randomEvent_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4499 = { sizeof (CircusType_t2448010458)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable4499[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4495 = { sizeof (CircusType_t2448010458)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable4495[3] = 
 {
 	CircusType_t2448010458::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4496 = { sizeof (BossBird_t769689499), -1, sizeof(BossBird_t769689499_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable4496[86] = 
+{
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	BossBird_t769689499::get_offset_of_laserType_29(),
+	0,
+	0,
+	BossBird_t769689499::get_offset_of_scaleType_32(),
+	0,
+	0,
+	BossBird_t769689499::get_offset_of_biteType_35(),
+	0,
+	0,
+	BossBird_t769689499::get_offset_of_attackType_38(),
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	BossBird_t769689499::get_offset_of_forcelyTeleportTimer_56(),
+	BossBird_t769689499::get_offset_of_teleportTimer_57(),
+	BossBird_t769689499::get_offset_of_normalAttackTimer_58(),
+	BossBird_t769689499::get_offset_of_specialPatternTimer_59(),
+	BossBird_t769689499::get_offset_of_uniquePattern_60(),
+	BossBird_t769689499::get_offset_of_forcelyTeleportReady_61(),
+	BossBird_t769689499::get_offset_of_teleportReady_62(),
+	BossBird_t769689499::get_offset_of_normalAttackReady_63(),
+	BossBird_t769689499::get_offset_of_patternReady_64(),
+	BossBird_t769689499::get_offset_of_forcelyTeleport_65(),
+	BossBird_t769689499::get_offset_of_activateState_66(),
+	BossBird_t769689499::get_offset_of_isEscaped_67(),
+	BossBird_t769689499::get_offset_of_isTeleporting_68(),
+	BossBird_t769689499::get_offset_of_isNarration_69(),
+	BossBird_t769689499::get_offset_of_ultShooted_70(),
+	BossBird_t769689499::get_offset_of_laserArriveSoundPlayed_71(),
+	BossBird_t769689499::get_offset_of_waitQueue_72(),
+	BossBird_t769689499::get_offset_of_birdControl_73(),
+	BossBird_t769689499::get_offset_of_notArrived_74(),
+	BossBird_t769689499::get_offset_of_attracted_75(),
+	BossBird_t769689499::get_offset_of_escapedCreatures_76(),
+	BossBird_t769689499::get_offset_of_currentTeleportDest_77(),
+	BossBird_t769689499::get_offset_of_smallBird_78(),
+	BossBird_t769689499::get_offset_of_bigBird_79(),
+	BossBird_t769689499::get_offset_of_longBird_80(),
+	BossBird_t769689499::get_offset_of__unit_81(),
+	BossBird_t769689499::get_offset_of_gatewayNode_82(),
+	BossBird_t769689499::get_offset_of_currentAttackType_83(),
+	BossBird_t769689499::get_offset_of__currentPhase_84(),
+	BossBird_t769689499::get_offset_of_eventScript_85(),
+	BossBird_t769689499::get_offset_of_gateWay_86(),
+	BossBird_t769689499::get_offset_of_bigEgg_87(),
+	BossBird_t769689499::get_offset_of_longEgg_88(),
+	BossBird_t769689499::get_offset_of_smallEgg_89(),
+	BossBird_t769689499::get_offset_of_currentForcelyTeleportTarget_90(),
+	BossBird_t769689499::get_offset_of_aliveEggs_91(),
+	BossBird_t769689499::get_offset_of_defaultAmbience_92(),
+	BossBird_t769689499_StaticFields::get_offset_of_U3CU3Ef__mgU24cache0_93(),
+	BossBird_t769689499_StaticFields::get_offset_of_U3CU3Ef__mgU24cache1_94(),
+	BossBird_t769689499_StaticFields::get_offset_of_U3CU3Ef__mgU24cache2_95(),
+	BossBird_t769689499_StaticFields::get_offset_of_U3CU3Ef__switchU24map1_96(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4497 = { sizeof (LaserAttackTargetData_t1450381514), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4497[3] = 
+{
+	LaserAttackTargetData_t1450381514::get_offset_of_unit_0(),
+	LaserAttackTargetData_t1450381514::get_offset_of_DamageCount_1(),
+	LaserAttackTargetData_t1450381514::get_offset_of_savedPosition_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4498 = { sizeof (AttackTypeData_t3985351840), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4498[2] = 
+{
+	AttackTypeData_t3985351840::get_offset_of_type_0(),
+	AttackTypeData_t3985351840::get_offset_of_prob_1(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize4499 = { sizeof (NarrationKey_t1457788304), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable4499[12] = 
+{
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
 	0,
 	0,
 };

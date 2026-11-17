@@ -38608,7 +38608,7 @@ extern "C" IL2CPP_METHOD_ATTR void LocalizeTextDataLoader__ctor_m3608423920 (Loc
 // System.Void LocalizeTextDataLoader::LoadLocalizeTextData()
 extern "C" IL2CPP_METHOD_ATTR void LocalizeTextDataLoader_LoadLocalizeTextData_m386940331 (LocalizeTextDataLoader_t3024193299 * __this, const RuntimeMethod* method);
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m3948448025 (Regex_t3657309853 * __this, String_t* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m897876424 (Regex_t3657309853 * __this, String_t* p0, const RuntimeMethod* method);
 // System.String[] StoryDataLoader::GetStoryList()
 extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* StoryDataLoader_GetStoryList_m2911595686 (StoryDataLoader_t2377249618 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.String,StoryScriptScene>::.ctor()
@@ -45801,7 +45801,7 @@ CATCH_002d:
 IL_0033:
 	{
 		Regex_t3657309853 * L_3 = (Regex_t3657309853 *)il2cpp_codegen_object_new(Regex_t3657309853_il2cpp_TypeInfo_var);
-		Regex__ctor_m3948448025(L_3, _stringLiteral310522939, /*hidden argument*/NULL);
+		Regex__ctor_m897876424(L_3, _stringLiteral310522939, /*hidden argument*/NULL);
 		__this->set_idRegex_0(L_3);
 		StringU5BU5D_t1281789340* L_4 = StoryDataLoader_GetStoryList_m2911595686(__this, /*hidden argument*/NULL);
 		V_0 = L_4;

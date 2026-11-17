@@ -2143,7 +2143,7 @@ extern const uint32_t ContentDisposition_ToString_m2845433059_MetadataUsageId;
 extern const uint32_t ContentType__ctor_m1728157592_MetadataUsageId;
 extern const RuntimeMethod* ContentType__ctor_m3820568381_RuntimeMethod_var;
 extern const uint32_t ContentType__ctor_m3820568381_MetadataUsageId;
-extern RuntimeField* U3CPrivateImplementationDetailsU3E_t3057255362____U24U24fieldU2D0_0_FieldInfo_var;
+extern RuntimeField* U3CPrivateImplementationDetailsU3E_t3057255363____U24U24fieldU2D0_0_FieldInfo_var;
 extern const uint32_t ContentType__cctor_m4124406025_MetadataUsageId;
 extern const uint32_t ContentType_Parse_m2642643126_MetadataUsageId;
 extern RuntimeClass* UTF8Encoding_t3956466879_il2cpp_TypeInfo_var;
@@ -8359,8 +8359,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STRINGREADER_T3465604688_H
-#ifndef U24ARRAYTYPEU2416_T3254766645_H
-#define U24ARRAYTYPEU2416_T3254766645_H
+#ifndef U24ARRAYTYPEU2416_T3254766646_H
+#define U24ARRAYTYPEU2416_T3254766646_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -8368,7 +8368,7 @@ public:
 #endif
 
 // <PrivateImplementationDetails>/$ArrayType$16
-struct  U24ArrayTypeU2416_t3254766645 
+struct  U24ArrayTypeU2416_t3254766646 
 {
 public:
 	union
@@ -8379,7 +8379,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2416_t3254766645__padding[16];
+		uint8_t U24ArrayTypeU2416_t3254766646__padding[16];
 	};
 
 public:
@@ -8388,7 +8388,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U24ARRAYTYPEU2416_T3254766645_H
+#endif // U24ARRAYTYPEU2416_T3254766646_H
 #ifndef ALIGNMENTUNION_T208902285_H
 #define ALIGNMENTUNION_T208902285_H
 #ifdef __clang__
@@ -8510,8 +8510,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AUTHENTICATEDSTREAM_T3415418016_H
-#ifndef U24ARRAYTYPEU2432_T3652892011_H
-#define U24ARRAYTYPEU2432_T3652892011_H
+#ifndef U24ARRAYTYPEU2432_T3652892012_H
+#define U24ARRAYTYPEU2432_T3652892012_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -8519,7 +8519,7 @@ public:
 #endif
 
 // <PrivateImplementationDetails>/$ArrayType$32
-struct  U24ArrayTypeU2432_t3652892011 
+struct  U24ArrayTypeU2432_t3652892012 
 {
 public:
 	union
@@ -8530,7 +8530,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2432_t3652892011__padding[32];
+		uint8_t U24ArrayTypeU2432_t3652892012__padding[32];
 	};
 
 public:
@@ -8539,7 +8539,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U24ARRAYTYPEU2432_T3652892011_H
+#endif // U24ARRAYTYPEU2432_T3652892012_H
 #ifndef STREAMREADER_T4009935899_H
 #define STREAMREADER_T4009935899_H
 #ifdef __clang__
@@ -8851,8 +8851,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // HEADERNAME_T2916757813_H
-#ifndef U24ARRAYTYPEU2412_T2490092597_H
-#define U24ARRAYTYPEU2412_T2490092597_H
+#ifndef U24ARRAYTYPEU2412_T2490092598_H
+#define U24ARRAYTYPEU2412_T2490092598_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -8860,7 +8860,7 @@ public:
 #endif
 
 // <PrivateImplementationDetails>/$ArrayType$12
-struct  U24ArrayTypeU2412_t2490092597 
+struct  U24ArrayTypeU2412_t2490092598 
 {
 public:
 	union
@@ -8871,7 +8871,7 @@ public:
 			{
 			};
 		};
-		uint8_t U24ArrayTypeU2412_t2490092597__padding[12];
+		uint8_t U24ArrayTypeU2412_t2490092598__padding[12];
 	};
 
 public:
@@ -8880,7 +8880,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U24ARRAYTYPEU2412_T2490092597_H
+#endif // U24ARRAYTYPEU2412_T2490092598_H
 #ifndef DOWORKEVENTARGS_T1025725751_H
 #define DOWORKEVENTARGS_T1025725751_H
 #ifdef __clang__
@@ -13376,8 +13376,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // MAILPRIORITY_T877289049_H
-#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255362_H
-#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255362_H
+#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
+#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -13385,45 +13385,45 @@ public:
 #endif
 
 // <PrivateImplementationDetails>
-struct  U3CPrivateImplementationDetailsU3E_t3057255362  : public RuntimeObject
+struct  U3CPrivateImplementationDetailsU3E_t3057255363  : public RuntimeObject
 {
 public:
 
 public:
 };
 
-struct U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields
+struct U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields
 {
 public:
 	// <PrivateImplementationDetails>/$ArrayType$32 <PrivateImplementationDetails>::$$field-0
-	U24ArrayTypeU2432_t3652892011  ___U24U24fieldU2D0_0;
+	U24ArrayTypeU2432_t3652892012  ___U24U24fieldU2D0_0;
 	// <PrivateImplementationDetails>/$ArrayType$16 <PrivateImplementationDetails>::$$field-1
-	U24ArrayTypeU2416_t3254766645  ___U24U24fieldU2D1_1;
+	U24ArrayTypeU2416_t3254766646  ___U24U24fieldU2D1_1;
 	// <PrivateImplementationDetails>/$ArrayType$128 <PrivateImplementationDetails>::$$field-2
 	U24ArrayTypeU24128_t4289081660  ___U24U24fieldU2D2_2;
 	// <PrivateImplementationDetails>/$ArrayType$12 <PrivateImplementationDetails>::$$field-3
-	U24ArrayTypeU2412_t2490092597  ___U24U24fieldU2D3_3;
+	U24ArrayTypeU2412_t2490092598  ___U24U24fieldU2D3_3;
 	// <PrivateImplementationDetails>/$ArrayType$12 <PrivateImplementationDetails>::$$field-4
-	U24ArrayTypeU2412_t2490092597  ___U24U24fieldU2D4_4;
+	U24ArrayTypeU2412_t2490092598  ___U24U24fieldU2D4_4;
 
 public:
-	inline static int32_t get_offset_of_U24U24fieldU2D0_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D0_0)); }
-	inline U24ArrayTypeU2432_t3652892011  get_U24U24fieldU2D0_0() const { return ___U24U24fieldU2D0_0; }
-	inline U24ArrayTypeU2432_t3652892011 * get_address_of_U24U24fieldU2D0_0() { return &___U24U24fieldU2D0_0; }
-	inline void set_U24U24fieldU2D0_0(U24ArrayTypeU2432_t3652892011  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D0_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D0_0)); }
+	inline U24ArrayTypeU2432_t3652892012  get_U24U24fieldU2D0_0() const { return ___U24U24fieldU2D0_0; }
+	inline U24ArrayTypeU2432_t3652892012 * get_address_of_U24U24fieldU2D0_0() { return &___U24U24fieldU2D0_0; }
+	inline void set_U24U24fieldU2D0_0(U24ArrayTypeU2432_t3652892012  value)
 	{
 		___U24U24fieldU2D0_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D1_1() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D1_1)); }
-	inline U24ArrayTypeU2416_t3254766645  get_U24U24fieldU2D1_1() const { return ___U24U24fieldU2D1_1; }
-	inline U24ArrayTypeU2416_t3254766645 * get_address_of_U24U24fieldU2D1_1() { return &___U24U24fieldU2D1_1; }
-	inline void set_U24U24fieldU2D1_1(U24ArrayTypeU2416_t3254766645  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D1_1() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D1_1)); }
+	inline U24ArrayTypeU2416_t3254766646  get_U24U24fieldU2D1_1() const { return ___U24U24fieldU2D1_1; }
+	inline U24ArrayTypeU2416_t3254766646 * get_address_of_U24U24fieldU2D1_1() { return &___U24U24fieldU2D1_1; }
+	inline void set_U24U24fieldU2D1_1(U24ArrayTypeU2416_t3254766646  value)
 	{
 		___U24U24fieldU2D1_1 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D2_2() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D2_2)); }
+	inline static int32_t get_offset_of_U24U24fieldU2D2_2() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D2_2)); }
 	inline U24ArrayTypeU24128_t4289081660  get_U24U24fieldU2D2_2() const { return ___U24U24fieldU2D2_2; }
 	inline U24ArrayTypeU24128_t4289081660 * get_address_of_U24U24fieldU2D2_2() { return &___U24U24fieldU2D2_2; }
 	inline void set_U24U24fieldU2D2_2(U24ArrayTypeU24128_t4289081660  value)
@@ -13431,18 +13431,18 @@ public:
 		___U24U24fieldU2D2_2 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D3_3() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D3_3)); }
-	inline U24ArrayTypeU2412_t2490092597  get_U24U24fieldU2D3_3() const { return ___U24U24fieldU2D3_3; }
-	inline U24ArrayTypeU2412_t2490092597 * get_address_of_U24U24fieldU2D3_3() { return &___U24U24fieldU2D3_3; }
-	inline void set_U24U24fieldU2D3_3(U24ArrayTypeU2412_t2490092597  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D3_3() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D3_3)); }
+	inline U24ArrayTypeU2412_t2490092598  get_U24U24fieldU2D3_3() const { return ___U24U24fieldU2D3_3; }
+	inline U24ArrayTypeU2412_t2490092598 * get_address_of_U24U24fieldU2D3_3() { return &___U24U24fieldU2D3_3; }
+	inline void set_U24U24fieldU2D3_3(U24ArrayTypeU2412_t2490092598  value)
 	{
 		___U24U24fieldU2D3_3 = value;
 	}
 
-	inline static int32_t get_offset_of_U24U24fieldU2D4_4() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255362_StaticFields, ___U24U24fieldU2D4_4)); }
-	inline U24ArrayTypeU2412_t2490092597  get_U24U24fieldU2D4_4() const { return ___U24U24fieldU2D4_4; }
-	inline U24ArrayTypeU2412_t2490092597 * get_address_of_U24U24fieldU2D4_4() { return &___U24U24fieldU2D4_4; }
-	inline void set_U24U24fieldU2D4_4(U24ArrayTypeU2412_t2490092597  value)
+	inline static int32_t get_offset_of_U24U24fieldU2D4_4() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24U24fieldU2D4_4)); }
+	inline U24ArrayTypeU2412_t2490092598  get_U24U24fieldU2D4_4() const { return ___U24U24fieldU2D4_4; }
+	inline U24ArrayTypeU2412_t2490092598 * get_address_of_U24U24fieldU2D4_4() { return &___U24U24fieldU2D4_4; }
+	inline void set_U24U24fieldU2D4_4(U24ArrayTypeU2412_t2490092598  value)
 	{
 		___U24U24fieldU2D4_4 = value;
 	}
@@ -13451,7 +13451,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255362_H
+#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
 #ifndef DELIVERYNOTIFICATIONOPTIONS_T3743375605_H
 #define DELIVERYNOTIFICATIONOPTIONS_T3743375605_H
 #ifdef __clang__
@@ -20057,7 +20057,7 @@ extern "C" IL2CPP_METHOD_ATTR void Cookie_set_Version_m3274352061 (Cookie_t99387
 // System.Boolean System.Net.CookieParser::GetNextNameValue(System.String&,System.String&)
 extern "C" IL2CPP_METHOD_ATTR bool CookieParser_GetNextNameValue_m1056878190 (CookieParser_t2349142305 * __this, String_t** ___name0, String_t** ___val1, const RuntimeMethod* method);
 // System.String System.Uri::get_Host()
-extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m42857288 (Uri_t100236324 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Uri_get_Host_m255565830 (Uri_t100236324 * __this, const RuntimeMethod* method);
 // System.Void System.Net.CookieCollection::Add(System.Net.Cookie)
 extern "C" IL2CPP_METHOD_ATTR void CookieCollection_Add_m473237455 (CookieCollection_t3881042616 * __this, Cookie_t993873397 * ___cookie0, const RuntimeMethod* method);
 // System.Void System.Net.CookieContainer::Add(System.Uri,System.Net.Cookie)
@@ -20467,7 +20467,7 @@ extern "C" IL2CPP_METHOD_ATTR Delegate_t1188392813 * Delegate_Combine_m185965516
 // System.Delegate System.Delegate::Remove(System.Delegate,System.Delegate)
 extern "C" IL2CPP_METHOD_ATTR Delegate_t1188392813 * Delegate_Remove_m334097152 (RuntimeObject * __this /* static, unused */, Delegate_t1188392813 * p0, Delegate_t1188392813 * p1, const RuntimeMethod* method);
 // System.Void System.Security.Cryptography.X509Certificates.X509CertificateCollection::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void X509CertificateCollection__ctor_m147081211 (X509CertificateCollection_t3399372417 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void X509CertificateCollection__ctor_m1784029323 (X509CertificateCollection_t3399372417 * __this, const RuntimeMethod* method);
 // System.Void System.Net.Mail.SmtpClient::CheckState()
 extern "C" IL2CPP_METHOD_ATTR void SmtpClient_CheckState_m1021953611 (SmtpClient_t1048709847 * __this, const RuntimeMethod* method);
 // System.Void System.NotImplementedException::.ctor(System.String)
@@ -20759,9 +20759,9 @@ extern "C" IL2CPP_METHOD_ATTR void SmtpClient_Authenticate_m3046940513 (SmtpClie
 // System.String System.Convert::ToBase64String(System.Byte[])
 extern "C" IL2CPP_METHOD_ATTR String_t* Convert_ToBase64String_m3839334935 (RuntimeObject * __this /* static, unused */, ByteU5BU5D_t4116647657* p0, const RuntimeMethod* method);
 // System.Net.Security.RemoteCertificateValidationCallback System.Net.ServicePointManager::get_ServerCertificateValidationCallback()
-extern "C" IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t3014364904 * ServicePointManager_get_ServerCertificateValidationCallback_m984921647 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR RemoteCertificateValidationCallback_t3014364904 * ServicePointManager_get_ServerCertificateValidationCallback_m2067275303 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Boolean System.Net.Security.RemoteCertificateValidationCallback::Invoke(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)
-extern "C" IL2CPP_METHOD_ATTR bool RemoteCertificateValidationCallback_Invoke_m727898444 (RemoteCertificateValidationCallback_t3014364904 * __this, RuntimeObject * ___sender0, X509Certificate_t713131622 * ___certificate1, X509Chain_t194917408 * ___chain2, int32_t ___sslPolicyErrors3, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool RemoteCertificateValidationCallback_Invoke_m3086073466 (RemoteCertificateValidationCallback_t3014364904 * __this, RuntimeObject * ___sender0, X509Certificate_t713131622 * ___certificate1, X509Chain_t194917408 * ___chain2, int32_t ___sslPolicyErrors3, const RuntimeMethod* method);
 // System.Object System.ComponentModel.DoWorkEventArgs::get_Argument()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * DoWorkEventArgs_get_Argument_m1653276530 (DoWorkEventArgs_t1025725751 * __this, const RuntimeMethod* method);
 // System.Void System.ComponentModel.DoWorkEventArgs::set_Result(System.Object)
@@ -22606,7 +22606,7 @@ IL_02a0:
 		Cookie_t993873397 * L_87 = V_2;
 		Uri_t100236324 * L_88 = __this->get_uri_1();
 		NullCheck(L_88);
-		String_t* L_89 = Uri_get_Host_m42857288(L_88, /*hidden argument*/NULL);
+		String_t* L_89 = Uri_get_Host_m255565830(L_88, /*hidden argument*/NULL);
 		NullCheck(L_87);
 		Cookie_set_Domain_m3100331118(L_87, L_89, /*hidden argument*/NULL);
 	}
@@ -33531,7 +33531,7 @@ extern "C" IL2CPP_METHOD_ATTR X509CertificateCollection_t3399372417 * SmtpClient
 	}
 	{
 		X509CertificateCollection_t3399372417 * L_1 = (X509CertificateCollection_t3399372417 *)il2cpp_codegen_object_new(X509CertificateCollection_t3399372417_il2cpp_TypeInfo_var);
-		X509CertificateCollection__ctor_m147081211(L_1, /*hidden argument*/NULL);
+		X509CertificateCollection__ctor_m1784029323(L_1, /*hidden argument*/NULL);
 		__this->set_clientCertificates_7(L_1);
 	}
 
@@ -38395,7 +38395,7 @@ extern "C" IL2CPP_METHOD_ATTR bool SmtpClient_U3CcallbackU3Em__2_m2319195653 (Ru
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ServicePointManager_t170559685_il2cpp_TypeInfo_var);
-		RemoteCertificateValidationCallback_t3014364904 * L_0 = ServicePointManager_get_ServerCertificateValidationCallback_m984921647(NULL /*static, unused*/, /*hidden argument*/NULL);
+		RemoteCertificateValidationCallback_t3014364904 * L_0 = ServicePointManager_get_ServerCertificateValidationCallback_m2067275303(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (!L_0)
 		{
 			goto IL_0019;
@@ -38403,13 +38403,13 @@ extern "C" IL2CPP_METHOD_ATTR bool SmtpClient_U3CcallbackU3Em__2_m2319195653 (Ru
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(ServicePointManager_t170559685_il2cpp_TypeInfo_var);
-		RemoteCertificateValidationCallback_t3014364904 * L_1 = ServicePointManager_get_ServerCertificateValidationCallback_m984921647(NULL /*static, unused*/, /*hidden argument*/NULL);
+		RemoteCertificateValidationCallback_t3014364904 * L_1 = ServicePointManager_get_ServerCertificateValidationCallback_m2067275303(NULL /*static, unused*/, /*hidden argument*/NULL);
 		RuntimeObject * L_2 = ___sender0;
 		X509Certificate_t713131622 * L_3 = ___certificate1;
 		X509Chain_t194917408 * L_4 = ___chain2;
 		int32_t L_5 = ___sslPolicyErrors3;
 		NullCheck(L_1);
-		bool L_6 = RemoteCertificateValidationCallback_Invoke_m727898444(L_1, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
+		bool L_6 = RemoteCertificateValidationCallback_Invoke_m3086073466(L_1, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
 		return L_6;
 	}
 
@@ -40337,7 +40337,7 @@ extern "C" IL2CPP_METHOD_ATTR void ContentType__cctor_m4124406025 (RuntimeObject
 	}
 	{
 		CharU5BU5D_t3528271667* L_0 = ((CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16)));
-		RuntimeFieldHandle_t1871169219  L_1 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t3057255362____U24U24fieldU2D0_0_FieldInfo_var) };
+		RuntimeFieldHandle_t1871169219  L_1 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t3057255363____U24U24fieldU2D0_0_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m3117905507(NULL /*static, unused*/, (RuntimeArray *)(RuntimeArray *)L_0, L_1, /*hidden argument*/NULL);
 		((ContentType_t768484892_StaticFields*)il2cpp_codegen_static_fields_for(ContentType_t768484892_il2cpp_TypeInfo_var))->set_especials_3(L_0);
 		return;

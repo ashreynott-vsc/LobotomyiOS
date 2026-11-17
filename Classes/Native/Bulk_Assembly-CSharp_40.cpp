@@ -49732,11 +49732,11 @@ extern "C" IL2CPP_METHOD_ATTR String_t* String_Substring_m1610150815 (String_t* 
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.Regex::Match(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Regex_Match_m2057380353 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.String System.Text.RegularExpressions.Capture::get_Value()
-extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m3919646039 (Capture_t2232016050 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR String_t* Capture_get_Value_m538076933 (Capture_t2232016050 * __this, const RuntimeMethod* method);
 // System.Text.RegularExpressions.Match System.Text.RegularExpressions.Match::NextMatch()
 extern "C" IL2CPP_METHOD_ATTR Match_t3408321083 * Match_NextMatch_m366671308 (Match_t3408321083 * __this, const RuntimeMethod* method);
 // System.Boolean System.Text.RegularExpressions.Group::get_Success()
-extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m3823591889 (Group_t2468205786 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool Group_get_Success_m1492300455 (Group_t2468205786 * __this, const RuntimeMethod* method);
 // System.String TextConverter::SelectRandomWord(System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* TextConverter_SelectRandomWord_m1418945716 (RuntimeObject * __this /* static, unused */, String_t* ___random_list0, const RuntimeMethod* method);
 // !0[] System.Collections.Generic.List`1<System.String>::ToArray()
@@ -61022,7 +61022,7 @@ IL_0025:
 		List_1_t3319525431 * L_6 = V_0;
 		Match_t3408321083 * L_7 = V_1;
 		NullCheck(L_7);
-		String_t* L_8 = Capture_get_Value_m3919646039(L_7, /*hidden argument*/NULL);
+		String_t* L_8 = Capture_get_Value_m538076933(L_7, /*hidden argument*/NULL);
 		NullCheck(L_6);
 		List_1_Add_m1685793073(L_6, L_8, /*hidden argument*/List_1_Add_m1685793073_RuntimeMethod_var);
 		Match_t3408321083 * L_9 = V_1;
@@ -61035,7 +61035,7 @@ IL_0038:
 	{
 		Match_t3408321083 * L_11 = V_1;
 		NullCheck(L_11);
-		bool L_12 = Group_get_Success_m3823591889(L_11, /*hidden argument*/NULL);
+		bool L_12 = Group_get_Success_m1492300455(L_11, /*hidden argument*/NULL);
 		if (L_12)
 		{
 			goto IL_0025;
@@ -61102,10 +61102,10 @@ IL_0013:
 		String_t* L_3 = V_0;
 		Match_t3408321083 * L_4 = V_1;
 		NullCheck(L_4);
-		String_t* L_5 = Capture_get_Value_m3919646039(L_4, /*hidden argument*/NULL);
+		String_t* L_5 = Capture_get_Value_m538076933(L_4, /*hidden argument*/NULL);
 		Match_t3408321083 * L_6 = V_1;
 		NullCheck(L_6);
-		String_t* L_7 = Capture_get_Value_m3919646039(L_6, /*hidden argument*/NULL);
+		String_t* L_7 = Capture_get_Value_m538076933(L_6, /*hidden argument*/NULL);
 		String_t* L_8 = TextConverter_SelectRandomWord_m1418945716(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
 		NullCheck(L_3);
 		String_t* L_9 = String_Replace_m1273907647(L_3, L_5, L_8, /*hidden argument*/NULL);
@@ -61120,7 +61120,7 @@ IL_0032:
 	{
 		Match_t3408321083 * L_12 = V_1;
 		NullCheck(L_12);
-		bool L_13 = Group_get_Success_m3823591889(L_12, /*hidden argument*/NULL);
+		bool L_13 = Group_get_Success_m1492300455(L_12, /*hidden argument*/NULL);
 		if (L_13)
 		{
 			goto IL_0013;
@@ -61193,10 +61193,10 @@ IL_0013:
 		String_t* L_3 = V_0;
 		Match_t3408321083 * L_4 = V_1;
 		NullCheck(L_4);
-		String_t* L_5 = Capture_get_Value_m3919646039(L_4, /*hidden argument*/NULL);
+		String_t* L_5 = Capture_get_Value_m538076933(L_4, /*hidden argument*/NULL);
 		Match_t3408321083 * L_6 = V_1;
 		NullCheck(L_6);
-		String_t* L_7 = Capture_get_Value_m3919646039(L_6, /*hidden argument*/NULL);
+		String_t* L_7 = Capture_get_Value_m538076933(L_6, /*hidden argument*/NULL);
 		String_t* L_8 = TextConverter_SelectRandomWord_m1418945716(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
 		NullCheck(L_3);
 		String_t* L_9 = String_Replace_m1273907647(L_3, L_5, L_8, /*hidden argument*/NULL);
@@ -61211,7 +61211,7 @@ IL_0032:
 	{
 		Match_t3408321083 * L_12 = V_1;
 		NullCheck(L_12);
-		bool L_13 = Group_get_Success_m3823591889(L_12, /*hidden argument*/NULL);
+		bool L_13 = Group_get_Success_m1492300455(L_12, /*hidden argument*/NULL);
 		if (L_13)
 		{
 			goto IL_0013;
@@ -61296,10 +61296,10 @@ IL_0025:
 		List_1_t3319525431 * L_6 = V_0;
 		Match_t3408321083 * L_7 = V_1;
 		NullCheck(L_7);
-		String_t* L_8 = Capture_get_Value_m3919646039(L_7, /*hidden argument*/NULL);
+		String_t* L_8 = Capture_get_Value_m538076933(L_7, /*hidden argument*/NULL);
 		Match_t3408321083 * L_9 = V_1;
 		NullCheck(L_9);
-		String_t* L_10 = Capture_get_Value_m3919646039(L_9, /*hidden argument*/NULL);
+		String_t* L_10 = Capture_get_Value_m538076933(L_9, /*hidden argument*/NULL);
 		NullCheck(L_10);
 		int32_t L_11 = String_get_Length_m3847582255(L_10, /*hidden argument*/NULL);
 		NullCheck(L_8);
@@ -61316,7 +61316,7 @@ IL_004b:
 	{
 		Match_t3408321083 * L_15 = V_1;
 		NullCheck(L_15);
-		bool L_16 = Group_get_Success_m3823591889(L_15, /*hidden argument*/NULL);
+		bool L_16 = Group_get_Success_m1492300455(L_15, /*hidden argument*/NULL);
 		if (L_16)
 		{
 			goto IL_0025;
@@ -61356,7 +61356,7 @@ IL_0018:
 	{
 		Match_t3408321083 * L_2 = V_1;
 		NullCheck(L_2);
-		String_t* L_3 = Capture_get_Value_m3919646039(L_2, /*hidden argument*/NULL);
+		String_t* L_3 = Capture_get_Value_m538076933(L_2, /*hidden argument*/NULL);
 		StringU5BU5D_t1281789340* L_4 = TextConverter_SelectProcessWord_m1834454100(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
 		V_2 = L_4;
 		StringU5BU5D_t1281789340* L_5 = V_2;
@@ -61373,7 +61373,7 @@ IL_0034:
 		String_t* L_8 = ___format_text0;
 		Match_t3408321083 * L_9 = V_1;
 		NullCheck(L_9);
-		String_t* L_10 = Capture_get_Value_m3919646039(L_9, /*hidden argument*/NULL);
+		String_t* L_10 = Capture_get_Value_m538076933(L_9, /*hidden argument*/NULL);
 		StringU5BU5D_t1281789340* L_11 = V_2;
 		int32_t L_12 = V_3;
 		NullCheck(L_11);
@@ -61452,7 +61452,7 @@ IL_0092:
 	{
 		Match_t3408321083 * L_39 = V_1;
 		NullCheck(L_39);
-		bool L_40 = Group_get_Success_m3823591889(L_39, /*hidden argument*/NULL);
+		bool L_40 = Group_get_Success_m1492300455(L_39, /*hidden argument*/NULL);
 		if (L_40)
 		{
 			goto IL_0018;
@@ -61490,7 +61490,7 @@ IL_0018:
 	{
 		Match_t3408321083 * L_2 = V_1;
 		NullCheck(L_2);
-		String_t* L_3 = Capture_get_Value_m3919646039(L_2, /*hidden argument*/NULL);
+		String_t* L_3 = Capture_get_Value_m538076933(L_2, /*hidden argument*/NULL);
 		StringU5BU5D_t1281789340* L_4 = TextConverter_SelectProcessWord_m1834454100(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
 		V_2 = L_4;
 		StringU5BU5D_t1281789340* L_5 = V_2;
@@ -61507,7 +61507,7 @@ IL_0034:
 		String_t* L_8 = ___format_text0;
 		Match_t3408321083 * L_9 = V_1;
 		NullCheck(L_9);
-		String_t* L_10 = Capture_get_Value_m3919646039(L_9, /*hidden argument*/NULL);
+		String_t* L_10 = Capture_get_Value_m538076933(L_9, /*hidden argument*/NULL);
 		StringU5BU5D_t1281789340* L_11 = V_2;
 		int32_t L_12 = V_3;
 		NullCheck(L_11);
@@ -61603,7 +61603,7 @@ IL_00ad:
 	{
 		Match_t3408321083 * L_49 = V_1;
 		NullCheck(L_49);
-		bool L_50 = Group_get_Success_m3823591889(L_49, /*hidden argument*/NULL);
+		bool L_50 = Group_get_Success_m1492300455(L_49, /*hidden argument*/NULL);
 		if (L_50)
 		{
 			goto IL_0018;
@@ -61640,7 +61640,7 @@ IL_0018:
 	{
 		Match_t3408321083 * L_2 = V_1;
 		NullCheck(L_2);
-		String_t* L_3 = Capture_get_Value_m3919646039(L_2, /*hidden argument*/NULL);
+		String_t* L_3 = Capture_get_Value_m538076933(L_2, /*hidden argument*/NULL);
 		StringU5BU5D_t1281789340* L_4 = TextConverter_SelectProcessWord_m1834454100(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
 		V_2 = L_4;
 		StringU5BU5D_t1281789340* L_5 = V_2;
@@ -61657,7 +61657,7 @@ IL_0034:
 		String_t* L_8 = ___format_text0;
 		Match_t3408321083 * L_9 = V_1;
 		NullCheck(L_9);
-		String_t* L_10 = Capture_get_Value_m3919646039(L_9, /*hidden argument*/NULL);
+		String_t* L_10 = Capture_get_Value_m538076933(L_9, /*hidden argument*/NULL);
 		StringU5BU5D_t1281789340* L_11 = V_2;
 		int32_t L_12 = V_3;
 		NullCheck(L_11);
@@ -61693,7 +61693,7 @@ IL_005a:
 	{
 		Match_t3408321083 * L_21 = V_1;
 		NullCheck(L_21);
-		bool L_22 = Group_get_Success_m3823591889(L_21, /*hidden argument*/NULL);
+		bool L_22 = Group_get_Success_m1492300455(L_21, /*hidden argument*/NULL);
 		if (L_22)
 		{
 			goto IL_0018;
@@ -61731,10 +61731,10 @@ IL_0017:
 		String_t* L_3 = V_0;
 		Match_t3408321083 * L_4 = V_1;
 		NullCheck(L_4);
-		String_t* L_5 = Capture_get_Value_m3919646039(L_4, /*hidden argument*/NULL);
+		String_t* L_5 = Capture_get_Value_m538076933(L_4, /*hidden argument*/NULL);
 		Match_t3408321083 * L_6 = V_1;
 		NullCheck(L_6);
-		String_t* L_7 = Capture_get_Value_m3919646039(L_6, /*hidden argument*/NULL);
+		String_t* L_7 = Capture_get_Value_m538076933(L_6, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		int32_t L_8 = String_get_Length_m3847582255(L_7, /*hidden argument*/NULL);
 		NullCheck(L_5);
@@ -61752,7 +61752,7 @@ IL_0043:
 	{
 		Match_t3408321083 * L_13 = V_1;
 		NullCheck(L_13);
-		bool L_14 = Group_get_Success_m3823591889(L_13, /*hidden argument*/NULL);
+		bool L_14 = Group_get_Success_m1492300455(L_13, /*hidden argument*/NULL);
 		if (L_14)
 		{
 			goto IL_0017;
@@ -61792,10 +61792,10 @@ IL_0017:
 		String_t* L_3 = V_0;
 		Match_t3408321083 * L_4 = V_1;
 		NullCheck(L_4);
-		String_t* L_5 = Capture_get_Value_m3919646039(L_4, /*hidden argument*/NULL);
+		String_t* L_5 = Capture_get_Value_m538076933(L_4, /*hidden argument*/NULL);
 		Match_t3408321083 * L_6 = V_1;
 		NullCheck(L_6);
-		String_t* L_7 = Capture_get_Value_m3919646039(L_6, /*hidden argument*/NULL);
+		String_t* L_7 = Capture_get_Value_m538076933(L_6, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		int32_t L_8 = String_get_Length_m3847582255(L_7, /*hidden argument*/NULL);
 		NullCheck(L_5);
@@ -61813,7 +61813,7 @@ IL_003e:
 	{
 		Match_t3408321083 * L_13 = V_1;
 		NullCheck(L_13);
-		bool L_14 = Group_get_Success_m3823591889(L_13, /*hidden argument*/NULL);
+		bool L_14 = Group_get_Success_m1492300455(L_13, /*hidden argument*/NULL);
 		if (L_14)
 		{
 			goto IL_0017;
