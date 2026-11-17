@@ -68486,6 +68486,147 @@ IL_0058:
 		return;
 	}
 }
+// Mobile Cheat Helpers (direct, type-safe, UI-refreshing)
+extern "C" IL2CPP_METHOD_ATTR bool DeployUI_get_IsEnabled_m2163230962 (DeployUI_t2640253816 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void ResearchWindow_SetActive_m3011648755 (ResearchWindow_t694250602 * __this, bool ___state0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void DeploySefiraList_ResearchInit_m891617177 (DeploySefiraList_t2637306042 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void GlobalBulletManager_Reload_m457390451 (GlobalBulletManager_t3498327815 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t UnitModel_get_maxHp_m705950594 (UnitModel_t1924672552 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t UnitModel_get_maxMental_m56006975 (UnitModel_t1924672552 * __this, const RuntimeMethod* method);
+extern "C" int32_t Mobile_Cheat_ClearMissions (void);
+
+extern "C" void Mobile_Cheat_AddEnergy (float amt)
+{
+	EnergyModel_t1114015805 * em = EnergyModel_get_instance_m2532289002(NULL, NULL);
+	if (em != NULL)
+	{
+		EnergyModel_AddEnergy_m1227050388(em, amt, NULL);
+	}
+}
+
+extern "C" int32_t Mobile_Cheat_AddMoney (int32_t amt)
+{
+	MoneyModel_t730300829 * mm = MoneyModel_get_instance_m889587587(NULL, NULL);
+	if (mm == NULL)
+	{
+		return 0;
+	}
+	MoneyModel_Add_m60654245(mm, amt, NULL);
+	int32_t total = mm->get_money_1();
+	DeployUI_t2640253816 * dep = DeployUI_get_instance_m1366893038(NULL, NULL);
+	if (dep != NULL && dep->get_pointCount_16() != NULL)
+	{
+		char buf[32];
+		snprintf(buf, sizeof(buf), "%d", total);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, dep->get_pointCount_16(), il2cpp_codegen_string_new_wrapper(buf));
+	}
+	return total;
+}
+
+extern "C" int32_t Mobile_Cheat_MaxBullets (void)
+{
+	GlobalBulletManager_t3498327815 * gbm = GlobalBulletManager_get_instance_m1174714025(NULL, NULL);
+	if (gbm == NULL)
+	{
+		return 0;
+	}
+	GlobalBulletManager_Reload_m457390451(gbm, NULL);
+	return gbm->get_currentBullet_6();
+}
+
+static void Mobile_BuffAgentList (List_1_t3039790179 * list, int32_t * countOut)
+{
+	if (list == NULL || list->get__items_1() == NULL)
+	{
+		return;
+	}
+	int32_t size = list->get__size_2();
+	AgentModelU5BU5D_t1872897856 * items = list->get__items_1();
+	int32_t maxItems = (int32_t)(((RuntimeArray *)items)->max_length);
+	if (size > maxItems)
+	{
+		size = maxItems;
+	}
+	for (int32_t i = 0; i < size; i++)
+	{
+		AgentModel_t1567715437 * agent = items->GetAt(static_cast<il2cpp_array_size_t>(i));
+		if (agent == NULL)
+		{
+			continue;
+		}
+		WorkerPrimaryStat_t80627538 * ps = agent->get_primaryStat_79();
+		if (ps != NULL)
+		{
+			if (ps->get_hp_0() < 130) ps->set_hp_0(130);
+			if (ps->get_mental_1() < 130) ps->set_mental_1(130);
+			if (ps->get_work_2() < 130) ps->set_work_2(130);
+			if (ps->get_battle_3() < 130) ps->set_battle_3(130);
+		}
+		int32_t maxHp = UnitModel_get_maxHp_m705950594((UnitModel_t1924672552 *)agent, NULL);
+		int32_t maxSp = UnitModel_get_maxMental_m56006975((UnitModel_t1924672552 *)agent, NULL);
+		((UnitModel_t1924672552 *)agent)->set_hp_9((float)maxHp);
+		((UnitModel_t1924672552 *)agent)->set_mental_10((float)maxSp);
+		(*countOut)++;
+	}
+}
+
+extern "C" int32_t Mobile_Cheat_BuffNuggets (void)
+{
+	AgentManager_t117938221 * am = AgentManager_get_instance_m2650462115(NULL, NULL);
+	if (am == NULL)
+	{
+		return 0;
+	}
+	int32_t count = 0;
+	Mobile_BuffAgentList(am->get_agentList_2(), &count);
+	Mobile_BuffAgentList(am->get_agentListSpare_3(), &count);
+	return count;
+}
+
+extern "C" void Mobile_Cheat_SuppressAll (void)
+{
+	ConsoleCommand_t3167473278 * cc = ConsoleCommand_get_instance_m1073286692(NULL, NULL);
+	if (cc != NULL)
+	{
+		ConsoleCommand_SuppressAllCommand_m2453113421(cc, NULL);
+	}
+}
+
+extern "C" void Mobile_Cheat_ClearOverload (void)
+{
+	ConsoleCommand_t3167473278 * cc = ConsoleCommand_get_instance_m1073286692(NULL, NULL);
+	if (cc != NULL)
+	{
+		ConsoleCommand_ClearOverloadAction_m3938190372(cc, NULL);
+	}
+}
+
+extern "C" void Mobile_Cheat_UpgradeAllResearch (void)
+{
+	ResearchDataModel_t117885804 * rdm = ResearchDataModel_get_instance_m1437470587(NULL, NULL);
+	if (rdm == NULL)
+	{
+		return;
+	}
+	// Run 4 passes so multi-tier prerequisite chains unlock completely in one call
+	for (int32_t pass = 0; pass < 4; pass++)
+	{
+		ResearchDataModel_UpgradeAllResearch_m2782476781(rdm, NULL);
+	}
+	DeployUI_t2640253816 * dep = DeployUI_get_instance_m1366893038(NULL, NULL);
+	if (dep != NULL && DeployUI_get_IsEnabled_m2163230962(dep, NULL))
+	{
+		if (dep->get_researchWindow_14() != NULL)
+		{
+			ResearchWindow_SetActive_m3011648755(dep->get_researchWindow_14(), (bool)0, NULL);
+		}
+		if (dep->get_sefiraList_11() != NULL)
+		{
+			DeploySefiraList_ResearchInit_m891617177(dep->get_sefiraList_11(), NULL);
+		}
+	}
+}
+
 // System.Void ConsoleScript::ExecuteRawCommand(System.String)
 extern "C" IL2CPP_METHOD_ATTR void ConsoleScript_ExecuteRawCommand_m2229352777 (ConsoleScript_t447192940 * __this, String_t* ___command0, const RuntimeMethod* method)
 {
@@ -68714,17 +68855,7 @@ IL_0107:
 IL_010c:
 		{
 			V_4 = G_B17_0;
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_46 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			ObjectU5BU5D_t2843939325* L_47 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			int32_t L_48 = V_4;
-			int32_t L_49 = L_48;
-			RuntimeObject * L_50 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_49);
-			NullCheck(L_47);
-			ArrayElementTypeCheck (L_47, L_50);
-			(L_47)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_50);
-			NullCheck(L_46);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_46, 4, L_47, /*hidden argument*/NULL);
+			Mobile_Cheat_AddMoney(V_4);
 			int32_t L_51 = V_4;
 			int32_t L_52 = L_51;
 			RuntimeObject * L_53 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_52);
@@ -68783,10 +68914,7 @@ IL_0174:
 
 IL_0184:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_64 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_64);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_64, ((int32_t)10), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			Mobile_Cheat_MaxBullets();
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral720549196, /*hidden argument*/NULL);
 			goto IL_0545;
@@ -68851,16 +68979,7 @@ IL_01e5:
 
 IL_01f5:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_76 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			ObjectU5BU5D_t2843939325* L_77 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)1));
-			bool L_78 = ((bool)1);
-			RuntimeObject * L_79 = Box(Boolean_t97287965_il2cpp_TypeInfo_var, &L_78);
-			NullCheck(L_77);
-			ArrayElementTypeCheck (L_77, L_79);
-			(L_77)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_79);
-			NullCheck(L_76);
-			ConsoleCommand_AgentCommandOperation_m3105860653(L_76, 2, L_77, /*hidden argument*/NULL);
+			Mobile_Cheat_BuffNuggets();
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral3306822864, /*hidden argument*/NULL);
 			goto IL_0545;
@@ -68892,10 +69011,7 @@ IL_022e:
 
 IL_023e:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_85 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_85);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_85, ((int32_t)19), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			Mobile_Cheat_SuppressAll();
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2673339302, /*hidden argument*/NULL);
 			goto IL_0545;
@@ -68949,10 +69065,7 @@ IL_028f:
 
 IL_029f:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_95 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_95);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_95, ((int32_t)18), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			Mobile_Cheat_ClearOverload();
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2928161466, /*hidden argument*/NULL);
 			goto IL_0545;
@@ -68984,10 +69097,7 @@ IL_02d0:
 
 IL_02e0:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_101 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_101);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_101, ((int32_t)14), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			Mobile_Cheat_ClearMissions();
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral3207803418, /*hidden argument*/NULL);
 			goto IL_0545;
@@ -69019,10 +69129,7 @@ IL_0311:
 
 IL_0321:
 		{
-			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
-			ConsoleCommand_t3167473278 * L_107 = ConsoleCommand_get_instance_m1073286692(NULL /*static, unused*/, /*hidden argument*/NULL);
-			NullCheck(L_107);
-			ConsoleCommand_StandardCommandOperation_m2896255686(L_107, ((int32_t)20), ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+			Mobile_Cheat_UpgradeAllResearch();
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2496694344, /*hidden argument*/NULL);
 			goto IL_0545;

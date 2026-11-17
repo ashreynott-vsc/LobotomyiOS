@@ -60540,6 +60540,92 @@ IL_00d4:
 		return;
 	}
 }
+// Mobile Direct Cheat Dispatchers
+extern "C" void Mobile_Cheat_AddEnergy (float amt);
+extern "C" int32_t Mobile_Cheat_AddMoney (int32_t amt);
+extern "C" int32_t Mobile_Cheat_MaxBullets (void);
+extern "C" int32_t Mobile_Cheat_BuffNuggets (void);
+extern "C" void Mobile_Cheat_SuppressAll (void);
+extern "C" void Mobile_Cheat_ClearOverload (void);
+extern "C" void Mobile_Cheat_UpgradeAllResearch (void);
+extern "C" IL2CPP_METHOD_ATTR void MissionManager_DebugMissionClear_m1669215249 (MissionManager_t2988994282 * __this, int32_t ___index0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void DeployUI_Init_m167589074 (DeployUI_t2640253816 * __this, const RuntimeMethod* method);
+
+struct MobileMissionArray : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Mission_t4233471175 * m_Items[1];
+};
+
+extern "C" int32_t Mobile_Cheat_ClearMissions (void)
+{
+	MissionManager_t2988994282 * mm = MissionManager_get_instance_m2939335976(NULL, NULL);
+	if (mm == NULL)
+	{
+		return 0;
+	}
+	List_1_t1410578621 * list = MissionManager_GetMissionsInProgress_m3254963707(mm, NULL);
+	if (list == NULL || list->get__items_1() == NULL)
+	{
+		return 0;
+	}
+	int32_t count = list->get__size_2();
+	MobileMissionArray * arr = (MobileMissionArray *)(list->get__items_1());
+	int32_t maxItems = (int32_t)(arr->max_length);
+	if (count > maxItems)
+	{
+		count = maxItems;
+	}
+	GameManager_t1536523654 * gm = GameManager_get_currentGameManager_m3095105784(NULL, NULL);
+	bool inDeploy = (gm == NULL || gm->get_state_9() == 1);
+	int32_t cleared = 0;
+	for (int32_t i = 0; i < count; i++)
+	{
+		Mission_t4233471175 * m = arr->m_Items[i];
+		if (m == NULL)
+		{
+			continue;
+		}
+		m->set_isCleared_6((bool)1);
+		if (inDeploy)
+		{
+			MissionManager_ClearMission_m4084128972(mm, m, NULL);
+		}
+		cleared++;
+	}
+	if (cleared > 0)
+	{
+		MissionManager_DebugMissionClear_m1669215249(mm, -999, NULL);
+		if (inDeploy)
+		{
+			DeployUI_t2640253816 * dep = DeployUI_get_instance_m1366893038(NULL, NULL);
+			if (dep != NULL && DeployUI_get_IsEnabled_m2163230962(dep, NULL))
+			{
+				DeployUI_Init_m167589074(dep, NULL);
+			}
+		}
+	}
+	return cleared;
+}
+
+static bool MobileParseIntArg (const char * arg, int32_t * outVal)
+{
+	if (arg == NULL || arg[0] == '\0') return false;
+	int32_t sign = 1;
+	int idx = 0;
+	if (arg[0] == '-') { sign = -1; idx = 1; }
+	else if (arg[0] == '+') { idx = 1; }
+	if (arg[idx] < '0' || arg[idx] > '9') return false;
+	int32_t val = 0;
+	while (arg[idx] >= '0' && arg[idx] <= '9')
+	{
+		val = val * 10 + (arg[idx] - '0');
+		idx++;
+	}
+	*outVal = val * sign;
+	return true;
+}
+
 // System.Void MobileScreenManager::RunCheat(System.String)
 extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_RunCheat_m1197314851 (MobileScreenManager_t831028031 * __this, String_t* ___cmd0, const RuntimeMethod* method)
 {
@@ -60560,6 +60646,108 @@ extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_RunCheat_m1197314851 (Mob
 IL_0000:
 	try
 	{ // begin try (depth: 1)
+		if (___cmd0 != NULL && ___cmd0->get_length_0() > 0)
+		{
+			char rawBuf[256];
+			int32_t len = ___cmd0->get_length_0();
+			if (len > 255) len = 255;
+			Il2CppChar * chars = ___cmd0->get_address_of_start_char_1();
+			for (int32_t i = 0; i < len; i++)
+			{
+				Il2CppChar ch = chars[i];
+				rawBuf[i] = (ch < 128) ? (char)ch : '?';
+			}
+			rawBuf[len] = '\0';
+
+			char tok[64];
+			char arg[64];
+			tok[0] = '\0';
+			arg[0] = '\0';
+			int p = 0;
+			while (p < len && (rawBuf[p] == ' ' || rawBuf[p] == '\t')) p++;
+			int ti = 0;
+			while (p < len && rawBuf[p] != ' ' && rawBuf[p] != '\t' && rawBuf[p] != '.' && ti < 63)
+			{
+				char c = rawBuf[p++];
+				if (c >= 'A' && c <= 'Z') c = (char)(c + ('a' - 'A'));
+				tok[ti++] = c;
+			}
+			tok[ti] = '\0';
+			while (p < len && (rawBuf[p] == ' ' || rawBuf[p] == '\t' || rawBuf[p] == '.')) p++;
+			int ai = 0;
+			while (p < len && rawBuf[p] != ' ' && rawBuf[p] != '\t' && ai < 63)
+			{
+				arg[ai++] = rawBuf[p++];
+			}
+			arg[ai] = '\0';
+
+			char statusBuf[128];
+			if (strcmp(tok, "energy") == 0 || strcmp(tok, "enkephalin") == 0 || strcmp(tok, "expectopatronum") == 0)
+			{
+				int32_t amt = 500;
+				MobileParseIntArg(arg, &amt);
+				Mobile_Cheat_AddEnergy((float)amt);
+				snprintf(statusBuf, sizeof(statusBuf), "Added %d Enkephalin", amt);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "money") == 0 || strcmp(tok, "lob") == 0 || strcmp(tok, "salmonsushi") == 0)
+			{
+				int32_t amt = 1000;
+				MobileParseIntArg(arg, &amt);
+				int32_t total = Mobile_Cheat_AddMoney(amt);
+				snprintf(statusBuf, sizeof(statusBuf), "Added %d LOB (Total: %d)", amt, total);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "bullets") == 0 || strcmp(tok, "ammo") == 0 || strcmp(tok, "maxbullets") == 0 || strcmp(tok, "sniperelite") == 0)
+			{
+				int32_t cur = Mobile_Cheat_MaxBullets();
+				snprintf(statusBuf, sizeof(statusBuf), "Bullets reloaded (%d)", cur);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "buffnugget") == 0 || strcmp(tok, "supersoldier") == 0 || strcmp(tok, "nugget") == 0 || strcmp(tok, "buffagent") == 0 || strcmp(tok, "captainlobotomy") == 0)
+			{
+				int32_t buffed = Mobile_Cheat_BuffNuggets();
+				snprintf(statusBuf, sizeof(statusBuf), "Buffed %d agent(s) to EX (130+)", buffed);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "suppress") == 0 || strcmp(tok, "cryofbanshee") == 0)
+			{
+				Mobile_Cheat_SuppressAll();
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper("Suppressed escaped Abnormalities"));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "clearmeltdown") == 0 || strcmp(tok, "clearoverload") == 0 || strcmp(tok, "meltdown") == 0)
+			{
+				Mobile_Cheat_ClearOverload();
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper("Cleared all meltdowns"));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "mission") == 0)
+			{
+				int32_t cleared = Mobile_Cheat_ClearMissions();
+				if (cleared > 0)
+				{
+					snprintf(statusBuf, sizeof(statusBuf), "Cleared %d active mission(s)", cleared);
+				}
+				else
+				{
+					snprintf(statusBuf, sizeof(statusBuf), "No active missions to clear");
+				}
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "research") == 0 || strcmp(tok, "alldone") == 0)
+			{
+				Mobile_Cheat_UpgradeAllResearch();
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper("All research unlocked"));
+				goto IL_005d;
+			}
+		}
+
 		{
 			ConsoleScript_t447192940 * L_0 = ConsoleScript_get_instance_m2971312509(NULL /*static, unused*/, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
