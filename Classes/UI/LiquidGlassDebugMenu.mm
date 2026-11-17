@@ -1,10 +1,29 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <mach/mach.h>
 
 extern "C" {
     UIView* UnityGetGLView(void);
     UIViewController* UnityGetGLViewController(void);
     void UnitySendMessage(const char* obj, const char* method, const char* msg);
+}
+
+__attribute__((constructor)) static void EnableMetalPerformanceHUD(void) {
+    setenv("MTL_HUD_ENABLED", "1", 1);
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalForceHudEnabled"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHUDEnabled"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHudEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+static int64_t GetPhysicalMemoryMB(void) {
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t kr = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&vmInfo, &count);
+    if (kr == KERN_SUCCESS) {
+        return (int64_t)(vmInfo.phys_footprint / (1024 * 1024));
+    }
+    return 0;
 }
 
 // -------------------------------------------------------------
@@ -512,14 +531,39 @@ static UIButton* CreateGlassButton(NSString *title, id target, SEL action) {
 }
 
 - (void)updateTelemetry:(NSString *)text {
+    int64_t physMB = GetPhysicalMemoryMB();
+
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.telemetryLabel) {
-            self.telemetryLabel.text = text;
-        }
-        // Extract FPS and RAM for pill label
         NSArray *lines = [text componentsSeparatedByString:@"\n"];
-        if (lines.count > 0) {
-            self.pillLabel.text = lines[0];
+        NSString *firstLine = lines.count > 0 ? lines[0] : @"";
+
+        // Parse FPS prefix (e.g. "60 fps")
+        NSString *fpsPrefix = @"60 fps";
+        NSRange fpsRange = [firstLine rangeOfString:@" fps"];
+        if (fpsRange.location != NSNotFound) {
+            fpsPrefix = [firstLine substringToIndex:fpsRange.location + 4];
+        }
+
+        if (physMB > 0) {
+            self.pillLabel.text = [NSString stringWithFormat:@"%@ · %lld MB", fpsPrefix, physMB];
+        } else {
+            self.pillLabel.text = firstLine;
+        }
+
+        if (self.telemetryLabel) {
+            if (physMB > 0 && lines.count > 1) {
+                NSString *line1 = lines[1];
+                NSRange ramIdx = [line1 rangeOfString:@"RAM:"];
+                if (ramIdx.location != NSNotFound) {
+                    NSString *lead = [line1 substringToIndex:ramIdx.location];
+                    NSString *monoTail = [line1 substringFromIndex:ramIdx.location + 4];
+                    line1 = [NSString stringWithFormat:@"%@Physical RAM: %lld MB (Mono:%@)", lead, physMB, monoTail];
+                }
+                NSString *line2 = lines.count > 2 ? lines[2] : @"";
+                self.telemetryLabel.text = [NSString stringWithFormat:@"%@\n%@", line1, line2];
+            } else {
+                self.telemetryLabel.text = text;
+            }
         }
     });
 }

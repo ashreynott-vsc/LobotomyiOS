@@ -31,6 +31,10 @@
     <string>0</string>
     <key>LSRequiresIPhoneOS</key>
     <true />
+    <key>MetalHUDEnabled</key>
+    <true />
+    <key>MetalHudEnabled</key>
+    <true />
     <key>NSAppTransportSecurity</key>
     <dict>
       <key>NSAllowsArbitraryLoads</key>

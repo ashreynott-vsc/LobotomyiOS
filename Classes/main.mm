@@ -14,6 +14,12 @@ const char* AppControllerClassName = "UnityAppController";
 
 int main(int argc, char* argv[])
 {
+    setenv("MTL_HUD_ENABLED", "1", 1);
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalForceHudEnabled"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHUDEnabled"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHudEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     UnityInitStartupTime();
     @autoreleasepool
     {
