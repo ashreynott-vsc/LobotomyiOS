@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include <unordered_map>
 
 template <typename T1>
 struct VirtActionInvoker1
@@ -63547,6 +63548,20 @@ IL_021c:
 	}
 }
 // System.Void AgentUnit::Update()
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+
+struct MobileAgentUiCache
+{
+	uintptr_t lastModelPtr;
+	int32_t lastState;
+	int32_t lastSyncFrame;
+	bool valid;
+};
+
+static std::unordered_map<uintptr_t, MobileAgentUiCache> s_agentUiCache;
+static int32_t s_agentUiSceneGen = -1;
+
 extern "C" IL2CPP_METHOD_ATTR void AgentUnit_Update_m3223200347 (AgentUnit_t3059606777 * __this, const RuntimeMethod* method)
 {
 	{
@@ -63633,35 +63648,37 @@ IL_009f:
 		Sefira_t955407239 * L_15 = SefiraManager_GetSefira_m531878311(L_14, 1, /*hidden argument*/NULL);
 		NullCheck(L_15);
 		int32_t L_16 = Sefira_GetCurrentAbilityLevel_m1335742282(L_15, /*hidden argument*/NULL);
-		if ((((int32_t)L_16) <= ((int32_t)0)))
+		int32_t curGen = Mobile_GetSceneGeneration();
+		if (s_agentUiSceneGen != curGen)
 		{
-			goto IL_00d6;
+			s_agentUiCache.clear();
+			s_agentUiSceneGen = curGen;
 		}
-	}
-	{
-		bool L_17 = ((WorkerUnit_t3080928601 *)__this)->get_uiActivated_20();
-		if (!L_17)
+		bool uiAct = ((WorkerUnit_t3080928601 *)__this)->get_uiActivated_20();
+		int32_t stateCode = (L_16 > 0) ? (uiAct ? 2 : 1) : 0;
+		AgentModel_t1567715437 * curModel = __this->get_model_27();
+		int32_t curFrame = Mobile_GetFrameCount();
+		MobileAgentUiCache & uc = s_agentUiCache[(uintptr_t)__this];
+		if (!uc.valid || uc.lastState != stateCode || uc.lastModelPtr != (uintptr_t)curModel || (curFrame - uc.lastSyncFrame) >= 90)
 		{
-			goto IL_00d1;
+			bool stateChanged = (!uc.valid || uc.lastState != stateCode || uc.lastModelPtr != (uintptr_t)curModel);
+			uc.lastState = stateCode;
+			uc.lastModelPtr = (uintptr_t)curModel;
+			uc.lastSyncFrame = stateChanged ? (curFrame - ((int32_t)(((uintptr_t)__this >> 4) & 31))) : curFrame;
+			uc.valid = true;
+			if (stateCode == 2)
+			{
+				AgentUnitUI_t1072739677 * L_18 = __this->get_ui_41();
+				NullCheck(L_18);
+				AgentUnitUI_activateUI_m2282989045(L_18, curModel, /*hidden argument*/NULL);
+			}
+			else if (stateCode == 0)
+			{
+				AgentUnitUI_t1072739677 * L_20 = __this->get_ui_41();
+				NullCheck(L_20);
+				AgentUnitUI_initUI_m800551082(L_20, /*hidden argument*/NULL);
+			}
 		}
-	}
-	{
-		AgentUnitUI_t1072739677 * L_18 = __this->get_ui_41();
-		AgentModel_t1567715437 * L_19 = __this->get_model_27();
-		NullCheck(L_18);
-		AgentUnitUI_activateUI_m2282989045(L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00d1:
-	{
-		goto IL_00e1;
-	}
-
-IL_00d6:
-	{
-		AgentUnitUI_t1072739677 * L_20 = __this->get_ui_41();
-		NullCheck(L_20);
-		AgentUnitUI_initUI_m800551082(L_20, /*hidden argument*/NULL);
 	}
 
 IL_00e1:

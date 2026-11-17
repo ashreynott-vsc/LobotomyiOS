@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include "il2cpp-api.h"
 
 template <typename R>
 struct VirtFuncInvoker0
@@ -64416,6 +64417,7 @@ IL_006d:
 	}
 }
 // System.Void Notice::Send(System.String,System.Object[])
+extern "C" int32_t Mobile_GetSceneGeneration(void);
 extern "C" IL2CPP_METHOD_ATTR void Notice_Send_m2578474234 (Notice_t3379439397 * __this, String_t* ___notice0, ObjectU5BU5D_t2843939325* ___param1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64443,7 +64445,43 @@ extern "C" IL2CPP_METHOD_ATTR void Notice_Send_m2578474234 (Notice_t3379439397 *
 	{
 		List_1_t2614775198 * L_3 = V_0;
 		NullCheck(L_3);
-		IObserverU5BU5D_t3467748025* L_4 = List_1_ToArray_m2911874677(L_3, /*hidden argument*/List_1_ToArray_m2911874677_RuntimeMethod_var);
+		IL2CPP_RUNTIME_CLASS_INIT(NoticeName_t1380086577_il2cpp_TypeInfo_var);
+		NoticeName_t1380086577_StaticFields * nn = (NoticeName_t1380086577_StaticFields *)il2cpp_codegen_static_fields_for(NoticeName_t1380086577_il2cpp_TypeInfo_var);
+		IObserverU5BU5D_t3467748025* L_4 = NULL;
+		if (___notice0 == nn->get_Update_2() || ___notice0 == nn->get_FixedUpdate_1())
+		{
+			int slot = (___notice0 == nn->get_Update_2()) ? 0 : 1;
+			static uintptr_t s_listPtr[2] = { 0, 0 };
+			static int32_t s_listVer[2] = { -1, -1 };
+			static int32_t s_listGen[2] = { -1, -1 };
+			static uint32_t s_arrHandle[2] = { 0, 0 };
+			int32_t curGen = Mobile_GetSceneGeneration();
+			int32_t curVer = L_3->get__version_3();
+			if (s_listGen[slot] == curGen && s_listPtr[slot] == (uintptr_t)L_3 && s_listVer[slot] == curVer && s_arrHandle[slot] != 0)
+			{
+				L_4 = (IObserverU5BU5D_t3467748025*)il2cpp_gchandle_get_target(s_arrHandle[slot]);
+			}
+			if (L_4 == NULL)
+			{
+				L_4 = List_1_ToArray_m2911874677(L_3, /*hidden argument*/List_1_ToArray_m2911874677_RuntimeMethod_var);
+				if (s_arrHandle[slot] != 0)
+				{
+					il2cpp_gchandle_free(s_arrHandle[slot]);
+					s_arrHandle[slot] = 0;
+				}
+				if (L_4 != NULL)
+				{
+					s_arrHandle[slot] = il2cpp_gchandle_new((Il2CppObject *)L_4, false);
+				}
+				s_listPtr[slot] = (uintptr_t)L_3;
+				s_listVer[slot] = curVer;
+				s_listGen[slot] = curGen;
+			}
+		}
+		else
+		{
+			L_4 = List_1_ToArray_m2911874677(L_3, /*hidden argument*/List_1_ToArray_m2911874677_RuntimeMethod_var);
+		}
 		V_1 = L_4;
 		IObserverU5BU5D_t3467748025* L_5 = V_1;
 		V_2 = L_5;

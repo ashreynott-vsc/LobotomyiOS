@@ -74524,6 +74524,7 @@ extern "C" IL2CPP_METHOD_ATTR void GameManager_ClearAction_m643889879 (GameManag
 	}
 }
 // System.Void GameManager::ExitStage()
+extern "C" void Mobile_NotifyStageTransition(void);
 extern "C" IL2CPP_METHOD_ATTR void GameManager_ExitStage_m3506195490 (GameManager_t1536523654 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74562,6 +74563,7 @@ IL_0011:
 		NullCheck(L_4);
 		PlayerModel_Nextday_m1507239128(L_4, /*hidden argument*/NULL);
 		GameManager_Release_m1882877408(__this, /*hidden argument*/NULL);
+		Mobile_NotifyStageTransition();
 		int32_t L_5 = V_0;
 		if (L_5)
 		{

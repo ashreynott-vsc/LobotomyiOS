@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include "il2cpp-api.h"
 
 template <typename R>
 struct VirtFuncInvoker0
@@ -67708,6 +67709,16 @@ IL_0101:
 		return;
 	}
 }
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_Find_m1729760951 (Transform_t3600365921 * __this, String_t* p0, const RuntimeMethod* method);
+
+static int32_t s_rabbitOpenFrame = -1000;
+static int32_t s_rabbitModalSceneGen = -1;
+static uint32_t s_rabbitModalTransformHandle = 0;
+static uintptr_t s_rabbitCachedWindowPtr = 0;
+static bool s_rabbitCloseRequestedForOpen = false;
+
 // System.Void Rabbit.RabbitProtocolWindow::Update()
 extern "C" IL2CPP_METHOD_ATTR void RabbitProtocolWindow_Update_m589203197 (RabbitProtocolWindow_t258339763 * __this, const RuntimeMethod* method)
 {
@@ -67781,15 +67792,18 @@ IL_004b:
 
 IL_0067:
 	{
-		AnimationCurve_t3046754366 * L_11 = __this->get_filterAlphaCurve_16();
-		UnscaledTimer_t2981502462 * L_12 = __this->get__filterAlphaTimer_19();
-		NullCheck(L_12);
-		float L_13 = Timer_get_Rate_m1165722310(L_12, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		float L_14 = AnimationCurve_Evaluate_m2125563588(L_11, L_13, /*hidden argument*/NULL);
-		V_0 = L_14;
-		float L_15 = V_0;
-		RabbitProtocolWindow_SetFilterAlpha_m549256418(__this, L_15, /*hidden argument*/NULL);
+		if ((Mobile_GetFrameCount() % 3) == 0)
+		{
+			AnimationCurve_t3046754366 * L_11 = __this->get_filterAlphaCurve_16();
+			UnscaledTimer_t2981502462 * L_12 = __this->get__filterAlphaTimer_19();
+			NullCheck(L_12);
+			float L_13 = Timer_get_Rate_m1165722310(L_12, /*hidden argument*/NULL);
+			NullCheck(L_11);
+			float L_14 = AnimationCurve_Evaluate_m2125563588(L_11, L_13, /*hidden argument*/NULL);
+			V_0 = L_14;
+			float L_15 = V_0;
+			RabbitProtocolWindow_SetFilterAlpha_m549256418(__this, L_15, /*hidden argument*/NULL);
+		}
 		UnscaledTimer_t2981502462 * L_16 = __this->get__filterAlphaTimer_19();
 		NullCheck(L_16);
 		bool L_17 = VirtFuncInvoker0< bool >::Invoke(6 /* System.Boolean Timer::RunTimer() */, L_16);
@@ -68118,6 +68132,8 @@ extern "C" IL2CPP_METHOD_ATTR void RabbitProtocolWindow_OnOpen_m3655173925 (Rabb
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
 	{
+		s_rabbitOpenFrame = Mobile_GetFrameCount();
+		s_rabbitCloseRequestedForOpen = false;
 		RabbitProtocolWindow_set_Activated_m2438237901(__this, (bool)1, /*hidden argument*/NULL);
 		__this->set_protocolActivated_24((bool)0);
 		UIController_t2237998930 * L_0 = __this->get_windowAnim_12();
@@ -68193,6 +68209,128 @@ extern "C" IL2CPP_METHOD_ATTR void RabbitProtocolWindow_OnClose_m2777076457 (Rab
 		NullCheck(L_0);
 		VirtActionInvoker0::Invoke(5 /* System.Void UIController::Hide() */, L_0);
 		return;
+	}
+}
+
+extern "C" bool Mobile_IsRabbitSelectionOpen(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return false;
+	}
+	if (!win->get__activated_23() || win->get_protocolActivated_24() || s_rabbitCloseRequestedForOpen)
+	{
+		return false;
+	}
+	return (Mobile_GetFrameCount() - s_rabbitOpenFrame) > 2;
+}
+
+extern "C" Transform_t3600365921 * Mobile_GetRabbitModalTransform(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	int32_t curGen = Mobile_GetSceneGeneration();
+	if (s_rabbitModalSceneGen != curGen || s_rabbitCachedWindowPtr != (uintptr_t)win)
+	{
+		if (s_rabbitModalTransformHandle != 0)
+		{
+			il2cpp_gchandle_free(s_rabbitModalTransformHandle);
+			s_rabbitModalTransformHandle = 0;
+		}
+		s_rabbitModalSceneGen = curGen;
+		s_rabbitCachedWindowPtr = (uintptr_t)win;
+	}
+	if (s_rabbitModalTransformHandle != 0)
+	{
+		Transform_t3600365921 * cached = (Transform_t3600365921 *)il2cpp_gchandle_get_target(s_rabbitModalTransformHandle);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cached, (Object_t631007953 *)NULL, NULL))
+		{
+			return cached;
+		}
+		il2cpp_gchandle_free(s_rabbitModalTransformHandle);
+		s_rabbitModalTransformHandle = 0;
+	}
+	Transform_t3600365921 * roots[2] = { NULL, NULL };
+	roots[0] = Component_get_transform_m3162698980((Component_t1923634451 *)win, NULL);
+	GameObject_t1113636619 * rootGo = win->get_root_5();
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rootGo, (Object_t631007953 *)NULL, NULL))
+	{
+		roots[1] = GameObject_get_transform_m1369836730(rootGo, NULL);
+	}
+	static const char * const kPaths[] = {
+		"Pivot/Frame",
+		"ProtocolUI/Pivot/Frame",
+		"Canvas/ProtocolUI/Pivot/Frame",
+		"Frame"
+	};
+	Transform_t3600365921 * found = NULL;
+	for (int r = 0; r < 2 && !found; ++r)
+	{
+		Transform_t3600365921 * baseTr = roots[r];
+		if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)baseTr, (Object_t631007953 *)NULL, NULL))
+		{
+			continue;
+		}
+		for (int p = 0; p < 4; ++p)
+		{
+			Transform_t3600365921 * candidate = Transform_Find_m1729760951(baseTr, il2cpp_codegen_string_new_wrapper(kPaths[p]), NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)candidate, (Object_t631007953 *)NULL, NULL))
+			{
+				found = candidate;
+				break;
+			}
+		}
+	}
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)found, (Object_t631007953 *)NULL, NULL))
+	{
+		found = roots[0];
+	}
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)found, (Object_t631007953 *)NULL, NULL))
+	{
+		s_rabbitModalTransformHandle = il2cpp_gchandle_new((Il2CppObject *)found, false);
+	}
+	return found;
+}
+
+extern "C" Graphic_t1660335611 * Mobile_GetRabbitModalGraphic(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	RuntimeObject * g = (RuntimeObject *)win->get_Cost_8();
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)g, (Object_t631007953 *)NULL, NULL))
+	{
+		return (Graphic_t1660335611 *)g;
+	}
+	g = (RuntimeObject *)win->get_Count_9();
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)g, (Object_t631007953 *)NULL, NULL))
+	{
+		return (Graphic_t1660335611 *)g;
+	}
+	return (Graphic_t1660335611 *)(RuntimeObject *)win->get_CostText_10();
+}
+
+extern "C" void Mobile_CloseRabbitSelectionWindow(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	if (win->get__activated_23() && !win->get_protocolActivated_24() && !s_rabbitCloseRequestedForOpen)
+	{
+		s_rabbitCloseRequestedForOpen = true;
+		RabbitProtocolWindow_OnClose_m2777076457(win, NULL);
 	}
 }
 // System.Void Rabbit.RabbitProtocolWindow::OnWindowClosed()
@@ -76003,6 +76141,10 @@ extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * RabbitModel_MakeSo
 // System.Void RabbitModel::CheckNear()
 extern "C" IL2CPP_METHOD_ATTR void RabbitModel_CheckNear_m2561153591 (RabbitModel_t1960789504 * __this, const RuntimeMethod* method)
 {
+	if ((((uint32_t)Mobile_GetFrameCount() + (uint32_t)((uintptr_t)__this >> 4)) % 25u) != 0u)
+	{
+		return;
+	}
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{

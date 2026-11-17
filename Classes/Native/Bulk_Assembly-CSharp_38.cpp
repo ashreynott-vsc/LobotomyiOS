@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include <unordered_map>
 
 template <typename T1>
 struct VirtActionInvoker1
@@ -42592,11 +42593,105 @@ IL_006e:
 		return;
 	}
 }
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+extern "C" bool Mobile_IsInMainCameraView(float wx, float wy, int32_t layer);
+extern "C" IL2CPP_METHOD_ATTR int32_t GameObject_get_layer_m4158800245 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+
+struct MobileSpineVisEntry
+{
+	int32_t frame;
+	bool visible;
+};
+
+static int32_t s_spineSceneGen = -1;
+static std::unordered_map<int32_t, int32_t> s_spineInitFrames;
+static std::unordered_map<int32_t, float> s_spineAccumDt;
+static std::unordered_map<int32_t, MobileSpineVisEntry> s_spineVisCache;
+
+static inline void Mobile_SpineSyncGen(void)
+{
+	int32_t curGen = Mobile_GetSceneGeneration();
+	if (s_spineSceneGen != curGen)
+	{
+		s_spineInitFrames.clear();
+		s_spineAccumDt.clear();
+		s_spineVisCache.clear();
+		s_spineSceneGen = curGen;
+	}
+}
+
+static bool Mobile_SpineIsVisibleOrInit(SkeletonRenderer_t2098681813 * sr, int32_t * outInstId, bool countInitFrame, bool * outRawVisible)
+{
+	Mobile_SpineSyncGen();
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	int32_t instId = Object_GetInstanceID_m1255174761((Object_t631007953 *)sr, NULL);
+	if (outInstId) *outInstId = instId;
+	int32_t curFrame = Mobile_GetFrameCount();
+	MobileSpineVisEntry & visEntry = s_spineVisCache[instId];
+	bool rawVis;
+	if (visEntry.frame == curFrame)
+	{
+		rawVis = visEntry.visible;
+	}
+	else
+	{
+		rawVis = true;
+		GameObject_t1113636619 * go = Component_get_gameObject_m442555142((Component_t1923634451 *)sr, NULL);
+		int32_t layer = Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL)
+			? GameObject_get_layer_m4158800245(go, NULL)
+			: 5;
+		if (layer != 5)
+		{
+			Transform_t3600365921 * tr = Component_get_transform_m3162698980((Component_t1923634451 *)sr, NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+			{
+				Vector3_t3722313464 pos = Transform_get_position_m36019626(tr, NULL);
+				rawVis = Mobile_IsInMainCameraView(pos.get_x_1(), pos.get_y_2(), layer);
+			}
+		}
+		visEntry.frame = curFrame;
+		visEntry.visible = rawVis;
+	}
+	if (outRawVisible) *outRawVisible = rawVis;
+	int32_t & initCount = s_spineInitFrames[instId];
+	if (initCount < 5)
+	{
+		if (countInitFrame) ++initCount;
+		return true;
+	}
+	return rawVis;
+}
+
 // System.Void Spine.Unity.SkeletonAnimation::Update()
 extern "C" IL2CPP_METHOD_ATTR void SkeletonAnimation_Update_m1536764698 (SkeletonAnimation_t3693186521 * __this, const RuntimeMethod* method)
 {
 	{
 		float L_0 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t instId = 0;
+		bool rawVis = true;
+		bool allowFull = Mobile_SpineIsVisibleOrInit((SkeletonRenderer_t2098681813 *)__this, &instId, false, &rawVis);
+		if (!allowFull)
+		{
+			float & acc = s_spineAccumDt[instId];
+			acc += L_0;
+			if (((Mobile_GetFrameCount() + (instId & 7)) & 7) != 0)
+			{
+				return;
+			}
+			float flushDt = acc;
+			acc = 0.0f;
+			if (flushDt > 0.25f) flushDt = 0.25f;
+			SkeletonAnimation_Update_m4260596324(__this, flushDt, /*hidden argument*/NULL);
+			return;
+		}
+		std::unordered_map<int32_t, float>::iterator it = s_spineAccumDt.find(instId);
+		if (it != s_spineAccumDt.end())
+		{
+			L_0 += it->second;
+			if (L_0 > 0.25f) L_0 = 0.25f;
+			s_spineAccumDt.erase(it);
+		}
 		SkeletonAnimation_Update_m4260596324(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
@@ -43065,6 +43160,14 @@ extern "C" IL2CPP_METHOD_ATTR void SkeletonAnimator_Update_m4153604570 (Skeleton
 
 IL_000c:
 	{
+		int32_t instId = 0;
+		if (!Mobile_SpineIsVisibleOrInit((SkeletonRenderer_t2098681813 *)__this, &instId, false, NULL))
+		{
+			if (((Mobile_GetFrameCount() + (instId & 7)) & 7) != 0)
+			{
+				return;
+			}
+		}
 		int32_t L_1 = ((SkeletonRenderer_t2098681813 *)__this)->get_optimizeLevel_8();
 		V_0 = L_1;
 		int32_t L_2 = V_0;
@@ -48287,6 +48390,10 @@ extern "C" IL2CPP_METHOD_ATTR void SkeletonRenderer_LateUpdate_m2308073859 (Skel
 
 IL_000c:
 	{
+		if (!Mobile_SpineIsVisibleOrInit(__this, NULL, true, NULL))
+		{
+			return;
+		}
 		int32_t L_1 = __this->get__optCount_32();
 		__this->set__optCount_32(((int32_t)il2cpp_codegen_add((int32_t)L_1, (int32_t)1)));
 		int32_t L_2 = __this->get_optimizeLevel_8();

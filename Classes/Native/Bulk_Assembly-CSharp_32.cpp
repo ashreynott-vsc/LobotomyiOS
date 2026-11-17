@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include "il2cpp-api.h"
 
 template <typename R>
 struct VirtFuncInvoker0
@@ -51892,6 +51893,37 @@ extern "C" IL2CPP_METHOD_ATTR void RabbitMovingAttackCommand_AttackOrMove_m18016
 		s_Il2CppMethodInitialized = true;
 	}
 	RabbitModel_t1960789504 * V_0 = NULL;
+struct MobileUnitListScratchGuard
+{
+	List_1_t3396747294 * l1;
+	List_1_t3396747294 * l2;
+	bool * activeFlag;
+	MobileUnitListScratchGuard() : l1(NULL), l2(NULL), activeFlag(NULL) {}
+	static inline void ClearList(List_1_t3396747294 * lst)
+	{
+		if (!lst) return;
+		int32_t sz = lst->get__size_2();
+		UnitModelU5BU5D_t781129273 * items = lst->get__items_1();
+		if (items && sz > 0)
+		{
+			int32_t cap = (int32_t)(((RuntimeArray *)items)->max_length);
+			int32_t n = sz < cap ? sz : cap;
+			for (int32_t i = 0; i < n; ++i)
+			{
+				items->m_Items[i] = NULL;
+			}
+		}
+		lst->set__size_2(0);
+		lst->set__version_3(lst->get__version_3() + 1);
+	}
+	~MobileUnitListScratchGuard()
+	{
+		ClearList(l1);
+		ClearList(l2);
+		if (activeFlag) *activeFlag = false;
+	}
+};
+
 	MovableObjectNode_t157422193 * V_1 = NULL;
 	PassageObjectModel_t3642329870 * V_2 = NULL;
 	List_1_t3396747294 * V_3 = NULL;
@@ -51916,6 +51948,7 @@ extern "C" IL2CPP_METHOD_ATTR void RabbitMovingAttackCommand_AttackOrMove_m18016
 	NO_UNUSED_WARNING (__exception_local);
 	int32_t __leave_target = 0;
 	NO_UNUSED_WARNING (__leave_target);
+	MobileUnitListScratchGuard m_scratchGuard;
 	{
 		UnitModel_t1924672552 * L_0 = ((UnitCommand_t3548252258 *)__this)->get_actor_0();
 		V_0 = ((RabbitModel_t1960789504 *)CastclassClass((RuntimeObject*)L_0, RabbitModel_t1960789504_il2cpp_TypeInfo_var));
@@ -51952,11 +51985,50 @@ IL_0023:
 		NullCheck(L_7);
 		PassageObjectModel_t3642329870 * L_8 = MovableObjectNode_GetPassage_m1009344861(L_7, /*hidden argument*/NULL);
 		V_2 = L_8;
-		List_1_t3396747294 * L_9 = (List_1_t3396747294 *)il2cpp_codegen_object_new(List_1_t3396747294_il2cpp_TypeInfo_var);
-		List_1__ctor_m672026209(L_9, /*hidden argument*/List_1__ctor_m672026209_RuntimeMethod_var);
+		static uint32_t s_scratchHandle1 = 0;
+		static uint32_t s_scratchHandle2 = 0;
+		static bool s_scratchInUse = false;
+		List_1_t3396747294 * L_9 = NULL;
+		List_1_t3396747294 * L_10 = NULL;
+		if (!s_scratchInUse)
+		{
+			s_scratchInUse = true;
+			m_scratchGuard.activeFlag = &s_scratchInUse;
+			if (s_scratchHandle1 != 0)
+			{
+				L_9 = (List_1_t3396747294 *)il2cpp_gchandle_get_target(s_scratchHandle1);
+			}
+			if (!L_9)
+			{
+				L_9 = (List_1_t3396747294 *)il2cpp_codegen_object_new(List_1_t3396747294_il2cpp_TypeInfo_var);
+				List_1__ctor_m672026209(L_9, /*hidden argument*/List_1__ctor_m672026209_RuntimeMethod_var);
+				if (s_scratchHandle1 != 0) il2cpp_gchandle_free(s_scratchHandle1);
+				s_scratchHandle1 = il2cpp_gchandle_new((Il2CppObject *)L_9, false);
+			}
+			MobileUnitListScratchGuard::ClearList(L_9);
+			m_scratchGuard.l1 = L_9;
+			if (s_scratchHandle2 != 0)
+			{
+				L_10 = (List_1_t3396747294 *)il2cpp_gchandle_get_target(s_scratchHandle2);
+			}
+			if (!L_10)
+			{
+				L_10 = (List_1_t3396747294 *)il2cpp_codegen_object_new(List_1_t3396747294_il2cpp_TypeInfo_var);
+				List_1__ctor_m672026209(L_10, /*hidden argument*/List_1__ctor_m672026209_RuntimeMethod_var);
+				if (s_scratchHandle2 != 0) il2cpp_gchandle_free(s_scratchHandle2);
+				s_scratchHandle2 = il2cpp_gchandle_new((Il2CppObject *)L_10, false);
+			}
+			MobileUnitListScratchGuard::ClearList(L_10);
+			m_scratchGuard.l2 = L_10;
+		}
+		else
+		{
+			L_9 = (List_1_t3396747294 *)il2cpp_codegen_object_new(List_1_t3396747294_il2cpp_TypeInfo_var);
+			List_1__ctor_m672026209(L_9, /*hidden argument*/List_1__ctor_m672026209_RuntimeMethod_var);
+			L_10 = (List_1_t3396747294 *)il2cpp_codegen_object_new(List_1_t3396747294_il2cpp_TypeInfo_var);
+			List_1__ctor_m672026209(L_10, /*hidden argument*/List_1__ctor_m672026209_RuntimeMethod_var);
+		}
 		V_3 = L_9;
-		List_1_t3396747294 * L_10 = (List_1_t3396747294 *)il2cpp_codegen_object_new(List_1_t3396747294_il2cpp_TypeInfo_var);
-		List_1__ctor_m672026209(L_10, /*hidden argument*/List_1__ctor_m672026209_RuntimeMethod_var);
 		V_4 = L_10;
 		PassageObjectModel_t3642329870 * L_11 = V_2;
 		if (!L_11)

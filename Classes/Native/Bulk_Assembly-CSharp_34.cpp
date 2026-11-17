@@ -17,6 +17,8 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include "il2cpp-api.h"
+#include <unordered_map>
 
 template <typename R>
 struct VirtFuncInvoker0
@@ -52550,6 +52552,21 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraFilterMgr_SetColor_m2958334245 (SefiraF
 		return;
 	}
 }
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+extern "C" IL2CPP_METHOD_ATTR int32_t Object_GetInstanceID_m1255174761 (Object_t631007953 * __this, const RuntimeMethod* method);
+
+struct MobileFilterCacheEntry
+{
+	uint32_t rootHandle;
+	uint32_t childrenHandle;
+	float lastAlpha;
+	bool lastRootCtrl;
+	bool valid;
+};
+
+static std::unordered_map<int32_t, MobileFilterCacheEntry> s_sefiraFilterCache;
+static int32_t s_sefiraFilterSceneGen = -1;
+
 // System.Void SefiraFilterMgr::SetAlpha(System.Single,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void SefiraFilterMgr_SetAlpha_m1904575641 (SefiraFilterMgr_t2956624745 * __this, float ___alpha0, bool ___rootControl1, const RuntimeMethod* method)
 {
@@ -52558,6 +52575,28 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraFilterMgr_SetAlpha_m1904575641 (SefiraF
 	{
 		il2cpp_codegen_initialize_method (SefiraFilterMgr_SetAlpha_m1904575641_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
+	}
+	int32_t curGen = Mobile_GetSceneGeneration();
+	if (s_sefiraFilterSceneGen != curGen)
+	{
+		for (std::unordered_map<int32_t, MobileFilterCacheEntry>::iterator it = s_sefiraFilterCache.begin(); it != s_sefiraFilterCache.end(); ++it)
+		{
+			if (it->second.rootHandle != 0) il2cpp_gchandle_free(it->second.rootHandle);
+			if (it->second.childrenHandle != 0) il2cpp_gchandle_free(it->second.childrenHandle);
+		}
+		s_sefiraFilterCache.clear();
+		s_sefiraFilterSceneGen = curGen;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	int32_t instId = Object_GetInstanceID_m1255174761((Object_t631007953 *)__this, NULL);
+	MobileFilterCacheEntry & entry = s_sefiraFilterCache[instId];
+	if (entry.valid && entry.lastRootCtrl == ___rootControl1)
+	{
+		float d = fabsf(entry.lastAlpha - ___alpha0);
+		if (d < 0.0001f || (d < 0.015f && ___alpha0 > 0.001f && ___alpha0 < 0.999f))
+		{
+			return;
+		}
 	}
 	SpriteRenderer_t3235626157 * V_0 = NULL;
 	Color_t2555686324  V_1;
@@ -52569,10 +52608,22 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraFilterMgr_SetAlpha_m1904575641 (SefiraF
 	Color_t2555686324  V_6;
 	memset(&V_6, 0, sizeof(V_6));
 	{
-		SpriteRenderer_t3235626157 * L_0 = Component_GetComponent_TisSpriteRenderer_t3235626157_m2253180502(__this, /*hidden argument*/Component_GetComponent_TisSpriteRenderer_t3235626157_m2253180502_RuntimeMethod_var);
-		V_0 = L_0;
+		if (entry.rootHandle != 0)
+		{
+			V_0 = (SpriteRenderer_t3235626157 *)il2cpp_gchandle_get_target(entry.rootHandle);
+		}
+		if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)V_0, (Object_t631007953 *)NULL, NULL))
+		{
+			SpriteRenderer_t3235626157 * L_0 = Component_GetComponent_TisSpriteRenderer_t3235626157_m2253180502(__this, /*hidden argument*/Component_GetComponent_TisSpriteRenderer_t3235626157_m2253180502_RuntimeMethod_var);
+			V_0 = L_0;
+			if (entry.rootHandle != 0) { il2cpp_gchandle_free(entry.rootHandle); entry.rootHandle = 0; }
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)V_0, (Object_t631007953 *)NULL, NULL))
+			{
+				entry.rootHandle = il2cpp_gchandle_new((Il2CppObject *)V_0, false);
+			}
+		}
 		bool L_1 = ___rootControl1;
-		if (!L_1)
+		if (!L_1 || !Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)V_0, (Object_t631007953 *)NULL, NULL))
 		{
 			goto IL_0023;
 		}
@@ -52592,9 +52643,28 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraFilterMgr_SetAlpha_m1904575641 (SefiraF
 
 IL_0023:
 	{
-		SpriteRendererU5BU5D_t911335936* L_7 = Component_GetComponentsInChildren_TisSpriteRenderer_t3235626157_m3802774354(__this, /*hidden argument*/Component_GetComponentsInChildren_TisSpriteRenderer_t3235626157_m3802774354_RuntimeMethod_var);
-		V_2 = L_7;
+		if (entry.childrenHandle != 0)
+		{
+			V_2 = (SpriteRendererU5BU5D_t911335936*)il2cpp_gchandle_get_target(entry.childrenHandle);
+		}
+		if (V_2 == NULL)
+		{
+			SpriteRendererU5BU5D_t911335936* L_7 = Component_GetComponentsInChildren_TisSpriteRenderer_t3235626157_m3802774354(__this, /*hidden argument*/Component_GetComponentsInChildren_TisSpriteRenderer_t3235626157_m3802774354_RuntimeMethod_var);
+			V_2 = L_7;
+			if (entry.childrenHandle != 0) { il2cpp_gchandle_free(entry.childrenHandle); entry.childrenHandle = 0; }
+			if (V_2 != NULL)
+			{
+				entry.childrenHandle = il2cpp_gchandle_new((Il2CppObject *)V_2, false);
+			}
+		}
+		entry.lastAlpha = ___alpha0;
+		entry.lastRootCtrl = ___rootControl1;
+		entry.valid = true;
 		SpriteRendererU5BU5D_t911335936* L_8 = V_2;
+		if (L_8 == NULL)
+		{
+			return;
+		}
 		V_4 = L_8;
 		V_5 = 0;
 		goto IL_0065;
@@ -52609,6 +52679,10 @@ IL_0035:
 		SpriteRenderer_t3235626157 * L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
 		V_3 = L_12;
 		SpriteRenderer_t3235626157 * L_13 = V_3;
+		if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)L_13, (Object_t631007953 *)NULL, NULL))
+		{
+			goto IL_005f;
+		}
 		SpriteRenderer_t3235626157 * L_14 = V_0;
 		NullCheck(L_13);
 		bool L_15 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, L_13, L_14);

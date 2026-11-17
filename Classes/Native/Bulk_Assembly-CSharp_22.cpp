@@ -85075,7 +85075,14 @@ extern "C" IL2CPP_METHOD_ATTR void AgentUI_UpdateHp_m2967127575 (AgentUI_t174066
 		float L_5 = V_1;
 		float L_6 = V_0;
 		NullCheck(L_4);
-		Image_set_fillAmount_m3737925590(L_4, ((float)((float)L_5/(float)L_6)), /*hidden argument*/NULL);
+		{
+			float newFill = ((float)((float)L_5/(float)L_6));
+			float curFill = L_4->get_m_FillAmount_35();
+			if (fabsf(curFill - newFill) > 0.0015f || (newFill <= 0.0001f && curFill > 0.0001f) || (newFill >= 0.9999f && curFill < 0.9999f))
+			{
+				Image_set_fillAmount_m3737925590(L_4, newFill, /*hidden argument*/NULL);
+			}
+		}
 		return;
 	}
 }
@@ -85097,7 +85104,14 @@ extern "C" IL2CPP_METHOD_ATTR void AgentUI_UpdateMental_m794389656 (AgentUI_t174
 		float L_5 = V_1;
 		float L_6 = V_0;
 		NullCheck(L_4);
-		Image_set_fillAmount_m3737925590(L_4, ((float)((float)L_5/(float)L_6)), /*hidden argument*/NULL);
+		{
+			float newFill = ((float)((float)L_5/(float)L_6));
+			float curFill = L_4->get_m_FillAmount_35();
+			if (fabsf(curFill - newFill) > 0.0015f || (newFill <= 0.0001f && curFill > 0.0001f) || (newFill >= 0.9999f && curFill < 0.9999f))
+			{
+				Image_set_fillAmount_m3737925590(L_4, newFill, /*hidden argument*/NULL);
+			}
+		}
 		return;
 	}
 }
