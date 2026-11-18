@@ -79390,6 +79390,97 @@ IL_00db:
 		return (0.0f);
 	}
 }
+
+struct OrdealBaseU5BU5D_t4220924374 : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) OrdealBase_t3223790863 * m_Items[1];
+public:
+	inline OrdealBase_t3223790863 * GetAt(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+};
+
+extern const uint32_t Nothing_GiveDamageLv2NormalAttack_m2314677278_MetadataUsageId;
+extern "C" IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m1767405923 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+
+extern "C" void Mobile_SuppressAllOrdeals(void)
+{
+	static bool s_metaOrdeal = false;
+	if (!s_metaOrdeal)
+	{
+		il2cpp_codegen_initialize_method(OrdealManager_get_instance_m2697826649_MetadataUsageId);
+		il2cpp_codegen_initialize_method(Nothing_GiveDamageLv2NormalAttack_m2314677278_MetadataUsageId);
+		s_metaOrdeal = true;
+	}
+	OrdealManager_t1087609230 * om = OrdealManager_get_instance_m2697826649(NULL /*static, unused*/, NULL);
+	if (!om)
+	{
+		return;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	for (int32_t pass = 0; pass < 5; ++pass)
+	{
+		OrdealCreatureModelU5BU5D_t265625060 * arr = OrdealManager_GetOrdealCreatureList_m3893984057(om, NULL);
+		if (!arr || (int32_t)(((RuntimeArray *)arr)->max_length) <= 0)
+		{
+			break;
+		}
+		int32_t n = (int32_t)(((RuntimeArray *)arr)->max_length);
+		for (int32_t i = 0; i < n; ++i)
+		{
+			OrdealCreatureModel_t196946841 * oc = arr->GetAt((il2cpp_array_size_t)i);
+			if (!oc) continue;
+			((CreatureModel_t680682136 *)oc)->set_canBeSuppressed_33((bool)1);
+			CreatureUnit_t1295346153 * unit = ((CreatureModel_t680682136 *)oc)->get__unit_56();
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)unit, (Object_t631007953 *)NULL, NULL))
+			{
+				GameObject_t1113636619 * ugo = Component_get_gameObject_m442555142((Component_t1923634451 *)unit, NULL);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)ugo, (Object_t631007953 *)NULL, NULL) &&
+					!GameObject_get_activeSelf_m1767405923(ugo, NULL))
+				{
+					GameObject_SetActive_m796801857(ugo, (bool)1, NULL);
+				}
+			}
+			for (int32_t dtype = 1; dtype <= 4; ++dtype)
+			{
+				if (((UnitModel_t1924672552 *)oc)->get_hp_9() <= 0.0f) break;
+				DamageInfo_t1138602084 * dmg = (DamageInfo_t1138602084 *)il2cpp_codegen_object_new(DamageInfo_t1138602084_il2cpp_TypeInfo_var);
+				DamageInfo__ctor_m1621526194(dmg, dtype, 10000000.0f, NULL);
+				UnitModel_TakeDamage_m3552222361((UnitModel_t1924672552 *)oc, dmg, NULL);
+			}
+			if (((UnitModel_t1924672552 *)oc)->get_hp_9() > 0.0f)
+			{
+				((UnitModel_t1924672552 *)oc)->set_hp_9(0.0f);
+				VirtActionInvoker0::Invoke(68 /* System.Void CreatureModel::Suppressed() */, (CreatureModel_t680682136 *)oc);
+			}
+		}
+	}
+	OrdealCreatureModelU5BU5D_t265625060 * rem = OrdealManager_GetOrdealCreatureList_m3893984057(om, NULL);
+	if (!rem || (int32_t)(((RuntimeArray *)rem)->max_length) == 0)
+	{
+		List_1_t400898309 * activeList = om->get__activatedOrdeals_9();
+		if (activeList && activeList->get__items_1() && activeList->get__size_2() > 0)
+		{
+			int32_t cnt = activeList->get__size_2();
+			OrdealBaseU5BU5D_t4220924374 * items = activeList->get__items_1();
+			int32_t maxLen = (int32_t)(((RuntimeArray *)items)->max_length);
+			if (cnt > maxLen) cnt = maxLen;
+			OrdealBase_t3223790863 * snap[32];
+			int32_t snapN = 0;
+			for (int32_t i = 0; i < cnt && snapN < 32; ++i)
+			{
+				OrdealBase_t3223790863 * ob = items->GetAt((il2cpp_array_size_t)i);
+				if (ob) snap[snapN++] = ob;
+			}
+			for (int32_t i = 0; i < snapN; ++i)
+			{
+				VirtActionInvoker0::Invoke(9 /* System.Void OrdealBase::OrdealEnd() */, snap[i]);
+			}
+		}
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

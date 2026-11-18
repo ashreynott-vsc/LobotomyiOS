@@ -49909,33 +49909,48 @@ IL_004d:
 	}
 }
 // System.Void SefiraBossUI::OnEnterSefiraBossSession()
+extern "C" void Mobile_NotifyBossIntroPulse(void);
 extern "C" IL2CPP_METHOD_ATTR void SefiraBossUI_OnEnterSefiraBossSession_m4036413006 (SefiraBossUI_t1982891187 * __this, const RuntimeMethod* method)
 {
 	CameraFilterPack_AAA_SuperComputer_t3434389749 * V_0 = NULL;
 	{
-		CameraFilterPack_AAA_SuperComputer_t3434389749 * L_0 = SefiraBossUI_GetUICamFilter_m3813605971(__this, (bool)1, /*hidden argument*/NULL);
-		V_0 = L_0;
-		CameraFilterPack_AAA_SuperComputer_t3434389749 * L_1 = V_0;
-		NullCheck(L_1);
-		bool L_2 = Behaviour_get_enabled_m753527255(L_1, /*hidden argument*/NULL);
-		if (L_2)
+		V_0 = SefiraBossUI_GetUICamFilter_m3813605971(__this, (bool)0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, V_0, (Object_t631007953 *)NULL, NULL))
 		{
-			goto IL_002a;
+			Behaviour_set_enabled_m20417929(V_0, (bool)0, /*hidden argument*/NULL);
 		}
-	}
-	{
-		CameraFilterPack_AAA_SuperComputer_t3434389749 * L_3 = V_0;
-		NullCheck(L_3);
-		Behaviour_set_enabled_m20417929(L_3, (bool)1, /*hidden argument*/NULL);
 		UnscaledTimer_t2981502462 * L_4 = __this->get__enterEffectTimer_14();
-		NullCheck(L_4);
-		VirtActionInvoker1< float >::Invoke(4 /* System.Void Timer::StartTimer(System.Single) */, L_4, (1.0f));
-	}
-
-IL_002a:
-	{
+		if (L_4)
+		{
+			VirtActionInvoker1< float >::Invoke(4 /* System.Void Timer::StartTimer(System.Single) */, L_4, (1.0f));
+		}
+		Mobile_NotifyBossIntroPulse();
 		return;
 	}
+}
+
+extern "C" bool Mobile_QueryActiveBossState(int32_t * outSefira, int32_t * outOverload, float * outCloseRate)
+{
+	SefiraBossManager_t3286434577 * mgr = SefiraBossManager_get_Instance_m1039891616(NULL /*static, unused*/, NULL);
+	if (!mgr) return false;
+	SefiraBossBase_t2581588408 * boss = SefiraBossManager_get_CurrentBossBase_m793650192(mgr, NULL);
+	if (!boss) return false;
+	bool cleared = mgr->get__isCleared_14();
+	float closeRate = 0.0f;
+	UnscaledTimer_t2981502462 * ct = boss->get__closeTimer_12();
+	if (ct && ((Timer_t4185932343 *)ct)->get_started_2())
+	{
+		closeRate = Timer_get_Rate_m1165722310((Timer_t4185932343 *)ct, NULL);
+	}
+	if (cleared && (closeRate <= 0.0f || closeRate >= 0.999f))
+	{
+		return false;
+	}
+	if (outSefira) *outSefira = boss->get_sefiraEnum_8();
+	if (outOverload) *outOverload = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 SefiraBossBase::get_QliphothOverloadLevel() */, boss);
+	if (outCloseRate) *outCloseRate = cleared ? closeRate : 0.0f;
+	return true;
 }
 // CameraFilterPack_AAA_SuperComputer SefiraBossUI::GetUICamFilter(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR CameraFilterPack_AAA_SuperComputer_t3434389749 * SefiraBossUI_GetUICamFilter_m3813605971 (SefiraBossUI_t1982891187 * __this, bool ___makeIfNotExist0, const RuntimeMethod* method)
@@ -76579,6 +76594,103 @@ extern "C" IL2CPP_METHOD_ATTR void ShockwaveEffect__ctor_m1817165575 (ShockwaveE
 	}
 }
 // ShockwaveEffect ShockwaveEffect::Invoker(UnityEngine.Vector3,UnitModel,System.Single,System.Single,EffectLifetimeType)
+#include <math.h>
+#include <stdint.h>
+#include <vector>
+extern "C" Sprite_t280657092 * Mobile_CreateProceduralSprite(int32_t width, int32_t height, const uint8_t * rgbaBytes, float pixelsPerUnit);
+extern "C" IL2CPP_METHOD_ATTR void Renderer_set_enabled_m1727253150 (Renderer_t2627027031 * __this, bool p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Color__ctor_m2943235014 (Color_t2555686324 * __this, float p0, float p1, float p2, float p3, const RuntimeMethod* method);
+
+static Sprite_t280657092 * Mobile_GetShockwaveRingSprite(void)
+{
+	static uint32_t s_ringSpriteHandle = 0;
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (s_ringSpriteHandle != 0)
+	{
+		Sprite_t280657092 * existing = (Sprite_t280657092 *)il2cpp_gchandle_get_target(s_ringSpriteHandle);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)existing, (Object_t631007953 *)NULL, NULL))
+		{
+			return existing;
+		}
+		il2cpp_gchandle_free(s_ringSpriteHandle);
+		s_ringSpriteHandle = 0;
+	}
+	const int32_t S = 128;
+	std::vector<uint8_t> buf((size_t)(S * S * 4), 0);
+	const float half = (float)S * 0.5f;
+	for (int32_t y = 0; y < S; ++y)
+	{
+		for (int32_t x = 0; x < S; ++x)
+		{
+			float dx = ((float)x + 0.5f - half) / half;
+			float dy = ((float)y + 0.5f - half) / half;
+			float r = sqrtf(dx * dx + dy * dy);
+			if (r > 0.99f || r < 0.45f) continue;
+			float d1 = (r - 0.88f) / 0.055f;
+			float d2 = (r - 0.72f) / 0.038f;
+			float v = expf(-d1 * d1) + 0.45f * expf(-d2 * d2);
+			if (v > 1.0f) v = 1.0f;
+			int32_t idx = (y * S + x) * 4;
+			buf[idx + 0] = 220;
+			buf[idx + 1] = 242;
+			buf[idx + 2] = 255;
+			buf[idx + 3] = (uint8_t)(v * 255.0f);
+		}
+	}
+	Sprite_t280657092 * sp = Mobile_CreateProceduralSprite(S, S, buf.data(), 128.0f);
+	if (sp)
+	{
+		s_ringSpriteHandle = il2cpp_gchandle_new((Il2CppObject *)sp, false);
+	}
+	return sp;
+}
+
+static void Mobile_SetupShockwaveSprite(ShockwaveEffect_t1979220016 * __this, float rate, bool initSprite)
+{
+	if (!__this) return;
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	MeshRenderer_t587009260 * mr = __this->get_meshRenderer_12();
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mr, (Object_t631007953 *)NULL, NULL))
+	{
+		Renderer_set_enabled_m1727253150((Renderer_t2627027031 *)mr, (bool)0, NULL);
+	}
+	SpriteRenderer_t3235626157 * sr = Component_GetComponent_TisSpriteRenderer_t3235626157_m2253180502((Component_t1923634451 *)__this, Component_GetComponent_TisSpriteRenderer_t3235626157_m2253180502_RuntimeMethod_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)sr, (Object_t631007953 *)NULL, NULL))
+	{
+		if (initSprite)
+		{
+			Sprite_t280657092 * sp = Mobile_GetShockwaveRingSprite();
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)sp, (Object_t631007953 *)NULL, NULL))
+			{
+				SpriteRenderer_set_sprite_m1286893786(sr, sp, NULL);
+			}
+		}
+		if (rate < 0.0f) rate = 0.0f;
+		if (rate > 1.0f) rate = 1.0f;
+		float rem = 1.0f - rate;
+		float alpha = 0.45f * rem * rem;
+		Color_t2555686324 col;
+		memset(&col, 0, sizeof(col));
+		Color__ctor_m2943235014(&col, 0.82f, 0.94f, 1.0f, alpha, NULL);
+		SpriteRenderer_set_color_m3056777566(sr, col, NULL);
+	}
+	Transform_t3600365921 * rootTr = Component_get_transform_m3162698980((Component_t1923634451 *)__this, NULL);
+	Transform_t3600365921 * effTr = __this->get_effectTransform_11();
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rootTr, (Object_t631007953 *)NULL, NULL) &&
+		Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)effTr, (Object_t631007953 *)NULL, NULL) &&
+		rootTr != effTr)
+	{
+		Vector3_t3722313464 es = Transform_get_localScale_m129152068(effTr, NULL);
+		float sx = fabsf(es.get_x_1());
+		float vis = (sx > 55.0f) ? (55.0f + (sx - 55.0f) * 0.12f) : sx;
+		if (vis < 0.25f) vis = 0.25f;
+		Vector3_t3722313464 rs;
+		memset(&rs, 0, sizeof(rs));
+		Vector3__ctor_m3353183577(&rs, vis, vis, 1.0f, NULL);
+		Transform_set_localScale_m3053443106(rootTr, rs, NULL);
+	}
+}
+
 extern "C" IL2CPP_METHOD_ATTR ShockwaveEffect_t1979220016 * ShockwaveEffect_Invoker_m2612518340 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___position0, UnitModel_t1924672552 * ___owner1, float ___lifeTime2, float ___maxSize3, int32_t ___lifetimeType4, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76658,32 +76770,7 @@ IL_0057:
 		ShockwaveEffect_t1979220016 * L_26 = V_1;
 		NullCheck(L_26);
 		L_26->set_init_6((bool)1);
-		ShockwaveEffect_t1979220016 * L_27 = V_1;
-		ShockwaveEffect_t1979220016 * L_28 = V_1;
-		NullCheck(L_28);
-		Material_t340375123 * L_29 = L_28->get_referenceMat_13();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		Material_t340375123 * L_30 = Object_Instantiate_TisMaterial_t340375123_m2709937581(NULL /*static, unused*/, L_29, /*hidden argument*/Object_Instantiate_TisMaterial_t340375123_m2709937581_RuntimeMethod_var);
-		NullCheck(L_27);
-		L_27->set_material_14(L_30);
-		ShockwaveEffect_t1979220016 * L_31 = V_1;
-		NullCheck(L_31);
-		Material_t340375123 * L_32 = L_31->get_material_14();
-		NullCheck(L_32);
-		Material_SetFloat_m3226510453(L_32, _stringLiteral2469032075, (0.0f), /*hidden argument*/NULL);
-		ShockwaveEffect_t1979220016 * L_33 = V_1;
-		NullCheck(L_33);
-		Material_t340375123 * L_34 = L_33->get_material_14();
-		NullCheck(L_34);
-		Material_SetFloat_m3226510453(L_34, _stringLiteral1707988491, (1.0f), /*hidden argument*/NULL);
-		ShockwaveEffect_t1979220016 * L_35 = V_1;
-		NullCheck(L_35);
-		MeshRenderer_t587009260 * L_36 = L_35->get_meshRenderer_12();
-		ShockwaveEffect_t1979220016 * L_37 = V_1;
-		NullCheck(L_37);
-		Material_t340375123 * L_38 = L_37->get_material_14();
-		NullCheck(L_36);
-		Renderer_set_material_m1157964140(L_36, L_38, /*hidden argument*/NULL);
+		Mobile_SetupShockwaveSprite(V_1, 0.0f, true);
 		ShockwaveEffect_t1979220016 * L_39 = V_1;
 		return L_39;
 	}
@@ -76701,6 +76788,7 @@ extern "C" IL2CPP_METHOD_ATTR void ShockwaveEffect_Start_m1923364559 (ShockwaveE
 		bool L_0 = __this->get_init_6();
 		if (L_0)
 		{
+			Mobile_SetupShockwaveSprite(__this, 0.0f, true);
 			goto IL_0095;
 		}
 	}
@@ -76714,20 +76802,7 @@ extern "C" IL2CPP_METHOD_ATTR void ShockwaveEffect_Start_m1923364559 (ShockwaveE
 		NullCheck(L_2);
 		Vector3_t3722313464  L_3 = Transform_get_localScale_m129152068(L_2, /*hidden argument*/NULL);
 		__this->set_startScale_15(L_3);
-		Material_t340375123 * L_4 = __this->get_referenceMat_13();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		Material_t340375123 * L_5 = Object_Instantiate_TisMaterial_t340375123_m2709937581(NULL /*static, unused*/, L_4, /*hidden argument*/Object_Instantiate_TisMaterial_t340375123_m2709937581_RuntimeMethod_var);
-		__this->set_material_14(L_5);
-		Material_t340375123 * L_6 = __this->get_material_14();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral2469032075, (0.0f), /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = __this->get_material_14();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral1707988491, (1.0f), /*hidden argument*/NULL);
-		MeshRenderer_t587009260 * L_8 = __this->get_meshRenderer_12();
-		Material_t340375123 * L_9 = __this->get_material_14();
-		NullCheck(L_8);
-		Renderer_set_material_m1157964140(L_8, L_9, /*hidden argument*/NULL);
+		Mobile_SetupShockwaveSprite(__this, 0.0f, true);
 		Timer_t4185932343 * L_10 = __this->get_updateTimer_17();
 		NullCheck(L_10);
 		VirtActionInvoker1< float >::Invoke(4 /* System.Void Timer::StartTimer(System.Single) */, L_10, (0.5f));
@@ -76860,6 +76935,8 @@ IL_007a:
 // System.Void ShockwaveEffect::UpdateMaterial(System.Single)
 extern "C" IL2CPP_METHOD_ATTR void ShockwaveEffect_UpdateMaterial_m3389810981 (ShockwaveEffect_t1979220016 * __this, float ___rate0, const RuntimeMethod* method)
 {
+	Mobile_SetupShockwaveSprite(__this, ___rate0, false);
+	return;
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{

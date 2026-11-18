@@ -16512,7 +16512,9 @@ IL_005b:
 	}
 }
 // System.Void CameraFilterPack_Blend2Camera_Subtract::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+extern "C" void Mobile_NotifyCameraEarthQuake(float speed, float x, float y);
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blend2Camera_Subtract_OnRenderImage_m3756423631 (CameraFilterPack_Blend2Camera_Subtract_t2550019006 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -16520,92 +16522,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blend2Camera_Subtract_OnRend
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blend2Camera_Subtract_OnRenderImage_m3756423631_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_3();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e6;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_5();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_5(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_5();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_5((0.0f));
-	}
-
-IL_003e:
-	{
-		Camera_t4157153871 * L_5 = __this->get_Camera2_4();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_6 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_5, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_6)
-		{
-			goto IL_0065;
-		}
-	}
-	{
-		Material_t340375123 * L_7 = CameraFilterPack_Blend2Camera_Subtract_get_material_m964912078(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = __this->get_Camera2tex_10();
-		NullCheck(L_7);
-		Material_SetTexture_m1829349465(L_7, _stringLiteral545261465, L_8, /*hidden argument*/NULL);
-	}
-
-IL_0065:
-	{
-		Material_t340375123 * L_9 = CameraFilterPack_Blend2Camera_Subtract_get_material_m964912078(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_TimeX_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2461206737, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blend2Camera_Subtract_get_material_m964912078(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_BlendFX_9();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral862891449, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blend2Camera_Subtract_get_material_m964912078(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_SwitchCameraToCamera2_8();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2889306977, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Blend2Camera_Subtract_get_material_m964912078(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Blend2Camera_Subtract_get_material_m964912078(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00ed;
-	}
-
-IL_00e6:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00ed:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blend2Camera_Subtract::OnValidate()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blend2Camera_Subtract_OnValidate_m3399307951 (CameraFilterPack_Blend2Camera_Subtract_t2550019006 * __this, const RuntimeMethod* method)
@@ -16840,6 +16760,7 @@ IL_005b:
 }
 // System.Void CameraFilterPack_Blend2Camera_VividLight::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blend2Camera_VividLight_OnRenderImage_m2263678488 (CameraFilterPack_Blend2Camera_VividLight_t2919731053 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -16847,92 +16768,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blend2Camera_VividLight_OnRe
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blend2Camera_VividLight_OnRenderImage_m2263678488_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_3();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e6;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_5();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_5(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_5();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_5((0.0f));
-	}
-
-IL_003e:
-	{
-		Camera_t4157153871 * L_5 = __this->get_Camera2_4();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_6 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_5, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_6)
-		{
-			goto IL_0065;
-		}
-	}
-	{
-		Material_t340375123 * L_7 = CameraFilterPack_Blend2Camera_VividLight_get_material_m1644751921(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = __this->get_Camera2tex_10();
-		NullCheck(L_7);
-		Material_SetTexture_m1829349465(L_7, _stringLiteral545261465, L_8, /*hidden argument*/NULL);
-	}
-
-IL_0065:
-	{
-		Material_t340375123 * L_9 = CameraFilterPack_Blend2Camera_VividLight_get_material_m1644751921(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_TimeX_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2461206737, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blend2Camera_VividLight_get_material_m1644751921(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_BlendFX_9();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral862891449, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blend2Camera_VividLight_get_material_m1644751921(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_SwitchCameraToCamera2_8();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2889306977, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Blend2Camera_VividLight_get_material_m1644751921(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Blend2Camera_VividLight_get_material_m1644751921(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00ed;
-	}
-
-IL_00e6:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00ed:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blend2Camera_VividLight::OnValidate()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blend2Camera_VividLight_OnValidate_m1800430352 (CameraFilterPack_Blend2Camera_VividLight_t2919731053 * __this, const RuntimeMethod* method)
@@ -17141,6 +16980,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Blizzard::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blizzard_OnRenderImage_m3057743704 (CameraFilterPack_Blizzard_t1227476889 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17148,71 +16988,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blizzard_OnRenderImage_m3057
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blizzard_OnRenderImage_m3057743704_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00be;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blizzard_get_material_m1257609916(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blizzard_get_material_m1257609916(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__Speed_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blizzard_get_material_m1257609916(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__Size_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blizzard_get_material_m1257609916(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__Fade_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blizzard_get_material_m1257609916(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_14 = __this->get_Texture2_8();
-		NullCheck(L_13);
-		Material_SetTexture_m1829349465(L_13, _stringLiteral545261465, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Blizzard_get_material_m1257609916(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00c5;
-	}
-
-IL_00be:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00c5:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blizzard::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blizzard_Update_m644851849 (CameraFilterPack_Blizzard_t1227476889 * __this, const RuntimeMethod* method)
@@ -17332,6 +17111,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Bloom::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Bloom_OnRenderImage_m4209217847 (CameraFilterPack_Blur_Bloom_t3356986519 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17339,73 +17119,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Bloom_OnRenderImage_m42
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Bloom_OnRenderImage_m4209217847_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00b8;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Bloom_get_material_m3107106250(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Bloom_get_material_m3107106250(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Amount_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral4133382495, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Bloom_get_material_m3107106250(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Glow_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1638164144, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blur_Bloom_get_material_m3107106250(__this, /*hidden argument*/NULL);
-		int32_t L_12 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_13 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector2__ctor_m3970636864((&L_14), (((float)((float)L_12))), (((float)((float)L_13))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_15 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_14, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_15, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		Material_t340375123 * L_18 = CameraFilterPack_Blur_Bloom_get_material_m3107106250(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_16, L_17, L_18, /*hidden argument*/NULL);
-		goto IL_00bf;
-	}
-
-IL_00b8:
-	{
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_19, L_20, /*hidden argument*/NULL);
-	}
-
-IL_00bf:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Bloom::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Bloom_Update_m2458232132 (CameraFilterPack_Blur_Bloom_t3356986519 * __this, const RuntimeMethod* method)
@@ -17529,6 +17246,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_BlurHole::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_BlurHole_OnRenderImage_m3302111443 (CameraFilterPack_Blur_BlurHole_t1749678827 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17536,93 +17254,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_BlurHole_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_BlurHole_OnRenderImage_m3302111443_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0126;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__Radius_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral4090561906, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__SpotSize_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2194075873, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get__CenterX_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral753637900, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get__CenterY_8();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3092290060, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get__AlphaBlur_9();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral2373215901, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get__AlphaBlurInside_10();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral539334661, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		int32_t L_22 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_23 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_24;
-		memset(&L_24, 0, sizeof(L_24));
-		Vector2__ctor_m3970636864((&L_24), (((float)((float)L_22))), (((float)((float)L_23))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_25 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
-		NullCheck(L_21);
-		Material_SetVector_m4214217286(L_21, _stringLiteral3071141033, L_25, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		Material_t340375123 * L_28 = CameraFilterPack_Blur_BlurHole_get_material_m3268128990(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_26, L_27, L_28, /*hidden argument*/NULL);
-		goto IL_012d;
-	}
-
-IL_0126:
-	{
-		RenderTexture_t2108887433 * L_29 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_30 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_29, L_30, /*hidden argument*/NULL);
-	}
-
-IL_012d:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_BlurHole::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_BlurHole_Update_m2830748903 (CameraFilterPack_Blur_BlurHole_t1749678827 * __this, const RuntimeMethod* method)
@@ -17742,6 +17377,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Blurry::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Blurry_OnRenderImage_m2727421370 (CameraFilterPack_Blur_Blurry_t3287805908 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17749,120 +17385,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Blurry_OnRenderImage_m2
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Blurry_OnRenderImage_m2727421370_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	RenderTexture_t2108887433 * V_3 = NULL;
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00fa;
-		}
-	}
-	{
-		int32_t L_2 = __this->get_FastFilter_7();
-		V_0 = L_2;
-		float L_3 = __this->get_TimeX_3();
-		float L_4 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_3, (float)L_4)));
-		float L_5 = __this->get_TimeX_3();
-		if ((!(((float)L_5) > ((float)(100.0f)))))
-		{
-			goto IL_0045;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_0045:
-	{
-		Material_t340375123 * L_6 = CameraFilterPack_Blur_Blurry_get_material_m757489309(__this, /*hidden argument*/NULL);
-		float L_7 = __this->get_TimeX_3();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral2461206737, L_7, /*hidden argument*/NULL);
-		Material_t340375123 * L_8 = CameraFilterPack_Blur_Blurry_get_material_m757489309(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Amount_6();
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral4133382495, L_9, /*hidden argument*/NULL);
-		Material_t340375123 * L_10 = CameraFilterPack_Blur_Blurry_get_material_m757489309(__this, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_12 = V_0;
-		int32_t L_13 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_14 = V_0;
-		Vector2_t2156229523  L_15;
-		memset(&L_15, 0, sizeof(L_15));
-		Vector2__ctor_m3970636864((&L_15), (((float)((float)((int32_t)((int32_t)L_11/(int32_t)L_12))))), (((float)((float)((int32_t)((int32_t)L_13/(int32_t)L_14))))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_16 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_15, /*hidden argument*/NULL);
-		NullCheck(L_10);
-		Material_SetVector_m4214217286(L_10, _stringLiteral3071141033, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		NullCheck(L_17);
-		int32_t L_18 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_17);
-		int32_t L_19 = V_0;
-		V_1 = ((int32_t)((int32_t)L_18/(int32_t)L_19));
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_20);
-		int32_t L_22 = V_0;
-		V_2 = ((int32_t)((int32_t)L_21/(int32_t)L_22));
-		int32_t L_23 = __this->get_FastFilter_7();
-		if ((((int32_t)L_23) <= ((int32_t)1)))
-		{
-			goto IL_00e8;
-		}
-	}
-	{
-		int32_t L_24 = V_1;
-		int32_t L_25 = V_2;
-		RenderTexture_t2108887433 * L_26 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_24, L_25, 0, /*hidden argument*/NULL);
-		V_3 = L_26;
-		RenderTexture_t2108887433 * L_27 = V_3;
-		NullCheck(L_27);
-		Texture_set_filterMode_m3078068058(L_27, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_28 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_29 = V_3;
-		Material_t340375123 * L_30 = CameraFilterPack_Blur_Blurry_get_material_m757489309(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_28, L_29, L_30, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_31 = V_3;
-		RenderTexture_t2108887433 * L_32 = ___destTexture1;
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_31, L_32, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_33 = V_3;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_33, /*hidden argument*/NULL);
-		goto IL_00f5;
-	}
-
-IL_00e8:
-	{
-		RenderTexture_t2108887433 * L_34 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_35 = ___destTexture1;
-		Material_t340375123 * L_36 = CameraFilterPack_Blur_Blurry_get_material_m757489309(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_34, L_35, L_36, /*hidden argument*/NULL);
-	}
-
-IL_00f5:
-	{
-		goto IL_0101;
-	}
-
-IL_00fa:
-	{
-		RenderTexture_t2108887433 * L_37 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_38 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_37, L_38, /*hidden argument*/NULL);
-	}
-
-IL_0101:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Blurry::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Blurry_Update_m2398872278 (CameraFilterPack_Blur_Blurry_t3287805908 * __this, const RuntimeMethod* method)
@@ -17985,6 +17511,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Dithering2x2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Dithering2x2_OnRenderImage_m738308057 (CameraFilterPack_Blur_Dithering2x2_t1640419129 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17992,77 +17519,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Dithering2x2_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Dithering2x2_OnRenderImage_m738308057_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00c5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Dithering2x2_get_material_m3746544027(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Dithering2x2_get_material_m3746544027(__this, /*hidden argument*/NULL);
-		int32_t L_8 = __this->get_Level_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral19628053, (((float)((float)L_8))), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Dithering2x2_get_material_m3746544027(__this, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10 = __this->get_Distance_7();
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral4231150815, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_Dithering2x2_get_material_m3746544027(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		NullCheck(L_13);
-		int32_t L_14 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_13);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		NullCheck(L_15);
-		int32_t L_16 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_15);
-		Vector4_t3319028937  L_17;
-		memset(&L_17, 0, sizeof(L_17));
-		Vector4__ctor_m2498754347((&L_17), (((float)((float)L_14))), (((float)((float)L_16))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_12);
-		Material_SetVector_m4214217286(L_12, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Blur_Dithering2x2_get_material_m3746544027(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00cc;
-	}
-
-IL_00c5:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00cc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Dithering2x2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Dithering2x2_Update_m2207175362 (CameraFilterPack_Blur_Dithering2x2_t1640419129 * __this, const RuntimeMethod* method)
@@ -18185,6 +17645,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_DitherOffset::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_DitherOffset_OnRenderImage_m3202281192 (CameraFilterPack_Blur_DitherOffset_t1872649771 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -18192,77 +17653,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_DitherOffset_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_DitherOffset_OnRenderImage_m3202281192_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00c5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_DitherOffset_get_material_m2847459568(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_DitherOffset_get_material_m2847459568(__this, /*hidden argument*/NULL);
-		int32_t L_8 = __this->get_Level_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral19628053, (((float)((float)L_8))), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_DitherOffset_get_material_m2847459568(__this, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10 = __this->get_Distance_7();
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral4231150815, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_DitherOffset_get_material_m2847459568(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		NullCheck(L_13);
-		int32_t L_14 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_13);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		NullCheck(L_15);
-		int32_t L_16 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_15);
-		Vector4_t3319028937  L_17;
-		memset(&L_17, 0, sizeof(L_17));
-		Vector4__ctor_m2498754347((&L_17), (((float)((float)L_14))), (((float)((float)L_16))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_12);
-		Material_SetVector_m4214217286(L_12, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Blur_DitherOffset_get_material_m2847459568(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00cc;
-	}
-
-IL_00c5:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00cc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_DitherOffset::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_DitherOffset_Update_m4072537331 (CameraFilterPack_Blur_DitherOffset_t1872649771 * __this, const RuntimeMethod* method)
@@ -18382,6 +17776,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Focus::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Focus_OnRenderImage_m943441870 (CameraFilterPack_Blur_Focus_t1993753717 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -18389,86 +17784,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Focus_OnRenderImage_m94
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Focus_OnRenderImage_m943441870_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	float V_0 = 0.0f;
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00f7;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_CenterX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral753637900, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_CenterY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3092290060, L_10, /*hidden argument*/NULL);
-		float L_11 = __this->get__Size_8();
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_12 = bankers_roundf(((float)((float)L_11/(float)(0.2f))));
-		V_0 = ((float)il2cpp_codegen_multiply((float)L_12, (float)(0.2f)));
-		Material_t340375123 * L_13 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		float L_14 = V_0;
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral3951757521, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get__Eyes_9();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral1284948818, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		int32_t L_18 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_19 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector2__ctor_m3970636864((&L_20), (((float)((float)L_18))), (((float)((float)L_19))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_21 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_20, /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Material_SetVector_m4214217286(L_17, _stringLiteral3071141033, L_21, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_23 = ___destTexture1;
-		Material_t340375123 * L_24 = CameraFilterPack_Blur_Focus_get_material_m1308076461(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_22, L_23, L_24, /*hidden argument*/NULL);
-		goto IL_00fe;
-	}
-
-IL_00f7:
-	{
-		RenderTexture_t2108887433 * L_25 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_26 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_25, L_26, /*hidden argument*/NULL);
-	}
-
-IL_00fe:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Focus::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Focus_Update_m4284514790 (CameraFilterPack_Blur_Focus_t1993753717 * __this, const RuntimeMethod* method)
@@ -18587,6 +17906,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_GaussianBlur::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_GaussianBlur_OnRenderImage_m1050901182 (CameraFilterPack_Blur_GaussianBlur_t1672594213 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -18594,69 +17914,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_GaussianBlur_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_GaussianBlur_OnRenderImage_m1050901182_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_GaussianBlur_get_material_m2860268151(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_GaussianBlur_get_material_m2860268151(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_GaussianBlur_get_material_m2860268151(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Blur_GaussianBlur_get_material_m2860268151(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_GaussianBlur::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_GaussianBlur_Update_m4102409278 (CameraFilterPack_Blur_GaussianBlur_t1672594213 * __this, const RuntimeMethod* method)
@@ -18777,6 +18038,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Movie::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Movie_OnRenderImage_m1762270808 (CameraFilterPack_Blur_Movie_t3779718735 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -18784,122 +18046,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Movie_OnRenderImage_m17
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Movie_OnRenderImage_m1762270808_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	RenderTexture_t2108887433 * V_3 = NULL;
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_010c;
-		}
-	}
-	{
-		int32_t L_2 = __this->get_FastFilter_8();
-		V_0 = L_2;
-		float L_3 = __this->get_TimeX_3();
-		float L_4 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_3, (float)L_4)));
-		float L_5 = __this->get_TimeX_3();
-		if ((!(((float)L_5) > ((float)(100.0f)))))
-		{
-			goto IL_0045;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_0045:
-	{
-		Material_t340375123 * L_6 = CameraFilterPack_Blur_Movie_get_material_m886060938(__this, /*hidden argument*/NULL);
-		float L_7 = __this->get_TimeX_3();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral2461206737, L_7, /*hidden argument*/NULL);
-		Material_t340375123 * L_8 = CameraFilterPack_Blur_Movie_get_material_m886060938(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Radius_6();
-		int32_t L_10 = V_0;
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral4090561906, ((float)((float)L_9/(float)(((float)((float)L_10))))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blur_Movie_get_material_m886060938(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Factor_7();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2350610976, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blur_Movie_get_material_m886060938(__this, /*hidden argument*/NULL);
-		int32_t L_14 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_15 = V_0;
-		int32_t L_16 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_17 = V_0;
-		Vector2_t2156229523  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector2__ctor_m3970636864((&L_18), (((float)((float)((int32_t)((int32_t)L_14/(int32_t)L_15))))), (((float)((float)((int32_t)((int32_t)L_16/(int32_t)L_17))))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_19 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_18, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_19, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_20);
-		int32_t L_22 = V_0;
-		V_1 = ((int32_t)((int32_t)L_21/(int32_t)L_22));
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		NullCheck(L_23);
-		int32_t L_24 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_23);
-		int32_t L_25 = V_0;
-		V_2 = ((int32_t)((int32_t)L_24/(int32_t)L_25));
-		int32_t L_26 = __this->get_FastFilter_8();
-		if ((((int32_t)L_26) <= ((int32_t)1)))
-		{
-			goto IL_00fa;
-		}
-	}
-	{
-		int32_t L_27 = V_1;
-		int32_t L_28 = V_2;
-		RenderTexture_t2108887433 * L_29 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_27, L_28, 0, /*hidden argument*/NULL);
-		V_3 = L_29;
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_31 = V_3;
-		Material_t340375123 * L_32 = CameraFilterPack_Blur_Movie_get_material_m886060938(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_30, L_31, L_32, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_33 = V_3;
-		RenderTexture_t2108887433 * L_34 = ___destTexture1;
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_33, L_34, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_35 = V_3;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_35, /*hidden argument*/NULL);
-		goto IL_0107;
-	}
-
-IL_00fa:
-	{
-		RenderTexture_t2108887433 * L_36 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_37 = ___destTexture1;
-		Material_t340375123 * L_38 = CameraFilterPack_Blur_Movie_get_material_m886060938(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_36, L_37, L_38, /*hidden argument*/NULL);
-	}
-
-IL_0107:
-	{
-		goto IL_0113;
-	}
-
-IL_010c:
-	{
-		RenderTexture_t2108887433 * L_39 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_40 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_39, L_40, /*hidden argument*/NULL);
-	}
-
-IL_0113:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Movie::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Movie_Update_m3618296440 (CameraFilterPack_Blur_Movie_t3779718735 * __this, const RuntimeMethod* method)
@@ -19022,6 +18172,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Noise::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Noise_OnRenderImage_m3478897093 (CameraFilterPack_Blur_Noise_t3639998009 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -19029,77 +18180,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Noise_OnRenderImage_m34
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Noise_OnRenderImage_m3478897093_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00c5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Noise_get_material_m1675658764(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Noise_get_material_m1675658764(__this, /*hidden argument*/NULL);
-		int32_t L_8 = __this->get_Level_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral19628053, (((float)((float)L_8))), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Noise_get_material_m1675658764(__this, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10 = __this->get_Distance_7();
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral4231150815, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_Noise_get_material_m1675658764(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		NullCheck(L_13);
-		int32_t L_14 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_13);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		NullCheck(L_15);
-		int32_t L_16 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_15);
-		Vector4_t3319028937  L_17;
-		memset(&L_17, 0, sizeof(L_17));
-		Vector4__ctor_m2498754347((&L_17), (((float)((float)L_14))), (((float)((float)L_16))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_12);
-		Material_SetVector_m4214217286(L_12, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Blur_Noise_get_material_m1675658764(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00cc;
-	}
-
-IL_00c5:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00cc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Noise::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Noise_Update_m1790737237 (CameraFilterPack_Blur_Noise_t3639998009 * __this, const RuntimeMethod* method)
@@ -19221,6 +18305,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Radial::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Radial_OnRenderImage_m2763866235 (CameraFilterPack_Blur_Radial_t4080577268 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -19228,83 +18313,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Radial_OnRenderImage_m2
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Radial_OnRenderImage_m2763866235_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Intensity_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_MovX_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_MovY_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_blurWidth_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Blur_Radial_get_material_m628314375(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Radial::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Radial_Update_m1428603600 (CameraFilterPack_Blur_Radial_t4080577268 * __this, const RuntimeMethod* method)
@@ -19426,6 +18438,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Radial_Fast::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Radial_Fast_OnRenderImage_m943600661 (CameraFilterPack_Blur_Radial_Fast_t3970633843 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -19433,83 +18446,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Radial_Fast_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Radial_Fast_OnRenderImage_m943600661_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Intensity_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_MovX_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_MovY_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_blurWidth_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Blur_Radial_Fast_get_material_m2449231846(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Radial_Fast::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Radial_Fast_Update_m3358397768 (CameraFilterPack_Blur_Radial_Fast_t3970633843 * __this, const RuntimeMethod* method)
@@ -19632,6 +18572,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Regular::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Regular_OnRenderImage_m2866231942 (CameraFilterPack_Blur_Regular_t1083596879 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -19639,77 +18580,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Regular_OnRenderImage_m
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Regular_OnRenderImage_m2866231942_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00c5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Regular_get_material_m3902390462(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Regular_get_material_m3902390462(__this, /*hidden argument*/NULL);
-		int32_t L_8 = __this->get_Level_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral19628053, (((float)((float)L_8))), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Regular_get_material_m3902390462(__this, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10 = __this->get_Distance_7();
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral4231150815, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_Regular_get_material_m3902390462(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		NullCheck(L_13);
-		int32_t L_14 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_13);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		NullCheck(L_15);
-		int32_t L_16 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_15);
-		Vector4_t3319028937  L_17;
-		memset(&L_17, 0, sizeof(L_17));
-		Vector4__ctor_m2498754347((&L_17), (((float)((float)L_14))), (((float)((float)L_16))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_12);
-		Material_SetVector_m4214217286(L_12, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Blur_Regular_get_material_m3902390462(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00cc;
-	}
-
-IL_00c5:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00cc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Regular::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Regular_Update_m985385666 (CameraFilterPack_Blur_Regular_t1083596879 * __this, const RuntimeMethod* method)
@@ -19829,6 +18703,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Steam::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Steam_OnRenderImage_m3449824903 (CameraFilterPack_Blur_Steam_t632973632 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -19836,73 +18711,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Steam_OnRenderImage_m34
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Steam_OnRenderImage_m3449824903_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00b8;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Blur_Steam_get_material_m542010116(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Blur_Steam_get_material_m542010116(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Radius_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral4090561906, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Blur_Steam_get_material_m542010116(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Quality_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral4101515630, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Blur_Steam_get_material_m542010116(__this, /*hidden argument*/NULL);
-		int32_t L_12 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_13 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector2__ctor_m3970636864((&L_14), (((float)((float)L_12))), (((float)((float)L_13))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_15 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_14, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_15, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		Material_t340375123 * L_18 = CameraFilterPack_Blur_Steam_get_material_m542010116(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_16, L_17, L_18, /*hidden argument*/NULL);
-		goto IL_00bf;
-	}
-
-IL_00b8:
-	{
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_19, L_20, /*hidden argument*/NULL);
-	}
-
-IL_00bf:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Steam::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Steam_Update_m3256479018 (CameraFilterPack_Blur_Steam_t632973632 * __this, const RuntimeMethod* method)
@@ -20025,6 +18837,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Tilt_Shift::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_OnRenderImage_m2105305733 (CameraFilterPack_Blur_Tilt_Shift_t2966774146 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -20032,160 +18845,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Tilt_Shift_OnRenderImage_m2105305733_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	RenderTexture_t2108887433 * V_3 = NULL;
-	RenderTexture_t2108887433 * V_4 = NULL;
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_01b1;
-		}
-	}
-	{
-		int32_t L_2 = __this->get_FastFilter_7();
-		V_0 = L_2;
-		float L_3 = __this->get_TimeX_3();
-		float L_4 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_3, (float)L_4)));
-		float L_5 = __this->get_TimeX_3();
-		if ((!(((float)L_5) > ((float)(100.0f)))))
-		{
-			goto IL_0045;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_0045:
-	{
-		Material_t340375123 * L_6 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		float L_7 = __this->get_TimeX_3();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral2461206737, L_7, /*hidden argument*/NULL);
-		Material_t340375123 * L_8 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Amount_6();
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral4133382495, L_9, /*hidden argument*/NULL);
-		Material_t340375123 * L_10 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		float L_11 = __this->get_Smooth_8();
-		NullCheck(L_10);
-		Material_SetFloat_m3226510453(L_10, _stringLiteral1323223036, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		float L_13 = __this->get_Size_9();
-		NullCheck(L_12);
-		Material_SetFloat_m3226510453(L_12, _stringLiteral2889306977, L_13, /*hidden argument*/NULL);
-		Material_t340375123 * L_14 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		float L_15 = __this->get_Position_10();
-		NullCheck(L_14);
-		Material_SetFloat_m3226510453(L_14, _stringLiteral160423622, L_15, /*hidden argument*/NULL);
-		Material_t340375123 * L_16 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		int32_t L_17 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_18 = V_0;
-		int32_t L_19 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_20 = V_0;
-		Vector2_t2156229523  L_21;
-		memset(&L_21, 0, sizeof(L_21));
-		Vector2__ctor_m3970636864((&L_21), (((float)((float)((int32_t)((int32_t)L_17/(int32_t)L_18))))), (((float)((float)((int32_t)((int32_t)L_19/(int32_t)L_20))))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_22 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_21, /*hidden argument*/NULL);
-		NullCheck(L_16);
-		Material_SetVector_m4214217286(L_16, _stringLiteral3071141033, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		NullCheck(L_23);
-		int32_t L_24 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_23);
-		int32_t L_25 = V_0;
-		V_1 = ((int32_t)((int32_t)L_24/(int32_t)L_25));
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		NullCheck(L_26);
-		int32_t L_27 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_26);
-		int32_t L_28 = V_0;
-		V_2 = ((int32_t)((int32_t)L_27/(int32_t)L_28));
-		int32_t L_29 = __this->get_FastFilter_7();
-		if ((((int32_t)L_29) <= ((int32_t)1)))
-		{
-			goto IL_019e;
-		}
-	}
-	{
-		int32_t L_30 = V_1;
-		int32_t L_31 = V_2;
-		RenderTexture_t2108887433 * L_32 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_30, L_31, 0, /*hidden argument*/NULL);
-		V_3 = L_32;
-		int32_t L_33 = V_1;
-		int32_t L_34 = V_2;
-		RenderTexture_t2108887433 * L_35 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_33, L_34, 0, /*hidden argument*/NULL);
-		V_4 = L_35;
-		RenderTexture_t2108887433 * L_36 = V_3;
-		NullCheck(L_36);
-		Texture_set_filterMode_m3078068058(L_36, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_37 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_38 = V_3;
-		Material_t340375123 * L_39 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_37, L_38, L_39, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_40 = V_3;
-		RenderTexture_t2108887433 * L_41 = V_4;
-		Material_t340375123 * L_42 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_40, L_41, L_42, 0, /*hidden argument*/NULL);
-		Material_t340375123 * L_43 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		float L_44 = __this->get_Amount_6();
-		NullCheck(L_43);
-		Material_SetFloat_m3226510453(L_43, _stringLiteral4133382495, ((float)il2cpp_codegen_multiply((float)L_44, (float)(2.0f))), /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_45 = V_4;
-		RenderTexture_t2108887433 * L_46 = V_3;
-		Material_t340375123 * L_47 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_45, L_46, L_47, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_48 = V_3;
-		RenderTexture_t2108887433 * L_49 = V_4;
-		Material_t340375123 * L_50 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_48, L_49, L_50, 0, /*hidden argument*/NULL);
-		Material_t340375123 * L_51 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_52 = V_4;
-		NullCheck(L_51);
-		Material_SetTexture_m1829349465(L_51, _stringLiteral545261465, L_52, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_53 = V_3;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_53, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_54 = V_4;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_54, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_55 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_56 = ___destTexture1;
-		Material_t340375123 * L_57 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_55, L_56, L_57, 1, /*hidden argument*/NULL);
-		goto IL_01ac;
-	}
-
-IL_019e:
-	{
-		RenderTexture_t2108887433 * L_58 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_59 = ___destTexture1;
-		Material_t340375123 * L_60 = CameraFilterPack_Blur_Tilt_Shift_get_material_m1326759436(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_58, L_59, L_60, 0, /*hidden argument*/NULL);
-	}
-
-IL_01ac:
-	{
-		goto IL_01b8;
-	}
-
-IL_01b1:
-	{
-		RenderTexture_t2108887433 * L_61 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_62 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_61, L_62, /*hidden argument*/NULL);
-	}
-
-IL_01b8:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Tilt_Shift::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_Update_m2229952034 (CameraFilterPack_Blur_Tilt_Shift_t2966774146 * __this, const RuntimeMethod* method)
@@ -20309,6 +18972,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Tilt_Shift_Hole::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_Hole_OnRenderImage_m4098130047 (CameraFilterPack_Blur_Tilt_Shift_Hole_t1595309467 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -20316,152 +18980,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_Hole_OnRende
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Tilt_Shift_Hole_OnRenderImage_m4098130047_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	RenderTexture_t2108887433 * V_3 = NULL;
-	RenderTexture_t2108887433 * V_4 = NULL;
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_019d;
-		}
-	}
-	{
-		int32_t L_2 = __this->get_FastFilter_7();
-		V_0 = L_2;
-		float L_3 = __this->get_TimeX_3();
-		float L_4 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_3, (float)L_4)));
-		float L_5 = __this->get_TimeX_3();
-		if ((!(((float)L_5) > ((float)(100.0f)))))
-		{
-			goto IL_0045;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_0045:
-	{
-		Material_t340375123 * L_6 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_7 = __this->get_TimeX_3();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral2461206737, L_7, /*hidden argument*/NULL);
-		Material_t340375123 * L_8 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Amount_6();
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral4133382495, L_9, /*hidden argument*/NULL);
-		Material_t340375123 * L_10 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_11 = __this->get_Smooth_8();
-		NullCheck(L_10);
-		Material_SetFloat_m3226510453(L_10, _stringLiteral1323223036, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_13 = __this->get_Size_9();
-		NullCheck(L_12);
-		Material_SetFloat_m3226510453(L_12, _stringLiteral2889306977, L_13, /*hidden argument*/NULL);
-		Material_t340375123 * L_14 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_15 = __this->get_PositionX_10();
-		NullCheck(L_14);
-		Material_SetFloat_m3226510453(L_14, _stringLiteral160423622, L_15, /*hidden argument*/NULL);
-		Material_t340375123 * L_16 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_17 = __this->get_PositionY_11();
-		NullCheck(L_16);
-		Material_SetFloat_m3226510453(L_16, _stringLiteral2082737923, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_18);
-		int32_t L_20 = V_0;
-		V_1 = ((int32_t)((int32_t)L_19/(int32_t)L_20));
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		NullCheck(L_21);
-		int32_t L_22 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_21);
-		int32_t L_23 = V_0;
-		V_2 = ((int32_t)((int32_t)L_22/(int32_t)L_23));
-		int32_t L_24 = __this->get_FastFilter_7();
-		if ((((int32_t)L_24) <= ((int32_t)1)))
-		{
-			goto IL_018a;
-		}
-	}
-	{
-		int32_t L_25 = V_1;
-		int32_t L_26 = V_2;
-		RenderTexture_t2108887433 * L_27 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_25, L_26, 0, /*hidden argument*/NULL);
-		V_3 = L_27;
-		int32_t L_28 = V_1;
-		int32_t L_29 = V_2;
-		RenderTexture_t2108887433 * L_30 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_28, L_29, 0, /*hidden argument*/NULL);
-		V_4 = L_30;
-		RenderTexture_t2108887433 * L_31 = V_3;
-		NullCheck(L_31);
-		Texture_set_filterMode_m3078068058(L_31, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_32 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_33 = V_3;
-		Material_t340375123 * L_34 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_32, L_33, L_34, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_35 = V_3;
-		RenderTexture_t2108887433 * L_36 = V_4;
-		Material_t340375123 * L_37 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_35, L_36, L_37, 0, /*hidden argument*/NULL);
-		Material_t340375123 * L_38 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		float L_39 = __this->get_Amount_6();
-		NullCheck(L_38);
-		Material_SetFloat_m3226510453(L_38, _stringLiteral4133382495, ((float)il2cpp_codegen_multiply((float)L_39, (float)(2.0f))), /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_40 = V_4;
-		RenderTexture_t2108887433 * L_41 = V_3;
-		Material_t340375123 * L_42 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_40, L_41, L_42, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_43 = V_3;
-		RenderTexture_t2108887433 * L_44 = V_4;
-		Material_t340375123 * L_45 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_43, L_44, L_45, 0, /*hidden argument*/NULL);
-		Material_t340375123 * L_46 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_47 = V_4;
-		NullCheck(L_46);
-		Material_SetTexture_m1829349465(L_46, _stringLiteral545261465, L_47, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_48 = V_3;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_48, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_49 = V_4;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_49, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_50 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_51 = ___destTexture1;
-		Material_t340375123 * L_52 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_50, L_51, L_52, 1, /*hidden argument*/NULL);
-		goto IL_0198;
-	}
-
-IL_018a:
-	{
-		RenderTexture_t2108887433 * L_53 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_54 = ___destTexture1;
-		Material_t340375123 * L_55 = CameraFilterPack_Blur_Tilt_Shift_Hole_get_material_m3452858336(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_53, L_54, L_55, 0, /*hidden argument*/NULL);
-	}
-
-IL_0198:
-	{
-		goto IL_01a4;
-	}
-
-IL_019d:
-	{
-		RenderTexture_t2108887433 * L_56 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_57 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_56, L_57, /*hidden argument*/NULL);
-	}
-
-IL_01a4:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Tilt_Shift_Hole::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_Hole_Update_m1698995198 (CameraFilterPack_Blur_Tilt_Shift_Hole_t1595309467 * __this, const RuntimeMethod* method)
@@ -20584,6 +19106,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Blur_Tilt_Shift_V::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_V_OnRenderImage_m2302850176 (CameraFilterPack_Blur_Tilt_Shift_V_t2982217395 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -20591,148 +19114,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_V_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Blur_Tilt_Shift_V_OnRenderImage_m2302850176_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	RenderTexture_t2108887433 * V_3 = NULL;
-	RenderTexture_t2108887433 * V_4 = NULL;
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0187;
-		}
-	}
-	{
-		int32_t L_2 = __this->get_FastFilter_7();
-		V_0 = L_2;
-		float L_3 = __this->get_TimeX_3();
-		float L_4 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_3, (float)L_4)));
-		float L_5 = __this->get_TimeX_3();
-		if ((!(((float)L_5) > ((float)(100.0f)))))
-		{
-			goto IL_0045;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_0045:
-	{
-		Material_t340375123 * L_6 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		float L_7 = __this->get_TimeX_3();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral2461206737, L_7, /*hidden argument*/NULL);
-		Material_t340375123 * L_8 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Amount_6();
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral4133382495, L_9, /*hidden argument*/NULL);
-		Material_t340375123 * L_10 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		float L_11 = __this->get_Smooth_8();
-		NullCheck(L_10);
-		Material_SetFloat_m3226510453(L_10, _stringLiteral1323223036, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		float L_13 = __this->get_Size_9();
-		NullCheck(L_12);
-		Material_SetFloat_m3226510453(L_12, _stringLiteral2889306977, L_13, /*hidden argument*/NULL);
-		Material_t340375123 * L_14 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		float L_15 = __this->get_Position_10();
-		NullCheck(L_14);
-		Material_SetFloat_m3226510453(L_14, _stringLiteral160423622, L_15, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		int32_t L_18 = V_0;
-		V_1 = ((int32_t)((int32_t)L_17/(int32_t)L_18));
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		NullCheck(L_19);
-		int32_t L_20 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_19);
-		int32_t L_21 = V_0;
-		V_2 = ((int32_t)((int32_t)L_20/(int32_t)L_21));
-		int32_t L_22 = __this->get_FastFilter_7();
-		if ((((int32_t)L_22) <= ((int32_t)1)))
-		{
-			goto IL_0174;
-		}
-	}
-	{
-		int32_t L_23 = V_1;
-		int32_t L_24 = V_2;
-		RenderTexture_t2108887433 * L_25 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_23, L_24, 0, /*hidden argument*/NULL);
-		V_3 = L_25;
-		int32_t L_26 = V_1;
-		int32_t L_27 = V_2;
-		RenderTexture_t2108887433 * L_28 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_26, L_27, 0, /*hidden argument*/NULL);
-		V_4 = L_28;
-		RenderTexture_t2108887433 * L_29 = V_3;
-		NullCheck(L_29);
-		Texture_set_filterMode_m3078068058(L_29, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_31 = V_3;
-		Material_t340375123 * L_32 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_30, L_31, L_32, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_33 = V_3;
-		RenderTexture_t2108887433 * L_34 = V_4;
-		Material_t340375123 * L_35 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_33, L_34, L_35, 0, /*hidden argument*/NULL);
-		Material_t340375123 * L_36 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		float L_37 = __this->get_Amount_6();
-		NullCheck(L_36);
-		Material_SetFloat_m3226510453(L_36, _stringLiteral4133382495, ((float)il2cpp_codegen_multiply((float)L_37, (float)(2.0f))), /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_38 = V_4;
-		RenderTexture_t2108887433 * L_39 = V_3;
-		Material_t340375123 * L_40 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_38, L_39, L_40, 2, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_41 = V_3;
-		RenderTexture_t2108887433 * L_42 = V_4;
-		Material_t340375123 * L_43 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_41, L_42, L_43, 0, /*hidden argument*/NULL);
-		Material_t340375123 * L_44 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_45 = V_4;
-		NullCheck(L_44);
-		Material_SetTexture_m1829349465(L_44, _stringLiteral545261465, L_45, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_46 = V_3;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_46, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_47 = V_4;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_47, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_48 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_49 = ___destTexture1;
-		Material_t340375123 * L_50 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_48, L_49, L_50, 1, /*hidden argument*/NULL);
-		goto IL_0182;
-	}
-
-IL_0174:
-	{
-		RenderTexture_t2108887433 * L_51 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_52 = ___destTexture1;
-		Material_t340375123 * L_53 = CameraFilterPack_Blur_Tilt_Shift_V_get_material_m1007052306(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m4126770912(NULL /*static, unused*/, L_51, L_52, L_53, 0, /*hidden argument*/NULL);
-	}
-
-IL_0182:
-	{
-		goto IL_018e;
-	}
-
-IL_0187:
-	{
-		RenderTexture_t2108887433 * L_54 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_55 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_54, L_55, /*hidden argument*/NULL);
-	}
-
-IL_018e:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Blur_Tilt_Shift_V::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Blur_Tilt_Shift_V_Update_m630126388 (CameraFilterPack_Blur_Tilt_Shift_V_t2982217395 * __this, const RuntimeMethod* method)
@@ -20854,6 +19239,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Broken_Screen::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Broken_Screen_OnRenderImage_m199045861 (CameraFilterPack_Broken_Screen_t1516668543 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -20861,67 +19247,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Broken_Screen_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_Broken_Screen_OnRenderImage_m199045861_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a8;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Broken_Screen_get_material_m78366348(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Broken_Screen_get_material_m78366348(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Fade_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3591482793, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Broken_Screen_get_material_m78366348(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Shadow_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1323866212, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Broken_Screen_get_material_m78366348(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_12 = __this->get_Texture2_7();
-		NullCheck(L_11);
-		Material_SetTexture_m1829349465(L_11, _stringLiteral545261465, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_Broken_Screen_get_material_m78366348(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_00af;
-	}
-
-IL_00a8:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_00af:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Broken_Screen::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Broken_Screen_Update_m620427960 (CameraFilterPack_Broken_Screen_t1516668543 * __this, const RuntimeMethod* method)
@@ -21042,6 +19371,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_BrightContrastSaturation::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_BrightContrastSaturation_OnRenderImage_m2917437109 (CameraFilterPack_Color_BrightContrastSaturation_t3144827441 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -21049,79 +19379,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_BrightContrastSaturati
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_BrightContrastSaturation_OnRenderImage_m2917437109_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00d5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_BrightContrastSaturation_get_material_m911363284(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_Brightness_6();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral3062100205, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_BrightContrastSaturation_get_material_m911363284(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Saturation_7();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral298005881, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_BrightContrastSaturation_get_material_m911363284(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Contrast_8();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2023611031, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Color_BrightContrastSaturation_get_material_m911363284(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_TimeX_3();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2461206737, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Color_BrightContrastSaturation_get_material_m911363284(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_14);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_16);
-		Vector4_t3319028937  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector4__ctor_m2498754347((&L_18), (((float)((float)L_15))), (((float)((float)L_17))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_18, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		Material_t340375123 * L_21 = CameraFilterPack_Color_BrightContrastSaturation_get_material_m911363284(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_19, L_20, L_21, /*hidden argument*/NULL);
-		goto IL_00dc;
-	}
-
-IL_00d5:
-	{
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_23 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_22, L_23, /*hidden argument*/NULL);
-	}
-
-IL_00dc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_BrightContrastSaturation::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_BrightContrastSaturation_Update_m3621004925 (CameraFilterPack_Color_BrightContrastSaturation_t3144827441 * __this, const RuntimeMethod* method)
@@ -21240,6 +19501,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Chromatic_Aberration::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Chromatic_Aberration_OnRenderImage_m1869744948 (CameraFilterPack_Color_Chromatic_Aberration_t2639430931 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -21247,71 +19509,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Chromatic_Aberration_O
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Chromatic_Aberration_OnRenderImage_m1869744948_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Chromatic_Aberration_get_material_m3272460410(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_Chromatic_Aberration_get_material_m3272460410(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Offset_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_Chromatic_Aberration_get_material_m3272460410(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_Chromatic_Aberration_get_material_m3272460410(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Chromatic_Aberration::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Chromatic_Aberration_Update_m3986569700 (CameraFilterPack_Color_Chromatic_Aberration_t2639430931 * __this, const RuntimeMethod* method)
@@ -21432,6 +19633,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Chromatic_Plus::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Chromatic_Plus_OnRenderImage_m4056937434 (CameraFilterPack_Color_Chromatic_Plus_t619216841 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -21439,79 +19641,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Chromatic_Plus_OnRende
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Chromatic_Plus_OnRenderImage_m4056937434_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00d5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Chromatic_Plus_get_material_m4249022391(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_Chromatic_Plus_get_material_m4249022391(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_Chromatic_Plus_get_material_m4249022391(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Smooth_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Color_Chromatic_Plus_get_material_m4249022391(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Offset_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Color_Chromatic_Plus_get_material_m4249022391(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_14);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_16);
-		Vector4_t3319028937  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector4__ctor_m2498754347((&L_18), (((float)((float)L_15))), (((float)((float)L_17))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_18, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		Material_t340375123 * L_21 = CameraFilterPack_Color_Chromatic_Plus_get_material_m4249022391(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_19, L_20, L_21, /*hidden argument*/NULL);
-		goto IL_00dc;
-	}
-
-IL_00d5:
-	{
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_23 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_22, L_23, /*hidden argument*/NULL);
-	}
-
-IL_00dc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Chromatic_Plus::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Chromatic_Plus_Update_m525901806 (CameraFilterPack_Color_Chromatic_Plus_t619216841 * __this, const RuntimeMethod* method)
@@ -21630,6 +19763,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Contrast::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Contrast_OnRenderImage_m1849765355 (CameraFilterPack_Color_Contrast_t4042951386 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -21637,71 +19771,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Contrast_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Contrast_OnRenderImage_m1849765355_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Contrast_get_material_m2785682707(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_Contrast_6();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2023611031, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_Contrast_get_material_m2785682707(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_TimeX_3();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2461206737, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_Contrast_get_material_m2785682707(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_Contrast_get_material_m2785682707(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Contrast::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Contrast_Update_m205695507 (CameraFilterPack_Color_Contrast_t4042951386 * __this, const RuntimeMethod* method)
@@ -21820,6 +19893,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_GrayScale::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_GrayScale_OnRenderImage_m3534642240 (CameraFilterPack_Color_GrayScale_t850084070 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -21827,71 +19901,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_GrayScale_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_GrayScale_OnRenderImage_m3534642240_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_GrayScale_get_material_m3718942486(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_GrayScale_get_material_m3718942486(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__Fade_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3591482793, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_GrayScale_get_material_m3718942486(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_GrayScale_get_material_m3718942486(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_GrayScale::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_GrayScale_Update_m1792451714 (CameraFilterPack_Color_GrayScale_t850084070 * __this, const RuntimeMethod* method)
@@ -22010,6 +20023,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Invert::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Invert_OnRenderImage_m3803035957 (CameraFilterPack_Color_Invert_t1201204147 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -22017,71 +20031,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Invert_OnRenderImage_m
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Invert_OnRenderImage_m3803035957_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Invert_get_material_m4166905346(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_Invert_get_material_m4166905346(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__Fade_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3591482793, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_Invert_get_material_m4166905346(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_Invert_get_material_m4166905346(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Invert::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Invert_Update_m3226370519 (CameraFilterPack_Color_Invert_t1201204147 * __this, const RuntimeMethod* method)
@@ -22200,6 +20153,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Noise::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Noise_OnRenderImage_m3091878124 (CameraFilterPack_Color_Noise_t4181665540 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -22207,71 +20161,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Noise_OnRenderImage_m3
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Noise_OnRenderImage_m3091878124_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Noise_get_material_m367850897(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_Noise_get_material_m367850897(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Noise_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2403779717, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_Noise_get_material_m367850897(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_Noise_get_material_m367850897(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Noise::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Noise_Update_m3767750362 (CameraFilterPack_Color_Noise_t4181665540 * __this, const RuntimeMethod* method)
@@ -22393,6 +20286,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_RGB::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_RGB_OnRenderImage_m3408533619 (CameraFilterPack_Color_RGB_t3322284340 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -22400,71 +20294,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_RGB_OnRenderImage_m340
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_RGB_OnRenderImage_m3408533619_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_RGB_get_material_m3571097001(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_RGB_get_material_m3571097001(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_8 = __this->get_ColorRGB_6();
-		NullCheck(L_7);
-		Material_SetColor_m2020215303(L_7, _stringLiteral1354165257, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_RGB_get_material_m3571097001(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_RGB_get_material_m3571097001(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_RGB::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_RGB_Update_m2222532907 (CameraFilterPack_Color_RGB_t3322284340 * __this, const RuntimeMethod* method)
@@ -22583,6 +20416,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Sepia::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Sepia_OnRenderImage_m344915525 (CameraFilterPack_Color_Sepia_t227699564 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -22590,93 +20424,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Sepia_OnRenderImage_m3
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Sepia_OnRenderImage_m344915525_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00ec;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Sepia_get_material_m1310088300(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		bool L_7 = __this->get_blink_5();
-		if (!L_7)
-		{
-			goto IL_0097;
-		}
-	}
-	{
-		Material_t340375123 * L_8 = CameraFilterPack_Color_Sepia_get_material_m1310088300(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_TimeX_3();
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_10 = sinf(((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_multiply((float)L_9, (float)(5.0f))), (float)(1.57079637f))));
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral3591482793, ((float)((float)((float)il2cpp_codegen_add((float)L_10, (float)(1.0f)))/(float)(2.0f))), /*hidden argument*/NULL);
-		goto IL_00ad;
-	}
-
-IL_0097:
-	{
-		Material_t340375123 * L_11 = CameraFilterPack_Color_Sepia_get_material_m1310088300(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__Fade_4();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral3591482793, L_12, /*hidden argument*/NULL);
-	}
-
-IL_00ad:
-	{
-		Material_t340375123 * L_13 = CameraFilterPack_Color_Sepia_get_material_m1310088300(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_14);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_16);
-		Vector4_t3319028937  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector4__ctor_m2498754347((&L_18), (((float)((float)L_15))), (((float)((float)L_17))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_18, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		Material_t340375123 * L_21 = CameraFilterPack_Color_Sepia_get_material_m1310088300(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_19, L_20, L_21, /*hidden argument*/NULL);
-		goto IL_00f3;
-	}
-
-IL_00ec:
-	{
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_23 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_22, L_23, /*hidden argument*/NULL);
-	}
-
-IL_00f3:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Sepia::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Sepia_Update_m1677507148 (CameraFilterPack_Color_Sepia_t227699564 * __this, const RuntimeMethod* method)
@@ -22795,6 +20546,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_Switching::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Switching_OnRenderImage_m3646999924 (CameraFilterPack_Color_Switching_t2538261863 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -22802,71 +20554,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Switching_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_Switching_OnRenderImage_m3646999924_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00aa;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_Switching_get_material_m2255992400(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_Switching_get_material_m2255992400(__this, /*hidden argument*/NULL);
-		int32_t L_8 = __this->get_Color_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, (((float)((float)L_8))), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_Switching_get_material_m2255992400(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Color_Switching_get_material_m2255992400(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b1;
-	}
-
-IL_00aa:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b1:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_Switching::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_Switching_Update_m2553060251 (CameraFilterPack_Color_Switching_t2538261863 * __this, const RuntimeMethod* method)
@@ -22984,6 +20675,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Color_YUV::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_YUV_OnRenderImage_m2721843243 (CameraFilterPack_Color_YUV_t4132374822 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -22991,79 +20683,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_YUV_OnRenderImage_m272
 		il2cpp_codegen_initialize_method (CameraFilterPack_Color_YUV_OnRenderImage_m2721843243_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00d5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Color_YUV_get_material_m2599091856(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Color_YUV_get_material_m2599091856(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__Y_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3458316273, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Color_YUV_get_material_m2599091856(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__U_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3457529841, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Color_YUV_get_material_m2599091856(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__V_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral3457464305, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Color_YUV_get_material_m2599091856(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_14);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_16);
-		Vector4_t3319028937  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector4__ctor_m2498754347((&L_18), (((float)((float)L_15))), (((float)((float)L_17))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_18, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		Material_t340375123 * L_21 = CameraFilterPack_Color_YUV_get_material_m2599091856(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_19, L_20, L_21, /*hidden argument*/NULL);
-		goto IL_00dc;
-	}
-
-IL_00d5:
-	{
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_23 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_22, L_23, /*hidden argument*/NULL);
-	}
-
-IL_00dc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Color_YUV::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Color_YUV_Update_m2507226103 (CameraFilterPack_Color_YUV_t4132374822 * __this, const RuntimeMethod* method)
@@ -23181,6 +20804,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_Adjust_ColorRGB::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_ColorRGB_OnRenderImage_m445137824 (CameraFilterPack_Colors_Adjust_ColorRGB_t457964298 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -23188,83 +20812,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_ColorRGB_OnRen
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_Adjust_ColorRGB_OnRenderImage_m445137824_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Red_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Green_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Blue_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Brightness_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Colors_Adjust_ColorRGB_get_material_m2418647520(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_Adjust_ColorRGB::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_ColorRGB_Update_m1306730639 (CameraFilterPack_Colors_Adjust_ColorRGB_t457964298 * __this, const RuntimeMethod* method)
@@ -23385,6 +20936,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_Adjust_FullColors::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_FullColors_OnRenderImage_m3278234646 (CameraFilterPack_Colors_Adjust_FullColors_t3834957754 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -23392,115 +20944,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_FullColors_OnR
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_Adjust_FullColors_OnRenderImage_m3278234646_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_01e3;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Red_R_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral1670742075, ((float)((float)L_8/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Red_G_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1669496891, ((float)((float)L_10/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Red_B_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral1669693499, ((float)((float)L_12/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Green_R_10();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral1630074127, ((float)((float)L_14/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Green_G_11();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3114792207, ((float)((float)L_16/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Green_B_12();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral393803023, ((float)((float)L_18/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_Blue_R_14();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral1227349482, ((float)((float)L_20/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_Blue_G_15();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral2343094729, ((float)((float)L_22/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_24 = __this->get_Blue_B_16();
-		NullCheck(L_23);
-		Material_SetFloat_m3226510453(L_23, _stringLiteral1939810202, ((float)((float)L_24/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_26 = __this->get_Red_Constant_9();
-		NullCheck(L_25);
-		Material_SetFloat_m3226510453(L_25, _stringLiteral1669759035, ((float)((float)L_26/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_27 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_28 = __this->get_Green_Constant_13();
-		NullCheck(L_27);
-		Material_SetFloat_m3226510453(L_27, _stringLiteral2350118159, ((float)((float)L_28/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_29 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		float L_30 = __this->get_Blue_Constant_17();
-		NullCheck(L_29);
-		Material_SetFloat_m3226510453(L_29, _stringLiteral373726261, ((float)((float)L_30/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_31 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_32 = ___sourceTexture0;
-		NullCheck(L_32);
-		int32_t L_33 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_32);
-		RenderTexture_t2108887433 * L_34 = ___sourceTexture0;
-		NullCheck(L_34);
-		int32_t L_35 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_34);
-		Vector4_t3319028937  L_36;
-		memset(&L_36, 0, sizeof(L_36));
-		Vector4__ctor_m2498754347((&L_36), (((float)((float)L_33))), (((float)((float)L_35))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_31);
-		Material_SetVector_m4214217286(L_31, _stringLiteral3071141033, L_36, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_37 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_38 = ___destTexture1;
-		Material_t340375123 * L_39 = CameraFilterPack_Colors_Adjust_FullColors_get_material_m386309562(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_37, L_38, L_39, /*hidden argument*/NULL);
-		goto IL_01ea;
-	}
-
-IL_01e3:
-	{
-		RenderTexture_t2108887433 * L_40 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_41 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_40, L_41, /*hidden argument*/NULL);
-	}
-
-IL_01ea:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_Adjust_FullColors::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_FullColors_Update_m2115016419 (CameraFilterPack_Colors_Adjust_FullColors_t3834957754 * __this, const RuntimeMethod* method)
@@ -24124,6 +21571,7 @@ IL_0028:
 }
 // System.Void CameraFilterPack_Colors_Adjust_PreFilters::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_PreFilters_OnRenderImage_m2812373986 (CameraFilterPack_Colors_Adjust_PreFilters_t4156033936 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -24131,155 +21579,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_PreFilters_OnR
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_Adjust_PreFilters_OnRenderImage_m2812373986_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_3();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0214;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_6();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_6(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_6();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_6((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_6();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_8 = __this->get_Matrix9_9();
-		NullCheck(L_8);
-		int32_t L_9 = 0;
-		float L_10 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_9));
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral1670742075, ((float)((float)L_10/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_12 = __this->get_Matrix9_9();
-		NullCheck(L_12);
-		int32_t L_13 = 1;
-		float L_14 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral1669496891, ((float)((float)L_14/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_16 = __this->get_Matrix9_9();
-		NullCheck(L_16);
-		int32_t L_17 = 2;
-		float L_18 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_17));
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral1669693499, ((float)((float)L_18/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_20 = __this->get_Matrix9_9();
-		NullCheck(L_20);
-		int32_t L_21 = 3;
-		float L_22 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_21));
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral1630074127, ((float)((float)L_22/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_24 = __this->get_Matrix9_9();
-		NullCheck(L_24);
-		int32_t L_25 = 4;
-		float L_26 = (L_24)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
-		NullCheck(L_23);
-		Material_SetFloat_m3226510453(L_23, _stringLiteral3114792207, ((float)((float)L_26/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_27 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_28 = __this->get_Matrix9_9();
-		NullCheck(L_28);
-		int32_t L_29 = 5;
-		float L_30 = (L_28)->GetAt(static_cast<il2cpp_array_size_t>(L_29));
-		NullCheck(L_27);
-		Material_SetFloat_m3226510453(L_27, _stringLiteral393803023, ((float)((float)L_30/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_31 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_32 = __this->get_Matrix9_9();
-		NullCheck(L_32);
-		int32_t L_33 = 6;
-		float L_34 = (L_32)->GetAt(static_cast<il2cpp_array_size_t>(L_33));
-		NullCheck(L_31);
-		Material_SetFloat_m3226510453(L_31, _stringLiteral1227349482, ((float)((float)L_34/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_35 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_36 = __this->get_Matrix9_9();
-		NullCheck(L_36);
-		int32_t L_37 = 7;
-		float L_38 = (L_36)->GetAt(static_cast<il2cpp_array_size_t>(L_37));
-		NullCheck(L_35);
-		Material_SetFloat_m3226510453(L_35, _stringLiteral2343094729, ((float)((float)L_38/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_39 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_40 = __this->get_Matrix9_9();
-		NullCheck(L_40);
-		int32_t L_41 = 8;
-		float L_42 = (L_40)->GetAt(static_cast<il2cpp_array_size_t>(L_41));
-		NullCheck(L_39);
-		Material_SetFloat_m3226510453(L_39, _stringLiteral1939810202, ((float)((float)L_42/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_43 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_44 = __this->get_Matrix9_9();
-		NullCheck(L_44);
-		int32_t L_45 = ((int32_t)9);
-		float L_46 = (L_44)->GetAt(static_cast<il2cpp_array_size_t>(L_45));
-		NullCheck(L_43);
-		Material_SetFloat_m3226510453(L_43, _stringLiteral1669759035, ((float)((float)L_46/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_47 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_48 = __this->get_Matrix9_9();
-		NullCheck(L_48);
-		int32_t L_49 = ((int32_t)10);
-		float L_50 = (L_48)->GetAt(static_cast<il2cpp_array_size_t>(L_49));
-		NullCheck(L_47);
-		Material_SetFloat_m3226510453(L_47, _stringLiteral2350118159, ((float)((float)L_50/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_51 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_52 = __this->get_Matrix9_9();
-		NullCheck(L_52);
-		int32_t L_53 = ((int32_t)11);
-		float L_54 = (L_52)->GetAt(static_cast<il2cpp_array_size_t>(L_53));
-		NullCheck(L_51);
-		Material_SetFloat_m3226510453(L_51, _stringLiteral373726261, ((float)((float)L_54/(float)(100.0f))), /*hidden argument*/NULL);
-		Material_t340375123 * L_55 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		float L_56 = __this->get_FadeFX_5();
-		NullCheck(L_55);
-		Material_SetFloat_m3226510453(L_55, _stringLiteral2576970943, L_56, /*hidden argument*/NULL);
-		Material_t340375123 * L_57 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_58 = ___sourceTexture0;
-		NullCheck(L_58);
-		int32_t L_59 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_58);
-		RenderTexture_t2108887433 * L_60 = ___sourceTexture0;
-		NullCheck(L_60);
-		int32_t L_61 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_60);
-		Vector4_t3319028937  L_62;
-		memset(&L_62, 0, sizeof(L_62));
-		Vector4__ctor_m2498754347((&L_62), (((float)((float)L_59))), (((float)((float)L_61))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_57);
-		Material_SetVector_m4214217286(L_57, _stringLiteral3071141033, L_62, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_63 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_64 = ___destTexture1;
-		Material_t340375123 * L_65 = CameraFilterPack_Colors_Adjust_PreFilters_get_material_m2426106553(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_63, L_64, L_65, /*hidden argument*/NULL);
-		goto IL_021b;
-	}
-
-IL_0214:
-	{
-		RenderTexture_t2108887433 * L_66 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_67 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_66, L_67, /*hidden argument*/NULL);
-	}
-
-IL_021b:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_Adjust_PreFilters::OnValidate()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Adjust_PreFilters_OnValidate_m2211021275 (CameraFilterPack_Colors_Adjust_PreFilters_t4156033936 * __this, const RuntimeMethod* method)
@@ -24414,6 +21717,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_BleachBypass::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_BleachBypass_OnRenderImage_m648014246 (CameraFilterPack_Colors_BleachBypass_t2024480260 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -24421,71 +21725,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_BleachBypass_OnRender
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_BleachBypass_OnRenderImage_m648014246_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_BleachBypass_get_material_m2067920841(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_BleachBypass_get_material_m2067920841(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_BleachBypass_get_material_m2067920841(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Colors_BleachBypass_get_material_m2067920841(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_BleachBypass::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_BleachBypass_Update_m698110221 (CameraFilterPack_Colors_BleachBypass_t2024480260 * __this, const RuntimeMethod* method)
@@ -24603,6 +21846,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_Brightness::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Brightness_OnRenderImage_m1952653325 (CameraFilterPack_Colors_Brightness_t2778812550 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -24610,40 +21854,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Brightness_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_Brightness_OnRenderImage_m1952653325_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0039;
-		}
-	}
-	{
-		Material_t340375123 * L_2 = CameraFilterPack_Colors_Brightness_get_material_m3937644995(__this, /*hidden argument*/NULL);
-		float L_3 = __this->get__Brightness_3();
-		NullCheck(L_2);
-		Material_SetFloat_m3226510453(L_2, _stringLiteral1964175126, L_3, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_4 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_5 = ___destTexture1;
-		Material_t340375123 * L_6 = CameraFilterPack_Colors_Brightness_get_material_m3937644995(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_4, L_5, L_6, /*hidden argument*/NULL);
-		goto IL_0040;
-	}
-
-IL_0039:
-	{
-		RenderTexture_t2108887433 * L_7 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_8 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_7, L_8, /*hidden argument*/NULL);
-	}
-
-IL_0040:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_Brightness::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Brightness_Update_m1682022091 (CameraFilterPack_Colors_Brightness_t2778812550 * __this, const RuntimeMethod* method)
@@ -24765,6 +21979,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_DarkColor::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_DarkColor_OnRenderImage_m1915544352 (CameraFilterPack_Colors_DarkColor_t4090990875 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -24772,83 +21987,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_DarkColor_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_DarkColor_OnRenderImage_m1915544352_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Alpha_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Colors_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Green_Mod_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Colors_DarkColor_get_material_m2500768649(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_DarkColor::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_DarkColor_Update_m933241567 (CameraFilterPack_Colors_DarkColor_t4090990875 * __this, const RuntimeMethod* method)
@@ -24960,6 +22102,7 @@ IL_0011:
 }
 // System.Void CameraFilterPack_Colors_HSV::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_HSV_OnRenderImage_m2342604661 (CameraFilterPack_Colors_HSV_t3163452240 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -24967,48 +22110,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_HSV_OnRenderImage_m23
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_HSV_OnRenderImage_m2342604661_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0065;
-		}
-	}
-	{
-		Material_t340375123 * L_2 = CameraFilterPack_Colors_HSV_get_material_m909464627(__this, /*hidden argument*/NULL);
-		float L_3 = __this->get__HueShift_3();
-		NullCheck(L_2);
-		Material_SetFloat_m3226510453(L_2, _stringLiteral2382433636, L_3, /*hidden argument*/NULL);
-		Material_t340375123 * L_4 = CameraFilterPack_Colors_HSV_get_material_m909464627(__this, /*hidden argument*/NULL);
-		float L_5 = __this->get__Saturation_4();
-		NullCheck(L_4);
-		Material_SetFloat_m3226510453(L_4, _stringLiteral3493719830, L_5, /*hidden argument*/NULL);
-		Material_t340375123 * L_6 = CameraFilterPack_Colors_HSV_get_material_m909464627(__this, /*hidden argument*/NULL);
-		float L_7 = __this->get__ValueBrightness_5();
-		NullCheck(L_6);
-		Material_SetFloat_m3226510453(L_6, _stringLiteral1964175126, L_7, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_9 = ___destTexture1;
-		Material_t340375123 * L_10 = CameraFilterPack_Colors_HSV_get_material_m909464627(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_8, L_9, L_10, /*hidden argument*/NULL);
-		goto IL_006c;
-	}
-
-IL_0065:
-	{
-		RenderTexture_t2108887433 * L_11 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_12 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_11, L_12, /*hidden argument*/NULL);
-	}
-
-IL_006c:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_HSV::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_HSV_Update_m3084186337 (CameraFilterPack_Colors_HSV_t3163452240 * __this, const RuntimeMethod* method)
@@ -25127,6 +22232,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_HUE_Rotate::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_HUE_Rotate_OnRenderImage_m33510282 (CameraFilterPack_Colors_HUE_Rotate_t3974995683 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -25134,69 +22240,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_HUE_Rotate_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_HUE_Rotate_OnRenderImage_m33510282_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_HUE_Rotate_get_material_m4256148007(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_HUE_Rotate_get_material_m4256148007(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Speed_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2154098526, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_HUE_Rotate_get_material_m4256148007(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Colors_HUE_Rotate_get_material_m4256148007(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_HUE_Rotate::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_HUE_Rotate_Update_m1609669031 (CameraFilterPack_Colors_HUE_Rotate_t3974995683 * __this, const RuntimeMethod* method)
@@ -25318,6 +22365,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_NewPosterize::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_NewPosterize_OnRenderImage_m2963850900 (CameraFilterPack_Colors_NewPosterize_t2029066098 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -25325,83 +22373,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_NewPosterize_OnRender
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_NewPosterize_OnRenderImage_m2963850900_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Gamma_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Colors_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Green_Mod_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Colors_NewPosterize_get_material_m2358139689(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_NewPosterize::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_NewPosterize_Update_m495741547 (CameraFilterPack_Colors_NewPosterize_t2029066098 * __this, const RuntimeMethod* method)
@@ -25523,6 +22498,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_RgbClamp::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_RgbClamp_OnRenderImage_m2554262590 (CameraFilterPack_Colors_RgbClamp_t1059914327 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -25530,99 +22506,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_RgbClamp_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_RgbClamp_OnRenderImage_m2554262590_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0143;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Red_Start_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Red_End_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Green_Start_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Green_End_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Blue_Start_10();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3648821864, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Blue_End_11();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral919938509, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_RGB_Start_12();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral2486022450, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_RGB_End_13();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral113369455, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		NullCheck(L_24);
-		int32_t L_25 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_24);
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		NullCheck(L_26);
-		int32_t L_27 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_26);
-		Vector4_t3319028937  L_28;
-		memset(&L_28, 0, sizeof(L_28));
-		Vector4__ctor_m2498754347((&L_28), (((float)((float)L_25))), (((float)((float)L_27))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_23);
-		Material_SetVector_m4214217286(L_23, _stringLiteral3071141033, L_28, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_29 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_30 = ___destTexture1;
-		Material_t340375123 * L_31 = CameraFilterPack_Colors_RgbClamp_get_material_m4150055283(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_29, L_30, L_31, /*hidden argument*/NULL);
-		goto IL_014a;
-	}
-
-IL_0143:
-	{
-		RenderTexture_t2108887433 * L_32 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_33 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_32, L_33, /*hidden argument*/NULL);
-	}
-
-IL_014a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_RgbClamp::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_RgbClamp_Update_m1153697311 (CameraFilterPack_Colors_RgbClamp_t1059914327 * __this, const RuntimeMethod* method)
@@ -25741,6 +22628,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Colors_Threshold::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Threshold_OnRenderImage_m2011267994 (CameraFilterPack_Colors_Threshold_t1448395341 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -25748,59 +22636,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Threshold_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Colors_Threshold_OnRenderImage_m2011267994_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Colors_Threshold_get_material_m3384237260(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Colors_Threshold_get_material_m3384237260(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Threshold_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Colors_Threshold_get_material_m3384237260(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Colors_Threshold::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Colors_Threshold_Update_m4115146391 (CameraFilterPack_Colors_Threshold_t1448395341 * __this, const RuntimeMethod* method)
@@ -25919,6 +22758,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Convert_Normal::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Convert_Normal_OnRenderImage_m3612069963 (CameraFilterPack_Convert_Normal_t2244117972 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -25926,44 +22766,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Convert_Normal_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Convert_Normal_OnRenderImage_m3612069963_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_004f;
-		}
-	}
-	{
-		Material_t340375123 * L_2 = CameraFilterPack_Convert_Normal_get_material_m3308528741(__this, /*hidden argument*/NULL);
-		float L_3 = __this->get__Heigh_3();
-		NullCheck(L_2);
-		Material_SetFloat_m3226510453(L_2, _stringLiteral1601994771, L_3, /*hidden argument*/NULL);
-		Material_t340375123 * L_4 = CameraFilterPack_Convert_Normal_get_material_m3308528741(__this, /*hidden argument*/NULL);
-		float L_5 = __this->get__Intervale_4();
-		NullCheck(L_4);
-		Material_SetFloat_m3226510453(L_4, _stringLiteral806580546, L_5, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_6 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_7 = ___destTexture1;
-		Material_t340375123 * L_8 = CameraFilterPack_Convert_Normal_get_material_m3308528741(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_6, L_7, L_8, /*hidden argument*/NULL);
-		goto IL_0056;
-	}
-
-IL_004f:
-	{
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
-	}
-
-IL_0056:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Convert_Normal::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Convert_Normal_Update_m1742804144 (CameraFilterPack_Convert_Normal_t2244117972 * __this, const RuntimeMethod* method)
@@ -26085,6 +22891,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Aspiration::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Aspiration_OnRenderImage_m338543749 (CameraFilterPack_Distortion_Aspiration_t4086807725 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -26092,83 +22899,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Aspiration_OnRend
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Aspiration_OnRenderImage_m338543749_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00f1;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, ((float)il2cpp_codegen_subtract((float)(1.0f), (float)L_8)), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_PosX_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PosY_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Distortion_Aspiration_get_material_m4106402805(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f8;
-	}
-
-IL_00f1:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f8:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Aspiration::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Aspiration_Update_m1137820402 (CameraFilterPack_Distortion_Aspiration_t4086807725 * __this, const RuntimeMethod* method)
@@ -26288,6 +23022,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_BigFace::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_BigFace_OnRenderImage_m2953741211 (CameraFilterPack_Distortion_BigFace_t1320418032 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -26295,75 +23030,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_BigFace_OnRenderI
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_BigFace_OnRenderImage_m2953741211_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00bf;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_BigFace_get_material_m3878196493(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_BigFace_get_material_m3878196493(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_7();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_BigFace_get_material_m3878196493(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__Size_6();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3951757521, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_BigFace_get_material_m3878196493(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_12);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_14);
-		Vector4_t3319028937  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector4__ctor_m2498754347((&L_16), (((float)((float)L_13))), (((float)((float)L_15))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Material_t340375123 * L_19 = CameraFilterPack_Distortion_BigFace_get_material_m3878196493(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_17, L_18, L_19, /*hidden argument*/NULL);
-		goto IL_00c6;
-	}
-
-IL_00bf:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00c6:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_BigFace::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_BigFace_Update_m394807625 (CameraFilterPack_Distortion_BigFace_t1320418032 * __this, const RuntimeMethod* method)
@@ -26483,6 +23153,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_BlackHole::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_BlackHole_OnRenderImage_m1967793923 (CameraFilterPack_Distortion_BlackHole_t1518688010 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -26490,81 +23161,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_BlackHole_OnRende
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_BlackHole_OnRenderImage_m1967793923_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_PositionX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3599203566, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_PositionY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3599138030, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Size_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Distortion_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral3541565075, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		int32_t L_16 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_17 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector2__ctor_m3970636864((&L_18), (((float)((float)L_16))), (((float)((float)L_17))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_19 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_18, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_19, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		Material_t340375123 * L_22 = CameraFilterPack_Distortion_BlackHole_get_material_m1944830321(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_20, L_21, L_22, /*hidden argument*/NULL);
-		goto IL_00eb;
-	}
-
-IL_00e4:
-	{
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_23, L_24, /*hidden argument*/NULL);
-	}
-
-IL_00eb:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_BlackHole::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_BlackHole_Update_m175489992 (CameraFilterPack_Distortion_BlackHole_t1518688010 * __this, const RuntimeMethod* method)
@@ -26686,6 +23286,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Dissipation::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dissipation_OnRenderImage_m3176376231 (CameraFilterPack_Distortion_Dissipation_t2861707019 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -26693,83 +23294,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dissipation_OnRen
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Dissipation_OnRenderImage_m3176376231_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Dissipation_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Colors_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Green_Mod_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Distortion_Dissipation_get_material_m1825702913(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Dissipation::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dissipation_Update_m333705338 (CameraFilterPack_Distortion_Dissipation_t2861707019 * __this, const RuntimeMethod* method)
@@ -26888,6 +23416,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Dream::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dream_OnRenderImage_m2477310331 (CameraFilterPack_Distortion_Dream_t2708937033 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -26895,59 +23424,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dream_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Dream_OnRenderImage_m2477310331_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Dream_get_material_m867689367(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Dream_get_material_m867689367(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Dream_get_material_m867689367(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Dream::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dream_Update_m3980708277 (CameraFilterPack_Distortion_Dream_t2708937033 * __this, const RuntimeMethod* method)
@@ -27067,6 +23547,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Dream2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dream2_OnRenderImage_m704263503 (CameraFilterPack_Distortion_Dream2_t2710116681 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -27074,75 +23555,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dream2_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Dream2_OnRenderImage_m704263503_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00bf;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Dream2_get_material_m582577082(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Dream2_get_material_m582577082(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Speed_7();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2154098526, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Dream2_get_material_m582577082(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Distortion_6();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2573074067, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Dream2_get_material_m582577082(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_12);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_14);
-		Vector4_t3319028937  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector4__ctor_m2498754347((&L_16), (((float)((float)L_13))), (((float)((float)L_15))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Material_t340375123 * L_19 = CameraFilterPack_Distortion_Dream2_get_material_m582577082(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_17, L_18, L_19, /*hidden argument*/NULL);
-		goto IL_00c6;
-	}
-
-IL_00bf:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00c6:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Dream2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Dream2_Update_m4226268623 (CameraFilterPack_Distortion_Dream2_t2710116681 * __this, const RuntimeMethod* method)
@@ -27261,6 +23677,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_FishEye::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_FishEye_OnRenderImage_m2611565246 (CameraFilterPack_Distortion_FishEye_t2026184060 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -27268,71 +23685,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_FishEye_OnRenderI
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_FishEye_OnRenderImage_m2611565246_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_FishEye_get_material_m606525260(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_FishEye_get_material_m606525260(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_FishEye_get_material_m606525260(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Distortion_FishEye_get_material_m606525260(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_FishEye::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_FishEye_Update_m1959294770 (CameraFilterPack_Distortion_FishEye_t2026184060 * __this, const RuntimeMethod* method)
@@ -27451,6 +23807,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Flag::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Flag_OnRenderImage_m2207595405 (CameraFilterPack_Distortion_Flag_t3461857871 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -27458,69 +23815,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Flag_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Flag_OnRenderImage_m2207595405_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Flag_get_material_m2298633606(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Flag_get_material_m2298633606(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Flag_get_material_m2298633606(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Distortion_Flag_get_material_m2298633606(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Flag::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Flag_Update_m3145222679 (CameraFilterPack_Distortion_Flag_t3461857871 * __this, const RuntimeMethod* method)
@@ -27639,6 +23937,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Flush::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Flush_OnRenderImage_m69261378 (CameraFilterPack_Distortion_Flush_t3584807000 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -27646,71 +23945,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Flush_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Flush_OnRenderImage_m69261378_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Flush_get_material_m1524244559(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Flush_get_material_m1524244559(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3493619321, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Flush_get_material_m1524244559(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Distortion_Flush_get_material_m1524244559(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Flush::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Flush_Update_m3693785898 (CameraFilterPack_Distortion_Flush_t3584807000 * __this, const RuntimeMethod* method)
@@ -27830,6 +24068,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Half_Sphere::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Half_Sphere_OnRenderImage_m939557962 (CameraFilterPack_Distortion_Half_Sphere_t2999827780 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -27837,81 +24076,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Half_Sphere_OnRen
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Half_Sphere_OnRenderImage_m939557962_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_SphereSize_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3376015360, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_SpherePositionX_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3536686639, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_SpherePositionY_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral1198034479, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Strength_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2036510295, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		int32_t L_16 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_17 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector2__ctor_m3970636864((&L_18), (((float)((float)L_16))), (((float)((float)L_17))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_19 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_18, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_19, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		Material_t340375123 * L_22 = CameraFilterPack_Distortion_Half_Sphere_get_material_m657619767(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_20, L_21, L_22, /*hidden argument*/NULL);
-		goto IL_00eb;
-	}
-
-IL_00e4:
-	{
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_23, L_24, /*hidden argument*/NULL);
-	}
-
-IL_00eb:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Half_Sphere::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Half_Sphere_Update_m1870962714 (CameraFilterPack_Distortion_Half_Sphere_t2999827780 * __this, const RuntimeMethod* method)
@@ -28030,6 +24198,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Heat::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Heat_OnRenderImage_m3482600593 (CameraFilterPack_Distortion_Heat_t1976549953 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -28037,71 +24206,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Heat_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Heat_OnRenderImage_m3482600593_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Heat_get_material_m2171209721(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Heat_get_material_m2171209721(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Heat_get_material_m2171209721(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Distortion_Heat_get_material_m2171209721(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Heat::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Heat_Update_m2144707190 (CameraFilterPack_Distortion_Heat_t1976549953 * __this, const RuntimeMethod* method)
@@ -28220,6 +24328,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Lens::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Lens_OnRenderImage_m1913018702 (CameraFilterPack_Distortion_Lens_t3089560194 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -28227,77 +24336,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Lens_OnRenderImag
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Lens_OnRenderImage_m1913018702_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00ce;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Lens_get_material_m3176196628(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Lens_get_material_m3176196628(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_CenterX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral753637900, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Lens_get_material_m3176196628(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_CenterY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3092290060, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Lens_get_material_m3176196628(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Distortion_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_Lens_get_material_m3176196628(__this, /*hidden argument*/NULL);
-		int32_t L_14 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_15 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector2__ctor_m3970636864((&L_16), (((float)((float)L_14))), (((float)((float)L_15))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_17 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_16, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Distortion_Lens_get_material_m3176196628(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00d5;
-	}
-
-IL_00ce:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00d5:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Lens::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Lens_Update_m2327863279 (CameraFilterPack_Distortion_Lens_t3089560194 * __this, const RuntimeMethod* method)
@@ -28416,6 +24458,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Noise::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Noise_OnRenderImage_m3707647156 (CameraFilterPack_Distortion_Noise_t2686292047 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -28423,69 +24466,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Noise_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Noise_OnRenderImage_m3707647156_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Noise_get_material_m4194309457(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Noise_get_material_m4194309457(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Noise_get_material_m4194309457(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Distortion_Noise_get_material_m4194309457(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Noise::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Noise_Update_m2630760297 (CameraFilterPack_Distortion_Noise_t2686292047 * __this, const RuntimeMethod* method)
@@ -28607,6 +24591,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_ShockWave::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_ShockWave_OnRenderImage_m34492019 (CameraFilterPack_Distortion_ShockWave_t1149959683 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -28614,83 +24599,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_ShockWave_OnRende
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_ShockWave_OnRenderImage_m34492019_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_PosX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_PosY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Speed_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Size_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Distortion_ShockWave_get_material_m1706400271(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_ShockWave::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_ShockWave_Update_m2478552331 (CameraFilterPack_Distortion_ShockWave_t1149959683 * __this, const RuntimeMethod* method)
@@ -28812,6 +24724,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_ShockWaveManual::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_ShockWaveManual_OnRenderImage_m1696712775 (CameraFilterPack_Distortion_ShockWaveManual_t1897578730 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -28819,83 +24732,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_ShockWaveManual_O
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_ShockWaveManual_OnRenderImage_m1696712775_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_PosX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_PosY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Value_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Size_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Distortion_ShockWaveManual_get_material_m3807232679(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_ShockWaveManual::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_ShockWaveManual_Update_m131613180 (CameraFilterPack_Distortion_ShockWaveManual_t1897578730 * __this, const RuntimeMethod* method)
@@ -29017,6 +24857,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Twist::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Twist_OnRenderImage_m1129030328 (CameraFilterPack_Distortion_Twist_t2703594102 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -29024,81 +24865,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Twist_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Twist_OnRenderImage_m1129030328_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_CenterX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral753637900, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_CenterY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3092290060, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Distortion_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Size_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral3951757521, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		int32_t L_16 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_17 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector2__ctor_m3970636864((&L_18), (((float)((float)L_16))), (((float)((float)L_17))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_19 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_18, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_19, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		Material_t340375123 * L_22 = CameraFilterPack_Distortion_Twist_get_material_m3820228658(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_20, L_21, L_22, /*hidden argument*/NULL);
-		goto IL_00eb;
-	}
-
-IL_00e4:
-	{
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_23, L_24, /*hidden argument*/NULL);
-	}
-
-IL_00eb:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Twist::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Twist_Update_m2110590784 (CameraFilterPack_Distortion_Twist_t2703594102 * __this, const RuntimeMethod* method)
@@ -29220,6 +24990,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Twist_Square::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Twist_Square_OnRenderImage_m1664766976 (CameraFilterPack_Distortion_Twist_Square_t217664105 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -29227,81 +24998,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Twist_Square_OnRe
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Twist_Square_OnRenderImage_m1664766976_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_CenterX_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral753637900, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_CenterY_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3092290060, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Distortion_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Size_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral3951757521, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		int32_t L_16 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_17 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector2__ctor_m3970636864((&L_18), (((float)((float)L_16))), (((float)((float)L_17))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_19 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_18, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_19, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		Material_t340375123 * L_22 = CameraFilterPack_Distortion_Twist_Square_get_material_m1394495646(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_20, L_21, L_22, /*hidden argument*/NULL);
-		goto IL_00eb;
-	}
-
-IL_00e4:
-	{
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_23, L_24, /*hidden argument*/NULL);
-	}
-
-IL_00eb:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Twist_Square::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Twist_Square_Update_m3474534646 (CameraFilterPack_Distortion_Twist_Square_t217664105 * __this, const RuntimeMethod* method)
@@ -29421,6 +25121,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Water_Drop::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Water_Drop_OnRenderImage_m3446550724 (CameraFilterPack_Distortion_Water_Drop_t601786672 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -29428,81 +25129,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Water_Drop_OnRend
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Water_Drop_OnRenderImage_m3446550724_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00e4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		int32_t L_8 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_9 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10;
-		memset(&L_10, 0, sizeof(L_10));
-		Vector2__ctor_m3970636864((&L_10), (((float)((float)L_8))), (((float)((float)L_9))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_11, /*hidden argument*/NULL);
-		Material_t340375123 * L_12 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		float L_13 = __this->get_CenterX_6();
-		NullCheck(L_12);
-		Material_SetFloat_m3226510453(L_12, _stringLiteral753637900, L_13, /*hidden argument*/NULL);
-		Material_t340375123 * L_14 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		float L_15 = __this->get_CenterY_7();
-		NullCheck(L_14);
-		Material_SetFloat_m3226510453(L_14, _stringLiteral3092290060, L_15, /*hidden argument*/NULL);
-		Material_t340375123 * L_16 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		float L_17 = __this->get_WaveIntensity_8();
-		NullCheck(L_16);
-		Material_SetFloat_m3226510453(L_16, _stringLiteral3161391598, L_17, /*hidden argument*/NULL);
-		Material_t340375123 * L_18 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		int32_t L_19 = __this->get_NumberOfWaves_9();
-		NullCheck(L_18);
-		Material_SetInt_m1783799378(L_18, _stringLiteral3241432080, L_19, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		Material_t340375123 * L_22 = CameraFilterPack_Distortion_Water_Drop_get_material_m356279717(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_20, L_21, L_22, /*hidden argument*/NULL);
-		goto IL_00eb;
-	}
-
-IL_00e4:
-	{
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_23, L_24, /*hidden argument*/NULL);
-	}
-
-IL_00eb:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Water_Drop::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Water_Drop_Update_m1964710555 (CameraFilterPack_Distortion_Water_Drop_t601786672 * __this, const RuntimeMethod* method)
@@ -29621,6 +25251,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Distortion_Wave_Horizontal::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Wave_Horizontal_OnRenderImage_m2895854950 (CameraFilterPack_Distortion_Wave_Horizontal_t34502834 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -29628,69 +25259,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Wave_Horizontal_O
 		il2cpp_codegen_initialize_method (CameraFilterPack_Distortion_Wave_Horizontal_OnRenderImage_m2895854950_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Distortion_Wave_Horizontal_get_material_m1318152301(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_WaveIntensity_6();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral3161391598, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Distortion_Wave_Horizontal_get_material_m1318152301(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_TimeX_3();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2461206737, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Distortion_Wave_Horizontal_get_material_m1318152301(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Distortion_Wave_Horizontal_get_material_m1318152301(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Distortion_Wave_Horizontal::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Distortion_Wave_Horizontal_Update_m2520414841 (CameraFilterPack_Distortion_Wave_Horizontal_t34502834 * __this, const RuntimeMethod* method)
@@ -29825,6 +25397,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Drawing_BluePrint::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_BluePrint_OnRenderImage_m3498798980 (CameraFilterPack_Drawing_BluePrint_t2802512540 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -29832,95 +25405,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_BluePrint_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_BluePrint_OnRenderImage_m3498798980_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0142;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_8 = __this->get_Pencil_Color_4();
-		NullCheck(L_7);
-		Material_SetColor_m2020215303(L_7, _stringLiteral1264924234, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Pencil_Size_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1323223036, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Pencil_Correction_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2889306977, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Intensity_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral160423622, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Speed_Animation_8();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral2082737923, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Corner_Lose_9();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral3648821864, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_Fade_Paper_to_BackColor_10();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral919938509, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_Fade_With_Original_11();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral2486022450, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_24 = __this->get_Back_Color_12();
-		NullCheck(L_23);
-		Material_SetColor_m2020215303(L_23, _stringLiteral3941283402, L_24, /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_26 = __this->get_Texture2_14();
-		NullCheck(L_25);
-		Material_SetTexture_m1829349465(L_25, _stringLiteral545261465, L_26, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_27 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_28 = ___destTexture1;
-		Material_t340375123 * L_29 = CameraFilterPack_Drawing_BluePrint_get_material_m3527638986(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_27, L_28, L_29, /*hidden argument*/NULL);
-		goto IL_0149;
-	}
-
-IL_0142:
-	{
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_31 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);
-	}
-
-IL_0149:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_BluePrint::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_BluePrint_Update_m3494719739 (CameraFilterPack_Drawing_BluePrint_t2802512540 * __this, const RuntimeMethod* method)
@@ -30040,6 +25528,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_CellShading::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_CellShading_OnRenderImage_m3465879156 (CameraFilterPack_Drawing_CellShading_t2221391220 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -30047,73 +25536,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_CellShading_OnRender
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_CellShading_OnRenderImage_m3465879156_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00b8;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_CellShading_get_material_m2747615914(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_CellShading_get_material_m2747615914(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_EdgeSize_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3600574412, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_CellShading_get_material_m2747615914(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_ColorLevel_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral742954904, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_CellShading_get_material_m2747615914(__this, /*hidden argument*/NULL);
-		int32_t L_12 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_13 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector2__ctor_m3970636864((&L_14), (((float)((float)L_12))), (((float)((float)L_13))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_15 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_14, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_15, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		Material_t340375123 * L_18 = CameraFilterPack_Drawing_CellShading_get_material_m2747615914(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_16, L_17, L_18, /*hidden argument*/NULL);
-		goto IL_00bf;
-	}
-
-IL_00b8:
-	{
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_19, L_20, /*hidden argument*/NULL);
-	}
-
-IL_00bf:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_CellShading::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_CellShading_Update_m751502844 (CameraFilterPack_Drawing_CellShading_t2221391220 * __this, const RuntimeMethod* method)
@@ -30234,6 +25660,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_CellShading2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_CellShading2_OnRenderImage_m3970971723 (CameraFilterPack_Drawing_CellShading2_t514692683 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -30241,77 +25668,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_CellShading2_OnRende
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_CellShading2_OnRenderImage_m3970971723_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00ce;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_CellShading2_get_material_m2901286274(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_CellShading2_get_material_m2901286274(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_EdgeSize_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3600574412, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_CellShading2_get_material_m2901286274(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_ColorLevel_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral742954904, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_CellShading2_get_material_m2901286274(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Blur_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_CellShading2_get_material_m2901286274(__this, /*hidden argument*/NULL);
-		int32_t L_14 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_15 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector2__ctor_m3970636864((&L_16), (((float)((float)L_14))), (((float)((float)L_15))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_17 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_16, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Drawing_CellShading2_get_material_m2901286274(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00d5;
-	}
-
-IL_00ce:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00d5:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_CellShading2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_CellShading2_Update_m3884648517 (CameraFilterPack_Drawing_CellShading2_t514692683 * __this, const RuntimeMethod* method)
@@ -30430,6 +25790,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Comics::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Comics_OnRenderImage_m373161828 (CameraFilterPack_Drawing_Comics_t1947315638 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -30437,59 +25798,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Comics_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Comics_OnRenderImage_m373161828_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Comics_get_material_m3278287134(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Comics_get_material_m3278287134(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Comics_get_material_m3278287134(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Comics::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Comics_Update_m464156811 (CameraFilterPack_Drawing_Comics_t1947315638 * __this, const RuntimeMethod* method)
@@ -30608,6 +25920,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Crosshatch::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Crosshatch_OnRenderImage_m2377918874 (CameraFilterPack_Drawing_Crosshatch_t2756901614 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -30615,71 +25928,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Crosshatch_OnRenderI
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Crosshatch_OnRenderImage_m2377918874_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Crosshatch_get_material_m2437720557(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Crosshatch_get_material_m2437720557(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Width_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Crosshatch_get_material_m2437720557(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Crosshatch_get_material_m2437720557(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Crosshatch::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Crosshatch_Update_m2428541112 (CameraFilterPack_Drawing_Crosshatch_t2756901614 * __this, const RuntimeMethod* method)
@@ -30798,6 +26050,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Curve::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Curve_OnRenderImage_m1481284910 (CameraFilterPack_Drawing_Curve_t1622502697 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -30805,71 +26058,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Curve_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Curve_OnRenderImage_m1481284910_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Curve_get_material_m882812431(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Curve_get_material_m882812431(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Curve_get_material_m882812431(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Curve_get_material_m882812431(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Curve::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Curve_Update_m490058748 (CameraFilterPack_Drawing_Curve_t1622502697 * __this, const RuntimeMethod* method)
@@ -30998,6 +26190,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_EnhancedComics::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_EnhancedComics_OnRenderImage_m1853565616 (CameraFilterPack_Drawing_EnhancedComics_t866375178 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -31005,87 +26198,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_EnhancedComics_OnRen
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_EnhancedComics_OnRenderImage_m1853565616_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0116;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__ColorR_6();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1184455581, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__ColorG_7();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral68710334, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get__ColorB_8();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral471994861, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get__Blood_9();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral1655006872, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_18 = __this->get_ColorRGB_12();
-		NullCheck(L_17);
-		Material_SetColor_m2020215303(L_17, _stringLiteral1354165257, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get__SmoothStart_10();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral2574852254, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get__SmoothEnd_11();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral2780131529, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_EnhancedComics_get_material_m776596900(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_23, L_24, L_25, /*hidden argument*/NULL);
-		goto IL_011d;
-	}
-
-IL_0116:
-	{
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_26, L_27, /*hidden argument*/NULL);
-	}
-
-IL_011d:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_EnhancedComics::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_EnhancedComics_Update_m914413680 (CameraFilterPack_Drawing_EnhancedComics_t866375178 * __this, const RuntimeMethod* method)
@@ -31205,6 +26321,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Halftone::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Halftone_OnRenderImage_m1958288882 (CameraFilterPack_Drawing_Halftone_t4035935030 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -31212,63 +26329,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Halftone_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Halftone_OnRenderImage_m1958288882_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0092;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Halftone_get_material_m4225597071(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Halftone_get_material_m4225597071(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Threshold_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Halftone_get_material_m4225597071(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_DotSize_6();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3178140689, L_10, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_11 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_12 = ___destTexture1;
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Halftone_get_material_m4225597071(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_11, L_12, L_13, /*hidden argument*/NULL);
-		goto IL_0099;
-	}
-
-IL_0092:
-	{
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_14, L_15, /*hidden argument*/NULL);
-	}
-
-IL_0099:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Halftone::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Halftone_Update_m2507338731 (CameraFilterPack_Drawing_Halftone_t4035935030 * __this, const RuntimeMethod* method)
@@ -31386,6 +26450,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Laplacian::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Laplacian_OnRenderImage_m2449887660 (CameraFilterPack_Drawing_Laplacian_t3520332712 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -31393,67 +26458,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Laplacian_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Laplacian_OnRenderImage_m2449887660_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Laplacian_get_material_m4176064729(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Laplacian_get_material_m4176064729(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Laplacian_get_material_m4176064729(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Laplacian::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Laplacian_Update_m3155864476 (CameraFilterPack_Drawing_Laplacian_t3520332712 * __this, const RuntimeMethod* method)
@@ -31584,6 +26592,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Lines::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Lines_OnRenderImage_m1853792144 (CameraFilterPack_Drawing_Lines_t2185557494 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -31591,83 +26600,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Lines_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Lines_OnRenderImage_m1853792144_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Number_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Random_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PositionY_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Drawing_Lines_get_material_m399051668(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Lines::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Lines_Update_m274704979 (CameraFilterPack_Drawing_Lines_t2185557494 * __this, const RuntimeMethod* method)
@@ -31786,6 +26722,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_OnRenderImage_m2479099806 (CameraFilterPack_Drawing_Manga_t1825984796 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -31793,59 +26730,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga_OnRenderImage_m2479099806_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga_get_material_m2534311387(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga_get_material_m2534311387(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga_get_material_m2534311387(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Update_m34147109 (CameraFilterPack_Drawing_Manga_t1825984796 * __this, const RuntimeMethod* method)
@@ -31964,6 +26852,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga_Color::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Color_OnRenderImage_m1777843436 (CameraFilterPack_Drawing_Manga_Color_t2294354158 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -31971,59 +26860,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Color_OnRender
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga_Color_OnRenderImage_m1777843436_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga_Color_get_material_m2802257499(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga_Color_get_material_m2802257499(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga_Color_get_material_m2802257499(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga_Color::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Color_Update_m1066013136 (CameraFilterPack_Drawing_Manga_Color_t2294354158 * __this, const RuntimeMethod* method)
@@ -32146,6 +26986,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga_Flash::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Flash_OnRenderImage_m3116869024 (CameraFilterPack_Drawing_Manga_Flash_t1732390151 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -32153,87 +26994,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Flash_OnRender
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga_Flash_OnRenderImage_m3116869024_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0102;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		int32_t L_10 = __this->get_Speed_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, (((float)((float)L_10))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PosX_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_PosY_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Intensity_10();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3952415593, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_18);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_20);
-		Vector4_t3319028937  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		Vector4__ctor_m2498754347((&L_22), (((float)((float)L_19))), (((float)((float)L_21))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Material_SetVector_m4214217286(L_17, _stringLiteral3071141033, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_Manga_Flash_get_material_m862933468(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_23, L_24, L_25, /*hidden argument*/NULL);
-		goto IL_0109;
-	}
-
-IL_0102:
-	{
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_26, L_27, /*hidden argument*/NULL);
-	}
-
-IL_0109:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga_Flash::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Flash_Update_m3876798199 (CameraFilterPack_Drawing_Manga_Flash_t1732390151 * __this, const RuntimeMethod* method)
@@ -32360,6 +27124,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga_Flash_Color::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Flash_Color_OnRenderImage_m2432180371 (CameraFilterPack_Drawing_Manga_Flash_Color_t2417100980 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -32367,91 +27132,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Flash_Color_On
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga_Flash_Color_OnRenderImage_m2432180371_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0118;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		int32_t L_10 = __this->get_Speed_8();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, (((float)((float)L_10))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PosX_9();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_PosY_10();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Intensity_11();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3952415593, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_18 = __this->get_Color_7();
-		NullCheck(L_17);
-		Material_SetColor_m2020215303(L_17, _stringLiteral1586259007, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_20);
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		NullCheck(L_22);
-		int32_t L_23 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_22);
-		Vector4_t3319028937  L_24;
-		memset(&L_24, 0, sizeof(L_24));
-		Vector4__ctor_m2498754347((&L_24), (((float)((float)L_21))), (((float)((float)L_23))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_19);
-		Material_SetVector_m4214217286(L_19, _stringLiteral3071141033, L_24, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_25 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_26 = ___destTexture1;
-		Material_t340375123 * L_27 = CameraFilterPack_Drawing_Manga_Flash_Color_get_material_m2083697447(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_25, L_26, L_27, /*hidden argument*/NULL);
-		goto IL_011f;
-	}
-
-IL_0118:
-	{
-		RenderTexture_t2108887433 * L_28 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_29 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_28, L_29, /*hidden argument*/NULL);
-	}
-
-IL_011f:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga_Flash_Color::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_Flash_Color_Update_m1723958195 (CameraFilterPack_Drawing_Manga_Flash_Color_t2417100980 * __this, const RuntimeMethod* method)
@@ -32574,6 +27258,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga_FlashWhite::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_FlashWhite_OnRenderImage_m2162184187 (CameraFilterPack_Drawing_Manga_FlashWhite_t1986786028 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -32581,87 +27266,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_FlashWhite_OnR
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga_FlashWhite_OnRenderImage_m2162184187_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0102;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		int32_t L_10 = __this->get_Speed_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, (((float)((float)L_10))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PosX_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_PosY_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Intensity_10();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3952415593, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_18);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_20);
-		Vector4_t3319028937  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		Vector4__ctor_m2498754347((&L_22), (((float)((float)L_19))), (((float)((float)L_21))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Material_SetVector_m4214217286(L_17, _stringLiteral3071141033, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_Manga_FlashWhite_get_material_m3120873217(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_23, L_24, L_25, /*hidden argument*/NULL);
-		goto IL_0109;
-	}
-
-IL_0102:
-	{
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_26, L_27, /*hidden argument*/NULL);
-	}
-
-IL_0109:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga_FlashWhite::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga_FlashWhite_Update_m1837994614 (CameraFilterPack_Drawing_Manga_FlashWhite_t1986786028 * __this, const RuntimeMethod* method)
@@ -32780,6 +27388,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga2_OnRenderImage_m742623307 (CameraFilterPack_Drawing_Manga2_t272987415 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -32787,59 +27396,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga2_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga2_OnRenderImage_m742623307_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga2_get_material_m3423967475(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga2_get_material_m3423967475(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga2_get_material_m3423967475(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga2_Update_m3077108520 (CameraFilterPack_Drawing_Manga2_t272987415 * __this, const RuntimeMethod* method)
@@ -32958,6 +27518,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga3::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga3_OnRenderImage_m4203364831 (CameraFilterPack_Drawing_Manga3_t3001870770 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -32965,59 +27526,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga3_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga3_OnRenderImage_m4203364831_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga3_get_material_m2171285191(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga3_get_material_m2171285191(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga3_get_material_m2171285191(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga3::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga3_Update_m1477008511 (CameraFilterPack_Drawing_Manga3_t3001870770 * __this, const RuntimeMethod* method)
@@ -33136,6 +27648,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga4::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga4_OnRenderImage_m1646690836 (CameraFilterPack_Drawing_Manga4_t1435786829 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -33143,59 +27656,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga4_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga4_OnRenderImage_m1646690836_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga4_get_material_m2969901053(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga4_get_material_m2969901053(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga4_get_material_m2969901053(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga4::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga4_Update_m2558737690 (CameraFilterPack_Drawing_Manga4_t1435786829 * __this, const RuntimeMethod* method)
@@ -33314,6 +27778,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Manga5::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga5_OnRenderImage_m3313565051 (CameraFilterPack_Drawing_Manga5_t4164670184 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -33321,59 +27786,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga5_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Manga5_OnRenderImage_m3313565051_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Manga5_get_material_m691215309(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Manga5_get_material_m691215309(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_DotSize_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3178140689, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Manga5_get_material_m691215309(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Manga5::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Manga5_Update_m20654313 (CameraFilterPack_Drawing_Manga5_t4164670184 * __this, const RuntimeMethod* method)
@@ -33492,6 +27908,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_NewCellShading::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_NewCellShading_OnRenderImage_m639804751 (CameraFilterPack_Drawing_NewCellShading_t3481423522 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -33499,69 +27916,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_NewCellShading_OnRen
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_NewCellShading_OnRenderImage_m639804751_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_NewCellShading_get_material_m571683539(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_NewCellShading_get_material_m571683539(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Threshold_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3860033654, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_NewCellShading_get_material_m571683539(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Drawing_NewCellShading_get_material_m571683539(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_NewCellShading::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_NewCellShading_Update_m1996927924 (CameraFilterPack_Drawing_NewCellShading_t3481423522 * __this, const RuntimeMethod* method)
@@ -33695,6 +28053,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Drawing_Paper::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper_OnRenderImage_m3418279035 (CameraFilterPack_Drawing_Paper_t2464043294 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -33702,95 +28061,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Paper_OnRenderImage_m3418279035_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0142;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_8 = __this->get_Pencil_Color_4();
-		NullCheck(L_7);
-		Material_SetColor_m2020215303(L_7, _stringLiteral1264924234, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Pencil_Size_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1323223036, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Pencil_Correction_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2889306977, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Intensity_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral160423622, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Speed_Animation_8();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral2082737923, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Corner_Lose_9();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral3648821864, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_Fade_Paper_to_BackColor_10();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral919938509, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_Fade_With_Original_11();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral2486022450, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_24 = __this->get_Back_Color_12();
-		NullCheck(L_23);
-		Material_SetColor_m2020215303(L_23, _stringLiteral3941283402, L_24, /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_26 = __this->get_Texture2_14();
-		NullCheck(L_25);
-		Material_SetTexture_m1829349465(L_25, _stringLiteral545261465, L_26, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_27 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_28 = ___destTexture1;
-		Material_t340375123 * L_29 = CameraFilterPack_Drawing_Paper_get_material_m2316973945(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_27, L_28, L_29, /*hidden argument*/NULL);
-		goto IL_0149;
-	}
-
-IL_0142:
-	{
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_31 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);
-	}
-
-IL_0149:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Paper::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper_Update_m3690209366 (CameraFilterPack_Drawing_Paper_t2464043294 * __this, const RuntimeMethod* method)
@@ -33924,6 +28198,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Drawing_Paper2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper2_OnRenderImage_m1528954130 (CameraFilterPack_Drawing_Paper2_t1049457945 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -33931,95 +28206,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper2_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Paper2_OnRenderImage_m1528954130_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0142;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_8 = __this->get_Pencil_Color_4();
-		NullCheck(L_7);
-		Material_SetColor_m2020215303(L_7, _stringLiteral1264924234, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Pencil_Size_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1323223036, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Pencil_Correction_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2889306977, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Intensity_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral160423622, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Speed_Animation_8();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral2082737923, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Corner_Lose_9();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral3648821864, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_Fade_Paper_to_BackColor_10();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral919938509, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_Fade_With_Original_11();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral2486022450, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_24 = __this->get_Back_Color_12();
-		NullCheck(L_23);
-		Material_SetColor_m2020215303(L_23, _stringLiteral3941283402, L_24, /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_26 = __this->get_Texture2_14();
-		NullCheck(L_25);
-		Material_SetTexture_m1829349465(L_25, _stringLiteral545261465, L_26, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_27 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_28 = ___destTexture1;
-		Material_t340375123 * L_29 = CameraFilterPack_Drawing_Paper2_get_material_m599874241(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_27, L_28, L_29, /*hidden argument*/NULL);
-		goto IL_0149;
-	}
-
-IL_0142:
-	{
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_31 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);
-	}
-
-IL_0149:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Paper2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper2_Update_m961018543 (CameraFilterPack_Drawing_Paper2_t1049457945 * __this, const RuntimeMethod* method)
@@ -34153,6 +28343,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Drawing_Paper3::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper3_OnRenderImage_m1489568900 (CameraFilterPack_Drawing_Paper3_t3778341300 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -34160,95 +28351,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper3_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Paper3_OnRenderImage_m1489568900_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0142;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_8 = __this->get_Pencil_Color_4();
-		NullCheck(L_7);
-		Material_SetColor_m2020215303(L_7, _stringLiteral1264924234, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Pencil_Size_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1323223036, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Pencil_Correction_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2889306977, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Intensity_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral160423622, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Speed_Animation_8();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral2082737923, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Corner_Lose_9();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral3648821864, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_Fade_Paper_to_BackColor_10();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral919938509, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_Fade_With_Original_11();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral2486022450, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_24 = __this->get_Back_Color_12();
-		NullCheck(L_23);
-		Material_SetColor_m2020215303(L_23, _stringLiteral3941283402, L_24, /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_26 = __this->get_Texture2_14();
-		NullCheck(L_25);
-		Material_SetTexture_m1829349465(L_25, _stringLiteral545261465, L_26, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_27 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_28 = ___destTexture1;
-		Material_t340375123 * L_29 = CameraFilterPack_Drawing_Paper3_get_material_m3403598506(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_27, L_28, L_29, /*hidden argument*/NULL);
-		goto IL_0149;
-	}
-
-IL_0142:
-	{
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_31 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_30, L_31, /*hidden argument*/NULL);
-	}
-
-IL_0149:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Paper3::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Paper3_Update_m4012116190 (CameraFilterPack_Drawing_Paper3_t3778341300 * __this, const RuntimeMethod* method)
@@ -34368,6 +28474,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Drawing_Toon::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Toon_OnRenderImage_m196611713 (CameraFilterPack_Drawing_Toon_t3310465423 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -34375,63 +28482,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Toon_OnRenderImage_m
 		il2cpp_codegen_initialize_method (CameraFilterPack_Drawing_Toon_OnRenderImage_m196611713_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0092;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_4();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_4(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_4();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_4((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Drawing_Toon_get_material_m250935580(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_4();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Drawing_Toon_get_material_m250935580(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Threshold_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Drawing_Toon_get_material_m250935580(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_DotSize_6();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3178140689, L_10, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_11 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_12 = ___destTexture1;
-		Material_t340375123 * L_13 = CameraFilterPack_Drawing_Toon_get_material_m250935580(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_11, L_12, L_13, /*hidden argument*/NULL);
-		goto IL_0099;
-	}
-
-IL_0092:
-	{
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_14, L_15, /*hidden argument*/NULL);
-	}
-
-IL_0099:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Drawing_Toon::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Drawing_Toon_Update_m3865481360 (CameraFilterPack_Drawing_Toon_t3310465423 * __this, const RuntimeMethod* method)
@@ -34549,6 +28603,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Edge_BlackLine::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_BlackLine_OnRenderImage_m183752454 (CameraFilterPack_Edge_BlackLine_t3481022337 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -34556,65 +28611,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_BlackLine_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_Edge_BlackLine_OnRenderImage_m183752454_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_008c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Edge_BlackLine_get_material_m1486766975(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Edge_BlackLine_get_material_m1486766975(__this, /*hidden argument*/NULL);
-		int32_t L_8 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_9 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10;
-		memset(&L_10, 0, sizeof(L_10));
-		Vector2__ctor_m3970636864((&L_10), (((float)((float)L_8))), (((float)((float)L_9))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_11, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		Material_t340375123 * L_14 = CameraFilterPack_Edge_BlackLine_get_material_m1486766975(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_12, L_13, L_14, /*hidden argument*/NULL);
-		goto IL_0093;
-	}
-
-IL_008c:
-	{
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_15, L_16, /*hidden argument*/NULL);
-	}
-
-IL_0093:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Edge_BlackLine::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_BlackLine_Update_m518767533 (CameraFilterPack_Edge_BlackLine_t3481022337 * __this, const RuntimeMethod* method)
@@ -34733,6 +28733,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Edge_Edge_filter::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Edge_filter_OnRenderImage_m3866234886 (CameraFilterPack_Edge_Edge_filter_t3010104314 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -34740,77 +28741,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Edge_filter_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_Edge_Edge_filter_OnRenderImage_m3866234886_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00ce;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Edge_Edge_filter_get_material_m25962021(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Edge_Edge_filter_get_material_m25962021(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_RedAmplifier_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3296425587, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Edge_Edge_filter_get_material_m25962021(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_GreenAmplifier_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral3547096967, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Edge_Edge_filter_get_material_m25962021(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_BlueAmplifier_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral3352219255, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Edge_Edge_filter_get_material_m25962021(__this, /*hidden argument*/NULL);
-		int32_t L_14 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_15 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector2__ctor_m3970636864((&L_16), (((float)((float)L_14))), (((float)((float)L_15))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_17 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_16, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_17, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		Material_t340375123 * L_20 = CameraFilterPack_Edge_Edge_filter_get_material_m25962021(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_18, L_19, L_20, /*hidden argument*/NULL);
-		goto IL_00d5;
-	}
-
-IL_00ce:
-	{
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_21, L_22, /*hidden argument*/NULL);
-	}
-
-IL_00d5:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Edge_Edge_filter::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Edge_filter_Update_m1937948509 (CameraFilterPack_Edge_Edge_filter_t3010104314 * __this, const RuntimeMethod* method)
@@ -34928,6 +28862,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Edge_Golden::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Golden_OnRenderImage_m3978266 (CameraFilterPack_Edge_Golden_t1633690990 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -34935,65 +28870,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Golden_OnRenderImage_m3
 		il2cpp_codegen_initialize_method (CameraFilterPack_Edge_Golden_OnRenderImage_m3978266_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_008c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Edge_Golden_get_material_m2350141343(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Edge_Golden_get_material_m2350141343(__this, /*hidden argument*/NULL);
-		int32_t L_8 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_9 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_10;
-		memset(&L_10, 0, sizeof(L_10));
-		Vector2__ctor_m3970636864((&L_10), (((float)((float)L_8))), (((float)((float)L_9))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_11 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_11, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		Material_t340375123 * L_14 = CameraFilterPack_Edge_Golden_get_material_m2350141343(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_12, L_13, L_14, /*hidden argument*/NULL);
-		goto IL_0093;
-	}
-
-IL_008c:
-	{
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_15, L_16, /*hidden argument*/NULL);
-	}
-
-IL_0093:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Edge_Golden::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Golden_Update_m202197358 (CameraFilterPack_Edge_Golden_t1633690990 * __this, const RuntimeMethod* method)
@@ -35112,6 +28992,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Edge_Neon::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Neon_OnRenderImage_m32200187 (CameraFilterPack_Edge_Neon_t3674705886 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -35119,69 +29000,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Neon_OnRenderImage_m322
 		il2cpp_codegen_initialize_method (CameraFilterPack_Edge_Neon_OnRenderImage_m32200187_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Edge_Neon_get_material_m1885421913(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Edge_Neon_get_material_m1885421913(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_EdgeWeight_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2593098735, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Edge_Neon_get_material_m1885421913(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Edge_Neon_get_material_m1885421913(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Edge_Neon::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Neon_Update_m3635118134 (CameraFilterPack_Edge_Neon_t3674705886 * __this, const RuntimeMethod* method)
@@ -35300,6 +29122,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Edge_Sigmoid::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Sigmoid_OnRenderImage_m3031246738 (CameraFilterPack_Edge_Sigmoid_t3474989892 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -35307,69 +29130,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Sigmoid_OnRenderImage_m
 		il2cpp_codegen_initialize_method (CameraFilterPack_Edge_Sigmoid_OnRenderImage_m3031246738_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a2;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Edge_Sigmoid_get_material_m1728178603(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Edge_Sigmoid_get_material_m1728178603(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Gain_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3544690078, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Edge_Sigmoid_get_material_m1728178603(__this, /*hidden argument*/NULL);
-		int32_t L_10 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_11 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector2__ctor_m3970636864((&L_12), (((float)((float)L_10))), (((float)((float)L_11))), /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector4_t3319028937_il2cpp_TypeInfo_var);
-		Vector4_t3319028937  L_13 = Vector4_op_Implicit_m237151757(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_15 = ___destTexture1;
-		Material_t340375123 * L_16 = CameraFilterPack_Edge_Sigmoid_get_material_m1728178603(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_14, L_15, L_16, /*hidden argument*/NULL);
-		goto IL_00a9;
-	}
-
-IL_00a2:
-	{
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-	}
-
-IL_00a9:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Edge_Sigmoid::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Sigmoid_Update_m2603806227 (CameraFilterPack_Edge_Sigmoid_t3474989892 * __this, const RuntimeMethod* method)
@@ -35487,6 +29251,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Edge_Sobel::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Sobel_OnRenderImage_m1614362913 (CameraFilterPack_Edge_Sobel_t1965308475 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -35494,67 +29259,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Sobel_OnRenderImage_m16
 		il2cpp_codegen_initialize_method (CameraFilterPack_Edge_Sobel_OnRenderImage_m1614362913_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Edge_Sobel_get_material_m2408589128(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Edge_Sobel_get_material_m2408589128(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_Edge_Sobel_get_material_m2408589128(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Edge_Sobel::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Edge_Sobel_Update_m3757273003 (CameraFilterPack_Edge_Sobel_t1965308475 * __this, const RuntimeMethod* method)
@@ -35675,6 +29383,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_EXTRA_Rotation::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EXTRA_Rotation_OnRenderImage_m1093713233 (CameraFilterPack_EXTRA_Rotation_t17321910 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -35682,83 +29391,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EXTRA_Rotation_OnRenderImage
 		il2cpp_codegen_initialize_method (CameraFilterPack_EXTRA_Rotation_OnRenderImage_m1093713233_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00f1;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Rotation_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, ((float)il2cpp_codegen_subtract((float)(0.0f), (float)L_8)), /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_PositionX_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PositionY_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_EXTRA_Rotation_get_material_m3402871019(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f8;
-	}
-
-IL_00f1:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f8:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_EXTRA_Rotation::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EXTRA_Rotation_Update_m2200608888 (CameraFilterPack_EXTRA_Rotation_t17321910 * __this, const RuntimeMethod* method)
@@ -35884,6 +29520,7 @@ IL_0035:
 }
 // System.Void CameraFilterPack_EXTRA_SHOWFPS::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EXTRA_SHOWFPS_OnRenderImage_m1967269175 (CameraFilterPack_EXTRA_SHOWFPS_t1378126208 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -35891,83 +29528,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EXTRA_SHOWFPS_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_EXTRA_SHOWFPS_OnRenderImage_m1967269175_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00ec;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		int32_t L_10 = __this->get_FPS_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, (((float)((float)L_10))), /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Value3_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_EXTRA_SHOWFPS_get_material_m3455333478(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f3;
-	}
-
-IL_00ec:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f3:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Collections.IEnumerator CameraFilterPack_EXTRA_SHOWFPS::FPSX()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* CameraFilterPack_EXTRA_SHOWFPS_FPSX_m3878165155 (CameraFilterPack_EXTRA_SHOWFPS_t1378126208 * __this, const RuntimeMethod* method)
@@ -36261,6 +29825,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_EyesVision_1::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EyesVision_1_OnRenderImage_m2424010635 (CameraFilterPack_EyesVision_1_t2569015553 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -36268,75 +29833,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EyesVision_1_OnRenderImage_m
 		il2cpp_codegen_initialize_method (CameraFilterPack_EyesVision_1_OnRenderImage_m2424010635_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00d4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__EyeWave_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__EyeSpeed_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__EyeMove_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get__EyeBlink_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_16 = __this->get_Texture2_9();
-		NullCheck(L_15);
-		Material_SetTexture_m1829349465(L_15, _stringLiteral545261465, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Material_t340375123 * L_19 = CameraFilterPack_EyesVision_1_get_material_m1618461096(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_17, L_18, L_19, /*hidden argument*/NULL);
-		goto IL_00db;
-	}
-
-IL_00d4:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00db:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_EyesVision_1::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EyesVision_1_Update_m928208872 (CameraFilterPack_EyesVision_1_t2569015553 * __this, const RuntimeMethod* method)
@@ -36460,6 +29960,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_EyesVision_2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EyesVision_2_OnRenderImage_m1124740057 (CameraFilterPack_EyesVision_2_t2569015556 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -36467,75 +29968,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EyesVision_2_OnRenderImage_m
 		il2cpp_codegen_initialize_method (CameraFilterPack_EyesVision_2_OnRenderImage_m1124740057_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00d4;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__EyeWave_4();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__EyeSpeed_5();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get__EyeMove_6();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get__EyeBlink_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_16 = __this->get_Texture2_9();
-		NullCheck(L_15);
-		Material_SetTexture_m1829349465(L_15, _stringLiteral545261465, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Material_t340375123 * L_19 = CameraFilterPack_EyesVision_2_get_material_m2919285142(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_17, L_18, L_19, /*hidden argument*/NULL);
-		goto IL_00db;
-	}
-
-IL_00d4:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00db:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_EyesVision_2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_EyesVision_2_Update_m928203487 (CameraFilterPack_EyesVision_2_t2569015556 * __this, const RuntimeMethod* method)
@@ -36657,6 +30093,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Film_ColorPerfection::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Film_ColorPerfection_OnRenderImage_m1775469940 (CameraFilterPack_Film_ColorPerfection_t4101438908 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -36664,83 +30101,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Film_ColorPerfection_OnRende
 		il2cpp_codegen_initialize_method (CameraFilterPack_Film_ColorPerfection_OnRenderImage_m1775469940_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Gamma_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Value2_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Value3_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_Film_ColorPerfection_get_material_m3394067351(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Film_ColorPerfection::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Film_ColorPerfection_Update_m298973053 (CameraFilterPack_Film_ColorPerfection_t4101438908 * __this, const RuntimeMethod* method)
@@ -36859,6 +30223,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_Film_Grain::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Film_Grain_OnRenderImage_m1216828347 (CameraFilterPack_Film_Grain_t3063289779 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -36866,71 +30231,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Film_Grain_OnRenderImage_m12
 		il2cpp_codegen_initialize_method (CameraFilterPack_Film_Grain_OnRenderImage_m1216828347_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Film_Grain_get_material_m3500701933(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Film_Grain_get_material_m3500701933(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Film_Grain_get_material_m3500701933(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_Film_Grain_get_material_m3500701933(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Film_Grain::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Film_Grain_Update_m2739371102 (CameraFilterPack_Film_Grain_t3063289779 * __this, const RuntimeMethod* method)
@@ -37054,6 +30358,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Fly_Vision::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Fly_Vision_OnRenderImage_m3930328033 (CameraFilterPack_Fly_Vision_t311560362 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -37061,87 +30366,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Fly_Vision_OnRenderImage_m39
 		il2cpp_codegen_initialize_method (CameraFilterPack_Fly_Vision_OnRenderImage_m3930328033_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0101;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Zoom_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Distortion_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Fade_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_22 = __this->get_Texture2_10();
-		NullCheck(L_21);
-		Material_SetTexture_m1829349465(L_21, _stringLiteral3812379468, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		Material_t340375123 * L_25 = CameraFilterPack_Fly_Vision_get_material_m181790508(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_23, L_24, L_25, /*hidden argument*/NULL);
-		goto IL_0108;
-	}
-
-IL_0101:
-	{
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_26, L_27, /*hidden argument*/NULL);
-	}
-
-IL_0108:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Fly_Vision::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Fly_Vision_Update_m2059730341 (CameraFilterPack_Fly_Vision_t311560362 * __this, const RuntimeMethod* method)
@@ -37261,6 +30489,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_8bits::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_8bits_OnRenderImage_m723475168 (CameraFilterPack_FX_8bits_t2526095658 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -37268,84 +30497,24 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_8bits_OnRenderImage_m7234
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_8bits_OnRenderImage_m723475168_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	RenderTexture_t2108887433 * V_0 = NULL;
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	int32_t rw = __this->get_ResolutionX_6();
+	int32_t rh = __this->get_ResolutionY_7();
+	if (rw < 64) rw = 160; if (rw > 480) rw = 480;
+	if (rh < 64) rh = 144; if (rh > 270) rh = 270;
+	RenderTexture_t2108887433 * V_0 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, rw, rh, 0, NULL);
+	if (V_0 != NULL)
 	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00be;
-		}
+		Texture_set_filterMode_m3078068058((Texture_t3661962703 *)V_0, 0, NULL);
+		Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, V_0, NULL);
+		Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)V_0, ___destTexture1, NULL);
+		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, V_0, NULL);
 	}
+	else
 	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
+		Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
 	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_8bits_get_material_m3473667485(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		float L_7 = __this->get_Brightness_5();
-		if ((!(((float)L_7) == ((float)(0.0f)))))
-		{
-			goto IL_006f;
-		}
-	}
-	{
-		__this->set_Brightness_5((0.001f));
-	}
-
-IL_006f:
-	{
-		Material_t340375123 * L_8 = CameraFilterPack_FX_8bits_get_material_m3473667485(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Brightness_5();
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral2573074067, L_9, /*hidden argument*/NULL);
-		int32_t L_10 = __this->get_ResolutionX_6();
-		int32_t L_11 = __this->get_ResolutionY_7();
-		RenderTexture_t2108887433 * L_12 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, L_10, L_11, 0, /*hidden argument*/NULL);
-		V_0 = L_12;
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = V_0;
-		Material_t340375123 * L_15 = CameraFilterPack_FX_8bits_get_material_m3473667485(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = V_0;
-		NullCheck(L_16);
-		Texture_set_filterMode_m3078068058(L_16, 0, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = V_0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_17, L_18, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_19 = V_0;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
-		goto IL_00c5;
-	}
-
-IL_00be:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00c5:
-	{
-		return;
-	}
+	return;
 }
 // System.Void CameraFilterPack_FX_8bits::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_8bits_Update_m2597246454 (CameraFilterPack_FX_8bits_t2526095658 * __this, const RuntimeMethod* method)
@@ -37463,6 +30632,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_8bits_gb::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_8bits_gb_OnRenderImage_m1075426540 (CameraFilterPack_FX_8bits_gb_t2489750344 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -37470,82 +30640,20 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_8bits_gb_OnRenderImage_m1
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_8bits_gb_OnRenderImage_m1075426540_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	RenderTexture_t2108887433 * V_0 = NULL;
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	RenderTexture_t2108887433 * V_0 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, 256, 144, 0, NULL);
+	if (V_0 != NULL)
 	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00bc;
-		}
+		Texture_set_filterMode_m3078068058((Texture_t3661962703 *)V_0, 0, NULL);
+		Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, V_0, NULL);
+		Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)V_0, ___destTexture1, NULL);
+		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, V_0, NULL);
 	}
+	else
 	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
+		Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
 	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_8bits_gb_get_material_m413084464(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		float L_7 = __this->get_Brightness_5();
-		if ((!(((float)L_7) == ((float)(0.0f)))))
-		{
-			goto IL_006f;
-		}
-	}
-	{
-		__this->set_Brightness_5((0.001f));
-	}
-
-IL_006f:
-	{
-		Material_t340375123 * L_8 = CameraFilterPack_FX_8bits_gb_get_material_m413084464(__this, /*hidden argument*/NULL);
-		float L_9 = __this->get_Brightness_5();
-		NullCheck(L_8);
-		Material_SetFloat_m3226510453(L_8, _stringLiteral2573074067, L_9, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = RenderTexture_GetTemporary_m2234063094(NULL /*static, unused*/, ((int32_t)160), ((int32_t)144), 0, /*hidden argument*/NULL);
-		V_0 = L_10;
-		RenderTexture_t2108887433 * L_11 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_12 = V_0;
-		Material_t340375123 * L_13 = CameraFilterPack_FX_8bits_gb_get_material_m413084464(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_11, L_12, L_13, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = V_0;
-		NullCheck(L_14);
-		Texture_set_filterMode_m3078068058(L_14, 0, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = V_0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_15, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = V_0;
-		RenderTexture_ReleaseTemporary_m2400081536(NULL /*static, unused*/, L_17, /*hidden argument*/NULL);
-		goto IL_00c3;
-	}
-
-IL_00bc:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00c3:
-	{
-		return;
-	}
+	return;
 }
 // System.Void CameraFilterPack_FX_8bits_gb::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_8bits_gb_Update_m3146995795 (CameraFilterPack_FX_8bits_gb_t2489750344 * __this, const RuntimeMethod* method)
@@ -37665,6 +30773,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Ascii::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Ascii_OnRenderImage_m4195530473 (CameraFilterPack_FX_Ascii_t1088458361 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -37672,75 +30781,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Ascii_OnRenderImage_m4195
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Ascii_OnRenderImage_m4195530473_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00bf;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_5();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_5(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_5();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_5((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Ascii_get_material_m2700596299(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_5();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Ascii_get_material_m2700596299(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_3();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3493619321, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Ascii_get_material_m2700596299(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Fade_4();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1985039568, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Ascii_get_material_m2700596299(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_12);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_14);
-		Vector4_t3319028937  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector4__ctor_m2498754347((&L_16), (((float)((float)L_13))), (((float)((float)L_15))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Material_t340375123 * L_19 = CameraFilterPack_FX_Ascii_get_material_m2700596299(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_17, L_18, L_19, /*hidden argument*/NULL);
-		goto IL_00c6;
-	}
-
-IL_00bf:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00c6:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Ascii::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Ascii_Update_m3514699079 (CameraFilterPack_FX_Ascii_t1088458361 * __this, const RuntimeMethod* method)
@@ -37864,6 +30908,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_DarkMatter::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DarkMatter_OnRenderImage_m3382782859 (CameraFilterPack_FX_DarkMatter_t559580776 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -37871,91 +30916,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DarkMatter_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_DarkMatter_OnRenderImage_m3382782859_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0117;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Speed_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Intensity_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PosX_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_PosY_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Zoom_10();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3648821864, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_DarkIntensity_11();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral919938509, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_20);
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		NullCheck(L_22);
-		int32_t L_23 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_22);
-		Vector4_t3319028937  L_24;
-		memset(&L_24, 0, sizeof(L_24));
-		Vector4__ctor_m2498754347((&L_24), (((float)((float)L_21))), (((float)((float)L_23))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_19);
-		Material_SetVector_m4214217286(L_19, _stringLiteral3071141033, L_24, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_25 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_26 = ___destTexture1;
-		Material_t340375123 * L_27 = CameraFilterPack_FX_DarkMatter_get_material_m1623791476(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_25, L_26, L_27, /*hidden argument*/NULL);
-		goto IL_011e;
-	}
-
-IL_0117:
-	{
-		RenderTexture_t2108887433 * L_28 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_29 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_28, L_29, /*hidden argument*/NULL);
-	}
-
-IL_011e:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_DarkMatter::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DarkMatter_Update_m1268373881 (CameraFilterPack_FX_DarkMatter_t559580776 * __this, const RuntimeMethod* method)
@@ -38078,6 +31042,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_DigitalMatrix::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DigitalMatrix_OnRenderImage_m3401282317 (CameraFilterPack_FX_DigitalMatrix_t2492599218 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -38085,87 +31050,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DigitalMatrix_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_DigitalMatrix_OnRenderImage_m3401282317_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0101;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_ColorR_8();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_ColorG_9();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_ColorB_10();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Speed_7();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral3648821864, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_18);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_20);
-		Vector4_t3319028937  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		Vector4__ctor_m2498754347((&L_22), (((float)((float)L_19))), (((float)((float)L_21))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Material_SetVector_m4214217286(L_17, _stringLiteral3071141033, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		Material_t340375123 * L_25 = CameraFilterPack_FX_DigitalMatrix_get_material_m202308975(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_23, L_24, L_25, /*hidden argument*/NULL);
-		goto IL_0108;
-	}
-
-IL_0101:
-	{
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_26, L_27, /*hidden argument*/NULL);
-	}
-
-IL_0108:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_DigitalMatrix::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DigitalMatrix_Update_m2469658718 (CameraFilterPack_FX_DigitalMatrix_t2492599218 * __this, const RuntimeMethod* method)
@@ -38286,6 +31174,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_DigitalMatrixDistortion::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DigitalMatrixDistortion_OnRenderImage_m499533333 (CameraFilterPack_FX_DigitalMatrixDistortion_t2845770369 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -38293,79 +31182,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DigitalMatrixDistortion_O
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_DigitalMatrixDistortion_OnRenderImage_m499533333_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00d5;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_DigitalMatrixDistortion_get_material_m1937340433(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_DigitalMatrixDistortion_get_material_m1937340433(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_DigitalMatrixDistortion_get_material_m1937340433(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Distortion_8();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_DigitalMatrixDistortion_get_material_m1937340433(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Speed_7();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral3648821864, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_DigitalMatrixDistortion_get_material_m1937340433(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_14);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_16);
-		Vector4_t3319028937  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector4__ctor_m2498754347((&L_18), (((float)((float)L_15))), (((float)((float)L_17))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Material_SetVector_m4214217286(L_13, _stringLiteral3071141033, L_18, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_19 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_20 = ___destTexture1;
-		Material_t340375123 * L_21 = CameraFilterPack_FX_DigitalMatrixDistortion_get_material_m1937340433(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_19, L_20, L_21, /*hidden argument*/NULL);
-		goto IL_00dc;
-	}
-
-IL_00d5:
-	{
-		RenderTexture_t2108887433 * L_22 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_23 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_22, L_23, /*hidden argument*/NULL);
-	}
-
-IL_00dc:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_DigitalMatrixDistortion::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_DigitalMatrixDistortion_Update_m4143488245 (CameraFilterPack_FX_DigitalMatrixDistortion_t2845770369 * __this, const RuntimeMethod* method)
@@ -38484,6 +31304,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Dot_Circle::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Dot_Circle_OnRenderImage_m14379408 (CameraFilterPack_FX_Dot_Circle_t3210799992 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -38491,71 +31312,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Dot_Circle_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Dot_Circle_OnRenderImage_m14379408_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Dot_Circle_get_material_m2719604902(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Dot_Circle_get_material_m2719604902(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Dot_Circle_get_material_m2719604902(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value_6();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral862891449, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Dot_Circle_get_material_m2719604902(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Dot_Circle::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Dot_Circle_Update_m3744151512 (CameraFilterPack_FX_Dot_Circle_t3210799992 * __this, const RuntimeMethod* method)
@@ -38678,6 +31438,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Drunk::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Drunk_OnRenderImage_m3433118939 (CameraFilterPack_FX_Drunk_t4095513666 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -38685,111 +31446,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Drunk_OnRenderImage_m3433
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Drunk_OnRenderImage_m3433118939_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0185;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Speed_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2154098526, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Distortion_9();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral2573074067, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_DistortionWave_10();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral1252975594, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_Wavy_8();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral2005314997, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_18 = __this->get_Fade_11();
-		NullCheck(L_17);
-		Material_SetFloat_m3226510453(L_17, _stringLiteral3591482793, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_20 = __this->get_ColoredChange_13();
-		NullCheck(L_19);
-		Material_SetFloat_m3226510453(L_19, _stringLiteral1114711858, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_22 = __this->get_ChangeRed_14();
-		NullCheck(L_21);
-		Material_SetFloat_m3226510453(L_21, _stringLiteral961764267, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_24 = __this->get_ChangeGreen_15();
-		NullCheck(L_23);
-		Material_SetFloat_m3226510453(L_23, _stringLiteral3885834820, L_24, /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_26 = __this->get_ChangeBlue_16();
-		NullCheck(L_25);
-		Material_SetFloat_m3226510453(L_25, _stringLiteral1777345066, L_26, /*hidden argument*/NULL);
-		Material_t340375123 * L_27 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		float L_28 = __this->get_ColoredSaturate_12();
-		NullCheck(L_27);
-		Material_SetFloat_m3226510453(L_27, _stringLiteral3568048616, L_28, /*hidden argument*/NULL);
-		Material_t340375123 * L_29 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_30 = ___sourceTexture0;
-		NullCheck(L_30);
-		int32_t L_31 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_30);
-		RenderTexture_t2108887433 * L_32 = ___sourceTexture0;
-		NullCheck(L_32);
-		int32_t L_33 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_32);
-		Vector4_t3319028937  L_34;
-		memset(&L_34, 0, sizeof(L_34));
-		Vector4__ctor_m2498754347((&L_34), (((float)((float)L_31))), (((float)((float)L_33))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_29);
-		Material_SetVector_m4214217286(L_29, _stringLiteral3071141033, L_34, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_35 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_36 = ___destTexture1;
-		Material_t340375123 * L_37 = CameraFilterPack_FX_Drunk_get_material_m2709848931(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_35, L_36, L_37, /*hidden argument*/NULL);
-		goto IL_018c;
-	}
-
-IL_0185:
-	{
-		RenderTexture_t2108887433 * L_38 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_39 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_38, L_39, /*hidden argument*/NULL);
-	}
-
-IL_018c:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Drunk::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Drunk_Update_m2214262681 (CameraFilterPack_FX_Drunk_t4095513666 * __this, const RuntimeMethod* method)
@@ -38911,6 +31571,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Drunk2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Drunk2_OnRenderImage_m2189486932 (CameraFilterPack_FX_Drunk2_t4092499010 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -38918,83 +31579,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Drunk2_OnRenderImage_m218
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Drunk2_OnRenderImage_m2189486932_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Value2_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Value3_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_FX_Drunk2_get_material_m772207589(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Drunk2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Drunk2_Update_m3220723873 (CameraFilterPack_FX_Drunk2_t4092499010 * __this, const RuntimeMethod* method)
@@ -39116,6 +31704,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_EarthQuake::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_EarthQuake_OnRenderImage_m4017979043 (CameraFilterPack_FX_EarthQuake_t1215756925 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -39123,83 +31712,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_EarthQuake_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_EarthQuake_OnRenderImage_m4017979043_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Speed_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_X_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Y_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_FX_EarthQuake_get_material_m1166285375(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	Mobile_NotifyCameraEarthQuake(__this->get_Speed_6(), __this->get_X_7(), __this->get_Y_8());
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_EarthQuake::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_EarthQuake_Update_m270312182 (CameraFilterPack_FX_EarthQuake_t1215756925 * __this, const RuntimeMethod* method)
@@ -39317,6 +31833,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Funk::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Funk_OnRenderImage_m4230998825 (CameraFilterPack_FX_Funk_t3329538290 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -39324,67 +31841,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Funk_OnRenderImage_m42309
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Funk_OnRenderImage_m4230998825_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Funk_get_material_m2787368982(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Funk_get_material_m2787368982(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Funk_get_material_m2787368982(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Funk::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Funk_Update_m3943377086 (CameraFilterPack_FX_Funk_t3329538290 * __this, const RuntimeMethod* method)
@@ -39503,6 +31963,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Glitch1::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch1_OnRenderImage_m2620718645 (CameraFilterPack_FX_Glitch1_t1354960363 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -39510,71 +31971,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch1_OnRenderImage_m26
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Glitch1_OnRenderImage_m2620718645_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Glitch1_get_material_m1475076281(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Glitch1_get_material_m1475076281(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Glitch_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral392036199, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Glitch1_get_material_m1475076281(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Glitch1_get_material_m1475076281(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Glitch1::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch1_Update_m3617225766 (CameraFilterPack_FX_Glitch1_t1354960363 * __this, const RuntimeMethod* method)
@@ -39693,6 +32093,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Glitch2::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch2_OnRenderImage_m3103118643 (CameraFilterPack_FX_Glitch2_t2921044304 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -39700,71 +32101,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch2_OnRenderImage_m31
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Glitch2_OnRenderImage_m3103118643_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Glitch2_get_material_m3458528860(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Glitch2_get_material_m3458528860(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Glitch_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral392036199, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Glitch2_get_material_m3458528860(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Glitch2_get_material_m3458528860(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Glitch2::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch2_Update_m2567446007 (CameraFilterPack_FX_Glitch2_t2921044304 * __this, const RuntimeMethod* method)
@@ -39884,6 +32224,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Glitch3::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch3_OnRenderImage_m1340471305 (CameraFilterPack_FX_Glitch3_t192160949 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -39891,75 +32232,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch3_OnRenderImage_m13
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Glitch3_OnRenderImage_m1340471305_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00bf;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Glitch3_get_material_m1861330392(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Glitch3_get_material_m1861330392(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get__Glitch_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral392036199, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Glitch3_get_material_m1861330392(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get__Noise_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2403779717, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Glitch3_get_material_m1861330392(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_12);
-		RenderTexture_t2108887433 * L_14 = ___sourceTexture0;
-		NullCheck(L_14);
-		int32_t L_15 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_14);
-		Vector4_t3319028937  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		Vector4__ctor_m2498754347((&L_16), (((float)((float)L_13))), (((float)((float)L_15))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Material_SetVector_m4214217286(L_11, _stringLiteral3071141033, L_16, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_17 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_18 = ___destTexture1;
-		Material_t340375123 * L_19 = CameraFilterPack_FX_Glitch3_get_material_m1861330392(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_17, L_18, L_19, /*hidden argument*/NULL);
-		goto IL_00c6;
-	}
-
-IL_00bf:
-	{
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_21 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_20, L_21, /*hidden argument*/NULL);
-	}
-
-IL_00c6:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Glitch3::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Glitch3_Update_m3455085296 (CameraFilterPack_FX_Glitch3_t192160949 * __this, const RuntimeMethod* method)
@@ -40078,6 +32354,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Grid::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Grid_OnRenderImage_m3530529172 (CameraFilterPack_FX_Grid_t247225122 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -40085,59 +32362,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Grid_OnRenderImage_m35305
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Grid_OnRenderImage_m3530529172_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Grid_get_material_m975196970(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Grid_get_material_m975196970(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Grid_get_material_m975196970(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Grid::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Grid_Update_m1877913487 (CameraFilterPack_FX_Grid_t247225122 * __this, const RuntimeMethod* method)
@@ -40255,6 +32483,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Hexagon::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hexagon_OnRenderImage_m17043170 (CameraFilterPack_FX_Hexagon_t1332554934 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -40262,67 +32491,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hexagon_OnRenderImage_m17
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Hexagon_OnRenderImage_m17043170_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Hexagon_get_material_m4270724232(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Hexagon_get_material_m4270724232(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Hexagon_get_material_m4270724232(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Hexagon::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hexagon_Update_m3560138831 (CameraFilterPack_FX_Hexagon_t1332554934 * __this, const RuntimeMethod* method)
@@ -40441,6 +32613,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Hexagon_Black::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hexagon_Black_OnRenderImage_m3774039868 (CameraFilterPack_FX_Hexagon_Black_t2113933067 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -40448,71 +32621,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hexagon_Black_OnRenderIma
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Hexagon_Black_OnRenderImage_m3774039868_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Hexagon_Black_get_material_m2741252159(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Hexagon_Black_get_material_m2741252159(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Hexagon_Black_get_material_m2741252159(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Hexagon_Black_get_material_m2741252159(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Hexagon_Black::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hexagon_Black_Update_m3626429293 (CameraFilterPack_FX_Hexagon_Black_t2113933067 * __this, const RuntimeMethod* method)
@@ -40633,6 +32745,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Hypno::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hypno_OnRenderImage_m2821322196 (CameraFilterPack_FX_Hypno_t193016865 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -40640,83 +32753,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hypno_OnRenderImage_m2821
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Hypno_OnRenderImage_m2821322196_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Speed_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Red_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Green_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Blue_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_FX_Hypno_get_material_m3860124929(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Hypno::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Hypno_Update_m3412621515 (CameraFilterPack_FX_Hypno_t193016865 * __this, const RuntimeMethod* method)
@@ -40834,6 +32874,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_InverChromiLum::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_InverChromiLum_OnRenderImage_m2146961730 (CameraFilterPack_FX_InverChromiLum_t70236845 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -40841,67 +32882,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_InverChromiLum_OnRenderIm
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_InverChromiLum_OnRenderImage_m2146961730_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_InverChromiLum_get_material_m1125792150(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_InverChromiLum_get_material_m1125792150(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_FX_InverChromiLum_get_material_m1125792150(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_InverChromiLum::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_InverChromiLum_Update_m2854963657 (CameraFilterPack_FX_InverChromiLum_t70236845 * __this, const RuntimeMethod* method)
@@ -41019,6 +33003,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Mirror::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Mirror_OnRenderImage_m1049638206 (CameraFilterPack_FX_Mirror_t4048047174 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -41026,67 +33011,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Mirror_OnRenderImage_m104
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Mirror_OnRenderImage_m1049638206_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Mirror_get_material_m2520900003(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Mirror_get_material_m2520900003(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Mirror_get_material_m2520900003(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Mirror::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Mirror_Update_m2426600085 (CameraFilterPack_FX_Mirror_t4048047174 * __this, const RuntimeMethod* method)
@@ -41205,6 +33133,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Plasma::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Plasma_OnRenderImage_m1448217857 (CameraFilterPack_FX_Plasma_t4102388124 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -41212,71 +33141,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Plasma_OnRenderImage_m144
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Plasma_OnRenderImage_m1448217857_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Plasma_get_material_m84696779(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Plasma_get_material_m84696779(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Plasma_get_material_m84696779(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Plasma_get_material_m84696779(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Plasma::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Plasma_Update_m3187977269 (CameraFilterPack_FX_Plasma_t4102388124 * __this, const RuntimeMethod* method)
@@ -41395,6 +33263,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Psycho::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Psycho_OnRenderImage_m57979378 (CameraFilterPack_FX_Psycho_t2171562023 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -41402,59 +33271,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Psycho_OnRenderImage_m579
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Psycho_OnRenderImage_m57979378_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_007c;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_4();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_4(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_4();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_4((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Psycho_get_material_m190664287(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_4();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Psycho_get_material_m190664287(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Distortion_5();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral2573074067, L_8, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_9 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_10 = ___destTexture1;
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Psycho_get_material_m190664287(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_9, L_10, L_11, /*hidden argument*/NULL);
-		goto IL_0083;
-	}
-
-IL_007c:
-	{
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_13 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
-	}
-
-IL_0083:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Psycho::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Psycho_Update_m4124563055 (CameraFilterPack_FX_Psycho_t2171562023 * __this, const RuntimeMethod* method)
@@ -41576,6 +33396,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Scan::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Scan_OnRenderImage_m1182254567 (CameraFilterPack_FX_Scan_t1801696854 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -41583,83 +33404,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Scan_OnRenderImage_m11822
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Scan_OnRenderImage_m1182254567_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Size_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Speed_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_Value3_8();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Value4_9();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_FX_Scan_get_material_m1943063887(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00f2;
-	}
-
-IL_00eb:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00f2:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Scan::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Scan_Update_m3142597603 (CameraFilterPack_FX_Scan_t1801696854 * __this, const RuntimeMethod* method)
@@ -41783,6 +33531,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Screens::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Screens_OnRenderImage_m2961173584 (CameraFilterPack_FX_Screens_t2399094610 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -41790,87 +33539,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Screens_OnRenderImage_m29
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Screens_OnRenderImage_m2961173584_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0101;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Tiles_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Speed_7();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral2889306977, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_PosX_9();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral160423622, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_PosY_10();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral2082737923, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_16 = __this->get_color_8();
-		NullCheck(L_15);
-		Material_SetColor_m2020215303(L_15, _stringLiteral3892036713, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_18);
-		RenderTexture_t2108887433 * L_20 = ___sourceTexture0;
-		NullCheck(L_20);
-		int32_t L_21 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_20);
-		Vector4_t3319028937  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		Vector4__ctor_m2498754347((&L_22), (((float)((float)L_19))), (((float)((float)L_21))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Material_SetVector_m4214217286(L_17, _stringLiteral3071141033, L_22, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_23 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_24 = ___destTexture1;
-		Material_t340375123 * L_25 = CameraFilterPack_FX_Screens_get_material_m3052913397(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_23, L_24, L_25, /*hidden argument*/NULL);
-		goto IL_0108;
-	}
-
-IL_0101:
-	{
-		RenderTexture_t2108887433 * L_26 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_27 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_26, L_27, /*hidden argument*/NULL);
-	}
-
-IL_0108:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Screens::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Screens_Update_m1327759638 (CameraFilterPack_FX_Screens_t2399094610 * __this, const RuntimeMethod* method)
@@ -41993,6 +33665,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_Spot::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Spot_OnRenderImage_m1072422461 (CameraFilterPack_FX_Spot_t173884516 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -42000,81 +33673,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Spot_OnRenderImage_m10724
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_Spot_OnRenderImage_m1072422461_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00df;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_Spot_get_material_m1861439031(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_Spot_get_material_m1861439031(__this, /*hidden argument*/NULL);
-		Vector2_t2156229523 * L_8 = __this->get_address_of_center_6();
-		float L_9 = L_8->get_x_0();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral3599203566, L_9, /*hidden argument*/NULL);
-		Material_t340375123 * L_10 = CameraFilterPack_FX_Spot_get_material_m1861439031(__this, /*hidden argument*/NULL);
-		Vector2_t2156229523 * L_11 = __this->get_address_of_center_6();
-		float L_12 = L_11->get_y_1();
-		NullCheck(L_10);
-		Material_SetFloat_m3226510453(L_10, _stringLiteral3599138030, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_FX_Spot_get_material_m1861439031(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_Radius_7();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral4090561906, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_FX_Spot_get_material_m1861439031(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		NullCheck(L_16);
-		int32_t L_17 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_16);
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		NullCheck(L_18);
-		int32_t L_19 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_18);
-		Vector4_t3319028937  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector4__ctor_m2498754347((&L_20), (((float)((float)L_17))), (((float)((float)L_19))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Material_SetVector_m4214217286(L_15, _stringLiteral3071141033, L_20, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_21 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_22 = ___destTexture1;
-		Material_t340375123 * L_23 = CameraFilterPack_FX_Spot_get_material_m1861439031(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_21, L_22, L_23, /*hidden argument*/NULL);
-		goto IL_00e6;
-	}
-
-IL_00df:
-	{
-		RenderTexture_t2108887433 * L_24 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_25 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_24, L_25, /*hidden argument*/NULL);
-	}
-
-IL_00e6:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_Spot::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_Spot_Update_m2477176690 (CameraFilterPack_FX_Spot_t173884516 * __this, const RuntimeMethod* method)
@@ -42192,6 +33794,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_superDot::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_superDot_OnRenderImage_m2123107422 (CameraFilterPack_FX_superDot_t3273793587 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -42199,67 +33802,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_superDot_OnRenderImage_m2
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_superDot_OnRenderImage_m2123107422_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_superDot_get_material_m2965178684(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_superDot_get_material_m2965178684(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_8 = ___sourceTexture0;
-		NullCheck(L_8);
-		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_8);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_10);
-		Vector4_t3319028937  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		Vector4__ctor_m2498754347((&L_12), (((float)((float)L_9))), (((float)((float)L_11))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		Material_SetVector_m4214217286(L_7, _stringLiteral3071141033, L_12, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_13 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_14 = ___destTexture1;
-		Material_t340375123 * L_15 = CameraFilterPack_FX_superDot_get_material_m2965178684(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_13, L_14, L_15, /*hidden argument*/NULL);
-		goto IL_009a;
-	}
-
-IL_0093:
-	{
-		RenderTexture_t2108887433 * L_16 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_17 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_16, L_17, /*hidden argument*/NULL);
-	}
-
-IL_009a:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_superDot::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_superDot_Update_m2770388550 (CameraFilterPack_FX_superDot_t3273793587 * __this, const RuntimeMethod* method)
@@ -42378,6 +33924,7 @@ IL_0021:
 }
 // System.Void CameraFilterPack_FX_ZebraColor::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_ZebraColor_OnRenderImage_m2531654952 (CameraFilterPack_FX_ZebraColor_t3930707637 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -42385,71 +33932,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_ZebraColor_OnRenderImage_
 		il2cpp_codegen_initialize_method (CameraFilterPack_FX_ZebraColor_OnRenderImage_m2531654952_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_00a9;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_FX_ZebraColor_get_material_m3977258702(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_FX_ZebraColor_get_material_m3977258702(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_Value_6();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862891449, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_FX_ZebraColor_get_material_m3977258702(__this, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_10 = ___sourceTexture0;
-		NullCheck(L_10);
-		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_10);
-		RenderTexture_t2108887433 * L_12 = ___sourceTexture0;
-		NullCheck(L_12);
-		int32_t L_13 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_12);
-		Vector4_t3319028937  L_14;
-		memset(&L_14, 0, sizeof(L_14));
-		Vector4__ctor_m2498754347((&L_14), (((float)((float)L_11))), (((float)((float)L_13))), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_9);
-		Material_SetVector_m4214217286(L_9, _stringLiteral3071141033, L_14, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_15 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_16 = ___destTexture1;
-		Material_t340375123 * L_17 = CameraFilterPack_FX_ZebraColor_get_material_m3977258702(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_15, L_16, L_17, /*hidden argument*/NULL);
-		goto IL_00b0;
-	}
-
-IL_00a9:
-	{
-		RenderTexture_t2108887433 * L_18 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_19 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_18, L_19, /*hidden argument*/NULL);
-	}
-
-IL_00b0:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_FX_ZebraColor::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_FX_ZebraColor_Update_m3806585750 (CameraFilterPack_FX_ZebraColor_t3930707637 * __this, const RuntimeMethod* method)
@@ -42586,6 +34072,7 @@ IL_0036:
 }
 // System.Void CameraFilterPack_Glasses_On::OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Glasses_On_OnRenderImage_m3944285928 (CameraFilterPack_Glasses_On_t3068266844 * __this, RenderTexture_t2108887433 * ___sourceTexture0, RenderTexture_t2108887433 * ___destTexture1, const RuntimeMethod* method)
+
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -42593,99 +34080,10 @@ extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Glasses_On_OnRenderImage_m39
 		il2cpp_codegen_initialize_method (CameraFilterPack_Glasses_On_OnRenderImage_m3944285928_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	{
-		Shader_t4151988712 * L_0 = __this->get_SCShader_2();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0158;
-		}
-	}
-	{
-		float L_2 = __this->get_TimeX_3();
-		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_TimeX_3(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
-		float L_4 = __this->get_TimeX_3();
-		if ((!(((float)L_4) > ((float)(100.0f)))))
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		__this->set_TimeX_3((0.0f));
-	}
-
-IL_003e:
-	{
-		Material_t340375123 * L_5 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_6 = __this->get_TimeX_3();
-		NullCheck(L_5);
-		Material_SetFloat_m3226510453(L_5, _stringLiteral2461206737, L_6, /*hidden argument*/NULL);
-		Material_t340375123 * L_7 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_8 = __this->get_UseFinalGlassColor_10();
-		NullCheck(L_7);
-		Material_SetFloat_m3226510453(L_7, _stringLiteral862601486, L_8, /*hidden argument*/NULL);
-		Material_t340375123 * L_9 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_10 = __this->get_Fade_4();
-		NullCheck(L_9);
-		Material_SetFloat_m3226510453(L_9, _stringLiteral1985039568, L_10, /*hidden argument*/NULL);
-		Material_t340375123 * L_11 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_12 = __this->get_VisionBlur_5();
-		NullCheck(L_11);
-		Material_SetFloat_m3226510453(L_11, _stringLiteral1314229288, L_12, /*hidden argument*/NULL);
-		Material_t340375123 * L_13 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_14 = __this->get_GlassDistortion_8();
-		NullCheck(L_13);
-		Material_SetFloat_m3226510453(L_13, _stringLiteral4239223131, L_14, /*hidden argument*/NULL);
-		Material_t340375123 * L_15 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_16 = __this->get_GlassAberration_9();
-		NullCheck(L_15);
-		Material_SetFloat_m3226510453(L_15, _stringLiteral2819342793, L_16, /*hidden argument*/NULL);
-		Material_t340375123 * L_17 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_18 = __this->get_GlassesColor_6();
-		NullCheck(L_17);
-		Material_SetColor_m2020215303(L_17, _stringLiteral40153303, L_18, /*hidden argument*/NULL);
-		Material_t340375123 * L_19 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_20 = __this->get_GlassesColor2_7();
-		NullCheck(L_19);
-		Material_SetColor_m2020215303(L_19, _stringLiteral2442754159, L_20, /*hidden argument*/NULL);
-		Material_t340375123 * L_21 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		Color_t2555686324  L_22 = __this->get_GlassColor_13();
-		NullCheck(L_21);
-		Material_SetColor_m2020215303(L_21, _stringLiteral1217946812, L_22, /*hidden argument*/NULL);
-		Material_t340375123 * L_23 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_24 = __this->get_UseScanLineSize_12();
-		NullCheck(L_23);
-		Material_SetFloat_m3226510453(L_23, _stringLiteral3497656506, L_24, /*hidden argument*/NULL);
-		Material_t340375123 * L_25 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		float L_26 = __this->get_UseScanLine_11();
-		NullCheck(L_25);
-		Material_SetFloat_m3226510453(L_25, _stringLiteral2405771573, L_26, /*hidden argument*/NULL);
-		Material_t340375123 * L_27 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		Texture2D_t3840446185 * L_28 = __this->get_Texture2_15();
-		NullCheck(L_27);
-		Material_SetTexture_m1829349465(L_27, _stringLiteral545261465, L_28, /*hidden argument*/NULL);
-		RenderTexture_t2108887433 * L_29 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_30 = ___destTexture1;
-		Material_t340375123 * L_31 = CameraFilterPack_Glasses_On_get_material_m1440636206(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m890955694(NULL /*static, unused*/, L_29, L_30, L_31, /*hidden argument*/NULL);
-		goto IL_015f;
-	}
-
-IL_0158:
-	{
-		RenderTexture_t2108887433 * L_32 = ___sourceTexture0;
-		RenderTexture_t2108887433 * L_33 = ___destTexture1;
-		IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
-		Graphics_Blit_m1336850842(NULL /*static, unused*/, L_32, L_33, /*hidden argument*/NULL);
-	}
-
-IL_015f:
-	{
-		return;
-	}
+	IL2CPP_RUNTIME_CLASS_INIT(Graphics_t783367614_il2cpp_TypeInfo_var);
+	Graphics_Blit_m1336850842(NULL /*static, unused*/, (Texture_t3661962703 *)___sourceTexture0, ___destTexture1, NULL);
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 }
 // System.Void CameraFilterPack_Glasses_On::Update()
 extern "C" IL2CPP_METHOD_ATTR void CameraFilterPack_Glasses_On_Update_m1276917819 (CameraFilterPack_Glasses_On_t3068266844 * __this, const RuntimeMethod* method)

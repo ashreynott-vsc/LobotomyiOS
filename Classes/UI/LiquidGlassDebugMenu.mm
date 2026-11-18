@@ -18,14 +18,7 @@ extern "C" {
     const char* Mobile_GetEgoCatalogTSV(void);
 }
 
-__attribute__((constructor)) static void EnableMetalPerformanceHUD(void) {
-    setenv("MTL_HUD_ENABLED", "1", 1);
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalForceHudEnabled"];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHUDEnabled"];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHudEnabled"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
+static BOOL s_metalHudDesired = NO;
 static volatile int32_t s_menuVisibleAtomic = 0;
 
 static void RunOnMainThread(void (^block)(void)) {
@@ -68,49 +61,82 @@ static void SetTextureQualityLevel(int level) {
     NSLog(@"[LobotomyCorp] SetQualityLevel to %d", level);
 }
 
-static CAMetalLayer* FindMetalLayer(void) {
-    UIView *glView = UnityGetGLView();
-    if (!glView) return nil;
-    Class metalCls = NSClassFromString(@"CAMetalLayer");
-    if (!metalCls) return nil;
-    if ([glView.layer isKindOfClass:metalCls]) {
-        return (CAMetalLayer *)glView.layer;
+static void CollectMetalLayersFromLayer(CALayer *layer, NSMutableArray<CAMetalLayer *> *out, Class metalCls) {
+    if (!layer) return;
+    if ([layer isKindOfClass:metalCls] && ![out containsObject:(CAMetalLayer *)layer]) {
+        [out addObject:(CAMetalLayer *)layer];
     }
-    for (CALayer *sub in glView.layer.sublayers) {
-        if ([sub isKindOfClass:metalCls]) {
-            return (CAMetalLayer *)sub;
+    NSArray<CALayer *> *subs = layer.sublayers;
+    for (CALayer *sub in subs) {
+        CollectMetalLayersFromLayer(sub, out, metalCls);
+    }
+}
+
+static NSArray<CAMetalLayer *>* CollectMetalLayers(void) {
+    Class metalCls = NSClassFromString(@"CAMetalLayer");
+    if (!metalCls) return @[];
+    NSMutableArray<CAMetalLayer *> *layers = [NSMutableArray array];
+    UIView *glView = UnityGetGLView();
+    if (glView && glView.layer) {
+        CollectMetalLayersFromLayer(glView.layer, layers, metalCls);
+    }
+    if (@available(iOS 13.0, *)) {
+        for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+            if (![scene isKindOfClass:[UIWindowScene class]]) continue;
+            UIWindowScene *ws = (UIWindowScene *)scene;
+            for (UIWindow *win in ws.windows) {
+                if (win.layer) {
+                    CollectMetalLayersFromLayer(win.layer, layers, metalCls);
+                }
+            }
         }
     }
-    return nil;
+    return [layers copy];
 }
 
 static BOOL IsMetalHudActive(void) {
-    CAMetalLayer *layer = FindMetalLayer();
-    if (!layer) return NO;
+    NSArray<CAMetalLayer *> *layers = CollectMetalLayers();
     SEL getSel = NSSelectorFromString(@"developerHUDProperties");
-    if (![layer respondsToSelector:getSel]) return NO;
-    NSDictionary *props = ((id (*)(id, SEL))objc_msgSend)(layer, getSel);
-    return (props != nil && props.count > 0);
+    for (CAMetalLayer *layer in layers) {
+        if (![layer respondsToSelector:getSel]) continue;
+        NSDictionary *props = ((id (*)(id, SEL))objc_msgSend)(layer, getSel);
+        if (props == nil) {
+            return YES;
+        }
+        if ([props isKindOfClass:[NSDictionary class]]) {
+            id modeObj = props[@"mode"];
+            if ([modeObj isKindOfClass:[NSString class]]) {
+                return ![((NSString *)modeObj) isEqualToString:@"disabled"];
+            }
+        }
+        return s_metalHudDesired;
+    }
+    return s_metalHudDesired;
 }
 
 static BOOL SetMetalHudActive(BOOL enabled, BOOL *supportedOut) {
-    CAMetalLayer *layer = FindMetalLayer();
+    s_metalHudDesired = enabled;
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    [defs setBool:enabled forKey:@"LobCorp_MetalHudActive"];
+    [defs removeObjectForKey:@"MetalForceHudEnabled"];
+    [defs removeObjectForKey:@"MetalHUDEnabled"];
+    [defs removeObjectForKey:@"MetalHudEnabled"];
+    [defs synchronize];
+
+    NSArray<CAMetalLayer *> *layers = CollectMetalLayers();
     SEL setSel = NSSelectorFromString(@"setDeveloperHUDProperties:");
-    SEL getSel = NSSelectorFromString(@"developerHUDProperties");
-    if (!layer || ![layer respondsToSelector:setSel] || ![layer respondsToSelector:getSel]) {
-        if (supportedOut) *supportedOut = NO;
-        return NO;
+    NSDictionary *newProps = enabled
+        ? @{@"mode": @"default"}
+        : @{@"mode": @"disabled", @"logging": @"disabled"};
+
+    BOOL anySupported = NO;
+    for (CAMetalLayer *layer in layers) {
+        if (![layer respondsToSelector:setSel]) continue;
+        ((void (*)(id, SEL, NSDictionary *))objc_msgSend)(layer, setSel, newProps);
+        anySupported = YES;
     }
-    if (supportedOut) *supportedOut = YES;
-    NSDictionary *newProps = enabled ? @{@"mode": @"default"} : nil;
-    ((void (*)(id, SEL, NSDictionary *))objc_msgSend)(layer, setSel, newProps);
-    setenv("MTL_HUD_ENABLED", enabled ? "1" : "0", 1);
-    [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:@"MetalForceHudEnabled"];
-    [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:@"MetalHUDEnabled"];
-    [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:@"MetalHudEnabled"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    NSDictionary *cur = ((id (*)(id, SEL))objc_msgSend)(layer, getSel);
-    return (cur != nil && cur.count > 0);
+    if (supportedOut) *supportedOut = anySupported;
+    return IsMetalHudActive();
 }
 
 static UIVisualEffect* GetLiquidGlassEffect(void) {
@@ -379,7 +405,6 @@ static UILabel* CreateSectionLabel(NSString *text) {
 @property (nonatomic, strong) UILabel *telemetryLabel;
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) UIButton *btnClean169;
-@property (nonatomic, strong) UIButton *btnFullWide;
 @property (nonatomic, strong) UIButton *btnQualHigh;
 @property (nonatomic, strong) UIButton *btnQualHalf;
 @property (nonatomic, strong) UIButton *btnMetalHud;
@@ -426,11 +451,12 @@ static UILabel* CreateSectionLabel(NSString *text) {
     self = [super init];
     if (self) {
         _gameObjectName = @"[MobileScreenManager]";
-        _currentAspectMode = 1;
+        _currentAspectMode = 0;
         _currentQualityLevel = 0;
         _selectedTierFilter = 0;
         _menuVisible = NO;
         _egoLoaded = NO;
+        s_metalHudDesired = [[NSUserDefaults standardUserDefaults] boolForKey:@"LobCorp_MetalHudActive"];
 
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(onMemoryWarning:)
@@ -487,6 +513,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
         }
         self.currentQualityLevel = QualitySettings_GetQualityLevel_m848937883(NULL, NULL);
         [self createOverlayUI];
+        SetMetalHudActive(s_metalHudDesired, NULL);
         [self updateAspectButtonStyles];
         [self updateQualityButtonStyles];
         [self updateMetalHudButtonStyle];
@@ -801,14 +828,10 @@ static UILabel* CreateSectionLabel(NSString *text) {
 
     [stack addArrangedSubview:CreateSectionLabel(@"DISPLAY & GRAPHICS")];
 
-    self.btnClean169 = CreateGlassButton(@"16:9 Clean Pillbox", self, @selector(onModeCleanTapped), 11.5);
-    self.btnFullWide = CreateGlassButton(@"Fullscreen Wide", self, @selector(onModeWideTapped), 11.5);
-    UIStackView *aspectRow = [[UIStackView alloc] initWithArrangedSubviews:@[self.btnClean169, self.btnFullWide]];
-    aspectRow.axis = UILayoutConstraintAxisHorizontal;
-    aspectRow.distribution = UIStackViewDistributionFillEqually;
-    aspectRow.spacing = 8.0;
-    [aspectRow.heightAnchor constraintEqualToConstant:30.0].active = YES;
-    [stack addArrangedSubview:aspectRow];
+    self.btnClean169 = CreateGlassButton(@"Aspect: 16:9 Pillbox (Locked)", self, @selector(onModeCleanTapped), 11.5);
+    self.btnClean169.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.btnClean169.heightAnchor constraintEqualToConstant:28.0].active = YES;
+    [stack addArrangedSubview:self.btnClean169];
 
     self.btnQualHigh = CreateGlassButton(@"Tex: Full (High)", self, @selector(onQualHighTapped), 11.5);
     self.btnQualHalf = CreateGlassButton(@"Tex: Half (Low VRAM)", self, @selector(onQualHalfTapped), 11.5);
@@ -1186,12 +1209,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
     self.currentAspectMode = 0;
     [self updateAspectButtonStyles];
     [self sendUnityCommand:@"mode 0"];
-}
-- (void)onModeWideTapped {
-    TriggerHaptic();
-    self.currentAspectMode = 1;
-    [self updateAspectButtonStyles];
-    [self sendUnityCommand:@"mode 1"];
+    [self updateStatusMessage:@"16:9 Pillbox Mode (Locked)"];
 }
 - (void)onEscTapped {
     TriggerHaptic();
@@ -1283,13 +1301,8 @@ static UILabel* CreateSectionLabel(NSString *text) {
 #pragma mark - Button Style & Telemetry Sync
 
 - (void)updateAspectButtonStyles {
-    BOOL clean = (self.currentAspectMode == 0);
-    self.btnClean169.backgroundColor = clean
-        ? [UIColor colorWithRed:0.20 green:0.56 blue:0.88 alpha:0.55]
-        : [UIColor colorWithWhite:1.0 alpha:0.12];
-    self.btnFullWide.backgroundColor = !clean
-        ? [UIColor colorWithRed:0.20 green:0.56 blue:0.88 alpha:0.55]
-        : [UIColor colorWithWhite:1.0 alpha:0.12];
+    self.btnClean169.backgroundColor = [UIColor colorWithRed:0.20 green:0.56 blue:0.88 alpha:0.42];
+    self.btnClean169.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.30].CGColor;
 }
 
 - (void)updateQualityButtonStyles {
@@ -1312,7 +1325,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
 
 - (void)setAspectMode:(int)mode {
     RunOnMainThread(^{
-        self.currentAspectMode = mode;
+        self.currentAspectMode = 0;
         [self updateAspectButtonStyles];
     });
 }

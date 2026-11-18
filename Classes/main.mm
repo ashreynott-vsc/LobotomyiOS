@@ -1,6 +1,7 @@
 #include "RegisterMonoModules.h"
 #include "RegisterFeatures.h"
 #include <csignal>
+#include <stdlib.h>
 
 // Hack to work around iOS SDK 4.3 linker problem
 // we need at least one __TEXT, __const section entry in main application .o files
@@ -14,11 +15,15 @@ const char* AppControllerClassName = "UnityAppController";
 
 int main(int argc, char* argv[])
 {
-    setenv("MTL_HUD_ENABLED", "1", 1);
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalForceHudEnabled"];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHUDEnabled"];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MetalHudEnabled"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    unsetenv("MTL_HUD_ENABLED");
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    [defs removeObjectForKey:@"MetalForceHudEnabled"];
+    [defs removeObjectForKey:@"MetalHUDEnabled"];
+    [defs removeObjectForKey:@"MetalHudEnabled"];
+    if ([defs objectForKey:@"LobCorp_MetalHudActive"] == nil) {
+        [defs setBool:NO forKey:@"LobCorp_MetalHudActive"];
+    }
+    [defs synchronize];
 
     UnityInitStartupTime();
     @autoreleasepool

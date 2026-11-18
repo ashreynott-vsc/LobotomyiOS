@@ -40488,14 +40488,12 @@ IL_0027:
 	}
 }
 // System.Void _FX_CompressionFX_Spine::Start()
+extern "C" IL2CPP_METHOD_ATTR void Behaviour_set_enabled_m20417929 (Behaviour_t1437897464 * __this, bool p0, const RuntimeMethod* method);
 extern "C" IL2CPP_METHOD_ATTR void _FX_CompressionFX_Spine_Start_m2859712319 (_FX_CompressionFX_Spine_t117493990 * __this, const RuntimeMethod* method)
 {
 	{
 		__this->set_ShaderChange_9(0);
-		UnscaledTimer_t2981502462 * L_0 = __this->get__freqTimer_13();
-		float L_1 = __this->get__freq_14();
-		NullCheck(L_0);
-		VirtActionInvoker1< float >::Invoke(4 /* System.Void Timer::StartTimer(System.Single) */, L_0, L_1);
+		Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -40503,13 +40501,14 @@ extern "C" IL2CPP_METHOD_ATTR void _FX_CompressionFX_Spine_Start_m2859712319 (_F
 extern "C" IL2CPP_METHOD_ATTR void _FX_CompressionFX_Spine_CallUpdate_m440356411 (_FX_CompressionFX_Spine_t117493990 * __this, const RuntimeMethod* method)
 {
 	{
-		_FX_CompressionFX_Spine_Update_m1082966820(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void _FX_CompressionFX_Spine::Update()
 extern "C" IL2CPP_METHOD_ATTR void _FX_CompressionFX_Spine_Update_m1082966820 (_FX_CompressionFX_Spine_t117493990 * __this, const RuntimeMethod* method)
 {
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
@@ -42549,6 +42548,7 @@ extern "C" IL2CPP_METHOD_ATTR void _FX_Hologram2_Spine_Start_m2652272295 (_FX_Ho
 {
 	{
 		__this->set_ShaderChange_9(0);
+		Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -42556,13 +42556,14 @@ extern "C" IL2CPP_METHOD_ATTR void _FX_Hologram2_Spine_Start_m2652272295 (_FX_Ho
 extern "C" IL2CPP_METHOD_ATTR void _FX_Hologram2_Spine_CallUpdate_m478115035 (_FX_Hologram2_Spine_t2374662042 * __this, const RuntimeMethod* method)
 {
 	{
-		_FX_Hologram2_Spine_Update_m2168254487(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void _FX_Hologram2_Spine::Update()
 extern "C" IL2CPP_METHOD_ATTR void _FX_Hologram2_Spine_Update_m2168254487 (_FX_Hologram2_Spine_t2374662042 * __this, const RuntimeMethod* method)
 {
+	Behaviour_set_enabled_m20417929((Behaviour_t1437897464 *)__this, (bool)0, /*hidden argument*/NULL);
+	return;
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{

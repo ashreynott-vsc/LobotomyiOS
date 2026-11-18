@@ -54353,6 +54353,38 @@ extern "C" IL2CPP_METHOD_ATTR void SpineOptimizerModule_Init_m2501808063 (SpineO
 	}
 }
 // System.Void SpineOptimizerModule::UpdateCheckInCamera()
+extern "C" int32_t Mobile_GetFrameCount(void);
+static Camera_t4157153871 * Mobile_GetCachedMainCam38(void)
+{
+	static int32_t s_camFrame38 = -1;
+	static uint32_t s_camHandle38 = 0;
+	int32_t f = Mobile_GetFrameCount();
+	if (s_camFrame38 == f && s_camHandle38 != 0)
+	{
+		Camera_t4157153871 * c = (Camera_t4157153871 *)il2cpp_gchandle_get_target(s_camHandle38);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)c, (Object_t631007953 *)NULL, NULL))
+		{
+			return c;
+		}
+		il2cpp_gchandle_free(s_camHandle38);
+		s_camHandle38 = 0;
+	}
+	Camera_t4157153871 * mc = Camera_get_main_m3643453163(NULL /*static, unused*/, NULL);
+	s_camFrame38 = f;
+	if (s_camHandle38 != 0)
+	{
+		il2cpp_gchandle_free(s_camHandle38);
+		s_camHandle38 = 0;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mc, (Object_t631007953 *)NULL, NULL))
+	{
+		s_camHandle38 = il2cpp_gchandle_new((Il2CppObject *)mc, false);
+	}
+	return mc;
+}
+
 extern "C" IL2CPP_METHOD_ATTR void SpineOptimizerModule_UpdateCheckInCamera_m3896431267 (SpineOptimizerModule_t443362725 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54397,7 +54429,7 @@ extern "C" IL2CPP_METHOD_ATTR void SpineOptimizerModule_UpdateCheckInCamera_m389
 		NullCheck(L_3);
 		Vector3_t3722313464  L_4 = VirtFuncInvoker0< Vector3_t3722313464  >::Invoke(20 /* UnityEngine.Vector3 UnitModel::GetCurrentViewPosition() */, L_3);
 		V_0 = L_4;
-		Camera_t4157153871 * L_5 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t4157153871 * L_5 = Mobile_GetCachedMainCam38();
 		V_1 = L_5;
 		Camera_t4157153871 * L_6 = V_1;
 		NullCheck(L_6);
@@ -54542,7 +54574,7 @@ IL_004e:
 		}
 	}
 	{
-		Camera_t4157153871 * L_9 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t4157153871 * L_9 = Mobile_GetCachedMainCam38();
 		NullCheck(L_9);
 		float L_10 = Camera_get_orthographicSize_m3903216845(L_9, /*hidden argument*/NULL);
 		V_0 = L_10;
@@ -54559,7 +54591,7 @@ IL_004e:
 		NullCheck(L_13);
 		float L_14 = L_13->get_currentScale_27();
 		V_1 = L_14;
-		Camera_t4157153871 * L_15 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Camera_t4157153871 * L_15 = Mobile_GetCachedMainCam38();
 		NullCheck(L_15);
 		float L_16 = Camera_get_orthographicSize_m3903216845(L_15, /*hidden argument*/NULL);
 		UnitModel_t1924672552 * L_17 = __this->get__targetModel_1();
@@ -54661,6 +54693,10 @@ IL_0132:
 extern "C" IL2CPP_METHOD_ATTR void SpineOptimizerModule_Update_m1676944670 (SpineOptimizerModule_t443362725 * __this, const RuntimeMethod* method)
 {
 	{
+		if (((((uintptr_t)__this >> 4) + (uintptr_t)Mobile_GetFrameCount()) % 6u) != 0u)
+		{
+			return;
+		}
 		SpineOptimizerModule_UpdateCheckInCamera_m3896431267(__this, /*hidden argument*/NULL);
 		SpineOptimizerModule_UpdateAnimationQuality_m1584940191(__this, /*hidden argument*/NULL);
 		return;

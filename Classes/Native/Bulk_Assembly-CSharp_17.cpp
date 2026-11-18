@@ -75447,6 +75447,126 @@ IL_00d3:
 		return L_32;
 	}
 }
+
+#ifndef _MSC_VER
+#else
+#endif
+
+extern const uint32_t CustomizingWindow_GenRandomSpriteSet_m3555248779_MetadataUsageId;
+extern const uint32_t DamageInfo_get_zero_m372373349_MetadataUsageId;
+extern "C" IL2CPP_METHOD_ATTR void Texture_set_wrapMode_m587872754 (Texture_t3661962703 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Texture_set_filterMode_m3078068058 (Texture_t3661962703 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Sprite_t280657092 * Sprite_Create_m3350529538 (RuntimeObject * __this /* static, unused */, Texture2D_t3840446185 * ___texture0, Rect_t2360479859  ___rect1, Vector2_t2156229523  ___pivot2, float ___pixelsPerUnit3, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void UnitModel_TakeDamage_m3552222361 (UnitModel_t1924672552 * __this, DamageInfo_t1138602084 * ___dmg0, const RuntimeMethod* method);
+
+struct ChildCreatureModelU5BU5D_t2873678367 : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) ChildCreatureModel_t1247069626 * m_Items[1];
+public:
+	inline ChildCreatureModel_t1247069626 * GetAt(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+};
+
+static void Mobile_Ensure17Meta(void)
+{
+	static bool s_init = false;
+	if (!s_init)
+	{
+		il2cpp_codegen_initialize_method(CustomizingWindow_GenRandomSpriteSet_m3555248779_MetadataUsageId);
+		il2cpp_codegen_initialize_method(DamageInfo_get_zero_m372373349_MetadataUsageId);
+		s_init = true;
+	}
+}
+
+extern "C" Texture2D_t3840446185 * Mobile_CreateProceduralTexture2D(int32_t width, int32_t height, const uint8_t * rgbaBytes, bool repeatWrap)
+{
+	if (width <= 0 || height <= 0 || !rgbaBytes)
+	{
+		return NULL;
+	}
+	Mobile_Ensure17Meta();
+	Texture2D_t3840446185 * tex = (Texture2D_t3840446185 *)il2cpp_codegen_object_new(Texture2D_t3840446185_il2cpp_TypeInfo_var);
+	if (!tex)
+	{
+		return NULL;
+	}
+	Texture2D__ctor_m2862217990(tex, width, height, 4 /* RGBA32 */, (bool)0, NULL);
+	Color32U5BU5D_t3850468773 * pixels = Texture2D_GetPixels32_m647746242(tex, NULL);
+	int32_t total = width * height;
+	if (pixels != NULL)
+	{
+		int32_t arrLen = (int32_t)(((RuntimeArray *)pixels)->max_length);
+		int32_t n = (total < arrLen) ? total : arrLen;
+		for (int32_t i = 0; i < n; ++i)
+		{
+			Color32_t2600501292 c;
+			memset(&c, 0, sizeof(c));
+			c.set_r_1(rgbaBytes[i * 4 + 0]);
+			c.set_g_2(rgbaBytes[i * 4 + 1]);
+			c.set_b_3(rgbaBytes[i * 4 + 2]);
+			c.set_a_4(rgbaBytes[i * 4 + 3]);
+			pixels->SetAt((il2cpp_array_size_t)i, c);
+		}
+		Texture2D_SetPixels32_m1141065075(tex, pixels, NULL);
+	}
+	Texture_set_wrapMode_m587872754((Texture_t3661962703 *)tex, repeatWrap ? 0 : 1, NULL);
+	Texture_set_filterMode_m3078068058((Texture_t3661962703 *)tex, 1 /* Bilinear */, NULL);
+	Texture2D_Apply_m2470606565(tex, (bool)0, (bool)0, NULL);
+	return tex;
+}
+
+extern "C" Sprite_t280657092 * Mobile_CreateProceduralSprite(int32_t width, int32_t height, const uint8_t * rgbaBytes, float pixelsPerUnit)
+{
+	Texture2D_t3840446185 * tex = Mobile_CreateProceduralTexture2D(width, height, rgbaBytes, false);
+	if (!tex)
+	{
+		return NULL;
+	}
+	Rect_t2360479859 rect;
+	memset(&rect, 0, sizeof(rect));
+	Rect__ctor_m2614021312(&rect, 0.0f, 0.0f, (float)width, (float)height, NULL);
+	Vector2_t2156229523 pivot;
+	memset(&pivot, 0, sizeof(pivot));
+	Vector2__ctor_m3970636864(&pivot, 0.5f, 0.5f, NULL);
+	return Sprite_Create_m3350529538(NULL /*static, unused*/, tex, rect, pivot, pixelsPerUnit, NULL);
+}
+
+extern "C" void Mobile_SuppressCreatureChilds(CreatureModel_t680682136 * cm)
+{
+	if (!cm)
+	{
+		return;
+	}
+	Mobile_Ensure17Meta();
+	List_1_t2719144368 * alive = CreatureModel_GetAliveChilds_m2280124948(cm, NULL);
+	if (!alive || !alive->get__items_1())
+	{
+		return;
+	}
+	int32_t count = alive->get__size_2();
+	ChildCreatureModelU5BU5D_t2873678367 * items = alive->get__items_1();
+	int32_t maxLen = (int32_t)(((RuntimeArray *)items)->max_length);
+	if (count > maxLen) count = maxLen;
+	for (int32_t i = 0; i < count; ++i)
+	{
+		ChildCreatureModel_t1247069626 * ch = items->GetAt((il2cpp_array_size_t)i);
+		if (!ch) continue;
+		for (int32_t dtype = 1; dtype <= 4; ++dtype)
+		{
+			DamageInfo_t1138602084 * dmg = (DamageInfo_t1138602084 *)il2cpp_codegen_object_new(DamageInfo_t1138602084_il2cpp_TypeInfo_var);
+			DamageInfo__ctor_m1621526194(dmg, dtype, 10000000.0f, NULL);
+			UnitModel_TakeDamage_m3552222361((UnitModel_t1924672552 *)ch, dmg, NULL);
+		}
+		if (((UnitModel_t1924672552 *)ch)->get_hp_9() > 0.0f)
+		{
+			((UnitModel_t1924672552 *)ch)->set_hp_9(0.0f);
+			VirtActionInvoker0::Invoke(68 /* System.Void CreatureModel::Suppressed() */, (CreatureModel_t680682136 *)ch);
+		}
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

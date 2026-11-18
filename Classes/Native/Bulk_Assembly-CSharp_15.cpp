@@ -50046,6 +50046,8 @@ extern "C" IL2CPP_METHOD_ATTR void ConsoleCommand_SetObservable_m1369448130 (Con
 // System.Void CreatureModel::SubQliphothCounter()
 extern "C" IL2CPP_METHOD_ATTR void CreatureModel_SubQliphothCounter_m2899044951 (CreatureModel_t680682136 * __this, const RuntimeMethod* method);
 // System.Void ConsoleCommand::SuppressAllCommand()
+extern "C" void Mobile_SuppressCreatureChilds (CreatureModel_t680682136 * cm);
+extern "C" void Mobile_SuppressAllOrdeals (void);
 extern "C" IL2CPP_METHOD_ATTR void ConsoleCommand_SuppressAllCommand_m2453113421 (ConsoleCommand_t3167473278 * __this, const RuntimeMethod* method);
 // System.Void ConsoleCommand::CreatureTakeDamageCommand(System.Int64,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void ConsoleCommand_CreatureTakeDamageCommand_m2816542233 (ConsoleCommand_t3167473278 * __this, int64_t ___id0, float ___value1, const RuntimeMethod* method);
@@ -65945,6 +65947,8 @@ IL_0018:
 	}
 }
 // System.Void ConsoleCommand::SuppressAllCommand()
+extern "C" void Mobile_SuppressCreatureChilds (CreatureModel_t680682136 * cm);
+extern "C" void Mobile_SuppressAllOrdeals (void);
 extern "C" IL2CPP_METHOD_ATTR void ConsoleCommand_SuppressAllCommand_m2453113421 (ConsoleCommand_t3167473278 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66070,6 +66074,7 @@ IL_0098:
 
 IL_00a3:
 	{
+		Mobile_SuppressCreatureChilds(V_2);
 		int32_t L_30 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add((int32_t)L_30, (int32_t)1));
 	}
@@ -66085,6 +66090,7 @@ IL_00a9:
 		}
 	}
 	{
+		Mobile_SuppressAllOrdeals();
 		return;
 	}
 }
@@ -68589,6 +68595,10 @@ extern "C" void Mobile_Cheat_SuppressAll (void)
 	if (cc != NULL)
 	{
 		ConsoleCommand_SuppressAllCommand_m2453113421(cc, NULL);
+	}
+	else
+	{
+		Mobile_SuppressAllOrdeals();
 	}
 }
 

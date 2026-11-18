@@ -13,6 +13,9 @@
 #include <limits>
 #include <assert.h>
 #include <stdint.h>
+#include <vector>
+#include <unordered_map>
+#include <algorithm>
 
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
@@ -73084,6 +73087,187 @@ extern "C" IL2CPP_METHOD_ATTR float GraphAstar_ComputeHeuristic_m1020734164 (Run
 		return L_2;
 	}
 }
+#ifndef MOBILE_LIST_1_T2957182316_DEFINED
+#define MOBILE_LIST_1_T2957182316_DEFINED
+struct List_1_t2957182316 : public RuntimeObject
+{
+public:
+	MapEdgeU5BU5D_t2411936755* ____items_1;
+	int32_t ____size_2;
+	int32_t ____version_3;
+};
+#endif
+
+struct MobileAStarRec
+{
+	MapNode_t547811713 * node;
+	MapEdge_t1485107574 * viaEdge;
+	int32_t parentIdx;
+	float g;
+	bool closed;
+};
+
+struct MobileAStarHeapItem
+{
+	float f;
+	int32_t idx;
+	bool operator<(const MobileAStarHeapItem& o) const { return f > o.f; }
+};
+
+struct MobileAStarScratch
+{
+	std::vector<MobileAStarRec> nodes;
+	std::unordered_map<MapNode_t547811713 *, int32_t> nodeMap;
+	std::vector<MobileAStarHeapItem> heap;
+	std::vector<MapEdge_t1485107574 *> revEdges;
+	std::vector<int32_t> revDirs;
+};
+
+struct MobileAStarGuard
+{
+	static bool s_staticInUse;
+	MobileAStarScratch * ptr;
+	bool ownsStatic;
+	MobileAStarGuard()
+	{
+		static MobileAStarScratch s_staticScratch;
+		static bool s_reserved = false;
+		if (!s_reserved)
+		{
+			s_reserved = true;
+			s_staticScratch.nodes.reserve(256);
+			s_staticScratch.nodeMap.reserve(256);
+			s_staticScratch.heap.reserve(512);
+			s_staticScratch.revEdges.reserve(64);
+			s_staticScratch.revDirs.reserve(64);
+		}
+		if (!s_staticInUse)
+		{
+			s_staticInUse = true;
+			ownsStatic = true;
+			ptr = &s_staticScratch;
+			ptr->nodes.clear();
+			ptr->nodeMap.clear();
+			ptr->heap.clear();
+			ptr->revEdges.clear();
+			ptr->revDirs.clear();
+		}
+		else
+		{
+			ownsStatic = false;
+			ptr = new MobileAStarScratch();
+		}
+	}
+	~MobileAStarGuard()
+	{
+		if (ownsStatic) s_staticInUse = false;
+		else delete ptr;
+	}
+};
+bool MobileAStarGuard::s_staticInUse = false;
+
+static int32_t Mobile_RunAStar(
+	MobileAStarScratch & sc,
+	MapNode_t547811713 * startPoint,
+	MapNode_t547811713 * endPoint,
+	bool checkActive,
+	bool isRabbit,
+	bool hasLimit,
+	float limit)
+{
+	Vector3_t3722313464 endPos = endPoint->get_pos_5();
+	float endX = endPos.get_x_1();
+	float endY = endPos.get_y_2();
+
+	sc.nodes.push_back(MobileAStarRec{ startPoint, NULL, -1, 0.0f, false });
+	sc.nodeMap[startPoint] = 0;
+	sc.heap.push_back(MobileAStarHeapItem{ 0.0f, 0 });
+
+	while (!sc.heap.empty())
+	{
+		std::pop_heap(sc.heap.begin(), sc.heap.end());
+		int32_t curIdx = sc.heap.back().idx;
+		sc.heap.pop_back();
+
+		if (sc.nodes[curIdx].closed) continue;
+		MapNode_t547811713 * curNode = sc.nodes[curIdx].node;
+		if (curNode == endPoint)
+		{
+			return curIdx;
+		}
+
+		sc.nodes[curIdx].closed = true;
+		if (isRabbit && curNode->get_rabbitUnpassable_14())
+		{
+			continue;
+		}
+
+		List_1_t2957182316 * edgeList = curNode->get_edges_3();
+		if (!edgeList || !edgeList->____items_1 || edgeList->____size_2 <= 0)
+		{
+			continue;
+		}
+
+		float curG = sc.nodes[curIdx].g;
+		MapEdgeU5BU5D_t2411936755* items = edgeList->____items_1;
+		int32_t edgeCount = edgeList->____size_2;
+		int32_t maxLen = (int32_t)(((RuntimeArray *)items)->max_length);
+		if (edgeCount > maxLen) edgeCount = maxLen;
+
+		for (int32_t i = 0; i < edgeCount; ++i)
+		{
+			MapEdge_t1485107574 * edge = items->GetAtUnchecked((il2cpp_array_size_t)i);
+			if (!edge) continue;
+			MapNode_t547811713 * n1 = edge->get_node1_0();
+			MapNode_t547811713 * n2 = edge->get_node2_1();
+			MapNode_t547811713 * nb = (n1 == curNode) ? n2 : ((n2 == curNode) ? n1 : (MapNode_t547811713 *)NULL);
+			if (!nb) continue;
+			if (checkActive && !nb->get__activate_1()) continue;
+
+			float ng = curG + edge->get_cost_2();
+			if (hasLimit && ng > limit) continue;
+
+			auto it = sc.nodeMap.find(nb);
+			if (it != sc.nodeMap.end())
+			{
+				int32_t nbIdx = it->second;
+				if (sc.nodes[nbIdx].closed || sc.nodes[nbIdx].g <= ng) continue;
+				sc.nodes[nbIdx].g = ng;
+				sc.nodes[nbIdx].viaEdge = edge;
+				sc.nodes[nbIdx].parentIdx = curIdx;
+				Vector3_t3722313464 nbPos = nb->get_pos_5();
+				float dx = nbPos.get_x_1() - endX;
+				float dy = nbPos.get_y_2() - endY;
+				float h = sqrtf(dx * dx + dy * dy);
+				sc.heap.push_back(MobileAStarHeapItem{ ng + h, nbIdx });
+				std::push_heap(sc.heap.begin(), sc.heap.end());
+			}
+			else
+			{
+				int32_t nbIdx = (int32_t)sc.nodes.size();
+				sc.nodes.push_back(MobileAStarRec{ nb, edge, curIdx, ng, false });
+				sc.nodeMap.emplace(nb, nbIdx);
+				Vector3_t3722313464 nbPos = nb->get_pos_5();
+				float dx = nbPos.get_x_1() - endX;
+				float dy = nbPos.get_y_2() - endY;
+				float h = sqrtf(dx * dx + dy * dy);
+				sc.heap.push_back(MobileAStarHeapItem{ ng + h, nbIdx });
+				std::push_heap(sc.heap.begin(), sc.heap.end());
+			}
+		}
+	}
+	return -1;
+}
+
+static PathResult_t1528013228 * Mobile_MakeEmptyPathResult(void)
+{
+	PathResult_t1528013228 * res = (PathResult_t1528013228 *)il2cpp_codegen_object_new(PathResult_t1528013228_il2cpp_TypeInfo_var);
+	MapEdgeU5BU5D_t2411936755* emptyEdges = (MapEdgeU5BU5D_t2411936755*)SZArrayNew(MapEdgeU5BU5D_t2411936755_il2cpp_TypeInfo_var, (uint32_t)0);
+	EdgeDirectionU5BU5D_t437724220* emptyDirs = (EdgeDirectionU5BU5D_t437724220*)SZArrayNew(EdgeDirectionU5BU5D_t437724220_il2cpp_TypeInfo_var, (uint32_t)0);
+	PathResult__ctor_m2626499570(res, emptyEdges, emptyDirs, (0.0f), /*hidden argument*/NULL);
+	return res;
+}
+
 // PathResult GraphAstar::SearchPath(MapNode,MapNode,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR PathResult_t1528013228 * GraphAstar_SearchPath_m2082486805 (RuntimeObject * __this /* static, unused */, MapNode_t547811713 * ___startPoint0, MapNode_t547811713 * ___endPoint1, bool ___isRabbit2, const RuntimeMethod* method)
 {
@@ -73093,383 +73277,47 @@ extern "C" IL2CPP_METHOD_ATTR PathResult_t1528013228 * GraphAstar_SearchPath_m20
 		il2cpp_codegen_initialize_method (GraphAstar_SearchPath_m2082486805_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	PriorityQueue_1_t4086539012 * V_0 = NULL;
-	HashSet_1_t3407728483 * V_1 = NULL;
-	Dictionary_2_t1901317315 * V_2 = NULL;
-	PathScore_t1776606096 * V_3 = NULL;
-	ArrayList_t2718874744 * V_4 = NULL;
-	ArrayList_t2718874744 * V_5 = NULL;
-	MapNode_t547811713 * V_6 = NULL;
-	float V_7 = 0.0f;
-	SearchInfo_t1122556312 * V_8 = NULL;
-	MapEdge_t1485107574 * V_9 = NULL;
-	MapEdgeU5BU5D_t2411936755* V_10 = NULL;
-	MapEdge_t1485107574 * V_11 = NULL;
-	MapEdgeU5BU5D_t2411936755* V_12 = NULL;
-	int32_t V_13 = 0;
-	MapNode_t547811713 * V_14 = NULL;
-	PathScore_t1776606096 * V_15 = NULL;
-	SearchInfo_t1122556312 * V_16 = NULL;
-	bool V_17 = false;
+	if (!___startPoint0 || !___endPoint1 || ___startPoint0 == ___endPoint1)
 	{
-		PriorityQueue_1_t4086539012 * L_0 = (PriorityQueue_1_t4086539012 *)il2cpp_codegen_object_new(PriorityQueue_1_t4086539012_il2cpp_TypeInfo_var);
-		PriorityQueue_1__ctor_m3123451016(L_0, /*hidden argument*/PriorityQueue_1__ctor_m3123451016_RuntimeMethod_var);
-		V_0 = L_0;
-		HashSet_1_t3407728483 * L_1 = (HashSet_1_t3407728483 *)il2cpp_codegen_object_new(HashSet_1_t3407728483_il2cpp_TypeInfo_var);
-		HashSet_1__ctor_m2147427044(L_1, /*hidden argument*/HashSet_1__ctor_m2147427044_RuntimeMethod_var);
-		V_1 = L_1;
-		Dictionary_2_t1901317315 * L_2 = (Dictionary_2_t1901317315 *)il2cpp_codegen_object_new(Dictionary_2_t1901317315_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m4227784223(L_2, /*hidden argument*/Dictionary_2__ctor_m4227784223_RuntimeMethod_var);
-		V_2 = L_2;
-		MapNode_t547811713 * L_3 = ___startPoint0;
-		PathScore_t1776606096 * L_4 = (PathScore_t1776606096 *)il2cpp_codegen_object_new(PathScore_t1776606096_il2cpp_TypeInfo_var);
-		PathScore__ctor_m1695810790(L_4, L_3, /*hidden argument*/NULL);
-		V_3 = L_4;
-		PathScore_t1776606096 * L_5 = V_3;
-		NullCheck(L_5);
-		L_5->set_cost_1((0.0f));
-		PathScore_t1776606096 * L_6 = V_3;
-		NullCheck(L_6);
-		L_6->set_h_2((0.0f));
-		PriorityQueue_1_t4086539012 * L_7 = V_0;
-		PathScore_t1776606096 * L_8 = V_3;
-		NullCheck(L_7);
-		PriorityQueue_1_Enqueue_m3152022116(L_7, L_8, /*hidden argument*/PriorityQueue_1_Enqueue_m3152022116_RuntimeMethod_var);
-		goto IL_0255;
+		return Mobile_MakeEmptyPathResult();
 	}
 
-IL_003b:
+	MobileAStarGuard guard;
+	MobileAStarScratch & sc = *guard.ptr;
+	int32_t goalIdx = Mobile_RunAStar(sc, ___startPoint0, ___endPoint1, true, ___isRabbit2, false, 0.0f);
+	if (goalIdx < 0)
 	{
-		PriorityQueue_1_t4086539012 * L_9 = V_0;
-		NullCheck(L_9);
-		PathScore_t1776606096 * L_10 = PriorityQueue_1_Dequeue_m3634933593(L_9, /*hidden argument*/PriorityQueue_1_Dequeue_m3634933593_RuntimeMethod_var);
-		V_3 = L_10;
-		PathScore_t1776606096 * L_11 = V_3;
-		NullCheck(L_11);
-		MapNode_t547811713 * L_12 = L_11->get_node_0();
-		MapNode_t547811713 * L_13 = ___endPoint1;
-		if ((!(((RuntimeObject*)(MapNode_t547811713 *)L_12) == ((RuntimeObject*)(MapNode_t547811713 *)L_13))))
-		{
-			goto IL_0122;
-		}
-	}
-	{
-		ArrayList_t2718874744 * L_14 = (ArrayList_t2718874744 *)il2cpp_codegen_object_new(ArrayList_t2718874744_il2cpp_TypeInfo_var);
-		ArrayList__ctor_m4254721275(L_14, /*hidden argument*/NULL);
-		V_4 = L_14;
-		ArrayList_t2718874744 * L_15 = (ArrayList_t2718874744 *)il2cpp_codegen_object_new(ArrayList_t2718874744_il2cpp_TypeInfo_var);
-		ArrayList__ctor_m4254721275(L_15, /*hidden argument*/NULL);
-		V_5 = L_15;
-		PathScore_t1776606096 * L_16 = V_3;
-		NullCheck(L_16);
-		MapNode_t547811713 * L_17 = L_16->get_node_0();
-		V_6 = L_17;
-		V_7 = (0.0f);
+		return Mobile_MakeEmptyPathResult();
 	}
 
-IL_006b:
+	float totalCost = 0.0f;
+	int32_t walk = goalIdx;
+	while (walk >= 0 && sc.nodes[walk].parentIdx >= 0)
 	{
-		V_8 = (SearchInfo_t1122556312 *)NULL;
-		Dictionary_2_t1901317315 * L_18 = V_2;
-		MapNode_t547811713 * L_19 = V_6;
-		NullCheck(L_18);
-		bool L_20 = Dictionary_2_TryGetValue_m2299527180(L_18, L_19, (&V_8), /*hidden argument*/Dictionary_2_TryGetValue_m2299527180_RuntimeMethod_var);
-		if (L_20)
-		{
-			goto IL_0082;
-		}
-	}
-	{
-		goto IL_00e0;
+		MapEdge_t1485107574 * via = sc.nodes[walk].viaEdge;
+		int32_t prevIdx = sc.nodes[walk].parentIdx;
+		MapNode_t547811713 * prevNode = sc.nodes[prevIdx].node;
+		sc.revEdges.push_back(via);
+		totalCost += via->get_cost_2();
+		int32_t dir = (via->get_node1_0() == prevNode) ? 0 : 1;
+		sc.revDirs.push_back(dir);
+		walk = prevIdx;
 	}
 
-IL_0082:
+	uint32_t n = (uint32_t)sc.revEdges.size();
+	MapEdgeU5BU5D_t2411936755* edgeArr = (MapEdgeU5BU5D_t2411936755*)SZArrayNew(MapEdgeU5BU5D_t2411936755_il2cpp_TypeInfo_var, n);
+	EdgeDirectionU5BU5D_t437724220* dirArr = (EdgeDirectionU5BU5D_t437724220*)SZArrayNew(EdgeDirectionU5BU5D_t437724220_il2cpp_TypeInfo_var, n);
+	for (uint32_t i = 0; i < n; ++i)
 	{
-		SearchInfo_t1122556312 * L_21 = V_8;
-		NullCheck(L_21);
-		MapEdge_t1485107574 * L_22 = L_21->get_edge_1();
-		V_9 = L_22;
-		MapEdge_t1485107574 * L_23 = V_9;
-		MapNode_t547811713 * L_24 = V_6;
-		NullCheck(L_23);
-		MapNode_t547811713 * L_25 = MapEdge_ConnectedNode_m4143753654(L_23, L_24, /*hidden argument*/NULL);
-		V_6 = L_25;
-		ArrayList_t2718874744 * L_26 = V_4;
-		MapEdge_t1485107574 * L_27 = V_9;
-		NullCheck(L_26);
-		VirtFuncInvoker1< int32_t, RuntimeObject * >::Invoke(30 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_26, L_27);
-		float L_28 = V_7;
-		MapEdge_t1485107574 * L_29 = V_9;
-		NullCheck(L_29);
-		float L_30 = L_29->get_cost_2();
-		V_7 = ((float)il2cpp_codegen_add((float)L_28, (float)L_30));
-		MapEdge_t1485107574 * L_31 = V_9;
-		NullCheck(L_31);
-		MapNode_t547811713 * L_32 = L_31->get_node1_0();
-		MapNode_t547811713 * L_33 = V_6;
-		if ((!(((RuntimeObject*)(MapNode_t547811713 *)L_32) == ((RuntimeObject*)(MapNode_t547811713 *)L_33))))
-		{
-			goto IL_00cd;
-		}
+		uint32_t rev = n - 1u - i;
+		edgeArr->SetAtUnchecked((il2cpp_array_size_t)i, sc.revEdges[rev]);
+		dirArr->SetAtUnchecked((il2cpp_array_size_t)i, sc.revDirs[rev]);
 	}
-	{
-		ArrayList_t2718874744 * L_34 = V_5;
-		int32_t L_35 = ((int32_t)0);
-		RuntimeObject * L_36 = Box(EdgeDirection_t2419741217_il2cpp_TypeInfo_var, &L_35);
-		NullCheck(L_34);
-		VirtFuncInvoker1< int32_t, RuntimeObject * >::Invoke(30 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_34, L_36);
-		goto IL_00db;
-	}
-
-IL_00cd:
-	{
-		ArrayList_t2718874744 * L_37 = V_5;
-		int32_t L_38 = ((int32_t)1);
-		RuntimeObject * L_39 = Box(EdgeDirection_t2419741217_il2cpp_TypeInfo_var, &L_38);
-		NullCheck(L_37);
-		VirtFuncInvoker1< int32_t, RuntimeObject * >::Invoke(30 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_37, L_39);
-	}
-
-IL_00db:
-	{
-		goto IL_006b;
-	}
-
-IL_00e0:
-	{
-		ArrayList_t2718874744 * L_40 = V_4;
-		NullCheck(L_40);
-		VirtActionInvoker0::Invoke(40 /* System.Void System.Collections.ArrayList::Reverse() */, L_40);
-		ArrayList_t2718874744 * L_41 = V_5;
-		NullCheck(L_41);
-		VirtActionInvoker0::Invoke(40 /* System.Void System.Collections.ArrayList::Reverse() */, L_41);
-		ArrayList_t2718874744 * L_42 = V_4;
-		RuntimeTypeHandle_t3027515415  L_43 = { reinterpret_cast<intptr_t> (MapEdge_t1485107574_0_0_0_var) };
-		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		Type_t * L_44 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_43, /*hidden argument*/NULL);
-		NullCheck(L_42);
-		RuntimeArray * L_45 = VirtFuncInvoker1< RuntimeArray *, Type_t * >::Invoke(49 /* System.Array System.Collections.ArrayList::ToArray(System.Type) */, L_42, L_44);
-		ArrayList_t2718874744 * L_46 = V_5;
-		RuntimeTypeHandle_t3027515415  L_47 = { reinterpret_cast<intptr_t> (EdgeDirection_t2419741217_0_0_0_var) };
-		Type_t * L_48 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_47, /*hidden argument*/NULL);
-		NullCheck(L_46);
-		RuntimeArray * L_49 = VirtFuncInvoker1< RuntimeArray *, Type_t * >::Invoke(49 /* System.Array System.Collections.ArrayList::ToArray(System.Type) */, L_46, L_48);
-		float L_50 = V_7;
-		PathResult_t1528013228 * L_51 = (PathResult_t1528013228 *)il2cpp_codegen_object_new(PathResult_t1528013228_il2cpp_TypeInfo_var);
-		PathResult__ctor_m2626499570(L_51, ((MapEdgeU5BU5D_t2411936755*)Castclass((RuntimeObject*)L_45, MapEdgeU5BU5D_t2411936755_il2cpp_TypeInfo_var)), ((EdgeDirectionU5BU5D_t437724220*)Castclass((RuntimeObject*)L_49, EdgeDirectionU5BU5D_t437724220_il2cpp_TypeInfo_var)), L_50, /*hidden argument*/NULL);
-		return L_51;
-	}
-
-IL_0122:
-	{
-		HashSet_1_t3407728483 * L_52 = V_1;
-		PathScore_t1776606096 * L_53 = V_3;
-		NullCheck(L_53);
-		MapNode_t547811713 * L_54 = L_53->get_node_0();
-		NullCheck(L_52);
-		HashSet_1_Add_m2286352309(L_52, L_54, /*hidden argument*/HashSet_1_Add_m2286352309_RuntimeMethod_var);
-		PathScore_t1776606096 * L_55 = V_3;
-		NullCheck(L_55);
-		MapNode_t547811713 * L_56 = L_55->get_node_0();
-		NullCheck(L_56);
-		MapEdgeU5BU5D_t2411936755* L_57 = MapNode_GetEdges_m1606768979(L_56, /*hidden argument*/NULL);
-		V_10 = L_57;
-		MapEdgeU5BU5D_t2411936755* L_58 = V_10;
-		V_12 = L_58;
-		V_13 = 0;
-		goto IL_024a;
-	}
-
-IL_0148:
-	{
-		MapEdgeU5BU5D_t2411936755* L_59 = V_12;
-		int32_t L_60 = V_13;
-		NullCheck(L_59);
-		int32_t L_61 = L_60;
-		MapEdge_t1485107574 * L_62 = (L_59)->GetAt(static_cast<il2cpp_array_size_t>(L_61));
-		V_11 = L_62;
-		MapEdge_t1485107574 * L_63 = V_11;
-		PathScore_t1776606096 * L_64 = V_3;
-		NullCheck(L_64);
-		MapNode_t547811713 * L_65 = L_64->get_node_0();
-		NullCheck(L_63);
-		MapNode_t547811713 * L_66 = MapEdge_ConnectedNode_m4143753654(L_63, L_65, /*hidden argument*/NULL);
-		V_14 = L_66;
-		MapNode_t547811713 * L_67 = V_14;
-		if (!L_67)
-		{
-			goto IL_0194;
-		}
-	}
-	{
-		MapNode_t547811713 * L_68 = V_14;
-		NullCheck(L_68);
-		bool L_69 = MapNode_get_activate_m2385732963(L_68, /*hidden argument*/NULL);
-		if (!L_69)
-		{
-			goto IL_0194;
-		}
-	}
-	{
-		HashSet_1_t3407728483 * L_70 = V_1;
-		MapNode_t547811713 * L_71 = V_14;
-		NullCheck(L_70);
-		bool L_72 = HashSet_1_Contains_m949324721(L_70, L_71, /*hidden argument*/HashSet_1_Contains_m949324721_RuntimeMethod_var);
-		if (L_72)
-		{
-			goto IL_0194;
-		}
-	}
-	{
-		bool L_73 = ___isRabbit2;
-		if (!L_73)
-		{
-			goto IL_0199;
-		}
-	}
-	{
-		PathScore_t1776606096 * L_74 = V_3;
-		NullCheck(L_74);
-		MapNode_t547811713 * L_75 = L_74->get_node_0();
-		NullCheck(L_75);
-		bool L_76 = L_75->get_rabbitUnpassable_14();
-		if (!L_76)
-		{
-			goto IL_0199;
-		}
-	}
-
-IL_0194:
-	{
-		goto IL_0244;
-	}
-
-IL_0199:
-	{
-		MapNode_t547811713 * L_77 = V_14;
-		PathScore_t1776606096 * L_78 = (PathScore_t1776606096 *)il2cpp_codegen_object_new(PathScore_t1776606096_il2cpp_TypeInfo_var);
-		PathScore__ctor_m1695810790(L_78, L_77, /*hidden argument*/NULL);
-		V_15 = L_78;
-		PathScore_t1776606096 * L_79 = V_15;
-		PathScore_t1776606096 * L_80 = V_3;
-		NullCheck(L_80);
-		float L_81 = L_80->get_cost_1();
-		MapEdge_t1485107574 * L_82 = V_11;
-		NullCheck(L_82);
-		float L_83 = L_82->get_cost_2();
-		NullCheck(L_79);
-		L_79->set_cost_1(((float)il2cpp_codegen_add((float)L_81, (float)L_83)));
-		PathScore_t1776606096 * L_84 = V_15;
-		MapNode_t547811713 * L_85 = V_14;
-		NullCheck(L_85);
-		Vector3_t3722313464  L_86 = MapNode_GetPosition_m1703641353(L_85, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector2_t2156229523_il2cpp_TypeInfo_var);
-		Vector2_t2156229523  L_87 = Vector2_op_Implicit_m4260192859(NULL /*static, unused*/, L_86, /*hidden argument*/NULL);
-		MapNode_t547811713 * L_88 = ___endPoint1;
-		NullCheck(L_88);
-		Vector3_t3722313464  L_89 = MapNode_GetPosition_m1703641353(L_88, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_90 = Vector2_op_Implicit_m4260192859(NULL /*static, unused*/, L_89, /*hidden argument*/NULL);
-		float L_91 = GraphAstar_ComputeHeuristic_m1020734164(NULL /*static, unused*/, L_87, L_90, /*hidden argument*/NULL);
-		NullCheck(L_84);
-		L_84->set_h_2(L_91);
-		V_16 = (SearchInfo_t1122556312 *)NULL;
-		Dictionary_2_t1901317315 * L_92 = V_2;
-		MapNode_t547811713 * L_93 = V_14;
-		NullCheck(L_92);
-		bool L_94 = Dictionary_2_TryGetValue_m2299527180(L_92, L_93, (&V_16), /*hidden argument*/Dictionary_2_TryGetValue_m2299527180_RuntimeMethod_var);
-		V_17 = L_94;
-		bool L_95 = V_17;
-		if (!L_95)
-		{
-			goto IL_0203;
-		}
-	}
-	{
-		SearchInfo_t1122556312 * L_96 = V_16;
-		NullCheck(L_96);
-		float L_97 = L_96->get_cost_0();
-		PathScore_t1776606096 * L_98 = V_15;
-		NullCheck(L_98);
-		float L_99 = L_98->get_cost_1();
-		if ((!(((float)L_97) > ((float)L_99))))
-		{
-			goto IL_0244;
-		}
-	}
-
-IL_0203:
-	{
-		PriorityQueue_1_t4086539012 * L_100 = V_0;
-		PathScore_t1776606096 * L_101 = V_15;
-		NullCheck(L_100);
-		PriorityQueue_1_Enqueue_m3152022116(L_100, L_101, /*hidden argument*/PriorityQueue_1_Enqueue_m3152022116_RuntimeMethod_var);
-		bool L_102 = V_17;
-		if (L_102)
-		{
-			goto IL_022d;
-		}
-	}
-	{
-		Dictionary_2_t1901317315 * L_103 = V_2;
-		MapNode_t547811713 * L_104 = V_14;
-		PathScore_t1776606096 * L_105 = V_15;
-		NullCheck(L_105);
-		float L_106 = L_105->get_cost_1();
-		MapEdge_t1485107574 * L_107 = V_11;
-		SearchInfo_t1122556312 * L_108 = (SearchInfo_t1122556312 *)il2cpp_codegen_object_new(SearchInfo_t1122556312_il2cpp_TypeInfo_var);
-		SearchInfo__ctor_m3507290884(L_108, L_106, L_107, /*hidden argument*/NULL);
-		NullCheck(L_103);
-		Dictionary_2_Add_m2200716568(L_103, L_104, L_108, /*hidden argument*/Dictionary_2_Add_m2200716568_RuntimeMethod_var);
-		goto IL_0244;
-	}
-
-IL_022d:
-	{
-		SearchInfo_t1122556312 * L_109 = V_16;
-		PathScore_t1776606096 * L_110 = V_15;
-		NullCheck(L_110);
-		float L_111 = L_110->get_cost_1();
-		NullCheck(L_109);
-		L_109->set_cost_0(L_111);
-		SearchInfo_t1122556312 * L_112 = V_16;
-		MapEdge_t1485107574 * L_113 = V_11;
-		NullCheck(L_112);
-		L_112->set_edge_1(L_113);
-	}
-
-IL_0244:
-	{
-		int32_t L_114 = V_13;
-		V_13 = ((int32_t)il2cpp_codegen_add((int32_t)L_114, (int32_t)1));
-	}
-
-IL_024a:
-	{
-		int32_t L_115 = V_13;
-		MapEdgeU5BU5D_t2411936755* L_116 = V_12;
-		NullCheck(L_116);
-		if ((((int32_t)L_115) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_116)->max_length)))))))
-		{
-			goto IL_0148;
-		}
-	}
-
-IL_0255:
-	{
-		PriorityQueue_1_t4086539012 * L_117 = V_0;
-		NullCheck(L_117);
-		int32_t L_118 = PriorityQueue_1_Count_m4012498663(L_117, /*hidden argument*/PriorityQueue_1_Count_m4012498663_RuntimeMethod_var);
-		if ((((int32_t)L_118) > ((int32_t)0)))
-		{
-			goto IL_003b;
-		}
-	}
-	{
-		PathResult_t1528013228 * L_119 = (PathResult_t1528013228 *)il2cpp_codegen_object_new(PathResult_t1528013228_il2cpp_TypeInfo_var);
-		PathResult__ctor_m2626499570(L_119, ((MapEdgeU5BU5D_t2411936755*)SZArrayNew(MapEdgeU5BU5D_t2411936755_il2cpp_TypeInfo_var, (uint32_t)0)), ((EdgeDirectionU5BU5D_t437724220*)SZArrayNew(EdgeDirectionU5BU5D_t437724220_il2cpp_TypeInfo_var, (uint32_t)0)), (0.0f), /*hidden argument*/NULL);
-		return L_119;
-	}
+	PathResult_t1528013228 * res = (PathResult_t1528013228 *)il2cpp_codegen_object_new(PathResult_t1528013228_il2cpp_TypeInfo_var);
+	PathResult__ctor_m2626499570(res, edgeArr, dirArr, totalCost, /*hidden argument*/NULL);
+	return res;
 }
+
 // System.Single GraphAstar::Distance(MapNode,MapNode,System.Single)
 extern "C" IL2CPP_METHOD_ATTR float GraphAstar_Distance_m1800745981 (RuntimeObject * __this /* static, unused */, MapNode_t547811713 * ___startPoint0, MapNode_t547811713 * ___endPoint1, float ___limit2, const RuntimeMethod* method)
 {
@@ -73479,303 +73327,23 @@ extern "C" IL2CPP_METHOD_ATTR float GraphAstar_Distance_m1800745981 (RuntimeObje
 		il2cpp_codegen_initialize_method (GraphAstar_Distance_m1800745981_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	PriorityQueue_1_t4086539012 * V_0 = NULL;
-	HashSet_1_t3407728483 * V_1 = NULL;
-	Dictionary_2_t1901317315 * V_2 = NULL;
-	PathScore_t1776606096 * V_3 = NULL;
-	float V_4 = 0.0f;
-	MapNode_t547811713 * V_5 = NULL;
-	SearchInfo_t1122556312 * V_6 = NULL;
-	MapEdge_t1485107574 * V_7 = NULL;
-	MapEdgeU5BU5D_t2411936755* V_8 = NULL;
-	MapEdge_t1485107574 * V_9 = NULL;
-	MapEdgeU5BU5D_t2411936755* V_10 = NULL;
-	int32_t V_11 = 0;
-	MapNode_t547811713 * V_12 = NULL;
-	PathScore_t1776606096 * V_13 = NULL;
-	SearchInfo_t1122556312 * V_14 = NULL;
-	bool V_15 = false;
-	{
-		PriorityQueue_1_t4086539012 * L_0 = (PriorityQueue_1_t4086539012 *)il2cpp_codegen_object_new(PriorityQueue_1_t4086539012_il2cpp_TypeInfo_var);
-		PriorityQueue_1__ctor_m3123451016(L_0, /*hidden argument*/PriorityQueue_1__ctor_m3123451016_RuntimeMethod_var);
-		V_0 = L_0;
-		HashSet_1_t3407728483 * L_1 = (HashSet_1_t3407728483 *)il2cpp_codegen_object_new(HashSet_1_t3407728483_il2cpp_TypeInfo_var);
-		HashSet_1__ctor_m2147427044(L_1, /*hidden argument*/HashSet_1__ctor_m2147427044_RuntimeMethod_var);
-		V_1 = L_1;
-		Dictionary_2_t1901317315 * L_2 = (Dictionary_2_t1901317315 *)il2cpp_codegen_object_new(Dictionary_2_t1901317315_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m4227784223(L_2, /*hidden argument*/Dictionary_2__ctor_m4227784223_RuntimeMethod_var);
-		V_2 = L_2;
-		MapNode_t547811713 * L_3 = ___startPoint0;
-		PathScore_t1776606096 * L_4 = (PathScore_t1776606096 *)il2cpp_codegen_object_new(PathScore_t1776606096_il2cpp_TypeInfo_var);
-		PathScore__ctor_m1695810790(L_4, L_3, /*hidden argument*/NULL);
-		V_3 = L_4;
-		PathScore_t1776606096 * L_5 = V_3;
-		NullCheck(L_5);
-		L_5->set_cost_1((0.0f));
-		PathScore_t1776606096 * L_6 = V_3;
-		NullCheck(L_6);
-		L_6->set_h_2((0.0f));
-		PriorityQueue_1_t4086539012 * L_7 = V_0;
-		PathScore_t1776606096 * L_8 = V_3;
-		NullCheck(L_7);
-		PriorityQueue_1_Enqueue_m3152022116(L_7, L_8, /*hidden argument*/PriorityQueue_1_Enqueue_m3152022116_RuntimeMethod_var);
-		goto IL_01ba;
-	}
-
-IL_003b:
-	{
-		PriorityQueue_1_t4086539012 * L_9 = V_0;
-		NullCheck(L_9);
-		PathScore_t1776606096 * L_10 = PriorityQueue_1_Dequeue_m3634933593(L_9, /*hidden argument*/PriorityQueue_1_Dequeue_m3634933593_RuntimeMethod_var);
-		V_3 = L_10;
-		PathScore_t1776606096 * L_11 = V_3;
-		NullCheck(L_11);
-		MapNode_t547811713 * L_12 = L_11->get_node_0();
-		MapNode_t547811713 * L_13 = ___endPoint1;
-		if ((!(((RuntimeObject*)(MapNode_t547811713 *)L_12) == ((RuntimeObject*)(MapNode_t547811713 *)L_13))))
-		{
-			goto IL_009c;
-		}
-	}
-	{
-		V_4 = (0.0f);
-		PathScore_t1776606096 * L_14 = V_3;
-		NullCheck(L_14);
-		MapNode_t547811713 * L_15 = L_14->get_node_0();
-		V_5 = L_15;
-	}
-
-IL_005d:
-	{
-		V_6 = (SearchInfo_t1122556312 *)NULL;
-		Dictionary_2_t1901317315 * L_16 = V_2;
-		MapNode_t547811713 * L_17 = V_5;
-		NullCheck(L_16);
-		bool L_18 = Dictionary_2_TryGetValue_m2299527180(L_16, L_17, (&V_6), /*hidden argument*/Dictionary_2_TryGetValue_m2299527180_RuntimeMethod_var);
-		if (L_18)
-		{
-			goto IL_0074;
-		}
-	}
-	{
-		goto IL_0099;
-	}
-
-IL_0074:
-	{
-		SearchInfo_t1122556312 * L_19 = V_6;
-		NullCheck(L_19);
-		MapEdge_t1485107574 * L_20 = L_19->get_edge_1();
-		V_7 = L_20;
-		MapEdge_t1485107574 * L_21 = V_7;
-		MapNode_t547811713 * L_22 = V_5;
-		NullCheck(L_21);
-		MapNode_t547811713 * L_23 = MapEdge_ConnectedNode_m4143753654(L_21, L_22, /*hidden argument*/NULL);
-		V_5 = L_23;
-		float L_24 = V_4;
-		MapEdge_t1485107574 * L_25 = V_7;
-		NullCheck(L_25);
-		float L_26 = L_25->get_cost_2();
-		V_4 = ((float)il2cpp_codegen_add((float)L_24, (float)L_26));
-		goto IL_005d;
-	}
-
-IL_0099:
-	{
-		float L_27 = V_4;
-		return L_27;
-	}
-
-IL_009c:
-	{
-		HashSet_1_t3407728483 * L_28 = V_1;
-		PathScore_t1776606096 * L_29 = V_3;
-		NullCheck(L_29);
-		MapNode_t547811713 * L_30 = L_29->get_node_0();
-		NullCheck(L_28);
-		HashSet_1_Add_m2286352309(L_28, L_30, /*hidden argument*/HashSet_1_Add_m2286352309_RuntimeMethod_var);
-		PathScore_t1776606096 * L_31 = V_3;
-		NullCheck(L_31);
-		MapNode_t547811713 * L_32 = L_31->get_node_0();
-		NullCheck(L_32);
-		MapEdgeU5BU5D_t2411936755* L_33 = MapNode_GetEdges_m1606768979(L_32, /*hidden argument*/NULL);
-		V_8 = L_33;
-		MapEdgeU5BU5D_t2411936755* L_34 = V_8;
-		V_10 = L_34;
-		V_11 = 0;
-		goto IL_01af;
-	}
-
-IL_00c2:
-	{
-		MapEdgeU5BU5D_t2411936755* L_35 = V_10;
-		int32_t L_36 = V_11;
-		NullCheck(L_35);
-		int32_t L_37 = L_36;
-		MapEdge_t1485107574 * L_38 = (L_35)->GetAt(static_cast<il2cpp_array_size_t>(L_37));
-		V_9 = L_38;
-		MapEdge_t1485107574 * L_39 = V_9;
-		PathScore_t1776606096 * L_40 = V_3;
-		NullCheck(L_40);
-		MapNode_t547811713 * L_41 = L_40->get_node_0();
-		NullCheck(L_39);
-		MapNode_t547811713 * L_42 = MapEdge_ConnectedNode_m4143753654(L_39, L_41, /*hidden argument*/NULL);
-		V_12 = L_42;
-		MapNode_t547811713 * L_43 = V_12;
-		if (!L_43)
-		{
-			goto IL_00ec;
-		}
-	}
-	{
-		HashSet_1_t3407728483 * L_44 = V_1;
-		MapNode_t547811713 * L_45 = V_12;
-		NullCheck(L_44);
-		bool L_46 = HashSet_1_Contains_m949324721(L_44, L_45, /*hidden argument*/HashSet_1_Contains_m949324721_RuntimeMethod_var);
-		if (!L_46)
-		{
-			goto IL_00f1;
-		}
-	}
-
-IL_00ec:
-	{
-		goto IL_01a9;
-	}
-
-IL_00f1:
-	{
-		MapNode_t547811713 * L_47 = V_12;
-		PathScore_t1776606096 * L_48 = (PathScore_t1776606096 *)il2cpp_codegen_object_new(PathScore_t1776606096_il2cpp_TypeInfo_var);
-		PathScore__ctor_m1695810790(L_48, L_47, /*hidden argument*/NULL);
-		V_13 = L_48;
-		PathScore_t1776606096 * L_49 = V_13;
-		PathScore_t1776606096 * L_50 = V_3;
-		NullCheck(L_50);
-		float L_51 = L_50->get_cost_1();
-		MapEdge_t1485107574 * L_52 = V_9;
-		NullCheck(L_52);
-		float L_53 = L_52->get_cost_2();
-		NullCheck(L_49);
-		L_49->set_cost_1(((float)il2cpp_codegen_add((float)L_51, (float)L_53)));
-		PathScore_t1776606096 * L_54 = V_13;
-		MapNode_t547811713 * L_55 = V_12;
-		NullCheck(L_55);
-		Vector3_t3722313464  L_56 = MapNode_GetPosition_m1703641353(L_55, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector2_t2156229523_il2cpp_TypeInfo_var);
-		Vector2_t2156229523  L_57 = Vector2_op_Implicit_m4260192859(NULL /*static, unused*/, L_56, /*hidden argument*/NULL);
-		MapNode_t547811713 * L_58 = ___endPoint1;
-		NullCheck(L_58);
-		Vector3_t3722313464  L_59 = MapNode_GetPosition_m1703641353(L_58, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_60 = Vector2_op_Implicit_m4260192859(NULL /*static, unused*/, L_59, /*hidden argument*/NULL);
-		float L_61 = GraphAstar_ComputeHeuristic_m1020734164(NULL /*static, unused*/, L_57, L_60, /*hidden argument*/NULL);
-		NullCheck(L_54);
-		L_54->set_h_2(L_61);
-		V_14 = (SearchInfo_t1122556312 *)NULL;
-		Dictionary_2_t1901317315 * L_62 = V_2;
-		MapNode_t547811713 * L_63 = V_12;
-		NullCheck(L_62);
-		bool L_64 = Dictionary_2_TryGetValue_m2299527180(L_62, L_63, (&V_14), /*hidden argument*/Dictionary_2_TryGetValue_m2299527180_RuntimeMethod_var);
-		V_15 = L_64;
-		bool L_65 = V_15;
-		if (!L_65)
-		{
-			goto IL_015b;
-		}
-	}
-	{
-		SearchInfo_t1122556312 * L_66 = V_14;
-		NullCheck(L_66);
-		float L_67 = L_66->get_cost_0();
-		PathScore_t1776606096 * L_68 = V_13;
-		NullCheck(L_68);
-		float L_69 = L_68->get_cost_1();
-		if ((!(((float)L_67) > ((float)L_69))))
-		{
-			goto IL_01a9;
-		}
-	}
-
-IL_015b:
-	{
-		PathScore_t1776606096 * L_70 = V_13;
-		NullCheck(L_70);
-		float L_71 = L_70->get_cost_1();
-		float L_72 = ___limit2;
-		if ((((float)L_71) > ((float)L_72)))
-		{
-			goto IL_01a9;
-		}
-	}
-	{
-		PriorityQueue_1_t4086539012 * L_73 = V_0;
-		PathScore_t1776606096 * L_74 = V_13;
-		NullCheck(L_73);
-		PriorityQueue_1_Enqueue_m3152022116(L_73, L_74, /*hidden argument*/PriorityQueue_1_Enqueue_m3152022116_RuntimeMethod_var);
-		bool L_75 = V_15;
-		if (L_75)
-		{
-			goto IL_0192;
-		}
-	}
-	{
-		Dictionary_2_t1901317315 * L_76 = V_2;
-		MapNode_t547811713 * L_77 = V_12;
-		PathScore_t1776606096 * L_78 = V_13;
-		NullCheck(L_78);
-		float L_79 = L_78->get_cost_1();
-		MapEdge_t1485107574 * L_80 = V_9;
-		SearchInfo_t1122556312 * L_81 = (SearchInfo_t1122556312 *)il2cpp_codegen_object_new(SearchInfo_t1122556312_il2cpp_TypeInfo_var);
-		SearchInfo__ctor_m3507290884(L_81, L_79, L_80, /*hidden argument*/NULL);
-		NullCheck(L_76);
-		Dictionary_2_Add_m2200716568(L_76, L_77, L_81, /*hidden argument*/Dictionary_2_Add_m2200716568_RuntimeMethod_var);
-		goto IL_01a9;
-	}
-
-IL_0192:
-	{
-		SearchInfo_t1122556312 * L_82 = V_14;
-		PathScore_t1776606096 * L_83 = V_13;
-		NullCheck(L_83);
-		float L_84 = L_83->get_cost_1();
-		NullCheck(L_82);
-		L_82->set_cost_0(L_84);
-		SearchInfo_t1122556312 * L_85 = V_14;
-		MapEdge_t1485107574 * L_86 = V_9;
-		NullCheck(L_85);
-		L_85->set_edge_1(L_86);
-	}
-
-IL_01a9:
-	{
-		int32_t L_87 = V_11;
-		V_11 = ((int32_t)il2cpp_codegen_add((int32_t)L_87, (int32_t)1));
-	}
-
-IL_01af:
-	{
-		int32_t L_88 = V_11;
-		MapEdgeU5BU5D_t2411936755* L_89 = V_10;
-		NullCheck(L_89);
-		if ((((int32_t)L_88) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_89)->max_length)))))))
-		{
-			goto IL_00c2;
-		}
-	}
-
-IL_01ba:
-	{
-		PriorityQueue_1_t4086539012 * L_90 = V_0;
-		NullCheck(L_90);
-		int32_t L_91 = PriorityQueue_1_Count_m4012498663(L_90, /*hidden argument*/PriorityQueue_1_Count_m4012498663_RuntimeMethod_var);
-		if ((((int32_t)L_91) > ((int32_t)0)))
-		{
-			goto IL_003b;
-		}
-	}
+	if (!___startPoint0 || !___endPoint1)
 	{
 		return (-1.0f);
 	}
+	if (___startPoint0 == ___endPoint1)
+	{
+		return (0.0f);
+	}
+
+	MobileAStarGuard guard;
+	MobileAStarScratch & sc = *guard.ptr;
+	int32_t goalIdx = Mobile_RunAStar(sc, ___startPoint0, ___endPoint1, false, false, true, ___limit2);
+	if (goalIdx < 0)
+	{
+		return (-1.0f);
+	}
+	return sc.nodes[goalIdx].g;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

@@ -48165,6 +48165,13 @@ IL_002d:
 
 IL_0093:
 	{
+		SoundEffectPlayer_t3998987779 * sc = __this->get__soundCasting_17();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, sc, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
+		{
+			SoundEffectPlayer_Stop_m358299177(sc, /*hidden argument*/NULL);
+			__this->set__soundCasting_17((SoundEffectPlayer_t3998987779 *)NULL);
+		}
 		return;
 	}
 }

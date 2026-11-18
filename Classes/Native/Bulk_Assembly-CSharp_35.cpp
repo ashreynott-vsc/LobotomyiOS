@@ -69919,6 +69919,11 @@ static bool Mobile_TryRecyclePooledSfx(SoundEffectPlayer_t3998987779 * p)
 	GameObject_t1113636619 * go = Component_get_gameObject_m442555142((Component_t1923634451 *)p, NULL);
 	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL))
 	{
+		Transform_t3600365921 * tr = GameObject_get_transform_m1369836730(go, NULL);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+		{
+			Transform_SetParent_m381167889(tr, (Transform_t3600365921 *)NULL, NULL);
+		}
 		GameObject_SetActive_m796801857(go, (bool)0, NULL);
 	}
 	if (s_sfxInFreePtrs.find(ptr) == s_sfxInFreePtrs.end() && s_sfxFreePoolHandles.size() < 48)
@@ -70279,10 +70284,7 @@ IL_0024:
 		String_t* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
 		V_3 = L_9;
 		String_t* L_10 = V_3;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_11 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_10, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_12 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_11, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_6 = L_12;
+		V_6 = Mobile_LoadCachedSfxClip(L_10, Mobile_SfxStringToUtf8(L_10));
 		AudioClip_t3680889665 * L_13 = V_6;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		bool L_14 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_13, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
@@ -70438,10 +70440,7 @@ extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_
 	memset(&V_5, 0, sizeof(V_5));
 	{
 		String_t* L_0 = ___filename0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_0, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_2 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_0 = L_2;
+		V_0 = Mobile_LoadCachedSfxClip(L_0, Mobile_SfxStringToUtf8(L_0));
 		AudioClip_t3680889665 * L_3 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
@@ -70538,10 +70537,7 @@ extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_
 	memset(&V_5, 0, sizeof(V_5));
 	{
 		String_t* L_0 = ___filename0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_0, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_2 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_0 = L_2;
+		V_0 = Mobile_LoadCachedSfxClip(L_0, Mobile_SfxStringToUtf8(L_0));
 		AudioClip_t3680889665 * L_3 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);

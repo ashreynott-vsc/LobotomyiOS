@@ -46723,6 +46723,73 @@ IL_0065:
 		return;
 	}
 }
+
+extern "C" IL2CPP_METHOD_ATTR void RawImage_set_texture_m415027901 (RawImage_t3182918964 * __this, Texture_t3661962703 * ___value0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void RawImage_set_uvRect_m529943894 (RawImage_t3182918964 * __this, Rect_t2360479859  ___value0, const RuntimeMethod* method);
+
+extern "C" RectTransform_t3704657025 * Mobile_AddRectTransform(GameObject_t1113636619 * go)
+{
+	if (!go) return NULL;
+	static bool s_metaRt = false;
+	if (!s_metaRt)
+	{
+		il2cpp_codegen_initialize_method(Dropdown_CreateBlocker_m3770415402_MetadataUsageId);
+		s_metaRt = true;
+	}
+	return GameObject_AddComponent_TisRectTransform_t3704657025_m3669823029(go, GameObject_AddComponent_TisRectTransform_t3704657025_m3669823029_RuntimeMethod_var);
+}
+
+extern "C" Canvas_t3310196443 * Mobile_AddOverlayCanvas(GameObject_t1113636619 * go, int32_t sortingOrder)
+{
+	if (!go) return NULL;
+	static bool s_metaCanvas = false;
+	if (!s_metaCanvas)
+	{
+		il2cpp_codegen_initialize_method(Dropdown_CreateBlocker_m3770415402_MetadataUsageId);
+		s_metaCanvas = true;
+	}
+	Canvas_t3310196443 * cvs = GameObject_AddComponent_TisCanvas_t3310196443_m284883347(go, GameObject_AddComponent_TisCanvas_t3310196443_m284883347_RuntimeMethod_var);
+	if (cvs)
+	{
+		Canvas_set_overrideSorting_m4088794420(cvs, (bool)1, NULL);
+		Canvas_set_sortingOrder_m609532562(cvs, sortingOrder, NULL);
+	}
+	return cvs;
+}
+
+extern "C" RawImage_t3182918964 * Mobile_AddRawImage(GameObject_t1113636619 * go, Texture_t3661962703 * tex)
+{
+	if (!go) return NULL;
+	static bool s_metaRaw = false;
+	if (!s_metaRaw)
+	{
+		il2cpp_codegen_initialize_method(DefaultControls_CreateRawImage_m4219873755_MetadataUsageId);
+		s_metaRaw = true;
+	}
+	RawImage_t3182918964 * img = GameObject_AddComponent_TisRawImage_t3182918964_m629883703(go, GameObject_AddComponent_TisRawImage_t3182918964_m629883703_RuntimeMethod_var);
+	if (img)
+	{
+		VirtActionInvoker1< bool >::Invoke(25 /* System.Void UnityEngine.UI.Graphic::set_raycastTarget(System.Boolean) */, img, (bool)0);
+		if (tex)
+		{
+			RawImage_set_texture_m415027901(img, tex, NULL);
+		}
+	}
+	return img;
+}
+
+extern "C" void Mobile_SetRawImageTexture(RawImage_t3182918964 * img, Texture_t3661962703 * tex)
+{
+	if (!img || !tex) return;
+	RawImage_set_texture_m415027901(img, tex, NULL);
+}
+
+extern "C" void Mobile_SetRawImageState(RawImage_t3182918964 * img, Color_t2555686324 col, Rect_t2360479859 uv)
+{
+	if (!img) return;
+	VirtActionInvoker1< Color_t2555686324 >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, img, col);
+	RawImage_set_uvRect_m529943894(img, uv, NULL);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

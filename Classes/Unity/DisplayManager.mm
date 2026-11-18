@@ -8,6 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <objc/message.h>
 
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
@@ -118,6 +119,15 @@ static DisplayManager* _DisplayManager = nil;
             UnityDisplaySurfaceMTL* surf = new UnityDisplaySurfaceMTL();
             surf->writeCount    = 0;
             surf->layer         = (CAMetalLayer*)_view.layer;
+            SEL hudSetSel = NSSelectorFromString(@"setDeveloperHUDProperties:");
+            if (surf->layer && [surf->layer respondsToSelector:hudSetSel])
+            {
+                BOOL wantHud = [[NSUserDefaults standardUserDefaults] boolForKey:@"LobCorp_MetalHudActive"];
+                NSDictionary *hudProps = wantHud
+                    ? @{@"mode": @"default"}
+                    : @{@"mode": @"disabled", @"logging": @"disabled"};
+                ((void (*)(id, SEL, NSDictionary *))objc_msgSend)(surf->layer, hudSetSel, hudProps);
+            }
             surf->device        = UnityGetMetalDevice();
             surf->commandQueue  = [surf->device newCommandQueue];
             surf->drawableCommandQueue = [surf->device newCommandQueue];

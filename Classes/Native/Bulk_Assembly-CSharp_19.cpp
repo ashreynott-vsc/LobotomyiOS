@@ -69141,6 +69141,7 @@ IL_00da:
 	}
 }
 // System.Void ExplodeGutEffect::FixedUpdate()
+extern "C" bool Mobile_IsInMainCameraView(float wx, float wy, int32_t layer);
 extern "C" IL2CPP_METHOD_ATTR void ExplodeGutEffect_FixedUpdate_m3553859417 (ExplodeGutEffect_t3239260751 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69196,10 +69197,24 @@ IL_0021:
 	}
 	{
 		ExplodeGutEffect_SetUsingState_m2875109035(__this, (bool)0, /*hidden argument*/NULL);
+		return;
 	}
 
 IL_003a:
 	{
+		if (!__this->get_isUsing_9())
+		{
+			return;
+		}
+		Transform_t3600365921 * efTr = Component_get_transform_m3162698980(__this, NULL);
+		if (efTr)
+		{
+			Vector3_t3722313464 efPos = Transform_get_position_m36019626(efTr, NULL);
+			if (!Mobile_IsInMainCameraView(efPos.get_x_1(), efPos.get_y_2(), 0))
+			{
+				return;
+			}
+		}
 		List_1_t1045686654 * L_6 = __this->get_particles_14();
 		NullCheck(L_6);
 		Enumerator_t2934930531  L_7 = List_1_GetEnumerator_m1112568113(L_6, /*hidden argument*/List_1_GetEnumerator_m1112568113_RuntimeMethod_var);
@@ -70583,6 +70598,15 @@ extern "C" IL2CPP_METHOD_ATTR bool ExplodeGutManager_MakeEffects_m362525322 (Exp
 	int32_t V_1 = 0;
 	ExplodeGutEffect_t3239260751 * V_2 = NULL;
 	{
+		if (!Mobile_IsInMainCameraView((&___position0)->get_x_1(), (&___position0)->get_y_2(), 0))
+		{
+			if (___script1 != NULL)
+			{
+				*((RuntimeObject **)(___script1)) = (RuntimeObject *)NULL;
+				Il2CppCodeGenWriteBarrier((RuntimeObject **)(___script1), (RuntimeObject *)NULL);
+			}
+			return (bool)0;
+		}
 		V_0 = 0;
 		int32_t L_0 = ExplodeGutManager_get_effectsMax_m622746973(__this, /*hidden argument*/NULL);
 		V_1 = L_0;
