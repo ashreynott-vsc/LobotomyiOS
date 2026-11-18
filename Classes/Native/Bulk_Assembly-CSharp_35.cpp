@@ -69777,9 +69777,6 @@ extern const RuntimeMethod* GameObject_GetComponent_TisSoundEffectPlayer_t399898
 extern const RuntimeMethod* GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var;
 
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3937257545 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
-#define Resources_Load_TisAudioClip_t3680889665_m1361768364(__this /* static, unused */, p0, method) (( AudioClip_t3680889665 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))Resources_Load_TisRuntimeObject_m597869152_gshared)(__this /* static, unused */, p0, method)
-#define GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(__this, method) (( SoundEffectPlayer_t3998987779 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m1218312437_gshared)(__this, method)
-#define GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(__this, method) (( AudioSource_t3935305588 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m1218312437_gshared)(__this, method)
 extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Prefab_LoadPrefab_m3971740011 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method);
 extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 extern "C" IL2CPP_METHOD_ATTR Camera_t4157153871 * Camera_get_main_m3643453163 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
