@@ -500,8 +500,20 @@ static UILabel* CreateSectionLabel(NSString *text) {
         if (vc) rootView = vc.view;
     }
     if (!rootView) {
-        UIWindow *keyWin = [UIApplication sharedApplication].keyWindow;
-        rootView = keyWin.rootViewController.view;
+        if (@available(iOS 13.0, *)) {
+            for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+                if (![scene isKindOfClass:[UIWindowScene class]]) continue;
+                UIWindowScene *ws = (UIWindowScene *)scene;
+                for (UIWindow *win in ws.windows) {
+                    if (win.isKeyWindow && win.rootViewController.view) {
+                        return win.rootViewController.view;
+                    }
+                }
+                if (!rootView && ws.windows.firstObject.rootViewController.view) {
+                    rootView = ws.windows.firstObject.rootViewController.view;
+                }
+            }
+        }
     }
     return rootView;
 }
@@ -1057,9 +1069,9 @@ static UILabel* CreateSectionLabel(NSString *text) {
     MobileEgoItem *item = self.filteredEgoItems[indexPath.row];
     [cell configureWithItem:item];
 
-    __weak typeof(self) weakSelf = self;
+    __weak LiquidGlassDebugMenuController *weakSelf = self;
     cell.onForgeAction = ^(NSInteger mode) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
+        __strong LiquidGlassDebugMenuController *strongSelf = weakSelf;
         if (!strongSelf) return;
         if (mode == 0 && item.wpnId > 0) {
             [strongSelf sendUnityCommand:[NSString stringWithFormat:@"forgeego %d", item.wpnId]];
