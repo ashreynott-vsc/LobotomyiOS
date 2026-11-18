@@ -61265,6 +61265,19 @@ IL_004b:
 #include <cctype>
 #include <cstdio>
 
+struct EquipmentTypeInfoU5BU5D_t2424480259 : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) EquipmentTypeInfo_t2857474214 * m_Items[1];
+
+public:
+	inline EquipmentTypeInfo_t2857474214 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+};
+
 extern "C" bool Mobile_Cheat_ForgeEgoRaw(int32_t id);
 extern "C" void Mobile_RefreshInventoryUI(void);
 
