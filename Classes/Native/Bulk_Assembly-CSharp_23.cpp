@@ -58071,6 +58071,70 @@ IL_0118:
 		return L_43;
 	}
 }
+
+extern "C" void Mobile_RefreshInventoryUI(void)
+{
+	InventoryUI_t2392168026 * win = InventoryUI_get_CurrentWindow_m1138313592(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL) &&
+		InventoryUI_get_IsEnabled_m1754268877(win, NULL))
+	{
+		InventoryItemController_t2271169562 * ctrl = win->get_ItemController_5();
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)ctrl, (Object_t631007953 *)NULL, NULL))
+		{
+			InventoryItemController_Init_m4291428651(ctrl, NULL);
+		}
+	}
+}
+
+extern "C" bool Mobile_CloseInventoryIfOpen(void)
+{
+	InventoryUI_t2392168026 * win = InventoryUI_get_CurrentWindow_m1138313592(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL) &&
+		InventoryUI_get_IsEnabled_m1754268877(win, NULL))
+	{
+		InventoryUI_CloseWindow_m1156923806(win, NULL);
+		return true;
+	}
+	return false;
+}
+
+extern "C" bool Mobile_Cheat_ForgeEgoRaw(int32_t id)
+{
+	if (id < 200000 || id >= 400000)
+	{
+		return false;
+	}
+	InventoryModel_t4048880456 * inv = InventoryModel_get_Instance_m1293781470(NULL /*static, unused*/, NULL);
+	EquipmentTypeList_t1756422084 * eqList = EquipmentTypeList_get_instance_m3843044845(NULL /*static, unused*/, NULL);
+	if (inv == NULL || eqList == NULL)
+	{
+		return false;
+	}
+	EquipmentTypeInfo_t2857474214 * info = EquipmentTypeList_GetData_m389130030(eqList, id, NULL);
+	if (info == NULL)
+	{
+		return false;
+	}
+	int32_t eqType = info->get_type_1();
+	if (eqType != 0 && eqType != 1)
+	{
+		return false;
+	}
+	InventoryModel_CreateEquipmentForcely_m811617106(inv, id, NULL);
+	return true;
+}
+
+extern "C" bool Mobile_Cheat_ForgeEgo(int32_t id)
+{
+	if (!Mobile_Cheat_ForgeEgoRaw(id))
+	{
+		return false;
+	}
+	Mobile_RefreshInventoryUI();
+	return true;
+}
 // System.Void InventoryModel::RemoveEquipment(EquipmentModel)
 extern "C" IL2CPP_METHOD_ATTR void InventoryModel_RemoveEquipment_m1063565426 (InventoryModel_t4048880456 * __this, EquipmentModel_t591425993 * ___model0, const RuntimeMethod* method)
 {

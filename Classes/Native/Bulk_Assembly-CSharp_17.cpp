@@ -52884,6 +52884,33 @@ extern "C" IL2CPP_METHOD_ATTR int32_t CreatureOverloadManager_GetQliphothOverloa
 		return L_0;
 	}
 }
+
+extern "C" int32_t Mobile_Cheat_NextMeltdown (void)
+{
+	GameManager_t1536523654 * gm = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)gm, (Object_t631007953 *)NULL, NULL) ||
+		!gm->get_ManageStarted_8())
+	{
+		return -1;
+	}
+	CreatureOverloadManager_t1389718676 * mgr = CreatureOverloadManager_get_instance_m1394531148(NULL /*static, unused*/, NULL);
+	if (mgr == NULL)
+	{
+		return -1;
+	}
+	int32_t maxG = mgr->get__qliphothOverloadMax_3();
+	if (maxG > 0)
+	{
+		mgr->set_qliphothOverloadGauge_2(maxG - 1);
+		CreatureOverloadManager_AddOverloadGague_m2943685205(mgr, /*hidden argument*/NULL);
+	}
+	else
+	{
+		CreatureOverloadManager_ActivateOverload_m1565755512(mgr, /*hidden argument*/NULL);
+	}
+	return mgr->get_qliphothOverloadLevel_4();
+}
 // System.Boolean CreatureOverloadManager::CheckOrdealActivate(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR bool CreatureOverloadManager_CheckOrdealActivate_m2208102200 (CreatureOverloadManager_t1389718676 * __this, int32_t ___currentLevel0, const RuntimeMethod* method)
 {

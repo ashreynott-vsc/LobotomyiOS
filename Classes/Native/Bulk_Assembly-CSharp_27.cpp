@@ -58031,6 +58031,7 @@ IL_002c:
 	}
 }
 // System.Void MobileScreenManager::Awake()
+extern "C" IL2CPP_METHOD_ATTR void Application_set_targetFrameRate_m3682352535 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method);
 extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_Awake_m728696395 (MobileScreenManager_t831028031 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58120,6 +58121,7 @@ IL_007e:
 		MobileScreenManager_NativeInit_m3853915216(NULL /*static, unused*/, _stringLiteral1061572333, /*hidden argument*/NULL);
 		int32_t L_15 = __this->get__aspectMode_10();
 		MobileScreenManager_NativeSetAspectMode_m1612487439(NULL /*static, unused*/, L_15, /*hidden argument*/NULL);
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, 60, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -58348,8 +58350,29 @@ extern "C" IL2CPP_METHOD_ATTR void GC_Collect_m743975114 (RuntimeObject * __this
 
 extern "C" bool Mobile_IsRabbitSelectionOpen(void);
 extern "C" Transform_t3600365921 * Mobile_GetRabbitModalTransform(void);
+extern "C" Transform_t3600365921 * Mobile_GetRabbitConfirmTransform(void);
 extern "C" Graphic_t1660335611 * Mobile_GetRabbitModalGraphic(void);
 extern "C" void Mobile_CloseRabbitSelectionWindow(void);
+extern "C" void Mobile_FlushPendingUIControllers(void);
+extern "C" bool Mobile_CloseInventoryIfOpen(void);
+extern "C" int32_t Mobile_Cheat_NextMeltdown(void);
+extern "C" bool Mobile_Cheat_ForgeEgo(int32_t id);
+extern "C" int32_t Mobile_Cheat_ForgeAllEgo(void);
+extern "C" int _IsNativeLiquidGlassMenuVisible(void);
+extern "C" void _UpdateNativePillFPS(int fps);
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Component_get_gameObject_m442555142 (Component_t1923634451 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m1767405923 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void GameObject_SetActive_m796801857 (GameObject_t1113636619 * __this, bool p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_Find_m2032535176 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_Find_m1729760951 (Transform_t3600365921 * __this, String_t* p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523 RectTransform_get_sizeDelta_m2183112744 (RectTransform_t3704657025 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void RectTransform_set_sizeDelta_m3462269772 (RectTransform_t3704657025 * __this, Vector2_t2156229523 p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523 RectTransform_get_anchoredPosition_m1813443094 (RectTransform_t3704657025 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void RectTransform_set_anchoredPosition_m4126691837 (RectTransform_t3704657025 * __this, Vector2_t2156229523 p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Vector2__ctor_m3970636864 (Vector2_t2156229523 * __this, float p0, float p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t Screen_get_width_m345039817 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t Screen_get_height_m1623532518 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 
 static int32_t s_mobileFrameCount = 0;
 static int32_t s_mobileSceneGen = 1;
@@ -58357,6 +58380,8 @@ static int32_t s_mobileLogWriteCount = 0;
 static bool s_sceneFlagsValid = false;
 static bool s_isTitleScene = false;
 static bool s_isStoryScene = false;
+static bool s_isMainScene = false;
+static bool s_isIntroScene = false;
 static float s_fastEnforceRemaining = 2.5f;
 static float s_enforceAccum = 1.0f;
 
@@ -58383,9 +58408,310 @@ static inline bool Mobile_StringEqualsAscii(String_t* s, const char* ascii)
 
 static inline void Mobile_RefreshSceneFlags(String_t* sceneName)
 {
-	s_isTitleScene = Mobile_StringEqualsAscii(sceneName, "NewTitleScene");
+	s_isTitleScene = Mobile_StringEqualsAscii(sceneName, "NewTitleScene") || Mobile_StringEqualsAscii(sceneName, "AlterTitleScene");
 	s_isStoryScene = Mobile_StringEqualsAscii(sceneName, "StoryV2");
+	s_isMainScene = Mobile_StringEqualsAscii(sceneName, "Main");
+	s_isIntroScene = Mobile_StringEqualsAscii(sceneName, "Intro");
 	s_sceneFlagsValid = true;
+}
+
+struct MobileWideCacheSlot
+{
+	uint32_t handle;
+	int32_t lastProbeFrame;
+};
+
+static int32_t s_wideSceneCacheGen = -1;
+static MobileWideCacheSlot s_widePersistentRoots[2] = {};
+static MobileWideCacheSlot s_widePersistentRTs[20] = {};
+static MobileWideCacheSlot s_wideSceneRoots[8] = {};
+static MobileWideCacheSlot s_wideSceneRTs[36] = {};
+
+static void Mobile_ClearWideCacheSlots(MobileWideCacheSlot * arr, size_t n)
+{
+	for (size_t i = 0; i < n; ++i)
+	{
+		if (arr[i].handle != 0)
+		{
+			il2cpp_gchandle_free(arr[i].handle);
+			arr[i].handle = 0;
+		}
+		arr[i].lastProbeFrame = -1000;
+	}
+}
+
+static void Mobile_SyncWideCacheGen(bool resetAllProbes)
+{
+	if (s_wideSceneCacheGen != s_mobileSceneGen)
+	{
+		Mobile_ClearWideCacheSlots(s_wideSceneRoots, 8);
+		Mobile_ClearWideCacheSlots(s_wideSceneRTs, 36);
+		for (size_t i = 0; i < 2; ++i) s_widePersistentRoots[i].lastProbeFrame = -1000;
+		for (size_t i = 0; i < 20; ++i) s_widePersistentRTs[i].lastProbeFrame = -1000;
+		s_wideSceneCacheGen = s_mobileSceneGen;
+	}
+	else if (resetAllProbes)
+	{
+		for (size_t i = 0; i < 2; ++i) s_widePersistentRoots[i].lastProbeFrame = -1000;
+		for (size_t i = 0; i < 20; ++i) s_widePersistentRTs[i].lastProbeFrame = -1000;
+		for (size_t i = 0; i < 8; ++i) s_wideSceneRoots[i].lastProbeFrame = -1000;
+		for (size_t i = 0; i < 36; ++i) s_wideSceneRTs[i].lastProbeFrame = -1000;
+	}
+}
+
+static Transform_t3600365921 * Mobile_ResolveRootTransformCached(const char * rootName, MobileWideCacheSlot * slot, bool forceProbe)
+{
+	if (slot->handle != 0)
+	{
+		Transform_t3600365921 * tr = (Transform_t3600365921 *)il2cpp_gchandle_get_target(slot->handle);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+		{
+			return tr;
+		}
+		il2cpp_gchandle_free(slot->handle);
+		slot->handle = 0;
+	}
+	if (!forceProbe && (s_mobileFrameCount - slot->lastProbeFrame) < 30)
+	{
+		return NULL;
+	}
+	slot->lastProbeFrame = s_mobileFrameCount;
+	GameObject_t1113636619 * go = GameObject_Find_m2032535176(NULL /*static, unused*/, il2cpp_codegen_string_new_wrapper(rootName), NULL);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	Transform_t3600365921 * tr = GameObject_get_transform_m1369836730(go, NULL);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+	{
+		slot->handle = il2cpp_gchandle_new((Il2CppObject *)tr, false);
+		return tr;
+	}
+	return NULL;
+}
+
+static RectTransform_t3704657025 * Mobile_ResolveSubRTCached(Transform_t3600365921 * rootTr, const char * subpath, MobileWideCacheSlot * slot, bool forceProbe)
+{
+	if (!rootTr || Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var == NULL)
+	{
+		return NULL;
+	}
+	if (slot->handle != 0)
+	{
+		RectTransform_t3704657025 * rt = (RectTransform_t3704657025 *)il2cpp_gchandle_get_target(slot->handle);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, NULL))
+		{
+			return rt;
+		}
+		il2cpp_gchandle_free(slot->handle);
+		slot->handle = 0;
+	}
+	if (!forceProbe && (s_mobileFrameCount - slot->lastProbeFrame) < 30)
+	{
+		return NULL;
+	}
+	slot->lastProbeFrame = s_mobileFrameCount;
+	Transform_t3600365921 * targetTr = (subpath == NULL || subpath[0] == '\0')
+		? rootTr
+		: Transform_Find_m1729760951(rootTr, il2cpp_codegen_string_new_wrapper(subpath), NULL);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)targetTr, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	RectTransform_t3704657025 * rt = Component_GetComponent_TisRectTransform_t3704657025_m3396022872((Component_t1923634451 *)targetTr, Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, NULL))
+	{
+		slot->handle = il2cpp_gchandle_new((Il2CppObject *)rt, false);
+		return rt;
+	}
+	return NULL;
+}
+
+static void Mobile_SetRectWidthKeepY(RectTransform_t3704657025 * rt, float targetW)
+{
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	Vector2_t2156229523 cur = RectTransform_get_sizeDelta_m2183112744(rt, NULL);
+	if (fabsf(cur.get_x_0() - targetW) > 1.0f)
+	{
+		Vector2_t2156229523 nv;
+		memset(&nv, 0, sizeof(nv));
+		Vector2__ctor_m3970636864(&nv, targetW, cur.get_y_1(), NULL);
+		RectTransform_set_sizeDelta_m3462269772(rt, nv, NULL);
+	}
+}
+
+static void Mobile_SetRectPosXKeepY(RectTransform_t3704657025 * rt, float targetX)
+{
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	Vector2_t2156229523 cur = RectTransform_get_anchoredPosition_m1813443094(rt, NULL);
+	if (fabsf(cur.get_x_0() - targetX) > 1.0f)
+	{
+		Vector2_t2156229523 nv;
+		memset(&nv, 0, sizeof(nv));
+		Vector2__ctor_m3970636864(&nv, targetX, cur.get_y_1(), NULL);
+		RectTransform_set_anchoredPosition_m4126691837(rt, nv, NULL);
+	}
+}
+
+static void Mobile_ApplyWideSubW(Transform_t3600365921 * rootTr, const char * subpath, MobileWideCacheSlot * slot, float targetW, bool forceProbe)
+{
+	RectTransform_t3704657025 * rt = Mobile_ResolveSubRTCached(rootTr, subpath, slot, forceProbe);
+	Mobile_SetRectWidthKeepY(rt, targetW);
+}
+
+static void Mobile_ApplyWideUIForMode(int32_t mode, bool forceProbe)
+{
+	int32_t sw = Screen_get_width_m345039817(NULL /*static, unused*/, NULL);
+	int32_t sh = Screen_get_height_m1623532518(NULL /*static, unused*/, NULL);
+	if (sw <= 0 || sh <= 0) return;
+	float aspect = (float)sw / ((sh > 0) ? (float)sh : 1.0f);
+	bool wideActive = (mode == 1) && (aspect > 1.78f);
+	float w1080 = wideActive ? (1080.0f * aspect) : 1920.0f;
+	float w900  = wideActive ? (900.0f * aspect)  : 1600.0f;
+
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	Mobile_SyncWideCacheGen(forceProbe);
+
+	// 1. Persistent GlobalGameManager (loading screens & Manual overlay)
+	Transform_t3600365921 * ggmTr = Mobile_ResolveRootTransformCached("GlobalGameManager", &s_widePersistentRoots[0], forceProbe);
+	if (ggmTr)
+	{
+		static const char * const kGgmPaths[15] = {
+			"Canvas/LoadingScreen",
+			"Canvas/LoadingScreen/ContinueLoading",
+			"Canvas/LoadingScreen/ContinueLoading/Canvas",
+			"Canvas/LoadingScreen/ContinueLoading/Canvas/BackGround",
+			"Canvas/LoadingScreen/DefaultEndLoading",
+			"Canvas/LoadingScreen/DefaultEndLoading/Canvas",
+			"Canvas/LoadingScreen/StoryEndLoading",
+			"Canvas/LoadingScreen/StoryEndLoading/Canvas",
+			"Canvas/LoadingScreen/EndingLoading",
+			"Canvas/LoadingScreen/CreditLoading",
+			"Canvas/LoadingScreen/TitleEndLoading",
+			"Canvas/LoadingScreen/TitleEndLoading/Canvas/BackGround",
+			"Canvas/LoadingScreen/TitleEndLoading/Canvas/BackGround/Lines",
+			"Canvas/LoadingScreen/DayEndLoading/Canvas",
+			"Canvas/LoadingScreen/DayEndLoading/Canvas/BackGround"
+		};
+		for (int i = 0; i < 15; ++i)
+		{
+			Mobile_ApplyWideSubW(ggmTr, kGgmPaths[i], &s_widePersistentRTs[i], w1080, forceProbe);
+		}
+		Mobile_ApplyWideSubW(ggmTr, "RootCanvas/Pivot", &s_widePersistentRTs[15], w1080, forceProbe);
+		RectTransform_t3704657025 * titleCvs = Mobile_ResolveSubRTCached(ggmTr, "Canvas/LoadingScreen/TitleEndLoading/Canvas", &s_widePersistentRTs[16], forceProbe);
+		if (titleCvs)
+		{
+			Mobile_SetRectWidthKeepY(titleCvs, w1080);
+			Mobile_SetRectPosXKeepY(titleCvs, -w1080 * 0.5f);
+		}
+		RectTransform_t3704657025 * dayCvs = Mobile_ResolveSubRTCached(ggmTr, "Canvas/LoadingScreen/DayEndLoading", &s_widePersistentRTs[17], forceProbe);
+		if (dayCvs)
+		{
+			Mobile_SetRectWidthKeepY(dayCvs, w1080);
+			Mobile_SetRectPosXKeepY(dayCvs, w1080 * 0.5f);
+		}
+	}
+
+	// 2. Title Scene (NewTitleScene / AlterTitleScene)
+	if (s_isTitleScene)
+	{
+		Transform_t3600365921 * titleTr = Mobile_ResolveRootTransformCached("TitleCanvas", &s_wideSceneRoots[0], forceProbe);
+		if (titleTr)
+		{
+			Mobile_ApplyWideSubW(titleTr, "Bg", &s_wideSceneRTs[0], w1080, forceProbe);
+			Mobile_ApplyWideSubW(titleTr, "InnerLayer", &s_wideSceneRTs[1], w1080, forceProbe);
+			Mobile_ApplyWideSubW(titleTr, "InnerLayer/EffectArea/SceneChangeAnim/End/NewGame/BackGround", &s_wideSceneRTs[2], w1080, forceProbe);
+			Mobile_ApplyWideSubW(titleTr, "InnerLayer/EffectArea/SceneChangeAnim/End/NewGame/BackGround/Lines", &s_wideSceneRTs[3], w1080, forceProbe);
+			Mobile_ApplyWideSubW(titleTr, "FontViewerRoot/Scroll/BackGround", &s_wideSceneRTs[4], w1080, forceProbe);
+			Mobile_ApplyWideSubW(titleTr, "FontViewerRoot/Scroll/BackGround/Image", &s_wideSceneRTs[5], w1080, forceProbe);
+		}
+	}
+
+	// 3. Intro Scene
+	if (s_isIntroScene)
+	{
+		Transform_t3600365921 * introCvs = Mobile_ResolveRootTransformCached("Canvas", &s_wideSceneRoots[1], forceProbe);
+		if (introCvs)
+		{
+			Mobile_ApplyWideSubW(introCvs, "Intro1", &s_wideSceneRTs[6], w900, forceProbe);
+			Mobile_ApplyWideSubW(introCvs, "Intro2", &s_wideSceneRTs[7], w900, forceProbe);
+		}
+	}
+
+	// 4. StoryV2 Scene extras (FadeUI & StorySeedUI)
+	if (s_isStoryScene)
+	{
+		Transform_t3600365921 * fadeTr = Mobile_ResolveRootTransformCached("FadeUI", &s_wideSceneRoots[2], forceProbe);
+		if (fadeTr)
+		{
+			Mobile_ApplyWideSubW(fadeTr, "", &s_wideSceneRTs[8], w1080, forceProbe);
+			Mobile_ApplyWideSubW(fadeTr, "BackGround", &s_wideSceneRTs[9], w1080, forceProbe);
+		}
+		Transform_t3600365921 * seedTr = Mobile_ResolveRootTransformCached("StorySeedUI", &s_wideSceneRoots[3], forceProbe);
+		if (seedTr)
+		{
+			Mobile_ApplyWideSubW(seedTr, "", &s_wideSceneRTs[10], w1080, forceProbe);
+			Mobile_ApplyWideSubW(seedTr, "BackGround", &s_wideSceneRTs[11], w1080, forceProbe);
+		}
+	}
+
+	// 5. Main Scene UI containers
+	if (s_isMainScene)
+	{
+		Transform_t3600365921 * uiTr = Mobile_ResolveRootTransformCached("UI", &s_wideSceneRoots[4], forceProbe);
+		if (uiTr)
+		{
+			RectTransform_t3704657025 * rightArea = Mobile_ResolveSubRTCached(uiTr, "DeployUI/Canvas/Pivot/RightArea", &s_wideSceneRTs[12], forceProbe);
+			Mobile_SetRectPosXKeepY(rightArea, w1080 * 0.5f - 149.0f);
+			Mobile_ApplyWideSubW(uiTr, "DeployUI/Canvas/SefiraPanelArea/UpperArea/BackGround", &s_wideSceneRTs[13], w1080, forceProbe);
+			Mobile_ApplyWideSubW(uiTr, "DeployUI/Canvas/SefiraPanelArea/UpperArea/BackGround/Image", &s_wideSceneRTs[14], w1080, forceProbe);
+			Mobile_ApplyWideSubW(uiTr, "DeployUI/Canvas/SefiraPanelArea/LowerArea/BackGround/Image", &s_wideSceneRTs[15], w1080, forceProbe);
+			Mobile_ApplyWideSubW(uiTr, "DeployUI/Canvas/CheckPointUI/Center", &s_wideSceneRTs[16], w1080, forceProbe);
+			Mobile_ApplyWideSubW(uiTr, "GameStatusUI/Canvas/Energy_SpeedController", &s_wideSceneRTs[17], w1080, forceProbe);
+			Mobile_ApplyWideSubW(uiTr, "ResultScreen/Canvas/bg", &s_wideSceneRTs[18], w1080, forceProbe);
+			Mobile_ApplyWideSubW(uiTr, "ResultScreen/Canvas/graph", &s_wideSceneRTs[19], w1080, forceProbe);
+
+			Transform_t3600365921 * wideBgTr = Transform_Find_m1729760951(uiTr, il2cpp_codegen_string_new_wrapper("DeployUI/Canvas/_MobileWideDeployBg"), NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)wideBgTr, (Object_t631007953 *)NULL, NULL))
+			{
+				GameObject_t1113636619 * bgGo = Component_get_gameObject_m442555142((Component_t1923634451 *)wideBgTr, NULL);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)bgGo, (Object_t631007953 *)NULL, NULL) &&
+					GameObject_get_activeSelf_m1767405923(bgGo, NULL) != wideActive)
+				{
+					GameObject_SetActive_m796801857(bgGo, (bool)wideActive, NULL);
+				}
+			}
+		}
+
+		Transform_t3600365921 * inGameTr = Mobile_ResolveRootTransformCached("InGameUI", &s_wideSceneRoots[5], forceProbe);
+		if (inGameTr)
+		{
+			Mobile_ApplyWideSubW(inGameTr, "CreatureInfoWindow/Canvas/ActiveControl", &s_wideSceneRTs[20], w1080, forceProbe);
+			RectTransform_t3704657025 * ciBg = Mobile_ResolveSubRTCached(inGameTr, "CreatureInfoWindow/Canvas/ActiveControl/Background", &s_wideSceneRTs[21], forceProbe);
+			if (ciBg)
+			{
+				float bgW = w1080 - 271.0f;
+				Mobile_SetRectWidthKeepY(ciBg, bgW);
+				Mobile_SetRectPosXKeepY(ciBg, 271.0f + bgW * 0.5f);
+			}
+			Mobile_ApplyWideSubW(inGameTr, "RabbitProtocolWindow/Canvas/ProtocolUI", &s_wideSceneRTs[22], w1080, forceProbe);
+			Mobile_ApplyWideSubW(inGameTr, "RabbitProtocolWindow/Canvas/ProtocolActivated/Center", &s_wideSceneRTs[23], w1080, forceProbe);
+			Mobile_ApplyWideSubW(inGameTr, "AgentInfoWindow/Canvas/CustomizingControl", &s_wideSceneRTs[24], w1080, forceProbe);
+		}
+
+		Transform_t3600365921 * timeCvs = Mobile_ResolveRootTransformCached("TimeCanvas", &s_wideSceneRoots[6], forceProbe);
+		if (timeCvs)
+		{
+			Mobile_ApplyWideSubW(timeCvs, "PositionRect", &s_wideSceneRTs[25], w900, forceProbe);
+			Mobile_ApplyWideSubW(timeCvs, "PositionRect/Image", &s_wideSceneRTs[26], w900, forceProbe);
+		}
+	}
 }
 
 extern "C" int32_t Mobile_GetFrameCount(void)
@@ -58541,6 +58867,16 @@ static void Mobile_CheckRabbitOutsideTap(void)
 	}
 	if (!RectTransformUtility_RectangleContainsScreenPoint_m4031431712(NULL /*static, unused*/, modalRect, tapPos, uiCam, NULL))
 	{
+		Transform_t3600365921 * confirmTr = Mobile_GetRabbitConfirmTransform();
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)confirmTr, (Object_t631007953 *)NULL, NULL))
+		{
+			RectTransform_t3704657025 * confirmRect = Component_GetComponent_TisRectTransform_t3704657025_m3396022872((Component_t1923634451 *)confirmTr, Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)confirmRect, (Object_t631007953 *)NULL, NULL) &&
+				RectTransformUtility_RectangleContainsScreenPoint_m4031431712(NULL /*static, unused*/, confirmRect, tapPos, uiCam, NULL))
+			{
+				return;
+			}
+		}
 		Mobile_CloseRabbitSelectionWindow();
 	}
 }
@@ -58742,6 +59078,7 @@ extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_Update_m4254841170 (Mobil
 	float m_dt = Time_get_unscaledDeltaTime_m4270080131(NULL /*static, unused*/, /*hidden argument*/NULL);
 	{
 		++s_mobileFrameCount;
+		Mobile_FlushPendingUIControllers();
 		if (!s_sceneFlagsValid)
 		{
 			Scene_t2348375561 curSc = SceneManager_GetActiveScene_m1825203488(NULL /*static, unused*/, NULL);
@@ -58767,6 +59104,11 @@ extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_Update_m4254841170 (Mobil
 		float L_7 = Mathf_Max_m3146388979(NULL /*static, unused*/, (0.0001f), L_6, /*hidden argument*/NULL);
 		__this->set__fps_8(((float)((float)(1.0f)/(float)L_7)));
 		__this->set__fpsTimer_9((0.0f));
+		if (_IsNativeLiquidGlassMenuVisible() == 0)
+		{
+			_UpdateNativePillFPS((int32_t)(__this->get__fps_8() + 0.5f));
+			goto IL_0101;
+		}
 		int64_t L_8 = GC_GetTotalMemory_m540992608(NULL /*static, unused*/, (bool)0, /*hidden argument*/NULL);
 		V_0 = ((int64_t)((int64_t)L_8/(int64_t)(((int64_t)((int64_t)((int32_t)1048576))))));
 		ObjectU5BU5D_t2843939325* L_9 = ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)7));
@@ -59143,7 +59485,7 @@ IL_007d:
 			int32_t L_18 = __this->get__aspectMode_10();
 			if ((!(((uint32_t)L_18) == ((uint32_t)1))))
 			{
-				goto IL_0446;
+				goto IL_0185;
 			}
 		}
 
@@ -59305,8 +59647,8 @@ IL_0185:
 			IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
 			float L_53 = Mathf_Max_m3146388979(NULL /*static, unused*/, (1.0f), (((float)((float)L_52))), /*hidden argument*/NULL);
 			V_12 = ((float)((float)(((float)((float)L_51)))/(float)L_53));
-			float L_54 = V_12;
-			V_13 = ((float)il2cpp_codegen_multiply((float)(1080.0f), (float)L_54));
+			int32_t L_curMode = __this->get__aspectMode_10();
+			V_13 = (L_curMode == 1 && V_12 > 1.78f) ? ((float)il2cpp_codegen_multiply((float)(1080.0f), (float)V_12)) : (1920.0f);
 			if (s_sceneFlagsValid && !s_isStoryScene)
 			{
 				goto IL_034b;
@@ -59360,7 +59702,7 @@ IL_01e9:
 			V_16 = L_67;
 			float L_68 = (&V_16)->get_x_0();
 			float L_69 = V_13;
-			if ((!(((float)L_68) < ((float)((float)il2cpp_codegen_subtract((float)L_69, (float)(5.0f)))))))
+			if (!(fabsf(L_68 - L_69) > 5.0f))
 			{
 				goto IL_0219;
 			}
@@ -59415,7 +59757,7 @@ IL_0246:
 			V_18 = L_82;
 			float L_83 = (&V_18)->get_x_0();
 			float L_84 = V_13;
-			if ((!(((float)L_83) < ((float)((float)il2cpp_codegen_subtract((float)L_84, (float)(5.0f)))))))
+			if (!(fabsf(L_83 - L_84) > 5.0f))
 			{
 				goto IL_0276;
 			}
@@ -59487,7 +59829,7 @@ IL_02be:
 			V_21 = L_102;
 			float L_103 = (&V_21)->get_x_0();
 			float L_104 = V_13;
-			if ((!(((float)L_103) < ((float)((float)il2cpp_codegen_subtract((float)L_104, (float)(5.0f)))))))
+			if (!(fabsf(L_103 - L_104) > 5.0f))
 			{
 				goto IL_02ee;
 			}
@@ -59542,7 +59884,7 @@ IL_031b:
 			V_23 = L_117;
 			float L_118 = (&V_23)->get_x_0();
 			float L_119 = V_13;
-			if ((!(((float)L_118) < ((float)((float)il2cpp_codegen_subtract((float)L_119, (float)(5.0f)))))))
+			if (!(fabsf(L_118 - L_119) > 5.0f))
 			{
 				goto IL_034b;
 			}
@@ -59561,6 +59903,10 @@ IL_0338:
 
 IL_034b:
 		{
+			if (__this->get__aspectMode_10() != 1 || !(V_12 > 1.78f))
+			{
+				goto IL_0446;
+			}
 			IL2CPP_RUNTIME_CLASS_INIT(DeployUI_t2640253816_il2cpp_TypeInfo_var);
 			DeployUI_t2640253816 * L_123 = DeployUI_get_instance_m1366893038(NULL /*static, unused*/, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
@@ -59676,6 +60022,7 @@ IL_03a7:
 
 IL_0446:
 		{
+			Mobile_ApplyWideUIForMode(__this->get__aspectMode_10(), false);
 			goto IL_0451;
 		}
 	} // end try (depth: 1)
@@ -60194,6 +60541,8 @@ extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_SetAspectMode_m4064974544
 		int32_t L_0 = ___mode0;
 		__this->set__aspectMode_10(L_0);
 		MobileScreenManager_SaveMobileSettings_m3779905403(__this, /*hidden argument*/NULL);
+		s_fastEnforceRemaining = 2.5f;
+		s_enforceAccum = 1.0f;
 		MobileScreenManager_ApplyFullscreenSettings_m1725697124(__this, /*hidden argument*/NULL);
 		int32_t L_1 = __this->get__aspectMode_10();
 		G_B1_0 = __this;
@@ -60393,6 +60742,7 @@ IL_002e:
 
 IL_002f:
 	{
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, 60, /*hidden argument*/NULL);
 		MobileScreenManager_EnsureClearCamera_m2529242480(__this, /*hidden argument*/NULL);
 		int32_t L_4 = __this->get__lastWidth_3();
 		int32_t L_5 = __this->get__lastHeight_4();
@@ -60649,6 +60999,7 @@ CATCH_0198:
 
 IL_019e:
 	{
+		Mobile_ApplyWideUIForMode(__this->get__aspectMode_10(), true);
 		return;
 	}
 }
@@ -60741,6 +61092,11 @@ IL_0058:
 
 IL_0072:
 		{
+			if (Mobile_CloseInventoryIfOpen())
+			{
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper("Closed E.G.O Inventory"));
+				goto IL_00d4;
+			}
 			if (Mobile_IsRabbitSelectionOpen())
 			{
 				Mobile_CloseRabbitSelectionWindow();
@@ -60947,6 +61303,15 @@ IL_0000:
 			}
 			arg[ai] = '\0';
 
+			char arg2[64];
+			while (p < len && (rawBuf[p] == ' ' || rawBuf[p] == '\t')) p++;
+			int a2i = 0;
+			while (p < len && rawBuf[p] != ' ' && rawBuf[p] != '\t' && a2i < 63)
+			{
+				arg2[a2i++] = rawBuf[p++];
+			}
+			arg2[a2i] = '\0';
+
 			char statusBuf[128];
 			if (strcmp(tok, "energy") == 0 || strcmp(tok, "enkephalin") == 0 || strcmp(tok, "expectopatronum") == 0)
 			{
@@ -61010,6 +61375,42 @@ IL_0000:
 			{
 				Mobile_Cheat_UpgradeAllResearch();
 				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper("All research unlocked"));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "nextmeltdown") == 0 || strcmp(tok, "addmeltdown") == 0 || strcmp(tok, "overload") == 0)
+			{
+				int32_t res = Mobile_Cheat_NextMeltdown();
+				if (res < 0)
+					snprintf(statusBuf, sizeof(statusBuf), "Start management day first");
+				else
+					snprintf(statusBuf, sizeof(statusBuf), "Meltdown advanced (Lvl %d)", res);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "forgeego") == 0)
+			{
+				int32_t eqId = (int32_t)strtol(arg, NULL, 10);
+				bool ok = (eqId > 0) ? Mobile_Cheat_ForgeEgo(eqId) : false;
+				snprintf(statusBuf, sizeof(statusBuf), ok ? "Forged E.G.O #%d" : "Failed E.G.O #%d", eqId);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "forgeegoset") == 0)
+			{
+				int32_t wpnId = (int32_t)strtol(arg, NULL, 10);
+				int32_t armId = (int32_t)strtol(arg2, NULL, 10);
+				int32_t forged = 0;
+				if (wpnId > 0 && Mobile_Cheat_ForgeEgo(wpnId)) forged++;
+				if (armId > 0 && Mobile_Cheat_ForgeEgo(armId)) forged++;
+				snprintf(statusBuf, sizeof(statusBuf), "Forged E.G.O set (%d item%s)", forged, forged == 1 ? "" : "s");
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "forgeallego") == 0)
+			{
+				int32_t cnt = Mobile_Cheat_ForgeAllEgo();
+				snprintf(statusBuf, sizeof(statusBuf), "Forged %d E.G.O equipment item(s)", cnt);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
 				goto IL_005d;
 			}
 		}

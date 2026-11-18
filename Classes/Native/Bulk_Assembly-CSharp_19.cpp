@@ -61257,6 +61257,259 @@ IL_004b:
 		return L_7;
 	}
 }
+
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <cctype>
+#include <cstdio>
+
+extern "C" bool Mobile_Cheat_ForgeEgoRaw(int32_t id);
+extern "C" void Mobile_RefreshInventoryUI(void);
+
+static std::string Mobile_Utf16ToUtf8(String_t * str)
+{
+	std::string out;
+	if (!str)
+	{
+		return out;
+	}
+	int32_t len = str->get_length_0();
+	const Il2CppChar * ch = str->get_address_of_start_char_1();
+	out.reserve((size_t)len * 2);
+	for (int32_t i = 0; i < len; ++i)
+	{
+		uint32_t cp = (uint32_t)ch[i];
+		if (cp >= 0xD800 && cp <= 0xDBFF && i + 1 < len)
+		{
+			uint32_t lo = (uint32_t)ch[i + 1];
+			if (lo >= 0xDC00 && lo <= 0xDFFF)
+			{
+				cp = 0x10000 + (((cp - 0xD800) << 10) | (lo - 0xDC00));
+				++i;
+			}
+		}
+		if (cp == '\t' || cp == '\r' || cp == '\n')
+		{
+			out.push_back(' ');
+		}
+		else if (cp < 0x80)
+		{
+			out.push_back((char)cp);
+		}
+		else if (cp < 0x800)
+		{
+			out.push_back((char)(0xC0 | (cp >> 6)));
+			out.push_back((char)(0x80 | (cp & 0x3F)));
+		}
+		else if (cp < 0x10000)
+		{
+			out.push_back((char)(0xE0 | (cp >> 12)));
+			out.push_back((char)(0x80 | ((cp >> 6) & 0x3F)));
+			out.push_back((char)(0x80 | (cp & 0x3F)));
+		}
+		else
+		{
+			out.push_back((char)(0xF0 | (cp >> 18)));
+			out.push_back((char)(0x80 | ((cp >> 12) & 0x3F)));
+			out.push_back((char)(0x80 | ((cp >> 6) & 0x3F)));
+			out.push_back((char)(0x80 | (cp & 0x3F)));
+		}
+	}
+	return out;
+}
+
+struct MobileEgoCatalogRow
+{
+	int32_t gradeInt;
+	int32_t wpnId;
+	int32_t armId;
+	int32_t orderKey;
+	std::string codeNo;
+	std::string name;
+};
+
+static std::string s_mobileEgoCatalogTSV;
+
+extern "C" const char * Mobile_GetEgoCatalogTSV(void)
+{
+	if (!s_mobileEgoCatalogTSV.empty())
+	{
+		return s_mobileEgoCatalogTSV.c_str();
+	}
+	EquipmentTypeList_t1756422084 * eqList = EquipmentTypeList_get_instance_m3843044845(NULL /*static, unused*/, NULL);
+	if (eqList == NULL || !eqList->get__loaded_2())
+	{
+		return "";
+	}
+	List_1_t34581660 * all = EquipmentTypeList_GetAllData_m1095306629(eqList, NULL);
+	if (all == NULL || all->get__items_1() == NULL)
+	{
+		return "";
+	}
+	int32_t count = all->get__size_2();
+	EquipmentTypeInfoU5BU5D_t2424480259 * items = all->get__items_1();
+	int32_t maxLen = (int32_t)(((RuntimeArray *)items)->max_length);
+	if (count > maxLen)
+	{
+		count = maxLen;
+	}
+	std::vector<MobileEgoCatalogRow> rows;
+	std::map<int32_t, size_t> suffixToRowIdx;
+	rows.reserve(160);
+	for (int32_t i = 0; i < count; ++i)
+	{
+		EquipmentTypeInfo_t2857474214 * info = items->GetAt(static_cast<il2cpp_array_size_t>(i));
+		if (info == NULL)
+		{
+			continue;
+		}
+		int32_t eqId = info->get_id_0();
+		if (eqId < 200000 || eqId >= 400000)
+		{
+			continue;
+		}
+		int32_t eqType = info->get_type_1();
+		if (eqType != 0 && eqType != 1)
+		{
+			continue;
+		}
+		std::string gradeStr = Mobile_Utf16ToUtf8(info->get_grade_9());
+		if (gradeStr.size() != 1 || gradeStr[0] < '1' || gradeStr[0] > '5')
+		{
+			continue;
+		}
+		int32_t gradeInt = (int32_t)(gradeStr[0] - '0');
+		std::string eqName = Mobile_Utf16ToUtf8(EquipmentTypeInfo_get_Name_m214970694(info, NULL));
+		if (eqName.empty() || eqName == "Unknown" || eqName == "UNKNOWN")
+		{
+			continue;
+		}
+		std::string codeNo = Mobile_Utf16ToUtf8(EquipmentTypeInfo_get_No_m2168771525(info, NULL));
+		int32_t suffix = eqId % 100000;
+		std::map<int32_t, size_t>::iterator it = suffixToRowIdx.find(suffix);
+		bool canMerge = false;
+		if (it != suffixToRowIdx.end())
+		{
+			MobileEgoCatalogRow & existing = rows[it->second];
+			if ((eqType == 0 && existing.wpnId == 0) || (eqType == 1 && existing.armId == 0))
+			{
+				if (existing.gradeInt == gradeInt || existing.name == eqName)
+				{
+					canMerge = true;
+					if (eqType == 0) existing.wpnId = eqId;
+					else existing.armId = eqId;
+					if (existing.codeNo.empty() && !codeNo.empty()) existing.codeNo = codeNo;
+					if (gradeInt > existing.gradeInt) existing.gradeInt = gradeInt;
+				}
+			}
+		}
+		if (!canMerge)
+		{
+			MobileEgoCatalogRow row;
+			row.gradeInt = gradeInt;
+			row.wpnId = (eqType == 0) ? eqId : 0;
+			row.armId = (eqType == 1) ? eqId : 0;
+			row.orderKey = suffix;
+			row.codeNo = codeNo;
+			row.name = eqName;
+			size_t idx = rows.size();
+			rows.push_back(row);
+			if (it == suffixToRowIdx.end())
+			{
+				suffixToRowIdx[suffix] = idx;
+			}
+		}
+	}
+	if (rows.empty())
+	{
+		return "";
+	}
+	std::sort(rows.begin(), rows.end(), [](const MobileEgoCatalogRow & a, const MobileEgoCatalogRow & b) {
+		if (a.gradeInt != b.gradeInt) return a.gradeInt < b.gradeInt;
+		size_t n = std::min(a.name.size(), b.name.size());
+		for (size_t i = 0; i < n; ++i)
+		{
+			unsigned char ca = (unsigned char)std::tolower((unsigned char)a.name[i]);
+			unsigned char cb = (unsigned char)std::tolower((unsigned char)b.name[i]);
+			if (ca != cb) return ca < cb;
+		}
+		if (a.name.size() != b.name.size()) return a.name.size() < b.name.size();
+		return a.orderKey < b.orderKey;
+	});
+	std::string built;
+	built.reserve(rows.size() * 48);
+	char lineBuf[512];
+	for (size_t i = 0; i < rows.size(); ++i)
+	{
+		const MobileEgoCatalogRow & r = rows[i];
+		snprintf(lineBuf, sizeof(lineBuf), "%d\t%d\t%d\t%s\t%s\n",
+			r.gradeInt, r.wpnId, r.armId, r.codeNo.c_str(), r.name.c_str());
+		built.append(lineBuf);
+	}
+	s_mobileEgoCatalogTSV = built;
+	return s_mobileEgoCatalogTSV.c_str();
+}
+
+extern "C" int32_t Mobile_Cheat_ForgeAllEgo(void)
+{
+	EquipmentTypeList_t1756422084 * eqList = EquipmentTypeList_get_instance_m3843044845(NULL /*static, unused*/, NULL);
+	if (eqList == NULL || !eqList->get__loaded_2())
+	{
+		return 0;
+	}
+	List_1_t34581660 * all = EquipmentTypeList_GetAllData_m1095306629(eqList, NULL);
+	if (all == NULL || all->get__items_1() == NULL)
+	{
+		return 0;
+	}
+	int32_t count = all->get__size_2();
+	EquipmentTypeInfoU5BU5D_t2424480259 * items = all->get__items_1();
+	int32_t maxLen = (int32_t)(((RuntimeArray *)items)->max_length);
+	if (count > maxLen)
+	{
+		count = maxLen;
+	}
+	int32_t forged = 0;
+	for (int32_t i = 0; i < count; ++i)
+	{
+		EquipmentTypeInfo_t2857474214 * info = items->GetAt(static_cast<il2cpp_array_size_t>(i));
+		if (info == NULL)
+		{
+			continue;
+		}
+		int32_t eqId = info->get_id_0();
+		if (eqId < 200000 || eqId >= 400000)
+		{
+			continue;
+		}
+		int32_t eqType = info->get_type_1();
+		if (eqType != 0 && eqType != 1)
+		{
+			continue;
+		}
+		std::string gradeStr = Mobile_Utf16ToUtf8(info->get_grade_9());
+		if (gradeStr.size() != 1 || gradeStr[0] < '1' || gradeStr[0] > '5')
+		{
+			continue;
+		}
+		std::string eqName = Mobile_Utf16ToUtf8(EquipmentTypeInfo_get_Name_m214970694(info, NULL));
+		if (eqName.empty() || eqName == "Unknown" || eqName == "UNKNOWN")
+		{
+			continue;
+		}
+		if (Mobile_Cheat_ForgeEgoRaw(eqId))
+		{
+			++forged;
+		}
+	}
+	if (forged > 0)
+	{
+		Mobile_RefreshInventoryUI();
+	}
+	return forged;
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

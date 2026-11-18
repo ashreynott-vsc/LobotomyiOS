@@ -69757,6 +69757,309 @@ IL_0044:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#include "il2cpp-api.h"
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+#include <cmath>
+#include <cstdint>
+
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern const uint32_t SoundEffectPlayer_PlayOnce_m2526445566_MetadataUsageId;
+extern String_t* _stringLiteral791011441;
+extern String_t* _stringLiteral2994163385;
+extern RuntimeClass* String_t_il2cpp_TypeInfo_var;
+extern RuntimeClass* Object_t631007953_il2cpp_TypeInfo_var;
+extern const RuntimeMethod* Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var;
+
+extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3937257545 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
+#define Resources_Load_TisAudioClip_t3680889665_m1361768364(__this /* static, unused */, p0, method) (( AudioClip_t3680889665 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))Resources_Load_TisRuntimeObject_m597869152_gshared)(__this /* static, unused */, p0, method)
+#define GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(__this, method) (( SoundEffectPlayer_t3998987779 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m1218312437_gshared)(__this, method)
+#define GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(__this, method) (( AudioSource_t3935305588 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m1218312437_gshared)(__this, method)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Prefab_LoadPrefab_m3971740011 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Camera_t4157153871 * Camera_get_main_m3643453163 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Component_get_transform_m3162698980 (Component_t1923634451 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Transform_get_position_m36019626 (Transform_t3600365921 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void Vector3__ctor_m3353183577 (Vector3_t3722313464 * __this, float p0, float p1, float p2, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR float AudioClip_get_length_m4269890037 (AudioClip_t3680889665 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void AudioSource_set_clip_m31653938 (AudioSource_t3935305588 * __this, AudioClip_t3680889665 * p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void AudioSource_Play_m48294159 (AudioSource_t3935305588 * __this, const RuntimeMethod* method);
+
+struct MobileSfxBurstEntry
+{
+	int32_t frame;
+	int32_t count;
+	uint32_t lastPlayerHandle;
+};
+
+static int32_t s_sfxCacheSceneGen = -1;
+static std::unordered_map<std::string, uint32_t> s_audioClipCache;
+static std::unordered_set<std::string> s_missingAudioClips;
+static std::unordered_map<std::string, MobileSfxBurstEntry> s_sfxBurstMap;
+static std::vector<uint32_t> s_sfxFreePoolHandles;
+static std::unordered_set<uintptr_t> s_sfxPooledPtrs;
+static std::unordered_set<uintptr_t> s_sfxInFreePtrs;
+
+static void Mobile_SyncSfxCacheScene(void)
+{
+	int32_t curGen = Mobile_GetSceneGeneration();
+	if (s_sfxCacheSceneGen == curGen)
+	{
+		return;
+	}
+	for (std::unordered_map<std::string, uint32_t>::iterator it = s_audioClipCache.begin(); it != s_audioClipCache.end(); ++it)
+	{
+		if (it->second != 0) il2cpp_gchandle_free(it->second);
+	}
+	s_audioClipCache.clear();
+	s_missingAudioClips.clear();
+	for (std::unordered_map<std::string, MobileSfxBurstEntry>::iterator it = s_sfxBurstMap.begin(); it != s_sfxBurstMap.end(); ++it)
+	{
+		if (it->second.lastPlayerHandle != 0) il2cpp_gchandle_free(it->second.lastPlayerHandle);
+	}
+	s_sfxBurstMap.clear();
+	for (size_t i = 0; i < s_sfxFreePoolHandles.size(); ++i)
+	{
+		if (s_sfxFreePoolHandles[i] != 0) il2cpp_gchandle_free(s_sfxFreePoolHandles[i]);
+	}
+	s_sfxFreePoolHandles.clear();
+	s_sfxPooledPtrs.clear();
+	s_sfxInFreePtrs.clear();
+	s_sfxCacheSceneGen = curGen;
+}
+
+static std::string Mobile_SfxStringToUtf8(String_t * s)
+{
+	std::string out;
+	if (!s) return out;
+	int32_t len = s->get_length_0();
+	const Il2CppChar * ch = s->get_address_of_start_char_1();
+	out.reserve((size_t)len);
+	for (int32_t i = 0; i < len; ++i)
+	{
+		Il2CppChar c = ch[i];
+		out.push_back(c < 128 ? (char)c : '?');
+	}
+	return out;
+}
+
+static void Mobile_EnsureSfxPlayOnceMeta(void)
+{
+	static bool s_metaInit = false;
+	if (!s_metaInit)
+	{
+		il2cpp_codegen_initialize_method(SoundEffectPlayer_PlayOnce_m2526445566_MetadataUsageId);
+		s_metaInit = true;
+	}
+}
+
+static AudioClip_t3680889665 * Mobile_LoadCachedSfxClip(String_t * filename, const std::string & key)
+{
+	Mobile_EnsureSfxPlayOnceMeta();
+	Mobile_SyncSfxCacheScene();
+	if (key.empty() || !filename)
+	{
+		return NULL;
+	}
+	if (s_missingAudioClips.find(key) != s_missingAudioClips.end())
+	{
+		return NULL;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	std::unordered_map<std::string, uint32_t>::iterator it = s_audioClipCache.find(key);
+	if (it != s_audioClipCache.end())
+	{
+		AudioClip_t3680889665 * cached = (AudioClip_t3680889665 *)il2cpp_gchandle_get_target(it->second);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cached, (Object_t631007953 *)NULL, NULL))
+		{
+			return cached;
+		}
+		il2cpp_gchandle_free(it->second);
+		s_audioClipCache.erase(it);
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+	String_t * pathStr = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, filename, NULL);
+	AudioClip_t3680889665 * clip = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, pathStr, Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)clip, (Object_t631007953 *)NULL, NULL))
+	{
+		if (s_missingAudioClips.size() < 128)
+		{
+			s_missingAudioClips.insert(key);
+		}
+		return NULL;
+	}
+	s_audioClipCache[key] = il2cpp_gchandle_new((Il2CppObject *)clip, false);
+	return clip;
+}
+
+static bool Mobile_TryRecyclePooledSfx(SoundEffectPlayer_t3998987779 * p)
+{
+	if (!p)
+	{
+		return false;
+	}
+	Mobile_SyncSfxCacheScene();
+	uintptr_t ptr = (uintptr_t)p;
+	if (s_sfxPooledPtrs.find(ptr) == s_sfxPooledPtrs.end())
+	{
+		return false;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	AudioSource_t3935305588 * src = p->get_src_6();
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)src, (Object_t631007953 *)NULL, NULL))
+	{
+		AudioSource_Stop_m2682712816(src, NULL);
+		AudioSource_set_clip_m31653938(src, (AudioClip_t3680889665 *)NULL, NULL);
+	}
+	p->set_halted_5((bool)1);
+	p->set_elapsedTime_3(0.0f);
+	p->set_destroyTime_2(999999.0f);
+	GameObject_t1113636619 * go = Component_get_gameObject_m442555142((Component_t1923634451 *)p, NULL);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL))
+	{
+		GameObject_SetActive_m796801857(go, (bool)0, NULL);
+	}
+	if (s_sfxInFreePtrs.find(ptr) == s_sfxInFreePtrs.end() && s_sfxFreePoolHandles.size() < 48)
+	{
+		s_sfxInFreePtrs.insert(ptr);
+		s_sfxFreePoolHandles.push_back(il2cpp_gchandle_new((Il2CppObject *)p, false));
+	}
+	return true;
+}
+
+static SoundEffectPlayer_t3998987779 * Mobile_PlayOncePooled(
+	String_t * filename,
+	const Vector2_t2156229523 & pos,
+	bool applyPitch, float pitch,
+	bool applyVolume, float volume,
+	bool applyRolloff, int32_t rolloffMode)
+{
+	std::string key = Mobile_SfxStringToUtf8(filename);
+	AudioClip_t3680889665 * clip = Mobile_LoadCachedSfxClip(filename, key);
+	if (!clip)
+	{
+		return (SoundEffectPlayer_t3998987779 *)NULL;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	int32_t curFrame = Mobile_GetFrameCount();
+	MobileSfxBurstEntry & burst = s_sfxBurstMap[key];
+	if (burst.frame >= 0 && std::abs(curFrame - burst.frame) <= 1)
+	{
+		++burst.count;
+		if (burst.count >= 4 && burst.lastPlayerHandle != 0)
+		{
+			SoundEffectPlayer_t3998987779 * lastP = (SoundEffectPlayer_t3998987779 *)il2cpp_gchandle_get_target(burst.lastPlayerHandle);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)lastP, (Object_t631007953 *)NULL, NULL))
+			{
+				AudioSource_t3935305588 * lastSrc = lastP->get_src_6();
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)lastSrc, (Object_t631007953 *)NULL, NULL))
+				{
+					return lastP;
+				}
+			}
+		}
+	}
+	else
+	{
+		burst.frame = curFrame;
+		burst.count = 1;
+	}
+
+	GameObject_t1113636619 * go = NULL;
+	SoundEffectPlayer_t3998987779 * player = NULL;
+	AudioSource_t3935305588 * src = NULL;
+
+	while (!s_sfxFreePoolHandles.empty())
+	{
+		uint32_t h = s_sfxFreePoolHandles.back();
+		s_sfxFreePoolHandles.pop_back();
+		SoundEffectPlayer_t3998987779 * cand = (SoundEffectPlayer_t3998987779 *)il2cpp_gchandle_get_target(h);
+		il2cpp_gchandle_free(h);
+		if (cand)
+		{
+			s_sfxInFreePtrs.erase((uintptr_t)cand);
+		}
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cand, (Object_t631007953 *)NULL, NULL))
+		{
+			GameObject_t1113636619 * cgo = Component_get_gameObject_m442555142((Component_t1923634451 *)cand, NULL);
+			AudioSource_t3935305588 * csrc = cand->get_src_6();
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cgo, (Object_t631007953 *)NULL, NULL) &&
+				Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)csrc, (Object_t631007953 *)NULL, NULL))
+			{
+				player = cand;
+				go = cgo;
+				src = csrc;
+				GameObject_SetActive_m796801857(go, (bool)1, NULL);
+				break;
+			}
+		}
+	}
+
+	if (!player)
+	{
+		go = Prefab_LoadPrefab_m3971740011(NULL /*static, unused*/, _stringLiteral2994163385, NULL);
+		if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL))
+		{
+			return (SoundEffectPlayer_t3998987779 *)NULL;
+		}
+		player = GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(go, GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721_RuntimeMethod_var);
+		src = GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(go, GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var);
+		if (!player || !src)
+		{
+			return player;
+		}
+		if (s_sfxPooledPtrs.size() < 48)
+		{
+			s_sfxPooledPtrs.insert((uintptr_t)player);
+		}
+	}
+
+	Transform_t3600365921 * tr = GameObject_get_transform_m1369836730(go, NULL);
+	if (tr)
+	{
+		float z = -10.0f;
+		Camera_t4157153871 * mainCam = Camera_get_main_m3643453163(NULL /*static, unused*/, NULL);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mainCam, (Object_t631007953 *)NULL, NULL))
+		{
+			Transform_t3600365921 * camTr = Component_get_transform_m3162698980((Component_t1923634451 *)mainCam, NULL);
+			if (camTr)
+			{
+				Vector3_t3722313464 camPos = Transform_get_position_m36019626(camTr, NULL);
+				z = camPos.get_z_3();
+			}
+		}
+		Vector3_t3722313464 pPos;
+		memset(&pPos, 0, sizeof(pPos));
+		Vector3__ctor_m3353183577(&pPos, pos.get_x_0(), pos.get_y_1(), z, NULL);
+		Transform_set_position_m3387557959(tr, pPos, NULL);
+	}
+
+	AudioSource_Stop_m2682712816(src, NULL);
+	AudioSource_set_loop_m3659884460(src, (bool)0, NULL);
+	AudioSource_set_pitch_m2413801168(src, applyPitch ? pitch : 1.0f, NULL);
+	AudioSource_set_volume_m1273312851(src, applyVolume ? volume : 1.0f, NULL);
+	AudioSource_set_rolloffMode_m3247632880(src, applyRolloff ? rolloffMode : 0, NULL);
+	AudioSource_set_clip_m31653938(src, clip, NULL);
+	AudioSource_Play_m48294159(src, NULL);
+
+	player->set_elapsedTime_3(0.0f);
+	player->set_onshot_4((bool)1);
+	player->set_halted_5((bool)0);
+	player->set_destroyTime_2(AudioClip_get_length_m4269890037(clip, NULL));
+
+	if (burst.lastPlayerHandle != 0)
+	{
+		il2cpp_gchandle_free(burst.lastPlayerHandle);
+	}
+	burst.lastPlayerHandle = il2cpp_gchandle_new((Il2CppObject *)player, false);
+	return player;
+}
+
 // System.Void SoundEffectPlayer::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void SoundEffectPlayer__ctor_m1531147694 (SoundEffectPlayer_t3998987779 * __this, const RuntimeMethod* method)
 {
@@ -69890,10 +70193,13 @@ IL_001f:
 		{
 			SoundEffectPlayer_t3998987779 ** L_7 = ___player0;
 			SoundEffectPlayer_t3998987779 * L_8 = *((SoundEffectPlayer_t3998987779 **)L_7);
-			NullCheck(L_8);
-			GameObject_t1113636619 * L_9 = Component_get_gameObject_m442555142(L_8, /*hidden argument*/NULL);
-			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-			Object_Destroy_m565254235(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
+			if (!Mobile_TryRecyclePooledSfx(L_8))
+			{
+				NullCheck(L_8);
+				GameObject_t1113636619 * L_9 = Component_get_gameObject_m442555142(L_8, /*hidden argument*/NULL);
+				IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+				Object_Destroy_m565254235(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
+			}
 			SoundEffectPlayer_t3998987779 ** L_10 = ___player0;
 			*((RuntimeObject **)(L_10)) = (RuntimeObject *)NULL;
 			Il2CppCodeGenWriteBarrier((RuntimeObject **)(L_10), (RuntimeObject *)NULL);
@@ -70099,330 +70405,22 @@ IL_0034:
 // SoundEffectPlayer SoundEffectPlayer::PlayOnce(System.String,UnityEngine.Vector2)
 extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_PlayOnce_m2526445566 (RuntimeObject * __this /* static, unused */, String_t* ___filename0, Vector2_t2156229523  ___position1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (SoundEffectPlayer_PlayOnce_m2526445566_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	AudioClip_t3680889665 * V_0 = NULL;
-	GameObject_t1113636619 * V_1 = NULL;
-	SoundEffectPlayer_t3998987779 * V_2 = NULL;
-	AudioSource_t3935305588 * V_3 = NULL;
-	Vector3_t3722313464  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	{
-		String_t* L_0 = ___filename0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_0, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_2 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_0 = L_2;
-		AudioClip_t3680889665 * L_3 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		return (SoundEffectPlayer_t3998987779 *)NULL;
-	}
-
-IL_001f:
-	{
-		GameObject_t1113636619 * L_5 = Prefab_LoadPrefab_m3971740011(NULL /*static, unused*/, _stringLiteral2994163385, /*hidden argument*/NULL);
-		V_1 = L_5;
-		GameObject_t1113636619 * L_6 = V_1;
-		NullCheck(L_6);
-		SoundEffectPlayer_t3998987779 * L_7 = GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(L_6, /*hidden argument*/GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721_RuntimeMethod_var);
-		V_2 = L_7;
-		GameObject_t1113636619 * L_8 = V_1;
-		NullCheck(L_8);
-		AudioSource_t3935305588 * L_9 = GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(L_8, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var);
-		V_3 = L_9;
-		GameObject_t1113636619 * L_10 = V_1;
-		NullCheck(L_10);
-		Transform_t3600365921 * L_11 = GameObject_get_transform_m1369836730(L_10, /*hidden argument*/NULL);
-		float L_12 = (&___position1)->get_x_0();
-		float L_13 = (&___position1)->get_y_1();
-		Camera_t4157153871 * L_14 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		Transform_t3600365921 * L_15 = Component_get_transform_m3162698980(L_14, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Vector3_t3722313464  L_16 = Transform_get_position_m36019626(L_15, /*hidden argument*/NULL);
-		V_4 = L_16;
-		float L_17 = (&V_4)->get_z_3();
-		Vector3_t3722313464  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector3__ctor_m3353183577((&L_18), L_12, L_13, L_17, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Transform_set_position_m3387557959(L_11, L_18, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_19 = V_3;
-		AudioClip_t3680889665 * L_20 = V_0;
-		NullCheck(L_19);
-		AudioSource_set_clip_m31653938(L_19, L_20, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_21 = V_3;
-		NullCheck(L_21);
-		AudioSource_Play_m48294159(L_21, /*hidden argument*/NULL);
-		SoundEffectPlayer_t3998987779 * L_22 = V_2;
-		AudioClip_t3680889665 * L_23 = V_0;
-		NullCheck(L_23);
-		float L_24 = AudioClip_get_length_m4269890037(L_23, /*hidden argument*/NULL);
-		NullCheck(L_22);
-		L_22->set_destroyTime_2(L_24);
-		SoundEffectPlayer_t3998987779 * L_25 = V_2;
-		return L_25;
-	}
+	return Mobile_PlayOncePooled(___filename0, ___position1, false, 1.0f, false, 1.0f, false, 0);
 }
 // SoundEffectPlayer SoundEffectPlayer::PlayOnce(System.String,System.Single,UnityEngine.Vector2)
 extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_PlayOnce_m1810096662 (RuntimeObject * __this /* static, unused */, String_t* ___filename0, float ___pitch1, Vector2_t2156229523  ___position2, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (SoundEffectPlayer_PlayOnce_m1810096662_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	AudioClip_t3680889665 * V_0 = NULL;
-	GameObject_t1113636619 * V_1 = NULL;
-	SoundEffectPlayer_t3998987779 * V_2 = NULL;
-	AudioSource_t3935305588 * V_3 = NULL;
-	Vector3_t3722313464  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	{
-		String_t* L_0 = ___filename0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_0, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_2 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_0 = L_2;
-		AudioClip_t3680889665 * L_3 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		return (SoundEffectPlayer_t3998987779 *)NULL;
-	}
-
-IL_001f:
-	{
-		GameObject_t1113636619 * L_5 = Prefab_LoadPrefab_m3971740011(NULL /*static, unused*/, _stringLiteral2994163385, /*hidden argument*/NULL);
-		V_1 = L_5;
-		GameObject_t1113636619 * L_6 = V_1;
-		NullCheck(L_6);
-		SoundEffectPlayer_t3998987779 * L_7 = GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(L_6, /*hidden argument*/GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721_RuntimeMethod_var);
-		V_2 = L_7;
-		GameObject_t1113636619 * L_8 = V_1;
-		NullCheck(L_8);
-		AudioSource_t3935305588 * L_9 = GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(L_8, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var);
-		V_3 = L_9;
-		AudioSource_t3935305588 * L_10 = V_3;
-		float L_11 = ___pitch1;
-		NullCheck(L_10);
-		AudioSource_set_pitch_m2413801168(L_10, L_11, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_12 = V_1;
-		NullCheck(L_12);
-		Transform_t3600365921 * L_13 = GameObject_get_transform_m1369836730(L_12, /*hidden argument*/NULL);
-		float L_14 = (&___position2)->get_x_0();
-		float L_15 = (&___position2)->get_y_1();
-		Camera_t4157153871 * L_16 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_16);
-		Transform_t3600365921 * L_17 = Component_get_transform_m3162698980(L_16, /*hidden argument*/NULL);
-		NullCheck(L_17);
-		Vector3_t3722313464  L_18 = Transform_get_position_m36019626(L_17, /*hidden argument*/NULL);
-		V_4 = L_18;
-		float L_19 = (&V_4)->get_z_3();
-		Vector3_t3722313464  L_20;
-		memset(&L_20, 0, sizeof(L_20));
-		Vector3__ctor_m3353183577((&L_20), L_14, L_15, L_19, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		Transform_set_position_m3387557959(L_13, L_20, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_21 = V_3;
-		AudioClip_t3680889665 * L_22 = V_0;
-		NullCheck(L_21);
-		AudioSource_set_clip_m31653938(L_21, L_22, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_23 = V_3;
-		NullCheck(L_23);
-		AudioSource_Play_m48294159(L_23, /*hidden argument*/NULL);
-		SoundEffectPlayer_t3998987779 * L_24 = V_2;
-		AudioClip_t3680889665 * L_25 = V_0;
-		NullCheck(L_25);
-		float L_26 = AudioClip_get_length_m4269890037(L_25, /*hidden argument*/NULL);
-		NullCheck(L_24);
-		L_24->set_destroyTime_2(L_26);
-		SoundEffectPlayer_t3998987779 * L_27 = V_2;
-		return L_27;
-	}
+	return Mobile_PlayOncePooled(___filename0, ___position2, true, ___pitch1, false, 1.0f, false, 0);
 }
 // SoundEffectPlayer SoundEffectPlayer::PlayOnce(System.String,UnityEngine.Vector2,System.Single)
 extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_PlayOnce_m44735787 (RuntimeObject * __this /* static, unused */, String_t* ___filename0, Vector2_t2156229523  ___position1, float ___volume2, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (SoundEffectPlayer_PlayOnce_m44735787_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	AudioClip_t3680889665 * V_0 = NULL;
-	GameObject_t1113636619 * V_1 = NULL;
-	SoundEffectPlayer_t3998987779 * V_2 = NULL;
-	AudioSource_t3935305588 * V_3 = NULL;
-	Vector3_t3722313464  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	{
-		String_t* L_0 = ___filename0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_0, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_2 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_0 = L_2;
-		AudioClip_t3680889665 * L_3 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		return (SoundEffectPlayer_t3998987779 *)NULL;
-	}
-
-IL_001f:
-	{
-		GameObject_t1113636619 * L_5 = Prefab_LoadPrefab_m3971740011(NULL /*static, unused*/, _stringLiteral2994163385, /*hidden argument*/NULL);
-		V_1 = L_5;
-		GameObject_t1113636619 * L_6 = V_1;
-		NullCheck(L_6);
-		SoundEffectPlayer_t3998987779 * L_7 = GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(L_6, /*hidden argument*/GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721_RuntimeMethod_var);
-		V_2 = L_7;
-		GameObject_t1113636619 * L_8 = V_1;
-		NullCheck(L_8);
-		AudioSource_t3935305588 * L_9 = GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(L_8, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var);
-		V_3 = L_9;
-		GameObject_t1113636619 * L_10 = V_1;
-		NullCheck(L_10);
-		Transform_t3600365921 * L_11 = GameObject_get_transform_m1369836730(L_10, /*hidden argument*/NULL);
-		float L_12 = (&___position1)->get_x_0();
-		float L_13 = (&___position1)->get_y_1();
-		Camera_t4157153871 * L_14 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		Transform_t3600365921 * L_15 = Component_get_transform_m3162698980(L_14, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Vector3_t3722313464  L_16 = Transform_get_position_m36019626(L_15, /*hidden argument*/NULL);
-		V_4 = L_16;
-		float L_17 = (&V_4)->get_z_3();
-		Vector3_t3722313464  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector3__ctor_m3353183577((&L_18), L_12, L_13, L_17, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Transform_set_position_m3387557959(L_11, L_18, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_19 = V_3;
-		AudioClip_t3680889665 * L_20 = V_0;
-		NullCheck(L_19);
-		AudioSource_set_clip_m31653938(L_19, L_20, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_21 = V_3;
-		float L_22 = ___volume2;
-		NullCheck(L_21);
-		AudioSource_set_volume_m1273312851(L_21, L_22, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_23 = V_3;
-		NullCheck(L_23);
-		AudioSource_Play_m48294159(L_23, /*hidden argument*/NULL);
-		SoundEffectPlayer_t3998987779 * L_24 = V_2;
-		AudioClip_t3680889665 * L_25 = V_0;
-		NullCheck(L_25);
-		float L_26 = AudioClip_get_length_m4269890037(L_25, /*hidden argument*/NULL);
-		NullCheck(L_24);
-		L_24->set_destroyTime_2(L_26);
-		SoundEffectPlayer_t3998987779 * L_27 = V_2;
-		return L_27;
-	}
+	return Mobile_PlayOncePooled(___filename0, ___position1, false, 1.0f, true, ___volume2, false, 0);
 }
 // SoundEffectPlayer SoundEffectPlayer::PlayOnce(System.String,UnityEngine.Vector2,UnityEngine.AudioRolloffMode)
 extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_PlayOnce_m8886396 (RuntimeObject * __this /* static, unused */, String_t* ___filename0, Vector2_t2156229523  ___position1, int32_t ___mode2, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (SoundEffectPlayer_PlayOnce_m8886396_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	AudioClip_t3680889665 * V_0 = NULL;
-	GameObject_t1113636619 * V_1 = NULL;
-	SoundEffectPlayer_t3998987779 * V_2 = NULL;
-	AudioSource_t3935305588 * V_3 = NULL;
-	Vector3_t3722313464  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	{
-		String_t* L_0 = ___filename0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral791011441, L_0, /*hidden argument*/NULL);
-		AudioClip_t3680889665 * L_2 = Resources_Load_TisAudioClip_t3680889665_m1361768364(NULL /*static, unused*/, L_1, /*hidden argument*/Resources_Load_TisAudioClip_t3680889665_m1361768364_RuntimeMethod_var);
-		V_0 = L_2;
-		AudioClip_t3680889665 * L_3 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		return (SoundEffectPlayer_t3998987779 *)NULL;
-	}
-
-IL_001f:
-	{
-		GameObject_t1113636619 * L_5 = Prefab_LoadPrefab_m3971740011(NULL /*static, unused*/, _stringLiteral2994163385, /*hidden argument*/NULL);
-		V_1 = L_5;
-		GameObject_t1113636619 * L_6 = V_1;
-		NullCheck(L_6);
-		SoundEffectPlayer_t3998987779 * L_7 = GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721(L_6, /*hidden argument*/GameObject_GetComponent_TisSoundEffectPlayer_t3998987779_m4022053721_RuntimeMethod_var);
-		V_2 = L_7;
-		GameObject_t1113636619 * L_8 = V_1;
-		NullCheck(L_8);
-		AudioSource_t3935305588 * L_9 = GameObject_GetComponent_TisAudioSource_t3935305588_m625814604(L_8, /*hidden argument*/GameObject_GetComponent_TisAudioSource_t3935305588_m625814604_RuntimeMethod_var);
-		V_3 = L_9;
-		GameObject_t1113636619 * L_10 = V_1;
-		NullCheck(L_10);
-		Transform_t3600365921 * L_11 = GameObject_get_transform_m1369836730(L_10, /*hidden argument*/NULL);
-		float L_12 = (&___position1)->get_x_0();
-		float L_13 = (&___position1)->get_y_1();
-		Camera_t4157153871 * L_14 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		Transform_t3600365921 * L_15 = Component_get_transform_m3162698980(L_14, /*hidden argument*/NULL);
-		NullCheck(L_15);
-		Vector3_t3722313464  L_16 = Transform_get_position_m36019626(L_15, /*hidden argument*/NULL);
-		V_4 = L_16;
-		float L_17 = (&V_4)->get_z_3();
-		Vector3_t3722313464  L_18;
-		memset(&L_18, 0, sizeof(L_18));
-		Vector3__ctor_m3353183577((&L_18), L_12, L_13, L_17, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Transform_set_position_m3387557959(L_11, L_18, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_19 = V_3;
-		int32_t L_20 = ___mode2;
-		NullCheck(L_19);
-		AudioSource_set_rolloffMode_m3247632880(L_19, L_20, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_21 = V_3;
-		AudioClip_t3680889665 * L_22 = V_0;
-		NullCheck(L_21);
-		AudioSource_set_clip_m31653938(L_21, L_22, /*hidden argument*/NULL);
-		AudioSource_t3935305588 * L_23 = V_3;
-		NullCheck(L_23);
-		AudioSource_Play_m48294159(L_23, /*hidden argument*/NULL);
-		SoundEffectPlayer_t3998987779 * L_24 = V_2;
-		AudioClip_t3680889665 * L_25 = V_0;
-		NullCheck(L_25);
-		float L_26 = AudioClip_get_length_m4269890037(L_25, /*hidden argument*/NULL);
-		NullCheck(L_24);
-		L_24->set_destroyTime_2(L_26);
-		SoundEffectPlayer_t3998987779 * L_27 = V_2;
-		return L_27;
-	}
+	return Mobile_PlayOncePooled(___filename0, ___position1, false, 1.0f, false, 1.0f, true, ___mode2);
 }
 // SoundEffectPlayer SoundEffectPlayer::Play(System.String,UnityEngine.Transform)
 extern "C" IL2CPP_METHOD_ATTR SoundEffectPlayer_t3998987779 * SoundEffectPlayer_Play_m2477738461 (RuntimeObject * __this /* static, unused */, String_t* ___filename0, Transform_t3600365921 * ___transf1, const RuntimeMethod* method)
@@ -70679,6 +70677,10 @@ extern "C" IL2CPP_METHOD_ATTR void SoundEffectPlayer_Stop_m358299177 (SoundEffec
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		if (Mobile_TryRecyclePooledSfx(__this))
+		{
+			return;
+		}
 		GameObject_t1113636619 * L_0 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		Object_Destroy_m565254235(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);

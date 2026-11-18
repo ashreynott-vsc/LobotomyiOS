@@ -68333,6 +68333,22 @@ extern "C" void Mobile_CloseRabbitSelectionWindow(void)
 		RabbitProtocolWindow_OnClose_m2777076457(win, NULL);
 	}
 }
+
+extern "C" Transform_t3600365921 * Mobile_GetRabbitConfirmTransform(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	Button_t4055032469 * btn = win->get_ConfirmButton_15();
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)btn, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	return Component_get_transform_m3162698980((Component_t1923634451 *)btn, NULL);
+}
 // System.Void Rabbit.RabbitProtocolWindow::OnWindowClosed()
 extern "C" IL2CPP_METHOD_ATTR void RabbitProtocolWindow_OnWindowClosed_m218425360 (RabbitProtocolWindow_t258339763 * __this, const RuntimeMethod* method)
 {
@@ -69345,11 +69361,6 @@ IL_00fa:
 		RabbitManager_t3874517110 * L_33 = RabbitManager_get_instance_m120562680(NULL /*static, unused*/, /*hidden argument*/NULL);
 		NullCheck(L_33);
 		RabbitManager_OnStartSession_m3481881108(L_33, /*hidden argument*/NULL);
-		CheckPointUI_t3673722095 * L_34 = __this->get_activatedAnim_13();
-		NullCheck(L_34);
-		GameObject_t1113636619 * L_35 = Component_get_gameObject_m442555142(L_34, /*hidden argument*/NULL);
-		NullCheck(L_35);
-		GameObject_SetActive_m796801857(L_35, (bool)1, /*hidden argument*/NULL);
 		CheckPointUI_t3673722095 * L_36 = __this->get_activatedAnim_13();
 		NullCheck(L_36);
 		CheckPointUI_Show_m1223993055(L_36, /*hidden argument*/NULL);

@@ -50813,6 +50813,12 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraConversationController_Awake_m775519582
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		SefiraConversationController_t2932162670 * prevInst = ((SefiraConversationController_t2932162670_StaticFields*)il2cpp_codegen_static_fields_for(SefiraConversationController_t2932162670_il2cpp_TypeInfo_var))->get__instance_2();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Equality_m1810815630(NULL /*static, unused*/, (Object_t631007953 *)prevInst, (Object_t631007953 *)__this, NULL))
+		{
+			return;
+		}
 		((SefiraConversationController_t2932162670_StaticFields*)il2cpp_codegen_static_fields_for(SefiraConversationController_t2932162670_il2cpp_TypeInfo_var))->set__instance_2(__this);
 		Notice_t3379439397 * L_0 = Notice_get_instance_m52603211(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(NoticeName_t1380086577_il2cpp_TypeInfo_var);
@@ -51990,13 +51996,19 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraConversationController_UpdateConversati
 		V_0 = L_5;
 		int32_t L_6 = __this->get_count_6();
 		__this->set_count_6(((int32_t)il2cpp_codegen_add((int32_t)L_6, (int32_t)1)));
+		GameObject_t1113636619 * L_convGo = Component_get_gameObject_m442555142((Component_t1923634451 *)__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)L_convGo, (Object_t631007953 *)NULL, NULL) &&
+			!GameObject_get_activeInHierarchy_m2006396688(L_convGo, NULL))
+		{
+			GameObject_SetActive_m796801857(L_convGo, (bool)1, /*hidden argument*/NULL);
+		}
 		RuntimeObject* L_7 = SefiraConversationController_MoveDown_m2031920483(__this, /*hidden argument*/NULL);
 		MonoBehaviour_StopCoroutine_m615723318(__this, L_7, /*hidden argument*/NULL);
 		RuntimeObject* L_8 = SefiraConversationController_MoveDown_m2031920483(__this, /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_8, /*hidden argument*/NULL);
 		Object_t631007953 * L_9 = __this->get__conversationPrefab_4();
 		Transform_t3600365921 * L_10 = __this->get__layout_3();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		Object_t631007953 * L_11 = Object_Instantiate_m3867924078(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
 		__this->set_asd_7(((GameObject_t1113636619 *)IsInstSealed((RuntimeObject*)L_11, GameObject_t1113636619_il2cpp_TypeInfo_var)));
 		GameObject_t1113636619 * L_12 = __this->get_asd_7();
@@ -52019,7 +52031,8 @@ extern "C" IL2CPP_METHOD_ATTR void SefiraConversationController_UpdateConversati
 		float L_23 = (&V_0)->get_z_3();
 		Vector3_t3722313464  L_24;
 		memset(&L_24, 0, sizeof(L_24));
-		Vector3__ctor_m3353183577((&L_24), L_21, ((float)il2cpp_codegen_add((float)L_22, (float)(105.0f))), L_23, /*hidden argument*/NULL);
+		float L_yOffset = (L_2 <= 1) ? 0.0f : 105.0f;
+		Vector3__ctor_m3353183577((&L_24), L_21, ((float)il2cpp_codegen_add((float)L_22, L_yOffset)), L_23, /*hidden argument*/NULL);
 		NullCheck(L_20);
 		Transform_set_localPosition_m4128471975(L_20, L_24, /*hidden argument*/NULL);
 		Transform_t3600365921 * L_25 = __this->get__layout_3();

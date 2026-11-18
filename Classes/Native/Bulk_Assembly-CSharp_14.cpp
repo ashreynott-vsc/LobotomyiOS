@@ -49938,8 +49938,6 @@ extern "C" IL2CPP_METHOD_ATTR void CheckPointUI_Show_m1223993055 (CheckPointUI_t
 		NullCheck(L_0);
 		VirtActionInvoker1< float >::Invoke(4 /* System.Void Timer::StartTimer(System.Single) */, L_0, L_1);
 		GameObject_t1113636619 * L_2 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		GameObject_SetActive_m796801857(L_2, (bool)1, /*hidden argument*/NULL);
 		UIContentMover_t4102417905 * L_3 = __this->get_upperMover_2();
 		NullCheck(L_3);
 		UIContentMover_InitPosition_m2116743347(L_3, /*hidden argument*/NULL);
@@ -49948,6 +49946,13 @@ extern "C" IL2CPP_METHOD_ATTR void CheckPointUI_Show_m1223993055 (CheckPointUI_t
 		UIContentMover_InitPosition_m2116743347(L_4, /*hidden argument*/NULL);
 		UIController_t2237998930 * L_5 = __this->get_controller_6();
 		NullCheck(L_5);
+		GameObject_t1113636619 * L_ctrlGo = Component_get_gameObject_m442555142((Component_t1923634451 *)L_5, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)L_ctrlGo, (Object_t631007953 *)L_2, /*hidden argument*/NULL))
+		{
+			NullCheck(L_2);
+			GameObject_SetActive_m796801857(L_2, (bool)1, /*hidden argument*/NULL);
+		}
 		VirtActionInvoker0::Invoke(4 /* System.Void UIController::Show() */, L_5);
 		return;
 	}

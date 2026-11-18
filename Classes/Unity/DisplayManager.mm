@@ -143,7 +143,8 @@ static DisplayManager* _DisplayManager = nil;
     _screenSize = CGSizeMake(layerSize.width * scale, layerSize.height * scale);
 
     bool systemSizeChanged  = _surface->systemW != _screenSize.width || _surface->systemH != _screenSize.height;
-    bool msaaChanged        = _supportsMSAA && (_surface->msaaSamples != params.msaaSampleCount);
+    // Disable Metal MSAA (2x multisample render targets waste ~30-60MB VRAM & tile bandwidth on 2D orthographic sprites)
+    bool msaaChanged        = false;
     bool depthfmtChanged    = _surface->disableDepthAndStencil != params.disableDepthAndStencil;
     bool cvCacheChanged     = _surface->useCVTextureCache != params.useCVTextureCache;
 
@@ -169,7 +170,7 @@ static DisplayManager* _DisplayManager = nil;
     _surface->targetW = params.renderW > 0 ? params.renderW : _surface->systemW;
     _surface->targetH = params.renderH > 0 ? params.renderH : _surface->systemH;
 
-    _surface->msaaSamples = _supportsMSAA ? params.msaaSampleCount : 0;
+    _surface->msaaSamples = 0;
     _surface->srgb = params.srgb;
     _surface->wideColor = params.wideColor;
     _surface->useCVTextureCache = params.useCVTextureCache;

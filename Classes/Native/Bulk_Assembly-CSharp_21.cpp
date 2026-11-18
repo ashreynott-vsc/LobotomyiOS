@@ -53990,6 +53990,10 @@ extern "C" IL2CPP_METHOD_ATTR void GameStatusUI_Update_m342023019 (GameStatusUI_
 	}
 }
 // System.Void GameStatusUI.GameStatusUI::OnEnable()
+extern "C" IL2CPP_METHOD_ATTR void SefiraConversationController_Awake_m775519582 (SefiraConversationController_t2932162670 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR SefiraConversationController_t2932162670 * SefiraConversationController_get_Instance_m2212784831 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+
+// System.Void GameStatusUI.GameStatusUI::OnEnable()
 extern "C" IL2CPP_METHOD_ATTR void GameStatusUI_OnEnable_m441141480 (GameStatusUI_t1798712816 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54016,6 +54020,12 @@ extern "C" IL2CPP_METHOD_ATTR void GameStatusUI_OnEnable_m441141480 (GameStatusU
 		GameObject_SetActive_m796801857(L_5, (bool)0, /*hidden argument*/NULL);
 		SefiraConversationController_t2932162670 * L_6 = __this->get_sefiraConversationController_10();
 		NullCheck(L_6);
+		SefiraConversationController_t2932162670 * L_curConv = SefiraConversationController_get_Instance_m2212784831(NULL /*static, unused*/, NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		if (Object_op_Equality_m1810815630(NULL /*static, unused*/, (Object_t631007953 *)L_curConv, (Object_t631007953 *)NULL, NULL))
+		{
+			SefiraConversationController_Awake_m775519582(L_6, /*hidden argument*/NULL);
+		}
 		GameObject_t1113636619 * L_7 = Component_get_gameObject_m442555142(L_6, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		GameObject_SetActive_m796801857(L_7, (bool)0, /*hidden argument*/NULL);

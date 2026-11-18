@@ -50505,6 +50505,7 @@ extern "C" IL2CPP_METHOD_ATTR bool AnimatorStateInfo_IsName_m3393819976 (Animato
 extern "C" IL2CPP_METHOD_ATTR float AnimatorStateInfo_get_normalizedTime_m2701390466 (AnimatorStateInfo_t509032636 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Animator>()
 #define Component_GetComponent_TisAnimator_t434523843_m2351447238(__this, method) ((  Animator_t434523843 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method)
+
 // System.Void UIController::set_isShow(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void UIController_set_isShow_m191599003 (UIController_t2237998930 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UIController::TrySaveScale()
@@ -72863,6 +72864,86 @@ IL_0045:
 		return (bool)G_B5_0;
 	}
 }
+
+#include "il2cpp-api.h"
+#include <vector>
+
+struct MobilePendingUIControllerEntry
+{
+	uint32_t handle;
+	bool value;
+	int32_t age;
+};
+
+static std::vector<MobilePendingUIControllerEntry> s_mobilePendingUIControllers;
+
+static void Mobile_QueuePendingUIController(UIController_t2237998930 * ctrl, bool value)
+{
+	if (!ctrl)
+	{
+		return;
+	}
+	for (size_t i = 0; i < s_mobilePendingUIControllers.size(); ++i)
+	{
+		if (il2cpp_gchandle_get_target(s_mobilePendingUIControllers[i].handle) == (Il2CppObject *)ctrl)
+		{
+			s_mobilePendingUIControllers[i].value = value;
+			s_mobilePendingUIControllers[i].age = 0;
+			return;
+		}
+	}
+	MobilePendingUIControllerEntry entry;
+	entry.handle = il2cpp_gchandle_new((Il2CppObject *)ctrl, false);
+	entry.value = value;
+	entry.age = 0;
+	s_mobilePendingUIControllers.push_back(entry);
+}
+
+extern "C" void Mobile_FlushPendingUIControllers(void)
+{
+	if (s_mobilePendingUIControllers.empty())
+	{
+		return;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	for (size_t i = 0; i < s_mobilePendingUIControllers.size(); )
+	{
+		MobilePendingUIControllerEntry & e = s_mobilePendingUIControllers[i];
+		UIController_t2237998930 * ctrl = (UIController_t2237998930 *)il2cpp_gchandle_get_target(e.handle);
+		if (!ctrl || !Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)ctrl, (Object_t631007953 *)NULL, NULL))
+		{
+			il2cpp_gchandle_free(e.handle);
+			s_mobilePendingUIControllers.erase(s_mobilePendingUIControllers.begin() + i);
+			continue;
+		}
+		GameObject_t1113636619 * go = Component_get_gameObject_m442555142((Component_t1923634451 *)ctrl, NULL);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL) &&
+			GameObject_get_activeInHierarchy_m2006396688(go, NULL))
+		{
+			Animator_t434523843 * anim = UIController_get_animator_m2326368634(ctrl, NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)anim, (Object_t631007953 *)NULL, NULL) &&
+				Animator_get_isInitialized_m4178359594(anim, NULL))
+			{
+				if (_stringLiteral582661423 != NULL)
+				{
+					Animator_SetBool_m234840832(anim, _stringLiteral582661423, e.value, NULL);
+				}
+				il2cpp_gchandle_free(e.handle);
+				s_mobilePendingUIControllers.erase(s_mobilePendingUIControllers.begin() + i);
+				continue;
+			}
+		}
+		++e.age;
+		if (e.age > 45)
+		{
+			il2cpp_gchandle_free(e.handle);
+			s_mobilePendingUIControllers.erase(s_mobilePendingUIControllers.begin() + i);
+			continue;
+		}
+		++i;
+	}
+}
+
 // System.Void UIController::set_isShow(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void UIController_set_isShow_m191599003 (UIController_t2237998930 * __this, bool ___value0, const RuntimeMethod* method)
 {
@@ -72916,6 +72997,7 @@ IL_003e:
 		bool L_7 = Animator_get_isInitialized_m4178359594(L_6, /*hidden argument*/NULL);
 		if (!L_7)
 		{
+			Mobile_QueuePendingUIController(__this, ___value0);
 			goto IL_005f;
 		}
 	}
@@ -73403,6 +73485,7 @@ IL_0040:
 
 IL_0085:
 	{
+		Mobile_FlushPendingUIControllers();
 		__this->set_U24PC_3((-1));
 	}
 

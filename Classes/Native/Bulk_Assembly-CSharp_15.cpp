@@ -68627,6 +68627,7 @@ extern "C" void Mobile_Cheat_UpgradeAllResearch (void)
 	}
 }
 
+extern "C" int32_t Mobile_Cheat_NextMeltdown(void);
 // System.Void ConsoleScript::ExecuteRawCommand(System.String)
 extern "C" IL2CPP_METHOD_ATTR void ConsoleScript_ExecuteRawCommand_m2229352777 (ConsoleScript_t447192940 * __this, String_t* ___command0, const RuntimeMethod* method)
 {
@@ -69136,6 +69137,25 @@ IL_0321:
 		}
 
 IL_0342:
+		{
+			String_t* L_next = V_2;
+			if (L_next != NULL)
+			{
+				int32_t nlen = L_next->get_length_0();
+				const Il2CppChar * nch = L_next->get_address_of_start_char_1();
+				char nbuf[32];
+				if (nlen > 0 && nlen < 31)
+				{
+					for (int32_t k = 0; k < nlen; ++k) nbuf[k] = (nch[k] < 128) ? (char)nch[k] : '?';
+					nbuf[nlen] = '\0';
+					if (strcmp(nbuf, "nextmeltdown") == 0 || strcmp(nbuf, "addmeltdown") == 0 || strcmp(nbuf, "overload") == 0)
+					{
+						Mobile_Cheat_NextMeltdown();
+						goto IL_0545;
+					}
+				}
+			}
+		}
 		{
 			String_t* L_108 = V_2;
 			IL2CPP_RUNTIME_CLASS_INIT(ConsoleCommand_t3167473278_il2cpp_TypeInfo_var);
