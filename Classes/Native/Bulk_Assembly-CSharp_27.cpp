@@ -59912,7 +59912,8 @@ extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_SetAspectMode_m4064974544
 	String_t* G_B3_0 = NULL;
 	MobileScreenManager_t831028031 * G_B3_1 = NULL;
 	{
-		int32_t L_0 = ___mode0;
+		(void)___mode0;
+		int32_t L_0 = 0;
 		__this->set__aspectMode_10(L_0);
 		MobileScreenManager_SaveMobileSettings_m3779905403(__this, /*hidden argument*/NULL);
 		s_fastEnforceRemaining = 2.5f;
@@ -65283,37 +65284,6 @@ IL_0184:
 
 IL_019c:
 	{
-		struct MoveThrottleSlot
-		{
-			uintptr_t selfKey;
-			uintptr_t targetKey;
-			MapNode_t547811713 * tgtNode;
-			MapEdge_t1485107574 * tgtEdge;
-			int32_t frame;
-		};
-		static MoveThrottleSlot s_moveCache[64] = {};
-		if (___targetNode0 != NULL &&
-			MovableObjectNode_IsMoving_m2284891312(__this, /*hidden argument*/NULL) &&
-			__this->get_blockedTimer_28() <= 0.0f)
-		{
-			MapNode_t547811713 * curTgtNode = MovableObjectNode_get_currentNode_m4052171735(___targetNode0, /*hidden argument*/NULL);
-			MapEdge_t1485107574 * curTgtEdge = MovableObjectNode_get_currentEdge_m143631775(___targetNode0, /*hidden argument*/NULL);
-			MoveThrottleSlot & slot = s_moveCache[((uintptr_t)__this >> 4) & 63u];
-			int32_t age = s_mobileFrameCount - slot.frame;
-			if (slot.selfKey == (uintptr_t)__this &&
-				slot.targetKey == (uintptr_t)___targetNode0 &&
-				slot.tgtNode == curTgtNode &&
-				slot.tgtEdge == curTgtEdge &&
-				age >= 0 && age < 12)
-			{
-				return;
-			}
-			slot.selfKey = (uintptr_t)__this;
-			slot.targetKey = (uintptr_t)___targetNode0;
-			slot.tgtNode = curTgtNode;
-			slot.tgtEdge = curTgtEdge;
-			slot.frame = s_mobileFrameCount;
-		}
 		MovableObjectNode_StopMoving_m241478899(__this, /*hidden argument*/NULL);
 		goto IL_0806;
 	}
@@ -67153,6 +67123,14 @@ extern "C" IL2CPP_METHOD_ATTR bool MovableObjectNode_CheckConnectedInPassage_m89
 		return L_6;
 	}
 }
+struct MobileMoveThrottleSlot
+{
+	uintptr_t selfKey;
+	uintptr_t targetKey;
+	MapNode_t547811713 * tgtNode;
+	MapEdge_t1485107574 * tgtEdge;
+	int32_t frame;
+};
 // System.Void MovableObjectNode::MoveToMovableNode(MovableObjectNode,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void MovableObjectNode_MoveToMovableNode_m3132931184 (MovableObjectNode_t157422193 * __this, MovableObjectNode_t157422193 * ___targetNode0, bool ___checkRabbit1, const RuntimeMethod* method)
 {
@@ -67181,6 +67159,29 @@ extern "C" IL2CPP_METHOD_ATTR void MovableObjectNode_MoveToMovableNode_m31329311
 	float G_B25_0 = 0.0f;
 	float G_B28_0 = 0.0f;
 	{
+		static MobileMoveThrottleSlot s_moveCache[64] = {};
+		if (___targetNode0 != NULL &&
+			MovableObjectNode_IsMoving_m2284891312(__this, /*hidden argument*/NULL) &&
+			__this->get_blockedTimer_28() <= 0.0f)
+		{
+			MapNode_t547811713 * curTgtNode = MovableObjectNode_get_currentNode_m4052171735(___targetNode0, /*hidden argument*/NULL);
+			MapEdge_t1485107574 * curTgtEdge = MovableObjectNode_get_currentEdge_m143631775(___targetNode0, /*hidden argument*/NULL);
+			MobileMoveThrottleSlot & slot = s_moveCache[((uintptr_t)__this >> 4) & 63u];
+			int32_t age = s_mobileFrameCount - slot.frame;
+			if (slot.selfKey == (uintptr_t)__this &&
+				slot.targetKey == (uintptr_t)___targetNode0 &&
+				slot.tgtNode == curTgtNode &&
+				slot.tgtEdge == curTgtEdge &&
+				age >= 0 && age < 12)
+			{
+				return;
+			}
+			slot.selfKey = (uintptr_t)__this;
+			slot.targetKey = (uintptr_t)___targetNode0;
+			slot.tgtNode = curTgtNode;
+			slot.tgtEdge = curTgtEdge;
+			slot.frame = s_mobileFrameCount;
+		}
 		MovableObjectNode_StopMoving_m241478899(__this, /*hidden argument*/NULL);
 		MovableObjectNode_t157422193 * L_0 = ___targetNode0;
 		NullCheck(L_0);
