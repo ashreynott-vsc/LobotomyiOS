@@ -58481,20 +58481,21 @@ struct MobileBossPalette
 
 static MobileBossPalette Mobile_GetBossPalette(int32_t sefira)
 {
-	switch (sefira)
-	{
-		case 0:  return { 0.85f, 0.22f, 0.08f, 0.24f, 0.95f, 0.46f, 0.16f, 0.085f,  0.06f,  0.10f, 2.5f,  2.0f, false, false }; // MALKUT
-		case 1:  return { 0.42f, 0.18f, 0.78f, 0.23f, 0.64f, 0.42f, 0.96f, 0.095f,  0.02f, -0.32f, 4.0f, 10.0f, true,  true  }; // YESOD
-		case 2:  return { 0.68f, 0.44f, 0.14f, 0.24f, 0.88f, 0.68f, 0.30f, 0.080f, -0.03f, -0.14f, 2.2f,  2.2f, false, false }; // HOD
-		case 3:  return { 0.12f, 0.65f, 0.28f, 0.24f, 0.30f, 0.90f, 0.48f, 0.090f,  0.08f,  0.05f, 2.0f,  1.8f, false, false }; // NETZACH
-		case 4:  return { 0.86f, 0.64f, 0.16f, 0.22f, 0.95f, 0.80f, 0.35f, 0.080f,  0.04f,  0.18f, 3.0f,  8.0f, true,  false }; // TIPERERTH1
-		case 5:  return { 0.34f, 0.36f, 0.88f, 0.22f, 0.55f, 0.60f, 0.98f, 0.085f, -0.04f,  0.18f, 3.0f,  8.0f, true,  false }; // TIPERERTH2
-		case 6:  return { 0.82f, 0.06f, 0.08f, 0.27f, 0.95f, 0.18f, 0.18f, 0.095f,  0.14f,  0.22f, 2.4f,  2.0f, false, false }; // GEBURAH
-		case 7:  return { 0.14f, 0.48f, 0.88f, 0.23f, 0.38f, 0.78f, 0.98f, 0.085f,  0.00f,  0.24f, 3.0f,  8.0f, true,  false }; // CHESED
-		case 8:  return { 0.05f, 0.04f, 0.06f, 0.30f, 0.92f, 0.74f, 0.24f, 0.090f, -0.05f,  0.12f, 2.6f,  2.2f, false, false }; // BINAH
-		case 9:  return { 0.48f, 0.54f, 0.62f, 0.22f, 0.80f, 0.84f, 0.90f, 0.075f,  0.01f, -0.18f, 3.0f,  9.0f, true,  true  }; // CHOKHMAH
-		default: return { 0.68f, 0.16f, 0.28f, 0.25f, 0.88f, 0.42f, 0.52f, 0.085f,  0.07f,  0.11f, 2.4f,  2.4f, false, false }; // KETHER/DAAT
-	}
+	static const MobileBossPalette kTable[11] = {
+		{ 0.85f, 0.22f, 0.08f, 0.24f, 0.95f, 0.46f, 0.16f, 0.085f,  0.06f,  0.10f, 2.5f,  2.0f, false, false }, // 0: MALKUT
+		{ 0.42f, 0.18f, 0.78f, 0.23f, 0.64f, 0.42f, 0.96f, 0.095f,  0.02f, -0.32f, 4.0f, 10.0f, true,  true  }, // 1: YESOD
+		{ 0.68f, 0.44f, 0.14f, 0.24f, 0.88f, 0.68f, 0.30f, 0.080f, -0.03f, -0.14f, 2.2f,  2.2f, false, false }, // 2: HOD
+		{ 0.12f, 0.65f, 0.28f, 0.24f, 0.30f, 0.90f, 0.48f, 0.090f,  0.08f,  0.05f, 2.0f,  1.8f, false, false }, // 3: NETZACH
+		{ 0.86f, 0.64f, 0.16f, 0.22f, 0.95f, 0.80f, 0.35f, 0.080f,  0.04f,  0.18f, 3.0f,  8.0f, true,  false }, // 4: TIPERERTH1
+		{ 0.34f, 0.36f, 0.88f, 0.22f, 0.55f, 0.60f, 0.98f, 0.085f, -0.04f,  0.18f, 3.0f,  8.0f, true,  false }, // 5: TIPERERTH2
+		{ 0.82f, 0.06f, 0.08f, 0.27f, 0.95f, 0.18f, 0.18f, 0.095f,  0.14f,  0.22f, 2.4f,  2.0f, false, false }, // 6: GEBURAH
+		{ 0.14f, 0.48f, 0.88f, 0.23f, 0.38f, 0.78f, 0.98f, 0.085f,  0.00f,  0.24f, 3.0f,  8.0f, true,  false }, // 7: CHESED
+		{ 0.05f, 0.04f, 0.06f, 0.30f, 0.92f, 0.74f, 0.24f, 0.090f, -0.05f,  0.12f, 2.6f,  2.2f, false, false }, // 8: BINAH
+		{ 0.48f, 0.54f, 0.62f, 0.22f, 0.80f, 0.84f, 0.90f, 0.075f,  0.01f, -0.18f, 3.0f,  9.0f, true,  true  }, // 9: CHOKHMAH
+		{ 0.68f, 0.16f, 0.28f, 0.25f, 0.88f, 0.42f, 0.52f, 0.085f,  0.07f,  0.11f, 2.4f,  2.4f, false, false }  // 10+: KETHER/DAAT
+	};
+	int32_t idx = (sefira >= 0 && sefira < 10) ? sefira : 10;
+	return kTable[idx];
 }
 
 static Texture2D_t3840446185 * Mobile_BuildBossTexture(int32_t kind)

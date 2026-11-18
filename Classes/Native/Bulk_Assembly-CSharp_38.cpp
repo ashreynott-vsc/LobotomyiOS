@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include "il2cpp-api.h"
 #include <unordered_map>
 
 template <typename T1>
