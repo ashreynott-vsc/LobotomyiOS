@@ -69950,10 +69950,10 @@ static SoundEffectPlayer_t3998987779 * Mobile_PlayOncePooled(
 	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 	int32_t curFrame = Mobile_GetFrameCount();
 	MobileSfxBurstEntry & burst = s_sfxBurstMap[key];
-	if (burst.frame >= 0 && std::abs(curFrame - burst.frame) <= 1)
+	if (burst.frame >= 0 && std::abs(curFrame - burst.frame) <= 3)
 	{
 		++burst.count;
-		if (burst.count >= 4 && burst.lastPlayerHandle != 0)
+		if (burst.count >= 2 && burst.lastPlayerHandle != 0)
 		{
 			SoundEffectPlayer_t3998987779 * lastP = (SoundEffectPlayer_t3998987779 *)il2cpp_gchandle_get_target(burst.lastPlayerHandle);
 			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)lastP, (Object_t631007953 *)NULL, NULL))
@@ -70024,20 +70024,29 @@ static SoundEffectPlayer_t3998987779 * Mobile_PlayOncePooled(
 	Transform_t3600365921 * tr = GameObject_get_transform_m1369836730(go, NULL);
 	if (tr)
 	{
-		float z = -10.0f;
-		Camera_t4157153871 * mainCam = Camera_get_main_m3643453163(NULL /*static, unused*/, NULL);
-		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mainCam, (Object_t631007953 *)NULL, NULL))
+		// Cache main camera Z every 30 frames instead of calling Camera.main (FindGameObjectsWithTag) on every SFX!
+		static float s_sfxCachedCamZ = -10.0f;
+		static int32_t s_sfxCamZFrame = -100;
+		static int32_t s_sfxCamZGen = -1;
+		int32_t sfxGen = Mobile_GetSceneGeneration();
+		if (s_sfxCamZGen != sfxGen || (curFrame - s_sfxCamZFrame) >= 30 || curFrame < s_sfxCamZFrame)
 		{
-			Transform_t3600365921 * camTr = Component_get_transform_m3162698980((Component_t1923634451 *)mainCam, NULL);
-			if (camTr)
+			s_sfxCamZGen = sfxGen;
+			s_sfxCamZFrame = curFrame;
+			Camera_t4157153871 * mainCam = Camera_get_main_m3643453163(NULL /*static, unused*/, NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mainCam, (Object_t631007953 *)NULL, NULL))
 			{
-				Vector3_t3722313464 camPos = Transform_get_position_m36019626(camTr, NULL);
-				z = camPos.get_z_3();
+				Transform_t3600365921 * camTr = Component_get_transform_m3162698980((Component_t1923634451 *)mainCam, NULL);
+				if (camTr)
+				{
+					Vector3_t3722313464 camPos = Transform_get_position_m36019626(camTr, NULL);
+					s_sfxCachedCamZ = camPos.get_z_3();
+				}
 			}
 		}
 		Vector3_t3722313464 pPos;
 		memset(&pPos, 0, sizeof(pPos));
-		Vector3__ctor_m3353183577(&pPos, pos.get_x_0(), pos.get_y_1(), z, NULL);
+		Vector3__ctor_m3353183577(&pPos, pos.get_x_0(), pos.get_y_1(), s_sfxCachedCamZ, NULL);
 		Transform_set_position_m3387557959(tr, pPos, NULL);
 	}
 

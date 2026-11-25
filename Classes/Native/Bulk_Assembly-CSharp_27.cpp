@@ -58487,17 +58487,17 @@ struct MobileBossPalette
 static MobileBossPalette Mobile_GetBossPalette(int32_t sefira)
 {
 	static const MobileBossPalette kTable[11] = {
-		{ 0.85f, 0.22f, 0.08f, 0.24f, 0.95f, 0.46f, 0.16f, 0.085f,  0.06f,  0.10f, 2.5f,  2.0f, false, false }, // 0: MALKUT
-		{ 0.42f, 0.18f, 0.78f, 0.23f, 0.64f, 0.42f, 0.96f, 0.095f,  0.02f, -0.32f, 4.0f, 10.0f, true,  true  }, // 1: YESOD
-		{ 0.68f, 0.44f, 0.14f, 0.24f, 0.88f, 0.68f, 0.30f, 0.080f, -0.03f, -0.14f, 2.2f,  2.2f, false, false }, // 2: HOD
-		{ 0.12f, 0.65f, 0.28f, 0.24f, 0.30f, 0.90f, 0.48f, 0.090f,  0.08f,  0.05f, 2.0f,  1.8f, false, false }, // 3: NETZACH
-		{ 0.86f, 0.64f, 0.16f, 0.22f, 0.95f, 0.80f, 0.35f, 0.080f,  0.04f,  0.18f, 3.0f,  8.0f, true,  false }, // 4: TIPERERTH1
-		{ 0.34f, 0.36f, 0.88f, 0.22f, 0.55f, 0.60f, 0.98f, 0.085f, -0.04f,  0.18f, 3.0f,  8.0f, true,  false }, // 5: TIPERERTH2
-		{ 0.82f, 0.06f, 0.08f, 0.27f, 0.95f, 0.18f, 0.18f, 0.095f,  0.14f,  0.22f, 2.4f,  2.0f, false, false }, // 6: GEBURAH
-		{ 0.14f, 0.48f, 0.88f, 0.23f, 0.38f, 0.78f, 0.98f, 0.085f,  0.00f,  0.24f, 3.0f,  8.0f, true,  false }, // 7: CHESED
-		{ 0.05f, 0.04f, 0.06f, 0.30f, 0.92f, 0.74f, 0.24f, 0.090f, -0.05f,  0.12f, 2.6f,  2.2f, false, false }, // 8: BINAH
-		{ 0.48f, 0.54f, 0.62f, 0.22f, 0.80f, 0.84f, 0.90f, 0.075f,  0.01f, -0.18f, 3.0f,  9.0f, true,  true  }, // 9: CHOKHMAH
-		{ 0.68f, 0.16f, 0.28f, 0.25f, 0.88f, 0.42f, 0.52f, 0.085f,  0.07f,  0.11f, 2.4f,  2.4f, false, false }  // 10+: KETHER/DAAT
+		{ 0.92f, 0.30f, 0.10f, 0.68f, 1.00f, 0.56f, 0.20f, 0.110f,  0.06f,  0.10f, 2.5f,  2.0f, false, false }, // 0: MALKUT
+		{ 0.50f, 0.22f, 0.90f, 0.68f, 0.72f, 0.48f, 1.00f, 0.130f,  0.02f, -0.32f, 4.0f, 10.0f, true,  true  }, // 1: YESOD
+		{ 0.84f, 0.56f, 0.16f, 0.66f, 0.96f, 0.76f, 0.34f, 0.105f, -0.03f, -0.14f, 2.2f,  2.2f, false, false }, // 2: HOD
+		{ 0.14f, 0.78f, 0.34f, 0.66f, 0.36f, 0.96f, 0.54f, 0.115f,  0.08f,  0.05f, 2.0f,  1.8f, false, false }, // 3: NETZACH
+		{ 0.94f, 0.72f, 0.18f, 0.66f, 1.00f, 0.86f, 0.38f, 0.110f,  0.04f,  0.18f, 3.0f,  8.0f, true,  false }, // 4: TIPERERTH1
+		{ 0.36f, 0.42f, 0.96f, 0.66f, 0.58f, 0.66f, 1.00f, 0.115f, -0.04f,  0.18f, 3.0f,  8.0f, true,  false }, // 5: TIPERERTH2
+		{ 0.92f, 0.08f, 0.10f, 0.72f, 1.00f, 0.24f, 0.22f, 0.125f,  0.14f,  0.22f, 2.4f,  2.0f, false, false }, // 6: GEBURAH
+		{ 0.14f, 0.56f, 0.96f, 0.66f, 0.42f, 0.84f, 1.00f, 0.115f,  0.00f,  0.24f, 3.0f,  8.0f, true,  false }, // 7: CHESED
+		{ 0.72f, 0.56f, 0.16f, 0.72f, 0.96f, 0.78f, 0.28f, 0.120f, -0.05f,  0.12f, 2.6f,  2.2f, false, false }, // 8: BINAH
+		{ 0.58f, 0.66f, 0.76f, 0.66f, 0.84f, 0.90f, 0.98f, 0.110f,  0.01f, -0.18f, 3.0f,  9.0f, true,  true  }, // 9: CHOKHMAH
+		{ 0.78f, 0.20f, 0.34f, 0.70f, 0.96f, 0.48f, 0.58f, 0.115f,  0.07f,  0.11f, 2.4f,  2.4f, false, false }  // 10+: KETHER/DAAT
 	};
 	int32_t idx = (sefira >= 0 && sefira < 10) ? sefira : 10;
 	return kTable[idx];
@@ -58505,25 +58505,72 @@ static MobileBossPalette Mobile_GetBossPalette(int32_t sefira)
 
 static Texture2D_t3840446185 * Mobile_BuildBossTexture(int32_t kind)
 {
-	uint8_t bytes[64 * 64 * 4];
+	const int32_t kSz = (kind == 0) ? 128 : 64;
+	uint8_t bytes[128 * 128 * 4];
 	const float kTwoPi = 6.283185307f;
-	for (int32_t y = 0; y < 64; ++y)
+	for (int32_t y = 0; y < kSz; ++y)
 	{
-		for (int32_t x = 0; x < 64; ++x)
+		for (int32_t x = 0; x < kSz; ++x)
 		{
 			uint8_t a = 0;
 			if (kind == 0)
 			{
-				float nx = (((float)x + 0.5f) / 64.0f - 0.5f) * 2.0f;
-				float ny = (((float)y + 0.5f) / 64.0f - 0.5f) * 2.0f;
-				float box = fmaxf(fabsf(nx) * 0.92f, fabsf(ny) * 0.96f);
-				float rad = sqrtf(nx * nx + ny * ny) * 0.72f;
-				float k = fmaxf(box, rad);
-				if (k > 0.45f)
+				float nx = (((float)x + 0.5f) / 128.0f - 0.5f) * 2.0f;
+				float ny = (((float)y + 0.5f) / 128.0f - 0.5f) * 2.0f;
+				float ax = fabsf(nx);
+				float ay = fabsf(ny);
+				float ex = 1.0f - ax;
+				float ey = 1.0f - ay;
+				float edge = fminf(ex, ey);
+				float v = 0.0f;
+
+				// 1. Crisp outer Core Suppression border frame + subtle tech notch modulation
+				if (edge < 0.048f)
 				{
-					float t = fminf(1.0f, (k - 0.45f) / 0.55f);
-					a = (uint8_t)(255.0f * (t * t) * (0.65f + 0.35f * t));
+					float rim = 1.0f - (edge / 0.048f);
+					float along = (ex < ey) ? ny : nx;
+					float notch = 0.86f + 0.14f * cosf(along * 25.132741f);
+					v = fmaxf(v, (0.68f + 0.32f * rim) * notch);
 				}
+
+				// 2. Sharp inner hairline tech accent inside the outer border
+				float lineDist = fabsf(edge - 0.072f);
+				if (lineDist < 0.014f)
+				{
+					float lt = 1.0f - (lineDist / 0.014f);
+					v = fmaxf(v, 0.72f * lt * lt);
+				}
+
+				// 3. Corner tech brackets (distinctive L-frame at all 4 screen corners)
+				if (ex < 0.18f && ey < 0.18f)
+				{
+					if (ex < 0.085f || ey < 0.085f)
+					{
+						float cornerFade = 1.0f - fmaxf(ex, ey) / 0.18f;
+						v = fmaxf(v, 0.55f + 0.40f * cornerFade);
+					}
+					float diag = ex + ey;
+					if (diag < 0.16f)
+					{
+						v = fmaxf(v, 0.75f * (1.0f - diag / 0.16f));
+					}
+				}
+
+				// 4. Smooth outer atmospheric vignette (center 64% stays 100% transparent)
+				if (edge < 0.34f)
+				{
+					float vt = 1.0f - (edge / 0.34f);
+					v = fmaxf(v, 0.56f * vt * vt);
+				}
+				float rad = sqrtf(nx * nx + ny * ny);
+				if (rad > 0.78f)
+				{
+					float rt = fminf(1.0f, (rad - 0.78f) / 0.63f);
+					v = fmaxf(v, 0.58f * rt * rt);
+				}
+
+				if (v > 1.0f) v = 1.0f;
+				a = (uint8_t)(v * 255.0f);
 			}
 			else if (kind == 1)
 			{
@@ -58547,14 +58594,14 @@ static Texture2D_t3840446185 * Mobile_BuildBossTexture(int32_t kind)
 				if (n > 1.0f) n = 1.0f;
 				a = (uint8_t)(n * n * 210.0f);
 			}
-			size_t idx = (size_t)(y * 64 + x) * 4u;
+			size_t idx = (size_t)(y * kSz + x) * 4u;
 			bytes[idx + 0] = 255;
 			bytes[idx + 1] = 255;
 			bytes[idx + 2] = 255;
 			bytes[idx + 3] = a;
 		}
 	}
-	return Mobile_CreateProceduralTexture2D(64, 64, bytes, kind != 0);
+	return Mobile_CreateProceduralTexture2D(kSz, kSz, bytes, kind != 0);
 }
 
 static void Mobile_ConfigureFullscreenRect(RectTransform_t3704657025 * rt)
@@ -58580,6 +58627,9 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 	static uint32_t s_texHandles[3] = { 0, 0, 0 };
 	static float s_atmosTime = 0.0f;
 	static int32_t s_curPatternKind = -1;
+	static float s_lastPillW = -1.0f;
+	static float s_lastPillH = -1.0f;
+	static int32_t s_lastUpdateFrame = -10;
 
 	if (dt < 0.0f) dt = 0.0f;
 	if (dt > 0.1f) dt = 0.1f;
@@ -58616,6 +58666,8 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 				if (s_imgHandles[i]) { il2cpp_gchandle_free(s_imgHandles[i]); s_imgHandles[i] = 0; }
 			}
 			s_curPatternKind = -1;
+			s_lastPillW = -1.0f;
+			s_lastPillH = -1.0f;
 		}
 	}
 
@@ -58629,6 +58681,7 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 		return;
 	}
 
+	bool justCreated = false;
 	if (!rootGo)
 	{
 		for (int i = 0; i < 3; ++i)
@@ -58649,11 +58702,15 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 		Mobile_AddOverlayCanvas(rootGo, 3200);
 		Transform_t3600365921 * rootTr = GameObject_get_transform_m1369836730(rootGo, NULL);
 
+		// Add RectTransform BEFORE SetParent so the newly created RectTransform (not the destroyed Transform) is parented!
 		GameObject_t1113636619 * frameGo = (GameObject_t1113636619 *)il2cpp_codegen_object_new(GameObject_t1113636619_il2cpp_TypeInfo_var);
 		GameObject__ctor_m2093116449(frameGo, il2cpp_codegen_string_new_wrapper("PillboxFrame"), NULL);
-		Transform_t3600365921 * frameTr = GameObject_get_transform_m1369836730(frameGo, NULL);
-		Transform_SetParent_m273471670(frameTr, rootTr, (bool)0, NULL);
 		RectTransform_t3704657025 * frameRt = Mobile_AddRectTransform(frameGo);
+		Transform_t3600365921 * frameLiveTr = frameRt ? (Transform_t3600365921 *)frameRt : GameObject_get_transform_m1369836730(frameGo, NULL);
+		if (frameLiveTr && rootTr)
+		{
+			Transform_SetParent_m273471670(frameLiveTr, rootTr, (bool)0, NULL);
+		}
 		if (frameRt)
 		{
 			Vector2_t2156229523 vhalf, vzero;
@@ -58673,21 +58730,28 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 		{
 			GameObject_t1113636619 * layerGo = (GameObject_t1113636619 *)il2cpp_codegen_object_new(GameObject_t1113636619_il2cpp_TypeInfo_var);
 			GameObject__ctor_m2093116449(layerGo, il2cpp_codegen_string_new_wrapper(kLayerNames[i]), NULL);
-			Transform_t3600365921 * layerTr = GameObject_get_transform_m1369836730(layerGo, NULL);
-			Transform_SetParent_m273471670(layerTr, frameTr, (bool)0, NULL);
 			RectTransform_t3704657025 * layerRt = Mobile_AddRectTransform(layerGo);
+			Transform_t3600365921 * layerLiveTr = layerRt ? (Transform_t3600365921 *)layerRt : GameObject_get_transform_m1369836730(layerGo, NULL);
+			if (layerLiveTr && frameLiveTr)
+			{
+				Transform_SetParent_m273471670(layerLiveTr, frameLiveTr, (bool)0, NULL);
+			}
 			Mobile_ConfigureFullscreenRect(layerRt);
 			Texture2D_t3840446185 * tex = s_texHandles[texMap[i]] ? (Texture2D_t3840446185 *)il2cpp_gchandle_get_target(s_texHandles[texMap[i]]) : NULL;
 			RawImage_t3182918964 * raw = Mobile_AddRawImage(layerGo, (Texture_t3661962703 *)tex);
 			s_imgHandles[i] = raw ? il2cpp_gchandle_new((Il2CppObject *)raw, false) : 0;
 		}
 		s_curPatternKind = 1;
+		s_lastPillW = -1.0f;
+		s_lastPillH = -1.0f;
 		s_rootHandle = il2cpp_gchandle_new((Il2CppObject *)rootGo, false);
+		justCreated = true;
 	}
 
 	if (!GameObject_get_activeSelf_m1767405923(rootGo, NULL))
 	{
 		GameObject_SetActive_m796801857(rootGo, (bool)1, NULL);
+		justCreated = true;
 	}
 
 	if (s_frameRtHandle)
@@ -58699,12 +58763,23 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 			int32_t sh = Screen_get_height_m1623532518(NULL /*static, unused*/, NULL);
 			float pillH = (sh > 0) ? (float)sh : 1.0f;
 			float pillW = ((float)sw > pillH * 1.77777779f) ? (pillH * 1.77777779f) : (float)sw;
-			Vector2_t2156229523 sz;
-			memset(&sz, 0, sizeof(sz));
-			Vector2__ctor_m3970636864(&sz, pillW, pillH, NULL);
-			RectTransform_set_sizeDelta_m3462269772(frameRt, sz, NULL);
+			if (justCreated || fabsf(pillW - s_lastPillW) > 0.5f || fabsf(pillH - s_lastPillH) > 0.5f)
+			{
+				Vector2_t2156229523 sz;
+				memset(&sz, 0, sizeof(sz));
+				Vector2__ctor_m3970636864(&sz, pillW, pillH, NULL);
+				RectTransform_set_sizeDelta_m3462269772(frameRt, sz, NULL);
+				s_lastPillW = pillW;
+				s_lastPillH = pillH;
+			}
 		}
 	}
+
+	if (!justCreated && (s_mobileFrameCount - s_lastUpdateFrame) < 2)
+	{
+		return;
+	}
+	s_lastUpdateFrame = s_mobileFrameCount;
 
 	MobileBossPalette pal = Mobile_GetBossPalette(sefira);
 	int32_t desiredPatternKind = pal.useScanline ? 1 : 2;
@@ -58723,16 +58798,16 @@ static void Mobile_UpdateBossAtmosphereOverlay(float dt)
 	float fade = 1.0f - closeRate;
 	if (fade < 0.0f) fade = 0.0f;
 	int32_t clampedOverload = (overload < 0) ? 0 : ((overload > 8) ? 8 : overload);
-	float intensity = (1.0f + 0.07f * (float)clampedOverload) * fade;
-	float qAmp = (s_quakeRemaining > 0.0f) ? (0.04f * fminf(1.5f, fabsf(s_quakeX) + fabsf(s_quakeY) + 0.25f)) : 0.0f;
+	float intensity = (1.0f + 0.045f * (float)clampedOverload) * fade;
+	float qAmp = (s_quakeRemaining > 0.0f) ? (0.06f * fminf(1.5f, fabsf(s_quakeX) + fabsf(s_quakeY) + 0.25f)) : 0.0f;
 	float tUv = pal.stepUv ? (floorf(s_atmosTime * 8.0f) / 8.0f) : s_atmosTime;
 
 	Color_t2555686324 cVig, cPat, cPul;
 	memset(&cVig, 0, sizeof(cVig)); memset(&cPat, 0, sizeof(cPat)); memset(&cPul, 0, sizeof(cPul));
-	float vAlpha = fminf(0.32f, pal.vAlpha * intensity + qAmp * 0.5f);
-	float pAlpha = fminf(0.13f, pal.pAlpha * intensity + qAmp * 0.35f);
-	float pulseBase = 0.025f * (0.5f + 0.5f * sinf(s_atmosTime * 2.8f));
-	float pulAlpha = fminf(0.22f, (s_bossIntroPulse * 0.16f + pulseBase + qAmp * 0.6f) * fade);
+	float vAlpha = fminf(0.84f, pal.vAlpha * intensity + qAmp * 0.6f);
+	float pAlpha = fminf(0.16f, pal.pAlpha * intensity + qAmp * 0.35f);
+	float pulseBase = 0.14f * (0.5f + 0.5f * sinf(s_atmosTime * 2.6f));
+	float pulAlpha = fminf(0.38f, (s_bossIntroPulse * 0.22f + pulseBase + qAmp * 0.7f) * fade);
 
 	Color__ctor_m2943235014(&cVig, pal.vr, pal.vg, pal.vb, vAlpha, NULL);
 	Color__ctor_m2943235014(&cPat, pal.pr, pal.pg, pal.pb, pAlpha, NULL);
@@ -59572,7 +59647,7 @@ IL_007f:
 
 IL_0096:
 		{
-			Vector3__ctor_m3353183577((&V_2), (1.35f), (1.35f), (1.0f), /*hidden argument*/NULL);
+			Vector3__ctor_m3353183577((&V_2), (1.20f), (1.20f), (1.0f), /*hidden argument*/NULL);
 			GameStatusUI_t1798712816 * L_21 = V_1;
 			NullCheck(L_21);
 			EnergyController_t3739666591 * L_22 = L_21->get_energyContorller_6();
@@ -59616,7 +59691,9 @@ IL_00d8:
 
 IL_00e9:
 		{
-			Vector3__ctor_m3353183577((&V_3), (1.35f), (1.35f), (1.0f), /*hidden argument*/NULL);
+			// SpeedController is a grandchild of Energy_SpeedController (ActiveControl scale 0.4 * Energy scale 1.20 = 0.48),
+			// so keep SpeedController localScale at 1.0 (avoid double-scaling) and place y at -2155 (-2155*0.48 = -1034.4 on 1080p).
+			Vector3__ctor_m3353183577((&V_3), (1.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
 			GameStatusUI_t1798712816 * L_34 = V_1;
 			NullCheck(L_34);
 			PlaySpeedSettingUI_t1667839297 * L_35 = L_34->get_playSpeedSetting_7();
@@ -59669,7 +59746,7 @@ IL_0145:
 			Vector2_t2156229523  L_50 = RectTransform_get_anchoredPosition_m1813443094(L_49, /*hidden argument*/NULL);
 			V_5 = L_50;
 			float L_51 = (&V_5)->get_y_1();
-			if ((!(((float)L_51) < ((float)(-2600.0f)))))
+			if ((!(((float)L_51) < ((float)(-2200.0f)))))
 			{
 				goto IL_0180;
 			}
@@ -59685,7 +59762,7 @@ IL_015f:
 			float L_55 = (&V_6)->get_x_0();
 			Vector2_t2156229523  L_56;
 			memset(&L_56, 0, sizeof(L_56));
-			Vector2__ctor_m3970636864((&L_56), L_55, (-2568.0f), /*hidden argument*/NULL);
+			Vector2__ctor_m3970636864((&L_56), L_55, (-2155.0f), /*hidden argument*/NULL);
 			NullCheck(L_52);
 			RectTransform_set_anchoredPosition_m4126691837(L_52, L_56, /*hidden argument*/NULL);
 		}
@@ -60616,6 +60693,16 @@ extern "C" int32_t Mobile_Cheat_ClearMissions (void)
 		if (m == NULL)
 		{
 			continue;
+		}
+		// Never auto-complete Core Suppression missions (ConditionType.DESTROY_CORE == 25)
+		Condition_t2539626470 * sc = m->get_successCondition_2();
+		if (sc != NULL)
+		{
+			MissionConditionTypeInfo_t3287692124 * scInfo = sc->get_metaInfo_0();
+			if (scInfo != NULL && scInfo->get_condition_Type_1() == 25)
+			{
+				continue;
+			}
 		}
 		m->set_isCleared_6((bool)1);
 		if (inDeploy)

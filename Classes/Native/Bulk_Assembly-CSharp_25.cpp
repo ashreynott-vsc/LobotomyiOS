@@ -54349,6 +54349,10 @@ IL_00f7:
 		UnitModel_t1924672552 * L_37 = __this->get__killMotionTarget_22();
 		DefenseInfo_t1538677828 * L_38 = DefenseInfo_get_zero_m258231704(NULL /*static, unused*/, /*hidden argument*/NULL);
 		DamageParticleEffect_t2612653431 * L_39 = DamageParticleEffect_Invoker_m2854126876(NULL /*static, unused*/, L_37, 1, L_38, /*hidden argument*/NULL);
+		if (!L_39)
+		{
+			goto IL_0157;
+		}
 		V_9 = L_39;
 		DamageParticleEffect_t2612653431 * L_40 = V_9;
 		NullCheck(L_40);

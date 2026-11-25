@@ -63651,10 +63651,10 @@ extern "C" IL2CPP_METHOD_ATTR void AgentUnit_UpdateAnimationQuality_m2546312929 
 	}
 	float ratio = camOrtho / scale;
 	int32_t lvl = 0;
-	if (ratio > 55.0f) lvl = 4;
-	else if (ratio > 36.0f) lvl = 3;
-	else if (ratio > 24.0f) lvl = 2;
-	else if (ratio > 16.0f) lvl = 1;
+	if (ratio > 38.0f) lvl = 4;
+	else if (ratio > 24.0f) lvl = 3;
+	else if (ratio > 14.0f) lvl = 2;
+	else if (ratio > 8.0f) lvl = 1;
 	sr->set_optimizeLevel_8(lvl);
 }
 // System.Void AgentUnit::SetSlider()
@@ -67324,11 +67324,14 @@ IL_01d6:
 		NullCheck(L_44);
 		Color_t2555686324  L_45 = VirtFuncInvoker0< Color_t2555686324  >::Invoke(22 /* UnityEngine.Color UnityEngine.UI.Graphic::get_color() */, L_44);
 		V_2 = L_45;
-		(&V_2)->set_a_3((0.0f));
-		Image_t2670269651 * L_46 = __this->get_targetImage_5();
-		Color_t2555686324  L_47 = V_2;
-		NullCheck(L_46);
-		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_46, L_47);
+		if ((&V_2)->get_a_3() != 0.0f)
+		{
+			(&V_2)->set_a_3((0.0f));
+			Image_t2670269651 * L_46 = __this->get_targetImage_5();
+			Color_t2555686324  L_47 = V_2;
+			NullCheck(L_46);
+			VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_46, L_47);
+		}
 	}
 
 IL_01fa:

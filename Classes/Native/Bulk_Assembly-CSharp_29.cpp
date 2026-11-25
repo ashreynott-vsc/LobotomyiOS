@@ -42385,6 +42385,8 @@ extern "C" IL2CPP_METHOD_ATTR void OutterGodDawn_InitAggro_m2436900375 (OutterGo
 		return;
 	}
 }
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" MovableObjectNodeU5BU5D_t1961576620 * Mobile_PassageGetEnteredItemsArray(PassageObjectModel_t3642329870 * passage, int32_t * outCount);
 // System.Void OutterGodDawn::MakeMovement()
 extern "C" IL2CPP_METHOD_ATTR void OutterGodDawn_MakeMovement_m1951068501 (OutterGodDawn_t3081098381 * __this, const RuntimeMethod* method)
 {
@@ -42393,6 +42395,17 @@ extern "C" IL2CPP_METHOD_ATTR void OutterGodDawn_MakeMovement_m1951068501 (Outte
 		WorkerModel_t68002457 * L_0 = __this->get__currentTarget_30();
 		if (!L_0)
 		{
+			// When wandering/scanning with no current target, scan at ~10Hz instead of 50-100Hz
+			MovableObjectNode_t157422193 * mv = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(4 /* MovableObjectNode CreatureBase::get_movable() */, __this);
+			if (mv && MovableObjectNode_IsMoving_m2284891312(mv, /*hidden argument*/NULL))
+			{
+				int32_t cf = Mobile_GetFrameCount();
+				int32_t h = (int32_t)(((uintptr_t)__this >> 4) & 7);
+				if (((cf + h) % 5) != 0)
+				{
+					return;
+				}
+			}
 			goto IL_0050;
 		}
 	}
@@ -42600,99 +42613,39 @@ extern "C" IL2CPP_METHOD_ATTR WorkerModel_t68002457 * OutterGodDawn_GetNearest_m
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_method (OutterGodDawn_GetNearest_m2962042940_MetadataUsageId);
+		il2cpp_codegen_initialize_method (OutterGodDawn_GetTargets_m941464230_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	List_1_t1540077199 * V_0 = NULL;
-	WorkerModel_t68002457 * V_1 = NULL;
-	float V_2 = 0.0f;
-	WorkerModel_t68002457 * V_3 = NULL;
-	Enumerator_t3429321076  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	float V_5 = 0.0f;
-	Exception_t * __last_unhandled_exception = 0;
-	NO_UNUSED_WARNING (__last_unhandled_exception);
-	Exception_t * __exception_local = 0;
-	NO_UNUSED_WARNING (__exception_local);
-	int32_t __leave_target = 0;
-	NO_UNUSED_WARNING (__leave_target);
+	// Zero-alloc direct passage scan (avoids new List<WorkerModel> + AsReadOnly() + boxed IEnumerator at 50-100Hz)
+	PassageObjectModel_t3642329870 * passage = VirtFuncInvoker0< PassageObjectModel_t3642329870 * >::Invoke(5 /* PassageObjectModel CreatureBase::get_currentPassage() */, __this);
+	if (!passage)
 	{
-		float L_0 = ___range0;
-		List_1_t1540077199 * L_1 = OutterGodDawn_GetTargets_m941464230(__this, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		V_1 = (WorkerModel_t68002457 *)NULL;
-		V_2 = (10000.0f);
-		List_1_t1540077199 * L_2 = V_0;
-		NullCheck(L_2);
-		Enumerator_t3429321076  L_3 = List_1_GetEnumerator_m4092182209(L_2, /*hidden argument*/List_1_GetEnumerator_m4092182209_RuntimeMethod_var);
-		V_4 = L_3;
+		return (WorkerModel_t68002457 *)NULL;
 	}
-
-IL_0018:
-	try
-	{ // begin try (depth: 1)
-		{
-			goto IL_003b;
-		}
-
-IL_001d:
-		{
-			WorkerModel_t68002457 * L_4 = Enumerator_get_Current_m375537751((&V_4), /*hidden argument*/Enumerator_get_Current_m375537751_RuntimeMethod_var);
-			V_3 = L_4;
-			WorkerModel_t68002457 * L_5 = V_3;
-			float L_6 = OutterGodDawn_GetDistance_m1561044274(__this, L_5, /*hidden argument*/NULL);
-			V_5 = L_6;
-			float L_7 = V_5;
-			float L_8 = V_2;
-			if ((!(((float)L_7) < ((float)L_8))))
-			{
-				goto IL_003b;
-			}
-		}
-
-IL_0036:
-		{
-			WorkerModel_t68002457 * L_9 = V_3;
-			V_1 = L_9;
-			float L_10 = V_5;
-			V_2 = L_10;
-		}
-
-IL_003b:
-		{
-			bool L_11 = Enumerator_MoveNext_m3075109234((&V_4), /*hidden argument*/Enumerator_MoveNext_m3075109234_RuntimeMethod_var);
-			if (L_11)
-			{
-				goto IL_001d;
-			}
-		}
-
-IL_0047:
-		{
-			IL2CPP_LEAVE(0x5A, FINALLY_004c);
-		}
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
+	int32_t count = 0;
+	MovableObjectNodeU5BU5D_t1961576620 * items = Mobile_PassageGetEnteredItemsArray(passage, &count);
+	if (!items || count <= 0)
 	{
-		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_004c;
+		return (WorkerModel_t68002457 *)NULL;
 	}
-
-FINALLY_004c:
-	{ // begin finally (depth: 1)
-		Enumerator_Dispose_m3892190075((&V_4), /*hidden argument*/Enumerator_Dispose_m3892190075_RuntimeMethod_var);
-		IL2CPP_END_FINALLY(76)
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(76)
+	WorkerModel_t68002457 * best = NULL;
+	float bestDist = 10000.0f;
+	for (int32_t i = 0; i < count; ++i)
 	{
-		IL2CPP_JUMP_TBL(0x5A, IL_005a)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		MovableObjectNode_t157422193 * mn = items->GetAtUnchecked(static_cast<il2cpp_array_size_t>(i));
+		if (!mn) continue;
+		UnitModel_t1924672552 * u = MovableObjectNode_GetUnit_m1824813719(mn, /*hidden argument*/NULL);
+		WorkerModel_t68002457 * w = (WorkerModel_t68002457 *)IsInstClass((RuntimeObject *)u, WorkerModel_t68002457_il2cpp_TypeInfo_var);
+		if (!w) continue;
+		if (!OutterGodDawn_IsHostile_m1814121873(__this, w, /*hidden argument*/NULL)) continue;
+		float dist = OutterGodDawn_GetDistance_m1561044274(__this, w, /*hidden argument*/NULL);
+		if (dist > ___range0 || dist >= bestDist) continue;
+		AgentModel_t1567715437 * ag = (AgentModel_t1567715437 *)IsInstClass((RuntimeObject *)w, AgentModel_t1567715437_il2cpp_TypeInfo_var);
+		if (ag && AgentModel_GetState_m3044527680(ag, /*hidden argument*/NULL) == 1) continue;
+		best = w;
+		bestDist = dist;
 	}
-
-IL_005a:
-	{
-		WorkerModel_t68002457 * L_12 = V_1;
-		return L_12;
-	}
+	return best;
 }
 // System.Collections.Generic.List`1<WorkerModel> OutterGodDawn::GetTargets(System.Single)
 extern "C" IL2CPP_METHOD_ATTR List_1_t1540077199 * OutterGodDawn_GetTargets_m941464230 (OutterGodDawn_t3081098381 * __this, float ___range0, const RuntimeMethod* method)
@@ -42703,182 +42656,33 @@ extern "C" IL2CPP_METHOD_ATTR List_1_t1540077199 * OutterGodDawn_GetTargets_m941
 		il2cpp_codegen_initialize_method (OutterGodDawn_GetTargets_m941464230_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	List_1_t1540077199 * V_0 = NULL;
-	MovableObjectNode_t157422193 * V_1 = NULL;
-	RuntimeObject* V_2 = NULL;
-	WorkerModel_t68002457 * V_3 = NULL;
-	AgentModel_t1567715437 * V_4 = NULL;
-	Exception_t * __last_unhandled_exception = 0;
-	NO_UNUSED_WARNING (__last_unhandled_exception);
-	Exception_t * __exception_local = 0;
-	NO_UNUSED_WARNING (__exception_local);
-	int32_t __leave_target = 0;
-	NO_UNUSED_WARNING (__leave_target);
+	List_1_t1540077199 * V_0 = (List_1_t1540077199 *)il2cpp_codegen_object_new(List_1_t1540077199_il2cpp_TypeInfo_var);
+	List_1__ctor_m772032804(V_0, /*hidden argument*/List_1__ctor_m772032804_RuntimeMethod_var);
+	PassageObjectModel_t3642329870 * passage = VirtFuncInvoker0< PassageObjectModel_t3642329870 * >::Invoke(5 /* PassageObjectModel CreatureBase::get_currentPassage() */, __this);
+	if (!passage)
 	{
-		List_1_t1540077199 * L_0 = (List_1_t1540077199 *)il2cpp_codegen_object_new(List_1_t1540077199_il2cpp_TypeInfo_var);
-		List_1__ctor_m772032804(L_0, /*hidden argument*/List_1__ctor_m772032804_RuntimeMethod_var);
-		V_0 = L_0;
-		PassageObjectModel_t3642329870 * L_1 = VirtFuncInvoker0< PassageObjectModel_t3642329870 * >::Invoke(5 /* PassageObjectModel CreatureBase::get_currentPassage() */, __this);
-		if (L_1)
-		{
-			goto IL_0013;
-		}
+		return V_0;
 	}
+	int32_t count = 0;
+	MovableObjectNodeU5BU5D_t1961576620 * items = Mobile_PassageGetEnteredItemsArray(passage, &count);
+	if (!items || count <= 0)
 	{
-		List_1_t1540077199 * L_2 = V_0;
-		return L_2;
+		return V_0;
 	}
-
-IL_0013:
+	for (int32_t i = 0; i < count; ++i)
 	{
-		PassageObjectModel_t3642329870 * L_3 = VirtFuncInvoker0< PassageObjectModel_t3642329870 * >::Invoke(5 /* PassageObjectModel CreatureBase::get_currentPassage() */, __this);
-		NullCheck(L_3);
-		ReadOnlyCollection_1_t1369998480 * L_4 = PassageObjectModel_GetEnteredTargets_m381449808(L_3, /*hidden argument*/NULL);
-		NullCheck(L_4);
-		RuntimeObject* L_5 = ReadOnlyCollection_1_GetEnumerator_m1166265722(L_4, /*hidden argument*/ReadOnlyCollection_1_GetEnumerator_m1166265722_RuntimeMethod_var);
-		V_2 = L_5;
+		MovableObjectNode_t157422193 * mn = items->GetAtUnchecked(static_cast<il2cpp_array_size_t>(i));
+		if (!mn) continue;
+		UnitModel_t1924672552 * u = MovableObjectNode_GetUnit_m1824813719(mn, /*hidden argument*/NULL);
+		WorkerModel_t68002457 * w = (WorkerModel_t68002457 *)IsInstClass((RuntimeObject *)u, WorkerModel_t68002457_il2cpp_TypeInfo_var);
+		if (!w) continue;
+		if (!OutterGodDawn_IsHostile_m1814121873(__this, w, /*hidden argument*/NULL)) continue;
+		if (!OutterGodDawn_IsInRange_m3795954211(__this, w, ___range0, /*hidden argument*/NULL)) continue;
+		AgentModel_t1567715437 * ag = (AgentModel_t1567715437 *)IsInstClass((RuntimeObject *)w, AgentModel_t1567715437_il2cpp_TypeInfo_var);
+		if (ag && AgentModel_GetState_m3044527680(ag, /*hidden argument*/NULL) == 1) continue;
+		List_1_Add_m1738597908(V_0, w, /*hidden argument*/List_1_Add_m1738597908_RuntimeMethod_var);
 	}
-
-IL_0024:
-	try
-	{ // begin try (depth: 1)
-		{
-			goto IL_008c;
-		}
-
-IL_0029:
-		{
-			RuntimeObject* L_6 = V_2;
-			NullCheck(L_6);
-			MovableObjectNode_t157422193 * L_7 = InterfaceFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(0 /* !0 System.Collections.Generic.IEnumerator`1<MovableObjectNode>::get_Current() */, IEnumerator_1_t589992661_il2cpp_TypeInfo_var, L_6);
-			V_1 = L_7;
-			MovableObjectNode_t157422193 * L_8 = V_1;
-			NullCheck(L_8);
-			UnitModel_t1924672552 * L_9 = MovableObjectNode_GetUnit_m1824813719(L_8, /*hidden argument*/NULL);
-			V_3 = ((WorkerModel_t68002457 *)IsInstClass((RuntimeObject*)L_9, WorkerModel_t68002457_il2cpp_TypeInfo_var));
-			WorkerModel_t68002457 * L_10 = V_3;
-			if (!L_10)
-			{
-				goto IL_005b;
-			}
-		}
-
-IL_0042:
-		{
-			WorkerModel_t68002457 * L_11 = V_3;
-			bool L_12 = OutterGodDawn_IsHostile_m1814121873(__this, L_11, /*hidden argument*/NULL);
-			if (!L_12)
-			{
-				goto IL_005b;
-			}
-		}
-
-IL_004e:
-		{
-			WorkerModel_t68002457 * L_13 = V_3;
-			float L_14 = ___range0;
-			bool L_15 = OutterGodDawn_IsInRange_m3795954211(__this, L_13, L_14, /*hidden argument*/NULL);
-			if (L_15)
-			{
-				goto IL_0060;
-			}
-		}
-
-IL_005b:
-		{
-			goto IL_008c;
-		}
-
-IL_0060:
-		{
-			WorkerModel_t68002457 * L_16 = V_3;
-			if (!((AgentModel_t1567715437 *)IsInstClass((RuntimeObject*)L_16, AgentModel_t1567715437_il2cpp_TypeInfo_var)))
-			{
-				goto IL_0085;
-			}
-		}
-
-IL_006b:
-		{
-			WorkerModel_t68002457 * L_17 = V_3;
-			V_4 = ((AgentModel_t1567715437 *)IsInstClass((RuntimeObject*)L_17, AgentModel_t1567715437_il2cpp_TypeInfo_var));
-			AgentModel_t1567715437 * L_18 = V_4;
-			NullCheck(L_18);
-			int32_t L_19 = AgentModel_GetState_m3044527680(L_18, /*hidden argument*/NULL);
-			if ((!(((uint32_t)L_19) == ((uint32_t)1))))
-			{
-				goto IL_0085;
-			}
-		}
-
-IL_0080:
-		{
-			goto IL_008c;
-		}
-
-IL_0085:
-		{
-			List_1_t1540077199 * L_20 = V_0;
-			WorkerModel_t68002457 * L_21 = V_3;
-			NullCheck(L_20);
-			List_1_Add_m1738597908(L_20, L_21, /*hidden argument*/List_1_Add_m1738597908_RuntimeMethod_var);
-		}
-
-IL_008c:
-		{
-			RuntimeObject* L_22 = V_2;
-			NullCheck(L_22);
-			bool L_23 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_22);
-			if (L_23)
-			{
-				goto IL_0029;
-			}
-		}
-
-IL_0097:
-		{
-			IL2CPP_LEAVE(0xA9, FINALLY_009c);
-		}
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_009c;
-	}
-
-FINALLY_009c:
-	{ // begin finally (depth: 1)
-		{
-			RuntimeObject* L_24 = V_2;
-			if (!L_24)
-			{
-				goto IL_00a8;
-			}
-		}
-
-IL_00a2:
-		{
-			RuntimeObject* L_25 = V_2;
-			NullCheck(L_25);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_25);
-		}
-
-IL_00a8:
-		{
-			IL2CPP_END_FINALLY(156)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(156)
-	{
-		IL2CPP_JUMP_TBL(0xA9, IL_00a9)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-	}
-
-IL_00a9:
-	{
-		List_1_t1540077199 * L_26 = V_0;
-		return L_26;
-	}
+	return V_0;
 }
 // System.Boolean OutterGodDawn::IsInRange(WorkerModel,System.Single)
 extern "C" IL2CPP_METHOD_ATTR bool OutterGodDawn_IsInRange_m3795954211 (OutterGodDawn_t3081098381 * __this, WorkerModel_t68002457 * ___target0, float ___range1, const RuntimeMethod* method)

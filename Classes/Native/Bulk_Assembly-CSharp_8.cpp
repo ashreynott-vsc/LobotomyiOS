@@ -50442,6 +50442,8 @@ extern "C" IL2CPP_METHOD_ATTR void AttackOfficerCommand_OnDestroy_m4074286272 (A
 		return;
 	}
 }
+extern "C" bool Mobile_IsInMainCameraView(float wx, float wy, int32_t layer);
+extern "C" int32_t Mobile_GetFrameCount(void);
 // System.Void AttackOfficerCommand::GiveDamage()
 extern "C" IL2CPP_METHOD_ATTR void AttackOfficerCommand_GiveDamage_m1722591379 (AttackOfficerCommand_t1069902894 * __this, const RuntimeMethod* method)
 {
@@ -50453,14 +50455,38 @@ extern "C" IL2CPP_METHOD_ATTR void AttackOfficerCommand_GiveDamage_m1722591379 (
 	}
 	GameObject_t1113636619 * V_0 = NULL;
 	{
+		UnitModel_t1924672552 * L_3 = __this->get_target_8();
+		if (!L_3)
+		{
+			return;
+		}
+		Vector3_t3722313464 L_4 = VirtFuncInvoker0< Vector3_t3722313464 >::Invoke(20 /* UnityEngine.Vector3 UnitModel::GetCurrentViewPosition() */, L_3);
+		if (!Mobile_IsInMainCameraView(L_4.get_x_1(), L_4.get_y_2(), 0))
+		{
+			return;
+		}
+		static int32_t s_gunWinFrame = -100;
+		static int32_t s_gunWinCount = 0;
+		int32_t cf = Mobile_GetFrameCount();
+		if (cf - s_gunWinFrame >= 3 || cf < s_gunWinFrame)
+		{
+			s_gunWinFrame = cf;
+			s_gunWinCount = 0;
+		}
+		if (s_gunWinCount >= 2)
+		{
+			return;
+		}
+		++s_gunWinCount;
+
 		GameObject_t1113636619 * L_0 = Prefab_LoadPrefab_m3971740011(NULL /*static, unused*/, _stringLiteral3975556093, /*hidden argument*/NULL);
 		V_0 = L_0;
 		GameObject_t1113636619 * L_1 = V_0;
-		NullCheck(L_1);
+		if (!L_1)
+		{
+			return;
+		}
 		Transform_t3600365921 * L_2 = GameObject_get_transform_m1369836730(L_1, /*hidden argument*/NULL);
-		UnitModel_t1924672552 * L_3 = __this->get_target_8();
-		NullCheck(L_3);
-		Vector3_t3722313464  L_4 = VirtFuncInvoker0< Vector3_t3722313464  >::Invoke(20 /* UnityEngine.Vector3 UnitModel::GetCurrentViewPosition() */, L_3);
 		NullCheck(L_2);
 		Transform_set_localPosition_m4128471975(L_2, L_4, /*hidden argument*/NULL);
 		return;

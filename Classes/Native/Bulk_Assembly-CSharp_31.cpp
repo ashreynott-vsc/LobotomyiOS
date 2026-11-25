@@ -52545,6 +52545,50 @@ extern "C" IL2CPP_METHOD_ATTR void Prefab__ctor_m2877411126 (Prefab_t2225072000 
 		return;
 	}
 }
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+
+struct MobilePrefabCacheSlot
+{
+	uint64_t hash;
+	uint16_t len;
+	Il2CppChar key[96];
+	uint32_t handle;
+};
+
+static const int32_t kMobilePrefabCacheCap = 256;
+static MobilePrefabCacheSlot s_mobilePrefabCache[kMobilePrefabCacheCap];
+static int32_t s_mobilePrefabCacheGen = -1;
+
+static void Mobile_ClearPrefabCacheIfNeeded(int32_t curGen)
+{
+	if (s_mobilePrefabCacheGen == curGen)
+	{
+		return;
+	}
+	for (int32_t i = 0; i < kMobilePrefabCacheCap; ++i)
+	{
+		if (s_mobilePrefabCache[i].handle != 0)
+		{
+			il2cpp_gchandle_free(s_mobilePrefabCache[i].handle);
+			s_mobilePrefabCache[i].handle = 0;
+		}
+		s_mobilePrefabCache[i].hash = 0;
+		s_mobilePrefabCache[i].len = 0;
+	}
+	s_mobilePrefabCacheGen = curGen;
+}
+
+static uint64_t Mobile_HashString16(const Il2CppChar * chars, int32_t len)
+{
+	uint64_t h = 14695981039346656037ULL;
+	for (int32_t i = 0; i < len; ++i)
+	{
+		h ^= (uint64_t)(uint16_t)chars[i];
+		h *= 1099511628211ULL;
+	}
+	return h ? h : 1ULL;
+}
+
 // UnityEngine.GameObject Prefab::LoadPrefab(System.String)
 extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Prefab_LoadPrefab_m3971740011 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method)
 {
@@ -52554,35 +52598,65 @@ extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Prefab_LoadPrefab_m397174
 		il2cpp_codegen_initialize_method (Prefab_LoadPrefab_m3971740011_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	String_t* V_0 = NULL;
-	GameObject_t1113636619 * V_1 = NULL;
-	{
-		String_t* L_0 = ___name0;
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_1 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral3861849475, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		String_t* L_2 = V_0;
-		GameObject_t1113636619 * L_3 = Resources_Load_TisGameObject_t1113636619_m1734345100(NULL /*static, unused*/, L_2, /*hidden argument*/Resources_Load_TisGameObject_t1113636619_m1734345100_RuntimeMethod_var);
-		V_1 = L_3;
-		GameObject_t1113636619 * L_4 = V_1;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_5 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_4, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_5)
-		{
-			goto IL_0021;
-		}
-	}
+	if (!___name0)
 	{
 		return (GameObject_t1113636619 *)NULL;
 	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	int32_t curGen = Mobile_GetSceneGeneration();
+	Mobile_ClearPrefabCacheIfNeeded(curGen);
 
-IL_0021:
+	int32_t nameLen = ___name0->get_length_0();
+	const Il2CppChar * nameChars = ___name0->get_address_of_start_char_1();
+	bool canCache = (nameLen > 0 && nameLen < 96);
+	uint64_t nameHash = 0;
+	int32_t cacheSlot = -1;
+	GameObject_t1113636619 * V_1 = NULL;
+
+	if (canCache)
 	{
-		GameObject_t1113636619 * L_6 = V_1;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		GameObject_t1113636619 * L_7 = Object_Instantiate_TisGameObject_t1113636619_m4070250708(NULL /*static, unused*/, L_6, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m4070250708_RuntimeMethod_var);
-		return L_7;
+		nameHash = Mobile_HashString16(nameChars, nameLen);
+		int32_t start = (int32_t)(nameHash & (uint64_t)(kMobilePrefabCacheCap - 1));
+		for (int32_t probe = 0; probe < 16; ++probe)
+		{
+			int32_t idx = (start + probe) & (kMobilePrefabCacheCap - 1);
+			MobilePrefabCacheSlot & sl = s_mobilePrefabCache[idx];
+			if (sl.handle == 0)
+			{
+				if (cacheSlot < 0) cacheSlot = idx;
+				break;
+			}
+			if (sl.hash == nameHash && (int32_t)sl.len == nameLen && memcmp(sl.key, nameChars, (size_t)nameLen * sizeof(Il2CppChar)) == 0)
+			{
+				GameObject_t1113636619 * cached = (GameObject_t1113636619 *)il2cpp_gchandle_get_target(sl.handle);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cached, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
+				{
+					return Object_Instantiate_TisGameObject_t1113636619_m4070250708(NULL /*static, unused*/, cached, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m4070250708_RuntimeMethod_var);
+				}
+				il2cpp_gchandle_free(sl.handle);
+				sl.handle = 0;
+				cacheSlot = idx;
+				break;
+			}
+		}
 	}
+
+	IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+	String_t* V_0 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral3861849475, ___name0, /*hidden argument*/NULL);
+	V_1 = Resources_Load_TisGameObject_t1113636619_m1734345100(NULL /*static, unused*/, V_0, /*hidden argument*/Resources_Load_TisGameObject_t1113636619_m1734345100_RuntimeMethod_var);
+	if (Object_op_Equality_m1810815630(NULL /*static, unused*/, (Object_t631007953 *)V_1, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
+	{
+		return (GameObject_t1113636619 *)NULL;
+	}
+	if (canCache && cacheSlot >= 0)
+	{
+		MobilePrefabCacheSlot & sl = s_mobilePrefabCache[cacheSlot];
+		sl.hash = nameHash;
+		sl.len = (uint16_t)nameLen;
+		memcpy(sl.key, nameChars, (size_t)nameLen * sizeof(Il2CppChar));
+		sl.handle = il2cpp_gchandle_new((Il2CppObject *)V_1, false);
+	}
+	return Object_Instantiate_TisGameObject_t1113636619_m4070250708(NULL /*static, unused*/, V_1, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m4070250708_RuntimeMethod_var);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

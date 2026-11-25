@@ -47035,6 +47035,8 @@ extern "C" IL2CPP_METHOD_ATTR void EffectInfo__ctor_m2686564163 (EffectInfo_t371
 		return;
 	}
 }
+extern "C" bool Mobile_IsInMainCameraView(float wx, float wy, int32_t layer);
+extern "C" int32_t Mobile_GetFrameCount(void);
 // EffectInvoker EffectInfo::MakeEffect(EffectInfo,MovableObjectNode)
 extern "C" IL2CPP_METHOD_ATTR EffectInvoker_t3305791837 * EffectInfo_MakeEffect_m1239120853 (RuntimeObject * __this /* static, unused */, EffectInfo_t3712823854 * ___info0, MovableObjectNode_t157422193 * ___mov1, const RuntimeMethod* method)
 {
@@ -47052,6 +47054,29 @@ extern "C" IL2CPP_METHOD_ATTR EffectInvoker_t3305791837 * EffectInfo_MakeEffect_
 	Vector3_t3722313464  V_3;
 	memset(&V_3, 0, sizeof(V_3));
 	{
+		if (!___info0 || !___mov1)
+		{
+			return (EffectInvoker_t3305791837 *)NULL;
+		}
+		Vector3_t3722313464 mPos = MovableObjectNode_GetCurrentViewPosition_m3691207692(___mov1, /*hidden argument*/NULL);
+		if (!Mobile_IsInMainCameraView(mPos.get_x_1(), mPos.get_y_2(), 0))
+		{
+			return (EffectInvoker_t3305791837 *)NULL;
+		}
+		static int32_t s_einfoWinFrame = -100;
+		static int32_t s_einfoWinCount = 0;
+		int32_t cf = Mobile_GetFrameCount();
+		if (cf - s_einfoWinFrame >= 2 || cf < s_einfoWinFrame)
+		{
+			s_einfoWinFrame = cf;
+			s_einfoWinCount = 0;
+		}
+		if (s_einfoWinCount >= 3)
+		{
+			return (EffectInvoker_t3305791837 *)NULL;
+		}
+		++s_einfoWinCount;
+
 		EffectInfo_t3712823854 * L_0 = ___info0;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->get_effectSrc_3();
@@ -70606,6 +70631,27 @@ extern "C" IL2CPP_METHOD_ATTR bool ExplodeGutManager_MakeEffects_m362525322 (Exp
 				Il2CppCodeGenWriteBarrier((RuntimeObject **)(___script1), (RuntimeObject *)NULL);
 			}
 			return (bool)0;
+		}
+		// Burst-cap on-screen gut explosions (e.g. Purple Noon dropping on 10+ clerks simultaneously)
+		{
+			static int32_t s_gutWinFrame = -100;
+			static int32_t s_gutWinCount = 0;
+			int32_t cf = Mobile_GetFrameCount();
+			if (cf - s_gutWinFrame >= 8 || cf < s_gutWinFrame)
+			{
+				s_gutWinFrame = cf;
+				s_gutWinCount = 0;
+			}
+			if (s_gutWinCount >= 2)
+			{
+				if (___script1 != NULL)
+				{
+					*((RuntimeObject **)(___script1)) = (RuntimeObject *)NULL;
+					Il2CppCodeGenWriteBarrier((RuntimeObject **)(___script1), (RuntimeObject *)NULL);
+				}
+				return (bool)0;
+			}
+			++s_gutWinCount;
 		}
 		V_0 = 0;
 		int32_t L_0 = ExplodeGutManager_get_effectsMax_m622746973(__this, /*hidden argument*/NULL);

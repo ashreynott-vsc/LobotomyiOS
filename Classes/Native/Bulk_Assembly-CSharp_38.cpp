@@ -43164,7 +43164,7 @@ IL_000c:
 		int32_t instId = 0;
 		if (!Mobile_SpineIsVisibleOrInit((SkeletonRenderer_t2098681813 *)__this, &instId, false, NULL))
 		{
-			if (((Mobile_GetFrameCount() + (instId & 15)) % 12) != 0)
+			if (((Mobile_GetFrameCount() + (instId & 31)) % 24) != 0)
 			{
 				return;
 			}
@@ -47189,6 +47189,29 @@ IL_0024:
 		return;
 	}
 }
+static bool Mobile_SkeletonGraphicIsWorldVisible(SkeletonGraphic_t1744877482 * sg, int32_t * outLayer, int32_t * outHash)
+{
+	int32_t h = (int32_t)(((uintptr_t)sg >> 4) & 31);
+	if (outHash) *outHash = h;
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	GameObject_t1113636619 * go = Component_get_gameObject_m442555142((Component_t1923634451 *)sg, NULL);
+	int32_t layer = Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL)
+		? GameObject_get_layer_m4158800245(go, NULL)
+		: 5;
+	if (outLayer) *outLayer = layer;
+	if (layer == 5)
+	{
+		return true;
+	}
+	Transform_t3600365921 * tr = Component_get_transform_m3162698980((Component_t1923634451 *)sg, NULL);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+	{
+		Vector3_t3722313464 pos = Transform_get_position_m36019626(tr, NULL);
+		return Mobile_IsInMainCameraView(pos.get_x_1(), pos.get_y_2(), layer);
+	}
+	return true;
+}
+
 // System.Void Spine.Unity.SkeletonGraphic::Update()
 extern "C" IL2CPP_METHOD_ATTR void SkeletonGraphic_Update_m3151113471 (SkeletonGraphic_t1744877482 * __this, const RuntimeMethod* method)
 {
@@ -47228,6 +47251,33 @@ IL_0021:
 
 IL_0026:
 	{
+		int32_t sgLayer = 5;
+		int32_t sgHash = 0;
+		bool sgVis = Mobile_SkeletonGraphicIsWorldVisible(__this, &sgLayer, &sgHash);
+		if (sgLayer != 5)
+		{
+			int32_t cf = Mobile_GetFrameCount();
+			if (!sgVis)
+			{
+				if (((cf + sgHash) & 15) != 0)
+				{
+					goto IL_002b;
+				}
+				float stepDt = G_B4_0 * 16.0f;
+				if (stepDt > 0.25f) stepDt = 0.25f;
+				G_B4_0 = stepDt;
+			}
+			else if (((cf + sgHash) & 1) != 0)
+			{
+				goto IL_002b;
+			}
+			else
+			{
+				float stepDt = G_B4_0 * 2.0f;
+				if (stepDt > 0.1f) stepDt = 0.1f;
+				G_B4_0 = stepDt;
+			}
+		}
 		NullCheck(G_B4_1);
 		VirtActionInvoker1< float >::Invoke(75 /* System.Void Spine.Unity.SkeletonGraphic::Update(System.Single) */, G_B4_1, G_B4_0);
 	}
@@ -47325,6 +47375,16 @@ extern "C" IL2CPP_METHOD_ATTR void SkeletonGraphic_LateUpdate_m567497479 (Skelet
 		}
 	}
 	{
+		int32_t sgLayer = 5;
+		int32_t sgHash = 0;
+		bool sgVis = Mobile_SkeletonGraphicIsWorldVisible(__this, &sgLayer, &sgHash);
+		if (sgLayer != 5)
+		{
+			if (!sgVis || (((Mobile_GetFrameCount() + sgHash) & 1) != 0))
+			{
+				goto IL_0011;
+			}
+		}
 		SkeletonGraphic_UpdateMesh_m328842919(__this, /*hidden argument*/NULL);
 	}
 
@@ -54607,9 +54667,11 @@ IL_009c:
 	{
 		float L_20 = V_0;
 		float L_21 = __this->get__loosenessLevel_2();
+		if (L_21 > 1.0f) L_21 = 1.0f;
+		if (L_21 < 0.25f) L_21 = 0.25f;
 		V_0 = ((float)((float)L_20/(float)L_21));
 		float L_22 = V_0;
-		if ((!(((float)L_22) > ((float)(80.0f)))))
+		if ((!(((float)L_22) > ((float)(38.0f)))))
 		{
 			goto IL_00c1;
 		}
@@ -54624,7 +54686,7 @@ IL_009c:
 IL_00c1:
 	{
 		float L_24 = V_0;
-		if ((!(((float)L_24) > ((float)(50.0f)))))
+		if ((!(((float)L_24) > ((float)(24.0f)))))
 		{
 			goto IL_00dd;
 		}
@@ -54639,7 +54701,7 @@ IL_00c1:
 IL_00dd:
 	{
 		float L_26 = V_0;
-		if ((!(((float)L_26) > ((float)(30.0f)))))
+		if ((!(((float)L_26) > ((float)(14.0f)))))
 		{
 			goto IL_00f9;
 		}
@@ -54654,7 +54716,7 @@ IL_00dd:
 IL_00f9:
 	{
 		float L_28 = V_0;
-		if ((!(((float)L_28) > ((float)(25.0f)))))
+		if ((!(((float)L_28) > ((float)(8.0f)))))
 		{
 			goto IL_0115;
 		}

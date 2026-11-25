@@ -57651,7 +57651,10 @@ extern "C" IL2CPP_METHOD_ATTR void UnitModel_UpdateBufState_m1282014026 (UnitMod
 	int32_t V_3 = 0;
 	{
 		List_1_t1256573396 * L_0 = __this->get__bufList_27();
-		NullCheck(L_0);
+		if (!L_0 || L_0->get__size_2() == 0)
+		{
+			return;
+		}
 		UnitBufU5BU5D_t115020011* L_1 = List_1_ToArray_m114229610(L_0, /*hidden argument*/List_1_ToArray_m114229610_RuntimeMethod_var);
 		V_0 = L_1;
 		UnitBufU5BU5D_t115020011* L_2 = V_0;

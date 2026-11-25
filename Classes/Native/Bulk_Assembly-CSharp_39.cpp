@@ -62110,6 +62110,15 @@ extern "C" IL2CPP_METHOD_ATTR bool StoryStandingCGUI_get_isRemoving_m7352541 (St
 		return L_0;
 	}
 }
+// UnityEngine.Vector2 UnityEngine.RectTransform::get_anchoredPosition()
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RectTransform_get_anchoredPosition_m1813443094 (RectTransform_t3704657025 * __this, const RuntimeMethod* method);
+// UnityEngine.Vector2 UnityEngine.RectTransform::get_pivot()
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RectTransform_get_pivot_m3425744470 (RectTransform_t3704657025 * __this, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Transform::get_childCount()
+extern "C" IL2CPP_METHOD_ATTR int32_t Transform_get_childCount_m3145433196 (Transform_t3600365921 * __this, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_GetChild_m1092972975 (Transform_t3600365921 * __this, int32_t ___index0, const RuntimeMethod* method);
+
 // System.Void StoryStandingCGUI::Awake()
 extern "C" IL2CPP_METHOD_ATTR void StoryStandingCGUI_Awake_m1665270690 (StoryStandingCGUI_t772736448 * __this, const RuntimeMethod* method)
 {
@@ -62288,9 +62297,19 @@ IL_00f7:
 		Rect_t2360479859  L_49 = Sprite_get_rect_m2575211689(L_48, /*hidden argument*/NULL);
 		V_7 = L_49;
 		float L_50 = Rect_get_height_m1358425599((&V_7), /*hidden argument*/NULL);
+		// Fit oversized Robot/shadow sprites cleanly inside rootRt.sizeDelta instead of overflowing 2x
+		float mobileBodyScale = 1.0f;
+		Vector2_t2156229523 rootSz = RectTransform_get_sizeDelta_m2183112744(V_1, /*hidden argument*/NULL);
+		if (rootSz.get_x_0() > 1.0f && rootSz.get_y_1() > 1.0f &&
+			(L_47 > rootSz.get_x_0() + 2.0f || L_50 > rootSz.get_y_1() + 2.0f))
+		{
+			float sx = rootSz.get_x_0() / L_47;
+			float sy = rootSz.get_y_1() / L_50;
+			mobileBodyScale = (sx < sy) ? sx : sy;
+		}
 		Vector2_t2156229523  L_51;
 		memset(&L_51, 0, sizeof(L_51));
-		Vector2__ctor_m3970636864((&L_51), L_47, L_50, /*hidden argument*/NULL);
+		Vector2__ctor_m3970636864((&L_51), L_47 * mobileBodyScale, L_50 * mobileBodyScale, /*hidden argument*/NULL);
 		NullCheck(L_44);
 		RectTransform_set_sizeDelta_m3462269772(L_44, L_51, /*hidden argument*/NULL);
 		Sprite_t280657092 * L_52 = V_0;
@@ -62303,7 +62322,7 @@ IL_00f7:
 		Sprite_t280657092 * L_56 = V_0;
 		NullCheck(L_56);
 		float L_57 = Sprite_get_pixelsPerUnit_m524644775(L_56, /*hidden argument*/NULL);
-		V_8 = ((float)il2cpp_codegen_multiply((float)L_55, (float)L_57));
+		V_8 = ((float)il2cpp_codegen_multiply((float)L_55, (float)L_57)) * mobileBodyScale;
 		Sprite_t280657092 * L_58 = V_0;
 		NullCheck(L_58);
 		Bounds_t2266837910  L_59 = Sprite_get_bounds_m2438297458(L_58, /*hidden argument*/NULL);
@@ -62314,7 +62333,7 @@ IL_00f7:
 		Sprite_t280657092 * L_62 = V_0;
 		NullCheck(L_62);
 		float L_63 = Sprite_get_pixelsPerUnit_m524644775(L_62, /*hidden argument*/NULL);
-		V_11 = ((float)il2cpp_codegen_multiply((float)L_61, (float)L_63));
+		V_11 = ((float)il2cpp_codegen_multiply((float)L_61, (float)L_63)) * mobileBodyScale;
 		RectTransform_t3704657025 * L_64 = V_5;
 		float L_65 = V_8;
 		float L_66 = V_11;
@@ -62453,148 +62472,93 @@ extern "C" IL2CPP_METHOD_ATTR void StoryStandingCGUI_AdjustFaceTransform_m331515
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_method (StoryStandingCGUI_AdjustFaceTransform_m3315157906_MetadataUsageId);
+		il2cpp_codegen_initialize_method (StoryStandingCGUI_Awake_m1665270690_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Sprite_t280657092 * V_0 = NULL;
-	RectTransform_t3704657025 * V_1 = NULL;
-	Rect_t2360479859  V_2;
-	memset(&V_2, 0, sizeof(V_2));
-	Rect_t2360479859  V_3;
-	memset(&V_3, 0, sizeof(V_3));
-	Vector2_t2156229523  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	Rect_t2360479859  V_5;
-	memset(&V_5, 0, sizeof(V_5));
-	Vector2_t2156229523  V_6;
-	memset(&V_6, 0, sizeof(V_6));
-	Rect_t2360479859  V_7;
-	memset(&V_7, 0, sizeof(V_7));
-	Rect_t2360479859  V_8;
-	memset(&V_8, 0, sizeof(V_8));
-	Rect_t2360479859  V_9;
-	memset(&V_9, 0, sizeof(V_9));
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Equality_m1810815630(NULL /*static, unused*/, ___faceImg0, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
 	{
-		Image_t2670269651 * L_0 = ___faceImg0;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (L_1)
-		{
-			goto IL_001d;
-		}
+		return;
 	}
-	{
-		Image_t2670269651 * L_2 = ___faceImg0;
-		NullCheck(L_2);
-		Sprite_t280657092 * L_3 = Image_get_sprite_m1811690853(L_2, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_001e;
-		}
-	}
-
-IL_001d:
+	RectTransform_t3704657025 * rt = Graphic_get_rectTransform_m1167152468(___faceImg0, /*hidden argument*/NULL);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
 	{
 		return;
 	}
 
-IL_001e:
+	// 1. Recursively adjust any child Image overlays FIRST (e.g. Gebura Scar/Smoke, Hokma Angry/Glass, Tiphereths)
+	int32_t childCount = Transform_get_childCount_m3145433196((Transform_t3600365921 *)rt, /*hidden argument*/NULL);
+	for (int32_t ci = 0; ci < childCount; ++ci)
 	{
-		Image_t2670269651 * L_5 = ___faceImg0;
-		NullCheck(L_5);
-		Sprite_t280657092 * L_6 = Image_get_sprite_m1811690853(L_5, /*hidden argument*/NULL);
-		V_0 = L_6;
-		Image_t2670269651 * L_7 = ___faceImg0;
-		NullCheck(L_7);
-		RectTransform_t3704657025 * L_8 = Graphic_get_rectTransform_m1167152468(L_7, /*hidden argument*/NULL);
-		V_1 = L_8;
-		RectTransform_t3704657025 * L_9 = V_1;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_10 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_9, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_10)
+		Transform_t3600365921 * childTr = Transform_GetChild_m1092972975((Transform_t3600365921 *)rt, ci, /*hidden argument*/NULL);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)childTr, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
 		{
-			goto IL_00e3;
-		}
-	}
-	{
-		Sprite_t280657092 * L_11 = V_0;
-		NullCheck(L_11);
-		Rect_t2360479859  L_12 = Sprite_get_rect_m2575211689(L_11, /*hidden argument*/NULL);
-		V_2 = L_12;
-		float L_13 = Rect_get_width_m3421484486((&V_2), /*hidden argument*/NULL);
-		if ((!(((float)L_13) > ((float)(0.0f)))))
-		{
-			goto IL_00e3;
-		}
-	}
-	{
-		Sprite_t280657092 * L_14 = V_0;
-		NullCheck(L_14);
-		Rect_t2360479859  L_15 = Sprite_get_rect_m2575211689(L_14, /*hidden argument*/NULL);
-		V_3 = L_15;
-		float L_16 = Rect_get_height_m1358425599((&V_3), /*hidden argument*/NULL);
-		if ((!(((float)L_16) > ((float)(0.0f)))))
-		{
-			goto IL_00e3;
-		}
-	}
-	{
-		RectTransform_t3704657025 * L_17 = V_1;
-		NullCheck(L_17);
-		Vector2_t2156229523  L_18 = RectTransform_get_sizeDelta_m2183112744(L_17, /*hidden argument*/NULL);
-		V_4 = L_18;
-		float L_19 = (&V_4)->get_x_0();
-		Sprite_t280657092 * L_20 = V_0;
-		NullCheck(L_20);
-		Rect_t2360479859  L_21 = Sprite_get_rect_m2575211689(L_20, /*hidden argument*/NULL);
-		V_5 = L_21;
-		float L_22 = Rect_get_width_m3421484486((&V_5), /*hidden argument*/NULL);
-		if ((((float)L_19) > ((float)((float)il2cpp_codegen_add((float)L_22, (float)(1.0f))))))
-		{
-			goto IL_00ba;
-		}
-	}
-	{
-		RectTransform_t3704657025 * L_23 = V_1;
-		NullCheck(L_23);
-		Vector2_t2156229523  L_24 = RectTransform_get_sizeDelta_m2183112744(L_23, /*hidden argument*/NULL);
-		V_6 = L_24;
-		float L_25 = (&V_6)->get_y_1();
-		Sprite_t280657092 * L_26 = V_0;
-		NullCheck(L_26);
-		Rect_t2360479859  L_27 = Sprite_get_rect_m2575211689(L_26, /*hidden argument*/NULL);
-		V_7 = L_27;
-		float L_28 = Rect_get_height_m1358425599((&V_7), /*hidden argument*/NULL);
-		if ((!(((float)L_25) > ((float)((float)il2cpp_codegen_add((float)L_28, (float)(1.0f)))))))
-		{
-			goto IL_00e3;
+			Image_t2670269651 * childImg = Component_GetComponent_TisImage_t2670269651_m980647750((Component_t1923634451 *)childTr, /*hidden argument*/Component_GetComponent_TisImage_t2670269651_m980647750_RuntimeMethod_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)childImg, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
+			{
+				StoryStandingCGUI_AdjustFaceTransform_m3315157906(__this, childImg, /*hidden argument*/NULL);
+			}
 		}
 	}
 
-IL_00ba:
-	{
-		RectTransform_t3704657025 * L_29 = V_1;
-		Sprite_t280657092 * L_30 = V_0;
-		NullCheck(L_30);
-		Rect_t2360479859  L_31 = Sprite_get_rect_m2575211689(L_30, /*hidden argument*/NULL);
-		V_8 = L_31;
-		float L_32 = Rect_get_width_m3421484486((&V_8), /*hidden argument*/NULL);
-		Sprite_t280657092 * L_33 = V_0;
-		NullCheck(L_33);
-		Rect_t2360479859  L_34 = Sprite_get_rect_m2575211689(L_33, /*hidden argument*/NULL);
-		V_9 = L_34;
-		float L_35 = Rect_get_height_m1358425599((&V_9), /*hidden argument*/NULL);
-		Vector2_t2156229523  L_36;
-		memset(&L_36, 0, sizeof(L_36));
-		Vector2__ctor_m3970636864((&L_36), L_32, L_35, /*hidden argument*/NULL);
-		NullCheck(L_29);
-		RectTransform_set_sizeDelta_m3462269772(L_29, L_36, /*hidden argument*/NULL);
-	}
-
-IL_00e3:
+	// 2. Shrink trimmed face sprite rect AND apply its trimmed center offset (bounds.center * PPU),
+	//    accounting for non-center pivots (e.g. Tiphereths 0.45) and compensating direct children so
+	//    grandchildren (Scar, Smoke, Glass) keep their exact unshifted parent-center coordinates.
+	Sprite_t280657092 * spr = Image_get_sprite_m1811690853(___faceImg0, /*hidden argument*/NULL);
+	if (Object_op_Equality_m1810815630(NULL /*static, unused*/, spr, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
 	{
 		return;
+	}
+	Rect_t2360479859 sprRect = Sprite_get_rect_m2575211689(spr, /*hidden argument*/NULL);
+	float sprW = Rect_get_width_m3421484486(&sprRect, /*hidden argument*/NULL);
+	float sprH = Rect_get_height_m1358425599(&sprRect, /*hidden argument*/NULL);
+	if (!(sprW > 0.0f && sprH > 0.0f))
+	{
+		return;
+	}
+	Vector2_t2156229523 curSz = RectTransform_get_sizeDelta_m2183112744(rt, /*hidden argument*/NULL);
+	float oldW = curSz.get_x_0();
+	float oldH = curSz.get_y_1();
+	if (oldW > sprW + 1.0f || oldH > sprH + 1.0f)
+	{
+		Bounds_t2266837910 b = Sprite_get_bounds_m2438297458(spr, /*hidden argument*/NULL);
+		Vector3_t3722313464 bCenter = Bounds_get_center_m1418449258(&b, /*hidden argument*/NULL);
+		float ppu = Sprite_get_pixelsPerUnit_m524644775(spr, /*hidden argument*/NULL);
+		float bcx = bCenter.get_x_1() * ppu;
+		float bcy = bCenter.get_y_2() * ppu;
+
+		Vector2_t2156229523 piv = RectTransform_get_pivot_m3425744470(rt, /*hidden argument*/NULL);
+		float shiftX = bcx + (0.5f - piv.get_x_0()) * (oldW - sprW);
+		float shiftY = bcy + (0.5f - piv.get_y_1()) * (oldH - sprH);
+
+		Vector2_t2156229523 newSz;
+		memset(&newSz, 0, sizeof(newSz));
+		Vector2__ctor_m3970636864(&newSz, sprW, sprH, /*hidden argument*/NULL);
+		RectTransform_set_sizeDelta_m3462269772(rt, newSz, /*hidden argument*/NULL);
+
+		Vector2_t2156229523 curPos = RectTransform_get_anchoredPosition_m1813443094(rt, /*hidden argument*/NULL);
+		Vector2_t2156229523 newPos;
+		memset(&newPos, 0, sizeof(newPos));
+		Vector2__ctor_m3970636864(&newPos, curPos.get_x_0() + shiftX, curPos.get_y_1() + shiftY, /*hidden argument*/NULL);
+		RectTransform_set_anchoredPosition_m4126691837(rt, newPos, /*hidden argument*/NULL);
+
+		// Compensate direct child RectTransforms so they do not inherit this sprite's trim shift
+		for (int32_t ci = 0; ci < childCount; ++ci)
+		{
+			Transform_t3600365921 * childTr = Transform_GetChild_m1092972975((Transform_t3600365921 *)rt, ci, /*hidden argument*/NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)childTr, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
+			{
+				RectTransform_t3704657025 * childRt = Component_GetComponent_TisRectTransform_t3704657025_m3396022872((Component_t1923634451 *)childTr, /*hidden argument*/Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)childRt, (Object_t631007953 *)NULL, /*hidden argument*/NULL))
+				{
+					Vector2_t2156229523 cPos = RectTransform_get_anchoredPosition_m1813443094(childRt, /*hidden argument*/NULL);
+					Vector2_t2156229523 cNew;
+					memset(&cNew, 0, sizeof(cNew));
+					Vector2__ctor_m3970636864(&cNew, cPos.get_x_0() - bcx, cPos.get_y_1() - bcy, /*hidden argument*/NULL);
+					RectTransform_set_anchoredPosition_m4126691837(childRt, cNew, /*hidden argument*/NULL);
+				}
+			}
+		}
 	}
 }
 // System.Void StoryStandingCGUI::SetYAdderByScript(System.Single)
@@ -62905,6 +62869,12 @@ IL_0048:
 
 IL_0059:
 		{
+			static bool s_setAlphaChildInit = false;
+			if (!s_setAlphaChildInit)
+			{
+				il2cpp_codegen_initialize_method (StoryStandingCGUI_SetColor_m1128899554_MetadataUsageId);
+				s_setAlphaChildInit = true;
+			}
 			Image_t2670269651 * L_12 = __this->get_curFace_2();
 			NullCheck(L_12);
 			Color_t2555686324  L_13 = VirtFuncInvoker0< Color_t2555686324  >::Invoke(22 /* UnityEngine.Color UnityEngine.UI.Graphic::get_color() */, L_12);
@@ -62917,6 +62887,22 @@ IL_0059:
 			Color_t2555686324  L_17 = V_1;
 			NullCheck(L_16);
 			VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_16, L_17);
+			// Propagate alpha to child overlay Images (Gebura Scar/Smoke, Hokma Angry/Glass, Tiphereths)
+			ImageU5BU5D_t2439009922 * childImgs = Component_GetComponentsInChildren_TisImage_t2670269651_m3171623875(L_16, /*hidden argument*/Component_GetComponentsInChildren_TisImage_t2670269651_m3171623875_RuntimeMethod_var);
+			if (childImgs)
+			{
+				int32_t clen = (int32_t)(((RuntimeArray *)childImgs)->max_length);
+				for (int32_t ci = 0; ci < clen; ++ci)
+				{
+					Image_t2670269651 * cImg = childImgs->GetAt(static_cast<il2cpp_array_size_t>(ci));
+					if (cImg && cImg != L_16)
+					{
+						Color_t2555686324 cc = VirtFuncInvoker0< Color_t2555686324  >::Invoke(22 /* UnityEngine.Color UnityEngine.UI.Graphic::get_color() */, cImg);
+						(&cc)->set_a_3(L_15);
+						VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, cImg, cc);
+					}
+				}
+			}
 		}
 
 IL_007e:

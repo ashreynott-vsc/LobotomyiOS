@@ -70357,9 +70357,9 @@ extern "C" IL2CPP_METHOD_ATTR void OfficerUnit_UpdateAnimationQuality_m501438822
 	}
 	float ratio = camOrtho / scale;
 	int32_t lvl = 2; // 30Hz max for background clerks on mobile
-	if (ratio > 42.0f) lvl = 5;
-	else if (ratio > 28.0f) lvl = 4;
-	else if (ratio > 18.0f) lvl = 3;
+	if (ratio > 32.0f) lvl = 5;
+	else if (ratio > 22.0f) lvl = 4;
+	else if (ratio > 14.0f) lvl = 3;
 	sr->set_optimizeLevel_8(lvl);
 }
 // System.Void OfficerUnit::OnClick()
@@ -77679,7 +77679,11 @@ FINALLY_006e:
 IL_007c:
 	{
 		List_1_t400898309 * L_10 = __this->get__removedOrdeals_10();
-		NullCheck(L_10);
+		if (!L_10 || L_10->get__size_2() == 0)
+		{
+			OrdealManager_UpdateOrdealUI_m3987974288(__this, /*hidden argument*/NULL);
+			return;
+		}
 		Enumerator_t2290142186  L_11 = List_1_GetEnumerator_m3258197853(L_10, /*hidden argument*/List_1_GetEnumerator_m3258197853_RuntimeMethod_var);
 		V_5 = L_11;
 	}

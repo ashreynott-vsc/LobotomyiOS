@@ -60936,6 +60936,7 @@ extern "C" IL2CPP_METHOD_ATTR void CreatureUnit_FixedUpdate_m1935968394 (Creatur
 }
 // System.Void CreatureUnit::Update()
 extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" bool Mobile_IsInMainCameraView(float wx, float wy, int32_t layer);
 extern "C" IL2CPP_METHOD_ATTR void CreatureUnit_Update_m3804347295 (CreatureUnit_t1295346153 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60954,9 +60955,24 @@ extern "C" IL2CPP_METHOD_ATTR void CreatureUnit_Update_m3804347295 (CreatureUnit
 		curState = L_2;
 		if ((((int32_t)L_0) == ((int32_t)L_2)))
 		{
-			if (curState == 0 && (((Mobile_GetFrameCount() + (int32_t)(((uintptr_t)__this >> 4) & 7)) % 6) != 0))
+			int32_t cf = Mobile_GetFrameCount();
+			int32_t h = (int32_t)(((uintptr_t)__this >> 4) & 15);
+			if (curState == 0)
 			{
-				return;
+				if (((cf + h) % 6) != 0) return;
+			}
+			else if (curState == 2)
+			{
+				if (((cf + h) & 3) != 0) return;
+				Transform_t3600365921 * tr = Component_get_transform_m3162698980((Component_t1923634451 *)__this, NULL);
+				if (tr)
+				{
+					Vector3_t3722313464 pos = Transform_get_position_m36019626(tr, NULL);
+					if (!Mobile_IsInMainCameraView(pos.get_x_1(), pos.get_y_2(), 0) && (((cf + h) & 15) != 0))
+					{
+						return;
+					}
+				}
 			}
 			goto IL_002d;
 		}
@@ -74555,7 +74571,30 @@ extern "C" IL2CPP_METHOD_ATTR DamageParticleEffect_t2612653431 * DamageParticleE
 	EffectInvoker_t3305791837 * V_0 = NULL;
 	{
 		UnitModel_t1924672552 * L_0 = ___target0;
-		NullCheck(L_0);
+		if (!L_0)
+		{
+			return (DamageParticleEffect_t2612653431 *)NULL;
+		}
+		// Off-screen cull & burst-rate cap to eliminate combat/Ordeal particle storms
+		Vector3_t3722313464 tPos = VirtFuncInvoker0< Vector3_t3722313464 >::Invoke(20 /* UnityEngine.Vector3 UnitModel::GetCurrentViewPosition() */, L_0);
+		if (!Mobile_IsInMainCameraView(tPos.get_x_1(), tPos.get_y_2(), 0))
+		{
+			return (DamageParticleEffect_t2612653431 *)NULL;
+		}
+		static int32_t s_dpeWinFrame = -100;
+		static int32_t s_dpeWinCount = 0;
+		int32_t cf = Mobile_GetFrameCount();
+		if (cf - s_dpeWinFrame >= 3 || cf < s_dpeWinFrame)
+		{
+			s_dpeWinFrame = cf;
+			s_dpeWinCount = 0;
+		}
+		if (s_dpeWinCount >= 2)
+		{
+			return (DamageParticleEffect_t2612653431 *)NULL;
+		}
+		++s_dpeWinCount;
+
 		MovableObjectNode_t157422193 * L_1 = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, L_0);
 		EffectInvoker_t3305791837 * L_2 = EffectInvoker_Invoker_m1072848791(NULL /*static, unused*/, _stringLiteral1173446986, L_1, (1.0f), (bool)0, /*hidden argument*/NULL);
 		V_0 = L_2;
@@ -74874,6 +74913,10 @@ extern "C" IL2CPP_METHOD_ATTR DamageParticleEffect_t2612653431 * DamageParticleE
 	{
 		UnitModel_t1924672552 * L_0 = ___target0;
 		DamageParticleEffect_t2612653431 * L_1 = DamageParticleEffect_LoadDefaultPrefab_m1962759178(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			return (DamageParticleEffect_t2612653431 *)NULL;
+		}
 		V_0 = L_1;
 		V_1 = (List_1_t2585711361 *)NULL;
 		int32_t L_2 = ___type1;
@@ -75119,6 +75162,10 @@ extern "C" IL2CPP_METHOD_ATTR DamageParticleEffect_t2612653431 * DamageParticleE
 	{
 		UnitModel_t1924672552 * L_0 = ___target0;
 		DamageParticleEffect_t2612653431 * L_1 = DamageParticleEffect_LoadDefaultPrefab_m1962759178(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			return (DamageParticleEffect_t2612653431 *)NULL;
+		}
 		V_0 = L_1;
 		V_1 = (List_1_t2585711361 *)NULL;
 		int32_t L_2 = ___type1;
@@ -75311,6 +75358,10 @@ extern "C" IL2CPP_METHOD_ATTR DamageParticleEffect_t2612653431 * DamageParticleE
 	{
 		UnitModel_t1924672552 * L_0 = ___target0;
 		DamageParticleEffect_t2612653431 * L_1 = DamageParticleEffect_LoadDefaultPrefab_m1962759178(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			return (DamageParticleEffect_t2612653431 *)NULL;
+		}
 		V_0 = L_1;
 		V_1 = (List_1_t2585711361 *)NULL;
 		int32_t L_2 = ___type1;
