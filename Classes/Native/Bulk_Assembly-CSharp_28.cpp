@@ -63452,6 +63452,58 @@ IL_0237:
 		return;
 	}
 }
+
+extern "C" bool Mobile_IsScreenPosOverRealUI(float sx, float sy, GameObject_t1113636619 * ignoredWorldCatcher)
+{
+	static bool s_rayInit = false;
+	if (!s_rayInit)
+	{
+		il2cpp_codegen_initialize_method(NothingSnipingUI_Update_m3410266170_MetadataUsageId);
+		s_rayInit = true;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t1003666588_il2cpp_TypeInfo_var);
+	EventSystem_t1003666588 * es = EventSystem_get_current_m1416377559(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)es, (Object_t631007953 *)NULL, NULL))
+	{
+		return false;
+	}
+	PointerEventData_t3807901092 * ped = (PointerEventData_t3807901092 *)il2cpp_codegen_object_new(PointerEventData_t3807901092_il2cpp_TypeInfo_var);
+	PointerEventData__ctor_m2263609344(ped, es, NULL);
+	Vector2_t2156229523 pos;
+	memset(&pos, 0, sizeof(pos));
+	pos.set_x_0(sx);
+	pos.set_y_1(sy);
+	PointerEventData_set_position_m2060457995(ped, pos, NULL);
+
+	List_1_t537414295 * results = (List_1_t537414295 *)il2cpp_codegen_object_new(List_1_t537414295_il2cpp_TypeInfo_var);
+	List_1__ctor_m2049947431(results, List_1__ctor_m2049947431_RuntimeMethod_var);
+	EventSystem_RaycastAll_m523788254(es, ped, results, NULL);
+
+	Enumerator_t2426658172 en = List_1_GetEnumerator_m1056442506(results, List_1_GetEnumerator_m1056442506_RuntimeMethod_var);
+	bool overRealUI = false;
+	while (Enumerator_MoveNext_m2025577953(&en, Enumerator_MoveNext_m2025577953_RuntimeMethod_var))
+	{
+		RaycastResult_t3360306849 hit = Enumerator_get_Current_m16148970(&en, Enumerator_get_Current_m16148970_RuntimeMethod_var);
+		GameObject_t1113636619 * go = RaycastResult_get_gameObject_m2570051527(&hit, NULL);
+		if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)go, (Object_t631007953 *)NULL, NULL))
+		{
+			continue;
+		}
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)ignoredWorldCatcher, (Object_t631007953 *)NULL, NULL) &&
+			go == ignoredWorldCatcher)
+		{
+			overRealUI = false;
+		}
+		else
+		{
+			overRealUI = true;
+		}
+		break;
+	}
+	Enumerator_Dispose_m2531396701(&en, Enumerator_Dispose_m2531396701_RuntimeMethod_var);
+	return overRealUI;
+}
 // System.Void NothingSnipingUI::LateUpdate()
 extern "C" IL2CPP_METHOD_ATTR void NothingSnipingUI_LateUpdate_m4122119011 (NothingSnipingUI_t1494162031 * __this, const RuntimeMethod* method)
 {

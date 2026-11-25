@@ -22,6 +22,8 @@ extern "C" {
 
 static BOOL s_metalHudDesired = NO;
 static volatile int32_t s_menuVisibleAtomic = 0;
+static volatile int32_t s_boxSelectModeAtomic = 0;
+static volatile int32_t s_boxButtonVisibleAtomic = 0;
 static int s_cachedTargetFPS = 0;
 
 extern "C" int _GetMobileTargetFPS(void) {
@@ -392,6 +394,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
 
 @interface LiquidGlassOverlayContainerView : UIView
 @property (nonatomic, weak) UIView *pillView;
+@property (nonatomic, weak) UIView *boxPillView;
 @property (nonatomic, weak) UIView *menuView;
 @property (nonatomic, assign) BOOL menuVisible;
 @end
@@ -406,6 +409,9 @@ static UILabel* CreateSectionLabel(NSString *text) {
         if (self.pillView && !self.pillView.hidden && [hitView isDescendantOfView:self.pillView]) {
             return hitView;
         }
+        if (self.boxPillView && !self.boxPillView.hidden && [hitView isDescendantOfView:self.boxPillView]) {
+            return hitView;
+        }
         return nil;
     }
     return hitView;
@@ -418,6 +424,9 @@ static UILabel* CreateSectionLabel(NSString *text) {
 @property (nonatomic, strong) UIView *backdropView;
 @property (nonatomic, strong) UIVisualEffectView *pillView;
 @property (nonatomic, strong) UILabel *pillLabel;
+@property (nonatomic, strong) UIVisualEffectView *boxPillView;
+@property (nonatomic, strong) UIView *boxPillTintView;
+@property (nonatomic, strong) UILabel *boxPillLabel;
 @property (nonatomic, strong) UIVisualEffectView *menuView;
 @property (nonatomic, strong) NSLayoutConstraint *menuCenterYConstraint;
 
@@ -462,6 +471,8 @@ static UILabel* CreateSectionLabel(NSString *text) {
 - (void)updateQualityButtonStyles;
 - (void)updatePerfButtonStyles;
 - (void)updateMetalHudButtonStyle;
+- (void)updateBoxSelectPillStyle;
+- (void)syncBoxPillVisibility:(BOOL)visible;
 @end
 
 @implementation LiquidGlassDebugMenuController
@@ -654,6 +665,58 @@ static UILabel* CreateSectionLabel(NSString *text) {
     [self.pillView addGestureRecognizer:pillTap];
     UIPanGestureRecognizer *pillPan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePillPan:)];
     [self.pillView addGestureRecognizer:pillPan];
+
+    // 1b. Floating Box-Select Toggle Pill (next to FPS pill, visible during active management)
+    self.boxPillView = [[UIVisualEffectView alloc] initWithEffect:glassEffect];
+    self.boxPillView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.boxPillView.layer.cornerRadius = 17.0;
+    if (@available(iOS 13.0, *)) {
+        self.boxPillView.layer.cornerCurve = kCACornerCurveContinuous;
+    }
+    self.boxPillView.layer.borderWidth = 0.8;
+    self.boxPillView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.32].CGColor;
+    self.boxPillView.layer.masksToBounds = YES;
+    self.boxPillView.hidden = (s_boxButtonVisibleAtomic == 0);
+    self.containerView.boxPillView = self.boxPillView;
+
+    self.boxPillTintView = [[UIView alloc] init];
+    self.boxPillTintView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.boxPillTintView.userInteractionEnabled = NO;
+    self.boxPillTintView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.10];
+    [self.boxPillView.contentView addSubview:self.boxPillTintView];
+
+    self.boxPillLabel = [[UILabel alloc] init];
+    self.boxPillLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.boxPillLabel.font = [UIFont systemFontOfSize:12.5 weight:UIFontWeightBold];
+    self.boxPillLabel.textColor = [UIColor colorWithWhite:0.96 alpha:0.96];
+    self.boxPillLabel.textAlignment = NSTextAlignmentCenter;
+    self.boxPillLabel.text = @"BOX";
+    [self.boxPillView.contentView addSubview:self.boxPillLabel];
+
+    [NSLayoutConstraint activateConstraints:@[
+        [self.boxPillTintView.topAnchor constraintEqualToAnchor:self.boxPillView.contentView.topAnchor],
+        [self.boxPillTintView.bottomAnchor constraintEqualToAnchor:self.boxPillView.contentView.bottomAnchor],
+        [self.boxPillTintView.leadingAnchor constraintEqualToAnchor:self.boxPillView.contentView.leadingAnchor],
+        [self.boxPillTintView.trailingAnchor constraintEqualToAnchor:self.boxPillView.contentView.trailingAnchor],
+
+        [self.boxPillLabel.centerXAnchor constraintEqualToAnchor:self.boxPillView.contentView.centerXAnchor],
+        [self.boxPillLabel.centerYAnchor constraintEqualToAnchor:self.boxPillView.contentView.centerYAnchor],
+        [self.boxPillLabel.leadingAnchor constraintEqualToAnchor:self.boxPillView.contentView.leadingAnchor constant:12.0],
+        [self.boxPillLabel.trailingAnchor constraintEqualToAnchor:self.boxPillView.contentView.trailingAnchor constant:-12.0],
+    ]];
+
+    [self.containerView addSubview:self.boxPillView];
+    [NSLayoutConstraint activateConstraints:@[
+        [self.boxPillView.centerYAnchor constraintEqualToAnchor:self.pillView.centerYAnchor],
+        [self.boxPillView.leadingAnchor constraintEqualToAnchor:self.pillView.trailingAnchor constant:8.0],
+        [self.boxPillView.heightAnchor constraintEqualToConstant:34.0],
+    ]];
+
+    UITapGestureRecognizer *boxTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onToggleBoxSelectTapped)];
+    [self.boxPillView addGestureRecognizer:boxTap];
+    UIPanGestureRecognizer *boxPan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePillPan:)];
+    [self.boxPillView addGestureRecognizer:boxPan];
+    [self updateBoxSelectPillStyle];
 
     // 2. Main Modal Card (560x450 clamped by safeGuide +/- 12)
     self.menuView = [[UIVisualEffectView alloc] initWithEffect:glassEffect];
@@ -1180,6 +1243,46 @@ static UILabel* CreateSectionLabel(NSString *text) {
     next.tx = MAX(-halfDx, MIN(halfDx, next.tx));
     next.ty = MAX(maxUp, MIN(maxDown, next.ty));
     v.transform = next;
+    if (self.boxPillView) {
+        self.boxPillView.transform = next;
+    }
+}
+
+- (void)onToggleBoxSelectTapped {
+    TriggerHaptic();
+    int32_t next = (s_boxSelectModeAtomic == 0) ? 1 : 0;
+    s_boxSelectModeAtomic = next;
+    [self updateBoxSelectPillStyle];
+}
+
+- (void)updateBoxSelectPillStyle {
+    if (!self.boxPillView) return;
+    BOOL on = (s_boxSelectModeAtomic != 0);
+    if (on) {
+        self.boxPillLabel.text = @"✓ BOX";
+        self.boxPillLabel.textColor = [UIColor whiteColor];
+        self.boxPillTintView.backgroundColor = [UIColor colorWithRed:0.14 green:0.72 blue:0.42 alpha:0.62];
+        self.boxPillView.layer.borderColor = [UIColor colorWithRed:0.42 green:1.0 blue:0.66 alpha:0.95].CGColor;
+        self.boxPillView.layer.borderWidth = 1.2;
+    } else {
+        self.boxPillLabel.text = @"BOX";
+        self.boxPillLabel.textColor = [UIColor colorWithWhite:0.95 alpha:0.94];
+        self.boxPillTintView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.10];
+        self.boxPillView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.32].CGColor;
+        self.boxPillView.layer.borderWidth = 0.8;
+    }
+}
+
+- (void)syncBoxPillVisibility:(BOOL)visible {
+    RunOnMainThread(^{
+        if (!self.containerView) {
+            [self createOverlayUI];
+        }
+        if (self.boxPillView) {
+            self.boxPillView.hidden = !visible;
+            [self updateBoxSelectPillStyle];
+        }
+    });
 }
 
 - (void)showMenu {
@@ -1559,5 +1662,38 @@ extern "C" {
 
     void _SetNativeAspectMode(int mode) {
         [[LiquidGlassDebugMenuController sharedInstance] setAspectMode:mode];
+    }
+
+    int _GetNativeBoxSelectMode(void) {
+        return (int)s_boxSelectModeAtomic;
+    }
+
+    void _SetNativeBoxSelectMode(int enabled) {
+        int32_t next = enabled ? 1 : 0;
+        if (s_boxSelectModeAtomic == next) {
+            return;
+        }
+        s_boxSelectModeAtomic = next;
+        RunOnMainThread(^{
+            [[LiquidGlassDebugMenuController sharedInstance] updateBoxSelectPillStyle];
+        });
+    }
+
+    void _SetNativeBoxButtonVisible(int visible) {
+        int32_t next = visible ? 1 : 0;
+        if (s_boxButtonVisibleAtomic == next) {
+            return;
+        }
+        s_boxButtonVisibleAtomic = next;
+        if (next == 0) {
+            s_boxSelectModeAtomic = 0;
+        }
+        [[LiquidGlassDebugMenuController sharedInstance] syncBoxPillVisibility:(next != 0)];
+    }
+
+    void _TriggerNativeHapticLight(void) {
+        RunOnMainThread(^{
+            TriggerHaptic();
+        });
     }
 }

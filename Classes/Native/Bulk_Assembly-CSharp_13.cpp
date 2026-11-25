@@ -49341,6 +49341,12 @@ IL_03ad:
 // System.Void CameraMover::LateUpdate()
 extern "C" int32_t Mobile_GetFrameCount(void);
 extern "C" int32_t Mobile_GetSceneGeneration(void);
+extern "C" bool Mobile_IsScreenPosOverRealUI(float sx, float sy, GameObject_t1113636619 * ignoredWorldCatcher);
+extern "C" int32_t Mobile_GetSelectedAgentCount(void);
+extern "C" int _GetNativeBoxSelectMode(void);
+extern "C" void _SetNativeBoxSelectMode(int enabled);
+extern "C" void _TriggerNativeHapticLight(void);
+extern "C" IL2CPP_METHOD_ATTR void UnitMouseEventManager_CancelDrag_m592733663 (UnitMouseEventManager_t1910604809 * __this, const RuntimeMethod* method);
 extern "C" IL2CPP_METHOD_ATTR void CameraMover_LateUpdate_m2277820050 (CameraMover_t2845631541 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49466,6 +49472,16 @@ IL_000c:
 
 IL_0107:
 	{
+		if (__this->get__touchBoxSelecting_33())
+		{
+			UnitMouseEventManager_t1910604809 * mgrCancel = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgrCancel, (Object_t631007953 *)NULL, NULL))
+			{
+				UnitMouseEventManager_CancelDrag_m592733663(mgrCancel, NULL);
+			}
+			__this->set__touchBoxSelecting_33((bool)0);
+		}
 		float L_39 = Time_get_unscaledTime_m3457564332(NULL /*static, unused*/, /*hidden argument*/NULL);
 		__this->set__lastPanEndTime_34(L_39);
 		goto IL_02f7;
@@ -49495,38 +49511,15 @@ IL_0117:
 		__this->set__touchStartPos_29(L_43);
 		float L_44 = Time_get_unscaledTime_m3457564332(NULL /*static, unused*/, /*hidden argument*/NULL);
 		__this->set__touchStartTime_30(L_44);
-		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t1003666588_il2cpp_TypeInfo_var);
-		EventSystem_t1003666588 * L_45 = EventSystem_get_current_m1416377559(NULL /*static, unused*/, /*hidden argument*/NULL);
+		GameObject_t1113636619 * unitMgrGo = NULL;
+		UnitMouseEventManager_t1910604809 * unitMgr = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_46 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_45, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		G_B9_0 = __this;
-		if (!L_46)
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)unitMgr, (Object_t631007953 *)NULL, NULL))
 		{
-			G_B10_0 = __this;
-			goto IL_0172;
+			unitMgrGo = Component_get_gameObject_m442555142((Component_t1923634451 *)unitMgr, NULL);
 		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(EventSystem_t1003666588_il2cpp_TypeInfo_var);
-		EventSystem_t1003666588 * L_47 = EventSystem_get_current_m1416377559(NULL /*static, unused*/, /*hidden argument*/NULL);
-		int32_t L_48 = Touch_get_fingerId_m859576425((&V_8), /*hidden argument*/NULL);
-		NullCheck(L_47);
-		bool L_49 = EventSystem_IsPointerOverGameObject_m301566329(L_47, L_48, /*hidden argument*/NULL);
-		G_B11_0 = ((int32_t)(L_49));
-		G_B11_1 = G_B9_0;
-		goto IL_0173;
-	}
-
-IL_0172:
-	{
-		G_B11_0 = 0;
-		G_B11_1 = G_B10_0;
-	}
-
-IL_0173:
-	{
-		NullCheck(G_B11_1);
-		G_B11_1->set__touchOverUI_31((bool)G_B11_0);
+		bool overRealUI = Mobile_IsScreenPosOverRealUI(L_43.get_x_0(), L_43.get_y_1(), unitMgrGo);
+		__this->set__touchOverUI_31(overRealUI);
 		__this->set__touchPanning_32((bool)0);
 		__this->set__touchBoxSelecting_33((bool)0);
 		goto IL_027a;
@@ -49551,109 +49544,64 @@ IL_018b:
 		float L_55 = Time_get_unscaledTime_m3457564332(NULL /*static, unused*/, /*hidden argument*/NULL);
 		float L_56 = __this->get__touchStartTime_30();
 		V_11 = ((float)il2cpp_codegen_subtract((float)L_55, (float)L_56));
-		bool L_57 = __this->get__touchPanning_32();
-		if (L_57)
-		{
-			goto IL_0217;
-		}
-	}
-	{
-		bool L_58 = __this->get__touchBoxSelecting_33();
-		if (L_58)
-		{
-			goto IL_0217;
-		}
-	}
-	{
-		float L_59 = V_11;
-		if ((!(((float)L_59) >= ((float)(0.35f)))))
-		{
-			goto IL_0217;
-		}
-	}
-	{
-		float L_60 = V_9;
-		if ((!(((float)L_60) < ((float)(20.0f)))))
-		{
-			goto IL_0217;
-		}
-	}
-	{
-		__this->set__touchBoxSelecting_33((bool)1);
-		UnitMouseEventManager_t1910604809 * L_61 = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_62 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_61, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_62)
-		{
-			goto IL_0217;
-		}
-	}
-	{
-		UnitMouseEventManager_t1910604809 * L_63 = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_64 = Touch_get_position_m3109777936((&V_8), /*hidden argument*/NULL);
-		NullCheck(L_63);
-		UnitMouseEventManager_StartManualDrag_m3979298351(L_63, L_64, /*hidden argument*/NULL);
-	}
 
-IL_0217:
-	{
-		bool L_65 = __this->get__touchBoxSelecting_33();
-		if (!L_65)
+		bool boxMode = (_GetNativeBoxSelectMode() != 0);
+		if (boxMode)
 		{
-			goto IL_0248;
-		}
-	}
-	{
-		UnitMouseEventManager_t1910604809 * L_66 = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_67 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_66, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_67)
-		{
-			goto IL_0243;
-		}
-	}
-	{
-		UnitMouseEventManager_t1910604809 * L_68 = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, /*hidden argument*/NULL);
-		Vector2_t2156229523  L_69 = Touch_get_position_m3109777936((&V_8), /*hidden argument*/NULL);
-		NullCheck(L_68);
-		UnitMouseEventManager_UpdateManualDrag_m296540740(L_68, L_69, /*hidden argument*/NULL);
-	}
-
-IL_0243:
-	{
-		goto IL_027a;
-	}
-
-IL_0248:
-	{
-		bool L_70 = __this->get__touchPanning_32();
-		if (L_70)
-		{
-			goto IL_026d;
-		}
-	}
-	{
-		float L_71 = V_9;
-		if ((!(((float)L_71) > ((float)(15.0f)))))
-		{
-			goto IL_026d;
-		}
-	}
-	{
-		__this->set__touchPanning_32((bool)1);
-		__this->set_Drag_19((bool)0);
-	}
-
-IL_026d:
-	{
-		bool L_72 = __this->get__touchPanning_32();
-		if (!L_72)
-		{
+			if (!__this->get__touchBoxSelecting_33() && V_9 >= 8.0f)
+			{
+				__this->set__touchBoxSelecting_33((bool)1);
+				UnitMouseEventManager_t1910604809 * mgrB = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+				IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgrB, (Object_t631007953 *)NULL, NULL))
+				{
+					UnitMouseEventManager_StartManualDrag_m3979298351(mgrB, L_52, NULL);
+				}
+			}
+			if (__this->get__touchBoxSelecting_33())
+			{
+				UnitMouseEventManager_t1910604809 * mgrU = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+				IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgrU, (Object_t631007953 *)NULL, NULL))
+				{
+					UnitMouseEventManager_UpdateManualDrag_m296540740(mgrU, L_51, NULL);
+				}
+			}
 			goto IL_027a;
 		}
-	}
-	{
-		V_0 = (bool)1;
+
+		if (!__this->get__touchPanning_32() && !__this->get__touchBoxSelecting_33() && V_11 >= 0.25f && V_9 < 32.0f)
+		{
+			_TriggerNativeHapticLight();
+			__this->set__touchBoxSelecting_33((bool)1);
+			UnitMouseEventManager_t1910604809 * mgrH = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgrH, (Object_t631007953 *)NULL, NULL))
+			{
+				UnitMouseEventManager_StartManualDrag_m3979298351(mgrH, L_52, NULL);
+			}
+		}
+
+		if (__this->get__touchBoxSelecting_33())
+		{
+			UnitMouseEventManager_t1910604809 * mgrU = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgrU, (Object_t631007953 *)NULL, NULL))
+			{
+				UnitMouseEventManager_UpdateManualDrag_m296540740(mgrU, L_51, NULL);
+			}
+			goto IL_027a;
+		}
+
+		if (!__this->get__touchPanning_32() && V_9 > 24.0f)
+		{
+			__this->set__touchPanning_32((bool)1);
+			__this->set_Drag_19((bool)0);
+		}
+		if (__this->get__touchPanning_32())
+		{
+			V_0 = (bool)1;
+		}
 	}
 
 IL_027a:
@@ -49698,7 +49646,14 @@ IL_0294:
 
 IL_02c0:
 	{
+		float L_boxEndT = Time_get_unscaledTime_m3457564332(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set__lastPanEndTime_34(L_boxEndT);
 		__this->set__touchBoxSelecting_33((bool)0);
+		if (_GetNativeBoxSelectMode() != 0 && Mobile_GetSelectedAgentCount() > 0)
+		{
+			_SetNativeBoxSelectMode(0);
+			_TriggerNativeHapticLight();
+		}
 	}
 
 IL_02c7:
@@ -49722,6 +49677,15 @@ IL_02e4:
 
 IL_02e9:
 	{
+		if (__this->get__touchBoxSelecting_33())
+		{
+			UnitMouseEventManager_t1910604809 * mgrClr = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgrClr, (Object_t631007953 *)NULL, NULL))
+			{
+				UnitMouseEventManager_CancelDrag_m592733663(mgrClr, NULL);
+			}
+		}
 		__this->set__touchPanning_32((bool)0);
 		__this->set__touchBoxSelecting_33((bool)0);
 	}

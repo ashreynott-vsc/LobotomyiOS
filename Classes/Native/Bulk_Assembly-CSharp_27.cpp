@@ -59524,6 +59524,69 @@ extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_EnforceFullscreenPerFrame
 	}
 }
 // System.Void MobileScreenManager::ApplyInGameUIScaling()
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_get_parent_m835071599 (Transform_t3600365921 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  CanvasScaler_get_referenceResolution_m2560634788 (CanvasScaler_t2767979955 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void CanvasScaler_set_referenceResolution_m2267601581 (CanvasScaler_t2767979955 * __this, Vector2_t2156229523  ___value0, const RuntimeMethod* method);
+extern "C" void Mobile_SetGridLayoutCellSize(Transform_t3600365921 * tr, float w, float h);
+extern "C" Transform_t3600365921 * Mobile_GetBulletWindowActiveTransform(void);
+extern "C" Transform_t3600365921 * Mobile_GetRabbitActivationButtonTransform(void);
+extern "C" Transform_t3600365921 * Mobile_GetRabbitPivotTransform(void);
+extern "C" void _SetNativeBoxButtonVisible(int visible);
+
+static void Mobile_ApplyHUDTransform(Transform_t3600365921 * tr, float sx, float sy, bool setPos, float px, float py)
+{
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	Vector3_t3722313464 curSc = Transform_get_localScale_m129152068(tr, NULL);
+	if (fabsf(curSc.get_x_1() - sx) > 0.005f || fabsf(curSc.get_y_2() - sy) > 0.005f)
+	{
+		Vector3_t3722313464 nextSc;
+		memset(&nextSc, 0, sizeof(nextSc));
+		Vector3__ctor_m3353183577(&nextSc, sx, sy, 1.0f, NULL);
+		Transform_set_localScale_m3053443106(tr, nextSc, NULL);
+	}
+	if (setPos)
+	{
+		RectTransform_t3704657025 * rt = Component_GetComponent_TisRectTransform_t3704657025_m3396022872((Component_t1923634451 *)tr, Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
+		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, NULL))
+		{
+			Vector2_t2156229523 curPos = RectTransform_get_anchoredPosition_m1813443094(rt, NULL);
+			if (fabsf(curPos.get_x_0() - px) > 0.5f || fabsf(curPos.get_y_1() - py) > 0.5f)
+			{
+				Vector2_t2156229523 nextPos;
+				memset(&nextPos, 0, sizeof(nextPos));
+				Vector2__ctor_m3970636864(&nextPos, px, py, NULL);
+				RectTransform_set_anchoredPosition_m4126691837(rt, nextPos, NULL);
+			}
+		}
+	}
+}
+
+static void Mobile_SetRectSizeIfNeeded(Transform_t3600365921 * tr, float w, float h)
+{
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	RectTransform_t3704657025 * rt = Component_GetComponent_TisRectTransform_t3704657025_m3396022872((Component_t1923634451 *)tr, Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rt, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	Vector2_t2156229523 curSz = RectTransform_get_sizeDelta_m2183112744(rt, NULL);
+	if (fabsf(curSz.get_x_0() - w) > 0.5f || fabsf(curSz.get_y_1() - h) > 0.5f)
+	{
+		Vector2_t2156229523 nextSz;
+		memset(&nextSz, 0, sizeof(nextSz));
+		Vector2__ctor_m3970636864(&nextSz, w, h, NULL);
+		RectTransform_set_sizeDelta_m3462269772(rt, nextSz, NULL);
+	}
+}
+
 extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_ApplyInGameUIScaling_m4004252767 (MobileScreenManager_t831028031 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59691,80 +59754,29 @@ IL_00d8:
 
 IL_00e9:
 		{
-			// SpeedController is a grandchild of Energy_SpeedController (ActiveControl scale 0.4 * Energy scale 1.20 = 0.48),
-			// so keep SpeedController localScale at 1.0 (avoid double-scaling) and place y at -2155 (-2155*0.48 = -1034.4 on 1080p).
-			Vector3__ctor_m3353183577((&V_3), (1.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
-			GameStatusUI_t1798712816 * L_34 = V_1;
-			NullCheck(L_34);
-			PlaySpeedSettingUI_t1667839297 * L_35 = L_34->get_playSpeedSetting_7();
-			NullCheck(L_35);
-			Transform_t3600365921 * L_36 = Component_get_transform_m3162698980(L_35, /*hidden argument*/NULL);
-			NullCheck(L_36);
-			Vector3_t3722313464  L_37 = Transform_get_localScale_m129152068(L_36, /*hidden argument*/NULL);
-			Vector3_t3722313464  L_38 = V_3;
-			IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
-			bool L_39 = Vector3_op_Inequality_m315980366(NULL /*static, unused*/, L_37, L_38, /*hidden argument*/NULL);
-			if (!L_39)
+			// Enlarge Pause/Speed bar uniformly (1.38x) + taller 240x90 grid buttons (rendered ~159x60px on 1080p),
+			// sitting cleanly along bottom-left (x=0..696, y=8..77 from bottom) with zero overlap.
+			PlaySpeedSettingUI_t1667839297 * spd = V_1->get_playSpeedSetting_7();
+			Transform_t3600365921 * spdTr = Component_get_transform_m3162698980(spd, NULL);
+			Mobile_ApplyHUDTransform(spdTr, 1.38f, 1.38f, false, 0.0f, 0.0f);
+			Mobile_SetRectSizeIfNeeded(spdTr, 1050.0f, 96.0f);
+			RectTransform_t3704657025 * spdRt = Component_GetComponent_TisRectTransform_t3704657025_m3396022872(spd, Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)spdRt, (Object_t631007953 *)NULL, NULL))
 			{
-				goto IL_012b;
+				Vector2_t2156229523 curSpdPos = RectTransform_get_anchoredPosition_m1813443094(spdRt, NULL);
+				if (fabsf(curSpdPos.get_y_1() - (-2085.0f)) > 1.0f)
+				{
+					Vector2_t2156229523 nextSpdPos;
+					memset(&nextSpdPos, 0, sizeof(nextSpdPos));
+					Vector2__ctor_m3970636864(&nextSpdPos, curSpdPos.get_x_0(), -2085.0f, NULL);
+					RectTransform_set_anchoredPosition_m4126691837(spdRt, nextSpdPos, NULL);
+				}
 			}
-		}
-
-IL_011a:
-		{
-			GameStatusUI_t1798712816 * L_40 = V_1;
-			NullCheck(L_40);
-			PlaySpeedSettingUI_t1667839297 * L_41 = L_40->get_playSpeedSetting_7();
-			NullCheck(L_41);
-			Transform_t3600365921 * L_42 = Component_get_transform_m3162698980(L_41, /*hidden argument*/NULL);
-			Vector3_t3722313464  L_43 = V_3;
-			NullCheck(L_42);
-			Transform_set_localScale_m3053443106(L_42, L_43, /*hidden argument*/NULL);
-		}
-
-IL_012b:
-		{
-			GameStatusUI_t1798712816 * L_44 = V_1;
-			NullCheck(L_44);
-			PlaySpeedSettingUI_t1667839297 * L_45 = L_44->get_playSpeedSetting_7();
-			NullCheck(L_45);
-			RectTransform_t3704657025 * L_46 = Component_GetComponent_TisRectTransform_t3704657025_m3396022872(L_45, /*hidden argument*/Component_GetComponent_TisRectTransform_t3704657025_m3396022872_RuntimeMethod_var);
-			V_4 = L_46;
-			RectTransform_t3704657025 * L_47 = V_4;
-			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-			bool L_48 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_47, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-			if (!L_48)
-			{
-				goto IL_0180;
-			}
-		}
-
-IL_0145:
-		{
-			RectTransform_t3704657025 * L_49 = V_4;
-			NullCheck(L_49);
-			Vector2_t2156229523  L_50 = RectTransform_get_anchoredPosition_m1813443094(L_49, /*hidden argument*/NULL);
-			V_5 = L_50;
-			float L_51 = (&V_5)->get_y_1();
-			if ((!(((float)L_51) < ((float)(-2200.0f)))))
-			{
-				goto IL_0180;
-			}
-		}
-
-IL_015f:
-		{
-			RectTransform_t3704657025 * L_52 = V_4;
-			RectTransform_t3704657025 * L_53 = V_4;
-			NullCheck(L_53);
-			Vector2_t2156229523  L_54 = RectTransform_get_anchoredPosition_m1813443094(L_53, /*hidden argument*/NULL);
-			V_6 = L_54;
-			float L_55 = (&V_6)->get_x_0();
-			Vector2_t2156229523  L_56;
-			memset(&L_56, 0, sizeof(L_56));
-			Vector2__ctor_m3970636864((&L_56), L_55, (-2155.0f), /*hidden argument*/NULL);
-			NullCheck(L_52);
-			RectTransform_set_anchoredPosition_m4126691837(L_52, L_56, /*hidden argument*/NULL);
+			Transform_t3600365921 * texTr = Transform_Find_m1729760951(spdTr, il2cpp_codegen_string_new_wrapper("Texture"), NULL);
+			Mobile_SetRectSizeIfNeeded(texTr, 1000.0f, 102.0f);
+			Transform_t3600365921 * layTr = Transform_Find_m1729760951(spdTr, il2cpp_codegen_string_new_wrapper("Layout"), NULL);
+			Mobile_SetRectSizeIfNeeded(layTr, 1000.0f, 96.0f);
+			Mobile_SetGridLayoutCellSize(layTr, 240.0f, 90.0f);
 		}
 
 IL_0180:
@@ -59782,94 +59794,19 @@ IL_0180:
 
 IL_0191:
 		{
-			GameStatusUI_t1798712816 * L_60 = V_1;
-			NullCheck(L_60);
-			SystemLogScript_t1147150437 * L_61 = L_60->get_logController_8();
-			NullCheck(L_61);
-			RectTransform_t3704657025 * L_62 = L_61->get_Frame_7();
-			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-			bool L_63 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_62, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-			if (!L_63)
+			// Keep Frame & ScalePivot at stock 0.9 scale so Scaler aligns with Frame's top border and UpdateScale() works,
+			// then move & scale parent LogController up to y=+56 (Frame bottom at 93px > SpeedController top 77px = zero blocking!).
+			SystemLogScript_t1147150437 * logCtrl = V_1->get_logController_8();
+			RectTransform_t3704657025 * frameRt = logCtrl->get_Frame_7();
+			RectTransform_t3704657025 * scaleRt = logCtrl->get_ScalePivot_8();
+			Mobile_ApplyHUDTransform((Transform_t3600365921 *)frameRt, 0.9f, 0.9f, false, 0.0f, 0.0f);
+			Mobile_ApplyHUDTransform((Transform_t3600365921 *)scaleRt, 0.9f, 0.9f, false, 0.0f, 0.0f);
+			Transform_t3600365921 * logCanvasTr = Component_get_transform_m3162698980((Component_t1923634451 *)logCtrl, NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)logCanvasTr, (Object_t631007953 *)NULL, NULL))
 			{
-				goto IL_01eb;
+				Transform_t3600365921 * logRootTr = Transform_get_parent_m835071599(logCanvasTr, NULL);
+				Mobile_ApplyHUDTransform(logRootTr, 1.0f, 1.0f, true, 0.0f, 56.0f);
 			}
-		}
-
-IL_01a7:
-		{
-			Vector3__ctor_m3353183577((&V_7), (1.25f), (1.25f), (1.0f), /*hidden argument*/NULL);
-			GameStatusUI_t1798712816 * L_64 = V_1;
-			NullCheck(L_64);
-			SystemLogScript_t1147150437 * L_65 = L_64->get_logController_8();
-			NullCheck(L_65);
-			RectTransform_t3704657025 * L_66 = L_65->get_Frame_7();
-			NullCheck(L_66);
-			Vector3_t3722313464  L_67 = Transform_get_localScale_m129152068(L_66, /*hidden argument*/NULL);
-			Vector3_t3722313464  L_68 = V_7;
-			IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
-			bool L_69 = Vector3_op_Inequality_m315980366(NULL /*static, unused*/, L_67, L_68, /*hidden argument*/NULL);
-			if (!L_69)
-			{
-				goto IL_01eb;
-			}
-		}
-
-IL_01d9:
-		{
-			GameStatusUI_t1798712816 * L_70 = V_1;
-			NullCheck(L_70);
-			SystemLogScript_t1147150437 * L_71 = L_70->get_logController_8();
-			NullCheck(L_71);
-			RectTransform_t3704657025 * L_72 = L_71->get_Frame_7();
-			Vector3_t3722313464  L_73 = V_7;
-			NullCheck(L_72);
-			Transform_set_localScale_m3053443106(L_72, L_73, /*hidden argument*/NULL);
-		}
-
-IL_01eb:
-		{
-			GameStatusUI_t1798712816 * L_74 = V_1;
-			NullCheck(L_74);
-			SystemLogScript_t1147150437 * L_75 = L_74->get_logController_8();
-			NullCheck(L_75);
-			RectTransform_t3704657025 * L_76 = L_75->get_ScalePivot_8();
-			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-			bool L_77 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_76, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-			if (!L_77)
-			{
-				goto IL_0245;
-			}
-		}
-
-IL_0201:
-		{
-			Vector3__ctor_m3353183577((&V_8), (1.25f), (1.25f), (1.0f), /*hidden argument*/NULL);
-			GameStatusUI_t1798712816 * L_78 = V_1;
-			NullCheck(L_78);
-			SystemLogScript_t1147150437 * L_79 = L_78->get_logController_8();
-			NullCheck(L_79);
-			RectTransform_t3704657025 * L_80 = L_79->get_ScalePivot_8();
-			NullCheck(L_80);
-			Vector3_t3722313464  L_81 = Transform_get_localScale_m129152068(L_80, /*hidden argument*/NULL);
-			Vector3_t3722313464  L_82 = V_8;
-			IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
-			bool L_83 = Vector3_op_Inequality_m315980366(NULL /*static, unused*/, L_81, L_82, /*hidden argument*/NULL);
-			if (!L_83)
-			{
-				goto IL_0245;
-			}
-		}
-
-IL_0233:
-		{
-			GameStatusUI_t1798712816 * L_84 = V_1;
-			NullCheck(L_84);
-			SystemLogScript_t1147150437 * L_85 = L_84->get_logController_8();
-			NullCheck(L_85);
-			RectTransform_t3704657025 * L_86 = L_85->get_ScalePivot_8();
-			Vector3_t3722313464  L_87 = V_8;
-			NullCheck(L_86);
-			Transform_set_localScale_m3053443106(L_86, L_87, /*hidden argument*/NULL);
 		}
 
 IL_0245:
@@ -59984,6 +59921,58 @@ IL_02f4:
 
 IL_0315:
 		{
+			// Scale MissionUI (1.45x via CanvasScaler referenceResolution so slide-in/out Animator stays flush at right edge!)
+			static bool s_csMetaInit = false;
+			if (!s_csMetaInit)
+			{
+				il2cpp_codegen_initialize_method(MobileScreenManager_ApplyFullscreenSettings_m1725697124_MetadataUsageId);
+				s_csMetaInit = true;
+			}
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+			MissionUI_t1961037245 * mui = MissionUI_get_instance_m404151710(NULL /*static, unused*/, NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mui, (Object_t631007953 *)NULL, NULL))
+			{
+				Transform_t3600365921 * muiTr = Component_get_transform_m3162698980((Component_t1923634451 *)mui, NULL);
+				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)muiTr, (Object_t631007953 *)NULL, NULL))
+				{
+					Transform_t3600365921 * muiCanvasTr = Transform_Find_m1729760951(muiTr, il2cpp_codegen_string_new_wrapper("Canvas"), NULL);
+					if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)muiCanvasTr, (Object_t631007953 *)NULL, NULL))
+					{
+						CanvasScaler_t2767979955 * muiScaler = Component_GetComponent_TisCanvasScaler_t2767979955_m3395851106((Component_t1923634451 *)muiCanvasTr, Component_GetComponent_TisCanvasScaler_t2767979955_m3395851106_RuntimeMethod_var);
+						if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)muiScaler, (Object_t631007953 *)NULL, NULL))
+						{
+							Vector2_t2156229523 curRef = CanvasScaler_get_referenceResolution_m2560634788(muiScaler, NULL);
+							if (fabsf(curRef.get_x_0() - 1324.0f) > 1.0f || fabsf(curRef.get_y_1() - 745.0f) > 1.0f)
+							{
+								Vector2_t2156229523 nextRef;
+								memset(&nextRef, 0, sizeof(nextRef));
+								Vector2__ctor_m3970636864(&nextRef, 1324.0f, 745.0f, NULL);
+								CanvasScaler_set_referenceResolution_m2267601581(muiScaler, nextRef, NULL);
+							}
+						}
+					}
+				}
+			}
+
+			// Scale Bullets menu (1.36x, x=722..1578, y=6..148 on 1920x1080 — zero overlap with SpeedController or Rabbit button)
+			Transform_t3600365921 * bulletActiveTr = Mobile_GetBulletWindowActiveTransform();
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)bulletActiveTr, (Object_t631007953 *)NULL, NULL))
+			{
+				Transform_t3600365921 * bulletPivotTr = Transform_Find_m1729760951(bulletActiveTr, il2cpp_codegen_string_new_wrapper("Pivot"), NULL);
+				Mobile_ApplyHUDTransform(bulletPivotTr, 1.36f, 1.36f, true, 190.0f, -463.0f);
+			}
+
+			// Scale Rabbit HUD button (1.42x, x=1606..1794, y=6..172) and Rabbit selection popup (1.16x centered inside 1920x1080)
+			Mobile_ApplyHUDTransform(Mobile_GetRabbitActivationButtonTransform(), 1.42f, 1.42f, true, 740.0f, -451.0f);
+			Mobile_ApplyHUDTransform(Mobile_GetRabbitPivotTransform(), 1.16f, 1.16f, true, 0.0f, -32.0f);
+
+			// Show native Box-Select toggle pill only during active management gameplay
+			GameManager_t1536523654 * gmBox = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, NULL);
+			bool inManage = Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)gmBox, (Object_t631007953 *)NULL, NULL)
+				&& gmBox->get_ManageStarted_8()
+				&& !gmBox->get_stageEnded_13();
+			_SetNativeBoxButtonVisible(inManage ? 1 : 0);
+
 			goto IL_0320;
 		}
 	} // end try (depth: 1)

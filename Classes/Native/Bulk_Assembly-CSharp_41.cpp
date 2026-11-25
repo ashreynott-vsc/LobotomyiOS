@@ -63382,6 +63382,11 @@ extern "C" IL2CPP_METHOD_ATTR void UnitMouseEventManager_OnPointerClick_m5158408
 	int32_t V_8 = 0;
 	UnitMouseEventTarget_t3334263216 * V_9 = NULL;
 	RuntimeObject* V_10 = NULL;
+	int32_t m_selectedCount = 0;
+	if (__this->get__dragging_15())
+	{
+		return;
+	}
 	{
 		CameraMover_t2845631541 * L_0 = CameraMover_get_instance_m1980448275(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
@@ -63441,6 +63446,7 @@ IL_0043:
 		List_1_t511370662 * L_9 = __this->get__selectedTargets_4();
 		NullCheck(L_9);
 		int32_t L_10 = List_1_get_Count_m2285852506(L_9, /*hidden argument*/List_1_get_Count_m2285852506_RuntimeMethod_var);
+		m_selectedCount = L_10;
 		if ((((int32_t)L_10) <= ((int32_t)0)))
 		{
 			goto IL_0145;
@@ -63584,7 +63590,7 @@ IL_011f:
 	}
 	{
 		bool L_44 = V_4;
-		if (L_44)
+		if (L_44 && m_selectedCount <= 1)
 		{
 			goto IL_0145;
 		}
@@ -64150,6 +64156,15 @@ extern "C" IL2CPP_METHOD_ATTR void UnitMouseEventManager_StartManualDrag_m397929
 		GameObject_t1113636619 * L_4 = Component_get_gameObject_m442555142(L_3, /*hidden argument*/NULL);
 		NullCheck(L_4);
 		GameObject_SetActive_m796801857(L_4, (bool)1, /*hidden argument*/NULL);
+		RectTransform_t3704657025 * dragRt = Graphic_get_rectTransform_m1167152468(L_3, /*hidden argument*/NULL);
+		if (dragRt)
+		{
+			RectTransform_set_anchoredPosition_m4126691837(dragRt, ___screenPos0, /*hidden argument*/NULL);
+			Vector2_t2156229523 initSz;
+			memset(&initSz, 0, sizeof(initSz));
+			Vector2__ctor_m3970636864(&initSz, 44.0f, 44.0f, /*hidden argument*/NULL);
+			RectTransform_set_sizeDelta_m3462269772(dragRt, initSz, /*hidden argument*/NULL);
+		}
 	}
 
 IL_0029:
@@ -64368,6 +64383,28 @@ IL_00b5:
 		UnitMouseEventManager_CancelDrag_m592733663(__this, /*hidden argument*/NULL);
 		return;
 	}
+}
+
+extern "C" int32_t Mobile_GetSelectedAgentCount(void)
+{
+	static bool s_cntInit = false;
+	if (!s_cntInit)
+	{
+		il2cpp_codegen_initialize_method(UnitMouseEventManager_OnPointerClick_m515840829_MetadataUsageId);
+		s_cntInit = true;
+	}
+	UnitMouseEventManager_t1910604809 * mgr = UnitMouseEventManager_get_instance_m2950429642(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)mgr, (Object_t631007953 *)NULL, NULL))
+	{
+		return 0;
+	}
+	List_1_t511370662 * list = mgr->get__selectedTargets_4();
+	if (!list)
+	{
+		return 0;
+	}
+	return List_1_get_Count_m2285852506(list, List_1_get_Count_m2285852506_RuntimeMethod_var);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

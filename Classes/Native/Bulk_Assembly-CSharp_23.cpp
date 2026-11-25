@@ -66458,6 +66458,50 @@ extern "C" IL2CPP_METHOD_ATTR void WorkProgress__ctor_m1793233945 (WorkProgress_
 		return;
 	}
 }
+
+extern "C" void Mobile_SetGridLayoutCellSize(Transform_t3600365921 * tr, float w, float h)
+{
+	static bool s_glgInit = false;
+	if (!s_glgInit)
+	{
+		il2cpp_codegen_initialize_method(WorkProgress__ctor_m1793233945_MetadataUsageId);
+		s_glgInit = true;
+	}
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	GridLayoutGroup_t3046220461 * glg = Component_GetComponent_TisGridLayoutGroup_t3046220461_m2458911910((Component_t1923634451 *)tr, Component_GetComponent_TisGridLayoutGroup_t3046220461_m2458911910_RuntimeMethod_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)glg, (Object_t631007953 *)NULL, NULL))
+	{
+		return;
+	}
+	Vector2_t2156229523 cur = GridLayoutGroup_get_cellSize_m2967185053(glg, NULL);
+	if (fabsf(cur.get_x_0() - w) > 0.5f || fabsf(cur.get_y_1() - h) > 0.5f)
+	{
+		Vector2_t2156229523 next;
+		memset(&next, 0, sizeof(next));
+		Vector2__ctor_m3970636864(&next, w, h, NULL);
+		GridLayoutGroup_set_cellSize_m2242080459(glg, next, NULL);
+	}
+}
+
+extern "C" Transform_t3600365921 * Mobile_GetBulletWindowActiveTransform(void)
+{
+	GlobalBulletWindow_t1585810186 * win = GlobalBulletWindow_get_CurrentWindow_m1543893358(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	GameObject_t1113636619 * activeGo = win->get_ActiveControl_6();
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)activeGo, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	return GameObject_get_transform_m1369836730(activeGo, NULL);
+}
 // System.Void IsolateRoom/WorkProgress::Init(CreatureModel,UnityEngine.GameObject,UnityEngine.GameObject)
 extern "C" IL2CPP_METHOD_ATTR void WorkProgress_Init_m2991087671 (WorkProgress_t413205971 * __this, CreatureModel_t680682136 * ___creature0, GameObject_t1113636619 * ___success1, GameObject_t1113636619 * ___fail2, const RuntimeMethod* method)
 {

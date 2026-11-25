@@ -68423,6 +68423,43 @@ extern "C" Transform_t3600365921 * Mobile_GetRabbitConfirmTransform(void)
 	}
 	return Component_get_transform_m3162698980((Component_t1923634451 *)btn, NULL);
 }
+
+extern "C" Transform_t3600365921 * Mobile_GetRabbitActivationButtonTransform(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	Button_t4055032469 * btn = win->get_ProtocolActivationButton_20();
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)btn, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	return Component_get_transform_m3162698980((Component_t1923634451 *)btn, NULL);
+}
+
+extern "C" Transform_t3600365921 * Mobile_GetRabbitPivotTransform(void)
+{
+	RabbitProtocolWindow_t258339763 * win = RabbitProtocolWindow_get_Window_m3877487181(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)win, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	GameObject_t1113636619 * rootGo = win->get_root_5();
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rootGo, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	Transform_t3600365921 * rootTr = GameObject_get_transform_m1369836730(rootGo, NULL);
+	if (!Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)rootTr, (Object_t631007953 *)NULL, NULL))
+	{
+		return NULL;
+	}
+	return Transform_Find_m1729760951(rootTr, il2cpp_codegen_string_new_wrapper("Pivot"), NULL);
+}
 // System.Void Rabbit.RabbitProtocolWindow::OnWindowClosed()
 extern "C" IL2CPP_METHOD_ATTR void RabbitProtocolWindow_OnWindowClosed_m218425360 (RabbitProtocolWindow_t258339763 * __this, const RuntimeMethod* method)
 {
