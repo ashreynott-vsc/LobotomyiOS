@@ -61387,6 +61387,16 @@ extern "C" IL2CPP_METHOD_ATTR void UnitMouseEventManager_UpdatePointEntered_m173
 
 IL_000c:
 	{
+		static bool s_hadActivePointer = false;
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool activePtr = (Input_get_touchCount_m3403849067(NULL /*static, unused*/, NULL) > 0)
+			|| Input_GetMouseButton_m513753021(NULL /*static, unused*/, 0, NULL)
+			|| Input_GetMouseButton_m513753021(NULL /*static, unused*/, 1, NULL);
+		if (!activePtr && !s_hadActivePointer)
+		{
+			return;
+		}
+		s_hadActivePointer = activePtr;
 		V_0 = (bool)0;
 		Camera_t4157153871 * L_1 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);

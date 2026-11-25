@@ -64445,17 +64445,30 @@ extern "C" IL2CPP_METHOD_ATTR void Notice_Send_m2578474234 (Notice_t3379439397 *
 	{
 		List_1_t2614775198 * L_3 = V_0;
 		NullCheck(L_3);
-		IL2CPP_RUNTIME_CLASS_INIT(NoticeName_t1380086577_il2cpp_TypeInfo_var);
-		NoticeName_t1380086577_StaticFields * nn = (NoticeName_t1380086577_StaticFields *)il2cpp_codegen_static_fields_for(NoticeName_t1380086577_il2cpp_TypeInfo_var);
 		IObserverU5BU5D_t3467748025* L_4 = NULL;
-		if (___notice0 == nn->get_Update_2() || ___notice0 == nn->get_FixedUpdate_1())
 		{
-			int slot = (___notice0 == nn->get_Update_2()) ? 0 : 1;
-			static uintptr_t s_listPtr[2] = { 0, 0 };
-			static int32_t s_listVer[2] = { -1, -1 };
-			static int32_t s_listGen[2] = { -1, -1 };
-			static uint32_t s_arrHandle[2] = { 0, 0 };
+			static uintptr_t s_listPtr[32] = { 0 };
+			static int32_t s_listVer[32] = { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 };
+			static int32_t s_listGen[32] = { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 };
+			static uint32_t s_arrHandle[32] = { 0 };
+			static int32_t s_lastClearGen = -1;
 			int32_t curGen = Mobile_GetSceneGeneration();
+			if (curGen != s_lastClearGen)
+			{
+				s_lastClearGen = curGen;
+				for (int ci = 0; ci < 32; ++ci)
+				{
+					if (s_arrHandle[ci] != 0)
+					{
+						il2cpp_gchandle_free(s_arrHandle[ci]);
+						s_arrHandle[ci] = 0;
+					}
+					s_listPtr[ci] = 0;
+					s_listGen[ci] = -1;
+					s_listVer[ci] = -1;
+				}
+			}
+			int slot = (int)((((uintptr_t)L_3 >> 4) ^ ((uintptr_t)L_3 >> 9)) & 31);
 			int32_t curVer = L_3->get__version_3();
 			if (s_listGen[slot] == curGen && s_listPtr[slot] == (uintptr_t)L_3 && s_listVer[slot] == curVer && s_arrHandle[slot] != 0)
 			{
@@ -64464,23 +64477,16 @@ extern "C" IL2CPP_METHOD_ATTR void Notice_Send_m2578474234 (Notice_t3379439397 *
 			if (L_4 == NULL)
 			{
 				L_4 = List_1_ToArray_m2911874677(L_3, /*hidden argument*/List_1_ToArray_m2911874677_RuntimeMethod_var);
-				if (s_arrHandle[slot] != 0)
+				uint32_t oldHandle = s_arrHandle[slot];
+				s_arrHandle[slot] = (L_4 != NULL) ? il2cpp_gchandle_new((Il2CppObject *)L_4, false) : 0;
+				if (oldHandle != 0)
 				{
-					il2cpp_gchandle_free(s_arrHandle[slot]);
-					s_arrHandle[slot] = 0;
-				}
-				if (L_4 != NULL)
-				{
-					s_arrHandle[slot] = il2cpp_gchandle_new((Il2CppObject *)L_4, false);
+					il2cpp_gchandle_free(oldHandle);
 				}
 				s_listPtr[slot] = (uintptr_t)L_3;
 				s_listVer[slot] = curVer;
 				s_listGen[slot] = curGen;
 			}
-		}
-		else
-		{
-			L_4 = List_1_ToArray_m2911874677(L_3, /*hidden argument*/List_1_ToArray_m2911874677_RuntimeMethod_var);
 		}
 		V_1 = L_4;
 		IObserverU5BU5D_t3467748025* L_5 = V_1;
@@ -70262,6 +70268,8 @@ IL_0011:
 	}
 }
 // System.Void OfficerUnit::Update()
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" bool Mobile_GetCachedMainCameraBounds(float * outX, float * outY, float * outHalfW, float * outHalfH, float * outOrtho);
 extern "C" IL2CPP_METHOD_ATTR void OfficerUnit_Update_m2505445642 (OfficerUnit_t1239764044 * __this, const RuntimeMethod* method)
 {
 	{
@@ -70275,9 +70283,13 @@ extern "C" IL2CPP_METHOD_ATTR void OfficerUnit_Update_m2505445642 (OfficerUnit_t
 		}
 	}
 	{
-		WorkerUnit_UpdateViewPosition_m1241735731(__this, /*hidden argument*/NULL);
-		WorkerUnit_UpdateDirection_m412076825(__this, /*hidden argument*/NULL);
-		VirtActionInvoker0::Invoke(4 /* System.Void WorkerUnit::UpdateAnimationQuality() */, __this);
+		bool inCam = ((WorkerUnit_t3080928601 *)__this)->get__inCamera_4();
+		if (inCam || (((Mobile_GetFrameCount() + (int32_t)(((uintptr_t)__this >> 4) & 7)) & 3) == 0))
+		{
+			WorkerUnit_UpdateViewPosition_m1241735731(__this, /*hidden argument*/NULL);
+			WorkerUnit_UpdateDirection_m412076825(__this, /*hidden argument*/NULL);
+			VirtActionInvoker0::Invoke(4 /* System.Void WorkerUnit::UpdateAnimationQuality() */, __this);
+		}
 	}
 
 IL_0029:
@@ -70308,168 +70320,47 @@ extern "C" IL2CPP_METHOD_ATTR void OfficerUnit_UpdateAnimationQuality_m501438822
 		il2cpp_codegen_initialize_method (OfficerUnit_UpdateAnimationQuality_m501438822_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	{
-		WorkerUnit_UpdateAnimationQuality_m1988420803(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		GameManager_t1536523654 * L_0 = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		GameManager_t1536523654 * L_2 = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		int32_t L_3 = L_2->get_state_9();
-		if ((!(((uint32_t)L_3) == ((uint32_t)1))))
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_4 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_4);
-		L_4->set_optimizeLevel_8(5);
-		goto IL_0129;
-	}
-
-IL_0037:
-	{
-		bool L_5 = ((WorkerUnit_t3080928601 *)__this)->get__inCamera_4();
-		if (!L_5)
-		{
-			goto IL_011d;
-		}
-	}
-	{
-		V_0 = (1.0f);
-		OfficerModel_t2757725698 * L_6 = __this->get_model_27();
-		if (!L_6)
-		{
-			goto IL_0064;
-		}
-	}
-	{
-		WorkerModel_t68002457 * L_7 = ((WorkerUnit_t3080928601 *)__this)->get_workerModel_2();
-		NullCheck(L_7);
-		MovableObjectNode_t157422193 * L_8 = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, L_7);
-		NullCheck(L_8);
-		float L_9 = L_8->get_currentScale_27();
-		V_0 = L_9;
-	}
-
-IL_0064:
-	{
-		Camera_t4157153871 * L_10 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_10);
-		float L_11 = Camera_get_orthographicSize_m3903216845(L_10, /*hidden argument*/NULL);
-		WorkerModel_t68002457 * L_12 = ((WorkerUnit_t3080928601 *)__this)->get_workerModel_2();
-		NullCheck(L_12);
-		MovableObjectNode_t157422193 * L_13 = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, L_12);
-		NullCheck(L_13);
-		float L_14 = L_13->get_currentScale_27();
-		V_1 = ((float)((float)L_11/(float)L_14));
-		float L_15 = V_1;
-		if ((!(((float)L_15) > ((float)(70.0f)))))
-		{
-			goto IL_009c;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_16 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_16);
-		L_16->set_optimizeLevel_8(5);
-		goto IL_0118;
-	}
-
-IL_009c:
-	{
-		float L_17 = V_1;
-		if ((!(((float)L_17) > ((float)(45.0f)))))
-		{
-			goto IL_00b8;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_18 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_18);
-		L_18->set_optimizeLevel_8(4);
-		goto IL_0118;
-	}
-
-IL_00b8:
-	{
-		float L_19 = V_1;
-		if ((!(((float)L_19) > ((float)(35.0f)))))
-		{
-			goto IL_00d4;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_20 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_20);
-		L_20->set_optimizeLevel_8(3);
-		goto IL_0118;
-	}
-
-IL_00d4:
-	{
-		float L_21 = V_1;
-		if ((!(((float)L_21) > ((float)(30.0f)))))
-		{
-			goto IL_00f0;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_22 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_22);
-		L_22->set_optimizeLevel_8(2);
-		goto IL_0118;
-	}
-
-IL_00f0:
-	{
-		float L_23 = V_1;
-		if ((!(((float)L_23) > ((float)(22.0f)))))
-		{
-			goto IL_010c;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_24 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_24);
-		L_24->set_optimizeLevel_8(1);
-		goto IL_0118;
-	}
-
-IL_010c:
-	{
-		SkeletonRenderer_t2098681813 * L_25 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_25);
-		L_25->set_optimizeLevel_8(0);
-	}
-
-IL_0118:
-	{
-		goto IL_0129;
-	}
-
-IL_011d:
-	{
-		SkeletonRenderer_t2098681813 * L_26 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_26);
-		L_26->set_optimizeLevel_8(5);
-	}
-
-IL_0129:
+	if (((Mobile_GetFrameCount() + (int32_t)(((uintptr_t)__this >> 4) & 7)) % 6) != 0)
 	{
 		return;
 	}
+	SkeletonRenderer_t2098681813 * sr = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
+	if (!sr) return;
+
+	IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
+	GameManager_t1536523654 * gm = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, gm, (Object_t631007953 *)NULL, /*hidden argument*/NULL) && gm->get_state_9() == 1)
+	{
+		sr->set_optimizeLevel_8(5);
+		return;
+	}
+	if (!((WorkerUnit_t3080928601 *)__this)->get__inCamera_4())
+	{
+		sr->set_optimizeLevel_8(5);
+		return;
+	}
+	float camOrtho = 0.0f;
+	if (!Mobile_GetCachedMainCameraBounds(NULL, NULL, NULL, NULL, &camOrtho))
+	{
+		Camera_t4157153871 * cam = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!cam) return;
+		camOrtho = Camera_get_orthographicSize_m3903216845(cam, /*hidden argument*/NULL);
+	}
+	float scale = 1.0f;
+	WorkerModel_t68002457 * wm = ((WorkerUnit_t3080928601 *)__this)->get_workerModel_2();
+	if (wm)
+	{
+		MovableObjectNode_t157422193 * mn = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, wm);
+		if (mn && mn->get_currentScale_27() > 0.01f)
+			scale = mn->get_currentScale_27();
+	}
+	float ratio = camOrtho / scale;
+	int32_t lvl = 2; // 30Hz max for background clerks on mobile
+	if (ratio > 42.0f) lvl = 5;
+	else if (ratio > 28.0f) lvl = 4;
+	else if (ratio > 18.0f) lvl = 3;
+	sr->set_optimizeLevel_8(lvl);
 }
 // System.Void OfficerUnit::OnClick()
 extern "C" IL2CPP_METHOD_ATTR void OfficerUnit_OnClick_m2640890548 (OfficerUnit_t1239764044 * __this, const RuntimeMethod* method)

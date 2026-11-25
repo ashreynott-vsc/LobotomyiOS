@@ -47199,6 +47199,7 @@ IL_0034:
 	}
 }
 // System.Void AgentModel::OnFixedUpdate()
+extern "C" MovableObjectNodeU5BU5D_t1961576620 * Mobile_PassageGetEnteredItemsArray(PassageObjectModel_t3642329870 * passage, int32_t * outCount);
 extern "C" IL2CPP_METHOD_ATTR void AgentModel_OnFixedUpdate_m2322148912 (AgentModel_t1567715437 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47253,105 +47254,21 @@ IL_000c:
 	}
 	{
 		V_1 = (UnitModel_t1924672552 *)NULL;
-		PassageObjectModel_t3642329870 * L_5 = V_0;
-		NullCheck(L_5);
-		ReadOnlyCollection_1_t1369998480 * L_6 = PassageObjectModel_GetEnteredTargets_m381449808(L_5, /*hidden argument*/NULL);
-		NullCheck(L_6);
-		RuntimeObject* L_7 = ReadOnlyCollection_1_GetEnumerator_m1166265722(L_6, /*hidden argument*/ReadOnlyCollection_1_GetEnumerator_m1166265722_RuntimeMethod_var);
-		V_3 = L_7;
-	}
-
-IL_003d:
-	try
-	{ // begin try (depth: 1)
+		int32_t enteredCount = 0;
+		MovableObjectNodeU5BU5D_t1961576620 * enteredItems = Mobile_PassageGetEnteredItemsArray(V_0, &enteredCount);
+		for (int32_t ei = 0; ei < enteredCount; ++ei)
 		{
-			goto IL_0072;
+			MovableObjectNode_t157422193 * node = enteredItems->GetAt(static_cast<il2cpp_array_size_t>(ei));
+			if (!node) continue;
+			UnitModel_t1924672552 * unit = MovableObjectNode_GetUnit_m1824813719(node, /*hidden argument*/NULL);
+			if (!unit) continue;
+			if (!VirtFuncInvoker0< bool >::Invoke(43 /* System.Boolean UnitModel::IsAttackTargetable() */, unit))
+				continue;
+			if (!VirtFuncInvoker1< bool, UnitModel_t1924672552 * >::Invoke(44 /* System.Boolean UnitModel::IsHostile(UnitModel) */, __this, unit))
+				continue;
+			V_1 = unit;
+			break;
 		}
-
-IL_0042:
-		{
-			RuntimeObject* L_8 = V_3;
-			NullCheck(L_8);
-			MovableObjectNode_t157422193 * L_9 = InterfaceFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(0 /* !0 System.Collections.Generic.IEnumerator`1<MovableObjectNode>::get_Current() */, IEnumerator_1_t589992661_il2cpp_TypeInfo_var, L_8);
-			V_2 = L_9;
-			MovableObjectNode_t157422193 * L_10 = V_2;
-			NullCheck(L_10);
-			UnitModel_t1924672552 * L_11 = MovableObjectNode_GetUnit_m1824813719(L_10, /*hidden argument*/NULL);
-			V_4 = L_11;
-			UnitModel_t1924672552 * L_12 = V_4;
-			NullCheck(L_12);
-			bool L_13 = VirtFuncInvoker0< bool >::Invoke(43 /* System.Boolean UnitModel::IsAttackTargetable() */, L_12);
-			if (!L_13)
-			{
-				goto IL_0072;
-			}
-		}
-
-IL_005d:
-		{
-			UnitModel_t1924672552 * L_14 = V_4;
-			bool L_15 = VirtFuncInvoker1< bool, UnitModel_t1924672552 * >::Invoke(44 /* System.Boolean UnitModel::IsHostile(UnitModel) */, __this, L_14);
-			if (!L_15)
-			{
-				goto IL_0072;
-			}
-		}
-
-IL_006a:
-		{
-			UnitModel_t1924672552 * L_16 = V_4;
-			V_1 = L_16;
-			goto IL_007d;
-		}
-
-IL_0072:
-		{
-			RuntimeObject* L_17 = V_3;
-			NullCheck(L_17);
-			bool L_18 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1853284238_il2cpp_TypeInfo_var, L_17);
-			if (L_18)
-			{
-				goto IL_0042;
-			}
-		}
-
-IL_007d:
-		{
-			IL2CPP_LEAVE(0x8F, FINALLY_0082);
-		}
-	} // end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0082;
-	}
-
-FINALLY_0082:
-	{ // begin finally (depth: 1)
-		{
-			RuntimeObject* L_19 = V_3;
-			if (!L_19)
-			{
-				goto IL_008e;
-			}
-		}
-
-IL_0088:
-		{
-			RuntimeObject* L_20 = V_3;
-			NullCheck(L_20);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_20);
-		}
-
-IL_008e:
-		{
-			IL2CPP_END_FINALLY(130)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(130)
-	{
-		IL2CPP_JUMP_TBL(0x8F, IL_008f)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_008f:
@@ -63688,6 +63605,7 @@ IL_00e1:
 	}
 }
 // System.Void AgentUnit::UpdateAnimationQuality()
+extern "C" bool Mobile_GetCachedMainCameraBounds(float * outX, float * outY, float * outHalfW, float * outHalfH, float * outOrtho);
 extern "C" IL2CPP_METHOD_ATTR void AgentUnit_UpdateAnimationQuality_m2546312929 (AgentUnit_t3059606777 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63696,153 +63614,48 @@ extern "C" IL2CPP_METHOD_ATTR void AgentUnit_UpdateAnimationQuality_m2546312929 
 		il2cpp_codegen_initialize_method (AgentUnit_UpdateAnimationQuality_m2546312929_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	{
-		WorkerUnit_UpdateAnimationQuality_m1988420803(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		GameManager_t1536523654 * L_0 = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
-		GameManager_t1536523654 * L_2 = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		int32_t L_3 = L_2->get_state_9();
-		if ((!(((uint32_t)L_3) == ((uint32_t)1))))
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_4 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_4);
-		L_4->set_optimizeLevel_8(5);
-		goto IL_010d;
-	}
-
-IL_0037:
-	{
-		bool L_5 = ((WorkerUnit_t3080928601 *)__this)->get__inCamera_4();
-		if (!L_5)
-		{
-			goto IL_0101;
-		}
-	}
-	{
-		V_0 = (1.0f);
-		AgentModel_t1567715437 * L_6 = __this->get_model_27();
-		if (!L_6)
-		{
-			goto IL_0064;
-		}
-	}
-	{
-		WorkerModel_t68002457 * L_7 = ((WorkerUnit_t3080928601 *)__this)->get_workerModel_2();
-		NullCheck(L_7);
-		MovableObjectNode_t157422193 * L_8 = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, L_7);
-		NullCheck(L_8);
-		float L_9 = L_8->get_currentScale_27();
-		V_0 = L_9;
-	}
-
-IL_0064:
-	{
-		Camera_t4157153871 * L_10 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_10);
-		float L_11 = Camera_get_orthographicSize_m3903216845(L_10, /*hidden argument*/NULL);
-		WorkerModel_t68002457 * L_12 = ((WorkerUnit_t3080928601 *)__this)->get_workerModel_2();
-		NullCheck(L_12);
-		MovableObjectNode_t157422193 * L_13 = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, L_12);
-		NullCheck(L_13);
-		float L_14 = L_13->get_currentScale_27();
-		V_1 = ((float)((float)L_11/(float)L_14));
-		float L_15 = V_1;
-		if ((!(((float)L_15) > ((float)(80.0f)))))
-		{
-			goto IL_009c;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_16 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_16);
-		L_16->set_optimizeLevel_8(4);
-		goto IL_00fc;
-	}
-
-IL_009c:
-	{
-		float L_17 = V_1;
-		if ((!(((float)L_17) > ((float)(50.0f)))))
-		{
-			goto IL_00b8;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_18 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_18);
-		L_18->set_optimizeLevel_8(3);
-		goto IL_00fc;
-	}
-
-IL_00b8:
-	{
-		float L_19 = V_1;
-		if ((!(((float)L_19) > ((float)(30.0f)))))
-		{
-			goto IL_00d4;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_20 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_20);
-		L_20->set_optimizeLevel_8(2);
-		goto IL_00fc;
-	}
-
-IL_00d4:
-	{
-		float L_21 = V_1;
-		if ((!(((float)L_21) > ((float)(25.0f)))))
-		{
-			goto IL_00f0;
-		}
-	}
-	{
-		SkeletonRenderer_t2098681813 * L_22 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_22);
-		L_22->set_optimizeLevel_8(1);
-		goto IL_00fc;
-	}
-
-IL_00f0:
-	{
-		SkeletonRenderer_t2098681813 * L_23 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_23);
-		L_23->set_optimizeLevel_8(0);
-	}
-
-IL_00fc:
-	{
-		goto IL_010d;
-	}
-
-IL_0101:
-	{
-		SkeletonRenderer_t2098681813 * L_24 = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
-		NullCheck(L_24);
-		L_24->set_optimizeLevel_8(5);
-	}
-
-IL_010d:
+	if (((Mobile_GetFrameCount() + (int32_t)(((uintptr_t)__this >> 4) & 7)) % 6) != 0)
 	{
 		return;
 	}
+	SkeletonRenderer_t2098681813 * sr = ((WorkerUnit_t3080928601 *)__this)->get_spineRenderer_3();
+	if (!sr) return;
+
+	IL2CPP_RUNTIME_CLASS_INIT(GameManager_t1536523654_il2cpp_TypeInfo_var);
+	GameManager_t1536523654 * gm = GameManager_get_currentGameManager_m3095105784(NULL /*static, unused*/, /*hidden argument*/NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, gm, (Object_t631007953 *)NULL, /*hidden argument*/NULL) && gm->get_state_9() == 1)
+	{
+		sr->set_optimizeLevel_8(5);
+		return;
+	}
+	if (!((WorkerUnit_t3080928601 *)__this)->get__inCamera_4())
+	{
+		sr->set_optimizeLevel_8(5);
+		return;
+	}
+	float camOrtho = 0.0f;
+	if (!Mobile_GetCachedMainCameraBounds(NULL, NULL, NULL, NULL, &camOrtho))
+	{
+		Camera_t4157153871 * cam = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!cam) return;
+		camOrtho = Camera_get_orthographicSize_m3903216845(cam, /*hidden argument*/NULL);
+	}
+	float scale = 1.0f;
+	WorkerModel_t68002457 * wm = ((WorkerUnit_t3080928601 *)__this)->get_workerModel_2();
+	if (wm)
+	{
+		MovableObjectNode_t157422193 * mn = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, wm);
+		if (mn && mn->get_currentScale_27() > 0.01f)
+			scale = mn->get_currentScale_27();
+	}
+	float ratio = camOrtho / scale;
+	int32_t lvl = 0;
+	if (ratio > 55.0f) lvl = 4;
+	else if (ratio > 36.0f) lvl = 3;
+	else if (ratio > 24.0f) lvl = 2;
+	else if (ratio > 16.0f) lvl = 1;
+	sr->set_optimizeLevel_8(lvl);
 }
 // System.Void AgentUnit::SetSlider()
 extern "C" IL2CPP_METHOD_ATTR void AgentUnit_SetSlider_m3368329018 (AgentUnit_t3059606777 * __this, const RuntimeMethod* method)

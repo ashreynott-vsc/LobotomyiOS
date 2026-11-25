@@ -43164,7 +43164,7 @@ IL_000c:
 		int32_t instId = 0;
 		if (!Mobile_SpineIsVisibleOrInit((SkeletonRenderer_t2098681813 *)__this, &instId, false, NULL))
 		{
-			if (((Mobile_GetFrameCount() + (instId & 7)) & 7) != 0)
+			if (((Mobile_GetFrameCount() + (instId & 15)) % 12) != 0)
 			{
 				return;
 			}

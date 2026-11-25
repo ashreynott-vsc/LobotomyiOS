@@ -58032,6 +58032,7 @@ IL_002c:
 	}
 }
 // System.Void MobileScreenManager::Awake()
+extern "C" int _GetMobileTargetFPS(void);
 extern "C" IL2CPP_METHOD_ATTR void Application_set_targetFrameRate_m3682352535 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method);
 extern "C" IL2CPP_METHOD_ATTR void MobileScreenManager_Awake_m728696395 (MobileScreenManager_t831028031 * __this, const RuntimeMethod* method)
 {
@@ -58122,7 +58123,7 @@ IL_007e:
 		MobileScreenManager_NativeInit_m3853915216(NULL /*static, unused*/, _stringLiteral1061572333, /*hidden argument*/NULL);
 		int32_t L_15 = __this->get__aspectMode_10();
 		MobileScreenManager_NativeSetAspectMode_m1612487439(NULL /*static, unused*/, L_15, /*hidden argument*/NULL);
-		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, 60, /*hidden argument*/NULL);
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, _GetMobileTargetFPS(), /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -58401,6 +58402,10 @@ static float s_enforceAccum = 1.0f;
 
 static int32_t s_camCachedFrame = -1;
 static bool s_camValid = false;
+static float s_camX = 0.0f;
+static float s_camY = 0.0f;
+static float s_camOrtho = 0.0f;
+static float s_camAspect = 1.7778f;
 static float s_camMinX = 0.0f;
 static float s_camMaxX = 0.0f;
 static float s_camMinY = 0.0f;
@@ -58764,44 +58769,69 @@ extern "C" void Mobile_NotifyStageTransition(void)
 	GC_Collect_m743975114(NULL /*static, unused*/, NULL);
 }
 
+static void Mobile_RefreshMainCameraCache(void)
+{
+	if (s_camCachedFrame == s_mobileFrameCount)
+	{
+		return;
+	}
+	s_camCachedFrame = s_mobileFrameCount;
+	s_camValid = false;
+	s_camCullingMask = -1;
+	Camera_t4157153871 * cam = Camera_get_main_m3643453163(NULL /*static, unused*/, NULL);
+	IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+	if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cam, (Object_t631007953 *)NULL, NULL))
+	{
+		float ortho = Camera_get_orthographicSize_m3903216845(cam, NULL);
+		if (ortho > 0.01f)
+		{
+			Transform_t3600365921 * tr = Component_get_transform_m3162698980((Component_t1923634451 *)cam, NULL);
+			if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
+			{
+				Vector3_t3722313464 pos = Transform_get_position_m36019626(tr, NULL);
+				float aspect = Camera_get_aspect_m862507514(cam, NULL);
+				if (aspect < 0.5f) aspect = 1.7778f;
+				float halfH = ortho * 1.35f + 12.0f;
+				float halfW = ortho * aspect * 1.35f + 16.0f;
+				float cx = pos.get_x_1();
+				float cy = pos.get_y_2();
+				s_camX = cx;
+				s_camY = cy;
+				s_camOrtho = ortho;
+				s_camAspect = aspect;
+				s_camMinX = cx - halfW;
+				s_camMaxX = cx + halfW;
+				s_camMinY = cy - halfH;
+				s_camMaxY = cy + halfH;
+				s_camCullingMask = Camera_get_cullingMask_m679085748(cam, NULL);
+				s_camValid = true;
+			}
+		}
+	}
+}
+
+extern "C" bool Mobile_GetCachedMainCameraBounds(float * outX, float * outY, float * outHalfW, float * outHalfH, float * outOrtho)
+{
+	Mobile_RefreshMainCameraCache();
+	if (!s_camValid)
+	{
+		return false;
+	}
+	if (outX) *outX = s_camX;
+	if (outY) *outY = s_camY;
+	if (outHalfW) *outHalfW = s_camOrtho * s_camAspect;
+	if (outHalfH) *outHalfH = s_camOrtho;
+	if (outOrtho) *outOrtho = s_camOrtho;
+	return true;
+}
+
 extern "C" bool Mobile_IsInMainCameraView(float wx, float wy, int32_t layer)
 {
 	if (layer == 5)
 	{
 		return true;
 	}
-	if (s_camCachedFrame != s_mobileFrameCount)
-	{
-		s_camCachedFrame = s_mobileFrameCount;
-		s_camValid = false;
-		s_camCullingMask = -1;
-		Camera_t4157153871 * cam = Camera_get_main_m3643453163(NULL /*static, unused*/, NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)cam, (Object_t631007953 *)NULL, NULL))
-		{
-			float ortho = Camera_get_orthographicSize_m3903216845(cam, NULL);
-			if (ortho > 0.01f)
-			{
-				Transform_t3600365921 * tr = Component_get_transform_m3162698980((Component_t1923634451 *)cam, NULL);
-				if (Object_op_Inequality_m4071470834(NULL /*static, unused*/, (Object_t631007953 *)tr, (Object_t631007953 *)NULL, NULL))
-				{
-					Vector3_t3722313464 pos = Transform_get_position_m36019626(tr, NULL);
-					float aspect = Camera_get_aspect_m862507514(cam, NULL);
-					if (aspect < 0.5f) aspect = 1.7778f;
-					float halfH = ortho * 1.35f + 12.0f;
-					float halfW = ortho * aspect * 1.35f + 16.0f;
-					float cx = pos.get_x_1();
-					float cy = pos.get_y_2();
-					s_camMinX = cx - halfW;
-					s_camMaxX = cx + halfW;
-					s_camMinY = cy - halfH;
-					s_camMaxY = cy + halfH;
-					s_camCullingMask = Camera_get_cullingMask_m679085748(cam, NULL);
-					s_camValid = true;
-				}
-			}
-		}
-	}
+	Mobile_RefreshMainCameraCache();
 	if (!s_camValid)
 	{
 		return true;
@@ -60117,7 +60147,7 @@ IL_002e:
 
 IL_002f:
 	{
-		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, 60, /*hidden argument*/NULL);
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, _GetMobileTargetFPS(), /*hidden argument*/NULL);
 		MobileScreenManager_EnsureClearCamera_m2529242480(__this, /*hidden argument*/NULL);
 		int32_t L_4 = __this->get__lastWidth_3();
 		int32_t L_5 = __this->get__lastHeight_4();
@@ -60789,6 +60819,17 @@ IL_0000:
 			{
 				int32_t cnt = Mobile_Cheat_ForgeAllEgo();
 				snprintf(statusBuf, sizeof(statusBuf), "Forged %d E.G.O equipment item(s)", cnt);
+				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
+				goto IL_005d;
+			}
+			if (strcmp(tok, "fps") == 0 || strcmp(tok, "fpscap") == 0)
+			{
+				int32_t fpsVal = _GetMobileTargetFPS();
+				MobileParseIntArg(arg, &fpsVal);
+				if (fpsVal < 30) fpsVal = 30;
+				if (fpsVal > 60) fpsVal = 60;
+				Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, fpsVal, /*hidden argument*/NULL);
+				snprintf(statusBuf, sizeof(statusBuf), "Target FPS set to %d", fpsVal);
 				__this->set__statusMsg_11(il2cpp_codegen_string_new_wrapper(statusBuf));
 				goto IL_005d;
 			}

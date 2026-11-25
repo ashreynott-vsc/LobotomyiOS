@@ -63773,6 +63773,10 @@ IL_00df:
 	}
 }
 // System.Void WorkerUnit::UpdateCheckInCamera(UnityEngine.Vector3)
+extern "C" bool Mobile_GetCachedMainCameraBounds(float * outX, float * outY, float * outHalfW, float * outHalfH, float * outOrtho);
+extern "C" int32_t Mobile_GetSceneGeneration(void);
+static int32_t s_workerAnimChangeGen = 0;
+
 extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_UpdateCheckInCamera_m570086566 (WorkerUnit_t3080928601 * __this, Vector3_t3722313464  ___newPosition0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63781,90 +63785,31 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_UpdateCheckInCamera_m570086566 (Wo
 		il2cpp_codegen_initialize_method (WorkerUnit_UpdateCheckInCamera_m570086566_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Camera_t4157153871 * V_0 = NULL;
-	float V_1 = 0.0f;
-	float V_2 = 0.0f;
-	Vector3_t3722313464  V_3;
-	memset(&V_3, 0, sizeof(V_3));
-	Vector3_t3722313464  V_4;
-	memset(&V_4, 0, sizeof(V_4));
-	float V_5 = 0.0f;
-	float V_6 = 0.0f;
-	float V_7 = 0.0f;
-	float V_8 = 0.0f;
+	float cx = 0.0f, cy = 0.0f, halfW = 0.0f, halfH = 0.0f;
+	if (Mobile_GetCachedMainCameraBounds(&cx, &cy, &halfW, &halfH, NULL))
 	{
-		__this->set__inCamera_4((bool)0);
-		Camera_t4157153871 * L_0 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_0 = L_0;
-		Camera_t4157153871 * L_1 = V_0;
-		NullCheck(L_1);
-		float L_2 = Camera_get_orthographicSize_m3903216845(L_1, /*hidden argument*/NULL);
-		V_1 = L_2;
-		Camera_t4157153871 * L_3 = V_0;
-		NullCheck(L_3);
-		float L_4 = Camera_get_aspect_m862507514(L_3, /*hidden argument*/NULL);
-		V_2 = L_4;
-		Camera_t4157153871 * L_5 = V_0;
-		NullCheck(L_5);
-		Transform_t3600365921 * L_6 = Component_get_transform_m3162698980(L_5, /*hidden argument*/NULL);
-		NullCheck(L_6);
-		Vector3_t3722313464  L_7 = Transform_get_position_m36019626(L_6, /*hidden argument*/NULL);
-		V_3 = L_7;
-		Vector3_t3722313464  L_8 = ___newPosition0;
-		Vector3_t3722313464  L_9 = V_3;
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
-		Vector3_t3722313464  L_10 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, L_8, L_9, /*hidden argument*/NULL);
-		V_4 = L_10;
-		float L_11 = V_1;
-		float L_12 = V_2;
-		V_5 = ((float)il2cpp_codegen_multiply((float)L_11, (float)L_12));
-		float L_13 = V_1;
-		V_6 = L_13;
-		V_7 = (1.5f);
-		V_8 = (1.5f);
-		float L_14 = V_5;
-		float L_15 = (&V_4)->get_x_1();
-		float L_16 = V_7;
-		if ((!(((float)L_14) > ((float)((float)il2cpp_codegen_subtract((float)L_15, (float)L_16))))))
-		{
-			goto IL_009d;
-		}
-	}
-	{
-		float L_17 = V_5;
-		float L_18 = (&V_4)->get_x_1();
-		float L_19 = V_7;
-		if ((!(((float)((float)il2cpp_codegen_subtract((float)(0.0f), (float)L_17))) < ((float)((float)il2cpp_codegen_add((float)L_18, (float)L_19))))))
-		{
-			goto IL_009d;
-		}
-	}
-	{
-		float L_20 = V_6;
-		float L_21 = (&V_4)->get_y_2();
-		float L_22 = V_8;
-		if ((!(((float)L_20) > ((float)((float)il2cpp_codegen_subtract((float)L_21, (float)L_22))))))
-		{
-			goto IL_009d;
-		}
-	}
-	{
-		float L_23 = V_6;
-		float L_24 = (&V_4)->get_y_2();
-		float L_25 = V_8;
-		if ((!(((float)((float)il2cpp_codegen_subtract((float)(0.0f), (float)L_23))) < ((float)((float)il2cpp_codegen_add((float)L_24, (float)L_25))))))
-		{
-			goto IL_009d;
-		}
-	}
-	{
-		__this->set__inCamera_4((bool)1);
-	}
-
-IL_009d:
-	{
+		float dx = (&___newPosition0)->get_x_1() - cx;
+		float dy = (&___newPosition0)->get_y_2() - cy;
+		bool inside = (halfW > (dx - 1.5f)) && ((-halfW) < (dx + 1.5f))
+			&& (halfH > (dy - 1.5f)) && ((-halfH) < (dy + 1.5f));
+		__this->set__inCamera_4(inside);
 		return;
 	}
+	__this->set__inCamera_4((bool)0);
+	Camera_t4157153871 * cam = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+	if (!cam) return;
+	float ortho = Camera_get_orthographicSize_m3903216845(cam, /*hidden argument*/NULL);
+	float aspect = Camera_get_aspect_m862507514(cam, /*hidden argument*/NULL);
+	Transform_t3600365921 * tr = Component_get_transform_m3162698980(cam, /*hidden argument*/NULL);
+	if (!tr) return;
+	Vector3_t3722313464 cpos = Transform_get_position_m36019626(tr, /*hidden argument*/NULL);
+	float dx = (&___newPosition0)->get_x_1() - (&cpos)->get_x_1();
+	float dy = (&___newPosition0)->get_y_2() - (&cpos)->get_y_2();
+	float hw = ortho * aspect;
+	float hh = ortho;
+	bool inside = (hw > (dx - 1.5f)) && ((-hw) < (dx + 1.5f))
+		&& (hh > (dy - 1.5f)) && ((-hh) < (dy + 1.5f));
+	__this->set__inCamera_4(inside);
 }
 // System.Void WorkerUnit::UpdateAnimationQuality()
 extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_UpdateAnimationQuality_m1988420803 (WorkerUnit_t3080928601 * __this, const RuntimeMethod* method)
@@ -63933,6 +63878,7 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_UpdateAnimatorChange_m3862510878 (
 		String_t* L_16 = L_15->get_specialWeaponAnim_13();
 		NullCheck(L_11);
 		WorkerAnimatorChanger_ChangeAnimator_m2739643435(L_11, L_16, (bool)1, /*hidden argument*/NULL);
+		++s_workerAnimChangeGen;
 	}
 
 IL_0084:
@@ -63995,6 +63941,7 @@ IL_009b:
 		WorkerAnimatorChanger_t3845723409 * L_29 = __this->get_animChanger_22();
 		NullCheck(L_29);
 		WorkerAnimatorChanger_ChangeAnimator_m3472111655(L_29, /*hidden argument*/NULL);
+		++s_workerAnimChangeGen;
 	}
 
 IL_00f9:
@@ -64019,6 +63966,7 @@ IL_0110:
 // System.Void WorkerUnit::ChangeAnimatorForcely(System.String,System.Boolean,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_ChangeAnimatorForcely_m2582026567 (WorkerUnit_t3080928601 * __this, String_t* ___name0, bool ___uniqueFace1, bool ___useSep2, const RuntimeMethod* method)
 {
+	++s_workerAnimChangeGen;
 	{
 		Timer_t4185932343 * L_0 = __this->get__animChangeTimer_26();
 		NullCheck(L_0);
@@ -64056,6 +64004,7 @@ IL_003d:
 // System.Void WorkerUnit::ChangeAnimatorDefault()
 extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_ChangeAnimatorDefault_m498003546 (WorkerUnit_t3080928601 * __this, const RuntimeMethod* method)
 {
+	++s_workerAnimChangeGen;
 	{
 		WorkerAnimatorChanger_t3845723409 * L_0 = __this->get_animChanger_22();
 		NullCheck(L_0);
@@ -64066,35 +64015,28 @@ extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_ChangeAnimatorDefault_m498003546 (
 // System.Void WorkerUnit::LateUpdate()
 extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_LateUpdate_m3418457297 (WorkerUnit_t3080928601 * __this, const RuntimeMethod* method)
 {
-	{
-		WorkerModel_t68002457 * L_0 = __this->get_workerModel_2();
-		NullCheck(L_0);
-		MovableObjectNode_t157422193 * L_1 = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, L_0);
-		NullCheck(L_1);
-		bool L_2 = MovableObjectNode_IsMoving_m2284891312(L_1, /*hidden argument*/NULL);
-		if (!L_2)
-		{
-			goto IL_0026;
-		}
-	}
-	{
-		UnitAnimatorController_t115164100 * L_3 = __this->get__animController_12();
-		NullCheck(L_3);
-		UnitAnimatorController_SetMove_m1929055522(L_3, (bool)1, /*hidden argument*/NULL);
-		goto IL_0032;
-	}
+	WorkerModel_t68002457 * wm = __this->get_workerModel_2();
+	NullCheck(wm);
+	MovableObjectNode_t157422193 * mn = VirtFuncInvoker0< MovableObjectNode_t157422193 * >::Invoke(19 /* MovableObjectNode UnitModel::GetMovableNode() */, wm);
+	NullCheck(mn);
+	bool moving = MovableObjectNode_IsMoving_m2284891312(mn, /*hidden argument*/NULL);
+	UnitAnimatorController_t115164100 * ac = __this->get__animController_12();
+	NullCheck(ac);
 
-IL_0026:
-	{
-		UnitAnimatorController_t115164100 * L_4 = __this->get__animController_12();
-		NullCheck(L_4);
-		UnitAnimatorController_SetMove_m1929055522(L_4, (bool)0, /*hidden argument*/NULL);
-	}
-
-IL_0032:
+	struct MoveCacheEntry { uintptr_t key; int32_t gen; uint8_t state; };
+	static MoveCacheEntry s_moveCache[256];
+	int32_t curGen = (Mobile_GetSceneGeneration() << 16) ^ (s_workerAnimChangeGen & 0xFFFF);
+	uintptr_t key = (uintptr_t)__this ^ ((uintptr_t)ac << 1);
+	uint32_t slot = (uint32_t)(((key >> 4) ^ (key >> 12)) & 255);
+	uint8_t want = moving ? 2 : 1;
+	if (s_moveCache[slot].key == key && s_moveCache[slot].gen == curGen && s_moveCache[slot].state == want)
 	{
 		return;
 	}
+	s_moveCache[slot].key = key;
+	s_moveCache[slot].gen = curGen;
+	s_moveCache[slot].state = want;
+	UnitAnimatorController_SetMove_m1929055522(ac, moving, /*hidden argument*/NULL);
 }
 // System.Void WorkerUnit::FixedUpdate()
 extern "C" IL2CPP_METHOD_ATTR void WorkerUnit_FixedUpdate_m3498187133 (WorkerUnit_t3080928601 * __this, const RuntimeMethod* method)

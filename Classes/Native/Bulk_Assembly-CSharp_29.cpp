@@ -59252,6 +59252,31 @@ extern "C" IL2CPP_METHOD_ATTR ReadOnlyCollection_1_t1369998480 * PassageObjectMo
 		return L_1;
 	}
 }
+extern "C" MovableObjectNodeU5BU5D_t1961576620 * Mobile_PassageGetEnteredItemsArray(PassageObjectModel_t3642329870 * passage, int32_t * outCount)
+{
+	if (!passage || !outCount)
+	{
+		if (outCount) *outCount = 0;
+		return NULL;
+	}
+	List_1_t1629496935 * lst = passage->get_enteredUnitList_17();
+	if (!lst)
+	{
+		*outCount = 0;
+		return NULL;
+	}
+	int32_t sz = lst->get__size_2();
+	MovableObjectNodeU5BU5D_t1961576620 * arr = lst->get__items_1();
+	if (!arr || sz <= 0)
+	{
+		*outCount = 0;
+		return NULL;
+	}
+	int32_t maxLen = (int32_t)(((RuntimeArray *)arr)->max_length);
+	if (sz > maxLen) sz = maxLen;
+	*outCount = sz;
+	return arr;
+}
 // MovableObjectNode[] PassageObjectModel::GetEnteredTargetsAsArray()
 extern "C" IL2CPP_METHOD_ATTR MovableObjectNodeU5BU5D_t1961576620* PassageObjectModel_GetEnteredTargetsAsArray_m2642807284 (PassageObjectModel_t3642329870 * __this, const RuntimeMethod* method)
 {

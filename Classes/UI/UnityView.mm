@@ -50,7 +50,7 @@ extern bool _supportsMSAA;
 
 #if UNITY_CAN_USE_METAL
     if (UnitySelectedRenderingAPI() == apiMetal)
-        ((CAMetalLayer*)self.layer).framebufferOnly = NO;
+        ((CAMetalLayer*)self.layer).framebufferOnly = YES;
 #endif
 }
 
@@ -130,7 +130,7 @@ extern bool _supportsMSAA;
             (int)requestedW, (int)requestedH,
             UnityGetSRGBRequested(),
             UnityGetWideColorRequested(),
-            UnityMetalFramebufferOnly(),
+            1,
             UnityDisableDepthAndStencilBuffers(), 0
         };
 
@@ -157,7 +157,33 @@ extern bool _supportsMSAA;
     _shouldRecreateView = NO;
 }
 
+- (void)applyMobileRenderScale:(CGFloat)newScale
+{
+    CGFloat diff = self.contentScaleFactor - newScale;
+    if (diff < 0.0) diff = -diff;
+    if (diff < 0.001)
+        return;
+    self.contentScaleFactor = newScale;
+    _shouldRecreateView = YES;
+    [self onUpdateSurfaceSize:self.bounds.size];
+    [self recreateRenderingSurface];
+}
+
 @end
+
+extern "C" void _SetMobileRenderScale(float scale);
+extern "C" UIView* UnityGetGLView(void);
+
+extern "C" void _ApplyMobileRenderScaleLive(float scale)
+{
+    _SetMobileRenderScale(scale);
+    UIView* rawView = UnityGetGLView();
+    if (!rawView || ![rawView isKindOfClass:[UnityView class]])
+        return;
+    UnityView* uv = (UnityView*)rawView;
+    CGFloat newScale = UnityScreenScaleFactor([UIScreen mainScreen]);
+    [uv applyMobileRenderScale:newScale];
+}
 
 @implementation UnityView (Deprecated)
 - (void)recreateGLESSurfaceIfNeeded { [self recreateRenderingSurfaceIfNeeded]; }

@@ -60935,6 +60935,7 @@ extern "C" IL2CPP_METHOD_ATTR void CreatureUnit_FixedUpdate_m1935968394 (Creatur
 	}
 }
 // System.Void CreatureUnit::Update()
+extern "C" int32_t Mobile_GetFrameCount(void);
 extern "C" IL2CPP_METHOD_ATTR void CreatureUnit_Update_m3804347295 (CreatureUnit_t1295346153 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60944,13 +60945,19 @@ extern "C" IL2CPP_METHOD_ATTR void CreatureUnit_Update_m3804347295 (CreatureUnit
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
+	int32_t curState = 0;
 	{
 		int32_t L_0 = __this->get_oldState_29();
 		CreatureModel_t680682136 * L_1 = __this->get_model_2();
 		NullCheck(L_1);
 		int32_t L_2 = CreatureModel_get_state_m4080550065(L_1, /*hidden argument*/NULL);
+		curState = L_2;
 		if ((((int32_t)L_0) == ((int32_t)L_2)))
 		{
+			if (curState == 0 && (((Mobile_GetFrameCount() + (int32_t)(((uintptr_t)__this >> 4) & 7)) % 6) != 0))
+			{
+				return;
+			}
 			goto IL_002d;
 		}
 	}

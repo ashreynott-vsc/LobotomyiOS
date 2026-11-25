@@ -188,7 +188,7 @@ static DisplayManager* _DisplayManager = nil;
     if (UnitySelectedRenderingAPI() == apiMetal)
     {
         recreateSystemSurface = recreateSystemSurface || self.surfaceMTL->systemColorRB == 0;
-        self.surfaceMTL->framebufferOnly = params.metalFramebufferOnly;
+        self.surfaceMTL->framebufferOnly = 1;
     }
     else
         recreateSystemSurface = recreateSystemSurface || self.surfaceGLES->systemFB == 0;
@@ -245,7 +245,7 @@ static DisplayManager* _DisplayManager = nil;
             _surface->msaaSamples, (int)_requestedRenderingSize.width, (int)_requestedRenderingSize.height,
             _surface->srgb,
             _surface->wideColor,
-            false,
+            true,
             _surface->disableDepthAndStencil, self.surface->cvTextureCache != 0
         };
         [self recreateSurface: params];
@@ -554,30 +554,63 @@ extern "C" EAGLContext* UnityGetContextEAGL()
     return GetMainDisplay().surfaceGLES->context;
 }
 
+static float s_cachedMobileRenderScale = -1.0f;
+
+extern "C" float _GetMobileRenderScale(void)
+{
+    if (s_cachedMobileRenderScale > 0.0f)
+        return s_cachedMobileRenderScale;
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    if ([defs objectForKey:@"LobCorp_RenderScale"] != nil)
+    {
+        float saved = [defs floatForKey:@"LobCorp_RenderScale"];
+        if (saved >= 0.55f && saved <= 1.01f)
+        {
+            if (saved > 1.0f) saved = 1.0f;
+            s_cachedMobileRenderScale = saved;
+            return s_cachedMobileRenderScale;
+        }
+    }
+    unsigned long long physBytes = [NSProcessInfo processInfo].physicalMemory;
+    if (physBytes <= 4500000000ULL)
+        s_cachedMobileRenderScale = 0.75f;
+    else if (physBytes <= 6500000000ULL)
+        s_cachedMobileRenderScale = 0.85f;
+    else
+        s_cachedMobileRenderScale = 1.0f;
+    return s_cachedMobileRenderScale;
+}
+
+extern "C" void _SetMobileRenderScale(float scale)
+{
+    if (scale < 0.60f) scale = 0.60f;
+    if (scale > 1.0f) scale = 1.0f;
+    s_cachedMobileRenderScale = scale;
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    [defs setFloat:scale forKey:@"LobCorp_RenderScale"];
+    [defs synchronize];
+}
+
 extern "C" float UnityScreenScaleFactor(UIScreen* screen)
 {
     // NOTE: All views handled by Unity have their contentScaleFactor initialized
     // to value returned by this function.
 
-    // we should query nativeScale if available to get the true device resolution
-    // this way we avoid unnecessarily large frame buffers and downscaling.
-    //   e.g. iPhone 6+ pretends to be a x3 device, while its physical screen is x2.6 something.
-    // it is available on iOS 8.0+, tvOS 9.0+
-    // for older ios versions we add this selector ourselves (AddNewAPIImplIfNeeded in UnityAppController.mm)
-
-    // On AppleTV screen.nativeScale returns NaN when device is in sleep mode and starting from tvOS 10 (?) it returns 0.
     if (isnan(screen.nativeScale) || (screen.nativeScale == 0))
         return 1.0f;
-    else
-    {
-        float scalingFactor = UnityCalculateScalingFactorFromTargetDPI(screen);
-        if (scalingFactor > 0.0f)
-            return scalingFactor;
-        else
-            return screen.nativeScale;
-    }
 
-    return screen.scale;
+    float baseScale = UnityCalculateScalingFactorFromTargetDPI(screen);
+    if (baseScale <= 0.0f)
+        baseScale = screen.nativeScale;
+
+    if (screen == [UIScreen mainScreen])
+    {
+        float scaled = baseScale * _GetMobileRenderScale();
+        if (scaled < 1.0f)
+            scaled = 1.0f;
+        return scaled;
+    }
+    return baseScale;
 }
 
 extern "C" void UnityStartFrameRendering()

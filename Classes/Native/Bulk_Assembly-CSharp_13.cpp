@@ -17,6 +17,7 @@
 #include "il2cpp-class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
+#include "il2cpp-api.h"
 
 template <typename R>
 struct VirtFuncInvoker0
@@ -49338,6 +49339,8 @@ IL_03ad:
 	}
 }
 // System.Void CameraMover::LateUpdate()
+extern "C" int32_t Mobile_GetFrameCount(void);
+extern "C" int32_t Mobile_GetSceneGeneration(void);
 extern "C" IL2CPP_METHOD_ATTR void CameraMover_LateUpdate_m2277820050 (CameraMover_t2845631541 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49879,11 +49882,56 @@ IL_03d7:
 
 IL_041f:
 	{
-		Notice_t3379439397 * L_115 = Notice_get_instance_m52603211(NULL /*static, unused*/, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(NoticeName_t1380086577_il2cpp_TypeInfo_var);
-		String_t* L_116 = ((NoticeName_t1380086577_StaticFields*)il2cpp_codegen_static_fields_for(NoticeName_t1380086577_il2cpp_TypeInfo_var))->get_OnLateUpdateCamera_6();
-		NullCheck(L_115);
-		Notice_Send_m2578474234(L_115, L_116, ((ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0)), /*hidden argument*/NULL);
+		bool shouldSendCamNotice = true;
+		Camera_t4157153871 * camObj = __this->get_targetCamera_3();
+		if (camObj)
+		{
+			Transform_t3600365921 * camTr = Component_get_transform_m3162698980(camObj, /*hidden argument*/NULL);
+			if (camTr)
+			{
+				Vector3_t3722313464 curPos = Transform_get_position_m36019626(camTr, /*hidden argument*/NULL);
+				float curOrtho = Camera_get_orthographicSize_m3903216845(camObj, /*hidden argument*/NULL);
+				static float s_lastCamX = -99999.0f;
+				static float s_lastCamY = -99999.0f;
+				static float s_lastCamOrtho = -1.0f;
+				static int32_t s_lastCamGen = -1;
+				int32_t curGen = Mobile_GetSceneGeneration();
+				bool moved = (curGen != s_lastCamGen)
+					|| (fabsf(curPos.get_x_1() - s_lastCamX) > 0.001f)
+					|| (fabsf(curPos.get_y_2() - s_lastCamY) > 0.001f)
+					|| (fabsf(curOrtho - s_lastCamOrtho) > 0.001f);
+				if (moved)
+				{
+					s_lastCamX = curPos.get_x_1();
+					s_lastCamY = curPos.get_y_2();
+					s_lastCamOrtho = curOrtho;
+					s_lastCamGen = curGen;
+					shouldSendCamNotice = true;
+				}
+				else
+				{
+					shouldSendCamNotice = ((Mobile_GetFrameCount() & 7) == 0);
+				}
+			}
+		}
+		if (shouldSendCamNotice)
+		{
+			static uint32_t s_emptyArrHandle = 0;
+			ObjectU5BU5D_t2843939325 * emptyArr = s_emptyArrHandle
+				? (ObjectU5BU5D_t2843939325 *)il2cpp_gchandle_get_target(s_emptyArrHandle)
+				: NULL;
+			if (!emptyArr)
+			{
+				emptyArr = (ObjectU5BU5D_t2843939325 *)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)0);
+				if (s_emptyArrHandle) il2cpp_gchandle_free(s_emptyArrHandle);
+				s_emptyArrHandle = emptyArr ? il2cpp_gchandle_new((Il2CppObject *)emptyArr, false) : 0;
+			}
+			Notice_t3379439397 * L_115 = Notice_get_instance_m52603211(NULL /*static, unused*/, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(NoticeName_t1380086577_il2cpp_TypeInfo_var);
+			String_t* L_116 = ((NoticeName_t1380086577_StaticFields*)il2cpp_codegen_static_fields_for(NoticeName_t1380086577_il2cpp_TypeInfo_var))->get_OnLateUpdateCamera_6();
+			NullCheck(L_115);
+			Notice_Send_m2578474234(L_115, L_116, emptyArr, /*hidden argument*/NULL);
+		}
 		return;
 	}
 }

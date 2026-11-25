@@ -16,10 +16,33 @@ extern "C" {
     void QualitySettings_SetQualityLevel_m2320778053(void* __this, int32_t index, bool applyExpensiveChanges, void* method);
     int32_t QualitySettings_GetQualityLevel_m848937883(void* __this, void* method);
     const char* Mobile_GetEgoCatalogTSV(void);
+    float _GetMobileRenderScale(void);
+    void _ApplyMobileRenderScaleLive(float scale);
 }
 
 static BOOL s_metalHudDesired = NO;
 static volatile int32_t s_menuVisibleAtomic = 0;
+static int s_cachedTargetFPS = 0;
+
+extern "C" int _GetMobileTargetFPS(void) {
+    if (s_cachedTargetFPS > 0) return s_cachedTargetFPS;
+    NSInteger saved = [[NSUserDefaults standardUserDefaults] integerForKey:@"LobCorp_TargetFPS"];
+    if (saved == 30 || saved == 45 || saved == 60) {
+        s_cachedTargetFPS = (int)saved;
+    } else {
+        s_cachedTargetFPS = 60;
+    }
+    return s_cachedTargetFPS;
+}
+
+static int64_t GetRamWatchdogThresholdMB(void) {
+    static int64_t s_thresh = 0;
+    if (s_thresh == 0) {
+        unsigned long long physBytes = [NSProcessInfo processInfo].physicalMemory;
+        s_thresh = (physBytes <= 4500000000ULL) ? 1650 : 1980;
+    }
+    return s_thresh;
+}
 
 static void RunOnMainThread(void (^block)(void)) {
     if (!block) return;
@@ -407,6 +430,8 @@ static UILabel* CreateSectionLabel(NSString *text) {
 @property (nonatomic, strong) UIButton *btnClean169;
 @property (nonatomic, strong) UIButton *btnQualHigh;
 @property (nonatomic, strong) UIButton *btnQualHalf;
+@property (nonatomic, strong) UIButton *btnRenderScale;
+@property (nonatomic, strong) UIButton *btnFpsCap;
 @property (nonatomic, strong) UIButton *btnMetalHud;
 @property (nonatomic, strong) UITextField *cmdInputField;
 
@@ -420,6 +445,8 @@ static UILabel* CreateSectionLabel(NSString *text) {
 
 @property (nonatomic, assign) int currentAspectMode;
 @property (nonatomic, assign) int currentQualityLevel;
+@property (nonatomic, assign) float currentRenderScale;
+@property (nonatomic, assign) int currentTargetFPS;
 @property (nonatomic, assign) BOOL menuVisible;
 
 + (instancetype)sharedInstance;
@@ -433,6 +460,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
 - (void)setAspectMode:(int)mode;
 - (void)updateAspectButtonStyles;
 - (void)updateQualityButtonStyles;
+- (void)updatePerfButtonStyles;
 - (void)updateMetalHudButtonStyle;
 @end
 
@@ -453,6 +481,8 @@ static UILabel* CreateSectionLabel(NSString *text) {
         _gameObjectName = @"[MobileScreenManager]";
         _currentAspectMode = 0;
         _currentQualityLevel = 0;
+        _currentRenderScale = _GetMobileRenderScale();
+        _currentTargetFPS = _GetMobileTargetFPS();
         _selectedTierFilter = 0;
         _menuVisible = NO;
         _egoLoaded = NO;
@@ -516,6 +546,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
         SetMetalHudActive(s_metalHudDesired, NULL);
         [self updateAspectButtonStyles];
         [self updateQualityButtonStyles];
+        [self updatePerfButtonStyles];
         [self updateMetalHudButtonStyle];
     });
 }
@@ -669,6 +700,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
     [self buildMenuContents];
     [self updateAspectButtonStyles];
     [self updateQualityButtonStyles];
+    [self updatePerfButtonStyles];
     [self updateMetalHudButtonStyle];
 }
 
@@ -841,6 +873,15 @@ static UILabel* CreateSectionLabel(NSString *text) {
     qualRow.spacing = 8.0;
     [qualRow.heightAnchor constraintEqualToConstant:30.0].active = YES;
     [stack addArrangedSubview:qualRow];
+
+    self.btnRenderScale = CreateGlassButton(@"Scale: 75%", self, @selector(onCycleRenderScaleTapped), 11.5);
+    self.btnFpsCap = CreateGlassButton(@"FPS Cap: 60", self, @selector(onCycleFpsCapTapped), 11.5);
+    UIStackView *perfRow = [[UIStackView alloc] initWithArrangedSubviews:@[self.btnRenderScale, self.btnFpsCap]];
+    perfRow.axis = UILayoutConstraintAxisHorizontal;
+    perfRow.distribution = UIStackViewDistributionFillEqually;
+    perfRow.spacing = 8.0;
+    [perfRow.heightAnchor constraintEqualToConstant:30.0].active = YES;
+    [stack addArrangedSubview:perfRow];
 
     self.btnMetalHud = CreateGlassButton(@"Metal HUD", self, @selector(onToggleMetalHudTapped), 11.0);
     UIButton *btnPurge = CreateGlassButton(@"Purge Unused RAM", self, @selector(onPurgeRamTapped), 11.0);
@@ -1153,6 +1194,7 @@ static UILabel* CreateSectionLabel(NSString *text) {
         self.backdropView.hidden = NO;
         self.menuView.hidden = NO;
         self.menuView.transform = CGAffineTransformMakeScale(0.92, 0.92);
+        [self updatePerfButtonStyles];
         [self updateMetalHudButtonStyle];
         [UIView animateWithDuration:0.25
                               delay:0.0
@@ -1230,6 +1272,37 @@ static UILabel* CreateSectionLabel(NSString *text) {
     SetTextureQualityLevel(1);
     [self updateQualityButtonStyles];
     [self updateStatusMessage:@"Texture Quality: Half (Low VRAM)"];
+}
+
+- (void)onCycleRenderScaleTapped {
+    TriggerHaptic();
+    float cur = _GetMobileRenderScale();
+    float next = 0.75f;
+    if (cur < 0.70f) next = 0.75f;
+    else if (cur < 0.80f) next = 0.85f;
+    else if (cur < 0.95f) next = 1.00f;
+    else next = 0.65f;
+
+    self.currentRenderScale = next;
+    _ApplyMobileRenderScaleLive(next);
+    [self sendUnityCommand:@"mode 0"];
+    [self updatePerfButtonStyles];
+    int pct = (int)(next * 100.0f + 0.5f);
+    [self updateStatusMessage:[NSString stringWithFormat:@"Render Scale: %d%% (applied live)", pct]];
+}
+
+- (void)onCycleFpsCapTapped {
+    TriggerHaptic();
+    int cur = _GetMobileTargetFPS();
+    int next = (cur >= 60) ? 45 : (cur >= 45 ? 30 : 60);
+    s_cachedTargetFPS = next;
+    self.currentTargetFPS = next;
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    [defs setInteger:next forKey:@"LobCorp_TargetFPS"];
+    [defs synchronize];
+    [self sendUnityCommand:[NSString stringWithFormat:@"fps %d", next]];
+    [self updatePerfButtonStyles];
+    [self updateStatusMessage:[NSString stringWithFormat:@"Target Frame Rate: %d FPS", next]];
 }
 
 - (void)onToggleMetalHudTapped {
@@ -1315,6 +1388,21 @@ static UILabel* CreateSectionLabel(NSString *text) {
         : [UIColor colorWithWhite:1.0 alpha:0.12];
 }
 
+- (void)updatePerfButtonStyles {
+    self.currentRenderScale = _GetMobileRenderScale();
+    self.currentTargetFPS = _GetMobileTargetFPS();
+    int pct = (int)(self.currentRenderScale * 100.0f + 0.5f);
+    [self.btnRenderScale setTitle:[NSString stringWithFormat:@"Render Scale: %d%%", pct] forState:UIControlStateNormal];
+    self.btnRenderScale.backgroundColor = (pct <= 75)
+        ? [UIColor colorWithRed:0.20 green:0.65 blue:0.42 alpha:0.45]
+        : [UIColor colorWithRed:0.20 green:0.52 blue:0.84 alpha:0.36];
+
+    [self.btnFpsCap setTitle:[NSString stringWithFormat:@"FPS Cap: %d", self.currentTargetFPS] forState:UIControlStateNormal];
+    self.btnFpsCap.backgroundColor = (self.currentTargetFPS < 60)
+        ? [UIColor colorWithRed:0.20 green:0.65 blue:0.42 alpha:0.45]
+        : [UIColor colorWithRed:0.20 green:0.52 blue:0.84 alpha:0.36];
+}
+
 - (void)updateMetalHudButtonStyle {
     BOOL on = IsMetalHudActive();
     [self.btnMetalHud setTitle:(on ? @"Metal HUD: ON" : @"Metal HUD: OFF") forState:UIControlStateNormal];
@@ -1342,12 +1430,13 @@ static UILabel* CreateSectionLabel(NSString *text) {
     if (!text) return;
     int64_t physMB = GetPhysicalMemoryMB();
 
-    // Emergency watchdog only when physical footprint exceeds 1980 MB (90s cooldown, no GC_Collect stall)
+    // Emergency watchdog when physical footprint approaches device jetsam limit (90s cooldown, no GC_Collect stall)
     static CFTimeInterval s_lastWatchdogUnload = 0;
     CFTimeInterval now = CACurrentMediaTime();
-    if (physMB > 1980 && (now - s_lastWatchdogUnload) >= 90.0) {
+    int64_t threshMB = GetRamWatchdogThresholdMB();
+    if (physMB > threshMB && (now - s_lastWatchdogUnload) >= 90.0) {
         s_lastWatchdogUnload = now;
-        NSLog(@"[LobotomyCorp] Emergency RAM unload (>1980 MB): %lld MB", physMB);
+        NSLog(@"[LobotomyCorp] Emergency RAM unload (>%lld MB): %lld MB", threshMB, physMB);
         Resources_UnloadUnusedAssets_m2836736321(NULL, NULL);
     }
 
@@ -1427,9 +1516,10 @@ extern "C" {
         if (needMem) {
             s_lastMemCheck = now;
             s_lastPillMemMB = GetPhysicalMemoryMB();
-            if (s_lastPillMemMB > 1980 && (now - s_lastWatchdogUnload) >= 90.0) {
+            int64_t threshMB = GetRamWatchdogThresholdMB();
+            if (s_lastPillMemMB > threshMB && (now - s_lastWatchdogUnload) >= 90.0) {
                 s_lastWatchdogUnload = now;
-                NSLog(@"[LobotomyCorp] Emergency RAM unload (>1980 MB): %lld MB", s_lastPillMemMB);
+                NSLog(@"[LobotomyCorp] Emergency RAM unload (>%lld MB): %lld MB", threshMB, s_lastPillMemMB);
                 Resources_UnloadUnusedAssets_m2836736321(NULL, NULL);
             }
         }
